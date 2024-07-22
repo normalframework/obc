@@ -1,0 +1,858 @@
+{
+  "instances": {
+    "IntegratorWithReset": {
+      "within": "Buildings.Controls.OBC.CDL.Reals.Validation",
+      "fullMoFilePath": "../modelica-buildings/Buildings/Controls/OBC/CDL/Reals//Validation/IntegratorWithReset.mo",
+      "type": "long_class_specifier",
+      "class_prefixes": "model",
+      "annotation": [
+        {
+          "element_modification_or_replaceable": {
+            "element_modification": {
+              "name": "experiment",
+              "modification": {
+                "class_modification": [
+                  {
+                    "element_modification_or_replaceable": {
+                      "element_modification": {
+                        "name": "StopTime",
+                        "modification": {
+                          "equal": true,
+                          "expression": {
+                            "simple_expression": "1"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "element_modification_or_replaceable": {
+                      "element_modification": {
+                        "name": "Tolerance",
+                        "modification": {
+                          "equal": true,
+                          "expression": {
+                            "simple_expression": "0.000001"
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "element_modification_or_replaceable": {
+            "element_modification": {
+              "name": "__Dymola_Commands",
+              "modification": {
+                "class_modification": [
+                  {
+                    "element_modification_or_replaceable": {
+                      "element_modification": {
+                        "name": "file",
+                        "modification": {
+                          "equal": true,
+                          "expression": {
+                            "simple_expression": "\"modelica://Buildings/Resources/Scripts/Dymola/Controls/OBC/CDL/Reals/Validation/IntegratorWithReset.mos\""
+                          }
+                        },
+                        "description_string": "Simulate and plot"
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "element_modification_or_replaceable": {
+            "element_modification": {
+              "name": "Documentation",
+              "modification": {
+                "class_modification": [
+                  {
+                    "element_modification_or_replaceable": {
+                      "element_modification": {
+                        "name": "info",
+                        "modification": {
+                          "equal": true,
+                          "expression": {
+                            "simple_expression": "\"<html>\n<p>\nThis model tests the implementation of\n<a href=\\\"modelica://Buildings.Controls.OBC.CDL.Reals.IntegratorWithReset\\\">\nBuildings.Controls.OBC.CDL.Reals.IntegratorWithReset</a>\nwith and without reset, and with different start values\nand reset values.\n</p>\n<p>\nThe integrator <code>intWitRes1</code> is triggered by a sample trigger\nwhich becomes true at <i>t=0</i>, while <code>intWitRes2</code> is triggered\nby a boolean pulse with is true at <i>t=0</i>.\nHence, <code>intWitRes1</code> starts with <code>y(0)=y_reset</code> while\n<code>intWitRes2</code> starts with <code>y(0)=y_start</code>.\n</p>\n</html>\""
+                          }
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "element_modification_or_replaceable": {
+                      "element_modification": {
+                        "name": "revisions",
+                        "modification": {
+                          "equal": true,
+                          "expression": {
+                            "simple_expression": "\"<html>\n<ul>\n<li>\nMarch 23, 2017, by Jianjun Hu:<br/>\nFirst implementation.\n</li>\n</ul>\n</html>\""
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "element_modification_or_replaceable": {
+            "element_modification": {
+              "name": "Icon",
+              "modification": {
+                "class_modification": [
+                  {
+                    "element_modification_or_replaceable": {
+                      "element_modification": {
+                        "graphics": [
+                          {
+                            "name": "Ellipse",
+                            "attribute": {
+                              "extent": [
+                                {
+                                  "x": -100,
+                                  "y": -100
+                                },
+                                {
+                                  "x": 100,
+                                  "y": 100
+                                }
+                              ],
+                              "lineColor": {
+                                "r": 75,
+                                "g": 138,
+                                "b": 73
+                              },
+                              "fillColor": {
+                                "r": 255,
+                                "g": 255,
+                                "b": 255
+                              },
+                              "fillPattern": "FillPattern.Solid"
+                            }
+                          },
+                          {
+                            "name": "Polygon",
+                            "attribute": {
+                              "points": [
+                                {
+                                  "x": -36,
+                                  "y": 60
+                                },
+                                {
+                                  "x": 64,
+                                  "y": 0
+                                },
+                                {
+                                  "x": -36,
+                                  "y": -60
+                                },
+                                {
+                                  "x": -36,
+                                  "y": 60
+                                }
+                              ],
+                              "lineColor": {
+                                "r": 0,
+                                "g": 0,
+                                "b": 255
+                              },
+                              "fillColor": {
+                                "r": 75,
+                                "g": 138,
+                                "b": 73
+                              },
+                              "pattern": "LinePattern.None",
+                              "fillPattern": "FillPattern.Solid"
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      ],
+      "semantics": {},
+      "cdl_annotations": {}
+    },
+    "intDef": {
+      "type_specifier": "Buildings.Controls.OBC.CDL.Reals.IntegratorWithReset",
+      "type": "element",
+      "compositionSpecifier": "public",
+      "long_class_specifier_identifier": "IntegratorWithReset",
+      "single_component_list": {
+        "declaration": {
+          "identifier": "intDef",
+          "modification": {
+            "class_modification": [
+              {
+                "element_modification_or_replaceable": {
+                  "final": true,
+                  "element_modification": {
+                    "name": "y_start",
+                    "modification": {
+                      "equal": true,
+                      "expression": {
+                        "simple_expression": "-2"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "description": {
+          "description_string": "Integrator with default values",
+          "annotation": [
+            {
+              "element_modification_or_replaceable": {
+                "element_modification": {
+                  "Placement": {
+                    "transformation": {
+                      "extent": [
+                        {
+                          "x": 0,
+                          "y": 60
+                        },
+                        {
+                          "x": 20,
+                          "y": 80
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "annotation": [
+        {
+          "element_modification_or_replaceable": {
+            "element_modification": {
+              "Placement": {
+                "transformation": {
+                  "extent": [
+                    {
+                      "x": 0,
+                      "y": 60
+                    },
+                    {
+                      "x": 20,
+                      "y": 80
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      ],
+      "semantics": {},
+      "cdl_annotations": {},
+      "isVector": false,
+      "arraySubscripts": "",
+      "within": "Buildings.Controls.OBC.CDL.Reals.Validation",
+      "fullMoFilePath": "../modelica-buildings/Buildings/Controls/OBC/CDL/Reals//Validation/IntegratorWithReset.mo"
+    },
+    "intWitRes1": {
+      "type_specifier": "Buildings.Controls.OBC.CDL.Reals.IntegratorWithReset",
+      "type": "element",
+      "compositionSpecifier": "public",
+      "long_class_specifier_identifier": "IntegratorWithReset",
+      "single_component_list": {
+        "declaration": {
+          "identifier": "intWitRes1",
+          "modification": {
+            "class_modification": [
+              {
+                "element_modification_or_replaceable": {
+                  "final": true,
+                  "element_modification": {
+                    "name": "y_start",
+                    "modification": {
+                      "equal": true,
+                      "expression": {
+                        "simple_expression": "-2"
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "element_modification_or_replaceable": {
+                  "final": true,
+                  "element_modification": {
+                    "name": "k",
+                    "modification": {
+                      "equal": true,
+                      "expression": {
+                        "simple_expression": "0.5"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "description": {
+          "description_string": "Integrator with reset",
+          "annotation": [
+            {
+              "element_modification_or_replaceable": {
+                "element_modification": {
+                  "Placement": {
+                    "transformation": {
+                      "extent": [
+                        {
+                          "x": 0,
+                          "y": 20
+                        },
+                        {
+                          "x": 20,
+                          "y": 40
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "annotation": [
+        {
+          "element_modification_or_replaceable": {
+            "element_modification": {
+              "Placement": {
+                "transformation": {
+                  "extent": [
+                    {
+                      "x": 0,
+                      "y": 20
+                    },
+                    {
+                      "x": 20,
+                      "y": 40
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      ],
+      "semantics": {},
+      "cdl_annotations": {},
+      "isVector": false,
+      "arraySubscripts": "",
+      "within": "Buildings.Controls.OBC.CDL.Reals.Validation",
+      "fullMoFilePath": "../modelica-buildings/Buildings/Controls/OBC/CDL/Reals//Validation/IntegratorWithReset.mo"
+    },
+    "intWitRes2": {
+      "type_specifier": "Buildings.Controls.OBC.CDL.Reals.IntegratorWithReset",
+      "type": "element",
+      "compositionSpecifier": "public",
+      "long_class_specifier_identifier": "IntegratorWithReset",
+      "single_component_list": {
+        "declaration": {
+          "identifier": "intWitRes2",
+          "modification": {
+            "class_modification": [
+              {
+                "element_modification_or_replaceable": {
+                  "final": true,
+                  "element_modification": {
+                    "name": "y_start",
+                    "modification": {
+                      "equal": true,
+                      "expression": {
+                        "simple_expression": "-5"
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "element_modification_or_replaceable": {
+                  "final": true,
+                  "element_modification": {
+                    "name": "k",
+                    "modification": {
+                      "equal": true,
+                      "expression": {
+                        "simple_expression": "0.5"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "description": {
+          "description_string": "Integrator with reset and y_reset = 2",
+          "annotation": [
+            {
+              "element_modification_or_replaceable": {
+                "element_modification": {
+                  "Placement": {
+                    "transformation": {
+                      "extent": [
+                        {
+                          "x": 0,
+                          "y": -20
+                        },
+                        {
+                          "x": 20,
+                          "y": 0
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "annotation": [
+        {
+          "element_modification_or_replaceable": {
+            "element_modification": {
+              "Placement": {
+                "transformation": {
+                  "extent": [
+                    {
+                      "x": 0,
+                      "y": -20
+                    },
+                    {
+                      "x": 20,
+                      "y": 0
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      ],
+      "semantics": {},
+      "cdl_annotations": {},
+      "isVector": false,
+      "arraySubscripts": "",
+      "within": "Buildings.Controls.OBC.CDL.Reals.Validation",
+      "fullMoFilePath": "../modelica-buildings/Buildings/Controls/OBC/CDL/Reals//Validation/IntegratorWithReset.mo"
+    },
+    "cons": {
+      "type_specifier": "Buildings.Controls.OBC.CDL.Reals.Sources.Constant",
+      "type": "element",
+      "compositionSpecifier": "public",
+      "long_class_specifier_identifier": "IntegratorWithReset",
+      "single_component_list": {
+        "declaration": {
+          "identifier": "cons",
+          "modification": {
+            "class_modification": [
+              {
+                "element_modification_or_replaceable": {
+                  "final": true,
+                  "element_modification": {
+                    "name": "k",
+                    "modification": {
+                      "equal": true,
+                      "expression": {
+                        "simple_expression": "10"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "description": {
+          "description_string": "Constant as source term",
+          "annotation": [
+            {
+              "element_modification_or_replaceable": {
+                "element_modification": {
+                  "Placement": {
+                    "transformation": {
+                      "extent": [
+                        {
+                          "x": -60,
+                          "y": 60
+                        },
+                        {
+                          "x": -40,
+                          "y": 80
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "annotation": [
+        {
+          "element_modification_or_replaceable": {
+            "element_modification": {
+              "Placement": {
+                "transformation": {
+                  "extent": [
+                    {
+                      "x": -60,
+                      "y": 60
+                    },
+                    {
+                      "x": -40,
+                      "y": 80
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      ],
+      "semantics": {},
+      "cdl_annotations": {},
+      "isVector": false,
+      "arraySubscripts": "",
+      "within": "Buildings.Controls.OBC.CDL.Reals.Validation",
+      "fullMoFilePath": "../modelica-buildings/Buildings/Controls/OBC/CDL/Reals//Validation/IntegratorWithReset.mo"
+    },
+    "booleanPulse": {
+      "type_specifier": "Buildings.Controls.OBC.CDL.Logical.Sources.Pulse",
+      "type": "element",
+      "compositionSpecifier": "public",
+      "long_class_specifier_identifier": "IntegratorWithReset",
+      "single_component_list": {
+        "declaration": {
+          "identifier": "booleanPulse",
+          "modification": {
+            "class_modification": [
+              {
+                "element_modification_or_replaceable": {
+                  "final": true,
+                  "element_modification": {
+                    "name": "width",
+                    "modification": {
+                      "equal": true,
+                      "expression": {
+                        "simple_expression": "0.5"
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "element_modification_or_replaceable": {
+                  "final": true,
+                  "element_modification": {
+                    "name": "period",
+                    "modification": {
+                      "equal": true,
+                      "expression": {
+                        "simple_expression": "0.2"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "description": {
+          "description_string": "Boolean pulse",
+          "annotation": [
+            {
+              "element_modification_or_replaceable": {
+                "element_modification": {
+                  "Placement": {
+                    "transformation": {
+                      "extent": [
+                        {
+                          "x": -60,
+                          "y": -80
+                        },
+                        {
+                          "x": -40,
+                          "y": -60
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "annotation": [
+        {
+          "element_modification_or_replaceable": {
+            "element_modification": {
+              "Placement": {
+                "transformation": {
+                  "extent": [
+                    {
+                      "x": -60,
+                      "y": -80
+                    },
+                    {
+                      "x": -40,
+                      "y": -60
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      ],
+      "semantics": {},
+      "cdl_annotations": {},
+      "isVector": false,
+      "arraySubscripts": "",
+      "within": "Buildings.Controls.OBC.CDL.Reals.Validation",
+      "fullMoFilePath": "../modelica-buildings/Buildings/Controls/OBC/CDL/Reals//Validation/IntegratorWithReset.mo"
+    },
+    "sampleTrigger": {
+      "type_specifier": "Buildings.Controls.OBC.CDL.Logical.Sources.SampleTrigger",
+      "type": "element",
+      "compositionSpecifier": "public",
+      "long_class_specifier_identifier": "IntegratorWithReset",
+      "single_component_list": {
+        "declaration": {
+          "identifier": "sampleTrigger",
+          "modification": {
+            "class_modification": [
+              {
+                "element_modification_or_replaceable": {
+                  "final": true,
+                  "element_modification": {
+                    "name": "period",
+                    "modification": {
+                      "equal": true,
+                      "expression": {
+                        "simple_expression": "0.2"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "description": {
+          "description_string": "Sample trigger",
+          "annotation": [
+            {
+              "element_modification_or_replaceable": {
+                "element_modification": {
+                  "Placement": {
+                    "transformation": {
+                      "extent": [
+                        {
+                          "x": -60,
+                          "y": 0
+                        },
+                        {
+                          "x": -40,
+                          "y": 20
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "annotation": [
+        {
+          "element_modification_or_replaceable": {
+            "element_modification": {
+              "Placement": {
+                "transformation": {
+                  "extent": [
+                    {
+                      "x": -60,
+                      "y": 0
+                    },
+                    {
+                      "x": -40,
+                      "y": 20
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      ],
+      "semantics": {},
+      "cdl_annotations": {},
+      "isVector": false,
+      "arraySubscripts": "",
+      "within": "Buildings.Controls.OBC.CDL.Reals.Validation",
+      "fullMoFilePath": "../modelica-buildings/Buildings/Controls/OBC/CDL/Reals//Validation/IntegratorWithReset.mo"
+    },
+    "ramp": {
+      "type_specifier": "Buildings.Controls.OBC.CDL.Reals.Sources.Ramp",
+      "type": "element",
+      "compositionSpecifier": "public",
+      "long_class_specifier_identifier": "IntegratorWithReset",
+      "single_component_list": {
+        "declaration": {
+          "identifier": "ramp",
+          "modification": {
+            "class_modification": [
+              {
+                "element_modification_or_replaceable": {
+                  "final": true,
+                  "element_modification": {
+                    "name": "height",
+                    "modification": {
+                      "equal": true,
+                      "expression": {
+                        "simple_expression": "-1"
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "element_modification_or_replaceable": {
+                  "final": true,
+                  "element_modification": {
+                    "name": "duration",
+                    "modification": {
+                      "equal": true,
+                      "expression": {
+                        "simple_expression": "1"
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "element_modification_or_replaceable": {
+                  "final": true,
+                  "element_modification": {
+                    "name": "offset",
+                    "modification": {
+                      "equal": true,
+                      "expression": {
+                        "simple_expression": "-2"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "description": {
+          "description_string": "Ramp as a source term",
+          "annotation": [
+            {
+              "element_modification_or_replaceable": {
+                "element_modification": {
+                  "Placement": {
+                    "transformation": {
+                      "extent": [
+                        {
+                          "x": -60,
+                          "y": -40
+                        },
+                        {
+                          "x": -40,
+                          "y": -20
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "annotation": [
+        {
+          "element_modification_or_replaceable": {
+            "element_modification": {
+              "Placement": {
+                "transformation": {
+                  "extent": [
+                    {
+                      "x": -60,
+                      "y": -40
+                    },
+                    {
+                      "x": -40,
+                      "y": -20
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      ],
+      "semantics": {},
+      "cdl_annotations": {},
+      "isVector": false,
+      "arraySubscripts": "",
+      "within": "Buildings.Controls.OBC.CDL.Reals.Validation",
+      "fullMoFilePath": "../modelica-buildings/Buildings/Controls/OBC/CDL/Reals//Validation/IntegratorWithReset.mo"
+    }
+  },
+  "requiredReferences": {
+    "connections": {
+      "cons.y": [
+        "intWitRes1.u",
+        "intWitRes2.u",
+        "intDef.u"
+      ],
+      "sampleTrigger.y": [
+        "intWitRes1.trigger",
+        "intDef.trigger"
+      ],
+      "booleanPulse.y": [
+        "intWitRes2.trigger"
+      ],
+      "ramp.y": [
+        "intWitRes2.y_reset_in",
+        "intWitRes1.y_reset_in",
+        "intDef.y_reset_in"
+      ]
+    }
+  }
+}

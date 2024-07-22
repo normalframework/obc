@@ -1,0 +1,1568 @@
+{
+  "instances": {
+    "Toggle": {
+      "within": "Buildings.Controls.OBC.CDL.Logical.Validation",
+      "fullMoFilePath": "../modelica-buildings/Buildings/Controls/OBC/CDL/Logical//Validation/Toggle.mo",
+      "type": "long_class_specifier",
+      "class_prefixes": "model",
+      "annotation": [
+        {
+          "element_modification_or_replaceable": {
+            "element_modification": {
+              "name": "experiment",
+              "modification": {
+                "class_modification": [
+                  {
+                    "element_modification_or_replaceable": {
+                      "element_modification": {
+                        "name": "StopTime",
+                        "modification": {
+                          "equal": true,
+                          "expression": {
+                            "simple_expression": "10"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "element_modification_or_replaceable": {
+                      "element_modification": {
+                        "name": "Tolerance",
+                        "modification": {
+                          "equal": true,
+                          "expression": {
+                            "simple_expression": "0.000001"
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "element_modification_or_replaceable": {
+            "element_modification": {
+              "name": "__Dymola_Commands",
+              "modification": {
+                "class_modification": [
+                  {
+                    "element_modification_or_replaceable": {
+                      "element_modification": {
+                        "name": "file",
+                        "modification": {
+                          "equal": true,
+                          "expression": {
+                            "simple_expression": "\"modelica://Buildings/Resources/Scripts/Dymola/Controls/OBC/CDL/Logical/Validation/Toggle.mos\""
+                          }
+                        },
+                        "description_string": "Simulate and plot"
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "element_modification_or_replaceable": {
+            "element_modification": {
+              "name": "Documentation",
+              "modification": {
+                "class_modification": [
+                  {
+                    "element_modification_or_replaceable": {
+                      "element_modification": {
+                        "name": "info",
+                        "modification": {
+                          "equal": true,
+                          "expression": {
+                            "simple_expression": "\"<html>\n<p>\nValidation test for the block\n<a href=\\\"modelica://Buildings.Controls.OBC.CDL.Logical.Toggle\\\">\nBuildings.Controls.OBC.CDL.Logical.Toggle</a>. Following tests are implemented:\n</p>\n<ul>\n<li>\nWhen the clear input is <code>false</code>, the initial output should equal to the initial toggle input.\n</li>\n<li>\nWhen the clear input is <code>true</code>, the initial output should be <code>false</code>,\nregardless of the value of the toggle input.\n</li>\n<li>\nAt the same moment, when both the clear input and the toggle input rise from <code>false</code>\nto <code>true</code>, the output should become <code>false</code> if it was <code>true</code>,\nor remain <code>false</code> if it was <code>false</code>.\n</li>\n<li>\nAt the same moment, when the clear input falls from <code>true</code> to <code>false</code>\nand the toggle input rises from <code>false</code> to <code>true</code>, the output\nshould rise from <code>false</code> to <code>true</code>.\n</li>\n</ul>\n</html>\""
+                          }
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "element_modification_or_replaceable": {
+                      "element_modification": {
+                        "name": "revisions",
+                        "modification": {
+                          "equal": true,
+                          "expression": {
+                            "simple_expression": "\"<html>\n<ul>\n<li>\nApril 4, 2019, by Jianjun Hu:<br/>\nAdded test to validate initial output. \nThis is for <a href=\\\"https://github.com/ibpsa/modelica-ibpsa/issues/1402\\\">issue 1402</a>.\n</li>\n<li>\nMarch 31, 2017, by Jianjun Hu:<br/>\nFirst implementation.\n</li>\n</ul>\n</html>\""
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "element_modification_or_replaceable": {
+            "element_modification": {
+              "name": "Icon",
+              "modification": {
+                "class_modification": [
+                  {
+                    "element_modification_or_replaceable": {
+                      "element_modification": {
+                        "coordinateSystem": {
+                          "extent": [
+                            {
+                              "x": -100,
+                              "y": -100
+                            },
+                            {
+                              "x": 100,
+                              "y": 100
+                            }
+                          ]
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "element_modification_or_replaceable": {
+                      "element_modification": {
+                        "graphics": [
+                          {
+                            "name": "Ellipse",
+                            "attribute": {
+                              "extent": [
+                                {
+                                  "x": -100,
+                                  "y": -100
+                                },
+                                {
+                                  "x": 100,
+                                  "y": 100
+                                }
+                              ],
+                              "lineColor": {
+                                "r": 75,
+                                "g": 138,
+                                "b": 73
+                              },
+                              "fillColor": {
+                                "r": 255,
+                                "g": 255,
+                                "b": 255
+                              },
+                              "fillPattern": "FillPattern.Solid"
+                            }
+                          },
+                          {
+                            "name": "Polygon",
+                            "attribute": {
+                              "points": [
+                                {
+                                  "x": -36,
+                                  "y": 60
+                                },
+                                {
+                                  "x": 64,
+                                  "y": 0
+                                },
+                                {
+                                  "x": -36,
+                                  "y": -60
+                                },
+                                {
+                                  "x": -36,
+                                  "y": 60
+                                }
+                              ],
+                              "lineColor": {
+                                "r": 0,
+                                "g": 0,
+                                "b": 255
+                              },
+                              "fillColor": {
+                                "r": 75,
+                                "g": 138,
+                                "b": 73
+                              },
+                              "pattern": "LinePattern.None",
+                              "fillPattern": "FillPattern.Solid"
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "element_modification_or_replaceable": {
+            "element_modification": {
+              "name": "Diagram",
+              "modification": {
+                "class_modification": [
+                  {
+                    "element_modification_or_replaceable": {
+                      "element_modification": {
+                        "coordinateSystem": {
+                          "extent": [
+                            {
+                              "x": -180,
+                              "y": -180
+                            },
+                            {
+                              "x": 180,
+                              "y": 180
+                            }
+                          ]
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "element_modification_or_replaceable": {
+                      "element_modification": {
+                        "graphics": [
+                          {
+                            "name": "Text",
+                            "attribute": {
+                              "extent": [
+                                {
+                                  "x": 76,
+                                  "y": 148
+                                },
+                                {
+                                  "x": 136,
+                                  "y": 140
+                                }
+                              ],
+                              "textString": "\"At 3rd second:\"",
+                              "textColor": {
+                                "r": 28,
+                                "g": 108,
+                                "b": 200
+                              }
+                            }
+                          },
+                          {
+                            "name": "Text",
+                            "attribute": {
+                              "extent": [
+                                {
+                                  "x": 92,
+                                  "y": 128
+                                },
+                                {
+                                  "x": 172,
+                                  "y": 118
+                                }
+                              ],
+                              "textString": "\"Clear input falls: true to false\"",
+                              "textColor": {
+                                "r": 28,
+                                "g": 108,
+                                "b": 200
+                              }
+                            }
+                          },
+                          {
+                            "name": "Text",
+                            "attribute": {
+                              "extent": [
+                                {
+                                  "x": 92,
+                                  "y": 138
+                                },
+                                {
+                                  "x": 170,
+                                  "y": 128
+                                }
+                              ],
+                              "textString": "\"Toggle input falls: true to false\"",
+                              "textColor": {
+                                "r": 28,
+                                "g": 108,
+                                "b": 200
+                              }
+                            }
+                          },
+                          {
+                            "name": "Text",
+                            "attribute": {
+                              "extent": [
+                                {
+                                  "x": 92,
+                                  "y": 64
+                                },
+                                {
+                                  "x": 170,
+                                  "y": 56
+                                }
+                              ],
+                              "textString": "\"Clear input rises: false to true\"",
+                              "textColor": {
+                                "r": 28,
+                                "g": 108,
+                                "b": 200
+                              }
+                            }
+                          },
+                          {
+                            "name": "Text",
+                            "attribute": {
+                              "extent": [
+                                {
+                                  "x": 92,
+                                  "y": 76
+                                },
+                                {
+                                  "x": 172,
+                                  "y": 66
+                                }
+                              ],
+                              "textString": "\"Toggle input rise: false to true\"",
+                              "textColor": {
+                                "r": 28,
+                                "g": 108,
+                                "b": 200
+                              }
+                            }
+                          },
+                          {
+                            "name": "Text",
+                            "attribute": {
+                              "extent": [
+                                {
+                                  "x": 76,
+                                  "y": 86
+                                },
+                                {
+                                  "x": 136,
+                                  "y": 78
+                                }
+                              ],
+                              "textString": "\"At 6th second:\"",
+                              "textColor": {
+                                "r": 28,
+                                "g": 108,
+                                "b": 200
+                              }
+                            }
+                          },
+                          {
+                            "name": "Text",
+                            "attribute": {
+                              "extent": [
+                                {
+                                  "x": 92,
+                                  "y": -96
+                                },
+                                {
+                                  "x": 172,
+                                  "y": -104
+                                }
+                              ],
+                              "textString": "\"Clear input falls: true to false\"",
+                              "textColor": {
+                                "r": 28,
+                                "g": 108,
+                                "b": 200
+                              }
+                            }
+                          },
+                          {
+                            "name": "Text",
+                            "attribute": {
+                              "extent": [
+                                {
+                                  "x": 92,
+                                  "y": -84
+                                },
+                                {
+                                  "x": 172,
+                                  "y": -94
+                                }
+                              ],
+                              "textString": "\"Toggle input rise: false to true\"",
+                              "textColor": {
+                                "r": 28,
+                                "g": 108,
+                                "b": 200
+                              }
+                            }
+                          },
+                          {
+                            "name": "Text",
+                            "attribute": {
+                              "extent": [
+                                {
+                                  "x": 76,
+                                  "y": -74
+                                },
+                                {
+                                  "x": 136,
+                                  "y": -82
+                                }
+                              ],
+                              "textString": "\"At 6th second:\"",
+                              "textColor": {
+                                "r": 28,
+                                "g": 108,
+                                "b": 200
+                              }
+                            }
+                          },
+                          {
+                            "name": "Text",
+                            "attribute": {
+                              "extent": [
+                                {
+                                  "x": 76,
+                                  "y": -12
+                                },
+                                {
+                                  "x": 136,
+                                  "y": -20
+                                }
+                              ],
+                              "textString": "\"At 3rd second:\"",
+                              "textColor": {
+                                "r": 28,
+                                "g": 108,
+                                "b": 200
+                              }
+                            }
+                          },
+                          {
+                            "name": "Text",
+                            "attribute": {
+                              "extent": [
+                                {
+                                  "x": 92,
+                                  "y": -32
+                                },
+                                {
+                                  "x": 172,
+                                  "y": -42
+                                }
+                              ],
+                              "textString": "\"Clear input rises: false to true\"",
+                              "textColor": {
+                                "r": 28,
+                                "g": 108,
+                                "b": 200
+                              }
+                            }
+                          },
+                          {
+                            "name": "Text",
+                            "attribute": {
+                              "extent": [
+                                {
+                                  "x": 92,
+                                  "y": -22
+                                },
+                                {
+                                  "x": 170,
+                                  "y": -32
+                                }
+                              ],
+                              "textString": "\"Toggle input falls: true to false\"",
+                              "textColor": {
+                                "r": 28,
+                                "g": 108,
+                                "b": 200
+                              }
+                            }
+                          },
+                          {
+                            "name": "Text",
+                            "attribute": {
+                              "extent": [
+                                {
+                                  "x": -68,
+                                  "y": 130
+                                },
+                                {
+                                  "x": -24,
+                                  "y": 122
+                                }
+                              ],
+                              "textString": "\"True initial input\"",
+                              "textColor": {
+                                "r": 28,
+                                "g": 108,
+                                "b": 200
+                              }
+                            }
+                          },
+                          {
+                            "name": "Text",
+                            "attribute": {
+                              "extent": [
+                                {
+                                  "x": -68,
+                                  "y": 140
+                                },
+                                {
+                                  "x": -2,
+                                  "y": 130
+                                }
+                              ],
+                              "textString": "\"Clear input keeps false\"",
+                              "textColor": {
+                                "r": 28,
+                                "g": 108,
+                                "b": 200
+                              }
+                            }
+                          },
+                          {
+                            "name": "Text",
+                            "attribute": {
+                              "extent": [
+                                {
+                                  "x": -68,
+                                  "y": 76
+                                },
+                                {
+                                  "x": -2,
+                                  "y": 66
+                                }
+                              ],
+                              "textString": "\"Clear input keeps false\"",
+                              "textColor": {
+                                "r": 28,
+                                "g": 108,
+                                "b": 200
+                              }
+                            }
+                          },
+                          {
+                            "name": "Text",
+                            "attribute": {
+                              "extent": [
+                                {
+                                  "x": -68,
+                                  "y": 66
+                                },
+                                {
+                                  "x": -24,
+                                  "y": 58
+                                }
+                              ],
+                              "textString": "\"False initial input\"",
+                              "textColor": {
+                                "r": 28,
+                                "g": 108,
+                                "b": 200
+                              }
+                            }
+                          },
+                          {
+                            "name": "Text",
+                            "attribute": {
+                              "extent": [
+                                {
+                                  "x": -68,
+                                  "y": -4
+                                },
+                                {
+                                  "x": -2,
+                                  "y": -14
+                                }
+                              ],
+                              "textString": "\"Clear input keeps true\"",
+                              "textColor": {
+                                "r": 28,
+                                "g": 108,
+                                "b": 200
+                              }
+                            }
+                          },
+                          {
+                            "name": "Text",
+                            "attribute": {
+                              "extent": [
+                                {
+                                  "x": -68,
+                                  "y": -14
+                                },
+                                {
+                                  "x": -24,
+                                  "y": -22
+                                }
+                              ],
+                              "textString": "\"True initial input\"",
+                              "textColor": {
+                                "r": 28,
+                                "g": 108,
+                                "b": 200
+                              }
+                            }
+                          },
+                          {
+                            "name": "Text",
+                            "attribute": {
+                              "extent": [
+                                {
+                                  "x": -66,
+                                  "y": -64
+                                },
+                                {
+                                  "x": 0,
+                                  "y": -74
+                                }
+                              ],
+                              "textString": "\"Clear input keeps false\"",
+                              "textColor": {
+                                "r": 28,
+                                "g": 108,
+                                "b": 200
+                              }
+                            }
+                          },
+                          {
+                            "name": "Text",
+                            "attribute": {
+                              "extent": [
+                                {
+                                  "x": -66,
+                                  "y": -74
+                                },
+                                {
+                                  "x": -22,
+                                  "y": -82
+                                }
+                              ],
+                              "textString": "\"False initial input\"",
+                              "textColor": {
+                                "r": 28,
+                                "g": 108,
+                                "b": 200
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      ],
+      "semantics": {},
+      "cdl_annotations": {}
+    },
+    "falCleTruIni": {
+      "type_specifier": "Buildings.Controls.OBC.CDL.Logical.Toggle",
+      "type": "element",
+      "compositionSpecifier": "public",
+      "long_class_specifier_identifier": "Toggle",
+      "single_component_list": {
+        "declaration": {
+          "identifier": "falCleTruIni"
+        },
+        "description": {
+          "description_string": "Toggle block with clear input being contantly false and true initial toggle input",
+          "annotation": [
+            {
+              "element_modification_or_replaceable": {
+                "element_modification": {
+                  "Placement": {
+                    "transformation": {
+                      "extent": [
+                        {
+                          "x": -60,
+                          "y": 90
+                        },
+                        {
+                          "x": -40,
+                          "y": 110
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "annotation": [
+        {
+          "element_modification_or_replaceable": {
+            "element_modification": {
+              "Placement": {
+                "transformation": {
+                  "extent": [
+                    {
+                      "x": -60,
+                      "y": 90
+                    },
+                    {
+                      "x": -40,
+                      "y": 110
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      ],
+      "semantics": {},
+      "cdl_annotations": {},
+      "isVector": false,
+      "arraySubscripts": "",
+      "within": "Buildings.Controls.OBC.CDL.Logical.Validation",
+      "fullMoFilePath": "../modelica-buildings/Buildings/Controls/OBC/CDL/Logical//Validation/Toggle.mo"
+    },
+    "falCleFalIni": {
+      "type_specifier": "Buildings.Controls.OBC.CDL.Logical.Toggle",
+      "type": "element",
+      "compositionSpecifier": "public",
+      "long_class_specifier_identifier": "Toggle",
+      "single_component_list": {
+        "declaration": {
+          "identifier": "falCleFalIni"
+        },
+        "description": {
+          "description_string": "Toggle block with clear input being contantly false and false initial toggle input",
+          "annotation": [
+            {
+              "element_modification_or_replaceable": {
+                "element_modification": {
+                  "Placement": {
+                    "transformation": {
+                      "extent": [
+                        {
+                          "x": -60,
+                          "y": 30
+                        },
+                        {
+                          "x": -40,
+                          "y": 50
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "annotation": [
+        {
+          "element_modification_or_replaceable": {
+            "element_modification": {
+              "Placement": {
+                "transformation": {
+                  "extent": [
+                    {
+                      "x": -60,
+                      "y": 30
+                    },
+                    {
+                      "x": -40,
+                      "y": 50
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      ],
+      "semantics": {},
+      "cdl_annotations": {},
+      "isVector": false,
+      "arraySubscripts": "",
+      "within": "Buildings.Controls.OBC.CDL.Logical.Validation",
+      "fullMoFilePath": "../modelica-buildings/Buildings/Controls/OBC/CDL/Logical//Validation/Toggle.mo"
+    },
+    "truCleTruIni": {
+      "type_specifier": "Buildings.Controls.OBC.CDL.Logical.Toggle",
+      "type": "element",
+      "compositionSpecifier": "public",
+      "long_class_specifier_identifier": "Toggle",
+      "single_component_list": {
+        "declaration": {
+          "identifier": "truCleTruIni"
+        },
+        "description": {
+          "description_string": "Toggle block with clear input being contantly true and true initial toggle input",
+          "annotation": [
+            {
+              "element_modification_or_replaceable": {
+                "element_modification": {
+                  "Placement": {
+                    "transformation": {
+                      "extent": [
+                        {
+                          "x": -60,
+                          "y": -50
+                        },
+                        {
+                          "x": -40,
+                          "y": -30
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "annotation": [
+        {
+          "element_modification_or_replaceable": {
+            "element_modification": {
+              "Placement": {
+                "transformation": {
+                  "extent": [
+                    {
+                      "x": -60,
+                      "y": -50
+                    },
+                    {
+                      "x": -40,
+                      "y": -30
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      ],
+      "semantics": {},
+      "cdl_annotations": {},
+      "isVector": false,
+      "arraySubscripts": "",
+      "within": "Buildings.Controls.OBC.CDL.Logical.Validation",
+      "fullMoFilePath": "../modelica-buildings/Buildings/Controls/OBC/CDL/Logical//Validation/Toggle.mo"
+    },
+    "truCleFalIni": {
+      "type_specifier": "Buildings.Controls.OBC.CDL.Logical.Toggle",
+      "type": "element",
+      "compositionSpecifier": "public",
+      "long_class_specifier_identifier": "Toggle",
+      "single_component_list": {
+        "declaration": {
+          "identifier": "truCleFalIni"
+        },
+        "description": {
+          "description_string": "Toggle block with clear input being contantly true and false initial toggle input",
+          "annotation": [
+            {
+              "element_modification_or_replaceable": {
+                "element_modification": {
+                  "Placement": {
+                    "transformation": {
+                      "extent": [
+                        {
+                          "x": -60,
+                          "y": -110
+                        },
+                        {
+                          "x": -40,
+                          "y": -90
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "annotation": [
+        {
+          "element_modification_or_replaceable": {
+            "element_modification": {
+              "Placement": {
+                "transformation": {
+                  "extent": [
+                    {
+                      "x": -60,
+                      "y": -110
+                    },
+                    {
+                      "x": -40,
+                      "y": -90
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      ],
+      "semantics": {},
+      "cdl_annotations": {},
+      "isVector": false,
+      "arraySubscripts": "",
+      "within": "Buildings.Controls.OBC.CDL.Logical.Validation",
+      "fullMoFilePath": "../modelica-buildings/Buildings/Controls/OBC/CDL/Logical//Validation/Toggle.mo"
+    },
+    "swiCleInp": {
+      "type_specifier": "Buildings.Controls.OBC.CDL.Logical.Toggle",
+      "type": "element",
+      "compositionSpecifier": "public",
+      "long_class_specifier_identifier": "Toggle",
+      "single_component_list": {
+        "declaration": {
+          "identifier": "swiCleInp"
+        },
+        "description": {
+          "description_string": "Initial false output, with clear input switch between false and true",
+          "annotation": [
+            {
+              "element_modification_or_replaceable": {
+                "element_modification": {
+                  "Placement": {
+                    "transformation": {
+                      "extent": [
+                        {
+                          "x": 100,
+                          "y": 90
+                        },
+                        {
+                          "x": 120,
+                          "y": 110
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "annotation": [
+        {
+          "element_modification_or_replaceable": {
+            "element_modification": {
+              "Placement": {
+                "transformation": {
+                  "extent": [
+                    {
+                      "x": 100,
+                      "y": 90
+                    },
+                    {
+                      "x": 120,
+                      "y": 110
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      ],
+      "semantics": {},
+      "cdl_annotations": {},
+      "isVector": false,
+      "arraySubscripts": "",
+      "within": "Buildings.Controls.OBC.CDL.Logical.Validation",
+      "fullMoFilePath": "../modelica-buildings/Buildings/Controls/OBC/CDL/Logical//Validation/Toggle.mo"
+    },
+    "swiCleInp1": {
+      "type_specifier": "Buildings.Controls.OBC.CDL.Logical.Toggle",
+      "type": "element",
+      "compositionSpecifier": "public",
+      "long_class_specifier_identifier": "Toggle",
+      "single_component_list": {
+        "declaration": {
+          "identifier": "swiCleInp1"
+        },
+        "description": {
+          "description_string": "Initial false output, with clear input switch between false and true",
+          "annotation": [
+            {
+              "element_modification_or_replaceable": {
+                "element_modification": {
+                  "Placement": {
+                    "transformation": {
+                      "extent": [
+                        {
+                          "x": 100,
+                          "y": -70
+                        },
+                        {
+                          "x": 120,
+                          "y": -50
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "annotation": [
+        {
+          "element_modification_or_replaceable": {
+            "element_modification": {
+              "Placement": {
+                "transformation": {
+                  "extent": [
+                    {
+                      "x": 100,
+                      "y": -70
+                    },
+                    {
+                      "x": 120,
+                      "y": -50
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      ],
+      "semantics": {},
+      "cdl_annotations": {},
+      "isVector": false,
+      "arraySubscripts": "",
+      "within": "Buildings.Controls.OBC.CDL.Logical.Validation",
+      "fullMoFilePath": "../modelica-buildings/Buildings/Controls/OBC/CDL/Logical//Validation/Toggle.mo"
+    },
+    "cleInp": {
+      "type_specifier": "Buildings.Controls.OBC.CDL.Logical.Sources.Pulse",
+      "type": "element",
+      "compositionSpecifier": "public",
+      "long_class_specifier_identifier": "Toggle",
+      "single_component_list": {
+        "declaration": {
+          "identifier": "cleInp",
+          "modification": {
+            "class_modification": [
+              {
+                "element_modification_or_replaceable": {
+                  "final": true,
+                  "element_modification": {
+                    "name": "width",
+                    "modification": {
+                      "equal": true,
+                      "expression": {
+                        "simple_expression": "0.5"
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "element_modification_or_replaceable": {
+                  "final": true,
+                  "element_modification": {
+                    "name": "period",
+                    "modification": {
+                      "equal": true,
+                      "expression": {
+                        "simple_expression": "6"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "description": {
+          "description_string": "Block that outputs cyclic on and off",
+          "annotation": [
+            {
+              "element_modification_or_replaceable": {
+                "element_modification": {
+                  "Placement": {
+                    "transformation": {
+                      "extent": [
+                        {
+                          "x": 0,
+                          "y": 70
+                        },
+                        {
+                          "x": 20,
+                          "y": 90
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "annotation": [
+        {
+          "element_modification_or_replaceable": {
+            "element_modification": {
+              "Placement": {
+                "transformation": {
+                  "extent": [
+                    {
+                      "x": 0,
+                      "y": 70
+                    },
+                    {
+                      "x": 20,
+                      "y": 90
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      ],
+      "semantics": {},
+      "cdl_annotations": {},
+      "isVector": false,
+      "arraySubscripts": "",
+      "within": "Buildings.Controls.OBC.CDL.Logical.Validation",
+      "fullMoFilePath": "../modelica-buildings/Buildings/Controls/OBC/CDL/Logical//Validation/Toggle.mo"
+    },
+    "not1": {
+      "type_specifier": "Buildings.Controls.OBC.CDL.Logical.Not",
+      "type": "element",
+      "compositionSpecifier": "public",
+      "long_class_specifier_identifier": "Toggle",
+      "single_component_list": {
+        "declaration": {
+          "identifier": "not1"
+        },
+        "description": {
+          "description_string": "Logical not",
+          "annotation": [
+            {
+              "element_modification_or_replaceable": {
+                "element_modification": {
+                  "Placement": {
+                    "transformation": {
+                      "extent": [
+                        {
+                          "x": 40,
+                          "y": -70
+                        },
+                        {
+                          "x": 60,
+                          "y": -50
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "annotation": [
+        {
+          "element_modification_or_replaceable": {
+            "element_modification": {
+              "Placement": {
+                "transformation": {
+                  "extent": [
+                    {
+                      "x": 40,
+                      "y": -70
+                    },
+                    {
+                      "x": 60,
+                      "y": -50
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      ],
+      "semantics": {},
+      "cdl_annotations": {},
+      "isVector": false,
+      "arraySubscripts": "",
+      "within": "Buildings.Controls.OBC.CDL.Logical.Validation",
+      "fullMoFilePath": "../modelica-buildings/Buildings/Controls/OBC/CDL/Logical//Validation/Toggle.mo"
+    },
+    "togInp": {
+      "type_specifier": "Buildings.Controls.OBC.CDL.Logical.Sources.Pulse",
+      "type": "element",
+      "compositionSpecifier": "public",
+      "long_class_specifier_identifier": "Toggle",
+      "single_component_list": {
+        "declaration": {
+          "identifier": "togInp",
+          "modification": {
+            "class_modification": [
+              {
+                "element_modification_or_replaceable": {
+                  "final": true,
+                  "element_modification": {
+                    "name": "width",
+                    "modification": {
+                      "equal": true,
+                      "expression": {
+                        "simple_expression": "0.5"
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "element_modification_or_replaceable": {
+                  "final": true,
+                  "element_modification": {
+                    "name": "period",
+                    "modification": {
+                      "equal": true,
+                      "expression": {
+                        "simple_expression": "2"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "description": {
+          "description_string": "Block that outputs cyclic on and off",
+          "annotation": [
+            {
+              "element_modification_or_replaceable": {
+                "element_modification": {
+                  "Placement": {
+                    "transformation": {
+                      "extent": [
+                        {
+                          "x": -160,
+                          "y": 150
+                        },
+                        {
+                          "x": -140,
+                          "y": 170
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "annotation": [
+        {
+          "element_modification_or_replaceable": {
+            "element_modification": {
+              "Placement": {
+                "transformation": {
+                  "extent": [
+                    {
+                      "x": -160,
+                      "y": 150
+                    },
+                    {
+                      "x": -140,
+                      "y": 170
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      ],
+      "semantics": {},
+      "cdl_annotations": {},
+      "isVector": false,
+      "arraySubscripts": "",
+      "within": "Buildings.Controls.OBC.CDL.Logical.Validation",
+      "fullMoFilePath": "../modelica-buildings/Buildings/Controls/OBC/CDL/Logical//Validation/Toggle.mo"
+    },
+    "tru": {
+      "type_specifier": "Buildings.Controls.OBC.CDL.Logical.Sources.Constant",
+      "type": "element",
+      "compositionSpecifier": "public",
+      "long_class_specifier_identifier": "Toggle",
+      "single_component_list": {
+        "declaration": {
+          "identifier": "tru",
+          "modification": {
+            "class_modification": [
+              {
+                "element_modification_or_replaceable": {
+                  "final": true,
+                  "element_modification": {
+                    "name": "k",
+                    "modification": {
+                      "equal": true,
+                      "expression": {
+                        "simple_expression": "true"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "description": {
+          "description_string": "True clear input",
+          "annotation": [
+            {
+              "element_modification_or_replaceable": {
+                "element_modification": {
+                  "Placement": {
+                    "transformation": {
+                      "extent": [
+                        {
+                          "x": -120,
+                          "y": -70
+                        },
+                        {
+                          "x": -100,
+                          "y": -50
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "annotation": [
+        {
+          "element_modification_or_replaceable": {
+            "element_modification": {
+              "Placement": {
+                "transformation": {
+                  "extent": [
+                    {
+                      "x": -120,
+                      "y": -70
+                    },
+                    {
+                      "x": -100,
+                      "y": -50
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      ],
+      "semantics": {},
+      "cdl_annotations": {},
+      "isVector": false,
+      "arraySubscripts": "",
+      "within": "Buildings.Controls.OBC.CDL.Logical.Validation",
+      "fullMoFilePath": "../modelica-buildings/Buildings/Controls/OBC/CDL/Logical//Validation/Toggle.mo"
+    },
+    "not2": {
+      "type_specifier": "Buildings.Controls.OBC.CDL.Logical.Not",
+      "type": "element",
+      "compositionSpecifier": "public",
+      "long_class_specifier_identifier": "Toggle",
+      "single_component_list": {
+        "declaration": {
+          "identifier": "not2"
+        },
+        "description": {
+          "description_string": "Logical not",
+          "annotation": [
+            {
+              "element_modification_or_replaceable": {
+                "element_modification": {
+                  "Placement": {
+                    "transformation": {
+                      "extent": [
+                        {
+                          "x": -120,
+                          "y": -10
+                        },
+                        {
+                          "x": -100,
+                          "y": 10
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "annotation": [
+        {
+          "element_modification_or_replaceable": {
+            "element_modification": {
+              "Placement": {
+                "transformation": {
+                  "extent": [
+                    {
+                      "x": -120,
+                      "y": -10
+                    },
+                    {
+                      "x": -100,
+                      "y": 10
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      ],
+      "semantics": {},
+      "cdl_annotations": {},
+      "isVector": false,
+      "arraySubscripts": "",
+      "within": "Buildings.Controls.OBC.CDL.Logical.Validation",
+      "fullMoFilePath": "../modelica-buildings/Buildings/Controls/OBC/CDL/Logical//Validation/Toggle.mo"
+    },
+    "fal": {
+      "type_specifier": "Buildings.Controls.OBC.CDL.Logical.Sources.Constant",
+      "type": "element",
+      "compositionSpecifier": "public",
+      "long_class_specifier_identifier": "Toggle",
+      "single_component_list": {
+        "declaration": {
+          "identifier": "fal",
+          "modification": {
+            "class_modification": [
+              {
+                "element_modification_or_replaceable": {
+                  "final": true,
+                  "element_modification": {
+                    "name": "k",
+                    "modification": {
+                      "equal": true,
+                      "expression": {
+                        "simple_expression": "false"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "description": {
+          "description_string": "False clear input",
+          "annotation": [
+            {
+              "element_modification_or_replaceable": {
+                "element_modification": {
+                  "Placement": {
+                    "transformation": {
+                      "extent": [
+                        {
+                          "x": -120,
+                          "y": 70
+                        },
+                        {
+                          "x": -100,
+                          "y": 90
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "annotation": [
+        {
+          "element_modification_or_replaceable": {
+            "element_modification": {
+              "Placement": {
+                "transformation": {
+                  "extent": [
+                    {
+                      "x": -120,
+                      "y": 70
+                    },
+                    {
+                      "x": -100,
+                      "y": 90
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      ],
+      "semantics": {},
+      "cdl_annotations": {},
+      "isVector": false,
+      "arraySubscripts": "",
+      "within": "Buildings.Controls.OBC.CDL.Logical.Validation",
+      "fullMoFilePath": "../modelica-buildings/Buildings/Controls/OBC/CDL/Logical//Validation/Toggle.mo"
+    }
+  },
+  "requiredReferences": {
+    "connections": {
+      "cleInp.y": [
+        "swiCleInp.clr"
+      ],
+      "not1.u": [
+        "cleInp.y"
+      ],
+      "not1.y": [
+        "swiCleInp1.clr"
+      ],
+      "togInp.y": [
+        "swiCleInp.u",
+        "swiCleInp1.u",
+        "falCleTruIni.u",
+        "truCleTruIni.u",
+        "not2.u"
+      ],
+      "fal.y": [
+        "falCleTruIni.clr",
+        "falCleFalIni.clr"
+      ],
+      "not2.y": [
+        "falCleFalIni.u",
+        "truCleFalIni.u"
+      ],
+      "tru.y": [
+        "truCleTruIni.clr",
+        "truCleFalIni.clr"
+      ]
+    }
+  }
+}

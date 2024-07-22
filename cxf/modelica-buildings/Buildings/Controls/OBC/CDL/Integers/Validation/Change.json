@@ -1,0 +1,767 @@
+{
+  "instances": {
+    "Change": {
+      "within": "Buildings.Controls.OBC.CDL.Integers.Validation",
+      "fullMoFilePath": "../modelica-buildings/Buildings/Controls/OBC/CDL/Integers//Validation/Change.mo",
+      "type": "long_class_specifier",
+      "class_prefixes": "model",
+      "annotation": [
+        {
+          "element_modification_or_replaceable": {
+            "element_modification": {
+              "name": "experiment",
+              "modification": {
+                "class_modification": [
+                  {
+                    "element_modification_or_replaceable": {
+                      "element_modification": {
+                        "name": "StopTime",
+                        "modification": {
+                          "equal": true,
+                          "expression": {
+                            "simple_expression": "1"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "element_modification_or_replaceable": {
+                      "element_modification": {
+                        "name": "Tolerance",
+                        "modification": {
+                          "equal": true,
+                          "expression": {
+                            "simple_expression": "0.000001"
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "element_modification_or_replaceable": {
+            "element_modification": {
+              "name": "__Dymola_Commands",
+              "modification": {
+                "class_modification": [
+                  {
+                    "element_modification_or_replaceable": {
+                      "element_modification": {
+                        "name": "file",
+                        "modification": {
+                          "equal": true,
+                          "expression": {
+                            "simple_expression": "\"modelica://Buildings/Resources/Scripts/Dymola/Controls/OBC/CDL/Integers/Validation/Change.mos\""
+                          }
+                        },
+                        "description_string": "Simulate and plot"
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "element_modification_or_replaceable": {
+            "element_modification": {
+              "name": "Documentation",
+              "modification": {
+                "class_modification": [
+                  {
+                    "element_modification_or_replaceable": {
+                      "element_modification": {
+                        "name": "info",
+                        "modification": {
+                          "equal": true,
+                          "expression": {
+                            "simple_expression": "\"<html>\n<p>\nValidation test for the block\n<a href=\\\"modelica://Buildings.Controls.OBC.CDL.Integers.Change\\\">\nBuildings.Controls.OBC.CDL.Integers.Change</a>.\n</p>\n</html>\""
+                          }
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "element_modification_or_replaceable": {
+                      "element_modification": {
+                        "name": "revisions",
+                        "modification": {
+                          "equal": true,
+                          "expression": {
+                            "simple_expression": "\"<html>\n<ul>\n<li>\nJuly 13, 2018, by Jianjun Hu:<br/>\nFirst implementation.\n</li>\n</ul>\n</html>\""
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "element_modification_or_replaceable": {
+            "element_modification": {
+              "name": "Icon",
+              "modification": {
+                "class_modification": [
+                  {
+                    "element_modification_or_replaceable": {
+                      "element_modification": {
+                        "coordinateSystem": {
+                          "preserveAspectRatio": "false"
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "element_modification_or_replaceable": {
+                      "element_modification": {
+                        "graphics": [
+                          {
+                            "name": "Ellipse",
+                            "attribute": {
+                              "extent": [
+                                {
+                                  "x": -100,
+                                  "y": -100
+                                },
+                                {
+                                  "x": 100,
+                                  "y": 100
+                                }
+                              ],
+                              "lineColor": {
+                                "r": 75,
+                                "g": 138,
+                                "b": 73
+                              },
+                              "fillColor": {
+                                "r": 255,
+                                "g": 255,
+                                "b": 255
+                              },
+                              "fillPattern": "FillPattern.Solid"
+                            }
+                          },
+                          {
+                            "name": "Polygon",
+                            "attribute": {
+                              "points": [
+                                {
+                                  "x": -36,
+                                  "y": 60
+                                },
+                                {
+                                  "x": 64,
+                                  "y": 0
+                                },
+                                {
+                                  "x": -36,
+                                  "y": -60
+                                },
+                                {
+                                  "x": -36,
+                                  "y": 60
+                                }
+                              ],
+                              "lineColor": {
+                                "r": 0,
+                                "g": 0,
+                                "b": 255
+                              },
+                              "fillColor": {
+                                "r": 75,
+                                "g": 138,
+                                "b": 73
+                              },
+                              "pattern": "LinePattern.None",
+                              "fillPattern": "FillPattern.Solid"
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "element_modification_or_replaceable": {
+            "element_modification": {
+              "name": "Diagram",
+              "modification": {
+                "class_modification": [
+                  {
+                    "element_modification_or_replaceable": {
+                      "element_modification": {
+                        "coordinateSystem": {
+                          "preserveAspectRatio": "false"
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      ],
+      "semantics": {},
+      "cdl_annotations": {}
+    },
+    "cha": {
+      "type_specifier": "Buildings.Controls.OBC.CDL.Integers.Change",
+      "type": "element",
+      "compositionSpecifier": "public",
+      "long_class_specifier_identifier": "Change",
+      "single_component_list": {
+        "declaration": {
+          "identifier": "cha"
+        },
+        "description": {
+          "description_string": "Check if the integer input changes value",
+          "annotation": [
+            {
+              "element_modification_or_replaceable": {
+                "element_modification": {
+                  "Placement": {
+                    "transformation": {
+                      "extent": [
+                        {
+                          "x": 0,
+                          "y": -50
+                        },
+                        {
+                          "x": 20,
+                          "y": -30
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "annotation": [
+        {
+          "element_modification_or_replaceable": {
+            "element_modification": {
+              "Placement": {
+                "transformation": {
+                  "extent": [
+                    {
+                      "x": 0,
+                      "y": -50
+                    },
+                    {
+                      "x": 20,
+                      "y": -30
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      ],
+      "semantics": {},
+      "cdl_annotations": {},
+      "isVector": false,
+      "arraySubscripts": "",
+      "within": "Buildings.Controls.OBC.CDL.Integers.Validation",
+      "fullMoFilePath": "../modelica-buildings/Buildings/Controls/OBC/CDL/Integers//Validation/Change.mo"
+    },
+    "ramp2": {
+      "type_specifier": "Buildings.Controls.OBC.CDL.Reals.Sources.Ramp",
+      "type": "element",
+      "compositionSpecifier": "public",
+      "long_class_specifier_identifier": "Change",
+      "single_component_list": {
+        "declaration": {
+          "identifier": "ramp2",
+          "modification": {
+            "class_modification": [
+              {
+                "element_modification_or_replaceable": {
+                  "element_modification": {
+                    "name": "offset",
+                    "modification": {
+                      "equal": true,
+                      "expression": {
+                        "simple_expression": "0"
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "element_modification_or_replaceable": {
+                  "element_modification": {
+                    "name": "height",
+                    "modification": {
+                      "equal": true,
+                      "expression": {
+                        "simple_expression": "20"
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "element_modification_or_replaceable": {
+                  "element_modification": {
+                    "name": "duration",
+                    "modification": {
+                      "equal": true,
+                      "expression": {
+                        "simple_expression": "1"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "description": {
+          "description_string": "Block that generates ramp signal",
+          "annotation": [
+            {
+              "element_modification_or_replaceable": {
+                "element_modification": {
+                  "Placement": {
+                    "transformation": {
+                      "extent": [
+                        {
+                          "x": -40,
+                          "y": 20
+                        },
+                        {
+                          "x": -20,
+                          "y": 40
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "annotation": [
+        {
+          "element_modification_or_replaceable": {
+            "element_modification": {
+              "Placement": {
+                "transformation": {
+                  "extent": [
+                    {
+                      "x": -40,
+                      "y": 20
+                    },
+                    {
+                      "x": -20,
+                      "y": 40
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      ],
+      "semantics": {},
+      "cdl_annotations": {},
+      "isVector": false,
+      "arraySubscripts": "",
+      "within": "Buildings.Controls.OBC.CDL.Integers.Validation",
+      "fullMoFilePath": "../modelica-buildings/Buildings/Controls/OBC/CDL/Integers//Validation/Change.mo"
+    },
+    "changeSampler": {
+      "type_specifier": "Buildings.Controls.OBC.CDL.Discrete.TriggeredSampler",
+      "type": "element",
+      "compositionSpecifier": "public",
+      "long_class_specifier_identifier": "Change",
+      "single_component_list": {
+        "declaration": {
+          "identifier": "changeSampler"
+        },
+        "description": {
+          "description_string": "Triggered sampler",
+          "annotation": [
+            {
+              "element_modification_or_replaceable": {
+                "element_modification": {
+                  "Placement": {
+                    "transformation": {
+                      "extent": [
+                        {
+                          "x": 60,
+                          "y": 20
+                        },
+                        {
+                          "x": 80,
+                          "y": 40
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "annotation": [
+        {
+          "element_modification_or_replaceable": {
+            "element_modification": {
+              "Placement": {
+                "transformation": {
+                  "extent": [
+                    {
+                      "x": 60,
+                      "y": 20
+                    },
+                    {
+                      "x": 80,
+                      "y": 40
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      ],
+      "semantics": {},
+      "cdl_annotations": {},
+      "isVector": false,
+      "arraySubscripts": "",
+      "within": "Buildings.Controls.OBC.CDL.Integers.Validation",
+      "fullMoFilePath": "../modelica-buildings/Buildings/Controls/OBC/CDL/Integers//Validation/Change.mo"
+    },
+    "reaToInt": {
+      "type_specifier": "Buildings.Controls.OBC.CDL.Conversions.RealToInteger",
+      "type": "element",
+      "compositionSpecifier": "public",
+      "long_class_specifier_identifier": "Change",
+      "single_component_list": {
+        "declaration": {
+          "identifier": "reaToInt"
+        },
+        "description": {
+          "description_string": "Convert real to integer",
+          "annotation": [
+            {
+              "element_modification_or_replaceable": {
+                "element_modification": {
+                  "Placement": {
+                    "transformation": {
+                      "extent": [
+                        {
+                          "x": -40,
+                          "y": -50
+                        },
+                        {
+                          "x": -20,
+                          "y": -30
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "annotation": [
+        {
+          "element_modification_or_replaceable": {
+            "element_modification": {
+              "Placement": {
+                "transformation": {
+                  "extent": [
+                    {
+                      "x": -40,
+                      "y": -50
+                    },
+                    {
+                      "x": -20,
+                      "y": -30
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      ],
+      "semantics": {},
+      "cdl_annotations": {},
+      "isVector": false,
+      "arraySubscripts": "",
+      "within": "Buildings.Controls.OBC.CDL.Integers.Validation",
+      "fullMoFilePath": "../modelica-buildings/Buildings/Controls/OBC/CDL/Integers//Validation/Change.mo"
+    },
+    "timTabLin": {
+      "type_specifier": "Buildings.Controls.OBC.CDL.Reals.Sources.TimeTable",
+      "type": "element",
+      "compositionSpecifier": "public",
+      "long_class_specifier_identifier": "Change",
+      "single_component_list": {
+        "declaration": {
+          "identifier": "timTabLin",
+          "modification": {
+            "class_modification": [
+              {
+                "element_modification_or_replaceable": {
+                  "element_modification": {
+                    "name": "smoothness",
+                    "modification": {
+                      "equal": true,
+                      "expression": {
+                        "simple_expression": "Buildings.Controls.OBC.CDL.Types.Smoothness.ConstantSegments"
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "element_modification_or_replaceable": {
+                  "element_modification": {
+                    "name": "table",
+                    "modification": {
+                      "equal": true,
+                      "expression": {
+                        "simple_expression": "[0,-1;0.3,0.5;0.5,0;0.7,1;1,0]"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "description": {
+          "description_string": "Time table with smoothness method of constant segments",
+          "annotation": [
+            {
+              "element_modification_or_replaceable": {
+                "element_modification": {
+                  "Placement": {
+                    "transformation": {
+                      "extent": [
+                        {
+                          "x": -80,
+                          "y": -50
+                        },
+                        {
+                          "x": -60,
+                          "y": -30
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "annotation": [
+        {
+          "element_modification_or_replaceable": {
+            "element_modification": {
+              "Placement": {
+                "transformation": {
+                  "extent": [
+                    {
+                      "x": -80,
+                      "y": -50
+                    },
+                    {
+                      "x": -60,
+                      "y": -30
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      ],
+      "semantics": {},
+      "cdl_annotations": {},
+      "isVector": false,
+      "arraySubscripts": "",
+      "within": "Buildings.Controls.OBC.CDL.Integers.Validation",
+      "fullMoFilePath": "../modelica-buildings/Buildings/Controls/OBC/CDL/Integers//Validation/Change.mo"
+    },
+    "increaseSampler": {
+      "type_specifier": "Buildings.Controls.OBC.CDL.Discrete.TriggeredSampler",
+      "type": "element",
+      "compositionSpecifier": "public",
+      "long_class_specifier_identifier": "Change",
+      "single_component_list": {
+        "declaration": {
+          "identifier": "increaseSampler"
+        },
+        "description": {
+          "description_string": "Increase sampler",
+          "annotation": [
+            {
+              "element_modification_or_replaceable": {
+                "element_modification": {
+                  "Placement": {
+                    "transformation": {
+                      "extent": [
+                        {
+                          "x": 60,
+                          "y": 60
+                        },
+                        {
+                          "x": 80,
+                          "y": 80
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "annotation": [
+        {
+          "element_modification_or_replaceable": {
+            "element_modification": {
+              "Placement": {
+                "transformation": {
+                  "extent": [
+                    {
+                      "x": 60,
+                      "y": 60
+                    },
+                    {
+                      "x": 80,
+                      "y": 80
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      ],
+      "semantics": {},
+      "cdl_annotations": {},
+      "isVector": false,
+      "arraySubscripts": "",
+      "within": "Buildings.Controls.OBC.CDL.Integers.Validation",
+      "fullMoFilePath": "../modelica-buildings/Buildings/Controls/OBC/CDL/Integers//Validation/Change.mo"
+    },
+    "decreaseSampler": {
+      "type_specifier": "Buildings.Controls.OBC.CDL.Discrete.TriggeredSampler",
+      "type": "element",
+      "compositionSpecifier": "public",
+      "long_class_specifier_identifier": "Change",
+      "single_component_list": {
+        "declaration": {
+          "identifier": "decreaseSampler"
+        },
+        "description": {
+          "description_string": "Decrease sampler",
+          "annotation": [
+            {
+              "element_modification_or_replaceable": {
+                "element_modification": {
+                  "Placement": {
+                    "transformation": {
+                      "extent": [
+                        {
+                          "x": 60,
+                          "y": -20
+                        },
+                        {
+                          "x": 80,
+                          "y": 0
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "annotation": [
+        {
+          "element_modification_or_replaceable": {
+            "element_modification": {
+              "Placement": {
+                "transformation": {
+                  "extent": [
+                    {
+                      "x": 60,
+                      "y": -20
+                    },
+                    {
+                      "x": 80,
+                      "y": 0
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      ],
+      "semantics": {},
+      "cdl_annotations": {},
+      "isVector": false,
+      "arraySubscripts": "",
+      "within": "Buildings.Controls.OBC.CDL.Integers.Validation",
+      "fullMoFilePath": "../modelica-buildings/Buildings/Controls/OBC/CDL/Integers//Validation/Change.mo"
+    }
+  },
+  "requiredReferences": {
+    "connections": {
+      "ramp2.y": [
+        "changeSampler.u",
+        "increaseSampler.u",
+        "decreaseSampler.u"
+      ],
+      "timTabLin.y[1]": [
+        "reaToInt.u"
+      ],
+      "reaToInt.y": [
+        "cha.u"
+      ],
+      "cha.up": [
+        "increaseSampler.trigger"
+      ],
+      "cha.y": [
+        "changeSampler.trigger"
+      ],
+      "cha.down": [
+        "decreaseSampler.trigger"
+      ]
+    }
+  }
+}

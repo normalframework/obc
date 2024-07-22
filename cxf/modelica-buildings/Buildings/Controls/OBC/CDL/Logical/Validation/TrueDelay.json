@@ -1,0 +1,1996 @@
+{
+  "instances": {
+    "TrueDelay": {
+      "within": "Buildings.Controls.OBC.CDL.Logical.Validation",
+      "fullMoFilePath": "../modelica-buildings/Buildings/Controls/OBC/CDL/Logical//Validation/TrueDelay.mo",
+      "type": "long_class_specifier",
+      "class_prefixes": "model",
+      "annotation": [
+        {
+          "element_modification_or_replaceable": {
+            "element_modification": {
+              "name": "experiment",
+              "modification": {
+                "class_modification": [
+                  {
+                    "element_modification_or_replaceable": {
+                      "element_modification": {
+                        "name": "StopTime",
+                        "modification": {
+                          "equal": true,
+                          "expression": {
+                            "simple_expression": "5"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "element_modification_or_replaceable": {
+                      "element_modification": {
+                        "name": "Tolerance",
+                        "modification": {
+                          "equal": true,
+                          "expression": {
+                            "simple_expression": "0.000001"
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "element_modification_or_replaceable": {
+            "element_modification": {
+              "name": "__Dymola_Commands",
+              "modification": {
+                "class_modification": [
+                  {
+                    "element_modification_or_replaceable": {
+                      "element_modification": {
+                        "name": "file",
+                        "modification": {
+                          "equal": true,
+                          "expression": {
+                            "simple_expression": "\"modelica://Buildings/Resources/Scripts/Dymola/Controls/OBC/CDL/Logical/Validation/TrueDelay.mos\""
+                          }
+                        },
+                        "description_string": "Simulate and plot"
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "element_modification_or_replaceable": {
+            "element_modification": {
+              "name": "Documentation",
+              "modification": {
+                "class_modification": [
+                  {
+                    "element_modification_or_replaceable": {
+                      "element_modification": {
+                        "name": "info",
+                        "modification": {
+                          "equal": true,
+                          "expression": {
+                            "simple_expression": "\"<html>\n<p>\nValidation test for the block\n<a href=\\\"modelica://Buildings.Controls.OBC.CDL.Logical.TrueDelay\\\">\nBuildings.Controls.OBC.CDL.Logical.TrueDelay</a>.\n</p>\n</html>\""
+                          }
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "element_modification_or_replaceable": {
+                      "element_modification": {
+                        "name": "revisions",
+                        "modification": {
+                          "equal": true,
+                          "expression": {
+                            "simple_expression": "\"<html>\n<ul>\n<li>\nFebruary 11, 2019, by Milica Grahovac:<br/>\nAdded tests for initial true input delay.\n</li>\n<li>\nApril 2, 2017, by Jianjun Hu:<br/>\nFirst implementation.\n</li>\n</ul>\n</html>\""
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "element_modification_or_replaceable": {
+            "element_modification": {
+              "name": "Icon",
+              "modification": {
+                "class_modification": [
+                  {
+                    "element_modification_or_replaceable": {
+                      "element_modification": {
+                        "graphics": [
+                          {
+                            "name": "Ellipse",
+                            "attribute": {
+                              "extent": [
+                                {
+                                  "x": -100,
+                                  "y": -100
+                                },
+                                {
+                                  "x": 100,
+                                  "y": 100
+                                }
+                              ],
+                              "lineColor": {
+                                "r": 75,
+                                "g": 138,
+                                "b": 73
+                              },
+                              "fillColor": {
+                                "r": 255,
+                                "g": 255,
+                                "b": 255
+                              },
+                              "fillPattern": "FillPattern.Solid"
+                            }
+                          },
+                          {
+                            "name": "Polygon",
+                            "attribute": {
+                              "points": [
+                                {
+                                  "x": -36,
+                                  "y": 60
+                                },
+                                {
+                                  "x": 64,
+                                  "y": 0
+                                },
+                                {
+                                  "x": -36,
+                                  "y": -60
+                                },
+                                {
+                                  "x": -36,
+                                  "y": 60
+                                }
+                              ],
+                              "lineColor": {
+                                "r": 0,
+                                "g": 0,
+                                "b": 255
+                              },
+                              "fillColor": {
+                                "r": 75,
+                                "g": 138,
+                                "b": 73
+                              },
+                              "pattern": "LinePattern.None",
+                              "fillPattern": "FillPattern.Solid"
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "element_modification_or_replaceable": {
+            "element_modification": {
+              "name": "Diagram",
+              "modification": {
+                "class_modification": [
+                  {
+                    "element_modification_or_replaceable": {
+                      "element_modification": {
+                        "coordinateSystem": {
+                          "extent": [
+                            {
+                              "x": -100,
+                              "y": -180
+                            },
+                            {
+                              "x": 100,
+                              "y": 180
+                            }
+                          ]
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      ],
+      "semantics": {},
+      "cdl_annotations": {}
+    },
+    "onDelay0": {
+      "type_specifier": "Buildings.Controls.OBC.CDL.Logical.TrueDelay",
+      "type": "element",
+      "compositionSpecifier": "public",
+      "long_class_specifier_identifier": "TrueDelay",
+      "single_component_list": {
+        "declaration": {
+          "identifier": "onDelay0",
+          "modification": {
+            "class_modification": [
+              {
+                "element_modification_or_replaceable": {
+                  "final": true,
+                  "element_modification": {
+                    "name": "delayTime",
+                    "modification": {
+                      "equal": true,
+                      "expression": {
+                        "simple_expression": "0"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "description": {
+          "description_string": "Delay a rising edge of the input, but do not delay a falling edge.",
+          "annotation": [
+            {
+              "element_modification_or_replaceable": {
+                "element_modification": {
+                  "Placement": {
+                    "transformation": {
+                      "extent": [
+                        {
+                          "x": 0,
+                          "y": 130
+                        },
+                        {
+                          "x": 20,
+                          "y": 150
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "annotation": [
+        {
+          "element_modification_or_replaceable": {
+            "element_modification": {
+              "Placement": {
+                "transformation": {
+                  "extent": [
+                    {
+                      "x": 0,
+                      "y": 130
+                    },
+                    {
+                      "x": 20,
+                      "y": 150
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      ],
+      "semantics": {},
+      "cdl_annotations": {},
+      "isVector": false,
+      "arraySubscripts": "",
+      "within": "Buildings.Controls.OBC.CDL.Logical.Validation",
+      "fullMoFilePath": "../modelica-buildings/Buildings/Controls/OBC/CDL/Logical//Validation/TrueDelay.mo"
+    },
+    "onDelay1": {
+      "type_specifier": "Buildings.Controls.OBC.CDL.Logical.TrueDelay",
+      "type": "element",
+      "compositionSpecifier": "public",
+      "long_class_specifier_identifier": "TrueDelay",
+      "single_component_list": {
+        "declaration": {
+          "identifier": "onDelay1",
+          "modification": {
+            "class_modification": [
+              {
+                "element_modification_or_replaceable": {
+                  "final": true,
+                  "element_modification": {
+                    "name": "delayTime",
+                    "modification": {
+                      "equal": true,
+                      "expression": {
+                        "simple_expression": "0.5"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "description": {
+          "description_string": "Delay a rising edge of the input, but do not delay a falling edge.",
+          "annotation": [
+            {
+              "element_modification_or_replaceable": {
+                "element_modification": {
+                  "Placement": {
+                    "transformation": {
+                      "extent": [
+                        {
+                          "x": 60,
+                          "y": 130
+                        },
+                        {
+                          "x": 80,
+                          "y": 150
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "annotation": [
+        {
+          "element_modification_or_replaceable": {
+            "element_modification": {
+              "Placement": {
+                "transformation": {
+                  "extent": [
+                    {
+                      "x": 60,
+                      "y": 130
+                    },
+                    {
+                      "x": 80,
+                      "y": 150
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      ],
+      "semantics": {},
+      "cdl_annotations": {},
+      "isVector": false,
+      "arraySubscripts": "",
+      "within": "Buildings.Controls.OBC.CDL.Logical.Validation",
+      "fullMoFilePath": "../modelica-buildings/Buildings/Controls/OBC/CDL/Logical//Validation/TrueDelay.mo"
+    },
+    "onDelay2": {
+      "type_specifier": "Buildings.Controls.OBC.CDL.Logical.TrueDelay",
+      "type": "element",
+      "compositionSpecifier": "public",
+      "long_class_specifier_identifier": "TrueDelay",
+      "single_component_list": {
+        "declaration": {
+          "identifier": "onDelay2",
+          "modification": {
+            "class_modification": [
+              {
+                "element_modification_or_replaceable": {
+                  "final": true,
+                  "element_modification": {
+                    "name": "delayTime",
+                    "modification": {
+                      "equal": true,
+                      "expression": {
+                        "simple_expression": "0.8"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "description": {
+          "description_string": "Delay a rising edge of the input, but do not delay a falling edge.",
+          "annotation": [
+            {
+              "element_modification_or_replaceable": {
+                "element_modification": {
+                  "Placement": {
+                    "transformation": {
+                      "extent": [
+                        {
+                          "x": 0,
+                          "y": 100
+                        },
+                        {
+                          "x": 20,
+                          "y": 120
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "annotation": [
+        {
+          "element_modification_or_replaceable": {
+            "element_modification": {
+              "Placement": {
+                "transformation": {
+                  "extent": [
+                    {
+                      "x": 0,
+                      "y": 100
+                    },
+                    {
+                      "x": 20,
+                      "y": 120
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      ],
+      "semantics": {},
+      "cdl_annotations": {},
+      "isVector": false,
+      "arraySubscripts": "",
+      "within": "Buildings.Controls.OBC.CDL.Logical.Validation",
+      "fullMoFilePath": "../modelica-buildings/Buildings/Controls/OBC/CDL/Logical//Validation/TrueDelay.mo"
+    },
+    "onDelay4": {
+      "type_specifier": "Buildings.Controls.OBC.CDL.Logical.TrueDelay",
+      "type": "element",
+      "compositionSpecifier": "public",
+      "long_class_specifier_identifier": "TrueDelay",
+      "single_component_list": {
+        "declaration": {
+          "identifier": "onDelay4",
+          "modification": {
+            "class_modification": [
+              {
+                "element_modification_or_replaceable": {
+                  "final": true,
+                  "element_modification": {
+                    "name": "delayTime",
+                    "modification": {
+                      "equal": true,
+                      "expression": {
+                        "simple_expression": "0"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "description": {
+          "description_string": "Delay a rising edge of the input, but do not delay a falling edge.",
+          "annotation": [
+            {
+              "element_modification_or_replaceable": {
+                "element_modification": {
+                  "Placement": {
+                    "transformation": {
+                      "extent": [
+                        {
+                          "x": 0,
+                          "y": 40
+                        },
+                        {
+                          "x": 20,
+                          "y": 60
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "annotation": [
+        {
+          "element_modification_or_replaceable": {
+            "element_modification": {
+              "Placement": {
+                "transformation": {
+                  "extent": [
+                    {
+                      "x": 0,
+                      "y": 40
+                    },
+                    {
+                      "x": 20,
+                      "y": 60
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      ],
+      "semantics": {},
+      "cdl_annotations": {},
+      "isVector": false,
+      "arraySubscripts": "",
+      "within": "Buildings.Controls.OBC.CDL.Logical.Validation",
+      "fullMoFilePath": "../modelica-buildings/Buildings/Controls/OBC/CDL/Logical//Validation/TrueDelay.mo"
+    },
+    "onDelay5": {
+      "type_specifier": "Buildings.Controls.OBC.CDL.Logical.TrueDelay",
+      "type": "element",
+      "compositionSpecifier": "public",
+      "long_class_specifier_identifier": "TrueDelay",
+      "single_component_list": {
+        "declaration": {
+          "identifier": "onDelay5",
+          "modification": {
+            "class_modification": [
+              {
+                "element_modification_or_replaceable": {
+                  "final": true,
+                  "element_modification": {
+                    "name": "delayTime",
+                    "modification": {
+                      "equal": true,
+                      "expression": {
+                        "simple_expression": "0.5"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "description": {
+          "description_string": "Delay a rising edge of the input, but do not delay a falling edge.",
+          "annotation": [
+            {
+              "element_modification_or_replaceable": {
+                "element_modification": {
+                  "Placement": {
+                    "transformation": {
+                      "extent": [
+                        {
+                          "x": 60,
+                          "y": 40
+                        },
+                        {
+                          "x": 80,
+                          "y": 60
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "annotation": [
+        {
+          "element_modification_or_replaceable": {
+            "element_modification": {
+              "Placement": {
+                "transformation": {
+                  "extent": [
+                    {
+                      "x": 60,
+                      "y": 40
+                    },
+                    {
+                      "x": 80,
+                      "y": 60
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      ],
+      "semantics": {},
+      "cdl_annotations": {},
+      "isVector": false,
+      "arraySubscripts": "",
+      "within": "Buildings.Controls.OBC.CDL.Logical.Validation",
+      "fullMoFilePath": "../modelica-buildings/Buildings/Controls/OBC/CDL/Logical//Validation/TrueDelay.mo"
+    },
+    "onDelay6": {
+      "type_specifier": "Buildings.Controls.OBC.CDL.Logical.TrueDelay",
+      "type": "element",
+      "compositionSpecifier": "public",
+      "long_class_specifier_identifier": "TrueDelay",
+      "single_component_list": {
+        "declaration": {
+          "identifier": "onDelay6",
+          "modification": {
+            "class_modification": [
+              {
+                "element_modification_or_replaceable": {
+                  "final": true,
+                  "element_modification": {
+                    "name": "delayTime",
+                    "modification": {
+                      "equal": true,
+                      "expression": {
+                        "simple_expression": "0.8"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "description": {
+          "description_string": "Delay a rising edge of the input, but do not delay a falling edge.",
+          "annotation": [
+            {
+              "element_modification_or_replaceable": {
+                "element_modification": {
+                  "Placement": {
+                    "transformation": {
+                      "extent": [
+                        {
+                          "x": 0,
+                          "y": 10
+                        },
+                        {
+                          "x": 20,
+                          "y": 30
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "annotation": [
+        {
+          "element_modification_or_replaceable": {
+            "element_modification": {
+              "Placement": {
+                "transformation": {
+                  "extent": [
+                    {
+                      "x": 0,
+                      "y": 10
+                    },
+                    {
+                      "x": 20,
+                      "y": 30
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      ],
+      "semantics": {},
+      "cdl_annotations": {},
+      "isVector": false,
+      "arraySubscripts": "",
+      "within": "Buildings.Controls.OBC.CDL.Logical.Validation",
+      "fullMoFilePath": "../modelica-buildings/Buildings/Controls/OBC/CDL/Logical//Validation/TrueDelay.mo"
+    },
+    "not1": {
+      "type_specifier": "Buildings.Controls.OBC.CDL.Logical.Not",
+      "type": "element",
+      "compositionSpecifier": "public",
+      "long_class_specifier_identifier": "TrueDelay",
+      "single_component_list": {
+        "declaration": {
+          "identifier": "not1"
+        },
+        "description": {
+          "description_string": "Negation of input signal",
+          "annotation": [
+            {
+              "element_modification_or_replaceable": {
+                "element_modification": {
+                  "Placement": {
+                    "transformation": {
+                      "extent": [
+                        {
+                          "x": -60,
+                          "y": 60
+                        },
+                        {
+                          "x": -40,
+                          "y": 80
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "annotation": [
+        {
+          "element_modification_or_replaceable": {
+            "element_modification": {
+              "Placement": {
+                "transformation": {
+                  "extent": [
+                    {
+                      "x": -60,
+                      "y": 60
+                    },
+                    {
+                      "x": -40,
+                      "y": 80
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      ],
+      "semantics": {},
+      "cdl_annotations": {},
+      "isVector": false,
+      "arraySubscripts": "",
+      "within": "Buildings.Controls.OBC.CDL.Logical.Validation",
+      "fullMoFilePath": "../modelica-buildings/Buildings/Controls/OBC/CDL/Logical//Validation/TrueDelay.mo"
+    },
+    "onDelay3": {
+      "type_specifier": "Buildings.Controls.OBC.CDL.Logical.TrueDelay",
+      "type": "element",
+      "compositionSpecifier": "public",
+      "long_class_specifier_identifier": "TrueDelay",
+      "single_component_list": {
+        "declaration": {
+          "identifier": "onDelay3",
+          "modification": {
+            "class_modification": [
+              {
+                "element_modification_or_replaceable": {
+                  "final": true,
+                  "element_modification": {
+                    "name": "delayTime",
+                    "modification": {
+                      "equal": true,
+                      "expression": {
+                        "simple_expression": "1.8"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "description": {
+          "description_string": "Delay a rising edge of the input, but do not delay a falling edge.",
+          "annotation": [
+            {
+              "element_modification_or_replaceable": {
+                "element_modification": {
+                  "Placement": {
+                    "transformation": {
+                      "extent": [
+                        {
+                          "x": 60,
+                          "y": 100
+                        },
+                        {
+                          "x": 80,
+                          "y": 120
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "annotation": [
+        {
+          "element_modification_or_replaceable": {
+            "element_modification": {
+              "Placement": {
+                "transformation": {
+                  "extent": [
+                    {
+                      "x": 60,
+                      "y": 100
+                    },
+                    {
+                      "x": 80,
+                      "y": 120
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      ],
+      "semantics": {},
+      "cdl_annotations": {},
+      "isVector": false,
+      "arraySubscripts": "",
+      "within": "Buildings.Controls.OBC.CDL.Logical.Validation",
+      "fullMoFilePath": "../modelica-buildings/Buildings/Controls/OBC/CDL/Logical//Validation/TrueDelay.mo"
+    },
+    "onDelay7": {
+      "type_specifier": "Buildings.Controls.OBC.CDL.Logical.TrueDelay",
+      "type": "element",
+      "compositionSpecifier": "public",
+      "long_class_specifier_identifier": "TrueDelay",
+      "single_component_list": {
+        "declaration": {
+          "identifier": "onDelay7",
+          "modification": {
+            "class_modification": [
+              {
+                "element_modification_or_replaceable": {
+                  "final": true,
+                  "element_modification": {
+                    "name": "delayTime",
+                    "modification": {
+                      "equal": true,
+                      "expression": {
+                        "simple_expression": "1.8"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "description": {
+          "description_string": "Delay a rising edge of the input, but do not delay a falling edge.",
+          "annotation": [
+            {
+              "element_modification_or_replaceable": {
+                "element_modification": {
+                  "Placement": {
+                    "transformation": {
+                      "extent": [
+                        {
+                          "x": 60,
+                          "y": 10
+                        },
+                        {
+                          "x": 80,
+                          "y": 30
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "annotation": [
+        {
+          "element_modification_or_replaceable": {
+            "element_modification": {
+              "Placement": {
+                "transformation": {
+                  "extent": [
+                    {
+                      "x": 60,
+                      "y": 10
+                    },
+                    {
+                      "x": 80,
+                      "y": 30
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      ],
+      "semantics": {},
+      "cdl_annotations": {},
+      "isVector": false,
+      "arraySubscripts": "",
+      "within": "Buildings.Controls.OBC.CDL.Logical.Validation",
+      "fullMoFilePath": "../modelica-buildings/Buildings/Controls/OBC/CDL/Logical//Validation/TrueDelay.mo"
+    },
+    "onDelay00": {
+      "type_specifier": "Buildings.Controls.OBC.CDL.Logical.TrueDelay",
+      "type": "element",
+      "compositionSpecifier": "public",
+      "long_class_specifier_identifier": "TrueDelay",
+      "single_component_list": {
+        "declaration": {
+          "identifier": "onDelay00",
+          "modification": {
+            "class_modification": [
+              {
+                "element_modification_or_replaceable": {
+                  "final": true,
+                  "element_modification": {
+                    "name": "delayTime",
+                    "modification": {
+                      "equal": true,
+                      "expression": {
+                        "simple_expression": "0"
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "element_modification_or_replaceable": {
+                  "final": true,
+                  "element_modification": {
+                    "name": "delayOnInit",
+                    "modification": {
+                      "equal": true,
+                      "expression": {
+                        "simple_expression": "true"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "description": {
+          "description_string": "Delay a rising edge of the input, but do not delay a falling edge.",
+          "annotation": [
+            {
+              "element_modification_or_replaceable": {
+                "element_modification": {
+                  "Placement": {
+                    "transformation": {
+                      "extent": [
+                        {
+                          "x": 0,
+                          "y": -50
+                        },
+                        {
+                          "x": 20,
+                          "y": -30
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "annotation": [
+        {
+          "element_modification_or_replaceable": {
+            "element_modification": {
+              "Placement": {
+                "transformation": {
+                  "extent": [
+                    {
+                      "x": 0,
+                      "y": -50
+                    },
+                    {
+                      "x": 20,
+                      "y": -30
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      ],
+      "semantics": {},
+      "cdl_annotations": {},
+      "isVector": false,
+      "arraySubscripts": "",
+      "within": "Buildings.Controls.OBC.CDL.Logical.Validation",
+      "fullMoFilePath": "../modelica-buildings/Buildings/Controls/OBC/CDL/Logical//Validation/TrueDelay.mo"
+    },
+    "onDelay11": {
+      "type_specifier": "Buildings.Controls.OBC.CDL.Logical.TrueDelay",
+      "type": "element",
+      "compositionSpecifier": "public",
+      "long_class_specifier_identifier": "TrueDelay",
+      "single_component_list": {
+        "declaration": {
+          "identifier": "onDelay11",
+          "modification": {
+            "class_modification": [
+              {
+                "element_modification_or_replaceable": {
+                  "final": true,
+                  "element_modification": {
+                    "name": "delayTime",
+                    "modification": {
+                      "equal": true,
+                      "expression": {
+                        "simple_expression": "0.5"
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "element_modification_or_replaceable": {
+                  "final": true,
+                  "element_modification": {
+                    "name": "delayOnInit",
+                    "modification": {
+                      "equal": true,
+                      "expression": {
+                        "simple_expression": "true"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "description": {
+          "description_string": "Delay a rising edge of the input, but do not delay a falling edge.",
+          "annotation": [
+            {
+              "element_modification_or_replaceable": {
+                "element_modification": {
+                  "Placement": {
+                    "transformation": {
+                      "extent": [
+                        {
+                          "x": 60,
+                          "y": -50
+                        },
+                        {
+                          "x": 80,
+                          "y": -30
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "annotation": [
+        {
+          "element_modification_or_replaceable": {
+            "element_modification": {
+              "Placement": {
+                "transformation": {
+                  "extent": [
+                    {
+                      "x": 60,
+                      "y": -50
+                    },
+                    {
+                      "x": 80,
+                      "y": -30
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      ],
+      "semantics": {},
+      "cdl_annotations": {},
+      "isVector": false,
+      "arraySubscripts": "",
+      "within": "Buildings.Controls.OBC.CDL.Logical.Validation",
+      "fullMoFilePath": "../modelica-buildings/Buildings/Controls/OBC/CDL/Logical//Validation/TrueDelay.mo"
+    },
+    "onDelay22": {
+      "type_specifier": "Buildings.Controls.OBC.CDL.Logical.TrueDelay",
+      "type": "element",
+      "compositionSpecifier": "public",
+      "long_class_specifier_identifier": "TrueDelay",
+      "single_component_list": {
+        "declaration": {
+          "identifier": "onDelay22",
+          "modification": {
+            "class_modification": [
+              {
+                "element_modification_or_replaceable": {
+                  "final": true,
+                  "element_modification": {
+                    "name": "delayTime",
+                    "modification": {
+                      "equal": true,
+                      "expression": {
+                        "simple_expression": "0.8"
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "element_modification_or_replaceable": {
+                  "final": true,
+                  "element_modification": {
+                    "name": "delayOnInit",
+                    "modification": {
+                      "equal": true,
+                      "expression": {
+                        "simple_expression": "true"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "description": {
+          "description_string": "Delay a rising edge of the input, but do not delay a falling edge.",
+          "annotation": [
+            {
+              "element_modification_or_replaceable": {
+                "element_modification": {
+                  "Placement": {
+                    "transformation": {
+                      "extent": [
+                        {
+                          "x": 0,
+                          "y": -80
+                        },
+                        {
+                          "x": 20,
+                          "y": -60
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "annotation": [
+        {
+          "element_modification_or_replaceable": {
+            "element_modification": {
+              "Placement": {
+                "transformation": {
+                  "extent": [
+                    {
+                      "x": 0,
+                      "y": -80
+                    },
+                    {
+                      "x": 20,
+                      "y": -60
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      ],
+      "semantics": {},
+      "cdl_annotations": {},
+      "isVector": false,
+      "arraySubscripts": "",
+      "within": "Buildings.Controls.OBC.CDL.Logical.Validation",
+      "fullMoFilePath": "../modelica-buildings/Buildings/Controls/OBC/CDL/Logical//Validation/TrueDelay.mo"
+    },
+    "onDelay44": {
+      "type_specifier": "Buildings.Controls.OBC.CDL.Logical.TrueDelay",
+      "type": "element",
+      "compositionSpecifier": "public",
+      "long_class_specifier_identifier": "TrueDelay",
+      "single_component_list": {
+        "declaration": {
+          "identifier": "onDelay44",
+          "modification": {
+            "class_modification": [
+              {
+                "element_modification_or_replaceable": {
+                  "final": true,
+                  "element_modification": {
+                    "name": "delayTime",
+                    "modification": {
+                      "equal": true,
+                      "expression": {
+                        "simple_expression": "0"
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "element_modification_or_replaceable": {
+                  "final": true,
+                  "element_modification": {
+                    "name": "delayOnInit",
+                    "modification": {
+                      "equal": true,
+                      "expression": {
+                        "simple_expression": "true"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "description": {
+          "description_string": "Delay a rising edge of the input, but do not delay a falling edge.",
+          "annotation": [
+            {
+              "element_modification_or_replaceable": {
+                "element_modification": {
+                  "Placement": {
+                    "transformation": {
+                      "extent": [
+                        {
+                          "x": 0,
+                          "y": -140
+                        },
+                        {
+                          "x": 20,
+                          "y": -120
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "annotation": [
+        {
+          "element_modification_or_replaceable": {
+            "element_modification": {
+              "Placement": {
+                "transformation": {
+                  "extent": [
+                    {
+                      "x": 0,
+                      "y": -140
+                    },
+                    {
+                      "x": 20,
+                      "y": -120
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      ],
+      "semantics": {},
+      "cdl_annotations": {},
+      "isVector": false,
+      "arraySubscripts": "",
+      "within": "Buildings.Controls.OBC.CDL.Logical.Validation",
+      "fullMoFilePath": "../modelica-buildings/Buildings/Controls/OBC/CDL/Logical//Validation/TrueDelay.mo"
+    },
+    "onDelay55": {
+      "type_specifier": "Buildings.Controls.OBC.CDL.Logical.TrueDelay",
+      "type": "element",
+      "compositionSpecifier": "public",
+      "long_class_specifier_identifier": "TrueDelay",
+      "single_component_list": {
+        "declaration": {
+          "identifier": "onDelay55",
+          "modification": {
+            "class_modification": [
+              {
+                "element_modification_or_replaceable": {
+                  "final": true,
+                  "element_modification": {
+                    "name": "delayTime",
+                    "modification": {
+                      "equal": true,
+                      "expression": {
+                        "simple_expression": "0.5"
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "element_modification_or_replaceable": {
+                  "final": true,
+                  "element_modification": {
+                    "name": "delayOnInit",
+                    "modification": {
+                      "equal": true,
+                      "expression": {
+                        "simple_expression": "true"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "description": {
+          "description_string": "Delay a rising edge of the input, but do not delay a falling edge.",
+          "annotation": [
+            {
+              "element_modification_or_replaceable": {
+                "element_modification": {
+                  "Placement": {
+                    "transformation": {
+                      "extent": [
+                        {
+                          "x": 60,
+                          "y": -140
+                        },
+                        {
+                          "x": 80,
+                          "y": -120
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "annotation": [
+        {
+          "element_modification_or_replaceable": {
+            "element_modification": {
+              "Placement": {
+                "transformation": {
+                  "extent": [
+                    {
+                      "x": 60,
+                      "y": -140
+                    },
+                    {
+                      "x": 80,
+                      "y": -120
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      ],
+      "semantics": {},
+      "cdl_annotations": {},
+      "isVector": false,
+      "arraySubscripts": "",
+      "within": "Buildings.Controls.OBC.CDL.Logical.Validation",
+      "fullMoFilePath": "../modelica-buildings/Buildings/Controls/OBC/CDL/Logical//Validation/TrueDelay.mo"
+    },
+    "onDelay66": {
+      "type_specifier": "Buildings.Controls.OBC.CDL.Logical.TrueDelay",
+      "type": "element",
+      "compositionSpecifier": "public",
+      "long_class_specifier_identifier": "TrueDelay",
+      "single_component_list": {
+        "declaration": {
+          "identifier": "onDelay66",
+          "modification": {
+            "class_modification": [
+              {
+                "element_modification_or_replaceable": {
+                  "final": true,
+                  "element_modification": {
+                    "name": "delayTime",
+                    "modification": {
+                      "equal": true,
+                      "expression": {
+                        "simple_expression": "0.8"
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "element_modification_or_replaceable": {
+                  "final": true,
+                  "element_modification": {
+                    "name": "delayOnInit",
+                    "modification": {
+                      "equal": true,
+                      "expression": {
+                        "simple_expression": "true"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "description": {
+          "description_string": "Delay a rising edge of the input, but do not delay a falling edge.",
+          "annotation": [
+            {
+              "element_modification_or_replaceable": {
+                "element_modification": {
+                  "Placement": {
+                    "transformation": {
+                      "extent": [
+                        {
+                          "x": 0,
+                          "y": -170
+                        },
+                        {
+                          "x": 20,
+                          "y": -150
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "annotation": [
+        {
+          "element_modification_or_replaceable": {
+            "element_modification": {
+              "Placement": {
+                "transformation": {
+                  "extent": [
+                    {
+                      "x": 0,
+                      "y": -170
+                    },
+                    {
+                      "x": 20,
+                      "y": -150
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      ],
+      "semantics": {},
+      "cdl_annotations": {},
+      "isVector": false,
+      "arraySubscripts": "",
+      "within": "Buildings.Controls.OBC.CDL.Logical.Validation",
+      "fullMoFilePath": "../modelica-buildings/Buildings/Controls/OBC/CDL/Logical//Validation/TrueDelay.mo"
+    },
+    "not2": {
+      "type_specifier": "Buildings.Controls.OBC.CDL.Logical.Not",
+      "type": "element",
+      "compositionSpecifier": "public",
+      "long_class_specifier_identifier": "TrueDelay",
+      "single_component_list": {
+        "declaration": {
+          "identifier": "not2"
+        },
+        "description": {
+          "description_string": "Negation of input signal",
+          "annotation": [
+            {
+              "element_modification_or_replaceable": {
+                "element_modification": {
+                  "Placement": {
+                    "transformation": {
+                      "extent": [
+                        {
+                          "x": -60,
+                          "y": -120
+                        },
+                        {
+                          "x": -40,
+                          "y": -100
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "annotation": [
+        {
+          "element_modification_or_replaceable": {
+            "element_modification": {
+              "Placement": {
+                "transformation": {
+                  "extent": [
+                    {
+                      "x": -60,
+                      "y": -120
+                    },
+                    {
+                      "x": -40,
+                      "y": -100
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      ],
+      "semantics": {},
+      "cdl_annotations": {},
+      "isVector": false,
+      "arraySubscripts": "",
+      "within": "Buildings.Controls.OBC.CDL.Logical.Validation",
+      "fullMoFilePath": "../modelica-buildings/Buildings/Controls/OBC/CDL/Logical//Validation/TrueDelay.mo"
+    },
+    "onDelay33": {
+      "type_specifier": "Buildings.Controls.OBC.CDL.Logical.TrueDelay",
+      "type": "element",
+      "compositionSpecifier": "public",
+      "long_class_specifier_identifier": "TrueDelay",
+      "single_component_list": {
+        "declaration": {
+          "identifier": "onDelay33",
+          "modification": {
+            "class_modification": [
+              {
+                "element_modification_or_replaceable": {
+                  "final": true,
+                  "element_modification": {
+                    "name": "delayTime",
+                    "modification": {
+                      "equal": true,
+                      "expression": {
+                        "simple_expression": "1.8"
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "element_modification_or_replaceable": {
+                  "final": true,
+                  "element_modification": {
+                    "name": "delayOnInit",
+                    "modification": {
+                      "equal": true,
+                      "expression": {
+                        "simple_expression": "true"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "description": {
+          "description_string": "Delay a rising edge of the input, but do not delay a falling edge.",
+          "annotation": [
+            {
+              "element_modification_or_replaceable": {
+                "element_modification": {
+                  "Placement": {
+                    "transformation": {
+                      "extent": [
+                        {
+                          "x": 60,
+                          "y": -80
+                        },
+                        {
+                          "x": 80,
+                          "y": -60
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "annotation": [
+        {
+          "element_modification_or_replaceable": {
+            "element_modification": {
+              "Placement": {
+                "transformation": {
+                  "extent": [
+                    {
+                      "x": 60,
+                      "y": -80
+                    },
+                    {
+                      "x": 80,
+                      "y": -60
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      ],
+      "semantics": {},
+      "cdl_annotations": {},
+      "isVector": false,
+      "arraySubscripts": "",
+      "within": "Buildings.Controls.OBC.CDL.Logical.Validation",
+      "fullMoFilePath": "../modelica-buildings/Buildings/Controls/OBC/CDL/Logical//Validation/TrueDelay.mo"
+    },
+    "onDelay77": {
+      "type_specifier": "Buildings.Controls.OBC.CDL.Logical.TrueDelay",
+      "type": "element",
+      "compositionSpecifier": "public",
+      "long_class_specifier_identifier": "TrueDelay",
+      "single_component_list": {
+        "declaration": {
+          "identifier": "onDelay77",
+          "modification": {
+            "class_modification": [
+              {
+                "element_modification_or_replaceable": {
+                  "final": true,
+                  "element_modification": {
+                    "name": "delayTime",
+                    "modification": {
+                      "equal": true,
+                      "expression": {
+                        "simple_expression": "1.8"
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "element_modification_or_replaceable": {
+                  "final": true,
+                  "element_modification": {
+                    "name": "delayOnInit",
+                    "modification": {
+                      "equal": true,
+                      "expression": {
+                        "simple_expression": "true"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "description": {
+          "description_string": "Delay a rising edge of the input, but do not delay a falling edge.",
+          "annotation": [
+            {
+              "element_modification_or_replaceable": {
+                "element_modification": {
+                  "Placement": {
+                    "transformation": {
+                      "extent": [
+                        {
+                          "x": 60,
+                          "y": -170
+                        },
+                        {
+                          "x": 80,
+                          "y": -150
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "annotation": [
+        {
+          "element_modification_or_replaceable": {
+            "element_modification": {
+              "Placement": {
+                "transformation": {
+                  "extent": [
+                    {
+                      "x": 60,
+                      "y": -170
+                    },
+                    {
+                      "x": 80,
+                      "y": -150
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      ],
+      "semantics": {},
+      "cdl_annotations": {},
+      "isVector": false,
+      "arraySubscripts": "",
+      "within": "Buildings.Controls.OBC.CDL.Logical.Validation",
+      "fullMoFilePath": "../modelica-buildings/Buildings/Controls/OBC/CDL/Logical//Validation/TrueDelay.mo"
+    },
+    "booPul": {
+      "type_specifier": "Buildings.Controls.OBC.CDL.Logical.Sources.Pulse",
+      "type": "element",
+      "compositionSpecifier": "protected",
+      "long_class_specifier_identifier": "TrueDelay",
+      "single_component_list": {
+        "declaration": {
+          "identifier": "booPul",
+          "modification": {
+            "class_modification": [
+              {
+                "element_modification_or_replaceable": {
+                  "final": true,
+                  "element_modification": {
+                    "name": "width",
+                    "modification": {
+                      "equal": true,
+                      "expression": {
+                        "simple_expression": "0.5"
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "element_modification_or_replaceable": {
+                  "final": true,
+                  "element_modification": {
+                    "name": "period",
+                    "modification": {
+                      "equal": true,
+                      "expression": {
+                        "simple_expression": "1.5"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "description": {
+          "description_string": "Block that outputs cyclic on and off",
+          "annotation": [
+            {
+              "element_modification_or_replaceable": {
+                "element_modification": {
+                  "Placement": {
+                    "transformation": {
+                      "extent": [
+                        {
+                          "x": -100,
+                          "y": 80
+                        },
+                        {
+                          "x": -80,
+                          "y": 100
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "annotation": [
+        {
+          "element_modification_or_replaceable": {
+            "element_modification": {
+              "Placement": {
+                "transformation": {
+                  "extent": [
+                    {
+                      "x": -100,
+                      "y": 80
+                    },
+                    {
+                      "x": -80,
+                      "y": 100
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      ],
+      "semantics": {},
+      "cdl_annotations": {},
+      "isVector": false,
+      "arraySubscripts": "",
+      "within": "Buildings.Controls.OBC.CDL.Logical.Validation",
+      "fullMoFilePath": "../modelica-buildings/Buildings/Controls/OBC/CDL/Logical//Validation/TrueDelay.mo"
+    },
+    "booPul1": {
+      "type_specifier": "Buildings.Controls.OBC.CDL.Logical.Sources.Pulse",
+      "type": "element",
+      "compositionSpecifier": "protected",
+      "long_class_specifier_identifier": "TrueDelay",
+      "single_component_list": {
+        "declaration": {
+          "identifier": "booPul1",
+          "modification": {
+            "class_modification": [
+              {
+                "element_modification_or_replaceable": {
+                  "final": true,
+                  "element_modification": {
+                    "name": "width",
+                    "modification": {
+                      "equal": true,
+                      "expression": {
+                        "simple_expression": "0.5"
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "element_modification_or_replaceable": {
+                  "final": true,
+                  "element_modification": {
+                    "name": "period",
+                    "modification": {
+                      "equal": true,
+                      "expression": {
+                        "simple_expression": "1.5"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "description": {
+          "description_string": "Block that outputs cyclic on and off",
+          "annotation": [
+            {
+              "element_modification_or_replaceable": {
+                "element_modification": {
+                  "Placement": {
+                    "transformation": {
+                      "extent": [
+                        {
+                          "x": -100,
+                          "y": -100
+                        },
+                        {
+                          "x": -80,
+                          "y": -80
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "annotation": [
+        {
+          "element_modification_or_replaceable": {
+            "element_modification": {
+              "Placement": {
+                "transformation": {
+                  "extent": [
+                    {
+                      "x": -100,
+                      "y": -100
+                    },
+                    {
+                      "x": -80,
+                      "y": -80
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      ],
+      "semantics": {},
+      "cdl_annotations": {},
+      "isVector": false,
+      "arraySubscripts": "",
+      "within": "Buildings.Controls.OBC.CDL.Logical.Validation",
+      "fullMoFilePath": "../modelica-buildings/Buildings/Controls/OBC/CDL/Logical//Validation/TrueDelay.mo"
+    }
+  },
+  "requiredReferences": {
+    "connections": {
+      "booPul.y": [
+        "not1.u",
+        "onDelay0.u",
+        "onDelay2.u",
+        "onDelay1.u",
+        "onDelay3.u"
+      ],
+      "not1.y": [
+        "onDelay4.u",
+        "onDelay6.u",
+        "onDelay5.u",
+        "onDelay7.u"
+      ],
+      "booPul1.y": [
+        "not2.u",
+        "onDelay00.u",
+        "onDelay22.u",
+        "onDelay11.u",
+        "onDelay33.u"
+      ],
+      "not2.y": [
+        "onDelay44.u",
+        "onDelay66.u",
+        "onDelay55.u",
+        "onDelay77.u"
+      ]
+    }
+  }
+}

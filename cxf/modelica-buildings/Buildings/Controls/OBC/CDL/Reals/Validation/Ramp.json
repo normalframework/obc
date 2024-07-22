@@ -1,0 +1,1266 @@
+{
+  "instances": {
+    "Ramp": {
+      "within": "Buildings.Controls.OBC.CDL.Reals.Validation",
+      "fullMoFilePath": "../modelica-buildings/Buildings/Controls/OBC/CDL/Reals//Validation/Ramp.mo",
+      "type": "long_class_specifier",
+      "class_prefixes": "model",
+      "annotation": [
+        {
+          "element_modification_or_replaceable": {
+            "element_modification": {
+              "name": "experiment",
+              "modification": {
+                "class_modification": [
+                  {
+                    "element_modification_or_replaceable": {
+                      "element_modification": {
+                        "name": "StopTime",
+                        "modification": {
+                          "equal": true,
+                          "expression": {
+                            "simple_expression": "10"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "element_modification_or_replaceable": {
+                      "element_modification": {
+                        "name": "Tolerance",
+                        "modification": {
+                          "equal": true,
+                          "expression": {
+                            "simple_expression": "0.000001"
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "element_modification_or_replaceable": {
+            "element_modification": {
+              "name": "__Dymola_Commands",
+              "modification": {
+                "class_modification": [
+                  {
+                    "element_modification_or_replaceable": {
+                      "element_modification": {
+                        "name": "file",
+                        "modification": {
+                          "equal": true,
+                          "expression": {
+                            "simple_expression": "\"modelica://Buildings/Resources/Scripts/Dymola/Controls/OBC/CDL/Reals/Validation/Ramp.mos\""
+                          }
+                        },
+                        "description_string": "Simulate and plot"
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "element_modification_or_replaceable": {
+            "element_modification": {
+              "name": "Documentation",
+              "modification": {
+                "class_modification": [
+                  {
+                    "element_modification_or_replaceable": {
+                      "element_modification": {
+                        "name": "info",
+                        "modification": {
+                          "equal": true,
+                          "expression": {
+                            "simple_expression": "\"<html>\n<p>\nValidation test for the block\n<a href=\\\"modelica://Buildings.Controls.OBC.CDL.Reals.Ramp\\\">\nBuildings.Controls.OBC.CDL.Reals.Ramp</a>.\n</p>\n<ul>\n<li>\nThe instances <code>ramUp</code> and <code>ramUp1</code> shows ramping up the\ninput in different speed.\n</li>\n<li>\nThe instance <code>ramUpDow</code> shows ramping up and down the input in\nthe same speed. It also shows that the output will be the ramped input if\nthe boolean input <code>active</code> is <code>true</code>.\n</li>\n<li>\nThe instance <code>ramUpDow1</code> shows ramping up and down the input in\nthe different speed.\n</li>\n</ul>\n</html>\""
+                          }
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "element_modification_or_replaceable": {
+                      "element_modification": {
+                        "name": "revisions",
+                        "modification": {
+                          "equal": true,
+                          "expression": {
+                            "simple_expression": "\"<html>\n<ul>\n<li>\nNovember 16, 2022, by Jianjun Hu:<br/>\nFirst implementation.\n</li>\n</ul>\n</html>\""
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "element_modification_or_replaceable": {
+            "element_modification": {
+              "name": "Icon",
+              "modification": {
+                "class_modification": [
+                  {
+                    "element_modification_or_replaceable": {
+                      "element_modification": {
+                        "coordinateSystem": {
+                          "extent": [
+                            {
+                              "x": -100,
+                              "y": -100
+                            },
+                            {
+                              "x": 100,
+                              "y": 100
+                            }
+                          ]
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "element_modification_or_replaceable": {
+                      "element_modification": {
+                        "graphics": [
+                          {
+                            "name": "Ellipse",
+                            "attribute": {
+                              "extent": [
+                                {
+                                  "x": -100,
+                                  "y": -100
+                                },
+                                {
+                                  "x": 100,
+                                  "y": 100
+                                }
+                              ],
+                              "lineColor": {
+                                "r": 75,
+                                "g": 138,
+                                "b": 73
+                              },
+                              "fillColor": {
+                                "r": 255,
+                                "g": 255,
+                                "b": 255
+                              },
+                              "fillPattern": "FillPattern.Solid"
+                            }
+                          },
+                          {
+                            "name": "Polygon",
+                            "attribute": {
+                              "points": [
+                                {
+                                  "x": -36,
+                                  "y": 60
+                                },
+                                {
+                                  "x": 64,
+                                  "y": 0
+                                },
+                                {
+                                  "x": -36,
+                                  "y": -60
+                                },
+                                {
+                                  "x": -36,
+                                  "y": 60
+                                }
+                              ],
+                              "lineColor": {
+                                "r": 0,
+                                "g": 0,
+                                "b": 255
+                              },
+                              "fillColor": {
+                                "r": 75,
+                                "g": 138,
+                                "b": 73
+                              },
+                              "pattern": "LinePattern.None",
+                              "fillPattern": "FillPattern.Solid"
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "element_modification_or_replaceable": {
+            "element_modification": {
+              "name": "Diagram",
+              "modification": {
+                "class_modification": [
+                  {
+                    "element_modification_or_replaceable": {
+                      "element_modification": {
+                        "coordinateSystem": {
+                          "extent": [
+                            {
+                              "x": -120,
+                              "y": -140
+                            },
+                            {
+                              "x": 120,
+                              "y": 140
+                            }
+                          ]
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      ],
+      "semantics": {},
+      "cdl_annotations": {}
+    },
+    "ramUp": {
+      "type_specifier": "Buildings.Controls.OBC.CDL.Reals.Ramp",
+      "type": "element",
+      "compositionSpecifier": "public",
+      "long_class_specifier_identifier": "Ramp",
+      "single_component_list": {
+        "declaration": {
+          "identifier": "ramUp",
+          "modification": {
+            "class_modification": [
+              {
+                "element_modification_or_replaceable": {
+                  "final": true,
+                  "element_modification": {
+                    "name": "raisingSlewRate",
+                    "modification": {
+                      "equal": true,
+                      "expression": {
+                        "simple_expression": "1/20"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "description": {
+          "description_string": "Ramp the input increasing",
+          "annotation": [
+            {
+              "element_modification_or_replaceable": {
+                "element_modification": {
+                  "Placement": {
+                    "transformation": {
+                      "extent": [
+                        {
+                          "x": -40,
+                          "y": 70
+                        },
+                        {
+                          "x": -20,
+                          "y": 90
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "annotation": [
+        {
+          "element_modification_or_replaceable": {
+            "element_modification": {
+              "Placement": {
+                "transformation": {
+                  "extent": [
+                    {
+                      "x": -40,
+                      "y": 70
+                    },
+                    {
+                      "x": -20,
+                      "y": 90
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      ],
+      "semantics": {},
+      "cdl_annotations": {},
+      "isVector": false,
+      "arraySubscripts": "",
+      "within": "Buildings.Controls.OBC.CDL.Reals.Validation",
+      "fullMoFilePath": "../modelica-buildings/Buildings/Controls/OBC/CDL/Reals//Validation/Ramp.mo"
+    },
+    "ramUp1": {
+      "type_specifier": "Buildings.Controls.OBC.CDL.Reals.Ramp",
+      "type": "element",
+      "compositionSpecifier": "public",
+      "long_class_specifier_identifier": "Ramp",
+      "single_component_list": {
+        "declaration": {
+          "identifier": "ramUp1",
+          "modification": {
+            "class_modification": [
+              {
+                "element_modification_or_replaceable": {
+                  "final": true,
+                  "element_modification": {
+                    "name": "raisingSlewRate",
+                    "modification": {
+                      "equal": true,
+                      "expression": {
+                        "simple_expression": "1/10"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "description": {
+          "description_string": "Ramp the input increasing in different speed",
+          "annotation": [
+            {
+              "element_modification_or_replaceable": {
+                "element_modification": {
+                  "Placement": {
+                    "transformation": {
+                      "extent": [
+                        {
+                          "x": -40,
+                          "y": 10
+                        },
+                        {
+                          "x": -20,
+                          "y": 30
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "annotation": [
+        {
+          "element_modification_or_replaceable": {
+            "element_modification": {
+              "Placement": {
+                "transformation": {
+                  "extent": [
+                    {
+                      "x": -40,
+                      "y": 10
+                    },
+                    {
+                      "x": -20,
+                      "y": 30
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      ],
+      "semantics": {},
+      "cdl_annotations": {},
+      "isVector": false,
+      "arraySubscripts": "",
+      "within": "Buildings.Controls.OBC.CDL.Reals.Validation",
+      "fullMoFilePath": "../modelica-buildings/Buildings/Controls/OBC/CDL/Reals//Validation/Ramp.mo"
+    },
+    "ramUpDow": {
+      "type_specifier": "Buildings.Controls.OBC.CDL.Reals.Ramp",
+      "type": "element",
+      "compositionSpecifier": "public",
+      "long_class_specifier_identifier": "Ramp",
+      "single_component_list": {
+        "declaration": {
+          "identifier": "ramUpDow",
+          "modification": {
+            "class_modification": [
+              {
+                "element_modification_or_replaceable": {
+                  "final": true,
+                  "element_modification": {
+                    "name": "raisingSlewRate",
+                    "modification": {
+                      "equal": true,
+                      "expression": {
+                        "simple_expression": "1/5"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "description": {
+          "description_string": "Limit the increase and decrease of the input if the active is true",
+          "annotation": [
+            {
+              "element_modification_or_replaceable": {
+                "element_modification": {
+                  "Placement": {
+                    "transformation": {
+                      "extent": [
+                        {
+                          "x": -40,
+                          "y": -70
+                        },
+                        {
+                          "x": -20,
+                          "y": -50
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "annotation": [
+        {
+          "element_modification_or_replaceable": {
+            "element_modification": {
+              "Placement": {
+                "transformation": {
+                  "extent": [
+                    {
+                      "x": -40,
+                      "y": -70
+                    },
+                    {
+                      "x": -20,
+                      "y": -50
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      ],
+      "semantics": {},
+      "cdl_annotations": {},
+      "isVector": false,
+      "arraySubscripts": "",
+      "within": "Buildings.Controls.OBC.CDL.Reals.Validation",
+      "fullMoFilePath": "../modelica-buildings/Buildings/Controls/OBC/CDL/Reals//Validation/Ramp.mo"
+    },
+    "ramUpDow1": {
+      "type_specifier": "Buildings.Controls.OBC.CDL.Reals.Ramp",
+      "type": "element",
+      "compositionSpecifier": "public",
+      "long_class_specifier_identifier": "Ramp",
+      "single_component_list": {
+        "declaration": {
+          "identifier": "ramUpDow1",
+          "modification": {
+            "class_modification": [
+              {
+                "element_modification_or_replaceable": {
+                  "final": true,
+                  "element_modification": {
+                    "name": "raisingSlewRate",
+                    "modification": {
+                      "equal": true,
+                      "expression": {
+                        "simple_expression": "1/5"
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "element_modification_or_replaceable": {
+                  "final": true,
+                  "element_modification": {
+                    "name": "fallingSlewRate",
+                    "modification": {
+                      "equal": true,
+                      "expression": {
+                        "simple_expression": "-1/2"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "description": {
+          "description_string": "Different increase and decrease slew rate limits",
+          "annotation": [
+            {
+              "element_modification_or_replaceable": {
+                "element_modification": {
+                  "Placement": {
+                    "transformation": {
+                      "extent": [
+                        {
+                          "x": 80,
+                          "y": -10
+                        },
+                        {
+                          "x": 100,
+                          "y": 10
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "annotation": [
+        {
+          "element_modification_or_replaceable": {
+            "element_modification": {
+              "Placement": {
+                "transformation": {
+                  "extent": [
+                    {
+                      "x": 80,
+                      "y": -10
+                    },
+                    {
+                      "x": 100,
+                      "y": 10
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      ],
+      "semantics": {},
+      "cdl_annotations": {},
+      "isVector": false,
+      "arraySubscripts": "",
+      "within": "Buildings.Controls.OBC.CDL.Reals.Validation",
+      "fullMoFilePath": "../modelica-buildings/Buildings/Controls/OBC/CDL/Reals//Validation/Ramp.mo"
+    },
+    "booPul1": {
+      "type_specifier": "Buildings.Controls.OBC.CDL.Logical.Sources.Pulse",
+      "type": "element",
+      "compositionSpecifier": "public",
+      "long_class_specifier_identifier": "Ramp",
+      "single_component_list": {
+        "declaration": {
+          "identifier": "booPul1",
+          "modification": {
+            "class_modification": [
+              {
+                "element_modification_or_replaceable": {
+                  "final": true,
+                  "element_modification": {
+                    "name": "width",
+                    "modification": {
+                      "equal": true,
+                      "expression": {
+                        "simple_expression": "0.9"
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "element_modification_or_replaceable": {
+                  "final": true,
+                  "element_modification": {
+                    "name": "period",
+                    "modification": {
+                      "equal": true,
+                      "expression": {
+                        "simple_expression": "12"
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "element_modification_or_replaceable": {
+                  "final": true,
+                  "element_modification": {
+                    "name": "shift",
+                    "modification": {
+                      "equal": true,
+                      "expression": {
+                        "simple_expression": "1"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "description": {
+          "description_string": "Boolean pulse",
+          "annotation": [
+            {
+              "element_modification_or_replaceable": {
+                "element_modification": {
+                  "Placement": {
+                    "transformation": {
+                      "extent": [
+                        {
+                          "x": -100,
+                          "y": 20
+                        },
+                        {
+                          "x": -80,
+                          "y": 40
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "annotation": [
+        {
+          "element_modification_or_replaceable": {
+            "element_modification": {
+              "Placement": {
+                "transformation": {
+                  "extent": [
+                    {
+                      "x": -100,
+                      "y": 20
+                    },
+                    {
+                      "x": -80,
+                      "y": 40
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      ],
+      "semantics": {},
+      "cdl_annotations": {},
+      "isVector": false,
+      "arraySubscripts": "",
+      "within": "Buildings.Controls.OBC.CDL.Reals.Validation",
+      "fullMoFilePath": "../modelica-buildings/Buildings/Controls/OBC/CDL/Reals//Validation/Ramp.mo"
+    },
+    "pul": {
+      "type_specifier": "Buildings.Controls.OBC.CDL.Reals.Sources.Pulse",
+      "type": "element",
+      "compositionSpecifier": "public",
+      "long_class_specifier_identifier": "Ramp",
+      "single_component_list": {
+        "declaration": {
+          "identifier": "pul",
+          "modification": {
+            "class_modification": [
+              {
+                "element_modification_or_replaceable": {
+                  "final": true,
+                  "element_modification": {
+                    "name": "width",
+                    "modification": {
+                      "equal": true,
+                      "expression": {
+                        "simple_expression": "0.8"
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "element_modification_or_replaceable": {
+                  "final": true,
+                  "element_modification": {
+                    "name": "period",
+                    "modification": {
+                      "equal": true,
+                      "expression": {
+                        "simple_expression": "12"
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "element_modification_or_replaceable": {
+                  "final": true,
+                  "element_modification": {
+                    "name": "shift",
+                    "modification": {
+                      "equal": true,
+                      "expression": {
+                        "simple_expression": "2"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "description": {
+          "description_string": "Boolean pulse",
+          "annotation": [
+            {
+              "element_modification_or_replaceable": {
+                "element_modification": {
+                  "Placement": {
+                    "transformation": {
+                      "extent": [
+                        {
+                          "x": -100,
+                          "y": 70
+                        },
+                        {
+                          "x": -80,
+                          "y": 90
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "annotation": [
+        {
+          "element_modification_or_replaceable": {
+            "element_modification": {
+              "Placement": {
+                "transformation": {
+                  "extent": [
+                    {
+                      "x": -100,
+                      "y": 70
+                    },
+                    {
+                      "x": -80,
+                      "y": 90
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      ],
+      "semantics": {},
+      "cdl_annotations": {},
+      "isVector": false,
+      "arraySubscripts": "",
+      "within": "Buildings.Controls.OBC.CDL.Reals.Validation",
+      "fullMoFilePath": "../modelica-buildings/Buildings/Controls/OBC/CDL/Reals//Validation/Ramp.mo"
+    },
+    "booPul2": {
+      "type_specifier": "Buildings.Controls.OBC.CDL.Logical.Sources.Pulse",
+      "type": "element",
+      "compositionSpecifier": "public",
+      "long_class_specifier_identifier": "Ramp",
+      "single_component_list": {
+        "declaration": {
+          "identifier": "booPul2",
+          "modification": {
+            "class_modification": [
+              {
+                "element_modification_or_replaceable": {
+                  "final": true,
+                  "element_modification": {
+                    "name": "width",
+                    "modification": {
+                      "equal": true,
+                      "expression": {
+                        "simple_expression": "0.9"
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "element_modification_or_replaceable": {
+                  "final": true,
+                  "element_modification": {
+                    "name": "period",
+                    "modification": {
+                      "equal": true,
+                      "expression": {
+                        "simple_expression": "12"
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "element_modification_or_replaceable": {
+                  "final": true,
+                  "element_modification": {
+                    "name": "shift",
+                    "modification": {
+                      "equal": true,
+                      "expression": {
+                        "simple_expression": "2"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "description": {
+          "description_string": "Boolean pulse",
+          "annotation": [
+            {
+              "element_modification_or_replaceable": {
+                "element_modification": {
+                  "Placement": {
+                    "transformation": {
+                      "extent": [
+                        {
+                          "x": -100,
+                          "y": -100
+                        },
+                        {
+                          "x": -80,
+                          "y": -80
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "annotation": [
+        {
+          "element_modification_or_replaceable": {
+            "element_modification": {
+              "Placement": {
+                "transformation": {
+                  "extent": [
+                    {
+                      "x": -100,
+                      "y": -100
+                    },
+                    {
+                      "x": -80,
+                      "y": -80
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      ],
+      "semantics": {},
+      "cdl_annotations": {},
+      "isVector": false,
+      "arraySubscripts": "",
+      "within": "Buildings.Controls.OBC.CDL.Reals.Validation",
+      "fullMoFilePath": "../modelica-buildings/Buildings/Controls/OBC/CDL/Reals//Validation/Ramp.mo"
+    },
+    "pul1": {
+      "type_specifier": "Buildings.Controls.OBC.CDL.Reals.Sources.Pulse",
+      "type": "element",
+      "compositionSpecifier": "public",
+      "long_class_specifier_identifier": "Ramp",
+      "single_component_list": {
+        "declaration": {
+          "identifier": "pul1",
+          "modification": {
+            "class_modification": [
+              {
+                "element_modification_or_replaceable": {
+                  "final": true,
+                  "element_modification": {
+                    "name": "width",
+                    "modification": {
+                      "equal": true,
+                      "expression": {
+                        "simple_expression": "0.2"
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "element_modification_or_replaceable": {
+                  "final": true,
+                  "element_modification": {
+                    "name": "period",
+                    "modification": {
+                      "equal": true,
+                      "expression": {
+                        "simple_expression": "12"
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "element_modification_or_replaceable": {
+                  "final": true,
+                  "element_modification": {
+                    "name": "shift",
+                    "modification": {
+                      "equal": true,
+                      "expression": {
+                        "simple_expression": "1.5"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "description": {
+          "description_string": "Boolean pulse",
+          "annotation": [
+            {
+              "element_modification_or_replaceable": {
+                "element_modification": {
+                  "Placement": {
+                    "transformation": {
+                      "extent": [
+                        {
+                          "x": -100,
+                          "y": -40
+                        },
+                        {
+                          "x": -80,
+                          "y": -20
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "annotation": [
+        {
+          "element_modification_or_replaceable": {
+            "element_modification": {
+              "Placement": {
+                "transformation": {
+                  "extent": [
+                    {
+                      "x": -100,
+                      "y": -40
+                    },
+                    {
+                      "x": -80,
+                      "y": -20
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      ],
+      "semantics": {},
+      "cdl_annotations": {},
+      "isVector": false,
+      "arraySubscripts": "",
+      "within": "Buildings.Controls.OBC.CDL.Reals.Validation",
+      "fullMoFilePath": "../modelica-buildings/Buildings/Controls/OBC/CDL/Reals//Validation/Ramp.mo"
+    },
+    "pul2": {
+      "type_specifier": "Buildings.Controls.OBC.CDL.Reals.Sources.Pulse",
+      "type": "element",
+      "compositionSpecifier": "public",
+      "long_class_specifier_identifier": "Ramp",
+      "single_component_list": {
+        "declaration": {
+          "identifier": "pul2",
+          "modification": {
+            "class_modification": [
+              {
+                "element_modification_or_replaceable": {
+                  "final": true,
+                  "element_modification": {
+                    "name": "width",
+                    "modification": {
+                      "equal": true,
+                      "expression": {
+                        "simple_expression": "0.3"
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "element_modification_or_replaceable": {
+                  "final": true,
+                  "element_modification": {
+                    "name": "period",
+                    "modification": {
+                      "equal": true,
+                      "expression": {
+                        "simple_expression": "12"
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "element_modification_or_replaceable": {
+                  "final": true,
+                  "element_modification": {
+                    "name": "shift",
+                    "modification": {
+                      "equal": true,
+                      "expression": {
+                        "simple_expression": "3"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "description": {
+          "description_string": "Boolean pulse",
+          "annotation": [
+            {
+              "element_modification_or_replaceable": {
+                "element_modification": {
+                  "Placement": {
+                    "transformation": {
+                      "extent": [
+                        {
+                          "x": 20,
+                          "y": 20
+                        },
+                        {
+                          "x": 40,
+                          "y": 40
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "annotation": [
+        {
+          "element_modification_or_replaceable": {
+            "element_modification": {
+              "Placement": {
+                "transformation": {
+                  "extent": [
+                    {
+                      "x": 20,
+                      "y": 20
+                    },
+                    {
+                      "x": 40,
+                      "y": 40
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      ],
+      "semantics": {},
+      "cdl_annotations": {},
+      "isVector": false,
+      "arraySubscripts": "",
+      "within": "Buildings.Controls.OBC.CDL.Reals.Validation",
+      "fullMoFilePath": "../modelica-buildings/Buildings/Controls/OBC/CDL/Reals//Validation/Ramp.mo"
+    },
+    "booPul5": {
+      "type_specifier": "Buildings.Controls.OBC.CDL.Logical.Sources.Pulse",
+      "type": "element",
+      "compositionSpecifier": "public",
+      "long_class_specifier_identifier": "Ramp",
+      "single_component_list": {
+        "declaration": {
+          "identifier": "booPul5",
+          "modification": {
+            "class_modification": [
+              {
+                "element_modification_or_replaceable": {
+                  "final": true,
+                  "element_modification": {
+                    "name": "width",
+                    "modification": {
+                      "equal": true,
+                      "expression": {
+                        "simple_expression": "0.9"
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "element_modification_or_replaceable": {
+                  "final": true,
+                  "element_modification": {
+                    "name": "period",
+                    "modification": {
+                      "equal": true,
+                      "expression": {
+                        "simple_expression": "12"
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "element_modification_or_replaceable": {
+                  "final": true,
+                  "element_modification": {
+                    "name": "shift",
+                    "modification": {
+                      "equal": true,
+                      "expression": {
+                        "simple_expression": "1"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "description": {
+          "description_string": "Boolean pulse",
+          "annotation": [
+            {
+              "element_modification_or_replaceable": {
+                "element_modification": {
+                  "Placement": {
+                    "transformation": {
+                      "extent": [
+                        {
+                          "x": 20,
+                          "y": -40
+                        },
+                        {
+                          "x": 40,
+                          "y": -20
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "annotation": [
+        {
+          "element_modification_or_replaceable": {
+            "element_modification": {
+              "Placement": {
+                "transformation": {
+                  "extent": [
+                    {
+                      "x": 20,
+                      "y": -40
+                    },
+                    {
+                      "x": 40,
+                      "y": -20
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      ],
+      "semantics": {},
+      "cdl_annotations": {},
+      "isVector": false,
+      "arraySubscripts": "",
+      "within": "Buildings.Controls.OBC.CDL.Reals.Validation",
+      "fullMoFilePath": "../modelica-buildings/Buildings/Controls/OBC/CDL/Reals//Validation/Ramp.mo"
+    }
+  },
+  "requiredReferences": {
+    "connections": {
+      "booPul2.y": [
+        "ramUpDow.active"
+      ],
+      "booPul5.y": [
+        "ramUpDow1.active"
+      ],
+      "pul.y": [
+        "ramUp.u",
+        "ramUp1.u"
+      ],
+      "booPul1.y": [
+        "ramUp.active",
+        "ramUp1.active"
+      ],
+      "pul1.y": [
+        "ramUpDow.u"
+      ],
+      "pul2.y": [
+        "ramUpDow1.u"
+      ]
+    }
+  }
+}

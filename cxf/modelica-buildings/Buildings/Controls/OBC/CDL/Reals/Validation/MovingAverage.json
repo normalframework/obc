@@ -1,0 +1,1210 @@
+{
+  "instances": {
+    "MovingAverage": {
+      "within": "Buildings.Controls.OBC.CDL.Reals.Validation",
+      "fullMoFilePath": "../modelica-buildings/Buildings/Controls/OBC/CDL/Reals//Validation/MovingAverage.mo",
+      "type": "long_class_specifier",
+      "class_prefixes": "model",
+      "annotation": [
+        {
+          "element_modification_or_replaceable": {
+            "element_modification": {
+              "name": "experiment",
+              "modification": {
+                "class_modification": [
+                  {
+                    "element_modification_or_replaceable": {
+                      "element_modification": {
+                        "name": "StopTime",
+                        "modification": {
+                          "equal": true,
+                          "expression": {
+                            "simple_expression": "900"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "element_modification_or_replaceable": {
+                      "element_modification": {
+                        "name": "Tolerance",
+                        "modification": {
+                          "equal": true,
+                          "expression": {
+                            "simple_expression": "0.000001"
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "element_modification_or_replaceable": {
+            "element_modification": {
+              "name": "__Dymola_Commands",
+              "modification": {
+                "class_modification": [
+                  {
+                    "element_modification_or_replaceable": {
+                      "element_modification": {
+                        "name": "file",
+                        "modification": {
+                          "equal": true,
+                          "expression": {
+                            "simple_expression": "\"modelica://Buildings/Resources/Scripts/Dymola/Controls/OBC/CDL/Reals/Validation/MovingAverage.mos\""
+                          }
+                        },
+                        "description_string": "Simulate and plot"
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "element_modification_or_replaceable": {
+            "element_modification": {
+              "name": "Documentation",
+              "modification": {
+                "class_modification": [
+                  {
+                    "element_modification_or_replaceable": {
+                      "element_modification": {
+                        "name": "info",
+                        "modification": {
+                          "equal": true,
+                          "expression": {
+                            "simple_expression": "\"<html>\n<p>\nValidation test for the block\n<a href=\\\"modelica://Buildings.Controls.OBC.CDL.Reals.MovingAverage\\\">\nBuildings.Controls.OBC.CDL.Reals.MovingAverage</a>.\n</p>\n<p>\nThe input <code>sinInpNoDel</code>,  <code>sinInp50sDel</code>,\n<code>sinInp100sDel</code>,  generate sine outputs with same frequency of\n<code>1/80 Hz</code>, but different start times of <code>0 second</code>,\n<code>50 second</code>, <code>100 second</code>.\n</p>\n</html>\""
+                          }
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "element_modification_or_replaceable": {
+                      "element_modification": {
+                        "name": "revisions",
+                        "modification": {
+                          "equal": true,
+                          "expression": {
+                            "simple_expression": "\"<html>\n<ul>\n<li>\nMarch 17, 2023, by Michael Wetter:<br/>\nReplaced blocks from Modelica Standard Library with CDL blocks.\n</li>\n<li>\nJanuary 27, 2022, by Jianjun Hu:<br/>\nRenamed the block name from MovingMean to MovingAverage.<br/>\nThis is for <a href=\\\"https://github.com/lbl-srg/modelica-buildings/issues/2865\\\">issue 2865</a>.\n</li>\n<li>\nJune 29, 2017, by Jianjun Hu:<br/>\nFirst implementation.\n</li>\n</ul>\n</html>\""
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "element_modification_or_replaceable": {
+            "element_modification": {
+              "name": "Icon",
+              "modification": {
+                "class_modification": [
+                  {
+                    "element_modification_or_replaceable": {
+                      "element_modification": {
+                        "graphics": [
+                          {
+                            "name": "Ellipse",
+                            "attribute": {
+                              "extent": [
+                                {
+                                  "x": -100,
+                                  "y": -100
+                                },
+                                {
+                                  "x": 100,
+                                  "y": 100
+                                }
+                              ],
+                              "lineColor": {
+                                "r": 75,
+                                "g": 138,
+                                "b": 73
+                              },
+                              "fillColor": {
+                                "r": 255,
+                                "g": 255,
+                                "b": 255
+                              },
+                              "fillPattern": "FillPattern.Solid"
+                            }
+                          },
+                          {
+                            "name": "Polygon",
+                            "attribute": {
+                              "points": [
+                                {
+                                  "x": -36,
+                                  "y": 60
+                                },
+                                {
+                                  "x": 64,
+                                  "y": 0
+                                },
+                                {
+                                  "x": -36,
+                                  "y": -60
+                                },
+                                {
+                                  "x": -36,
+                                  "y": 60
+                                }
+                              ],
+                              "lineColor": {
+                                "r": 0,
+                                "g": 0,
+                                "b": 255
+                              },
+                              "fillColor": {
+                                "r": 75,
+                                "g": 138,
+                                "b": 73
+                              },
+                              "pattern": "LinePattern.None",
+                              "fillPattern": "FillPattern.Solid"
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      ],
+      "semantics": {},
+      "cdl_annotations": {}
+    },
+    "sinInpNoDel": {
+      "type_specifier": "Buildings.Controls.OBC.CDL.Reals.Sources.Sin",
+      "type": "element",
+      "compositionSpecifier": "public",
+      "long_class_specifier_identifier": "MovingAverage",
+      "single_component_list": {
+        "declaration": {
+          "identifier": "sinInpNoDel",
+          "modification": {
+            "class_modification": [
+              {
+                "element_modification_or_replaceable": {
+                  "element_modification": {
+                    "name": "freqHz",
+                    "modification": {
+                      "equal": true,
+                      "expression": {
+                        "simple_expression": "1/80"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "description": {
+          "description_string": "Start from zero second",
+          "annotation": [
+            {
+              "element_modification_or_replaceable": {
+                "element_modification": {
+                  "Placement": {
+                    "transformation": {
+                      "extent": [
+                        {
+                          "x": -90,
+                          "y": 50
+                        },
+                        {
+                          "x": -70,
+                          "y": 70
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "annotation": [
+        {
+          "element_modification_or_replaceable": {
+            "element_modification": {
+              "Placement": {
+                "transformation": {
+                  "extent": [
+                    {
+                      "x": -90,
+                      "y": 50
+                    },
+                    {
+                      "x": -70,
+                      "y": 70
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      ],
+      "semantics": {},
+      "cdl_annotations": {},
+      "isVector": false,
+      "arraySubscripts": "",
+      "within": "Buildings.Controls.OBC.CDL.Reals.Validation",
+      "fullMoFilePath": "../modelica-buildings/Buildings/Controls/OBC/CDL/Reals//Validation/MovingAverage.mo"
+    },
+    "movAve1": {
+      "type_specifier": "Buildings.Controls.OBC.CDL.Reals.MovingAverage",
+      "type": "element",
+      "compositionSpecifier": "public",
+      "long_class_specifier_identifier": "MovingAverage",
+      "single_component_list": {
+        "declaration": {
+          "identifier": "movAve1",
+          "modification": {
+            "class_modification": [
+              {
+                "element_modification_or_replaceable": {
+                  "element_modification": {
+                    "name": "delta",
+                    "modification": {
+                      "equal": true,
+                      "expression": {
+                        "simple_expression": "100"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "description": {
+          "description_string": "Moving average with 100 s sliding window",
+          "annotation": [
+            {
+              "element_modification_or_replaceable": {
+                "element_modification": {
+                  "Placement": {
+                    "transformation": {
+                      "extent": [
+                        {
+                          "x": -40,
+                          "y": 50
+                        },
+                        {
+                          "x": -20,
+                          "y": 70
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "annotation": [
+        {
+          "element_modification_or_replaceable": {
+            "element_modification": {
+              "Placement": {
+                "transformation": {
+                  "extent": [
+                    {
+                      "x": -40,
+                      "y": 50
+                    },
+                    {
+                      "x": -20,
+                      "y": 70
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      ],
+      "semantics": {},
+      "cdl_annotations": {},
+      "isVector": false,
+      "arraySubscripts": "",
+      "within": "Buildings.Controls.OBC.CDL.Reals.Validation",
+      "fullMoFilePath": "../modelica-buildings/Buildings/Controls/OBC/CDL/Reals//Validation/MovingAverage.mo"
+    },
+    "movAve2": {
+      "type_specifier": "Buildings.Controls.OBC.CDL.Reals.MovingAverage",
+      "type": "element",
+      "compositionSpecifier": "public",
+      "long_class_specifier_identifier": "MovingAverage",
+      "single_component_list": {
+        "declaration": {
+          "identifier": "movAve2",
+          "modification": {
+            "class_modification": [
+              {
+                "element_modification_or_replaceable": {
+                  "element_modification": {
+                    "name": "delta",
+                    "modification": {
+                      "equal": true,
+                      "expression": {
+                        "simple_expression": "200"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "description": {
+          "description_string": "Moving average with 200 s sliding window",
+          "annotation": [
+            {
+              "element_modification_or_replaceable": {
+                "element_modification": {
+                  "Placement": {
+                    "transformation": {
+                      "extent": [
+                        {
+                          "x": -40,
+                          "y": 20
+                        },
+                        {
+                          "x": -20,
+                          "y": 40
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "annotation": [
+        {
+          "element_modification_or_replaceable": {
+            "element_modification": {
+              "Placement": {
+                "transformation": {
+                  "extent": [
+                    {
+                      "x": -40,
+                      "y": 20
+                    },
+                    {
+                      "x": -20,
+                      "y": 40
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      ],
+      "semantics": {},
+      "cdl_annotations": {},
+      "isVector": false,
+      "arraySubscripts": "",
+      "within": "Buildings.Controls.OBC.CDL.Reals.Validation",
+      "fullMoFilePath": "../modelica-buildings/Buildings/Controls/OBC/CDL/Reals//Validation/MovingAverage.mo"
+    },
+    "movAve3": {
+      "type_specifier": "Buildings.Controls.OBC.CDL.Reals.MovingAverage",
+      "type": "element",
+      "compositionSpecifier": "public",
+      "long_class_specifier_identifier": "MovingAverage",
+      "single_component_list": {
+        "declaration": {
+          "identifier": "movAve3",
+          "modification": {
+            "class_modification": [
+              {
+                "element_modification_or_replaceable": {
+                  "element_modification": {
+                    "name": "delta",
+                    "modification": {
+                      "equal": true,
+                      "expression": {
+                        "simple_expression": "300"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "description": {
+          "description_string": "Moving average with 300 s sliding window",
+          "annotation": [
+            {
+              "element_modification_or_replaceable": {
+                "element_modification": {
+                  "Placement": {
+                    "transformation": {
+                      "extent": [
+                        {
+                          "x": -40,
+                          "y": -10
+                        },
+                        {
+                          "x": -20,
+                          "y": 10
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "annotation": [
+        {
+          "element_modification_or_replaceable": {
+            "element_modification": {
+              "Placement": {
+                "transformation": {
+                  "extent": [
+                    {
+                      "x": -40,
+                      "y": -10
+                    },
+                    {
+                      "x": -20,
+                      "y": 10
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      ],
+      "semantics": {},
+      "cdl_annotations": {},
+      "isVector": false,
+      "arraySubscripts": "",
+      "within": "Buildings.Controls.OBC.CDL.Reals.Validation",
+      "fullMoFilePath": "../modelica-buildings/Buildings/Controls/OBC/CDL/Reals//Validation/MovingAverage.mo"
+    },
+    "movAve4": {
+      "type_specifier": "Buildings.Controls.OBC.CDL.Reals.MovingAverage",
+      "type": "element",
+      "compositionSpecifier": "public",
+      "long_class_specifier_identifier": "MovingAverage",
+      "single_component_list": {
+        "declaration": {
+          "identifier": "movAve4",
+          "modification": {
+            "class_modification": [
+              {
+                "element_modification_or_replaceable": {
+                  "element_modification": {
+                    "name": "delta",
+                    "modification": {
+                      "equal": true,
+                      "expression": {
+                        "simple_expression": "400"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "description": {
+          "description_string": "Moving average with 400 s sliding window",
+          "annotation": [
+            {
+              "element_modification_or_replaceable": {
+                "element_modification": {
+                  "Placement": {
+                    "transformation": {
+                      "extent": [
+                        {
+                          "x": -40,
+                          "y": -40
+                        },
+                        {
+                          "x": -20,
+                          "y": -20
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "annotation": [
+        {
+          "element_modification_or_replaceable": {
+            "element_modification": {
+              "Placement": {
+                "transformation": {
+                  "extent": [
+                    {
+                      "x": -40,
+                      "y": -40
+                    },
+                    {
+                      "x": -20,
+                      "y": -20
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      ],
+      "semantics": {},
+      "cdl_annotations": {},
+      "isVector": false,
+      "arraySubscripts": "",
+      "within": "Buildings.Controls.OBC.CDL.Reals.Validation",
+      "fullMoFilePath": "../modelica-buildings/Buildings/Controls/OBC/CDL/Reals//Validation/MovingAverage.mo"
+    },
+    "movAve5": {
+      "type_specifier": "Buildings.Controls.OBC.CDL.Reals.MovingAverage",
+      "type": "element",
+      "compositionSpecifier": "public",
+      "long_class_specifier_identifier": "MovingAverage",
+      "single_component_list": {
+        "declaration": {
+          "identifier": "movAve5",
+          "modification": {
+            "class_modification": [
+              {
+                "element_modification_or_replaceable": {
+                  "element_modification": {
+                    "name": "delta",
+                    "modification": {
+                      "equal": true,
+                      "expression": {
+                        "simple_expression": "500"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "description": {
+          "description_string": "Moving average with 500 s sliding window",
+          "annotation": [
+            {
+              "element_modification_or_replaceable": {
+                "element_modification": {
+                  "Placement": {
+                    "transformation": {
+                      "extent": [
+                        {
+                          "x": -40,
+                          "y": -70
+                        },
+                        {
+                          "x": -20,
+                          "y": -50
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "annotation": [
+        {
+          "element_modification_or_replaceable": {
+            "element_modification": {
+              "Placement": {
+                "transformation": {
+                  "extent": [
+                    {
+                      "x": -40,
+                      "y": -70
+                    },
+                    {
+                      "x": -20,
+                      "y": -50
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      ],
+      "semantics": {},
+      "cdl_annotations": {},
+      "isVector": false,
+      "arraySubscripts": "",
+      "within": "Buildings.Controls.OBC.CDL.Reals.Validation",
+      "fullMoFilePath": "../modelica-buildings/Buildings/Controls/OBC/CDL/Reals//Validation/MovingAverage.mo"
+    },
+    "sinInp50sDel": {
+      "type_specifier": "Buildings.Controls.OBC.CDL.Reals.Sources.Sin",
+      "type": "element",
+      "compositionSpecifier": "public",
+      "long_class_specifier_identifier": "MovingAverage",
+      "single_component_list": {
+        "declaration": {
+          "identifier": "sinInp50sDel",
+          "modification": {
+            "class_modification": [
+              {
+                "element_modification_or_replaceable": {
+                  "element_modification": {
+                    "name": "freqHz",
+                    "modification": {
+                      "equal": true,
+                      "expression": {
+                        "simple_expression": "1/80"
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "element_modification_or_replaceable": {
+                  "element_modification": {
+                    "name": "startTime",
+                    "modification": {
+                      "equal": true,
+                      "expression": {
+                        "simple_expression": "50"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "description": {
+          "description_string": "Start from 50 seconds",
+          "annotation": [
+            {
+              "element_modification_or_replaceable": {
+                "element_modification": {
+                  "Placement": {
+                    "transformation": {
+                      "extent": [
+                        {
+                          "x": 0,
+                          "y": 50
+                        },
+                        {
+                          "x": 20,
+                          "y": 70
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "annotation": [
+        {
+          "element_modification_or_replaceable": {
+            "element_modification": {
+              "Placement": {
+                "transformation": {
+                  "extent": [
+                    {
+                      "x": 0,
+                      "y": 50
+                    },
+                    {
+                      "x": 20,
+                      "y": 70
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      ],
+      "semantics": {},
+      "cdl_annotations": {},
+      "isVector": false,
+      "arraySubscripts": "",
+      "within": "Buildings.Controls.OBC.CDL.Reals.Validation",
+      "fullMoFilePath": "../modelica-buildings/Buildings/Controls/OBC/CDL/Reals//Validation/MovingAverage.mo"
+    },
+    "movAve6": {
+      "type_specifier": "Buildings.Controls.OBC.CDL.Reals.MovingAverage",
+      "type": "element",
+      "compositionSpecifier": "public",
+      "long_class_specifier_identifier": "MovingAverage",
+      "single_component_list": {
+        "declaration": {
+          "identifier": "movAve6",
+          "modification": {
+            "class_modification": [
+              {
+                "element_modification_or_replaceable": {
+                  "element_modification": {
+                    "name": "delta",
+                    "modification": {
+                      "equal": true,
+                      "expression": {
+                        "simple_expression": "100"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "description": {
+          "description_string": "Moving average with 100 s sliding window",
+          "annotation": [
+            {
+              "element_modification_or_replaceable": {
+                "element_modification": {
+                  "Placement": {
+                    "transformation": {
+                      "extent": [
+                        {
+                          "x": 60,
+                          "y": 50
+                        },
+                        {
+                          "x": 80,
+                          "y": 70
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "annotation": [
+        {
+          "element_modification_or_replaceable": {
+            "element_modification": {
+              "Placement": {
+                "transformation": {
+                  "extent": [
+                    {
+                      "x": 60,
+                      "y": 50
+                    },
+                    {
+                      "x": 80,
+                      "y": 70
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      ],
+      "semantics": {},
+      "cdl_annotations": {},
+      "isVector": false,
+      "arraySubscripts": "",
+      "within": "Buildings.Controls.OBC.CDL.Reals.Validation",
+      "fullMoFilePath": "../modelica-buildings/Buildings/Controls/OBC/CDL/Reals//Validation/MovingAverage.mo"
+    },
+    "movAve7": {
+      "type_specifier": "Buildings.Controls.OBC.CDL.Reals.MovingAverage",
+      "type": "element",
+      "compositionSpecifier": "public",
+      "long_class_specifier_identifier": "MovingAverage",
+      "single_component_list": {
+        "declaration": {
+          "identifier": "movAve7",
+          "modification": {
+            "class_modification": [
+              {
+                "element_modification_or_replaceable": {
+                  "element_modification": {
+                    "name": "delta",
+                    "modification": {
+                      "equal": true,
+                      "expression": {
+                        "simple_expression": "200"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "description": {
+          "description_string": "Moving average with 200 s sliding window",
+          "annotation": [
+            {
+              "element_modification_or_replaceable": {
+                "element_modification": {
+                  "Placement": {
+                    "transformation": {
+                      "extent": [
+                        {
+                          "x": 60,
+                          "y": 20
+                        },
+                        {
+                          "x": 80,
+                          "y": 40
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "annotation": [
+        {
+          "element_modification_or_replaceable": {
+            "element_modification": {
+              "Placement": {
+                "transformation": {
+                  "extent": [
+                    {
+                      "x": 60,
+                      "y": 20
+                    },
+                    {
+                      "x": 80,
+                      "y": 40
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      ],
+      "semantics": {},
+      "cdl_annotations": {},
+      "isVector": false,
+      "arraySubscripts": "",
+      "within": "Buildings.Controls.OBC.CDL.Reals.Validation",
+      "fullMoFilePath": "../modelica-buildings/Buildings/Controls/OBC/CDL/Reals//Validation/MovingAverage.mo"
+    },
+    "sinInp100sDel": {
+      "type_specifier": "Buildings.Controls.OBC.CDL.Reals.Sources.Sin",
+      "type": "element",
+      "compositionSpecifier": "public",
+      "long_class_specifier_identifier": "MovingAverage",
+      "single_component_list": {
+        "declaration": {
+          "identifier": "sinInp100sDel",
+          "modification": {
+            "class_modification": [
+              {
+                "element_modification_or_replaceable": {
+                  "element_modification": {
+                    "name": "freqHz",
+                    "modification": {
+                      "equal": true,
+                      "expression": {
+                        "simple_expression": "1/80"
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "element_modification_or_replaceable": {
+                  "element_modification": {
+                    "name": "startTime",
+                    "modification": {
+                      "equal": true,
+                      "expression": {
+                        "simple_expression": "100"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "description": {
+          "description_string": "Start from 100 seconds",
+          "annotation": [
+            {
+              "element_modification_or_replaceable": {
+                "element_modification": {
+                  "Placement": {
+                    "transformation": {
+                      "extent": [
+                        {
+                          "x": 0,
+                          "y": -30
+                        },
+                        {
+                          "x": 20,
+                          "y": -10
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "annotation": [
+        {
+          "element_modification_or_replaceable": {
+            "element_modification": {
+              "Placement": {
+                "transformation": {
+                  "extent": [
+                    {
+                      "x": 0,
+                      "y": -30
+                    },
+                    {
+                      "x": 20,
+                      "y": -10
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      ],
+      "semantics": {},
+      "cdl_annotations": {},
+      "isVector": false,
+      "arraySubscripts": "",
+      "within": "Buildings.Controls.OBC.CDL.Reals.Validation",
+      "fullMoFilePath": "../modelica-buildings/Buildings/Controls/OBC/CDL/Reals//Validation/MovingAverage.mo"
+    },
+    "movAve8": {
+      "type_specifier": "Buildings.Controls.OBC.CDL.Reals.MovingAverage",
+      "type": "element",
+      "compositionSpecifier": "public",
+      "long_class_specifier_identifier": "MovingAverage",
+      "single_component_list": {
+        "declaration": {
+          "identifier": "movAve8",
+          "modification": {
+            "class_modification": [
+              {
+                "element_modification_or_replaceable": {
+                  "element_modification": {
+                    "name": "delta",
+                    "modification": {
+                      "equal": true,
+                      "expression": {
+                        "simple_expression": "100"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "description": {
+          "description_string": "Moving average with 100 s sliding window",
+          "annotation": [
+            {
+              "element_modification_or_replaceable": {
+                "element_modification": {
+                  "Placement": {
+                    "transformation": {
+                      "extent": [
+                        {
+                          "x": 60,
+                          "y": -30
+                        },
+                        {
+                          "x": 80,
+                          "y": -10
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "annotation": [
+        {
+          "element_modification_or_replaceable": {
+            "element_modification": {
+              "Placement": {
+                "transformation": {
+                  "extent": [
+                    {
+                      "x": 60,
+                      "y": -30
+                    },
+                    {
+                      "x": 80,
+                      "y": -10
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      ],
+      "semantics": {},
+      "cdl_annotations": {},
+      "isVector": false,
+      "arraySubscripts": "",
+      "within": "Buildings.Controls.OBC.CDL.Reals.Validation",
+      "fullMoFilePath": "../modelica-buildings/Buildings/Controls/OBC/CDL/Reals//Validation/MovingAverage.mo"
+    },
+    "movAve9": {
+      "type_specifier": "Buildings.Controls.OBC.CDL.Reals.MovingAverage",
+      "type": "element",
+      "compositionSpecifier": "public",
+      "long_class_specifier_identifier": "MovingAverage",
+      "single_component_list": {
+        "declaration": {
+          "identifier": "movAve9",
+          "modification": {
+            "class_modification": [
+              {
+                "element_modification_or_replaceable": {
+                  "element_modification": {
+                    "name": "delta",
+                    "modification": {
+                      "equal": true,
+                      "expression": {
+                        "simple_expression": "200"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "description": {
+          "description_string": "Moving average with 200 s sliding window",
+          "annotation": [
+            {
+              "element_modification_or_replaceable": {
+                "element_modification": {
+                  "Placement": {
+                    "transformation": {
+                      "extent": [
+                        {
+                          "x": 60,
+                          "y": -60
+                        },
+                        {
+                          "x": 80,
+                          "y": -40
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "annotation": [
+        {
+          "element_modification_or_replaceable": {
+            "element_modification": {
+              "Placement": {
+                "transformation": {
+                  "extent": [
+                    {
+                      "x": 60,
+                      "y": -60
+                    },
+                    {
+                      "x": 80,
+                      "y": -40
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      ],
+      "semantics": {},
+      "cdl_annotations": {},
+      "isVector": false,
+      "arraySubscripts": "",
+      "within": "Buildings.Controls.OBC.CDL.Reals.Validation",
+      "fullMoFilePath": "../modelica-buildings/Buildings/Controls/OBC/CDL/Reals//Validation/MovingAverage.mo"
+    }
+  },
+  "requiredReferences": {
+    "connections": {
+      "sinInpNoDel.y": [
+        "movAve3.u",
+        "movAve1.u",
+        "movAve2.u",
+        "movAve5.u",
+        "movAve4.u"
+      ],
+      "sinInp50sDel.y": [
+        "movAve6.u",
+        "movAve7.u"
+      ],
+      "sinInp100sDel.y": [
+        "movAve9.u",
+        "movAve8.u"
+      ]
+    }
+  }
+}
