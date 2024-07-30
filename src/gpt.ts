@@ -3,11 +3,10 @@ import fs from "fs";
 import path from "path";
 import { walkDirectoryRecursive } from "./utils";
 
-const client = new OpenAI({
-  apiKey: process.env["OPENAI_API_KEY"], // This is the default and can be omitted
-});
-
 export async function translateFile(input: string, output: string) {
+  const client = new OpenAI({
+    apiKey: process.env["OPENAI_API_KEY"], // This is the default and can be omitted
+  });
   const content = fs.readFileSync(path.join(process.cwd(), input), "utf-8");
   const saveDir = path.join(process.cwd(), output, path.dirname(input));
   fs.mkdirSync(saveDir, { recursive: true });
