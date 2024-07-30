@@ -6,6 +6,8 @@ import {
   translateFile as translateFileGpt,
 } from "./gpt";
 
+process.setMaxListeners(0);
+
 const program = new Command();
 
 async function translate(

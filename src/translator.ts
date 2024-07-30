@@ -13,13 +13,16 @@ import { walkDirectoryRecursive } from "./utils";
 import path from "path";
 import fs from "fs";
 import { visualizeGraph } from "./visualize";
+import clc from "cli-color";
 
 const filesRegistry = new Map<string, string>();
 const importedFiles = new Set<string>();
 
+function makeBlockId(blockId: string) {
+  return blockId.split("#").pop();
+}
 function makeFilePath(blockId: string) {
-  const withoutUrl = blockId.split("#").pop();
-  return path.join(...withoutUrl.split("."));
+  return path.join(...makeBlockId(blockId).split("."));
 }
 
 function resolveFilePath(type: string) {
@@ -131,6 +134,7 @@ function findLoops(graph: Graph) {
 }
 
 export function translateGraph(id: string, graph: Graph) {
+  console.log(clc.blueBright("[TRANSLATING]"), clc.bold(parseIdentifier(id)));
   const imports = new Set<string>();
   const importNames = new Map<string, string>();
   const processed = new Set();
@@ -151,7 +155,11 @@ export function translateGraph(id: string, graph: Graph) {
   // Remove loops
   const loops = findLoops(graph);
   loops.forEach((e) => {
-    console.log(`Loop detected ${e.v} -> ${e.w}`);
+    console.log(
+      clc.yellow("[WARNING]"),
+      clc.bold("Loop detected"),
+      `${makeBlockId(e.v)} -> ${makeBlockId(e.w)}`
+    );
     graph.removeEdge(e);
   });
 
@@ -245,7 +253,6 @@ export function translateFile(
   const code = translateGraph(blockId, executionGraph);
 
   const outputName = makeFilePath(blockId);
-
   const outFile = path.join(output, outputName + ".js");
 
   fs.mkdirSync(path.dirname(outFile), { recursive: true });
@@ -255,7 +262,13 @@ export function translateFile(
     process.exit(1);
   }
   filesRegistry.set(blockId, outputName);
-  console.log(`Writing ${parseIdentifier(blockId)} -> ${outFile}`);
+
+  console.log(
+    clc.greenBright("[SUCCESS]"),
+    clc.bold(parseIdentifier(blockId)),
+    `-> ${outFile}
+    `
+  );
   fs.writeFileSync(outFile, code);
   if (visualize) {
     visualizeGraph(executionGraph, path.join(output, outputName + ".svg"));
@@ -273,7 +286,6 @@ export function translateDirectory(
   for (const filePath of walkDirectoryRecursive(standard)) {
     const copyPath = path.join(output, path.relative(standard, filePath));
     fs.mkdirSync(path.dirname(copyPath), { recursive: true });
-    console.log(`Copying ${filePath} -> ${copyPath}`);
     fs.copyFileSync(filePath, copyPath);
   }
 

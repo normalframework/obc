@@ -9,11 +9,13 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/cli-color": "^2.0.6",
     "@types/node": "^20.14.11",
     "typescript": "^5.5.3"
   },
   "dependencies": {
     "@dagrejs/graphlib": "^2.2.3",
+    "cli-color": "^2.0.4",
     "commander": "^12.1.0",
     "graphlib-dot": "^0.6.4",
     "openai": "^4.53.2",
