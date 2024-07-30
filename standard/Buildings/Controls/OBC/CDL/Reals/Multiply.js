@@ -10,8 +10,10 @@
  * @returns {number} output.y - Connector of Real output signal.
  */
 
-export default function multiply() {
+ function multiply() {
   return ({ u1, u2 }) => {
     return { y: u1 * u2 };
   }
 }
+
+module.exports = multiply;

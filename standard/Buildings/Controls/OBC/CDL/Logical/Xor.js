@@ -9,8 +9,10 @@
  * @returns {boolean} output.y - Connector of Boolean output signal.
  */
 
-export default function xor() {
+function xor() {
   return ({ u1, u2 }) => {
     return { y: (!u1 && !u2) || (u1 && u2) };
   }
 }
+
+module.exports = xor;

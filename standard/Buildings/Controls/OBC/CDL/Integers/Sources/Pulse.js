@@ -11,7 +11,7 @@
  * @returns {Function} - A function that generates a pulse signal.
  */
 
-export default function Pulse({ amplitude = 1, width = 0.5, period, shift = 0, offset = 0 }) {
+ function Pulse({ amplitude = 1, width = 0.5, period, shift = 0, offset = 0 }) {
   const t0 = Math.round((Date.now() / 1000) / period) * period + (shift % period);
   const t1 = t0 + width * period;
 
@@ -28,3 +28,5 @@ export default function Pulse({ amplitude = 1, width = 0.5, period, shift = 0, o
     return { y };
   };
 }
+
+module.exports = Pulse;

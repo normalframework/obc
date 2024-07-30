@@ -11,7 +11,7 @@
  * @returns {Function} - A function that generates a sine signal.
  */
 
-export default function Sin({ amplitude = 1, freqHz = 1, phase = 0, offset = 0, startTime = 0 }) {
+ function Sin({ amplitude = 1, freqHz = 1, phase = 0, offset = 0, startTime = 0 }) {
   const pi = Math.PI;
 
   return () => {
@@ -27,3 +27,5 @@ export default function Sin({ amplitude = 1, freqHz = 1, phase = 0, offset = 0, 
     return { y };
   };
 }
+
+module.exports = Sin;

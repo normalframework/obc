@@ -11,8 +11,10 @@
  * @returns {number} output.y - Connector of Real output signal in radians.
  */
 
-export default function atan2({ }) {
+ function atan2({ }) {
   return ({ u1, u2 }) => {
     return { y: Math.atan2(u1, u2) };
   }
 }
+
+module.exports = atan2;

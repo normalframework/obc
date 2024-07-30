@@ -9,8 +9,10 @@
  * @returns {boolean} output.y - Connector of Boolean output signal.
  */
 
-export default function lessEqual() {
+ function lessEqual() {
   return ({ u1, u2 }) => {
     return { y: u1 <= u2 };
   }
 }
+
+module.exports = lessEqual;

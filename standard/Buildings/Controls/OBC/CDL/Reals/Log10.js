@@ -8,8 +8,11 @@
  * @returns {number} output.y - Connector of Real output signal.
  */
 
-export default function log10() {
+ function log10() {
   return ({ u }) => {
     return { y: Math.log10(u) };
   }
 }
+
+
+module.exports = log10;

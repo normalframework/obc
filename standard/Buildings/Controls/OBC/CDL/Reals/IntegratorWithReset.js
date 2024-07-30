@@ -8,7 +8,7 @@
  * @returns {Function} - A function that calculates the integral with reset capability given the inputs.
  */
 
-export default function integratorWithReset({ k = 1, y_start = 0 }) {
+ function integratorWithReset({ k = 1, y_start = 0 }) {
   let y = y_start;
 
   return ({ u, y_reset_in, trigger }) => {
@@ -23,3 +23,6 @@ export default function integratorWithReset({ k = 1, y_start = 0 }) {
     return { y };
   };
 }
+
+
+module.exports = integratorWithReset;

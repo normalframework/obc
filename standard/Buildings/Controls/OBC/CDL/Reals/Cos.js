@@ -9,8 +9,10 @@
  * @returns {number} output.y - Connector of Real output signal for cosine of input.
  */
 
-export default function cos({ }) {
+ function cos({ }) {
   return ({ u }) => {
     return { y: Math.cos(u) };
   }
 }
+
+module.exports = cos;

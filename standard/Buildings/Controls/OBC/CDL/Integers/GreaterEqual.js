@@ -9,8 +9,10 @@
  * @returns {boolean} output.y - Connector of Boolean output signal.
  */
 
-export default function greaterEqual() {
+ function greaterEqual() {
   return ({ u1, u2 }) => {
     return { y: u1 >= u2 };
   }
 }
+
+module.exports = greaterEqual;

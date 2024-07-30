@@ -8,8 +8,10 @@
  * @returns {boolean} output.y - Connector of Boolean output signal.
  */
 
-export default function notBlock() {
+ function notBlock() {
   return ({ u }) => {
     return { y: !u };
   }
 }
+
+module.exports = notBlock;

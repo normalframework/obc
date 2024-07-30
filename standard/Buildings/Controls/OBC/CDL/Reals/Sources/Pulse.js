@@ -11,7 +11,7 @@
  * @returns {Function} - A function that generates a pulse signal.
  */
 
-export default function pulse({ amplitude = 1.0, width = 0.5, period, shift = 0, offset = 0.0 }) {
+ function pulse({ amplitude = 1.0, width = 0.5, period, shift = 0, offset = 0.0 }) {
   if (width <= 0 || width > 1) {
     throw new Error("width must be between Constants.small and 1");
   }
@@ -27,3 +27,5 @@ export default function pulse({ amplitude = 1.0, width = 0.5, period, shift = 0,
     return { y };
   };
 }
+
+module.exports = pulse;

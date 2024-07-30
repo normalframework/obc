@@ -10,7 +10,7 @@
  * @returns {boolean} output.y - Connector of Boolean output signal.
  */
 
-export default function pre({ pre_u_start = false }) {
+ function pre({ pre_u_start = false }) {
   let prev_u = pre_u_start;
 
   return ({ u }) => {
@@ -19,3 +19,5 @@ export default function pre({ pre_u_start = false }) {
     return { y };
   };
 }
+
+module.exports = pre;

@@ -9,7 +9,7 @@
  * @returns {number} output.y - Connector with a Real output signal.
  */
 
-export default function triggeredMax() {
+ function triggeredMax() {
   let previousY = 0;
 
   return ({ u, trigger }) => {
@@ -19,3 +19,5 @@ export default function triggeredMax() {
     return { y: previousY };
   };
 }
+
+module.exports = triggeredMax;

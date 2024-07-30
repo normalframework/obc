@@ -13,7 +13,7 @@ export function visualizeGraph(graph: Graph, filename: string = "graph.svg") {
     .then((svg) => {
       // Save the SVG to a file
       fs.writeFileSync(filename, svg);
-      console.log("Graph saved as graph.svg");
+      console.log(`Graph saved as ${filename}`);
     })
     .catch((error) => {
       console.error("Error rendering graph:", error);

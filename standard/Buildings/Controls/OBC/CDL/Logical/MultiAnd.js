@@ -11,7 +11,7 @@
  * @returns {boolean} output.y - Connector of Boolean output signal.
  */
 
-export default function multiAnd({ nin }) {
+function multiAnd({ nin }) {
   return ({ u }) => {
     let y = true;
 
@@ -24,7 +24,9 @@ export default function multiAnd({ nin }) {
     } else {
       y = false;
     }
-    
+
     return { y };
   };
 }
+
+module.exports = multiAnd;

@@ -8,7 +8,7 @@
  * @returns {Function} - A function that generates a sample trigger signal.
  */
 
-export default function sampleTrigger({ period, shift = 0 }) {
+ function sampleTrigger({ period, shift = 0 }) {
   const t0 = Math.round((Date.now() / 1000) / period) * period + (shift % period);
 
   return () => {
@@ -17,3 +17,5 @@ export default function sampleTrigger({ period, shift = 0 }) {
     return { y };
   };
 }
+
+module.exports = sampleTrigger;

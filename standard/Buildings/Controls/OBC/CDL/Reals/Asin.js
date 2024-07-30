@@ -9,8 +9,10 @@
  * @returns {number} output.y - Connector of Real output signal with unit "rad".
  */
 
-export default function asinBlock() {
+ function asinBlock() {
   return ({ u }) => {
     return { y: Math.asin(u) };
   }
 }
+
+module.exports = asinBlock;

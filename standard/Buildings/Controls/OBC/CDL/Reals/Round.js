@@ -7,7 +7,7 @@
  * @returns {Function} - A function that rounds the input signal to the specified number of digits.
  */
 
-export default function round({ n }) {
+ function round({ n }) {
   const fac = 10 ** n;
 
   return ({ u }) => {
@@ -17,3 +17,5 @@ export default function round({ n }) {
     return { y };
   };
 }
+
+module.exports = round;

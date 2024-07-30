@@ -8,8 +8,10 @@
  * @returns {number} output.y - Connector of Integer output signals.
  */
 
-export default function absBlock() {
+ function absBlock() {
   return ({ u }) => {
     return { y: Math.abs(u) };
   }
 }
+
+module.exports = absBlock;

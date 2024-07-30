@@ -12,8 +12,10 @@
  * @returns {boolean} output.y - Connector of Boolean output signal (true if u > t).
  */
 
-export default function greaterThreshold({ t = 0 }) {
+ function greaterThreshold({ t = 0 }) {
   return ({ u }) => {
     return { y: u > t };
   };
 }
+
+module.exports = greaterThreshold;

@@ -11,8 +11,10 @@
  * @returns {number} output.y - Connector of Real output signal.
  */
 
-export default function multiMin({ nin }) {
+ function multiMin({ nin }) {
   return ({ u }) => {
     return { y: Math.min(...u) };
   }
 }
+
+module.exports = multiMin;

@@ -9,8 +9,10 @@
  * @returns {number} output.y - Connector of Real output signal with unit "rad".
  */
 
-export default function acos() {
+ function acos() {
   return ({ u }) => {
     return { y: Math.acos(u) };
   }
 }
+
+module.exports = acos;

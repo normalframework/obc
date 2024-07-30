@@ -8,7 +8,7 @@
  * @returns {Function} - A function that calculates the value of the input x along the specified line.
  */
 
-export default function line({ limitBelow = true, limitAbove = true }) {
+ function line({ limitBelow = true, limitAbove = true }) {
   return ({ x1, f1, x2, f2, u }) => {
     if ((limitBelow || limitAbove) && x2 <= x1) {
       throw new Error("x2 must be bigger than x1");
@@ -32,3 +32,5 @@ export default function line({ limitBelow = true, limitAbove = true }) {
     return { y };
   };
 }
+
+module.exports = line;

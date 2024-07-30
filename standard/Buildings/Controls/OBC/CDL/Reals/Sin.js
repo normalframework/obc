@@ -9,8 +9,10 @@
  * @returns {number} output.y - Connector of Real output signal.
  */
 
-export default function sin({ }) {
+ function sin({ }) {
   return ({ u }) => {
     return { y: Math.sin(u) };
   }
 }
+
+module.exports = sin;

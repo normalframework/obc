@@ -8,7 +8,7 @@
  * @returns {Function} - A function that holds the output signal for the specified durations.
  */
 
-export default function trueFalseHold({ trueHoldDuration, falseHoldDuration = trueHoldDuration }) {
+function trueFalseHold({ trueHoldDuration, falseHoldDuration = trueHoldDuration }) {
   let entryTimeTrue = -Infinity;
   let entryTimeFalse = -Infinity;
   let prev_u = false;
@@ -36,3 +36,5 @@ export default function trueFalseHold({ trueHoldDuration, falseHoldDuration = tr
     return { y };
   };
 }
+
+module.exports = trueFalseHold;

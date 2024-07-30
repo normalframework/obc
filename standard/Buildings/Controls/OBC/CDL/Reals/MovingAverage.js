@@ -7,7 +7,7 @@
  * @returns {Function} - A function that calculates the moving average of the input signal.
  */
 
-export default function movingAverage({ delta }) {
+ function movingAverage({ delta }) {
   if (delta < 1E-5) {
     throw new Error("delta must be greater than or equal to 1E-5");
   }
@@ -38,3 +38,5 @@ export default function movingAverage({ delta }) {
     return { y };
   };
 }
+
+module.exports = movingAverage;

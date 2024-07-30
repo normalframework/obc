@@ -9,7 +9,7 @@
  * @returns {Object} - The output object.
  * @returns {boolean} output.y - Output signal.
  */
-export default function toggle() {
+function toggle() {
   let prev_u = false;
   let prev_clr = false;
   let y = false;
@@ -27,3 +27,5 @@ export default function toggle() {
     return { y };
   };
 }
+
+module.exports = toggle;

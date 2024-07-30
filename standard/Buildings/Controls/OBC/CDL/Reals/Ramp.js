@@ -9,7 +9,7 @@
  * @returns {Function} - A function that limits the rate of change of the input signal.
  */
 
-export default function ramp({ raisingSlewRate, fallingSlewRate = -raisingSlewRate, Td }) {
+ function ramp({ raisingSlewRate, fallingSlewRate = -raisingSlewRate, Td }) {
   if (raisingSlewRate <= 0) {
     throw new Error("raisingSlewRate must be larger than zero.");
   }
@@ -39,3 +39,6 @@ export default function ramp({ raisingSlewRate, fallingSlewRate = -raisingSlewRa
     return { y };
   };
 }
+
+
+module.exports = ramp;

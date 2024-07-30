@@ -9,7 +9,7 @@
  * @returns {Function} - A function that generates a pulse signal.
  */
 
-export default function pulse({ width = 0.5, period, shift = 0 }) {
+ function pulse({ width = 0.5, period, shift = 0 }) {
   const t0 = Math.round((Date.now() / 1000) / period) * period + (shift % period);
   const t1 = t0 + width * period;
 
@@ -26,3 +26,5 @@ export default function pulse({ width = 0.5, period, shift = 0 }) {
     return { y };
   };
 }
+
+module.exports = pulse;

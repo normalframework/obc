@@ -10,8 +10,10 @@
  * @returns {number} output.y - Connector for quotient.
  */
 
-export default function divide({ }) {
+ function divide({ }) {
   return ({ u1, u2 }) => {
     return { y: u1 / u2 };
   }
 }
+
+module.exports = divide;

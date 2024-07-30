@@ -12,7 +12,7 @@
  * @returns {boolean} output.y - Connector of Boolean output signal.
  */
 
-export default function edge({ pre_u_start }) {
+ function edge({ pre_u_start }) {
   let previous_u = pre_u_start;
 
   return ({ u }) => {
@@ -21,3 +21,5 @@ export default function edge({ pre_u_start }) {
     return { y };
   };
 }
+
+module.exports = edge;

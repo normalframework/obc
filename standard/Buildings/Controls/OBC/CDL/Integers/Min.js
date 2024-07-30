@@ -9,8 +9,10 @@
  * @returns {number} output.y - Connector of Integer output signal (minimum of u1 and u2).
  */
 
-export default function min({}) {
+ function min({}) {
   return ({ u1, u2 }) => {
     return { y: Math.min(u1, u2) };
   }
 }
+
+module.exports = min;

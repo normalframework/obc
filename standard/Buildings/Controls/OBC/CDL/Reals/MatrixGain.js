@@ -7,7 +7,7 @@
  * @returns {Function} - A function that calculates the product of the gain matrix and the input vector.
  */
 
-export default function matrixGain({ K = [[1, 0], [0, 1]] }) {
+ function matrixGain({ K = [[1, 0], [0, 1]] }) {
   const nin = K[0].length; // Number of inputs
   const nout = K.length;   // Number of outputs
 
@@ -23,3 +23,5 @@ export default function matrixGain({ K = [[1, 0], [0, 1]] }) {
     return { y };
   };
 }
+
+module.exports = matrixGain;

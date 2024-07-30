@@ -12,7 +12,7 @@
  * @returns {boolean} output.down - Connector of Boolean output signal indicating input decrease.
  */
 
-export default function change({ pre_u_start = 0 }) {
+ function change({ pre_u_start = 0 }) {
   let previousValue = pre_u_start;
 
   return ({ u }) => {
@@ -30,3 +30,5 @@ export default function change({ pre_u_start = 0 }) {
     };
   }
 }
+
+module.exports = change;

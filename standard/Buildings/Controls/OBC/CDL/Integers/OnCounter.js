@@ -9,7 +9,7 @@
  * @returns {number} output.y - Integer output signal.
  */
 
-export default function onCounter({ y_start = 0 }) {
+ function onCounter({ y_start = 0 }) {
   let y = y_start;
 
   return ({ trigger, reset }) => {
@@ -21,3 +21,5 @@ export default function onCounter({ y_start = 0 }) {
     return { y };
   };
 }
+
+module.exports = onCounter;

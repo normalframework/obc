@@ -8,7 +8,7 @@
  * @returns {Function} - A function that sorts the input vector and returns the sorted vector and the indices.
  */
 
-export default function sort({ nin = 0, ascending = true }) {
+ function sort({ nin = 0, ascending = true }) {
   return ({ u }) => {
     if (u.length !== nin) {
       throw new Error(`Input vector length ${u.length} does not match the specified number of inputs ${nin}`);
@@ -23,3 +23,5 @@ export default function sort({ nin = 0, ascending = true }) {
     return { y, yIdx };
   };
 }
+
+module.exports = sort;

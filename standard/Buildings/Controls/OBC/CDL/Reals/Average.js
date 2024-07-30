@@ -10,8 +10,10 @@
  * @returns {number} output.y - Connector of Real output signal.
  */
 
-export default function average() {
+ function average() {
   return ({ u1, u2 }) => {
     return { y: 0.5 * (u1 + u2) };
   }
 }
+
+module.exports = average;

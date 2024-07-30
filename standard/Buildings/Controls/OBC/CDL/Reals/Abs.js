@@ -9,8 +9,10 @@
  * @returns {number} output.y - Connector of Real output signal.
  */
 
-export default function abs() {
+ function abs() {
   return ({ u }) => {
     return { y: Math.abs(u) };
   }
 }
+
+module.exports = abs;

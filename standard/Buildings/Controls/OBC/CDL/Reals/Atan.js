@@ -9,8 +9,10 @@
  * @returns {number} output.y - Connector of Real output signal.
  */
 
-export default function atan({ }) {
+ function atan({ }) {
   return ({ u }) => {
     return { y: Math.atan(u) };
   }
 }
+
+module.exports = atan;

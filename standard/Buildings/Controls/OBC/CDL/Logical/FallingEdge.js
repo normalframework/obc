@@ -10,7 +10,7 @@
  * @returns {boolean} output.y - Connector of Boolean output signal.
  */
 
-export default function fallingEdge({ pre_u_start = false }) {
+ function fallingEdge({ pre_u_start = false }) {
   let preNotU = !pre_u_start; // Initial pre value of not_u
 
   return ({ u }) => {
@@ -25,3 +25,6 @@ export default function fallingEdge({ pre_u_start = false }) {
 function edge(current, previous) {
   return previous === true && current === false;
 }
+
+
+module.exports = fallingEdge;

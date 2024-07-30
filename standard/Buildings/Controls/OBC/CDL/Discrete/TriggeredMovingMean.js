@@ -7,7 +7,7 @@
  * @returns {Function} - A function that computes the moving mean of the input signal when triggered.
  */
 
-export default function triggeredMovingMean({ n }) {
+ function triggeredMovingMean({ n }) {
   let iSample = 0;
   let counter = 0;
   let index = 0;
@@ -26,3 +26,5 @@ export default function triggeredMovingMean({ n }) {
     return { y };
   };
 }
+
+module.exports = triggeredMovingMean;

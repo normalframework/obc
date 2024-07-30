@@ -10,7 +10,7 @@
  * @returns {Function} - A function that limits the slew rate of the input signal.
  */
 
-export default function limitSlewRate({ raisingSlewRate, fallingSlewRate = -raisingSlewRate, Td, enable = true }) {
+ function limitSlewRate({ raisingSlewRate, fallingSlewRate = -raisingSlewRate, Td, enable = true }) {
   if (raisingSlewRate <= 0) {
     throw new Error("raisingSlewRate must be larger than zero.");
   }
@@ -36,3 +36,6 @@ export default function limitSlewRate({ raisingSlewRate, fallingSlewRate = -rais
     return { y };
   };
 }
+
+
+module.exports = limitSlewRate;

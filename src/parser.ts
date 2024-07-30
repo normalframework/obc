@@ -126,15 +126,43 @@ export function lookupBlockElementId(graph: Graph) {
   return res;
 }
 
-export function buildParameters(
+function buildParameterExpression(
+  value: string | undefined | number,
+  tokens: string[]
+) {
+  if (!value) {
+    return undefined;
+  }
+  if (typeof value === "number" || typeof value === "boolean" || !isNaN(Number(value))) {
+    return value.toString();
+  }
+  const expressionTokens = value
+    .replace(/\s+/g, "")
+    .split(/([()+\-*/])/)
+    .filter(Boolean);
+
+  const isJsExpression = expressionTokens.some((t) => tokens.includes(t));
+
+  if (isJsExpression) {
+    return value;
+  }
+
+  return `"${value}"`;
+}
+
+function buildParameters(
   graph: Graph,
-  params: string[]
+  params: string[],
+  tokens: string[] = []
 ): ExecutionParameter[] {
-  return params.map((p) => ({
-    id: p,
-    name: parseIdentifier(p),
-    value: graph.node(p)?.value,
-  }));
+  return params.map((p) => {
+    const value = graph.node(p)?.value;
+    return {
+      id: p,
+      name: parseIdentifier(p),
+      value: buildParameterExpression(value, tokens),
+    };
+  });
 }
 
 export function buildExecutionGraph(graph: Graph) {
@@ -207,7 +235,11 @@ export function buildExecutionGraph(graph: Graph) {
     const node = {
       ...value,
       ...nodeDeps,
-      parameters: buildParameters(graph, nodeDeps.parameters),
+      parameters: buildParameters(
+        graph,
+        nodeDeps.parameters,
+        parameters.map(parseIdentifier)
+      ),
       name: blockId,
     };
     executionGraph.setNode(block, node);

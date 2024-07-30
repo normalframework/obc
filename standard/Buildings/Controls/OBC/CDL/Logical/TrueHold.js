@@ -8,7 +8,7 @@
  * @returns {Object} - The output object.
  * @returns {boolean} output.y - Output signal.
  */
-export default function trueHold() {
+ function trueHold() {
   let y = false;
 
   return ({ u, clr }) => {
@@ -20,3 +20,5 @@ export default function trueHold() {
     return { y };
   };
 }
+
+module.exports = trueHold;

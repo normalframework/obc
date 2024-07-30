@@ -7,7 +7,7 @@
  * @returns {Function} - A function that outputs the input signal with a zero-order hold.
  */
 
-export default function zeroOrderHold({ samplePeriod }) {
+ function zeroOrderHold({ samplePeriod }) {
   let t0 = Math.round((Date.now() / 1000) / samplePeriod) * samplePeriod;
   let ySample = 0;
   let firstTrigger = false;
@@ -29,3 +29,5 @@ export default function zeroOrderHold({ samplePeriod }) {
     return { y };
   };
 }
+
+module.exports = zeroOrderHold;

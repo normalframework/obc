@@ -9,7 +9,7 @@
  * @returns {Function} - A function that computes the Unix time stamp and calendar time.
  */
 
-export default function calendarTime({ zerTim, yearRef = 2016, offset = 0 }) {
+function calendarTime({ zerTim, yearRef = 2016, offset = 0 }) {
   const firstYear = 2010;
   const lastYear = firstYear + 21;
 
@@ -40,3 +40,5 @@ export default function calendarTime({ zerTim, yearRef = 2016, offset = 0 }) {
     return { year, month, day, hour, minute, weekDay };
   };
 }
+
+module.exports = calendarTime;

@@ -13,8 +13,10 @@
  * @returns {number} output.y - Integer output signal.
  */
 
-export default function switchBlock() {
+ function switchBlock() {
   return ({ u1, u2, u3 }) => {
     return { y: u2 ? u1 : u3 };
   }
 }
+
+module.exports = switchBlock;

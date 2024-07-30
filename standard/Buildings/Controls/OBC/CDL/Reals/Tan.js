@@ -7,8 +7,11 @@
  * @returns {number} output.y - Connector of Real output signal.
  */
 
-export default function tan({ }) {
+function tan({ }) {
   return ({ u }) => {
     return { y: Math.tan(u) };
   }
 }
+
+
+module.exports = tan;

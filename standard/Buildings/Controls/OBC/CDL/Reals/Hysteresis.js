@@ -9,7 +9,7 @@
  * @returns {Function} - A function that calculates the hysteresis transformation given the input.
  */
 
-export default function hysteresis({ uLow, uHigh, pre_y_start = false }) {
+ function hysteresis({ uLow, uHigh, pre_y_start = false }) {
   let previous_y = pre_y_start;
 
   return ({ u }) => {
@@ -22,3 +22,6 @@ export default function hysteresis({ uLow, uHigh, pre_y_start = false }) {
     return { y };
   };
 }
+
+
+module.exports = hysteresis;

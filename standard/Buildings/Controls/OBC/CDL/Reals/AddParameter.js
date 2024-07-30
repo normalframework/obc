@@ -10,8 +10,10 @@
  * @returns {number} output.y - Connector of Real output signal.
  */
 
-export default function addParameter({ p }) {
+ function addParameter({ p }) {
   return ({ u }) => {
     return { y: u + p };
   }
 }
+
+module.exports = addParameter;

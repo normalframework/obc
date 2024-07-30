@@ -13,7 +13,7 @@
  * @returns {number} output.y - Continuous output signal.
  */
 
-export default function unitDelay({ samplePeriod, y_start = 0 }) {
+ function unitDelay({ samplePeriod, y_start = 0 }) {
   let y = y_start;
   let t0 = Math.round((Date.now() / 1000) / samplePeriod) * samplePeriod;
   let prev_u = y_start;
@@ -31,3 +31,5 @@ export default function unitDelay({ samplePeriod, y_start = 0 }) {
     return { y };
   };
 }
+
+module.exports = unitDelay;

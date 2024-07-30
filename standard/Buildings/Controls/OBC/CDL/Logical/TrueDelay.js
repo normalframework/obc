@@ -10,7 +10,7 @@
  * @returns {boolean} output.y - Connector of Boolean output signal.
  */
 
-export default function trueDelay({ delayTime, delayOnInit = false }) {
+ function trueDelay({ delayTime, delayOnInit = false }) {
   let t_past = Date.now() / 1000 - 1000;
   let prev_u = false;
   let t_next = t_past;
@@ -35,3 +35,5 @@ export default function trueDelay({ delayTime, delayOnInit = false }) {
     return { y };
   };
 }
+
+module.exports = trueDelay;

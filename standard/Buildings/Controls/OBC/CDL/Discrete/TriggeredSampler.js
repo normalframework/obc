@@ -11,7 +11,7 @@
  * @returns {number} output.y - Connector with a Real output signal.
  */
 
-export default function triggeredSampler({ y_start = 0 }) {
+ function triggeredSampler({ y_start = 0 }) {
   let y = y_start;
 
   return ({ u, trigger }) => {
@@ -22,3 +22,5 @@ export default function triggeredSampler({ y_start = 0 }) {
     return { y };
   }
 }
+
+module.exports = triggeredSampler;

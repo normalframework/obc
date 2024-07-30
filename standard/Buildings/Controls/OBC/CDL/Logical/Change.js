@@ -10,7 +10,7 @@
  * @returns {boolean} output.y - Connector of Boolean output signal.
  */
 
-export default function change({ pre_u_start = false }) {
+ function change({ pre_u_start = false }) {
   let previous_u = pre_u_start;
 
   return ({ u }) => {
@@ -19,3 +19,5 @@ export default function change({ pre_u_start = false }) {
     return { y: current_y };
   }
 }
+
+module.exports = change;

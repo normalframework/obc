@@ -13,8 +13,10 @@
  * @returns {boolean} output.y - Connector of Boolean output signal.
  */
 
-export default function lessEqualThreshold({ t = 0 }) {
+ function lessEqualThreshold({ t = 0 }) {
   return ({ u }) => {
     return { y: u <= t };
   }
 }
+
+module.exports = lessEqualThreshold;

@@ -9,7 +9,7 @@
  * @returns {Function} - A function that calculates the row-wise or column-wise minimum of the input matrix.
  */
 
-export default function matrixMin({ rowMin = true, nRow, nCol }) {
+ function matrixMin({ rowMin = true, nRow, nCol }) {
   return ({ u }) => {
     if (u.length !== nRow || u[0].length !== nCol) {
       throw new Error(`Input matrix dimensions [${u.length}, ${u[0].length}] do not match the specified dimensions [${nRow}, ${nCol}]`);
@@ -25,3 +25,6 @@ export default function matrixMin({ rowMin = true, nRow, nCol }) {
     return { y };
   };
 }
+
+
+module.exports = matrixMin;

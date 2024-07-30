@@ -10,8 +10,10 @@
  * @returns {number} output.y - Output signal connector.
  */
 
-export default function multiplyByParameter({ k }) {
+ function multiplyByParameter({ k }) {
   return ({ u }) => {
     return { y: k * u };
   }
 }
+
+module.exports = multiplyByParameter;

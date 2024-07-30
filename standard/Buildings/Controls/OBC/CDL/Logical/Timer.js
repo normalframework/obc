@@ -11,7 +11,7 @@
  * @returns {boolean} output.passed - True if the elapsed time is greater than the threshold time.
  */
 
-export default function timer({ t }) {
+ function timer({ t }) {
   let elapsedTime = 0;
   let lastInputState = false;
   let startTime = 0;
@@ -33,3 +33,6 @@ export default function timer({ t }) {
     return { y: elapsedTime, passed };
   };
 }
+
+
+module.exports = timer;

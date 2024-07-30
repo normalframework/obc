@@ -12,7 +12,7 @@
  * @returns {number} output.y - Connector of Real output signal.
  */
 
-export default function multiSum({ nin, k }) {
+ function multiSum({ nin, k }) {
   return ({ u }) => {
     if (u.length > 0) {
       return { y: k.reduce((sum, gain, index) => sum + gain * u[index], 0) };
@@ -21,3 +21,5 @@ export default function multiSum({ nin, k }) {
     }
   }
 }
+
+module.exports = multiSum;

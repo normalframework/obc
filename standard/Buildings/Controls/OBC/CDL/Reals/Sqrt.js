@@ -9,8 +9,11 @@
  * @returns {number} output.y - Connector of Real output signal.
  */
 
-export default function sqrt({ }) {
+ function sqrt({ }) {
   return ({ u }) => {
     return { y: Math.sqrt(u) };
   }
 }
+
+
+module.exports = sqrt;

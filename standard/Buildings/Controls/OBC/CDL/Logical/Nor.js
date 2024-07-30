@@ -9,8 +9,10 @@
  * @returns {boolean} output.y - Connector of Boolean output signal.
  */
 
-export default function nor() {
+function nor() {
   return ({ u1, u2 }) => {
     return { y: !(u1 || u2) };
   }
 }
+
+module.exports = nor;

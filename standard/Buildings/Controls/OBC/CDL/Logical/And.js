@@ -9,8 +9,10 @@
  * @returns {boolean} output.y - Connector of the Boolean output signal.
  */
 
-export default function andBlock() {
+ function andBlock() {
   return ({ u1, u2 }) => {
     return { y: u1 && u2 };
   }
 }
+
+module.exports = andBlock;

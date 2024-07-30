@@ -8,7 +8,7 @@
  * @returns {Function} - A function that limits the input signal within the specified range.
  */
 
-export default function limiter({ uMax, uMin }) {
+ function limiter({ uMax, uMin }) {
   if (uMin >= uMax) {
     throw new Error("uMin must be smaller than uMax. Check parameters.");
   }
@@ -18,3 +18,6 @@ export default function limiter({ uMax, uMin }) {
     return { y };
   };
 }
+
+
+module.exports = limiter;

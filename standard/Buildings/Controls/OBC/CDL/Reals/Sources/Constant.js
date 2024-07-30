@@ -11,8 +11,10 @@
  * @returns {number} output.y - Connector of Real output signal.
  */
 
-export default function constant({ k }) {
+ function constant({ k }) {
   return () => {
     return { y: k };
   }
 }
+
+module.exports = constant;

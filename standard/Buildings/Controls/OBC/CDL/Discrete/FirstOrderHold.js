@@ -7,7 +7,7 @@
  * @returns {Function} - A function that outputs the first-order held signal.
  */
 
-export default function firstOrderHold({ samplePeriod }) {
+ function firstOrderHold({ samplePeriod }) {
   let t0 = Math.round((Date.now() / 1000) / samplePeriod) * samplePeriod;
   let tSample = t0;
   let uSample = 0;
@@ -31,3 +31,5 @@ export default function firstOrderHold({ samplePeriod }) {
     return { y };
   };
 }
+
+module.exports = firstOrderHold;

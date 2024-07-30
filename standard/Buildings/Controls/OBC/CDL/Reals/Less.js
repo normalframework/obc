@@ -8,7 +8,7 @@
  * @returns {Function} - A function that calculates the less comparison given the inputs.
  */
 
-export default function less({ h = 0, pre_y_start = false }) {
+ function less({ h = 0, pre_y_start = false }) {
   let previous_y = pre_y_start;
 
   if (h >= 1E-10) {
@@ -23,3 +23,6 @@ export default function less({ h = 0, pre_y_start = false }) {
     };
   }
 }
+
+
+module.exports = less;

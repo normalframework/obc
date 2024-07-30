@@ -13,7 +13,7 @@
  * @returns {boolean} output.passed - True if the elapsed time is greater than the threshold.
  */
 
-export default function timerAccumulating({ t = 0 }) {
+ function timerAccumulating({ t = 0 }) {
   let entryTime = 0;
   let yAcc = 0;
   let prev_u = false;
@@ -44,3 +44,5 @@ export default function timerAccumulating({ t = 0 }) {
       return { y, passed };
   };
 }
+
+module.exports = timerAccumulating;

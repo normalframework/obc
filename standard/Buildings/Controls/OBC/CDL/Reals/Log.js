@@ -9,8 +9,11 @@
  * @returns {number} output.y - Connector of Real output signal.
  */
 
-export default function log() {
+ function log() {
   return ({ u }) => {
     return { y: Math.log(u) };
   }
 }
+
+
+module.exports = log;

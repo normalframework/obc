@@ -8,8 +8,10 @@
  * @returns {Object} - The output object.
  * @returns {boolean} output.y - Connector of Boolean output signal indicating if input u is less than t.
  */
-export default function lessThreshold({ t = 0 }) {
+ function lessThreshold({ t = 0 }) {
   return ({ u }) => {
     return { y: u < t };
   }
 }
+
+module.exports = lessThreshold;

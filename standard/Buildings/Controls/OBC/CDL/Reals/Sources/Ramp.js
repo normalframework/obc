@@ -10,7 +10,7 @@
  * @returns {Function} - A function that generates a ramp signal.
  */
 
-export default function ramp({ height = 1, duration, offset = 0, startTime = 0 }) {
+ function ramp({ height = 1, duration, offset = 0, startTime = 0 }) {
   if (duration <= 0) {
     throw new Error("duration must be greater than Constants.small");
   }
@@ -30,3 +30,5 @@ export default function ramp({ height = 1, duration, offset = 0, startTime = 0 }
     return { y };
   };
 }
+
+module.exports = ramp;

@@ -9,8 +9,11 @@
  * @returns {number} output.y - Connector of Real output signal.
  */
 
-export default function exp() {
+ function exp() {
   return ({ u }) => {
     return { y: Math.exp(u) };
   }
 }
+
+
+module.exports = exp;

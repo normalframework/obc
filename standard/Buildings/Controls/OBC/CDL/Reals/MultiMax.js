@@ -10,8 +10,10 @@
  * @returns {number} output.y - Connector of Real output signal.
  */
 
-export default function multiMax({ nin }) {
+ function multiMax({ nin }) {
   return ({ u }) => {
     return { y: Math.max(...u) };
   }
 }
+
+module.exports = multiMax;

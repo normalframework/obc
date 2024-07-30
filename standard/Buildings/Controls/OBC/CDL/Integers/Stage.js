@@ -13,7 +13,7 @@
  * @returns {number} output.y - Total number of stages that should be enabled (min: 1, max: n).
  */
 
-export default function stage({ n, holdDuration, h, pre_y_start }) {
+ function stage({ n, holdDuration, h, pre_y_start }) {
   const staThr = Array.from({ length: n }, (_, i) => i / n);
   let upperThreshold = 0;
   let lowerThreshold = 0;
@@ -38,3 +38,5 @@ export default function stage({ n, holdDuration, h, pre_y_start }) {
     return { y };
   };
 }
+
+module.exports = stage;

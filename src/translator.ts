@@ -4,6 +4,7 @@ import {
   EXECUTION_END_NODE,
   EXECUTION_START_NODE,
   lookupBlockElementId,
+  parseIdentifier,
   parseJsonToGraph,
 } from "./parser";
 import { inEdges, outEdges, predecessors, successors } from "./graph";
@@ -51,12 +52,14 @@ function makeImports(
   importNames: Map<string, string>
 ) {
   const currentPath = makeFilePath(id);
-  return Array.from(imports).map((type) => {
+  const importsArray = Array.from(imports);
+  importsArray.sort();
+  return importsArray.map((type) => {
     const name = importNames.get(type);
     const filePath = resolveFilePath(type);
     const relPath = path.relative(path.dirname(currentPath), filePath);
 
-    return `import ${name} from "${relPath}";`;
+    return `const ${name} = require("${relPath}");`;
   });
 }
 
@@ -131,7 +134,8 @@ export function translateGraph(id: string, graph: Graph) {
   const imports = new Set<string>();
   const importNames = new Map<string, string>();
   const processed = new Set();
-  const statements: string[] = [];
+  const declarations: string[] = [];
+  const fnCalls: string[] = [];
 
   const { start } = ensureStartEnd(graph);
   const resolveImport = (type: string) => {
@@ -157,6 +161,18 @@ export function translateGraph(id: string, graph: Graph) {
     if (node === EXECUTION_START_NODE || node === EXECUTION_END_NODE) {
       return;
     }
+
+    const nodeValue = graph.node(node) as ExecutionNode;
+
+    const params = nodeValue.parameters ?? [];
+
+    const paramsObject = makeJsObject(
+      params.filter((p) => !!p.value).map((p) => [p.name, p.value])
+    );
+    const fn = resolveImport(nodeValue.type);
+    declarations.push(`// ${node}`);
+    declarations.push(`const ${nodeValue.name}Fn = ${fn}(${paramsObject});`);
+
     const inputs = inEdges<ExecutionEdge>(graph, node);
 
     const inputsObject = makeJsObject(
@@ -164,8 +180,6 @@ export function translateGraph(id: string, graph: Graph) {
         .filter((e) => processed.has(e.from.block.id))
         .map((input) => [input.to.name, input.from.name])
     );
-    const nodeValue = graph.node(node) as ExecutionNode;
-
     const skippedInputs = inputs.filter((e) => !processed.has(e.from.block.id));
     if (skippedInputs.length > 0) {
       console.warn(
@@ -174,19 +188,8 @@ export function translateGraph(id: string, graph: Graph) {
           .join(",")} for ${node}`
       );
     }
-
-    const params = nodeValue.parameters ?? [];
-
-    const paramsObject = makeJsObject(
-      params.filter((p) => !!p.value).map((p) => [p.name, p.value])
-    );
-    const fn = resolveImport(nodeValue.type);
-    statements.push(`// ${node}`);
-    statements.push(
-      `const ${nodeValue.name} = ${fn}(
-      ${inputsObject},
-      ${paramsObject}
-      );`
+    fnCalls.push(
+      `const ${nodeValue.name} = ${nodeValue.name}Fn(${inputsObject});`
     );
   });
 
@@ -202,19 +205,24 @@ export function translateGraph(id: string, graph: Graph) {
     start.parameters.filter((p) => !!p.value).map((p) => [p.name, p.value])
   );
 
-  const res = [
-    `// ${id}`,
-    ...makeImports(id, imports, importNames),
-    "\n",
-    `export default function (
-    ${inputsObject},
-    ${paramsObject}
-    ) {`,
-    ...statements.map((s) => `  ${s}`),
-    "\n",
-    `  return ${outputObject};`,
-    "}",
-  ].join("\n");
+  const res = `
+// ${id}
+${makeImports(id, imports, importNames).join("\n")}
+
+module.exports = (
+  ${paramsObject}
+) => {
+${declarations.map((s) => `  ${s}`).join("\n")}
+
+  return (
+    ${inputsObject}
+  ) => {
+${fnCalls.map((s) => `    ${s}`).join("\n")}
+
+    return ${outputObject};
+  }
+}
+`;
 
   return res;
 }
@@ -247,7 +255,7 @@ export function translateFile(
     process.exit(1);
   }
   filesRegistry.set(blockId, outputName);
-  console.log(`Writing ${blockId} -> ${outFile}`);
+  console.log(`Writing ${parseIdentifier(blockId)} -> ${outFile}`);
   fs.writeFileSync(outFile, code);
   if (visualize) {
     visualizeGraph(executionGraph, path.join(output, outputName + ".svg"));

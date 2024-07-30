@@ -7,7 +7,7 @@
  * @returns {Function} - A function that calculates the derivative given the input.
  */
 
-export default function derivative({ y_start = 0 }) {
+ function derivative({ y_start = 0 }) {
   let x = 0;
 
   return ({ k, T, u }) => {
@@ -28,3 +28,5 @@ export default function derivative({ y_start = 0 }) {
     return { y };
   };
 }
+
+export default derivative;

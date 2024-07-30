@@ -10,7 +10,7 @@
  * @returns {boolean} output.y - Connector of Boolean output signal.
  */
 
-export default function multiOr({ nin }) {
+ function multiOr({ nin }) {
   return ({ u }) => {
     let y = false;
 
@@ -27,3 +27,5 @@ export default function multiOr({ nin }) {
     return { y };
   };
 }
+
+module.exports = multiOr;

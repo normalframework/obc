@@ -8,8 +8,10 @@
  * @returns {boolean} output.y - Connector of Boolean output signal.
  */
 
-export default function constant({ k }) {
+ function constant({ k }) {
   return () => {
     return { y: k };
   };
 }
+
+module.exports = constant;
