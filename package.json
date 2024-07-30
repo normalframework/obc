@@ -1,0 +1,22 @@
+{
+  "name": "modelica-translator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.14.11",
+    "typescript": "^5.5.3"
+  },
+  "dependencies": {
+    "@dagrejs/graphlib": "^2.2.3",
+    "commander": "^12.1.0",
+    "graphlib-dot": "^0.6.4",
+    "openai": "^4.53.2",
+    "viz.js": "^2.1.2"
+  }
+}
