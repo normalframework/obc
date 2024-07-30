@@ -17,7 +17,7 @@ export async function translateFile(input: string, output: string) {
       {
         role: "user",
         content:
-          "You need to translate modelica files that I will give you into javascript code. Please reply only code. The output should be default export function that returns function parameters are input for outer function and inputs are input for inner function. Also add description comment in top. The result should be object",
+          "You need to translate modelica files that I will give you into javascript code. Please reply only code. The output should be module export function that returns function parameters are input for outer function and inputs are input for inner function. Also add description comment in top. The result should be object",
       },
       {
         role: "assistant",
@@ -56,11 +56,13 @@ end AddParameter;
  * @returns {number} output.y - Connector of Real output signal.
  */
 
-export default function addParameter({ p }) {
+function addParameter({ p }) {
   return ({ u }) => {
     return { y: u + p };
   }
 }
+
+module.exports = addParameter;
         `,
       },
       {

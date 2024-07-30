@@ -17,6 +17,8 @@ import clc from "cli-color";
 
 const filesRegistry = new Map<string, string>();
 const importedFiles = new Set<string>();
+const importedFilesTypes = new Map<string, string>();
+const importTypes = new Map<string, string[]>();
 
 function makeBlockId(blockId: string) {
   return blockId.split("#").pop();
@@ -60,6 +62,13 @@ function makeImports(
   return importsArray.map((type) => {
     const name = importNames.get(type);
     const filePath = resolveFilePath(type);
+    importedFiles.add(filePath);
+    importedFilesTypes.set(filePath, type);
+    if (!importTypes.has(filePath)) {
+      importTypes.set(filePath, []);
+    }
+    importTypes.get(filePath).push(id);
+
     const relPath = path.relative(path.dirname(currentPath), filePath);
 
     return `const ${name} = require("${relPath}");`;
@@ -281,15 +290,37 @@ export function translateDirectory(
   options: { visualize: boolean }
 ) {
   fs.mkdirSync(path.dirname(output), { recursive: true });
+
+  const standardFiles = [];
   const standard = path.join(__dirname, "..", "standard");
 
   for (const filePath of walkDirectoryRecursive(standard)) {
     const copyPath = path.join(output, path.relative(standard, filePath));
     fs.mkdirSync(path.dirname(copyPath), { recursive: true });
     fs.copyFileSync(filePath, copyPath);
+    standardFiles.push(path.relative(output, copyPath).replace(".js", ""));
   }
 
   for (const filePath of walkDirectoryRecursive(input)) {
     translateFile(filePath, output, options);
   }
+
+  const availableFiles = [...filesRegistry.values(), ...standardFiles];
+
+  for (const file of importedFiles) {
+    if (!availableFiles.includes(file)) {
+      const types = importTypes.get(file);
+      console.error(
+        clc.red("[ERROR]"),
+        "Missing import for type",
+        clc.bold(makeBlockId(importedFilesTypes.get(file))),
+        "from",
+        clc.bold(file),
+        "used in",
+        types.map((t) => clc.bold(makeBlockId(t))).join(", "),
+        "\n"
+      );
+    }
+  }
+
 }
