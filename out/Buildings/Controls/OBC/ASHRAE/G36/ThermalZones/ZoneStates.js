@@ -17,29 +17,29 @@ module.exports = (
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ThermalZones.ZoneStates.hysUHea
   const hysUHeaFn = hysteresis_72a6bcc6({ uHigh: uHigh, uLow: uLow });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ThermalZones.ZoneStates.uHeaMinUCoo
-  const uHeaMinUCooFn = subtract_029d2d63();
+  const uHeaMinUCooFn = subtract_029d2d63({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ThermalZones.ZoneStates.hysU
   const hysUFn = hysteresis_72a6bcc6({ uHigh: uLow, uLow: -uLow });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ThermalZones.ZoneStates.isHea
-  const isHeaFn = and_6d642f1c();
+  const isHeaFn = and_6d642f1c({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ThermalZones.ZoneStates.booToIntHea
   const booToIntHeaFn = booleantointeger_d87efb42({ integerTrue: "Buildings.Controls.OBC.ASHRAE.G36.Types.ZoneStates.heating" });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ThermalZones.ZoneStates.notHea
-  const notHeaFn = not_6d646018();
+  const notHeaFn = not_6d646018({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ThermalZones.ZoneStates.hysUCoo
   const hysUCooFn = hysteresis_72a6bcc6({ uHigh: uHigh, uLow: uLow });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ThermalZones.ZoneStates.isCoo
-  const isCooFn = and_6d642f1c();
+  const isCooFn = and_6d642f1c({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ThermalZones.ZoneStates.booToIntCoo
   const booToIntCooFn = booleantointeger_d87efb42({ integerTrue: "Buildings.Controls.OBC.ASHRAE.G36.Types.ZoneStates.cooling" });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ThermalZones.ZoneStates.addInt
-  const addIntFn = add_2aeed27e();
+  const addIntFn = add_2aeed27e({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ThermalZones.ZoneStates.isDea
-  const isDeaFn = nor_6d646016();
+  const isDeaFn = nor_6d646016({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ThermalZones.ZoneStates.booToIntDea
   const booToIntDeaFn = booleantointeger_d87efb42({ integerTrue: "Buildings.Controls.OBC.ASHRAE.G36.Types.ZoneStates.deadband" });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ThermalZones.ZoneStates.addInt1
-  const addInt1Fn = add_2aeed27e();
+  const addInt1Fn = add_2aeed27e({});
 
   return (
     { uCoo, uHea }

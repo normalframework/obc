@@ -29,13 +29,13 @@ module.exports = (
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ThermalZones.ControlLoops.disCoo
   const disCooFn = truedelay_b49d8a1a({ delayTime: timChe });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ThermalZones.ControlLoops.colZon
-  const colZonFn = not_6d646018();
+  const colZonFn = not_6d646018({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ThermalZones.ControlLoops.disCooCon
-  const disCooConFn = and_6d642f1c();
+  const disCooConFn = and_6d642f1c({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ThermalZones.ControlLoops.zerCoo
   const zerCooFn = booleantoreal_df99be1a({ realFalse: 1 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ThermalZones.ControlLoops.cooConSig
-  const cooConSigFn = multiply_a462b873();
+  const cooConSigFn = multiply_a462b873({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ThermalZones.ControlLoops.enaHeaLoo
   const enaHeaLooFn = less_19683368({ h: dTHys });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ThermalZones.ControlLoops.conHea
@@ -45,13 +45,13 @@ module.exports = (
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ThermalZones.ControlLoops.disHea
   const disHeaFn = truedelay_b49d8a1a({ delayTime: timChe });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ThermalZones.ControlLoops.holZon
-  const holZonFn = not_6d646018();
+  const holZonFn = not_6d646018({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ThermalZones.ControlLoops.disHeaCon
-  const disHeaConFn = and_6d642f1c();
+  const disHeaConFn = and_6d642f1c({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ThermalZones.ControlLoops.zerHea
   const zerHeaFn = booleantoreal_df99be1a({ realFalse: 1 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ThermalZones.ControlLoops.heaConSig
-  const heaConSigFn = multiply_a462b873();
+  const heaConSigFn = multiply_a462b873({});
 
   return (
     { TCooSet, THeaSet, TZon }

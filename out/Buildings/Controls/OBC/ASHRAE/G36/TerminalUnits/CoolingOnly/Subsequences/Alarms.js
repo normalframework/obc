@@ -35,25 +35,25 @@ module.exports = (
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.CoolingOnly.Subsequences.Alarms.gre1
   const gre1Fn = greater_b1da53cb({ h: floHys });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.CoolingOnly.Subsequences.Alarms.not3
-  const not3Fn = not_6d646018();
+  const not3Fn = not_6d646018({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.CoolingOnly.Subsequences.Alarms.and5
-  const and5Fn = and_6d642f1c();
+  const and5Fn = and_6d642f1c({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.CoolingOnly.Subsequences.Alarms.truDel2
   const truDel2Fn = truedelay_b49d8a1a({ delayTime: fanOffTim });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.CoolingOnly.Subsequences.Alarms.occMod
   const occModFn = constant_8c5ba27d({ k: "Buildings.Controls.OBC.ASHRAE.G36.Types.OperationModes.occupied" });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.CoolingOnly.Subsequences.Alarms.isOcc
-  const isOccFn = equal_2ac2bdd1();
+  const isOccFn = equal_2ac2bdd1({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.CoolingOnly.Subsequences.Alarms.and6
-  const and6Fn = and_6d642f1c();
+  const and6Fn = and_6d642f1c({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.CoolingOnly.Subsequences.Alarms.booToInt2
   const booToInt2Fn = booleantointeger_d87efb42({ integerTrue: 3 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.CoolingOnly.Subsequences.Alarms.cloDam
   const cloDamFn = lessthreshold_f64b25e3({ h: 0.5*damPosHys, t: damPosHys });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.CoolingOnly.Subsequences.Alarms.leaDamAla1
-  const leaDamAla1Fn = and_6d642f1c();
+  const leaDamAla1Fn = and_6d642f1c({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.CoolingOnly.Subsequences.Alarms.leaDamAla2
-  const leaDamAla2Fn = and_6d642f1c();
+  const leaDamAla2Fn = and_6d642f1c({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.CoolingOnly.Subsequences.Alarms.truDel3
   const truDel3Fn = truedelay_b49d8a1a({ delayTime: leaFloTim });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.CoolingOnly.Subsequences.Alarms.booToInt3
@@ -67,7 +67,7 @@ module.exports = (
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.CoolingOnly.Subsequences.Alarms.fanIni
   const fanIniFn = truedelay_b49d8a1a({ delayTime: staTim });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.CoolingOnly.Subsequences.Alarms.and10
-  const and10Fn = and_6d642f1c();
+  const and10Fn = and_6d642f1c({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.CoolingOnly.Subsequences.Alarms.truDel
   const truDelFn = truedelay_b49d8a1a({ delayTime: lowFloTim });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.CoolingOnly.Subsequences.Alarms.greThr
@@ -75,64 +75,64 @@ module.exports = (
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.CoolingOnly.Subsequences.Alarms.truDel4
   const truDel4Fn = truedelay_b49d8a1a({ delayTime: lowFloTim });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.CoolingOnly.Subsequences.Alarms.and2
-  const and2Fn = and_6d642f1c();
+  const and2Fn = and_6d642f1c({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.CoolingOnly.Subsequences.Alarms.conInt1
   const conInt1Fn = constant_baefa089({ k: staPreMul });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.CoolingOnly.Subsequences.Alarms.greThr1
-  const greThr1Fn = greaterthreshold_64a3c4e0();
+  const greThr1Fn = greaterthreshold_64a3c4e0({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.CoolingOnly.Subsequences.Alarms.and8
-  const and8Fn = and_6d642f1c();
+  const and8Fn = and_6d642f1c({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.CoolingOnly.Subsequences.Alarms.and7
-  const and7Fn = and_6d642f1c();
+  const and7Fn = and_6d642f1c({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.CoolingOnly.Subsequences.Alarms.gai1
   const gai1Fn = multiplybyparameter_13a4f29f({ k: 0.7 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.CoolingOnly.Subsequences.Alarms.gre
   const greFn = greater_b1da53cb({ h: floHys });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.CoolingOnly.Subsequences.Alarms.and11
-  const and11Fn = and_6d642f1c();
+  const and11Fn = and_6d642f1c({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.CoolingOnly.Subsequences.Alarms.truDel1
   const truDel1Fn = truedelay_b49d8a1a({ delayTime: lowFloTim });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.CoolingOnly.Subsequences.Alarms.and1
-  const and1Fn = and_6d642f1c();
+  const and1Fn = and_6d642f1c({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.CoolingOnly.Subsequences.Alarms.and4
-  const and4Fn = and_6d642f1c();
+  const and4Fn = and_6d642f1c({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.CoolingOnly.Subsequences.Alarms.and3
-  const and3Fn = and_6d642f1c();
+  const and3Fn = and_6d642f1c({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.CoolingOnly.Subsequences.Alarms.booToInt
   const booToIntFn = booleantointeger_d87efb42({ integerTrue: 3 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.CoolingOnly.Subsequences.Alarms.lowFloAla
-  const lowFloAlaFn = switch_45c83437();
+  const lowFloAlaFn = switch_45c83437({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.CoolingOnly.Subsequences.Alarms.booToInt1
-  const booToInt1Fn = booleantointeger_d87efb42();
+  const booToInt1Fn = booleantointeger_d87efb42({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.CoolingOnly.Subsequences.Alarms.proInt
-  const proIntFn = multiply_2099ee67();
+  const proIntFn = multiply_2099ee67({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.CoolingOnly.Subsequences.Alarms.not1
-  const not1Fn = not_6d646018();
+  const not1Fn = not_6d646018({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.CoolingOnly.Subsequences.Alarms.assMes
   const assMesFn = assert_078ec840({ message: "Warning: airflow is less than 50% of the setpoint." });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.CoolingOnly.Subsequences.Alarms.not2
-  const not2Fn = not_6d646018();
+  const not2Fn = not_6d646018({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.CoolingOnly.Subsequences.Alarms.assMes1
   const assMes1Fn = assert_078ec840({ message: "Warning: airflow is less than 70% of the setpoint." });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.CoolingOnly.Subsequences.Alarms.not4
-  const not4Fn = not_6d646018();
+  const not4Fn = not_6d646018({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.CoolingOnly.Subsequences.Alarms.assMes2
   const assMes2Fn = assert_078ec840({ message: "Warning: airflow sensor should be calibrated." });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.CoolingOnly.Subsequences.Alarms.not5
-  const not5Fn = not_6d646018();
+  const not5Fn = not_6d646018({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.CoolingOnly.Subsequences.Alarms.assMes3
   const assMes3Fn = assert_078ec840({ message: "Warning: the damper is leaking." });
 
   return (
     { uDam, u1Fan, VActSet_flow, VDis_flow, uOpeMod }
   ) => {
-    const cooMaxFlo = cooMaxFloFn();
+    const cooMaxFlo = cooMaxFloFn({});
     const gai2 = gai2Fn({ u: cooMaxFlo.y });
     const gre1 = gre1Fn({ u1: VDis_flow, u2: gai2.y });
     const not3 = not3Fn({ u: u1Fan });
     const and5 = and5Fn({ u1: gre1.y, u2: not3.y });
     const truDel2 = truDel2Fn({ u: and5.y });
-    const occMod = occModFn();
+    const occMod = occModFn({});
     const isOcc = isOccFn({ u1: uOpeMod, u2: occMod.y });
     const and6 = and6Fn({ u1: truDel2.y, u2: isOcc.y });
     const booToInt2 = booToInt2Fn({ u: and6.y });
@@ -141,7 +141,7 @@ module.exports = (
     const leaDamAla2 = leaDamAla2Fn({ u1: leaDamAla1.y, u2: gre1.y });
     const truDel3 = truDel3Fn({ u: leaDamAla2.y });
     const booToInt3 = booToInt3Fn({ u: truDel3.y });
-    const conInt = conIntFn();
+    const conInt = conIntFn({});
     const gai = gaiFn({ u: VActSet_flow });
     const les = lesFn({ u1: VDis_flow, u2: gai.y });
     const fanIni = fanIniFn({ u: u1Fan });
@@ -150,7 +150,7 @@ module.exports = (
     const greThr = greThrFn({ u: VActSet_flow });
     const truDel4 = truDel4Fn({ u: greThr.y });
     const and2 = and2Fn({ u1: truDel.y, u2: truDel4.y });
-    const conInt1 = conInt1Fn();
+    const conInt1 = conInt1Fn({});
     const greThr1 = greThr1Fn({ u: conInt1.y });
     const and8 = and8Fn({ u1: and2.y, u2: greThr1.y });
     const and7 = and7Fn({ u1: and8.y, u2: isOcc.y });

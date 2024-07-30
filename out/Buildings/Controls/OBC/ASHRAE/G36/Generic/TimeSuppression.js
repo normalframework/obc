@@ -32,47 +32,47 @@ module.exports = (
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.uniDel
   const uniDelFn = unitdelay_bcd3bd80({ samplePeriod: samplePeriod });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.sub1
-  const sub1Fn = subtract_029d2d63();
+  const sub1Fn = subtract_029d2d63({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.con1
   const con1Fn = constant_48cc1015({ k: true });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.truDel
   const truDelFn = truedelay_b49d8a1a({ delayOnInit: true, delayTime: samplePeriod });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.conZer
-  const conZerFn = constant_baefa089();
+  const conZerFn = constant_baefa089({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.swi
-  const swiFn = switch_6d141143();
+  const swiFn = switch_6d141143({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.abs1
-  const abs1Fn = abs_a5faf0c3();
+  const abs1Fn = abs_a5faf0c3({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.greThr
   const greThrFn = greaterthreshold_64a3c4e0({ h: 0.5*dTHys, t: dTHys });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.lat
-  const latFn = latch_a5aa3a49();
+  const latFn = latch_a5aa3a49({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.edg
-  const edgFn = edge_3f236118();
+  const edgFn = edge_3f236118({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.tim
-  const timFn = timer_a61e7f4a();
+  const timFn = timer_a61e7f4a({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.triSam
-  const triSamFn = triggeredsampler_bcb3b170();
+  const triSamFn = triggeredsampler_bcb3b170({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.triSam1
-  const triSam1Fn = triggeredsampler_bcb3b170();
+  const triSam1Fn = triggeredsampler_bcb3b170({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.temDif
-  const temDifFn = subtract_029d2d63();
+  const temDifFn = subtract_029d2d63({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.abs2
-  const abs2Fn = abs_a5faf0c3();
+  const abs2Fn = abs_a5faf0c3({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.gai
   const gaiFn = multiplybyparameter_13a4f29f({ k: chaRat });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.maxSupTim
   const maxSupTimFn = constant_baefa089({ k: maxTim });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.supTim
-  const supTimFn = min_a5fb1ea3();
+  const supTimFn = min_a5fb1ea3({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.pasSup
-  const pasSupFn = greater_b1da53cb();
+  const pasSupFn = greater_b1da53cb({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.lat1
-  const lat1Fn = latch_a5aa3a49();
+  const lat1Fn = latch_a5aa3a49({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.con5
   const con5Fn = constant_48cc1015({ k: true });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.pasSupTim
-  const pasSupTimFn = switch_1cc03fcf();
+  const pasSupTimFn = switch_1cc03fcf({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.truHol
   const truHolFn = truehold_60ac3548({ duration: samplePeriod });
 
@@ -82,9 +82,9 @@ module.exports = (
     const samSet = samSetFn({ u: TSet });
     const uniDel = uniDelFn({ u: samSet.y });
     const sub1 = sub1Fn({ u1: samSet.y, u2: uniDel.y });
-    const con1 = con1Fn();
+    const con1 = con1Fn({});
     const truDel = truDelFn({ u: con1.y });
-    const conZer = conZerFn();
+    const conZer = conZerFn({});
     const swi = swiFn({ u1: sub1.y, u2: truDel.y, u3: conZer.y });
     const abs1 = abs1Fn({ u: swi.y });
     const greThr = greThrFn({ u: abs1.y });
@@ -96,11 +96,11 @@ module.exports = (
     const temDif = temDifFn({ u1: triSam.y, u2: triSam1.y });
     const abs2 = abs2Fn({ u: temDif.y });
     const gai = gaiFn({ u: abs2.y });
-    const maxSupTim = maxSupTimFn();
+    const maxSupTim = maxSupTimFn({});
     const supTim = supTimFn({ u1: gai.y, u2: maxSupTim.y });
     const pasSup = pasSupFn({ u1: tim.y, u2: supTim.y });
     const lat1 = lat1Fn({ clr: edg.y, u: pasSup.y });
-    const con5 = con5Fn();
+    const con5 = con5Fn({});
     const pasSupTim = pasSupTimFn({ u1: lat1.y, u2: lat.y, u3: con5.y });
     const truHol = truHolFn({ u: pasSup.y });
 

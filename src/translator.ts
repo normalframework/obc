@@ -45,7 +45,7 @@ function resolveFilePath(type: string) {
 
 function generateJsObject(values: [string, string][]) {
   if (values.length === 0) {
-    return "";
+    return "{}";
   }
   return `{ ${values.map(([key, value]) => `${key}: ${value}`).join(", ")} }`;
 }
