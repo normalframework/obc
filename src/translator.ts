@@ -1,4 +1,8 @@
 import { alg, Edge, Graph } from "@dagrejs/graphlib";
+import clc from "cli-color";
+import fs from "fs";
+import path from "path";
+import { inEdges, outEdges, predecessors, successors } from "./graph";
 import {
   buildExecutionGraph,
   EXECUTION_END_NODE,
@@ -7,51 +11,67 @@ import {
   parseIdentifier,
   parseJsonToGraph,
 } from "./parser";
-import { inEdges, outEdges, predecessors, successors } from "./graph";
 import { ExecutionEdge, ExecutionNode } from "./types";
-import { walkDirectoryRecursive } from "./utils";
-import path from "path";
-import fs from "fs";
+import { stringHash, walkDirectoryRecursive } from "./utils";
 import { visualizeGraph } from "./visualize";
-import clc from "cli-color";
 
 const filesRegistry = new Map<string, string>();
 const importedFiles = new Set<string>();
-const importedFilesTypes = new Map<string, string>();
-const importTypes = new Map<string, string[]>();
+const importsMap = new Map<string, string[]>();
 
-function makeBlockId(blockId: string) {
+function normalizeBlockId(blockId: string) {
   return blockId.split("#").pop();
 }
 function makeFilePath(blockId: string) {
-  return path.join(...makeBlockId(blockId).split("."));
+  return path.join(...normalizeBlockId(blockId).split("."));
 }
 
+function makeUniqName(type: string) {
+  const baseName = type.split(".").pop().toLowerCase();
+  return `${baseName}_${stringHash(type)}`;
+}
 function resolveFilePath(type: string) {
-  if (filesRegistry.has(type)) {
-    return filesRegistry.get(type);
+  const id = normalizeBlockId(type);
+  if (filesRegistry.has(id)) {
+    return filesRegistry.get(id);
+  }
+  const keys = Array.from(filesRegistry.keys());
+  const closest = keys.find((k) => k.endsWith(id));
+  if (closest) {
+    return filesRegistry.get(closest);
   }
   return makeFilePath(type);
 }
 
-function makeJsObject(values: [string, string][]) {
+function generateJsObject(values: [string, string][]) {
   if (values.length === 0) {
-    return "{}";
+    return "";
   }
   return `{ ${values.map(([key, value]) => `${key}: ${value}`).join(", ")} }`;
 }
 
-function makeJsObjectParameter(keys: string[]) {
+function generateJsObjectParameter(keys: string[]) {
   return `{ ${keys.join(", ")} }`;
 }
 
-function makeObjectWithDefaultValue(values: [string, string][]) {
+function generateParameterObject(values: [string, string][]) {
+  if (!values.length) {
+    return "";
+  }
+  const withDefaultValues = values
+    .filter(([, value]) => !!value)
+    .map(([key, value]) => `\t\t${key} = ${value}`)
+    .join(",\n");
+  const withoutDefaultValues = values
+    .filter(([, value]) => !value)
+    .map(([key]) => `\t\t${key}`)
+    .join(",\n");
   return `{
-${values.map(([key, value]) => `\t\t${key} = ${value}`).join(",\n")}
+${[withDefaultValues, withoutDefaultValues].filter(Boolean).join(",\n")},
     } = {}`;
 }
 
-function makeImports(
+function generateImports(
   id: string,
   imports: Set<string>,
   importNames: Map<string, string>
@@ -62,12 +82,12 @@ function makeImports(
   return importsArray.map((type) => {
     const name = importNames.get(type);
     const filePath = resolveFilePath(type);
+
     importedFiles.add(filePath);
-    importedFilesTypes.set(filePath, type);
-    if (!importTypes.has(filePath)) {
-      importTypes.set(filePath, []);
+    if (!importsMap.has(filePath)) {
+      importsMap.set(filePath, []);
     }
-    importTypes.get(filePath).push(id);
+    importsMap.get(filePath).push(id);
 
     const relPath = path.relative(path.dirname(currentPath), filePath);
 
@@ -85,12 +105,6 @@ function ensureStartEnd(graph: Graph) {
     throw new Error("Execution end node not found");
   }
   return { start, end };
-}
-
-function makeUniqName(type: string) {
-  const baseName = type.split(".").pop().toLowerCase();
-  const randSuffix = Math.random().toString(36).substring(7);
-  return `${baseName}_${randSuffix}`;
 }
 
 function findLoops(graph: Graph) {
@@ -131,7 +145,6 @@ function findLoops(graph: Graph) {
     });
 
     visited.add(node);
-
     successors(graph, node).forEach(dfs);
 
     stack.delete(node);
@@ -167,7 +180,7 @@ export function translateGraph(id: string, graph: Graph) {
     console.log(
       clc.yellow("[WARNING]"),
       clc.bold("Loop detected"),
-      `${makeBlockId(e.v)} -> ${makeBlockId(e.w)}`
+      `${normalizeBlockId(e.v)} -> ${normalizeBlockId(e.w)}`
     );
     graph.removeEdge(e);
   });
@@ -183,7 +196,7 @@ export function translateGraph(id: string, graph: Graph) {
 
     const params = nodeValue.parameters ?? [];
 
-    const paramsObject = makeJsObject(
+    const paramsObject = generateJsObject(
       params.filter((p) => !!p.value).map((p) => [p.name, p.value])
     );
     const fn = resolveImport(nodeValue.type);
@@ -192,7 +205,7 @@ export function translateGraph(id: string, graph: Graph) {
 
     const inputs = inEdges<ExecutionEdge>(graph, node);
 
-    const inputsObject = makeJsObject(
+    const inputsObject = generateJsObject(
       inputs
         .filter((e) => processed.has(e.from.block.id))
         .map((input) => [input.to.name, input.from.name])
@@ -213,18 +226,18 @@ export function translateGraph(id: string, graph: Graph) {
   const inputEdges = outEdges<ExecutionEdge>(graph, EXECUTION_START_NODE);
   const inputs = new Set<string>(inputEdges.map((o) => o.from.name));
   const outputEdges = inEdges<ExecutionEdge>(graph, EXECUTION_END_NODE);
-  const outputObject = makeJsObject(
+  const outputObject = generateJsObject(
     outputEdges.map((o) => [o.to.name, o.from.name])
   );
-  const inputsObject = makeJsObjectParameter(Array.from(inputs));
+  const inputsObject = generateJsObjectParameter(Array.from(inputs));
 
-  const paramsObject = makeObjectWithDefaultValue(
-    start.parameters.filter((p) => !!p.value).map((p) => [p.name, p.value])
+  const paramsObject = generateParameterObject(
+    start.parameters.map((p) => [p.name, p.value])
   );
 
   const res = `
 // ${id}
-${makeImports(id, imports, importNames).join("\n")}
+${generateImports(id, imports, importNames).join("\n")}
 
 module.exports = (
   ${paramsObject}
@@ -262,15 +275,21 @@ export function translateFile(
   const code = translateGraph(blockId, executionGraph);
 
   const outputName = makeFilePath(blockId);
-  const outFile = path.join(output, outputName + ".js");
+
+  let outFile = output;
+  if (!outFile.endsWith(".js")) {
+    outFile = path.join(output, outputName + ".js");
+  }
 
   fs.mkdirSync(path.dirname(outFile), { recursive: true });
 
-  if (filesRegistry.has(blockId)) {
+  const normalizedId = normalizeBlockId(blockId);
+
+  if (filesRegistry.has(normalizedId)) {
     console.error("Duplicate block id", blockId);
     process.exit(1);
   }
-  filesRegistry.set(blockId, outputName);
+  filesRegistry.set(normalizedId, outputName);
 
   console.log(
     clc.greenBright("[SUCCESS]"),
@@ -291,36 +310,33 @@ export function translateDirectory(
 ) {
   fs.mkdirSync(path.dirname(output), { recursive: true });
 
-  const standardFiles = [];
   const standard = path.join(__dirname, "..", "standard");
 
   for (const filePath of walkDirectoryRecursive(standard)) {
     const copyPath = path.join(output, path.relative(standard, filePath));
     fs.mkdirSync(path.dirname(copyPath), { recursive: true });
     fs.copyFileSync(filePath, copyPath);
-    standardFiles.push(path.relative(output, copyPath).replace(".js", ""));
+    const importPath = path.relative(output, copyPath).replace(".js", "");
+    filesRegistry.set(importPath.replace(/\//g, "."), importPath);
   }
 
   for (const filePath of walkDirectoryRecursive(input)) {
     translateFile(filePath, output, options);
   }
 
-  const availableFiles = [...filesRegistry.values(), ...standardFiles];
+  const availableFiles = [...filesRegistry.values()];
 
   for (const file of importedFiles) {
     if (!availableFiles.includes(file)) {
-      const types = importTypes.get(file);
+      const types = importsMap.get(file);
       console.error(
         clc.red("[ERROR]"),
         "Missing import for type",
-        clc.bold(makeBlockId(importedFilesTypes.get(file))),
-        "from",
         clc.bold(file),
         "used in",
-        types.map((t) => clc.bold(makeBlockId(t))).join(", "),
+        types.map((t) => clc.bold(normalizeBlockId(t))).join(", "),
         "\n"
       );
     }
   }
-
 }

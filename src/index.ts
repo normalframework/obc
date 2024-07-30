@@ -5,6 +5,7 @@ import {
   translateDirectory as translateDirectoryGpt,
   translateFile as translateFileGpt,
 } from "./gpt";
+import path from "path";
 
 process.setMaxListeners(0);
 
@@ -12,9 +13,10 @@ const program = new Command();
 
 async function translate(
   input: string,
+  output: string,
   translator: {
-    dir: () => void | Promise<void>;
-    file: () => void | Promise<void>;
+    dir: (input: string, output: string) => void | Promise<void>;
+    file: (input: string, output: string) => void | Promise<void>;
   }
 ) {
   if (!existsSync(input)) {
@@ -25,9 +27,12 @@ async function translate(
   const inputStat = statSync(input);
 
   if (inputStat.isDirectory()) {
-    await translator.dir();
+    await translator.dir(input, output);
   } else {
-    await translator.file();
+    const fileName = path.basename(input);
+    const ext = path.extname(fileName);
+    const fileOutput = path.join(output, fileName.replace(ext, ".js"));
+    await translator.file(input, fileOutput);
   }
 }
 
@@ -41,11 +46,11 @@ program
   .option("-v, --visualize", "Visualize the execution graph")
   .description("Translate modelica files")
   .action(async ({ input, output, visualize }) => {
-    output = output || __dirname;
+    output = output ?? process.cwd();
 
-    await translate(input, {
-      dir: () => translateDirectory(input, output, { visualize }),
-      file: () => translateFile(input, output, { visualize }),
+    await translate(input, output, {
+      dir: (input, output) => translateDirectory(input, output, { visualize }),
+      file: (input, output) => translateFile(input, output, { visualize }),
     });
   });
 
@@ -62,11 +67,11 @@ program
       console.error("OPENAI_API_KEY is not set");
       process.exit(1);
     }
-    output = output || __dirname;
+    output = output ?? process.cwd();
 
-    await translate(input, {
-      dir: () => translateDirectoryGpt(input, output),
-      file: () => translateFileGpt(input, output),
+    await translate(input, output, {
+      dir: (input, output) => translateDirectoryGpt(input, output),
+      file: (input, output) => translateFileGpt(input, output),
     });
   });
 

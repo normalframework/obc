@@ -1,45 +1,45 @@
 
 // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ThermalZones.ZoneStates
-const booleantointeger_l3fs8s = require("../../../CDL/Conversions/BooleanToInteger");
-const add_rx26hi = require("../../../CDL/Integers/Add");
-const and_nv8a4x = require("../../../CDL/Logical/And");
-const nor_wwjyh = require("../../../CDL/Logical/Nor");
-const not_70z0t = require("../../../CDL/Logical/Not");
-const hysteresis_ykw5b = require("../../../CDL/Reals/Hysteresis");
-const subtract_kn379k = require("../../../CDL/Reals/Subtract");
+const booleantointeger_d87efb42 = require("../../../CDL/Conversions/BooleanToInteger");
+const add_2aeed27e = require("../../../CDL/Integers/Add");
+const and_6d642f1c = require("../../../CDL/Logical/And");
+const nor_6d646016 = require("../../../CDL/Logical/Nor");
+const not_6d646018 = require("../../../CDL/Logical/Not");
+const hysteresis_72a6bcc6 = require("../../../CDL/Reals/Hysteresis");
+const subtract_029d2d63 = require("../../../CDL/Reals/Subtract");
 
 module.exports = (
   {
 		uHigh = 0.05,
-		uLow = 0.01
+		uLow = 0.01,
     } = {}
 ) => {
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ThermalZones.ZoneStates.hysUHea
-  const hysUHeaFn = hysteresis_ykw5b({ uHigh: uHigh, uLow: uLow });
+  const hysUHeaFn = hysteresis_72a6bcc6({ uHigh: uHigh, uLow: uLow });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ThermalZones.ZoneStates.uHeaMinUCoo
-  const uHeaMinUCooFn = subtract_kn379k({});
+  const uHeaMinUCooFn = subtract_029d2d63();
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ThermalZones.ZoneStates.hysU
-  const hysUFn = hysteresis_ykw5b({ uHigh: uLow, uLow: -uLow });
+  const hysUFn = hysteresis_72a6bcc6({ uHigh: uLow, uLow: -uLow });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ThermalZones.ZoneStates.isHea
-  const isHeaFn = and_nv8a4x({});
+  const isHeaFn = and_6d642f1c();
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ThermalZones.ZoneStates.booToIntHea
-  const booToIntHeaFn = booleantointeger_l3fs8s({ integerTrue: "Buildings.Controls.OBC.ASHRAE.G36.Types.ZoneStates.heating" });
+  const booToIntHeaFn = booleantointeger_d87efb42({ integerTrue: "Buildings.Controls.OBC.ASHRAE.G36.Types.ZoneStates.heating" });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ThermalZones.ZoneStates.notHea
-  const notHeaFn = not_70z0t({});
+  const notHeaFn = not_6d646018();
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ThermalZones.ZoneStates.hysUCoo
-  const hysUCooFn = hysteresis_ykw5b({ uHigh: uHigh, uLow: uLow });
+  const hysUCooFn = hysteresis_72a6bcc6({ uHigh: uHigh, uLow: uLow });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ThermalZones.ZoneStates.isCoo
-  const isCooFn = and_nv8a4x({});
+  const isCooFn = and_6d642f1c();
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ThermalZones.ZoneStates.booToIntCoo
-  const booToIntCooFn = booleantointeger_l3fs8s({ integerTrue: "Buildings.Controls.OBC.ASHRAE.G36.Types.ZoneStates.cooling" });
+  const booToIntCooFn = booleantointeger_d87efb42({ integerTrue: "Buildings.Controls.OBC.ASHRAE.G36.Types.ZoneStates.cooling" });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ThermalZones.ZoneStates.addInt
-  const addIntFn = add_rx26hi({});
+  const addIntFn = add_2aeed27e();
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ThermalZones.ZoneStates.isDea
-  const isDeaFn = nor_wwjyh({});
+  const isDeaFn = nor_6d646016();
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ThermalZones.ZoneStates.booToIntDea
-  const booToIntDeaFn = booleantointeger_l3fs8s({ integerTrue: "Buildings.Controls.OBC.ASHRAE.G36.Types.ZoneStates.deadband" });
+  const booToIntDeaFn = booleantointeger_d87efb42({ integerTrue: "Buildings.Controls.OBC.ASHRAE.G36.Types.ZoneStates.deadband" });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ThermalZones.ZoneStates.addInt1
-  const addInt1Fn = add_rx26hi({});
+  const addInt1Fn = add_2aeed27e();
 
   return (
     { uCoo, uHea }

@@ -1,4 +1,5 @@
 import { Graph } from "@dagrejs/graphlib";
+import { connections, dependencies } from "./graph";
 import {
   ExecutionEdge,
   ExecutionEdgeBlock,
@@ -6,7 +7,6 @@ import {
   Link,
   Node,
 } from "./types";
-import { connections, dependencies } from "./graph";
 
 export const EXECUTION_START_NODE = "START";
 export const EXECUTION_END_NODE = "END";
@@ -130,11 +130,20 @@ function buildParameterExpression(
   value: string | undefined | number,
   tokens: string[]
 ) {
+  console.log("value", value, tokens);
   if (!value) {
     return undefined;
   }
-  if (typeof value === "number" || typeof value === "boolean" || !isNaN(Number(value))) {
+
+  if (
+    typeof value === "number" ||
+    typeof value === "boolean" ||
+    !isNaN(Number(value))
+  ) {
     return value.toString();
+  }
+  if (Object.values(KNOWN_VALUES).includes(value)) {
+    return value;
   }
   const expressionTokens = value
     .replace(/\s+/g, "")
@@ -170,9 +179,10 @@ export function buildExecutionGraph(graph: Graph) {
   const mainElement = lookupBlockElementId(graph);
   const blocks = graph.children(mainElement);
   const { inputs, outputs, parameters } = dependencies(graph, mainElement);
+  const parametersIdentifiers = parameters.map(parseIdentifier);
   executionGraph.setNode(EXECUTION_START_NODE, {
     id: EXECUTION_START_NODE,
-    parameters: buildParameters(graph, parameters),
+    parameters: buildParameters(graph, parameters, parametersIdentifiers),
   });
   executionGraph.setNode(EXECUTION_END_NODE, { id: EXECUTION_END_NODE });
 
@@ -238,7 +248,7 @@ export function buildExecutionGraph(graph: Graph) {
       parameters: buildParameters(
         graph,
         nodeDeps.parameters,
-        parameters.map(parseIdentifier)
+        parametersIdentifiers
       ),
       name: blockId,
     };
