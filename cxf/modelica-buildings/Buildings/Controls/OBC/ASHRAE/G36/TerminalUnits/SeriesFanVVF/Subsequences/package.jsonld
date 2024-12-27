@@ -1,0 +1,1 @@
+{"@context":{"S231P":"https://data.ashrae.org/S231P#"},"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.SeriesFanVVF.package","@type":"S231P:Block","S231P:label":"Subsequences"}
