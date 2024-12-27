@@ -12,7 +12,7 @@
  */
 
  function atan2({ }) {
-  return ({ u1, u2 }) => {
+  return ({ u1 = 0, u2 = 0 }) => {
     return { y: Math.atan2(u1, u2) };
   }
 }

@@ -10,7 +10,7 @@
  */
 
  function asinBlock() {
-  return ({ u }) => {
+  return ({ u = 0 }) => {
     return { y: Math.asin(u) };
   }
 }

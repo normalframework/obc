@@ -14,7 +14,7 @@
  function triggeredSampler({ y_start = 0 }) {
   let y = y_start;
 
-  return ({ u, trigger }) => {
+  return ({ u = 0, trigger = false }) => {
     if (trigger) {
       y = u;
     }

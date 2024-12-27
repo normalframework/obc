@@ -7,12 +7,12 @@
  * @returns {Function} - A function that outputs the input signal with a zero-order hold.
  */
 
- function zeroOrderHold({ samplePeriod }) {
+function zeroOrderHold({ samplePeriod = 0 }) {
   let t0 = Math.round((Date.now() / 1000) / samplePeriod) * samplePeriod;
   let ySample = 0;
   let firstTrigger = false;
 
-  return ({ u }) => {
+  return ({ u = 0 }) => {
     const currentTime = Date.now() / 1000;
     const sampleTrigger = currentTime >= t0 && (currentTime - t0) % samplePeriod < 1E-3;
 

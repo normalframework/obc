@@ -11,8 +11,8 @@
  * @returns {boolean} output.y - Connector of Boolean output signal.
  */
 
-function multiAnd({ nin }) {
-  return ({ u }) => {
+function multiAnd({ nin = 0 }) {
+  return ({ u = [] }) => {
     let y = true;
 
     if (u.length > 1) {

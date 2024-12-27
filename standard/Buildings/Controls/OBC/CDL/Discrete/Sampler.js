@@ -7,7 +7,7 @@
  * @returns {Function} - A function that samples the input signal at specified intervals.
  */
 
-function sampler({ samplePeriod }) {
+function sampler({ samplePeriod = 0 }) {
   let t0 = Math.round((Date.now() / 1000) / samplePeriod) * samplePeriod;
   let y = 0;
 

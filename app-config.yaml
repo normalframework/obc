@@ -1,0 +1,6 @@
+name: OBC
+description: OBC Modelica App
+hooks:
+  - name: vav-controller
+    schedule: RRULE:FREQ=MINUTELY;INTERVAL=5
+    controller: Buildings/Controls/OBC/ASHRAE/G36/TerminalUnits/CoolingOnly/Controller.js

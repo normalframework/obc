@@ -9,8 +9,8 @@
  * @returns {number} output.y - Connector of Integer output signal.
  */
 
- function maxBlock() {
-  return ({ u1, u2 }) => {
+function maxBlock() {
+  return ({ u1 = 0, u2 = 0 }) => {
     return { y: Math.max(u1, u2) };
   }
 }

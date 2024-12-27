@@ -130,7 +130,6 @@ function buildParameterExpression(
   value: string | undefined | number,
   tokens: string[]
 ) {
-  console.log("value", value, tokens);
   if (!value) {
     return undefined;
   }
@@ -267,5 +266,5 @@ export function buildExecutionGraph(graph: Graph) {
 }
 
 export function parseIdentifier(id: string) {
-  return id.split(".").pop();
+  return id.split(".").pop()!;
 }

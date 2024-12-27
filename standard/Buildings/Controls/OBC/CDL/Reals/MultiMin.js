@@ -12,7 +12,7 @@
  */
 
  function multiMin({ nin }) {
-  return ({ u }) => {
+  return ({ u = [] }) => {
     return { y: Math.min(...u) };
   }
 }

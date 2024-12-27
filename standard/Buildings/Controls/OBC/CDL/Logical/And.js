@@ -9,8 +9,8 @@
  * @returns {boolean} output.y - Connector of the Boolean output signal.
  */
 
- function andBlock() {
-  return ({ u1, u2 }) => {
+function andBlock() {
+  return ({ u1 = false, u2 = false }) => {
     return { y: u1 && u2 };
   }
 }

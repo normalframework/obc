@@ -7,10 +7,10 @@
  * @returns {Function} - A function that calculates the derivative given the input.
  */
 
- function derivative({ y_start = 0 }) {
+function derivative({ y_start = 0 }) {
   let x = 0;
 
-  return ({ k, T, u }) => {
+  return ({ k = 0, T = 0, u = 0 }) => {
     const T_nonZero = Math.max(T, 100 * Number.EPSILON);
     const dt = 0.001; // Small time step for numerical differentiation, can be adjusted
 

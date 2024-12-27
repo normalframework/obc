@@ -6,6 +6,9 @@ import {
   translateFile as translateFileGpt,
 } from "./gpt";
 import path from "path";
+import inquirer from "inquirer";
+import fs from "fs";
+import { generateApp } from './app-generator';
 
 process.setMaxListeners(0);
 
@@ -35,6 +38,19 @@ async function translate(
     await translator.file(input, fileOutput);
   }
 }
+
+program
+  .command("app")
+  .option("-i, --input <input>", "Modelica  directory to translate")
+  .option("-o, --output <output>", "Output app folder")
+  .option("-c, --config <config>", "App config file")
+  .option("--name <name>", "App name")
+  .option("--description <description>", "App Description")
+  .description("Generate installable app repository")
+  .action(async (params) => {
+    console.log(params);
+    await generateApp(params);
+  });
 
 program
   .command("translate")

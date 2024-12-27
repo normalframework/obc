@@ -8,7 +8,7 @@
  */
 
 function tan({ }) {
-  return ({ u }) => {
+  return ({ u = 0 }) => {
     return { y: Math.tan(u) };
   }
 }

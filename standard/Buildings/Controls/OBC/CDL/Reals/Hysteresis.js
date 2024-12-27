@@ -9,10 +9,10 @@
  * @returns {Function} - A function that calculates the hysteresis transformation given the input.
  */
 
- function hysteresis({ uLow, uHigh, pre_y_start = false }) {
+ function hysteresis({ uLow = 0, uHigh = 0, pre_y_start = false }) {
   let previous_y = pre_y_start;
 
-  return ({ u }) => {
+  return ({ u = 0 }) => {
     if (uHigh <= uLow) {
       throw new Error("Hysteresis limits wrong. uHigh must be larger than uLow");
     }

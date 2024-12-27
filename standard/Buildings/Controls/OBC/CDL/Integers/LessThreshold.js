@@ -9,7 +9,7 @@
  * @returns {boolean} output.y - Connector of Boolean output signal indicating if input u is less than t.
  */
  function lessThreshold({ t = 0 }) {
-  return ({ u }) => {
+  return ({ u = 0 }) => {
     return { y: u < t };
   }
 }

@@ -14,7 +14,7 @@
  */
 
  function lessEqualThreshold({ t = 0 }) {
-  return ({ u }) => {
+  return ({ u = 0 }) => {
     return { y: u <= t };
   }
 }

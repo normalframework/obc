@@ -10,13 +10,13 @@
  * @returns {boolean} output.y - Connector of Boolean output signal.
  */
 
- function trueDelay({ delayTime, delayOnInit = false }) {
+function trueDelay({ delayTime = 0, delayOnInit = false }) {
   let t_past = Date.now() / 1000 - 1000;
   let prev_u = false;
   let t_next = t_past;
   let y = delayOnInit && delayTime > 0 ? false : true;
 
-  return ({ u }) => {
+  return ({ u = false }) => {
     const currentTime = Date.now() / 1000;
 
     if (u && !prev_u) {

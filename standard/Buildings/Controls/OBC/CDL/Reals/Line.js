@@ -9,7 +9,7 @@
  */
 
  function line({ limitBelow = true, limitAbove = true }) {
-  return ({ x1, f1, x2, f2, u }) => {
+  return ({ x1 = 0, f1 = 0, x2 = 0, f2 = 0, u = 0 }) => {
     if ((limitBelow || limitAbove) && x2 <= x1) {
       throw new Error("x2 must be bigger than x1");
     }

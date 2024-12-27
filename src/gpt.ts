@@ -76,10 +76,10 @@ module.exports = addParameter;
   console.log(chatCompletion);
   fs.writeFileSync(
     saveFilePath,
-    chatCompletion.choices[0].message.content.replace(
+    chatCompletion.choices[0].message.content?.replace(
       /```javascript\n|```/g,
       ""
-    )
+    ) ?? ""
   );
 }
 

@@ -11,7 +11,7 @@
  function trueHold() {
   let y = false;
 
-  return ({ u, clr }) => {
+  return ({ u = false, clr = false }) => {
     if (clr) {
       y = false;
     } else if (u) {

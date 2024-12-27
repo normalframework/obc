@@ -10,10 +10,10 @@
  * @returns {boolean} output.y - Connector of Boolean output signal.
  */
 
- function fallingEdge({ pre_u_start = false }) {
+function fallingEdge({ pre_u_start = false }) {
   let preNotU = !pre_u_start; // Initial pre value of not_u
 
-  return ({ u }) => {
+  return ({ u = false }) => {
     const notU = !u;
     const y = edge(notU, preNotU);
     preNotU = notU; // Update pre for the next iteration

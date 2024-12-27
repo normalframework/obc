@@ -15,7 +15,7 @@
  function change({ pre_u_start = 0 }) {
   let previousValue = pre_u_start;
 
-  return ({ u }) => {
+  return ({ u = 0 }) => {
     const hasChanged = u !== previousValue;
     const isIncreasing = u > previousValue;
     const isDecreasing = u < previousValue;

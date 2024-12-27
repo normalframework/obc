@@ -10,7 +10,7 @@
  */
 
  function sin({ }) {
-  return ({ u }) => {
+  return ({ u = 0 }) => {
     return { y: Math.sin(u) };
   }
 }

@@ -13,7 +13,7 @@
   let previous_y = pre_y_start;
 
   if (h >= 1E-10) {
-    return ({ u }) => {
+    return ({ u = 0 }) => {
       const y = (!previous_y && u < t) || (previous_y && u < t + h);
       previous_y = y;
       return { y };

@@ -10,10 +10,10 @@
  * @returns {boolean} output.y - Connector of Boolean output signal.
  */
 
- function pre({ pre_u_start = false }) {
+function pre({ pre_u_start = false }) {
   let prev_u = pre_u_start;
 
-  return ({ u }) => {
+  return ({ u = false }) => {
     const y = prev_u;
     prev_u = u;
     return { y };

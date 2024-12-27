@@ -14,11 +14,16 @@
     "typescript": "^5.5.3"
   },
   "dependencies": {
+    "@buf/normalframework_nf.bufbuild_es": "2.2.3-20241217160536-75775899c011.1",
     "@dagrejs/graphlib": "^2.2.3",
     "cli-color": "^2.0.4",
     "commander": "^12.1.0",
     "graphlib-dot": "^0.6.4",
+    "inquirer": "^12.3.0",
     "openai": "^4.53.2",
-    "viz.js": "^2.1.2"
+    "simple-git": "^3.27.0",
+    "viz.js": "^2.1.2",
+    "yaml": "^2.6.1",
+    "zod": "^3.24.1"
   }
 }

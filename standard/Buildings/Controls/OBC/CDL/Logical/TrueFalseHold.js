@@ -8,13 +8,13 @@
  * @returns {Function} - A function that holds the output signal for the specified durations.
  */
 
-function trueFalseHold({ trueHoldDuration, falseHoldDuration = trueHoldDuration }) {
+function trueFalseHold({ trueHoldDuration = 0, falseHoldDuration = trueHoldDuration }) {
   let entryTimeTrue = -Infinity;
   let entryTimeFalse = -Infinity;
   let prev_u = false;
   let y = false;
 
-  return ({ u }) => {
+  return ({ u = false }) => {
     const currentTime = Date.now() / 1000;
     let y_new = y;
 

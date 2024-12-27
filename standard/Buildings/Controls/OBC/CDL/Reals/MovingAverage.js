@@ -7,7 +7,7 @@
  * @returns {Function} - A function that calculates the moving average of the input signal.
  */
 
- function movingAverage({ delta }) {
+function movingAverage({ delta = 0 }) {
   if (delta < 1E-5) {
     throw new Error("delta must be greater than or equal to 1E-5");
   }
@@ -16,7 +16,7 @@
   let mu = 0;
   let mode = false;
 
-  return ({ u }) => {
+  return ({ u = 0 }) => {
     const currentTime = Date.now() / 1000; // Current time in seconds
     const dt = 0.001; // Small time step for numerical integration, can be adjusted
 

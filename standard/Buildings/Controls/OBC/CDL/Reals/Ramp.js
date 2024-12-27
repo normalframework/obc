@@ -19,7 +19,7 @@
 
   let y_internal = 0;
 
-  return ({ u, active }) => {
+  return ({ u = 0, active = false }) => {
     const dt = 0.001; // Small time step for numerical integration, can be adjusted
     const thr = (u - y_internal) / Td;
 

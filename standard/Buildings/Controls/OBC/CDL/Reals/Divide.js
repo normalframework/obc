@@ -11,7 +11,7 @@
  */
 
  function divide({ }) {
-  return ({ u1, u2 }) => {
+  return ({ u1 = 0, u2 = 0 }) => {
     return { y: u1 / u2 };
   }
 }

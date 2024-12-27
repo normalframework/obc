@@ -13,12 +13,12 @@
  * @returns {number} output.y - Continuous output signal.
  */
 
- function unitDelay({ samplePeriod, y_start = 0 }) {
+function unitDelay({ samplePeriod = 0, y_start = 0 }) {
   let y = y_start;
   let t0 = Math.round((Date.now() / 1000) / samplePeriod) * samplePeriod;
   let prev_u = y_start;
 
-  return ({ u }) => {
+  return ({ u = 0 }) => {
     const currentTime = Date.now() / 1000;
     const sampleTrigger = currentTime >= t0 && (currentTime - t0) % samplePeriod < 1E-3;
 

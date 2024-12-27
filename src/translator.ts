@@ -11,7 +11,7 @@ import {
   parseIdentifier,
   parseJsonToGraph,
 } from "./parser";
-import { ExecutionEdge, ExecutionNode } from "./types";
+import { ExecutionEdge, ExecutionNode, ExecutionParameter } from "./types";
 import { stringHash, walkDirectoryRecursive } from "./utils";
 import { visualizeGraph } from "./visualize";
 
@@ -20,54 +20,52 @@ const importedFiles = new Set<string>();
 const importsMap = new Map<string, string[]>();
 
 function normalizeBlockId(blockId: string) {
-  return blockId.split("#").pop();
+  return blockId.split("#").pop()!;
 }
 function makeFilePath(blockId: string) {
   return path.join(...normalizeBlockId(blockId).split("."));
 }
 
 function makeUniqName(type: string) {
-  const baseName = type.split(".").pop().toLowerCase();
+  const baseName = type.split(".").pop()!.toLowerCase();
   return `${baseName}_${stringHash(type)}`;
 }
 function resolveFilePath(type: string) {
   const id = normalizeBlockId(type);
   if (filesRegistry.has(id)) {
-    return filesRegistry.get(id);
+    return filesRegistry.get(id)!;
   }
   const keys = Array.from(filesRegistry.keys());
   const closest = keys.find((k) => k.endsWith(id));
   if (closest) {
-    return filesRegistry.get(closest);
+    return filesRegistry.get(closest)!;
   }
   return makeFilePath(type);
 }
 
-function generateJsObject(values: [string, string][]) {
+export function generateJsObject(
+  values: [string, string | undefined][],
+  sep = ", "
+) {
   if (values.length === 0) {
     return "{}";
   }
-  return `{ ${values.map(([key, value]) => `${key}: ${value}`).join(", ")} }`;
+  return `{ ${values.map(([key, value]) => `${key}: ${value}`).join(sep)} }`;
 }
 
-function generateJsObjectParameter(keys: string[]) {
+export function generateJsObjectParameter(keys: string[]) {
   return `{ ${keys.join(", ")} }`;
 }
 
-function generateParameterObject(values: [string, string][]) {
+function generateParameterObject(values: [string, string | undefined][]) {
   if (!values.length) {
     return "";
   }
-  const withDefaultValues = values
-    .filter(([, value]) => !!value)
-    .map(([key, value]) => `\t\t${key} = ${value}`)
-    .join(",\n");
-  const withoutDefaultValues = values
-    .filter(([, value]) => !value)
-    .map(([key]) => `\t\t${key}`)
+  const params = values
+    .map(([key, value]) => (value ? `\t\t${key} = ${value}` : `\t\t${key}`))
     .join(",\n");
   return `{
-${[withDefaultValues, withoutDefaultValues].filter(Boolean).join(",\n")},
+${params},
     } = {}`;
 }
 
@@ -87,10 +85,12 @@ function generateImports(
     if (!importsMap.has(filePath)) {
       importsMap.set(filePath, []);
     }
-    importsMap.get(filePath).push(id);
+    importsMap.get(filePath)!.push(id);
 
-    const relPath = path.relative(path.dirname(currentPath), filePath);
-
+    let relPath = path.relative(path.dirname(currentPath), filePath);
+    if (!relPath.startsWith(".")) {
+      relPath = `./${relPath}`;
+    }
     return `const ${name} = require("${relPath}");`;
   });
 }
@@ -153,6 +153,20 @@ function findLoops(graph: Graph) {
   dfs(EXECUTION_START_NODE);
 
   return loops;
+}
+
+function sortParams(params: ExecutionParameter[]) {
+  const graph = new Graph({ directed: true });
+  params.forEach((p) => {
+    graph.setNode(p.name, p);
+    params.forEach((p2) => {
+      if (p.value?.includes(p2.name)) {
+        graph.setEdge(p2.name, p.name);
+      }
+    });
+  });
+  const sorted = alg.topsort(graph);
+  return sorted.map((name) => graph.node(name));
 }
 
 export function translateGraph(id: string, graph: Graph) {
@@ -231,11 +245,12 @@ export function translateGraph(id: string, graph: Graph) {
   );
   const inputsObject = generateJsObjectParameter(Array.from(inputs));
 
+  const params = sortParams(start.parameters ?? []);
   const paramsObject = generateParameterObject(
-    start.parameters.map((p) => [p.name, p.value])
+    params.map((p) => [p.name, p.value])
   );
 
-  const res = `
+  const code = `
 // ${id}
 ${generateImports(id, imports, importNames).join("\n")}
 
@@ -253,8 +268,11 @@ ${fnCalls.map((s) => `    ${s}`).join("\n")}
   }
 }
 `;
-
-  return res;
+  const definition = {
+    inputs: Array.from(inputs),
+    outputs: outputEdges.map((o) => o.to.name),
+  };
+  return { code, definition };
 }
 
 export function translateFile(
@@ -263,16 +281,20 @@ export function translateFile(
   { visualize }: { visualize: boolean }
 ) {
   if (!input.endsWith(".jsonld")) {
-    console.error("Skipping non jsonld file", input);
+    console.error(clc.yellow("[WARNING]"), "Skipping non jsonld file", input);
     return;
   }
   const json = JSON.parse(
     fs.readFileSync(path.join(process.cwd(), input), "utf-8")
   );
+  if (!json["@graph"]) {
+    console.error(clc.red("[ERROR]"), "Invalid json jsonld", input);
+    return;
+  }
   const fullGraph = parseJsonToGraph(json["@graph"]);
   const blockId = lookupBlockElementId(fullGraph);
   const executionGraph = buildExecutionGraph(fullGraph);
-  const code = translateGraph(blockId, executionGraph);
+  const { code, definition } = translateGraph(blockId, executionGraph);
 
   const outputName = makeFilePath(blockId);
 
@@ -280,6 +302,8 @@ export function translateFile(
   if (!outFile.endsWith(".js")) {
     outFile = path.join(output, outputName + ".js");
   }
+
+  const defFile = outFile.replace(".js", ".json");
 
   fs.mkdirSync(path.dirname(outFile), { recursive: true });
 
@@ -295,9 +319,10 @@ export function translateFile(
     clc.greenBright("[SUCCESS]"),
     clc.bold(parseIdentifier(blockId)),
     `-> ${outFile}
-    `
+  `
   );
   fs.writeFileSync(outFile, code);
+  fs.writeFileSync(defFile, JSON.stringify(definition, null, 2));
   if (visualize) {
     visualizeGraph(executionGraph, path.join(output, outputName + ".svg"));
   }
@@ -328,7 +353,7 @@ export function translateDirectory(
 
   for (const file of importedFiles) {
     if (!availableFiles.includes(file)) {
-      const types = importsMap.get(file);
+      const types = importsMap.get(file) ?? [];
       console.error(
         clc.red("[ERROR]"),
         "Missing import for type",
