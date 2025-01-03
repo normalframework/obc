@@ -7,6 +7,7 @@ import {
   Link,
   Node,
 } from "./types";
+import { visualizeGraph } from "./visualize";
 
 export const EXECUTION_START_NODE = "START";
 export const EXECUTION_END_NODE = "END";
@@ -178,6 +179,7 @@ export function buildExecutionGraph(graph: Graph) {
   const mainElement = lookupBlockElementId(graph);
   const blocks = graph.children(mainElement);
   const { inputs, outputs, parameters } = dependencies(graph, mainElement);
+
   const parametersIdentifiers = parameters.map(parseIdentifier);
   executionGraph.setNode(EXECUTION_START_NODE, {
     id: EXECUTION_START_NODE,
@@ -254,6 +256,8 @@ export function buildExecutionGraph(graph: Graph) {
     executionGraph.setNode(block, node);
 
     const { inputs } = nodeDeps;
+
+    console.log(block, inputs);
 
     inputs.forEach((input) => buildExecutionEdge(input, blockId, block));
   });

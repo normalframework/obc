@@ -1,7 +1,7 @@
-import { alg, Edge, Graph } from "@dagrejs/graphlib";
+import graphlib from "@dagrejs/graphlib";
 import clc from "cli-color";
 import fs from "fs";
-import path from "path";
+import path, { dirname } from "path";
 import { inEdges, outEdges, predecessors, successors } from "./graph";
 import {
   buildExecutionGraph,
@@ -14,6 +14,12 @@ import {
 import { ExecutionEdge, ExecutionNode, ExecutionParameter } from "./types";
 import { stringHash, walkDirectoryRecursive } from "./utils";
 import { visualizeGraph } from "./visualize";
+import { parseModelica } from "./modelica";
+import { fileURLToPath } from "url";
+import { processCst } from "./cst";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 const filesRegistry = new Map<string, string>();
 const importedFiles = new Set<string>();
@@ -95,7 +101,7 @@ function generateImports(
   });
 }
 
-function ensureStartEnd(graph: Graph) {
+function ensureStartEnd(graph: graphlib.Graph) {
   const start = graph.node(EXECUTION_START_NODE) as ExecutionNode;
   if (!start) {
     throw new Error("Execution start node not found");
@@ -107,8 +113,8 @@ function ensureStartEnd(graph: Graph) {
   return { start, end };
 }
 
-function findLoops(graph: Graph) {
-  const loops: Edge[] = [];
+function findLoops(graph: graphlib.Graph) {
+  const loops: graphlib.Edge[] = [];
   const visited = new Set();
   const stack = new Set();
 
@@ -156,7 +162,7 @@ function findLoops(graph: Graph) {
 }
 
 function sortParams(params: ExecutionParameter[]) {
-  const graph = new Graph({ directed: true });
+  const graph = new graphlib.Graph({ directed: true });
   params.forEach((p) => {
     graph.setNode(p.name, p);
     params.forEach((p2) => {
@@ -165,11 +171,11 @@ function sortParams(params: ExecutionParameter[]) {
       }
     });
   });
-  const sorted = alg.topsort(graph);
+  const sorted = graphlib.alg.topsort(graph);
   return sorted.map((name) => graph.node(name));
 }
 
-export function translateGraph(id: string, graph: Graph) {
+export function translateGraph(id: string, graph: graphlib.Graph) {
   console.log(clc.blueBright("[TRANSLATING]"), clc.bold(parseIdentifier(id)));
   const imports = new Set<string>();
   const importNames = new Map<string, string>();
@@ -199,7 +205,7 @@ export function translateGraph(id: string, graph: Graph) {
     graph.removeEdge(e);
   });
 
-  const topological = alg.topsort(graph);
+  const topological = graphlib.alg.topsort(graph);
   topological.forEach((node) => {
     processed.add(node);
     if (node === EXECUTION_START_NODE || node === EXECUTION_END_NODE) {
@@ -278,7 +284,7 @@ ${fnCalls.map((s) => `    ${s}`).join("\n")}
 export function translateFile(
   input: string,
   output: string,
-  { visualize }: { visualize: boolean }
+  { visualize }: { visualize: boolean | string }
 ) {
   if (!input.endsWith(".jsonld")) {
     console.error(clc.yellow("[WARNING]"), "Skipping non jsonld file", input);
@@ -324,16 +330,64 @@ export function translateFile(
   fs.writeFileSync(outFile, code);
   fs.writeFileSync(defFile, JSON.stringify(definition, null, 2));
   if (visualize) {
-    visualizeGraph(executionGraph, path.join(output, outputName + ".svg"));
+    if (typeof visualize === "string") {
+      visualizeGraph(executionGraph, visualize);
+    } else {
+      visualizeGraph(executionGraph, path.join(output, outputName + ".svg"));
+    }
   }
+}
+
+function isModelicaFile(filePath: string) {
+  return path.extname(filePath) === ".mo";
+}
+
+let success = 0;
+let failed = 0;
+
+function parseModelicaFiles(filePath: string) {
+  const content = fs.readFileSync(filePath, "utf-8");
+
+  try {
+    console.log(filePath);
+    const cst = parseModelica(content);
+    const fileModel = processCst(cst);
+    success++;
+  } catch (e) {
+    // console.log(filePath);
+    failed++;
+    throw e;
+    // igore
+  }
+  // const cst = parseModelica(content);
+  // const fileModel = processCst(cst);
+
+  // console.log(fileModel);
+  // fs.appendFileSync(
+  //   "output.json",
+  //   JSON.stringify(parseModelica(content), null, 2)
+  // );
+  // console.log(parseModelica(content));
 }
 
 export function translateDirectory(
   input: string,
   output: string,
-  options: { visualize: boolean }
+  options: { visualize: boolean | string }
 ) {
   fs.mkdirSync(path.dirname(output), { recursive: true });
+
+  const modelicaBuildings = path.join(__dirname, "..", "modelica-buildings");
+
+  for (const filePath of walkDirectoryRecursive(modelicaBuildings)) {
+    if (isModelicaFile(filePath)) {
+      parseModelicaFiles(filePath);
+    }
+  }
+  console.log("Success: ", success);
+  console.log("Failed: ", failed);
+
+  return;
 
   const standard = path.join(__dirname, "..", "standard");
 

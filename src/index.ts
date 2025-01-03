@@ -1,14 +1,12 @@
 import { Command } from "commander";
-import { existsSync, stat, statSync } from "fs";
-import { translateDirectory, translateFile } from "./translator";
+import { existsSync, statSync } from "fs";
+import path from "path";
+import { generateApp } from "./apps";
 import {
   translateDirectory as translateDirectoryGpt,
   translateFile as translateFileGpt,
 } from "./gpt";
-import path from "path";
-import inquirer from "inquirer";
-import fs from "fs";
-import { generateApp } from './app-generator';
+import { translateDirectory, translateFile } from "./translator";
 
 process.setMaxListeners(0);
 
@@ -60,13 +58,15 @@ program
   )
   .option("-o, --output <output>", "Output file")
   .option("-v, --visualize", "Visualize the execution graph")
+  .option("-g, --graph <graph>", "Visualize graph file path")
   .description("Translate modelica files")
-  .action(async ({ input, output, visualize }) => {
+  .action(async ({ input, output, visualize, graph }) => {
     output = output ?? process.cwd();
-
     await translate(input, output, {
-      dir: (input, output) => translateDirectory(input, output, { visualize }),
-      file: (input, output) => translateFile(input, output, { visualize }),
+      dir: (input, output) =>
+        translateDirectory(input, output, { visualize: graph ?? visualize }),
+      file: (input, output) =>
+        translateFile(input, output, { visualize: graph ?? visualize }),
     });
   });
 

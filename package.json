@@ -2,6 +2,7 @@
   "name": "modelica-translator",
   "version": "1.0.0",
   "description": "",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,11 +12,13 @@
   "devDependencies": {
     "@types/cli-color": "^2.0.6",
     "@types/node": "^20.14.11",
+    "tsx": "^4.19.2",
     "typescript": "^5.5.3"
   },
   "dependencies": {
     "@buf/normalframework_nf.bufbuild_es": "2.2.3-20241217160536-75775899c011.1",
     "@dagrejs/graphlib": "^2.2.3",
+    "chevrotain": "^11.0.3",
     "cli-color": "^2.0.4",
     "commander": "^12.1.0",
     "graphlib-dot": "^0.6.4",
