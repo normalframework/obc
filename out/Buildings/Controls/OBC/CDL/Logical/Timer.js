@@ -11,12 +11,12 @@
  * @returns {boolean} output.passed - True if the elapsed time is greater than the threshold time.
  */
 
- function timer({ t }) {
+function timer({ t = 0 }) {
   let elapsedTime = 0;
   let lastInputState = false;
   let startTime = 0;
 
-  return function ({ u }) {
+  return function ({ u = false }) {
     if (u && !lastInputState) {
       startTime = Date.now();
       elapsedTime = 0;

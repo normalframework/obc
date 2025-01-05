@@ -13,7 +13,7 @@
  * @returns {number} output.y - Total number of stages that should be enabled (min: 1, max: n).
  */
 
- function stage({ n, holdDuration, h, pre_y_start }) {
+ function stage({ n = 0, holdDuration = 0, h = 0, pre_y_start = false }) {
   const staThr = Array.from({ length: n }, (_, i) => i / n);
   let upperThreshold = 0;
   let lowerThreshold = 0;
@@ -22,7 +22,7 @@
   let tNext = Date.now() / 1000 + holdDuration;
   let y = pre_y_start;
 
-  return ({ u }) => {
+  return ({ u = 0 }) => {
     const currentTime = Date.now() / 1000;
 
     checkUpper = (!checkUpper && u > upperThreshold + h) || (checkUpper && u >= upperThreshold - h);

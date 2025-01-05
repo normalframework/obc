@@ -10,8 +10,8 @@
  * @returns {boolean} output.y - Connector of Boolean output signal.
  */
 
- function multiOr({ nin }) {
-  return ({ u }) => {
+ function multiOr({ nin = 0 }) {
+  return ({ u = []}) => {
     let y = false;
 
     if (u.length > 1) {

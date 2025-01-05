@@ -10,8 +10,8 @@
  * @returns {number} output.y - Connector of Integer output signal.
  */
 
- function addParameter({ p }) {
-  return ({ u }) => {
+ function addParameter({ p = 0 }) {
+  return ({ u = 0 }) => {
     return { y: u + p };
   }
 }

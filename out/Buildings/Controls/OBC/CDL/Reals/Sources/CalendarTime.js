@@ -9,7 +9,7 @@
  * @returns {Function} - A function that computes the Unix time stamp and calendar time.
  */
 
-function calendarTime({ zerTim, yearRef = 2016, offset = 0 }) {
+function calendarTime({ zerTim = 0, yearRef = 2016, offset = 0 }) {
   const firstYear = 2010;
   const lastYear = firstYear + 21;
 
@@ -17,7 +17,7 @@ function calendarTime({ zerTim, yearRef = 2016, offset = 0 }) {
     throw new Error(`yearRef must be between ${firstYear} and ${lastYear}`);
   }
 
-  return ({ time }) => {
+  return ({ time = 0 }) => {
     const date = new Date((time + offset) * 1000);
 
     let year, month, day, hour, minute, weekDay;

@@ -8,7 +8,7 @@
  * @returns {boolean} output.y - Connector of Boolean output signal.
  */
 
- function constant({ k }) {
+function constant({ k = false }) {
   return () => {
     return { y: k };
   };

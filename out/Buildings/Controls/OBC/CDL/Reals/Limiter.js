@@ -8,12 +8,12 @@
  * @returns {Function} - A function that limits the input signal within the specified range.
  */
 
- function limiter({ uMax, uMin }) {
+ function limiter({ uMax = 0, uMin = 0 }) {
   if (uMin >= uMax) {
     throw new Error("uMin must be smaller than uMax. Check parameters.");
   }
 
-  return ({ u }) => {
+  return ({ u = 0 }) => {
     const y = Math.max(Math.min(u, uMax), uMin);
     return { y };
   };

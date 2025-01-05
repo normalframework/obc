@@ -10,10 +10,10 @@
  * @returns {boolean} output.y - Connector of Boolean output signal.
  */
 
- function change({ pre_u_start = false }) {
+function change({ pre_u_start = false }) {
   let previous_u = pre_u_start;
 
-  return ({ u }) => {
+  return ({ u = false }) => {
     const current_y = u !== previous_u
     previous_u = u; // Update previous_u for the next call
     return { y: current_y };

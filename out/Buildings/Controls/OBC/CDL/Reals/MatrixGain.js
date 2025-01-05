@@ -11,7 +11,7 @@
   const nin = K[0].length; // Number of inputs
   const nout = K.length;   // Number of outputs
 
-  return ({ u }) => {
+  return ({ u = [] }) => {
     if (u.length !== nin) {
       throw new Error(`Input vector length ${u.length} does not match the specified number of inputs ${nin}`);
     }

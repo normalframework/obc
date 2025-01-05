@@ -1,3 +1,4 @@
+// TODO: Fix this
 /**
  * Round block that rounds a real number to a given number of digits.
  * 
@@ -7,7 +8,7 @@
  * @returns {Function} - A function that rounds the input signal to the specified number of digits.
  */
 
- function round({ n }) {
+function round({ n = 1 }) {
   const fac = 10 ** n;
 
   return ({ u = 0 }) => {

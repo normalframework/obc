@@ -9,7 +9,7 @@
  * @returns {number} output.y - Connector of Real output signal.
  */
 
- function min({ u1, u2 }) {
+ function min({ u1 = 0, u2 = 0 }) {
   return () => {
     return { y: Math.min(u1, u2) };
   }

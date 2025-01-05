@@ -10,7 +10,7 @@
  * @returns {Function} - A function that limits the slew rate of the input signal.
  */
 
- function limitSlewRate({ raisingSlewRate, fallingSlewRate = -raisingSlewRate, Td, enable = true }) {
+ function limitSlewRate({ raisingSlewRate = 0, fallingSlewRate = -raisingSlewRate, Td = 0, enable = true }) {
   if (raisingSlewRate <= 0) {
     throw new Error("raisingSlewRate must be larger than zero.");
   }
@@ -20,7 +20,7 @@
 
   let y = 0;
 
-  return ({ u }) => {
+  return ({ u = 0 }) => {
     const thr = (u - y) / Td;
     if (enable) {
       if (thr < fallingSlewRate) {

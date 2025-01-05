@@ -13,36 +13,36 @@
  * @returns {boolean} output.passed - True if the elapsed time is greater than the threshold.
  */
 
- function timerAccumulating({ t = 0 }) {
-  let entryTime = 0;
-  let yAcc = 0;
-  let prev_u = false;
-  let prev_reset = false;
-  let passed = t <= 0;
+function timerAccumulating({ t = 0 }) {
+    let entryTime = 0;
+    let yAcc = 0;
+    let prev_u = false;
+    let prev_reset = false;
+    let passed = t <= 0;
 
-  return ({ u, reset }) => {
-      const currentTime = Date.now() / 1000;
+    return ({ u = false, reset = false }) => {
+        const currentTime = Date.now() / 1000;
 
-      if (reset && !prev_reset) {
-          entryTime = currentTime;
-          passed = t <= 0;
-          yAcc = 0;
-      } else if (u && !prev_u) {
-          entryTime = currentTime;
-          passed = t <= yAcc;
-      } else if (u && currentTime >= t + entryTime - yAcc) {
-          passed = true;
-      } else if (!u) {
-          passed = passed;
-      }
+        if (reset && !prev_reset) {
+            entryTime = currentTime;
+            passed = t <= 0;
+            yAcc = 0;
+        } else if (u && !prev_u) {
+            entryTime = currentTime;
+            passed = t <= yAcc;
+        } else if (u && currentTime >= t + entryTime - yAcc) {
+            passed = true;
+        } else if (!u) {
+            passed = passed;
+        }
 
-      const y = u ? yAcc + currentTime - entryTime : yAcc;
+        const y = u ? yAcc + currentTime - entryTime : yAcc;
 
-      prev_u = u;
-      prev_reset = reset;
+        prev_u = u;
+        prev_reset = reset;
 
-      return { y, passed };
-  };
+        return { y, passed };
+    };
 }
 
 module.exports = timerAccumulating;

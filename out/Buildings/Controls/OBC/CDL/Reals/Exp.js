@@ -9,8 +9,8 @@
  * @returns {number} output.y - Connector of Real output signal.
  */
 
- function exp() {
-  return ({ u }) => {
+function exp() {
+  return ({ u = 0 }) => {
     return { y: Math.exp(u) };
   }
 }

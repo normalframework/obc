@@ -8,7 +8,7 @@
  * @returns {number} output.y - Connector of Integer output signal.
  */
 
- function constant({ k }) {
+ function constant({ k = 0 }) {
   return () => {
     return { y: k };
   }

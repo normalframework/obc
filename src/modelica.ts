@@ -18,11 +18,14 @@ const WhiteSpace = createToken({
 // https://specification.modelica.org/master/lexical-structure.html
 const Algorithm = createToken({ name: "Algorithm", pattern: /algorithm\s/ });
 const And = createToken({ name: "And", pattern: /and\s/ });
-const Annotation = createToken({ name: "Annotation", pattern: /annotation\s/ });
+const Annotation = createToken({ name: "Annotation", pattern: /annotation/ });
 const Block = createToken({ name: "Block", pattern: /block\s/ });
 const Break = createToken({ name: "Break", pattern: /break\s/ });
 const Class = createToken({ name: "Class", pattern: /class\s/ });
-const Connect = createToken({ name: "Connect", pattern: /connect\s/ });
+const Connect = createToken({
+  name: "Connect",
+  pattern: /connect[^A-Za-z0-9]/,
+});
 const Connector = createToken({ name: "Connector", pattern: /connector\s/ });
 const Constant = createToken({ name: "Constant", pattern: /constant\s/ });
 const ConstrainedBy = createToken({
@@ -42,12 +45,12 @@ const Encapsulated = createToken({
 const End = createToken({ name: "End", pattern: /end\s/ });
 const Enumeration = createToken({
   name: "Enumeration",
-  pattern: /enumeration\s/,
+  pattern: /enumeration/,
 });
 const Equation = createToken({ name: "Equation", pattern: /equation\s/ });
 const Expandable = createToken({ name: "Expandable", pattern: /expandable\s/ });
 const Extends = createToken({ name: "Extends", pattern: /extends\s/ });
-const External = createToken({ name: "External", pattern: /external\s/ });
+const External = createToken({ name: "External", pattern: /external/ });
 const False = createToken({ name: "False", pattern: /false\s/ });
 const Final = createToken({ name: "Final", pattern: /final\s/ });
 const Flow = createToken({ name: "Flow", pattern: /flow\s/ });
@@ -78,7 +81,7 @@ const Redeclare = createToken({ name: "Redeclare", pattern: /redeclare/ });
 const RePlacable = createToken({ name: "RePlacable", pattern: /replaceable/ });
 const Return = createToken({ name: "Return", pattern: /return/ });
 const Stream = createToken({ name: "Stream", pattern: /stream/ });
-const Then = createToken({ name: "Then", pattern: /then\s/ });
+const Then = createToken({ name: "Then", pattern: /then/ });
 const True = createToken({ name: "True", pattern: /true\s/ });
 const Type = createToken({ name: "Type", pattern: /type\s/ });
 const When = createToken({ name: "When", pattern: /when\s/ });
@@ -108,43 +111,6 @@ const String = createToken({
   categories: [DataType],
 });
 
-// common functions
-const CommonFn = createToken({ name: "CommonFn", pattern: Lexer.NA });
-const Fill = createToken({
-  name: "Fill",
-  pattern: /fill\(/,
-  categories: [CommonFn],
-});
-const LoadResource = createToken({
-  name: "LoadResource",
-  pattern: /Modelica\.Utilities\.Files\.loadResource\(/,
-  categories: [CommonFn],
-});
-const Abs = createToken({
-  name: "Abs",
-  pattern: /abs\(/,
-  categories: [CommonFn],
-});
-const Max = createToken({
-  name: "Max",
-  pattern: /max\(/,
-  categories: [CommonFn],
-});
-const Assert = createToken({ name: "Assert", pattern: /assert\(/ });
-const Level = createToken({ name: "Level", pattern: /level\s/ }); // used for assertion level
-
-// Common block that we need to parse
-const CLDInput = createToken({
-  name: "CLDInput",
-  pattern:
-    /Buildings\.Controls\.OBC\.CDL\.Interfaces\.[A-Za-z_][A-Za-z0-9_]*Input/,
-});
-const CLDOutput = createToken({
-  name: "CLDOutput",
-  pattern:
-    /Buildings\.Controls\.OBC\.CDL\.Interfaces\.[A-Za-z_][A-Za-z0-9_]*Output/,
-});
-
 const Equals = createToken({ name: "Equals", pattern: /=/ });
 const Semicolon = createToken({ name: "Semicolon", pattern: /;/ });
 const Colon = createToken({ name: "Colon", pattern: /:/ });
@@ -157,6 +123,11 @@ const LFigure = createToken({ name: "LFigure", pattern: /\{/ });
 const RFigure = createToken({ name: "RFigure", pattern: /\}/ });
 const Power = createToken({ name: "Power", pattern: /\^/ });
 const Comment = createToken({ name: "Comment", pattern: /\/\/.*/ });
+const MultiLineComment = createToken({
+  name: "MultiLineComment",
+  pattern: /\/\*[^]*?\*\//,
+  group: Lexer.SKIPPED,
+});
 const Assignment = createToken({ name: "Assigment", pattern: /:=/ });
 
 const ArithmeticOperator = createToken({
@@ -213,11 +184,14 @@ const NotEqual = createToken({
   pattern: /<>/,
   categories: ArithmeticOperator,
 });
-const Url = createToken({ name: "Url", pattern: /https?:\/\/\S+/ });
+
+// variable/class names
 const Identifier = createToken({
   name: "Identifier",
   pattern: /[a-zA-Z_][\w\.]*/,
 });
+
+// literals
 const StringLiteral = createToken({
   name: "StringLiteral",
   pattern: /"(\\.|[^"\\])*"/,
@@ -228,9 +202,12 @@ const NumberLiteral = createToken({
 });
 
 const datatypes = [Integer, Real, Boolean];
-const functions = [Fill, LoadResource, Abs, Max, Assert];
 const keywords = [
+  Flow,
+  Import,
   Expandable,
+  Encapsulated,
+  Class,
   Connector,
   Within,
   Package,
@@ -246,8 +223,7 @@ const keywords = [
   Extends,
   Parameter,
   Final,
-  CLDInput,
-  CLDOutput,
+  Public,
   Protected,
   Connect,
   Equation,
@@ -266,9 +242,9 @@ const keywords = [
   When,
   Then,
   ElseIf,
+  ElseWhen,
   Else,
   Initial,
-  Level,
   Function,
   Impure,
   Pure,
@@ -280,9 +256,7 @@ const keywords = [
   Inner,
   Discrete,
   Record,
-
   ...datatypes,
-  ...functions,
 ];
 const symbols = [
   EqualsComp,
@@ -312,7 +286,7 @@ const symbols = [
 const allTokens = [
   WhiteSpace,
   Comment,
-  Url,
+  MultiLineComment,
   ...keywords,
   ...symbols,
   Identifier,
@@ -345,17 +319,119 @@ type PackageResult = CstElement & {
   };
 };
 
+type VariableType = CstElement & {
+  children: {
+    Real?: [IToken];
+    Integer?: [IToken];
+    Boolean?: [IToken];
+    Identifier?: [IToken];
+  };
+};
+
+export type Indexed = CstElement & {
+  children: {
+    Identifier: [IToken];
+    LSquare?: [IToken];
+    expression?: [ExpressionModel];
+    RSquare?: [IToken];
+  };
+};
+
+export type VariableRef = CstElement & {
+  children: {
+    indexed: Indexed[];
+  };
+};
+
+export type AtomicExpression = CstElement & {
+  children: {
+    NumberLiteral?: [IToken];
+    StringLiteral?: [IToken];
+    variableRef?: [VariableRef];
+    Function?: [IToken];
+    Each?: [IToken];
+    True?: [IToken];
+    False?: [IToken];
+    End?: [IToken];
+    Identifier?: [IToken] | [IToken, IToken];
+    LParen?: [IToken];
+    expression?: [ExpressionModel];
+    RParen?: [IToken];
+  };
+};
+
+export type UnaryExpression = CstElement & {
+  children: {
+    Plus?: [IToken];
+    Minus?: [IToken];
+    Not?: [IToken];
+    atomicExpression: [AtomicExpression];
+  };
+};
+
+export type TopLevelExpression = CstElement & {
+  children: {
+    unaryExpression: [UnaryExpression] | [UnaryExpression, UnaryExpression];
+    Multiply?: [IToken];
+    Divide?: [IToken];
+    Power?: [IToken];
+    Less?: [IToken];
+    LessEqual?: [IToken];
+    GreaterEqual?: [IToken];
+    Greater?: [IToken];
+    EqualsComp?: [IToken];
+    NotEqual?: [IToken];
+    Or?: [IToken];
+    And?: [IToken];
+    Colon?: [IToken];
+    Plus?: [IToken];
+    Minus?: [IToken];
+  };
+};
+
+export type AdditionExpression = CstElement & {
+  children: {
+    topLevelExpression:
+      | [TopLevelExpression]
+      | [TopLevelExpression, TopLevelExpression];
+    Plus?: [IToken];
+    Minus?: [IToken];
+    forLoop?: [IToken];
+  };
+};
+
+export type ExpressionModel = CstElement & {
+  children: {
+    additionExpression: [AdditionExpression];
+    forLoop?: any;
+  };
+};
+
+export type AssignmentModel = CstElement & {
+  children: {
+    Equals: [IToken];
+    expression: [ExpressionModel];
+  };
+};
+
+export type ParametrizedBlock = CstElement & {
+  children: {
+    variableType: [VariableType];
+    Identifier: [IToken];
+  };
+};
+
+export type ConstantDeclaration = CstElement & {
+  children: {
+    parametrizedBlock: ParametrizedBlock[];
+    assignment?: [AssignmentModel];
+  };
+};
+
 export type ConstantResult = CstElement & {
   children: {
     Constant: [IToken];
-    Integer?: [IToken];
-    Real?: [IToken];
-    Boolean?: [IToken];
-    Identifier: [IToken];
-    Equals: [IToken];
-    NumberLiteral?: [IToken];
-    StringLiteral?: [IToken];
-    Semicolon: [IToken];
+    constantDeclaration: ConstantDeclaration[];
   };
 };
 
@@ -375,8 +451,8 @@ export type EnumerationResult = CstElement & {
 export type ParserResult = CstNode & {
   children: {
     namespace?: [NamespaceResult];
-    package?: [PackageResult];
-    model?: [ModelResult];
+    package?: [any];
+    model?: [any];
     constant?: ConstantResult[];
     enumeration?: EnumerationResult[];
     end: any[];
@@ -386,7 +462,7 @@ export type ParserResult = CstNode & {
 // Parser
 class ModelicaParser extends CstParser {
   constructor() {
-    super(allTokens);
+    super(allTokens, { maxLookahead: 5 });
 
     this.performSelfAnalysis();
   }
@@ -397,92 +473,190 @@ class ModelicaParser extends CstParser {
         { ALT: () => this.SUBRULE(this.namespace) },
         { ALT: () => this.SUBRULE(this.package) },
         { ALT: () => this.SUBRULE(this.model) },
-        { ALT: () => this.SUBRULE(this.rePlacablePackage) },
-        { ALT: () => this.SUBRULE(this.rePlacableModel) },
+        { ALT: () => this.SUBRULE(this.class) },
         { ALT: () => this.SUBRULE(this.block) },
-        { ALT: () => this.SUBRULE(this.extends) },
+        { ALT: () => this.SUBRULE(this.flow) },
+        { ALT: () => this.SUBRULE(this.connector) },
         { ALT: () => this.SUBRULE(this.protected) },
+        { ALT: () => this.SUBRULE(this.public) },
         { ALT: () => this.SUBRULE(this.equation) },
         { ALT: () => this.SUBRULE(this.connect) },
-        { ALT: () => this.SUBRULE(this.cdlInput) },
         { ALT: () => this.SUBRULE(this.blockInput) },
         { ALT: () => this.SUBRULE(this.blockOutput) },
-        { ALT: () => this.SUBRULE(this.cldOutput) },
         { ALT: () => this.SUBRULE(this.declaration) },
         { ALT: () => this.SUBRULE(this.parameter) },
         { ALT: () => this.SUBRULE(this.constant) },
         { ALT: () => this.SUBRULE(this.enumeration) },
+        { ALT: () => this.SUBRULE(this.typeDef) },
         { ALT: () => this.SUBRULE(this.annotation) },
         { ALT: () => this.SUBRULE(this.end) },
         { ALT: () => this.SUBRULE(this.comment) },
         { ALT: () => this.SUBRULE(this.loop) },
-        { ALT: () => this.SUBRULE(this.property) },
-        { ALT: () => this.SUBRULE(this.assertBlock) },
+        { ALT: () => this.SUBRULE(this.endLoop) },
         { ALT: () => this.SUBRULE(this.ifStatement) },
         { ALT: () => this.SUBRULE(this.elseStatement) },
         { ALT: () => this.SUBRULE(this.endIf) },
-        { ALT: () => this.SUBRULE(this.endWhile) },
         { ALT: () => this.SUBRULE(this.elseIF) },
         { ALT: () => this.SUBRULE(this.func) },
         { ALT: () => this.SUBRULE(this.algorithm) },
-        { ALT: () => this.SUBRULE(this.recordAssignment) },
         { ALT: () => this.SUBRULE(this.record) },
         { ALT: () => this.SUBRULE(this.external) },
-        { ALT: () => this.SUBRULE(this.connector) },
+        { ALT: () => this.SUBRULE(this.extends) },
+        { ALT: () => this.SUBRULE(this.importBlock) },
       ]);
     });
   });
 
-  inputConnector = this.RULE("inputConnector", () => {
-    this.CONSUME(Equals);
-    this.CONSUME(Input);
-    this.CONSUME(Identifier);
+  namespace = this.RULE("namespace", () => {
+    this.CONSUME(Within);
+    this.OPTION(() => this.CONSUME(Identifier)); // somehow this is optional
+    this.CONSUME(Semicolon);
   });
 
-  outputConnector = this.RULE("outputConnector", () => {
-    this.CONSUME(Equals);
-    this.CONSUME(Output);
-    this.CONSUME(Identifier);
-  });
-
-  connector = this.RULE("connector", () => {
-    this.OPTION(() => {
-      this.CONSUME(Expandable);
-    });
-
-    this.CONSUME(Connector);
-    this.CONSUME(Identifier);
-    this.OPTION1(() => {
-      this.OR([
-        { ALT: () => this.SUBRULE(this.outputConnector) },
-        { ALT: () => this.SUBRULE(this.inputConnector) },
-      ]);
-    });
-    this.OPTION2(() => {
-      this.CONSUME(StringLiteral);
-    });
-  });
-
-  recordAssignment = this.RULE("recordAssignment", () => {
-    this.CONSUME(Record);
+  rePlacablePackage = this.RULE("rePlacablePackage", () => {
+    this.CONSUME(RePlacable);
+    this.CONSUME(Package);
     this.CONSUME(Identifier);
     this.CONSUME(Equals);
     this.CONSUME1(Identifier);
     this.OPTION(() => {
-      this.SUBRULE(this.defaultAssignments);
+      this.blockModifiers();
+    });
+    this.OPTION2(() => {
+      this.SUBRULE(this.constrainedBy);
+    });
+
+    this.SUBRULE(this.elementDescription);
+    this.CONSUME(Semicolon);
+  });
+
+  package = this.RULE("package", () => {
+    this.OPTION(() => this.CONSUME(Final));
+    this.OPTION1(() => this.CONSUME(RePlacable));
+    this.CONSUME(Package);
+    this.SUBRULE(this.parametrizedBlock);
+    this.OPTION2(() => this.SUBRULE(this.assignment));
+    this.OPTION3(() => this.SUBRULE(this.elementDescription));
+    this.OPTION4(() => this.SUBRULE(this.extends));
+    this.OPTION5(() => this.SUBRULE(this.constrainedBy));
+    this.OPTION6(() => {
+      this.CONSUME(StringLiteral); // Capture optional description string
+    });
+    this.OPTION7(() => this.CONSUME(Semicolon));
+  });
+
+  model = this.RULE("model", () => {
+    this.OPTION(() => this.CONSUME(Partial));
+    this.OPTION1(() => this.CONSUME(Redeclare));
+    this.OPTION2(() => this.CONSUME(RePlacable));
+
+    this.CONSUME(Model);
+    this.OPTION3(() => this.CONSUME(Extends));
+    this.SUBRULE(this.parametrizedBlock);
+    this.OPTION4(() => this.SUBRULE(this.assignment));
+    this.SUBRULE2(this.elementDescription);
+
+    this.MANY(() => {
+      this.SUBRULE(this.extendsBody);
+      this.OPTION5(() => this.CONSUME2(Semicolon));
+    });
+    this.OPTION6(() => this.SUBRULE(this.constrainedBy));
+    this.SUBRULE(this.elementDescription);
+    this.OPTION7(() => this.CONSUME(Semicolon));
+  });
+
+  class = this.RULE("class", () => {
+    this.OPTION(() => this.CONSUME(Partial));
+    this.CONSUME(Class);
+    this.CONSUME(Identifier);
+    this.SUBRULE(this.elementDescription);
+    this.OPTION2(() => {
+      this.SUBRULE(this.extends);
     });
     this.OPTION1(() => {
-      this.CONSUME(StringLiteral);
+      this.CONSUME(Semicolon);
     });
+  });
+
+  block = this.RULE("block", () => {
+    this.OPTION1(() => this.CONSUME(Partial));
+    this.CONSUME(Block);
+    this.CONSUME(Identifier);
+    this.SUBRULE(this.elementDescription);
+    this.MANY(() => {
+      this.SUBRULE(this.extends);
+    });
+    this.OPTION2(() => {
+      this.CONSUME(Semicolon);
+    });
+  });
+
+  flow = this.RULE("flow", () => {
+    this.CONSUME(Flow);
+    this.SUBRULE(this.variableType);
+    this.SUBRULE(this.parametrizedBlock);
+    this.SUBRULE(this.elementDescription);
+    this.CONSUME(Semicolon);
+  });
+
+  connector = this.RULE("connector", () => {
+    this.OPTION(() => this.CONSUME(Expandable));
+
+    this.CONSUME(Connector);
+    this.CONSUME(Identifier);
+    this.OPTION1(() => {
+      this.CONSUME(Equals);
+      this.OPTION2(() => {
+        this.OR([
+          { ALT: () => this.CONSUME(Output) },
+          { ALT: () => this.CONSUME(Input) },
+        ]);
+      });
+      this.SUBRULE(this.parametrizedBlock);
+    });
+
+    this.SUBRULE(this.elementDescription);
+    this.OPTION4(() => this.SUBRULE(this.extends));
+    this.OPTION5(() => this.CONSUME(Semicolon));
+  });
+
+  importBlock = this.RULE("importBlock", () => {
+    this.CONSUME(Import);
+    this.CONSUME(Identifier);
+    this.OPTION(() => {
+      this.CONSUME(Equals);
+      this.CONSUME1(Identifier);
+    });
+    this.SUBRULE(this.elementDescription);
+    this.CONSUME(Semicolon);
+  });
+
+  extendsBody = this.RULE("extendsBody", () => {
+    this.CONSUME(Extends);
+    this.SUBRULE(this.parametrizedBlock);
+    this.SUBRULE(this.elementDescription);
+  });
+
+  extends = this.RULE("extends", () => {
+    this.SUBRULE(this.extendsBody);
     this.CONSUME(Semicolon);
   });
 
   record = this.RULE("record", () => {
+    this.OPTION(() => this.CONSUME(Redeclare));
+    this.OPTION1(() => this.CONSUME(Partial));
+
     this.CONSUME(Record);
-    this.CONSUME(Identifier);
-    this.OPTION1(() => {
-      this.CONSUME(StringLiteral);
+    this.OPTION2(() => this.CONSUME(Extends));
+    this.SUBRULE(this.parametrizedBlock);
+    this.OPTION8(() => this.SUBRULE(this.assignment));
+    this.OPTION3(() => this.CONSUME(StringLiteral));
+    this.OPTION4(() => this.SUBRULE(this.extends));
+    this.OPTION5(() => {
+      this.CONSUME(End);
+      this.CONSUME1(Identifier);
     });
+    this.OPTION6(() => this.CONSUME(Semicolon));
   });
 
   dataType = this.RULE("dataType", () => {
@@ -500,72 +674,46 @@ class ModelicaParser extends CstParser {
       { ALT: () => this.CONSUME(Boolean) },
       { ALT: () => this.CONSUME(Identifier) },
     ]);
-    this.OPTION(() => {
-      this.SUBRULE(this.index);
-    });
+    this.OPTION(() => this.SUBRULE(this.index));
   });
 
-  property = this.RULE("property", () => {
-    this.SUBRULE(this.dataType);
-    this.SUBRULE(this.indexed);
-    this.OPTION(() => {
-      this.SUBRULE(this.defaultAssignments);
-    });
-    this.OPTION1(() => {
-      this.SUBRULE(this.assignment);
-    });
-    this.OPTION2(() => {
-      this.CONSUME(StringLiteral); // Capture optional description string
-    });
-    this.OPTION3(() => {
-      this.SUBRULE(this.itemAnnotation); // Capture optional description string
-    });
-    this.CONSUME(Semicolon);
+  parametrizedBlock = this.RULE("parametrizedBlock", () => {
+    this.SUBRULE(this.variableType);
+    this.OPTION(() => this.SUBRULE(this.blockModifiers));
   });
 
   functionInput = this.RULE("functionInput", () => {
     this.CONSUME(Input);
     this.SUBRULE(this.variableType);
-    this.SUBRULE(this.indexed);
-    this.OPTION(() => {
-      this.SUBRULE(this.defaultAssignments);
-    });
-    this.OPTION2(() => {
-      this.CONSUME(StringLiteral); // Capture optional description string
-    });
-
+    this.SUBRULE(this.parametrizedBlock);
+    this.OPTION3(() => this.SUBRULE(this.assignment));
+    this.SUBRULE(this.elementDescription);
     this.CONSUME(Semicolon);
   });
 
   functionOutput = this.RULE("functionOutput", () => {
     this.CONSUME(Output);
     this.SUBRULE(this.variableType);
-    this.SUBRULE(this.indexed);
-    this.OPTION(() => {
-      this.SUBRULE(this.defaultAssignments);
-    });
-    this.OPTION2(() => {
-      this.CONSUME(StringLiteral); // Capture optional description string
-    });
-
+    this.SUBRULE(this.parametrizedBlock);
+    this.OPTION2(() => this.CONSUME(StringLiteral));
     this.CONSUME(Semicolon);
   });
 
   func = this.RULE("func", () => {
-    this.OPTION(() => {
-      this.CONSUME(Redeclare);
-    });
-    this.OPTION4(() => {
+    this.OPTION(() => this.CONSUME(Redeclare));
+    this.OPTION1(() => {
       this.OR([
         { ALT: () => this.CONSUME(Impure) },
         { ALT: () => this.CONSUME(Pure) },
+        { ALT: () => this.CONSUME(RePlacable) },
+        { ALT: () => this.CONSUME(Encapsulated) },
       ]);
     });
+    this.OPTION2(() => this.CONSUME(Partial));
     this.CONSUME(Function);
+    this.OPTION3(() => this.CONSUME1(Extends));
     this.CONSUME(Identifier);
-    this.OPTION1(() => {
-      this.CONSUME(StringLiteral);
-    });
+    this.OPTION4(() => this.CONSUME(StringLiteral));
     this.MANY(() => {
       this.SUBRULE(this.functionInput);
     });
@@ -574,148 +722,54 @@ class ModelicaParser extends CstParser {
       this.SUBRULE(this.functionOutput);
     });
 
-    this.OPTION2(() => {
+    this.OPTION5(() => this.SUBRULE(this.assignment));
+
+    this.OPTION6(() => {
       this.CONSUME(Extends);
-      this.CONSUME1(Identifier);
+      this.CONSUME2(Identifier);
     });
-    this.OPTION3(() => {
-      this.CONSUME(Semicolon);
-    });
+    this.OPTION7(() => this.SUBRULE(this.constrainedBy));
+    this.SUBRULE(this.elementDescription);
+    this.OPTION8(() => this.CONSUME(Semicolon));
   });
 
   algorithm = this.RULE("algorithm", () => {
-    this.OPTION(() => {
-      this.CONSUME(Initial);
-    });
+    this.OPTION(() => this.CONSUME(Initial));
     this.CONSUME(Algorithm);
   });
 
   comment = this.RULE("comment", () => {
-    this.CONSUME(Comment);
-  });
-
-  namespace = this.RULE("namespace", () => {
-    this.CONSUME(Within);
-    this.OPTION(() => {
-      this.CONSUME(Identifier);
-    });
-
-    this.CONSUME(Semicolon);
-  });
-
-  block = this.RULE("block", () => {
-    this.OPTION1(() => {
-      this.CONSUME(Partial);
-    });
-    this.CONSUME(Block);
-    this.CONSUME(Identifier);
-    this.OPTION(() => {
-      this.CONSUME(StringLiteral);
-    });
+    this.OR([
+      { ALT: () => this.CONSUME(Comment) },
+      { ALT: () => this.CONSUME(MultiLineComment) },
+    ]);
   });
 
   constrainedBy = this.RULE("constrainedBy", () => {
     this.CONSUME(ConstrainedBy);
-    this.CONSUME(Identifier);
-    this.OPTION(() => {
-      this.SUBRULE(this.defaultAssignments);
-    });
-  });
-
-  rePlacableModel = this.RULE("rePlacableModel", () => {
-    this.CONSUME(RePlacable);
-    this.CONSUME(Model);
-    this.CONSUME(Identifier);
-    this.CONSUME(Equals);
-    this.CONSUME1(Identifier);
-
-    this.OPTION2(() => {
-      this.SUBRULE(this.constrainedBy);
-    });
-
-    this.OPTION(() => {
-      this.CONSUME(StringLiteral); // Capture optional description string
-    });
-    this.OPTION1(() => {
-      this.SUBRULE(this.itemAnnotation); // Capture optional description string
-    });
-    this.CONSUME(Semicolon);
-  });
-
-  rePlacablePackage = this.RULE("rePlacablePackage", () => {
-    this.CONSUME(RePlacable);
-    this.CONSUME(Package);
-    this.CONSUME(Identifier);
-    this.CONSUME(Equals);
-    this.CONSUME1(Identifier);
-
-    this.OPTION1(() => {
-      this.CONSUME(StringLiteral); // Capture optional description string
-    });
-    this.OPTION2(() => {
-      this.SUBRULE(this.itemAnnotation); // Capture optional description string
-    });
-    this.CONSUME(Semicolon);
-  });
-
-  packageImport = this.RULE("packageImport", () => {
-    this.CONSUME(Equals);
-    this.CONSUME(Identifier);
-    this.OPTION(() => {
-      this.SUBRULE(this.defaultAssignments);
-    });
+    this.SUBRULE(this.parametrizedBlock);
   });
 
   external = this.RULE("external", () => {
     this.CONSUME(External);
     this.CONSUME(StringLiteral);
     this.SUBRULE(this.expression);
-  });
-
-  package = this.RULE("package", () => {
-    this.CONSUME(Package);
-    this.CONSUME(Identifier);
-    this.OPTION1(() => {
-      this.SUBRULE(this.packageImport);
-    });
-
-    this.OPTION3(() => {
-      this.CONSUME(StringLiteral); // Capture optional description string
-    });
-    this.OPTION4(() => {
-      this.CONSUME(Semicolon);
-    });
+    this.OPTION(() => this.SUBRULE1(this.assignment));
+    this.SUBRULE(this.elementDescription);
+    this.OPTION1(() => this.CONSUME(Semicolon));
   });
 
   protected = this.RULE("protected", () => {
     this.CONSUME(Protected);
   });
 
+  public = this.RULE("public", () => {
+    this.CONSUME(Public);
+  });
+
   equation = this.RULE("equation", () => {
-    this.OPTION(() => {
-      this.CONSUME(Initial);
-    });
+    this.OPTION(() => this.CONSUME(Initial));
     this.CONSUME(Equation);
-  });
-
-  model = this.RULE("model", () => {
-    this.OPTION1(() => {
-      this.CONSUME(Partial);
-    });
-    this.CONSUME(Model);
-    this.CONSUME(Identifier);
-    this.OPTION(() => {
-      this.CONSUME(StringLiteral); // Capture optional description string
-    });
-  });
-
-  extends = this.RULE("extends", () => {
-    this.CONSUME(Extends);
-    this.CONSUME(Identifier);
-    this.OPTION(() => {
-      this.SUBRULE(this.defaultAssignments);
-    });
-    this.CONSUME(Semicolon);
   });
 
   assignment = this.RULE("assignment", () => {
@@ -726,8 +780,7 @@ class ModelicaParser extends CstParser {
     this.SUBRULE1(this.expression);
   });
 
-  defaultAssignments = this.RULE("defaultAssignments", () => {
-    this.CONSUME(LParen);
+  modifiersBody = this.RULE("modifiersBody", () => {
     this.MANY({
       DEF: () => {
         this.MANY1(() => {
@@ -737,29 +790,33 @@ class ModelicaParser extends CstParser {
             { ALT: () => this.CONSUME(Redeclare) },
             { ALT: () => this.CONSUME(RePlacable) },
             { ALT: () => this.CONSUME(Package) },
+            { ALT: () => this.CONSUME(Model) },
+            { ALT: () => this.CONSUME(Parameter) },
           ]);
         });
 
-        this.SUBRULE(this.indexed);
-        this.MANY2(() => {
-          this.OR([
-            { ALT: () => this.SUBRULE(this.assignment) },
-            { ALT: () => this.SUBRULE(this.defaultAssignments) },
-          ]);
-        });
+        this.OR2([
+          { ALT: () => this.SUBRULE(this.parametrizedBlock) },
+          { ALT: () => this.CONSUME(StringLiteral) },
+          { ALT: () => this.CONSUME(NumberLiteral) },
+        ]);
 
-        this.OPTION(() => {
-          this.CONSUME(Comma);
-        });
+        this.OPTION(() => this.SUBRULE(this.assignment));
+        this.OPTION1(() => this.SUBRULE(this.constrainedBy));
+        this.OPTION2(() => this.CONSUME(Comma));
       },
     });
+  });
+
+  blockModifiers = this.RULE("blockModifiers", () => {
+    this.CONSUME(LParen);
+    this.SUBRULE(this.modifiersBody);
     this.CONSUME(RParen);
   });
 
   parameterModifier = this.RULE("parameterModifier", () => {
-    this.OPTION(() => {
-      this.CONSUME(RePlacable);
-    });
+    this.OPTION(() => this.CONSUME(RePlacable));
+    this.OPTION1(() => this.CONSUME(Inner));
     this.MANY(() => {
       this.OR([
         { ALT: () => this.CONSUME(Each) },
@@ -775,103 +832,41 @@ class ModelicaParser extends CstParser {
 
     this.CONSUME(Parameter);
     this.SUBRULE(this.variableType);
-    this.SUBRULE(this.indexed);
-
-    this.OPTION(() => {
-      this.SUBRULE(this.defaultAssignments);
-    });
-    this.OPTION1(() => {
-      this.SUBRULE(this.assignment);
-    });
-
-    this.OPTION4(() => {
-      this.SUBRULE(this.constrained);
-    });
-
-    this.OPTION2(() => {
-      this.CONSUME(StringLiteral); // Capture optional description string
-    });
-    this.OPTION3(() => {
-      this.SUBRULE1(this.itemAnnotation); // Capture optional description string
-    });
+    this.SUBRULE(this.parametrizedBlock);
+    this.OPTION1(() => this.SUBRULE(this.assignment));
+    this.OPTION4(() => this.SUBRULE(this.constrained));
+    this.SUBRULE(this.elementDescription);
     this.CONSUME(Semicolon);
+    this.OPTION5(() => this.SUBRULE(this.extends));
   });
 
   blockInput = this.RULE("blockInput", () => {
+    this.OPTION(() => this.CONSUME(Discrete));
     this.CONSUME(Input);
     this.SUBRULE(this.variableType);
     this.SUBRULE(this.variableRef);
-    this.OPTION(() => {
-      this.SUBRULE(this.defaultAssignments);
-    });
-    this.OPTION3(() => {
-      this.SUBRULE(this.assignment);
-    });
-    this.OPTION1(() => {
-      this.CONSUME(StringLiteral); // Capture optional description string
-    });
-    this.OPTION2(() => {
-      this.SUBRULE(this.itemAnnotation); // Capture optional description string
-    });
+    this.OPTION1(() => this.SUBRULE(this.blockModifiers));
+    this.OPTION2(() => this.SUBRULE(this.assignment));
+    this.OPTION3(() => this.SUBRULE(this.ioCondition));
+    this.SUBRULE(this.elementDescription);
     this.CONSUME(Semicolon);
   });
 
   blockOutput = this.RULE("blockOutput", () => {
+    this.OPTION(() => this.CONSUME(Discrete));
     this.CONSUME(Output);
     this.SUBRULE(this.variableType);
-    this.CONSUME(Identifier);
-    this.OPTION3(() => {
-      this.SUBRULE(this.assignment);
-    });
-    this.OPTION1(() => {
-      this.CONSUME(StringLiteral); // Capture optional description string
-    });
-    this.OPTION2(() => {
-      this.SUBRULE(this.itemAnnotation); // Capture optional description string
-    });
-
+    this.SUBRULE(this.variableRef);
+    this.OPTION1(() => this.SUBRULE(this.blockModifiers));
+    this.OPTION2(() => this.SUBRULE(this.assignment));
+    this.OPTION3(() => this.SUBRULE(this.ioCondition));
+    this.SUBRULE(this.elementDescription);
     this.CONSUME(Semicolon);
   });
 
   ioCondition = this.RULE("ioCondition", () => {
     this.CONSUME(If);
     this.SUBRULE(this.expression);
-  });
-
-  cdlInput = this.RULE("cdlInput", () => {
-    this.CONSUME(CLDInput);
-    this.SUBRULE(this.indexed);
-    this.OPTION(() => {
-      this.SUBRULE(this.defaultAssignments);
-    });
-    this.OPTION4(() => {
-      this.SUBRULE(this.ioCondition);
-    });
-    this.OPTION2(() => {
-      this.CONSUME(StringLiteral); // Capture optional description string
-    });
-    this.OPTION3(() => {
-      this.SUBRULE1(this.itemAnnotation); // Capture optional description string
-    });
-    this.CONSUME(Semicolon);
-  });
-
-  cldOutput = this.RULE("cldOutput", () => {
-    this.CONSUME(CLDOutput);
-    this.SUBRULE(this.indexed);
-    this.OPTION(() => {
-      this.SUBRULE(this.defaultAssignments);
-    });
-    this.OPTION4(() => {
-      this.SUBRULE(this.ioCondition);
-    });
-    this.OPTION2(() => {
-      this.CONSUME(StringLiteral); // Capture optional description string
-    });
-    this.OPTION3(() => {
-      this.SUBRULE1(this.itemAnnotation); // Capture optional description string
-    });
-    this.CONSUME(Semicolon);
   });
 
   ifDeclaration = this.RULE("ifDeclaration", () => {
@@ -881,13 +876,11 @@ class ModelicaParser extends CstParser {
 
   constrained = this.RULE("constrained", () => {
     this.CONSUME(ConstrainedBy);
-    this.CONSUME(Identifier);
-    this.OPTION(() => {
-      this.SUBRULE(this.defaultAssignments);
-    });
+    this.SUBRULE(this.parametrizedBlock);
   });
 
   declarationModifier = this.RULE("declarationModifier", () => {
+    this.OPTION(() => this.CONSUME(Final));
     this.MANY(() => {
       this.OR([
         { ALT: () => this.CONSUME(Inner) },
@@ -899,74 +892,70 @@ class ModelicaParser extends CstParser {
 
   unpack = this.RULE("unpack", () => {
     this.CONSUME(LParen);
-    this.AT_LEAST_ONE_SEP({
-      SEP: Comma,
+    this.AT_LEAST_ONE({
       DEF: () => {
-        this.SUBRULE(this.indexed);
+        this.OR([
+          { ALT: () => this.SUBRULE(this.expression) },
+          { ALT: () => this.CONSUME(Comma) },
+        ]);
       },
     });
     this.CONSUME(RParen);
   });
 
-  declaration = this.RULE("declaration", () => {
-    this.OPTION8(() => {
-      this.SUBRULE(this.declarationModifier);
+  declarationBody = this.RULE("declarationBody", () => {
+    this.OPTION6(() => {
+      this.OR2([
+        { ALT: () => this.CONSUME(Plus) },
+        { ALT: () => this.CONSUME(Minus) },
+      ]);
     });
-    this.OR2([
-      { ALT: () => this.SUBRULE2(this.indexed) },
-      { ALT: () => this.SUBRULE2(this.unpack) },
+    this.OR([
+      { ALT: () => this.SUBRULE(this.variableType) },
+      { ALT: () => this.CONSUME(NumberLiteral) },
+      { ALT: () => this.SUBRULE(this.unpack) },
     ]);
 
-    // Unary operators
-    this.OPTION6(() => {
+    this.OPTION(() => this.SUBRULE(this.functionCall));
+
+    this.AT_LEAST_ONE_SEP({
+      SEP: Comma,
+      DEF: () => {
+        this.OPTION1(() => this.SUBRULE(this.parametrizedBlock));
+        this.OPTION3(() => {
+          this.SUBRULE(this.assignment);
+        });
+      },
+    });
+
+    this.OPTION4(() => this.SUBRULE(this.ifDeclaration));
+    this.OPTION5(() => this.SUBRULE(this.constrained));
+  });
+
+  declaration = this.RULE("declaration", () => {
+    this.OPTION(() => this.SUBRULE(this.declarationModifier));
+    this.SUBRULE(this.declarationBody);
+
+    this.MANY(() => {
       this.OR([
         { ALT: () => this.CONSUME(Minus) },
         { ALT: () => this.CONSUME(Plus) },
         { ALT: () => this.CONSUME(Divide) },
         { ALT: () => this.CONSUME(Multiply) },
       ]);
-      this.SUBRULE3(this.expression);
+      this.SUBRULE2(this.declarationBody);
     });
-
-    // Function call
-    this.OPTION5(() => {
-      this.CONSUME(LParen);
-      this.SUBRULE(this.expression);
-      this.CONSUME(RParen);
-    });
-    this.OPTION4(() => {
-      this.SUBRULE1(this.indexed);
-    });
-    this.OPTION(() => {
-      this.SUBRULE(this.defaultAssignments);
-    });
-    this.OPTION3(() => {
-      this.SUBRULE(this.assignment);
-    });
-    this.OPTION7(() => {
-      this.SUBRULE(this.ifDeclaration);
-    });
-    this.OPTION9(() => {
-      this.SUBRULE(this.constrained);
-    });
-    this.OPTION1(() => {
-      this.CONSUME(StringLiteral); // Capture optional description string
-    });
-    this.OPTION2(() => {
-      this.SUBRULE(this.itemAnnotation); // Capture optional description string
-    });
+    this.SUBRULE(this.elementDescription);
     this.CONSUME(Semicolon);
   });
 
   variableRef = this.RULE("variableRef", () => {
-    this.AT_LEAST_ONE(() => {
-      this.SUBRULE1(this.indexed);
-    });
+    this.AT_LEAST_ONE(() => this.SUBRULE1(this.indexed));
   });
 
   connect = this.RULE("connect", () => {
     this.CONSUME(Connect);
-    this.CONSUME(LParen);
+    this.OPTION(() => this.CONSUME(LParen));
     this.MANY_SEP({
       SEP: Comma,
       DEF: () => {
@@ -974,35 +963,43 @@ class ModelicaParser extends CstParser {
       },
     });
     this.CONSUME(RParen);
-    this.OPTION(() => {
-      this.SUBRULE(this.itemAnnotation); // Capture optional description string
-    });
+    this.SUBRULE(this.elementDescription);
     this.CONSUME(Semicolon);
   });
 
+  elementDescription = this.RULE("elementDescription", () => {
+    this.OPTION(() => this.CONSUME(StringLiteral));
+    this.OPTION2(() => {
+      this.CONSUME(Annotation);
+      this.MANY(() => {
+        this.SUBRULE1(this.annotationBody);
+      });
+    });
+  });
+
+  constantDeclaration = this.RULE("constantDeclaration", () => {
+    this.SUBRULE(this.parametrizedBlock);
+    this.OPTION(() => this.SUBRULE(this.assignment));
+  });
+
   constant = this.RULE("constant", () => {
+    this.OPTION(() => this.CONSUME(Final));
     this.CONSUME(Constant);
     this.SUBRULE(this.variableType);
-    this.CONSUME1(Identifier);
-    this.OPTION1(() => {
-      this.SUBRULE(this.defaultAssignments);
+    this.AT_LEAST_ONE_SEP({
+      SEP: Comma,
+      DEF: () => {
+        this.SUBRULE(this.constantDeclaration);
+      },
     });
-    this.CONSUME(Equals);
-    this.SUBRULE(this.expression);
-    this.OPTION(() => {
-      this.CONSUME(StringLiteral); // Capture optional description string
-    });
-    this.OPTION2(() => {
-      this.SUBRULE(this.itemAnnotation); // Capture optional description string
-    });
+
+    this.SUBRULE(this.elementDescription);
     this.CONSUME(Semicolon);
   });
 
   expression = this.RULE("expression", () => {
     this.SUBRULE(this.additionExpression);
-    this.OPTION(() => {
-      this.SUBRULE(this.forLoop);
-    });
+    this.OPTION(() => this.SUBRULE(this.forLoop));
   });
 
   additionExpression = this.RULE("additionExpression", () => {
@@ -1076,14 +1073,11 @@ class ModelicaParser extends CstParser {
     this.CONSUME(Semicolon);
   });
 
-  endWhile = this.RULE("endWhile", () => {
-    this.CONSUME(End);
-    this.CONSUME(While);
-    this.CONSUME(Semicolon);
-  });
-
   elseIF = this.RULE("elseIF", () => {
-    this.CONSUME(ElseIf);
+    this.OR([
+      { ALT: () => this.CONSUME(ElseIf) },
+      { ALT: () => this.CONSUME(ElseWhen) },
+    ]);
     this.SUBRULE(this.expression);
     this.CONSUME(Then);
   });
@@ -1112,9 +1106,7 @@ class ModelicaParser extends CstParser {
         this.SUBRULE(this.expression);
       },
     });
-    this.OPTION(() => {
-      this.SUBRULE(this.forLoop);
-    });
+    this.OPTION(() => this.SUBRULE(this.forLoop));
     this.CONSUME(RFigure);
   });
 
@@ -1129,27 +1121,24 @@ class ModelicaParser extends CstParser {
       },
       {
         ALT: () => {
+          this.OPTION3(() => this.CONSUME(Function));
           this.CONSUME1(Identifier);
+          this.OPTION2(() => this.CONSUME(Identifier)); // optional type identifier
           this.SUBRULE1(this.functionCall);
         },
       },
       {
         ALT: () => {
-          this.OPTION1(() => {
-            this.CONSUME(Each);
-          });
+          this.OPTION1(() => this.CONSUME(Each));
           this.SUBRULE(this.variableRef);
         },
       },
       { ALT: () => this.CONSUME(StringLiteral) },
       { ALT: () => this.CONSUME(False) },
       { ALT: () => this.CONSUME(True) },
+      { ALT: () => this.CONSUME(End) },
       { ALT: () => this.SUBRULE(this.table) },
       { ALT: () => this.SUBRULE(this.set) },
-      { ALT: () => this.SUBRULE(this.fillFn) },
-      { ALT: () => this.SUBRULE(this.asbFn) },
-      { ALT: () => this.SUBRULE(this.maxFn) },
-      { ALT: () => this.SUBRULE(this.loadFn) },
       { ALT: () => this.SUBRULE(this.ifExpression) },
       {
         ALT: () => {
@@ -1164,8 +1153,14 @@ class ModelicaParser extends CstParser {
   ifExpression = this.RULE("ifExpression", () => {
     this.SUBRULE(this.ifStatement);
     this.SUBRULE1(this.expression);
-    this.CONSUME(Else);
-    this.SUBRULE2(this.expression);
+    this.MANY(() => {
+      this.SUBRULE(this.elseIF);
+      this.SUBRULE2(this.expression);
+    });
+    this.OPTION(() => {
+      this.CONSUME(Else);
+      this.SUBRULE3(this.expression);
+    });
   });
 
   forQualifier = this.RULE("forQualifier", () => {
@@ -1183,9 +1178,7 @@ class ModelicaParser extends CstParser {
     this.CONSUME(Identifier);
     this.CONSUME(In);
     this.SUBRULE(this.expression);
-    this.OPTION(() => {
-      this.SUBRULE(this.forQualifier);
-    });
+    this.OPTION(() => this.SUBRULE(this.forQualifier));
   });
 
   loop = this.RULE("loop", () => {
@@ -1196,11 +1189,29 @@ class ModelicaParser extends CstParser {
     this.CONSUME(Loop);
   });
 
+  endLoop = this.RULE("endLoop", () => {
+    this.CONSUME(End);
+    this.OR([
+      { ALT: () => this.CONSUME(While) },
+      { ALT: () => this.CONSUME(For) },
+    ]);
+    this.OPTION(() => this.CONSUME(Semicolon));
+  });
+
   functionCall = this.RULE("functionCall", () => {
     this.CONSUME(LParen);
     this.MANY_SEP({
       SEP: Comma,
       DEF: () => {
+        this.MANY(() => {
+          this.OR([
+            { ALT: () => this.CONSUME(Final) },
+            { ALT: () => this.CONSUME(Redeclare) },
+            { ALT: () => this.CONSUME(Model) },
+            { ALT: () => this.CONSUME(Function) },
+            { ALT: () => this.CONSUME(Package) },
+          ]);
+        });
         this.SUBRULE(this.expression);
         this.OPTION(() => {
           this.SUBRULE(this.assignment);
@@ -1210,61 +1221,19 @@ class ModelicaParser extends CstParser {
     this.CONSUME(RParen);
   });
 
-  asbFn = this.RULE("absFunction", () => {
-    this.CONSUME(Abs);
-    this.SUBRULE(this.expression);
-    this.CONSUME(RParen);
-  });
-
-  maxFn = this.RULE("maxFunction", () => {
-    this.CONSUME(Max);
-    this.MANY_SEP({
-      SEP: Comma,
-      DEF: () => {
-        this.SUBRULE(this.expression);
-      },
-    });
-
-    this.CONSUME(RParen);
-  });
-
-  fillFn = this.RULE("fillFunction", () => {
-    this.CONSUME(Fill);
-    this.MANY_SEP({
-      SEP: Comma,
-      DEF: () => {
-        this.SUBRULE(this.expression);
-      },
-    });
-    this.CONSUME(RParen);
-  });
-
-  assertBlock = this.RULE("assert", () => {
-    this.CONSUME(Assert);
-    this.SUBRULE(this.expression);
-    this.CONSUME(Comma);
-    this.SUBRULE1(this.expression);
+  typeDef = this.RULE("typeDef", () => {
+    this.CONSUME(Type);
+    this.OPTION1(() => this.SUBRULE(this.parametrizedBlock));
 
     this.OPTION(() => {
-      this.CONSUME2(Comma);
-      this.OPTION2(() => {
-        this.CONSUME(Level);
-        this.CONSUME(Equals);
-      });
-      this.SUBRULE2(this.expression);
+      this.CONSUME(Equals);
+      this.SUBRULE1(this.parametrizedBlock);
     });
-    this.CONSUME(RParen);
-    this.CONSUME(Semicolon);
-  });
 
-  loadFn = this.RULE("loadResourceFunction", () => {
-    this.CONSUME(LoadResource);
-    this.OR([
-      { ALT: () => this.SUBRULE(this.loadFn) },
-      { ALT: () => this.CONSUME(StringLiteral) },
-      { ALT: () => this.CONSUME(Identifier) },
-    ]);
-    this.CONSUME(RParen);
+    this.SUBRULE(this.elementDescription);
+
+    this.OPTION2(() => this.SUBRULE(this.extendsBody));
+    this.CONSUME(Semicolon);
   });
 
   enumeration = this.RULE("enumeration", () => {
@@ -1277,15 +1246,12 @@ class ModelicaParser extends CstParser {
       SEP: Comma,
       DEF: () => {
         this.CONSUME2(Identifier);
-        this.OPTION1(() => {
-          this.CONSUME1(StringLiteral); // Capture optional description string
-        });
+        this.OPTION1(() => this.CONSUME1(StringLiteral));
       },
     });
     this.CONSUME(RParen);
-    this.OPTION2(() => {
-      this.CONSUME2(StringLiteral); // Capture optional description string
-    });
+    this.SUBRULE(this.elementDescription);
+    this.OPTION(() => this.CONSUME(Semicolon));
   });
 
   index = this.RULE("index", () => {
@@ -1295,7 +1261,6 @@ class ModelicaParser extends CstParser {
         { ALT: () => this.SUBRULE(this.expression) },
         { ALT: () => this.CONSUME(Colon) },
         { ALT: () => this.CONSUME(Comma) },
-        { ALT: () => this.CONSUME(End) },
       ]);
     });
     this.CONSUME(RSquare);
@@ -1303,9 +1268,7 @@ class ModelicaParser extends CstParser {
 
   indexed = this.RULE("indexed", () => {
     this.CONSUME(Identifier);
-    this.OPTION(() => {
-      this.SUBRULE(this.index);
-    });
+    this.OPTION(() => this.SUBRULE(this.index));
   });
 
   annotation = this.RULE("annotation", () => {
@@ -1313,17 +1276,8 @@ class ModelicaParser extends CstParser {
     this.MANY(() => {
       this.SUBRULE(this.annotationBody);
     });
-    this.OPTION(() => {
-      this.CONSUME(RParen);
-    });
+    this.OPTION(() => this.CONSUME(RParen));
     this.CONSUME(Semicolon);
-  });
-
-  itemAnnotation = this.RULE("itemAnnotation", () => {
-    this.CONSUME(Annotation);
-    this.MANY(() => {
-      this.SUBRULE1(this.annotationBody);
-    });
   });
 
   annotationBody = this.RULE("annotationBody", () => {

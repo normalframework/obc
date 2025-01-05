@@ -12,8 +12,8 @@
  * @returns {number} output.y - Connector of Real output signal.
  */
 
- function multiSum({ nin, k }) {
-  return ({ u }) => {
+ function multiSum({ nin, k = [] }) {
+  return ({ u = [] }) => {
     if (u.length > 0) {
       return { y: k.reduce((sum, gain, index) => sum + gain * u[index], 0) };
     } else {

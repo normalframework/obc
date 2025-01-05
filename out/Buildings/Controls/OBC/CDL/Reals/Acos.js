@@ -10,7 +10,7 @@
  */
 
  function acos() {
-  return ({ u }) => {
+  return ({ u = 0 }) => {
     return { y: Math.acos(u) };
   }
 }

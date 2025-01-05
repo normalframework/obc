@@ -11,7 +11,7 @@
  function integratorWithReset({ k = 1, y_start = 0 }) {
   let y = y_start;
 
-  return ({ u, y_reset_in, trigger }) => {
+  return ({ u = 0, y_reset_in = 0, trigger = 0 }) => {
     const dt = 0.001; // Small time step for numerical integration, can be adjusted
 
     if (trigger) {

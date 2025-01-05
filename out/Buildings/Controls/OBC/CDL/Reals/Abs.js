@@ -9,8 +9,8 @@
  * @returns {number} output.y - Connector of Real output signal.
  */
 
- function abs() {
-  return ({ u }) => {
+function abs() {
+  return ({ u = 0 }) => {
     return { y: Math.abs(u) };
   }
 }

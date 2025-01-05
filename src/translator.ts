@@ -16,7 +16,7 @@ import { stringHash, walkDirectoryRecursive } from "./utils";
 import { visualizeGraph } from "./visualize";
 import { parseModelica } from "./modelica";
 import { fileURLToPath } from "url";
-import { processCst } from "./cst";
+import { ParsedExpression, processCst } from "./cst";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -24,6 +24,8 @@ const __dirname = dirname(__filename);
 const filesRegistry = new Map<string, string>();
 const importedFiles = new Set<string>();
 const importsMap = new Map<string, string[]>();
+
+const modelicaConstants = new Map<string, string | number | boolean>();
 
 function normalizeBlockId(blockId: string) {
   return blockId.split("#").pop()!;
@@ -219,6 +221,7 @@ export function translateGraph(id: string, graph: graphlib.Graph) {
     const paramsObject = generateJsObject(
       params.filter((p) => !!p.value).map((p) => [p.name, p.value])
     );
+    console.log(paramsObject);
     const fn = resolveImport(nodeValue.type);
     declarations.push(`// ${node}`);
     declarations.push(`const ${nodeValue.name}Fn = ${fn}(${paramsObject});`);
@@ -342,34 +345,47 @@ function isModelicaFile(filePath: string) {
   return path.extname(filePath) === ".mo";
 }
 
-let success = 0;
-let failed = 0;
+function expressionJsValue(expression: ParsedExpression | undefined) {
+  if (!expression) {
+    return '""';
+  }
+  if ("value" in expression) {
+    if (typeof expression.value === "string") {
+      return `"${expression.value}"`;
+    }
+    return expression.value;
+  }
+  return expression.expression;
+}
 
 function parseModelicaFiles(filePath: string) {
   const content = fs.readFileSync(filePath, "utf-8");
-
-  try {
-    console.log(filePath);
-    const cst = parseModelica(content);
-    const fileModel = processCst(cst);
-    success++;
-  } catch (e) {
-    // console.log(filePath);
-    failed++;
-    throw e;
-    // igore
+  const cst = parseModelica(content);
+  const fileModel = processCst(cst);
+  if (
+    (fileModel.namespace && fileModel.constants.length) ||
+    fileModel.enumerations.length
+  ) {
+    const parts = [fileModel.namespace, fileModel.package].filter((p) => p);
+    fileModel.constants
+      .filter((c) => c.value)
+      .forEach((constant) => {
+        modelicaConstants.set(
+          [...parts, constant.name].join("."),
+          expressionJsValue(constant.value)
+        );
+      });
+    fileModel.enumerations.forEach((enumeration) => {
+      Object.entries(enumeration.value).forEach(([key, value]) => {
+        modelicaConstants.set(
+          [...parts, enumeration.name, key].join("."),
+          value
+        );
+      });
+    });
   }
-  // const cst = parseModelica(content);
-  // const fileModel = processCst(cst);
-
-  // console.log(fileModel);
-  // fs.appendFileSync(
-  //   "output.json",
-  //   JSON.stringify(parseModelica(content), null, 2)
-  // );
-  // console.log(parseModelica(content));
+  console.log(clc.greenBright("[PARSED]"), filePath);
 }
-
 export function translateDirectory(
   input: string,
   output: string,
@@ -377,18 +393,19 @@ export function translateDirectory(
 ) {
   fs.mkdirSync(path.dirname(output), { recursive: true });
 
-  const modelicaBuildings = path.join(__dirname, "..", "modelica-buildings");
+  console.log("Parsing Modelica files for constants and enumerations");
+  // const modelicaBuildings = path.join(__dirname, "..", "modelica-buildings");
+  // console.log("Modelica Directory: ", modelicaBuildings);
 
-  for (const filePath of walkDirectoryRecursive(modelicaBuildings)) {
-    if (isModelicaFile(filePath)) {
-      parseModelicaFiles(filePath);
-    }
-  }
-  console.log("Success: ", success);
-  console.log("Failed: ", failed);
+  // for (const filePath of walkDirectoryRecursive(modelicaBuildings)) {
+  //   if (isModelicaFile(filePath)) {
+  //     parseModelicaFiles(filePath);
+  //   }
+  // }
 
-  return;
+  fs.writeFileSync("constants.json", JSON.stringify([...modelicaConstants]));
 
+  console.log(modelicaConstants);
   const standard = path.join(__dirname, "..", "standard");
 
   for (const filePath of walkDirectoryRecursive(standard)) {

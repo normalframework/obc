@@ -8,8 +8,8 @@
  * @returns {boolean} output.y - Connector of Boolean output signal.
  */
 
- function notBlock() {
-  return ({ u }) => {
+function notBlock() {
+  return ({ u = false }) => {
     return { y: !u };
   }
 }

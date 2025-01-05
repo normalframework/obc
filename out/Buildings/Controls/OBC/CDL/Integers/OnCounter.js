@@ -12,7 +12,7 @@
  function onCounter({ y_start = 0 }) {
   let y = y_start;
 
-  return ({ trigger, reset }) => {
+  return ({ trigger = false, reset = false }) => {
     if (reset) {
       y = y_start;
     } else if (trigger) {

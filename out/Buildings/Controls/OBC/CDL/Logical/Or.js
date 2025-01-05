@@ -9,8 +9,8 @@
  * @returns {boolean} output.y - Connector of Boolean output signal.
  */
 
- function orBlock() {
-  return ({ u1, u2 }) => {
+function orBlock() {
+  return ({ u1 = false, u2 = false }) => {
     return { y: u1 || u2 };
   };
 }

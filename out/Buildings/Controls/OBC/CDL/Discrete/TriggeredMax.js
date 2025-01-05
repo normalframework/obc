@@ -9,10 +9,10 @@
  * @returns {number} output.y - Connector with a Real output signal.
  */
 
- function triggeredMax() {
+function triggeredMax() {
   let previousY = 0;
 
-  return ({ u, trigger }) => {
+  return ({ u = 0, trigger = false }) => {
     if (trigger) {
       previousY = Math.max(previousY, Math.abs(u));
     }

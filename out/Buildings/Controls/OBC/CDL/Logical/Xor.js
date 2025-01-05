@@ -10,7 +10,7 @@
  */
 
 function xor() {
-  return ({ u1, u2 }) => {
+  return ({ u1 = false, u2 = false }) => {
     return { y: (!u1 && !u2) || (u1 && u2) };
   }
 }
