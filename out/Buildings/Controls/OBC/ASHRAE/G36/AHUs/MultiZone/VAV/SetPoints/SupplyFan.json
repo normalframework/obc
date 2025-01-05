@@ -1,0 +1,11 @@
+{
+  "inputs": [
+    "uOpeMod",
+    "dpDuc",
+    "uZonPreResReq"
+  ],
+  "outputs": [
+    "y1SupFan",
+    "ySupFan"
+  ]
+}

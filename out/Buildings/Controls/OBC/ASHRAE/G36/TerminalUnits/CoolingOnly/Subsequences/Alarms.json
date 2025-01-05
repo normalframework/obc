@@ -1,0 +1,14 @@
+{
+  "inputs": [
+    "uDam",
+    "u1Fan",
+    "VActSet_flow",
+    "VDis_flow",
+    "uOpeMod"
+  ],
+  "outputs": [
+    "yFloSenAla",
+    "yLeaDamAla",
+    "yLowFloAla"
+  ]
+}

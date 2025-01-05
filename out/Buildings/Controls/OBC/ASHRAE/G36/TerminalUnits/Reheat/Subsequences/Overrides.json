@@ -1,0 +1,12 @@
+{
+  "inputs": [
+    "uHeaOff",
+    "oveDamPos",
+    "uVal",
+    "uDam"
+  ],
+  "outputs": [
+    "yDam",
+    "yVal"
+  ]
+}

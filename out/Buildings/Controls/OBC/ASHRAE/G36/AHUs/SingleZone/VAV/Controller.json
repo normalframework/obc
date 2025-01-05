@@ -1,0 +1,21 @@
+{
+  "inputs": [
+    "uSupFan_actual",
+    "TZon",
+    "TAirSup",
+    "u1Win",
+    "warUpTim",
+    "u1OccSen",
+    "uOutDam",
+    "dpBui"
+  ],
+  "outputs": [
+    "TSupHeaEcoSet",
+    "TZonHeaSet",
+    "ySupFan",
+    "y1ExhDam",
+    "yHotWatResReq",
+    "yHotWatPlaReq",
+    "yRelDam"
+  ]
+}

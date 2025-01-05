@@ -1,0 +1,10 @@
+{
+  "inputs": [
+    "u1SupFan",
+    "uOutDam",
+    "uOutDam_min"
+  ],
+  "outputs": [
+    "yRelDam"
+  ]
+}

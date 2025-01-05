@@ -61,7 +61,7 @@ module.exports = (
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.CoolingOnly.Subsequences.Dampers.swi
   const swiFn = switch_6d141143({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.CoolingOnly.Subsequences.Dampers.conInt
-  const conIntFn = constant_8c5ba27d({ k: "Buildings.Controls.OBC.ASHRAE.G36.Types.ZoneStates.cooling" });
+  const conIntFn = constant_8c5ba27d({ k: 3 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.CoolingOnly.Subsequences.Dampers.cooSta
   const cooStaFn = equal_2ac2bdd1({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.CoolingOnly.Subsequences.Dampers.actFlo

@@ -1,0 +1,21 @@
+{
+  "inputs": [
+    "totColZon",
+    "totHotZon",
+    "u1HigOccCoo",
+    "u1OccHeaHig",
+    "maxCooDowTim",
+    "maxWarUpTim",
+    "u1EndSetBac",
+    "u1EndSetUp",
+    "uOpeWin",
+    "u1SetBac",
+    "u1SetUp",
+    "u1Occ",
+    "TZonMin",
+    "tNexOcc"
+  ],
+  "outputs": [
+    "yOpeMod"
+  ]
+}

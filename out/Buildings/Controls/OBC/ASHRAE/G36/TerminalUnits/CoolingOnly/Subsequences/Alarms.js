@@ -18,13 +18,13 @@ const assert_078ec840 = require("../../../../../CDL/Utilities/Assert");
 
 module.exports = (
   {
+		damPosHys,
 		fanOffTim = 600,
+		floHys,
 		leaFloTim = 600,
 		lowFloTim = 300,
-		staTim = 1800,
-		damPosHys,
-		floHys,
 		staPreMul,
+		staTim = 1800,
 		VCooMax_flow,
     } = {}
 ) => {
@@ -41,7 +41,7 @@ module.exports = (
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.CoolingOnly.Subsequences.Alarms.truDel2
   const truDel2Fn = truedelay_b49d8a1a({ delayTime: fanOffTim });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.CoolingOnly.Subsequences.Alarms.occMod
-  const occModFn = constant_8c5ba27d({ k: "Buildings.Controls.OBC.ASHRAE.G36.Types.OperationModes.occupied" });
+  const occModFn = constant_8c5ba27d({ k: 1 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.CoolingOnly.Subsequences.Alarms.isOcc
   const isOccFn = equal_2ac2bdd1({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.CoolingOnly.Subsequences.Alarms.and6

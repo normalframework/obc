@@ -1,0 +1,14 @@
+{
+  "inputs": [
+    "TSupCoo",
+    "uCooCoi_actual",
+    "uHeaCoi_actual",
+    "TAirSup"
+  ],
+  "outputs": [
+    "yChiPlaReq",
+    "yChiWatResReq",
+    "yHotWatPlaReq",
+    "yHotWatResReq"
+  ]
+}

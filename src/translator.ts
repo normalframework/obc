@@ -26,6 +26,7 @@ const importedFiles = new Set<string>();
 const importsMap = new Map<string, string[]>();
 
 const modelicaConstants = new Map<string, string | number | boolean>();
+let modelicaLoaded = false;
 
 function normalizeBlockId(blockId: string) {
   return blockId.split("#").pop()!;
@@ -120,46 +121,25 @@ function findLoops(graph: graphlib.Graph) {
   const visited = new Set();
   const stack = new Set();
 
-  const isLooped = (n1: string, n2: string) => {
-    if (visited.has(n2)) return false;
-    if (n1 === n2) {
+  const dfs = (node: string) => {
+    if (stack.has(node)) {
       return true;
     }
-    const pres = predecessors(graph, n2);
-    for (const p of pres) {
-      if (isLooped(n1, p)) {
-        return true;
-      }
-    }
 
+    if (visited.has(node)) return false;
+
+    stack.add(node);
+    successors(graph, node).forEach((s) => {
+      if (dfs(s)) {
+        loops.push({ v: node, w: s });
+      }
+    });
+    stack.delete(node);
+    visited.add(node);
     return false;
   };
 
-  const dfs = (node: string) => {
-    if (stack.has(node)) {
-      return;
-    }
-
-    if (visited.has(node)) return;
-
-    stack.add(node);
-    predecessors(graph, node).forEach((p) => {
-      if (visited.has(p)) return;
-      if (!isLooped(node, p)) {
-        dfs(p);
-      } else {
-        loops.push({ v: p, w: node });
-      }
-    });
-
-    visited.add(node);
-    successors(graph, node).forEach(dfs);
-
-    stack.delete(node);
-  };
-
-  dfs(EXECUTION_START_NODE);
-
+  graph.nodes().forEach(dfs);
   return loops;
 }
 
@@ -175,6 +155,19 @@ function sortParams(params: ExecutionParameter[]) {
   });
   const sorted = graphlib.alg.topsort(graph);
   return sorted.map((name) => graph.node(name));
+}
+
+function jsValue(value: string | undefined) {
+  if (!value) {
+    return;
+  }
+
+  const valueKey = value.replace(/"/g, "");
+  if (modelicaConstants.has(valueKey)) {
+    return modelicaConstants.get(valueKey)?.toString();
+  }
+
+  return value;
 }
 
 export function translateGraph(id: string, graph: graphlib.Graph) {
@@ -213,15 +206,12 @@ export function translateGraph(id: string, graph: graphlib.Graph) {
     if (node === EXECUTION_START_NODE || node === EXECUTION_END_NODE) {
       return;
     }
-
     const nodeValue = graph.node(node) as ExecutionNode;
-
     const params = nodeValue.parameters ?? [];
 
     const paramsObject = generateJsObject(
-      params.filter((p) => !!p.value).map((p) => [p.name, p.value])
+      params.filter((p) => !!p.value).map((p) => [p.name, jsValue(p.value)])
     );
-    console.log(paramsObject);
     const fn = resolveImport(nodeValue.type);
     declarations.push(`// ${node}`);
     declarations.push(`const ${nodeValue.name}Fn = ${fn}(${paramsObject});`);
@@ -256,7 +246,7 @@ export function translateGraph(id: string, graph: graphlib.Graph) {
 
   const params = sortParams(start.parameters ?? []);
   const paramsObject = generateParameterObject(
-    params.map((p) => [p.name, p.value])
+    params.map((p) => [p.name, jsValue(p.value)])
   );
 
   const code = `
@@ -281,18 +271,32 @@ ${fnCalls.map((s) => `    ${s}`).join("\n")}
     inputs: Array.from(inputs),
     outputs: outputEdges.map((o) => o.to.name),
   };
+
+  if (
+    id ===
+    "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.VentilationZones.ASHRAE62_1.Setpoints"
+  ) {
+    console.log({ code, definition });
+
+    // throw new Error("Controller");
+  }
   return { code, definition };
 }
 
 export function translateFile(
   input: string,
   output: string,
-  { visualize }: { visualize: boolean | string }
+  {
+    visualize,
+    rebuildModelica,
+  }: { visualize: boolean | string; rebuildModelica?: boolean }
 ) {
   if (!input.endsWith(".jsonld")) {
     console.error(clc.yellow("[WARNING]"), "Skipping non jsonld file", input);
     return;
   }
+
+  loadModelicaFiles(rebuildModelica);
   const json = JSON.parse(
     fs.readFileSync(path.join(process.cwd(), input), "utf-8")
   );
@@ -386,26 +390,40 @@ function parseModelicaFiles(filePath: string) {
   }
   console.log(clc.greenBright("[PARSED]"), filePath);
 }
+
+function loadModelicaFiles(force?: boolean) {
+  if (modelicaLoaded) {
+    return;
+  }
+  if (fs.existsSync("modelica.json") && !force) {
+    const data = fs.readFileSync("modelica.json", "utf-8");
+    const parsed = JSON.parse(data) as [string, string | number, boolean][];
+    for (const [key, value] of parsed) {
+      modelicaConstants.set(key, value as string | number | boolean);
+    }
+  } else {
+    console.log("Parsing Modelica files for constants and enumerations");
+    const modelicaBuildings = path.join(__dirname, "..", "modelica-buildings");
+    console.log("Modelica Directory: ", modelicaBuildings);
+
+    for (const filePath of walkDirectoryRecursive(modelicaBuildings)) {
+      if (isModelicaFile(filePath)) {
+        parseModelicaFiles(filePath);
+      }
+    }
+
+    fs.writeFileSync("modelica.json", JSON.stringify([...modelicaConstants]));
+  }
+  modelicaLoaded = true;
+}
+
 export function translateDirectory(
   input: string,
   output: string,
-  options: { visualize: boolean | string }
+  options: { visualize: boolean | string; rebuildModelica?: boolean }
 ) {
   fs.mkdirSync(path.dirname(output), { recursive: true });
-
-  console.log("Parsing Modelica files for constants and enumerations");
-  // const modelicaBuildings = path.join(__dirname, "..", "modelica-buildings");
-  // console.log("Modelica Directory: ", modelicaBuildings);
-
-  // for (const filePath of walkDirectoryRecursive(modelicaBuildings)) {
-  //   if (isModelicaFile(filePath)) {
-  //     parseModelicaFiles(filePath);
-  //   }
-  // }
-
-  fs.writeFileSync("constants.json", JSON.stringify([...modelicaConstants]));
-
-  console.log(modelicaConstants);
+  loadModelicaFiles(options.rebuildModelica);
   const standard = path.join(__dirname, "..", "standard");
 
   for (const filePath of walkDirectoryRecursive(standard)) {
@@ -417,6 +435,12 @@ export function translateDirectory(
   }
 
   for (const filePath of walkDirectoryRecursive(input)) {
+    if (
+      filePath.endsWith("package.json") ||
+      filePath.endsWith("package.jsonld")
+    ) {
+      continue;
+    }
     translateFile(filePath, output, options);
   }
 

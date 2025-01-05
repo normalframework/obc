@@ -1,0 +1,21 @@
+{
+  "inputs": [
+    "cooDowTim",
+    "warUpTim",
+    "TZon",
+    "TOccCooSet",
+    "TUnoHeaSet",
+    "TUnoCooSet",
+    "u1Win"
+  ],
+  "outputs": [
+    "yCooTim",
+    "yEndSetBac",
+    "yEndSetUp",
+    "yHigOccCoo",
+    "yHigUnoCoo",
+    "yOccHeaHig",
+    "yUnoHeaHig",
+    "yWarTim"
+  ]
+}

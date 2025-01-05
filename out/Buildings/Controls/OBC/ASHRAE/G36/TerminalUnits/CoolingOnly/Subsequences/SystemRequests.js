@@ -13,15 +13,15 @@ const subtract_029d2d63 = require("../../../../../CDL/Reals/Subtract");
 
 module.exports = (
   {
+		damPosHys,
 		dTHys = 0.25,
 		durTimFlo = 60,
 		durTimTem = 120,
+		floHys,
+		looHys,
 		samplePeriod = 120,
 		thrTemDif = 3,
 		twoTemDif = 2,
-		damPosHys,
-		floHys,
-		looHys,
     } = {}
 ) => {
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.CoolingOnly.Subsequences.SystemRequests.thrPreResReq

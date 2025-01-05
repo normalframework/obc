@@ -21,19 +21,19 @@ const not_2b643d37 = require("../../../../CDL/Logical/Not");
 module.exports = (
   {
 		dTHys = 0.25,
-		permit_occStandby = true,
-		VCooMax_flow = 0.025,
-		zonDisEff_cool = 1,
-		zonDisEff_heat = 0.8,
 		have_CO2Sen,
 		have_occSen,
 		have_parFanPowUni,
 		have_SZVAV,
 		have_typTerUni,
 		have_winSen,
+		permit_occStandby = true,
 		VAreBreZon_flow,
+		VCooMax_flow = 0.025,
 		VMin_flow,
 		VPopBreZon_flow,
+		zonDisEff_cool = 1,
+		zonDisEff_heat = 0.8,
     } = {}
 ) => {
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.VentilationZones.ASHRAE62_1.Setpoints.zer1
@@ -41,7 +41,7 @@ module.exports = (
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.VentilationZones.ASHRAE62_1.Setpoints.con
   const conFn = constant_48cc1015({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.VentilationZones.ASHRAE62_1.Setpoints.occMod
-  const occModFn = constant_8c5ba27d({ k: "Buildings.Controls.OBC.ASHRAE.G36.Types.OperationModes.occupied" });
+  const occModFn = constant_8c5ba27d({ k: 1 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.VentilationZones.ASHRAE62_1.Setpoints.inOccMod
   const inOccModFn = equal_2ac2bdd1({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.VentilationZones.ASHRAE62_1.Setpoints.notOccMod
@@ -91,7 +91,7 @@ module.exports = (
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.VentilationZones.ASHRAE62_1.Setpoints.zonCooMaxFlo
   const zonCooMaxFloFn = constant_baefa089({ k: VCooMax_flow });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.VentilationZones.ASHRAE62_1.Setpoints.cooSta
-  const cooStaFn = constant_8c5ba27d({ k: "Buildings.Controls.OBC.ASHRAE.G36.Types.ZoneStates.cooling" });
+  const cooStaFn = constant_8c5ba27d({ k: 3 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.VentilationZones.ASHRAE62_1.Setpoints.inCooSta
   const inCooStaFn = equal_2ac2bdd1({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.VentilationZones.ASHRAE62_1.Setpoints.difCooMax

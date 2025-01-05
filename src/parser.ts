@@ -7,7 +7,7 @@ import {
   Link,
   Node,
 } from "./types";
-import { visualizeGraph } from "./visualize";
+import clc from "cli-color";
 
 export const EXECUTION_START_NODE = "START";
 export const EXECUTION_END_NODE = "END";
@@ -194,10 +194,36 @@ export function buildExecutionGraph(graph: Graph) {
   ) => {
     const connection = connections(graph, input);
     const id = parseIdentifier(input);
+
     if (connection) {
       const { block: connectionBlock, connection: connectionNode } = connection;
       const connectionId = parseIdentifier(connectionNode);
-      if (connectionBlock) {
+
+      if (inputs.includes(connectionNode)) {
+        executionGraph.setEdge(
+          EXECUTION_START_NODE,
+          block,
+          buildEdge(
+            {
+              name: EXECUTION_START_NODE,
+              parameter: connectionId,
+              id: EXECUTION_START_NODE,
+            },
+            {
+              name: blockId,
+              parameter: id,
+              id: block,
+            }
+          )
+        );
+      } else if (outputs.includes(connectionNode)) {
+        console.log(
+          clc.yellow("[WARNING]"),
+          "Detected self look in block",
+          blockId,
+          `${connectionNode} -> ${input}`
+        );
+      } else if (connectionBlock) {
         const inputBlockId = parseIdentifier(connectionBlock);
         executionGraph.setEdge(
           connectionBlock,
@@ -217,24 +243,6 @@ export function buildExecutionGraph(graph: Graph) {
         );
         return;
       }
-      if (inputs.includes(connectionNode)) {
-        executionGraph.setEdge(
-          EXECUTION_START_NODE,
-          block,
-          buildEdge(
-            {
-              name: EXECUTION_START_NODE,
-              parameter: connectionId,
-              id: EXECUTION_START_NODE,
-            },
-            {
-              name: blockId,
-              parameter: id,
-              id: block,
-            }
-          )
-        );
-      }
     }
   };
 
@@ -253,12 +261,10 @@ export function buildExecutionGraph(graph: Graph) {
       ),
       name: blockId,
     };
+
     executionGraph.setNode(block, node);
 
     const { inputs } = nodeDeps;
-
-    console.log(block, inputs);
-
     inputs.forEach((input) => buildExecutionEdge(input, blockId, block));
   });
 

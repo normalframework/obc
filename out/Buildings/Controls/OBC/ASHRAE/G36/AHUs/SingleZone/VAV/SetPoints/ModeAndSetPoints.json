@@ -1,0 +1,11 @@
+{
+  "inputs": [
+    "TZon",
+    "u1Win",
+    "TUnoHeaSet"
+  ],
+  "outputs": [
+    "THeaSet",
+    "yOpeMod"
+  ]
+}

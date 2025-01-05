@@ -1,0 +1,20 @@
+{
+  "inputs": [
+    "TDisSet",
+    "TSup",
+    "uDam",
+    "uVal",
+    "u1Fan",
+    "VActSet_flow",
+    "VDis_flow",
+    "TDis",
+    "uOpeMod"
+  ],
+  "outputs": [
+    "yFloSenAla",
+    "yLeaDamAla",
+    "yLeaValAla",
+    "yLowFloAla",
+    "yLowTemAla"
+  ]
+}

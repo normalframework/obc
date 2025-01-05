@@ -1,0 +1,13 @@
+{
+  "inputs": [
+    "u1SupFan",
+    "uOutDam_min",
+    "uRetDam_max",
+    "TSupHeaEcoSet"
+  ],
+  "outputs": [
+    "yHeaCoi",
+    "yOutDam",
+    "yRetDam"
+  ]
+}

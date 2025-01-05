@@ -1,0 +1,15 @@
+{
+  "inputs": [
+    "uOpeMod",
+    "VHotDucDis_flow",
+    "TZon",
+    "oveHeaDamPos"
+  ],
+  "outputs": [
+    "VMinOA_flow",
+    "yHeaDam",
+    "yCO2",
+    "yZonHeaTemResReq",
+    "yLowFloAla"
+  ]
+}

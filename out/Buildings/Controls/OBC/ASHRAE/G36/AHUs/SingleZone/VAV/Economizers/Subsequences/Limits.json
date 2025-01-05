@@ -1,0 +1,13 @@
+{
+  "inputs": [
+    "u1SupFan",
+    "uOpeMod",
+    "uFreProSta",
+    "VOutMinSet_flow",
+    "uSupFan_actual"
+  ],
+  "outputs": [
+    "yOutDam_max",
+    "yOutDam_min"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "inputs": [
+    "VOutMinSet_flow_normalized",
+    "TAirRet",
+    "uFreProSta",
+    "uTSup",
+    "VOut_flow_normalized"
+  ],
+  "outputs": [
+    "y1MinOutDam",
+    "yOutDam_min",
+    "yMinOutDam",
+    "yRetDam",
+    "yRelDam"
+  ]
+}

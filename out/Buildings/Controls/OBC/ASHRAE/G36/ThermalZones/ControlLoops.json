@@ -1,0 +1,11 @@
+{
+  "inputs": [
+    "TCooSet",
+    "THeaSet",
+    "TZon"
+  ],
+  "outputs": [
+    "yCoo",
+    "yHea"
+  ]
+}

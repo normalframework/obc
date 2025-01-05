@@ -16,7 +16,6 @@ const switch_6d141143 = require("../../../../CDL/Reals/Switch");
 
 module.exports = (
   {
-		VCooMax_flow = 0.025,
 		have_CO2Sen,
 		have_occSen,
 		have_parFanPowUni,
@@ -24,6 +23,7 @@ module.exports = (
 		have_typTerUni,
 		have_winSen,
 		VAreMin_flow,
+		VCooMax_flow = 0.025,
 		VMin_flow,
 		VOccMin_flow,
     } = {}
@@ -57,7 +57,7 @@ module.exports = (
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.VentilationZones.Title24.Setpoints.zonAbsMin
   const zonAbsMinFn = switch_6d141143({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.VentilationZones.Title24.Setpoints.occMod
-  const occModFn = constant_8c5ba27d({ k: "Buildings.Controls.OBC.ASHRAE.G36.Types.OperationModes.occupied" });
+  const occModFn = constant_8c5ba27d({ k: 1 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.VentilationZones.Title24.Setpoints.inOccMod
   const inOccModFn = equal_2ac2bdd1({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.VentilationZones.Title24.Setpoints.booToRea
@@ -95,7 +95,7 @@ module.exports = (
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.VentilationZones.Title24.Setpoints.zonOccMin2
   const zonOccMin2Fn = line_196841c3({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.VentilationZones.Title24.Setpoints.cooSta
-  const cooStaFn = constant_8c5ba27d({ k: "Buildings.Controls.OBC.ASHRAE.G36.Types.ZoneStates.cooling" });
+  const cooStaFn = constant_8c5ba27d({ k: 3 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.VentilationZones.Title24.Setpoints.inCooSta
   const inCooStaFn = equal_2ac2bdd1({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.VentilationZones.Title24.Setpoints.difCooMax

@@ -1,0 +1,24 @@
+{
+  "inputs": [
+    "TDisSet",
+    "TSup",
+    "u1TerFan",
+    "u1FanCom",
+    "u1HotPla",
+    "uDam",
+    "uVal",
+    "u1Fan",
+    "VActSet_flow",
+    "VPri_flow",
+    "TDis",
+    "uOpeMod"
+  ],
+  "outputs": [
+    "yFanStaAla",
+    "yFloSenAla",
+    "yLeaDamAla",
+    "yLeaValAla",
+    "yLowFloAla",
+    "yLowTemAla"
+  ]
+}

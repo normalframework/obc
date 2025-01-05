@@ -1,0 +1,14 @@
+{
+  "inputs": [
+    "VSumAdjAreBreZon_flow",
+    "VSumZonPri_flow",
+    "VAirOut_flow",
+    "uOutAirFra_max"
+  ],
+  "outputs": [
+    "effOutAir_normalized",
+    "outAir_normalized",
+    "VEffAirOut_flow_min",
+    "VUncOutAir_flow"
+  ]
+}

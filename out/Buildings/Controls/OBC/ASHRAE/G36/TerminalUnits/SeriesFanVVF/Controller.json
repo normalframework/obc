@@ -1,0 +1,17 @@
+{
+  "inputs": [
+    "uOpeMod",
+    "VPri_flow",
+    "TZon",
+    "uHeaOff"
+  ],
+  "outputs": [
+    "VMinOA_flow",
+    "VFan_flow_Set",
+    "VSet_flow",
+    "yCO2",
+    "yVal",
+    "yLowTemAla",
+    "yZonTemResReq"
+  ]
+}

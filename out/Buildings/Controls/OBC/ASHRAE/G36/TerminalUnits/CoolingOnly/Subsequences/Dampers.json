@@ -1,0 +1,16 @@
+{
+  "inputs": [
+    "VActMin_flow",
+    "u1Fan",
+    "uZonSta",
+    "oveFloSet",
+    "TZon",
+    "oveDamPos",
+    "uCoo",
+    "VDis_flow"
+  ],
+  "outputs": [
+    "VSet_flow",
+    "yDam"
+  ]
+}

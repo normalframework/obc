@@ -1,0 +1,10 @@
+{
+  "inputs": [
+    "uRetDam_min",
+    "uTSup"
+  ],
+  "outputs": [
+    "yOutDam",
+    "yRetDam"
+  ]
+}

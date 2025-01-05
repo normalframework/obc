@@ -1,0 +1,16 @@
+{
+  "inputs": [
+    "ppmCO2Set",
+    "VParFan_flow",
+    "uZonSta",
+    "uOpeMod",
+    "u1Win"
+  ],
+  "outputs": [
+    "VMinOA_flow",
+    "VOccZonMin_flow",
+    "VZonAbsMin_flow",
+    "VZonDesMin_flow",
+    "yCO2"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "inputs": [
+    "u1SupFan"
+  ],
+  "outputs": [
+    "dpDisSet",
+    "y1RetFan",
+    "yDpBui",
+    "yRelDam",
+    "yRetFan"
+  ]
+}

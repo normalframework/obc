@@ -1,0 +1,12 @@
+{
+  "inputs": [
+    "VOutMinSet_flow",
+    "TAirRet",
+    "uZonSta",
+    "u1SupFan"
+  ],
+  "outputs": [
+    "yRetDam",
+    "yOutDam_min"
+  ]
+}

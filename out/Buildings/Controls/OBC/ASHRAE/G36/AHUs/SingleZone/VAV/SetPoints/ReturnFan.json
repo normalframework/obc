@@ -1,0 +1,10 @@
+{
+  "inputs": [
+    "uSupFan_actual",
+    "u1SupFan"
+  ],
+  "outputs": [
+    "y1RetFan",
+    "yRetFan"
+  ]
+}

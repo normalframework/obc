@@ -1,0 +1,10 @@
+{
+  "inputs": [
+    "uTSup"
+  ],
+  "outputs": [
+    "yOutDam",
+    "yRelDam",
+    "yRetDam"
+  ]
+}

@@ -23,7 +23,7 @@ module.exports = (
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ThermalZones.ZoneStates.isHea
   const isHeaFn = and_6d642f1c({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ThermalZones.ZoneStates.booToIntHea
-  const booToIntHeaFn = booleantointeger_d87efb42({ integerTrue: "Buildings.Controls.OBC.ASHRAE.G36.Types.ZoneStates.heating" });
+  const booToIntHeaFn = booleantointeger_d87efb42({ integerTrue: 1 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ThermalZones.ZoneStates.notHea
   const notHeaFn = not_6d646018({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ThermalZones.ZoneStates.hysUCoo
@@ -31,13 +31,13 @@ module.exports = (
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ThermalZones.ZoneStates.isCoo
   const isCooFn = and_6d642f1c({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ThermalZones.ZoneStates.booToIntCoo
-  const booToIntCooFn = booleantointeger_d87efb42({ integerTrue: "Buildings.Controls.OBC.ASHRAE.G36.Types.ZoneStates.cooling" });
+  const booToIntCooFn = booleantointeger_d87efb42({ integerTrue: 3 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ThermalZones.ZoneStates.addInt
   const addIntFn = add_2aeed27e({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ThermalZones.ZoneStates.isDea
   const isDeaFn = nor_6d646016({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ThermalZones.ZoneStates.booToIntDea
-  const booToIntDeaFn = booleantointeger_d87efb42({ integerTrue: "Buildings.Controls.OBC.ASHRAE.G36.Types.ZoneStates.deadband" });
+  const booToIntDeaFn = booleantointeger_d87efb42({ integerTrue: 2 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ThermalZones.ZoneStates.addInt1
   const addInt1Fn = add_2aeed27e({});
 

@@ -1,0 +1,24 @@
+{
+  "inputs": [
+    "THeaSet",
+    "uDam",
+    "u1Fan",
+    "uHea",
+    "oveFloSet",
+    "uCoo",
+    "uOpeMod",
+    "VOAMin_flow",
+    "TZon",
+    "VActMin_flow",
+    "u1TerFan",
+    "VPri_flow"
+  ],
+  "outputs": [
+    "THeaDisSet",
+    "VFan_flow_Set",
+    "VPri_flow_Set",
+    "y1Fan",
+    "yDam",
+    "yVal"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "inputs": [
+    "uHeaOff",
+    "oveFan",
+    "oveDamPos",
+    "u1Fan",
+    "uVal",
+    "uDam"
+  ],
+  "outputs": [
+    "y1Fan",
+    "yDam",
+    "yVal"
+  ]
+}

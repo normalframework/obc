@@ -1,0 +1,14 @@
+{
+  "inputs": [
+    "uOpeMod",
+    "VDis_flow",
+    "TZon"
+  ],
+  "outputs": [
+    "VMinOA_flow",
+    "yDam",
+    "yCO2",
+    "yLowFloAla",
+    "yZonTemResReq"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "inputs": [
+    "oveFloSet",
+    "oveHeaDamPos",
+    "oveCooDamPos",
+    "VActSet_flow",
+    "uCooDam",
+    "uHeaDam"
+  ],
+  "outputs": [
+    "VSet_flow",
+    "yCooDam",
+    "yHeaDam"
+  ]
+}

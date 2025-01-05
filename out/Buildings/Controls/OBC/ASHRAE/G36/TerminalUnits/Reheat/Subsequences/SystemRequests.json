@@ -1,0 +1,18 @@
+{
+  "inputs": [
+    "TDis",
+    "uAftSup",
+    "uVal",
+    "TDisSet",
+    "uCoo",
+    "uDam",
+    "VDis_flow",
+    "VSet_flow",
+    "TCooSet"
+  ],
+  "outputs": [
+    "yHotWatPlaReq",
+    "yZonPreResReq",
+    "yZonTemResReq"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "inputs": [
+    "u1SupFan",
+    "dpBui"
+  ],
+  "outputs": [
+    "y1RelDam",
+    "y1RelFan",
+    "yDpBui",
+    "yRelFan"
+  ]
+}

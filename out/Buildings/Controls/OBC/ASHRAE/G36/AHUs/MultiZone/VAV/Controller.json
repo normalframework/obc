@@ -1,0 +1,19 @@
+{
+  "inputs": [
+    "VSumZonPri_flow",
+    "uAhuOpeMod",
+    "TAirSup",
+    "u1SupFan",
+    "VSumZonDesMin_flow"
+  ],
+  "outputs": [
+    "dpDisSet",
+    "TAirSupSet",
+    "VEffAirOut_flow_min",
+    "ySupFan",
+    "yHotWatResReq",
+    "yDpBui",
+    "yHotWatPlaReq",
+    "yRelDam"
+  ]
+}

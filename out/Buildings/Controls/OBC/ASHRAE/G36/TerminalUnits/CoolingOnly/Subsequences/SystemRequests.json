@@ -1,0 +1,13 @@
+{
+  "inputs": [
+    "uAftSup",
+    "uCoo",
+    "uDam",
+    "VDis_flow",
+    "TCooSet"
+  ],
+  "outputs": [
+    "yZonPreResReq",
+    "yZonTemResReq"
+  ]
+}

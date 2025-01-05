@@ -1,0 +1,16 @@
+{
+  "inputs": [
+    "uCO2Loo_max",
+    "VSumZonAbsMin_flow",
+    "VSumZonDesMin_flow",
+    "VAirOut_flow"
+  ],
+  "outputs": [
+    "effAbsOutAir_normalized",
+    "effDesOutAir_normalized",
+    "effOutAir_normalized",
+    "outAir_normalized",
+    "VEffAbsOutAir_flow",
+    "VEffDesOutAir_flow"
+  ]
+}

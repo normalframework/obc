@@ -1,0 +1,13 @@
+{
+  "inputs": [
+    "ppmCO2",
+    "TCooSet",
+    "uOpeMod",
+    "TZon",
+    "u1ResSet"
+  ],
+  "outputs": [
+    "yCO2Ala",
+    "yTemAla"
+  ]
+}

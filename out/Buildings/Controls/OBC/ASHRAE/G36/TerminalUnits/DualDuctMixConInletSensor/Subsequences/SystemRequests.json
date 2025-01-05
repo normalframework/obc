@@ -1,0 +1,23 @@
+{
+  "inputs": [
+    "uAftSupCoo",
+    "uAftSupHea",
+    "VColDuc_flow_Set",
+    "VHotDuc_flow_Set",
+    "VColDucDis_flow",
+    "VHotDucDis_flow",
+    "uCoo",
+    "uHea",
+    "uCooDam",
+    "uHeaDam",
+    "TZon",
+    "TCooSet"
+  ],
+  "outputs": [
+    "yColDucPreResReq",
+    "yHeaFanReq",
+    "yHotDucPreResReq",
+    "yZonCooTemResReq",
+    "yZonHeaTemResReq"
+  ]
+}

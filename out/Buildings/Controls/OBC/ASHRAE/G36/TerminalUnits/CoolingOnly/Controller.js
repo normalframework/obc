@@ -1,10 +1,10 @@
 
 // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.CoolingOnly.Controller
 const timesuppression_ee14a4af = require("../../Generic/TimeSuppression");
-const activeairflow_3199f2fa = require("Subsequences/ActiveAirFlow");
-const alarms_088bfdfa = require("Subsequences/Alarms");
-const dampers_958937ce = require("Subsequences/Dampers");
-const systemrequests_3d1d8ccb = require("Subsequences/SystemRequests");
+const activeairflow_3199f2fa = require("./Subsequences/ActiveAirFlow");
+const alarms_088bfdfa = require("./Subsequences/Alarms");
+const dampers_958937ce = require("./Subsequences/Dampers");
+const systemrequests_3d1d8ccb = require("./Subsequences/SystemRequests");
 const controlloops_b2cc0610 = require("../../ThermalZones/ControlLoops");
 const zonestates_6a0c176c = require("../../ThermalZones/ZoneStates");
 const setpoints_3c8e6a49 = require("../../VentilationZones/ASHRAE62_1/Setpoints");
@@ -19,6 +19,7 @@ module.exports = (
 		durTimFlo = 60,
 		durTimTem = 120,
 		fanOffTim = 600,
+		VMin_flow,
 		floHys = 0.01*VMin_flow,
 		have_CO2Sen = true,
 		have_occSen = true,
@@ -42,15 +43,14 @@ module.exports = (
 		TiHeaCon = 900,
 		timChe = 30,
 		twoTemDif = 2,
-		zonDisEff_cool = 1,
-		zonDisEff_heat = 0.8,
 		VAreBreZon_flow,
 		VAreMin_flow,
 		VCooMax_flow,
 		venStd,
-		VMin_flow,
 		VOccMin_flow,
 		VPopBreZon_flow,
+		zonDisEff_cool = 1,
+		zonDisEff_heat = 0.8,
     } = {}
 ) => {
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.CoolingOnly.Controller.setPoi

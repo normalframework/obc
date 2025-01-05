@@ -1,0 +1,10 @@
+{
+  "inputs": [
+    "uOpeMod",
+    "TOut",
+    "u1SupFan"
+  ],
+  "outputs": [
+    "TAirSupSet"
+  ]
+}

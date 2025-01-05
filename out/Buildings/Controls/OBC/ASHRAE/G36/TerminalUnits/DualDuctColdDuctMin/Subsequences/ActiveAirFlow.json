@@ -1,0 +1,11 @@
+{
+  "inputs": [
+    "VOccMin_flow",
+    "uOpeMod"
+  ],
+  "outputs": [
+    "VActCooMax_flow",
+    "VActHeaMax_flow",
+    "VActMin_flow"
+  ]
+}

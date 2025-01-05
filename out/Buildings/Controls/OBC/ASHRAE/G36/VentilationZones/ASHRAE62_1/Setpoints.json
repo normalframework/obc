@@ -1,0 +1,17 @@
+{
+  "inputs": [
+    "ppmCO2Set",
+    "TDis",
+    "VParFan_flow",
+    "uZonSta",
+    "uOpeMod",
+    "u1Occ",
+    "u1Win"
+  ],
+  "outputs": [
+    "VAdjAreBreZon_flow",
+    "VAdjPopBreZon_flow",
+    "VMinOA_flow",
+    "VOccZonMin_flow"
+  ]
+}
