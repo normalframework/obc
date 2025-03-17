@@ -323,8 +323,8 @@ export function translateFile(
   const normalizedId = normalizeBlockId(blockId);
 
   if (filesRegistry.has(normalizedId)) {
-    console.error("Duplicate block id", blockId);
-    process.exit(1);
+    console.error(clc.yellow("[WARNING]"), "Duplicate block id", blockId);
+    return;
   }
   filesRegistry.set(normalizedId, outputName);
 

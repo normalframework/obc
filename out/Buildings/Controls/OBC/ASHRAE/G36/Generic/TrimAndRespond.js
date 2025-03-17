@@ -147,7 +147,9 @@ module.exports = (
     const pro2 = pro2Fn({ u1: resAmoCon.y, u2: maxResCon.y });
     const greThr2 = greThr2Fn({ u: pro2.y });
     const assMes2 = assMes2Fn({ u: greThr2.y });
-
+    console.log({
+      add1,
+    })
     return { y: swi.y };
   }
 }

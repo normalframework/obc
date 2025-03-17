@@ -10,13 +10,21 @@
 function sampler({ samplePeriod = 0 }) {
   let t0 = Math.round((Date.now() / 1000) / samplePeriod) * samplePeriod;
   let y = 0;
+  let triggered = false;
 
   return ({ u }) => {
-    const currentTime = Date.now() / 1000;
+    const currentTime = Math.round(Date.now() / 1000);
     const sampleTrigger = currentTime >= t0 && (currentTime - t0) % samplePeriod < 1E-3;
 
+
     if (sampleTrigger) {
-      y = u;
+      if (!triggered) {
+        triggered = true;
+        y = u;
+      } else {
+        y = 0;
+        triggered = false;
+      }
       t0 += samplePeriod;
     }
 

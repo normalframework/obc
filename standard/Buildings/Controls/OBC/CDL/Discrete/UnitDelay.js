@@ -19,7 +19,7 @@ function unitDelay({ samplePeriod = 0, y_start = 0 }) {
   let prev_u = y_start;
 
   return ({ u = 0 }) => {
-    const currentTime = Date.now() / 1000;
+    const currentTime = Math.round(Date.now() / 1000);
     const sampleTrigger = currentTime >= t0 && (currentTime - t0) % samplePeriod < 1E-3;
 
     if (sampleTrigger) {

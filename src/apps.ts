@@ -155,12 +155,16 @@ export async function generateApp({
   }
 
   await cloneApp(outputFolder);
+
   await translateDirectory(inputFolder, path.join(outputFolder, HOOKS_LIB), {
     visualize: false,
   });
 
   createAppDef(appConfig, outputFolder);
   await createHooks(appConfig, outputFolder);
+  console.error(path.join(outputFolder, ".git"));
+  fs.rmdirSync(path.join(outputFolder, ".git"), { recursive: true });
+  await createNewGitRepo(outputFolder);
 }
 
 async function cloneApp(out: string) {
@@ -256,7 +260,7 @@ module.exports = async ({points}) => {
 };`;
 }
 
-async function createNewGitRepo(folder: string) {
+export async function createNewGitRepo(folder: string) {
   const git = simpleGit(folder);
   await git.init();
   await git.add(".");

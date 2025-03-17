@@ -9,8 +9,10 @@
  * @returns {Function} - A function that calculates the greater threshold comparison given the inputs.
  */
 
- function greaterThreshold({ t = 0, h = 0, pre_y_start = false }) {
+function greaterThreshold({ t = 0, h = 0, pre_y_start = false }) {
   let previous_y = pre_y_start;
+
+
 
   if (h >= 1E-10) {
     return ({ u = 0 }) => {

@@ -21,11 +21,11 @@ const switch_6d141143 = require("../../../CDL/Reals/Switch");
 
 module.exports = (
   {
-		chaRat = 540,
-		dTHys = 0.25,
-		maxTim = 1800,
-		samplePeriod = 120,
-    } = {}
+    chaRat = 540,
+    dTHys = 0.25,
+    maxTim = 1800,
+    samplePeriod = 120,
+  } = {}
 ) => {
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.samSet
   const samSetFn = sampler_875b0f69({ samplePeriod: samplePeriod });
@@ -44,7 +44,7 @@ module.exports = (
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.abs1
   const abs1Fn = abs_a5faf0c3({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.greThr
-  const greThrFn = greaterthreshold_64a3c4e0({ h: 0.5*dTHys, t: dTHys });
+  const greThrFn = greaterthreshold_64a3c4e0({ h: 0.5 * dTHys, t: dTHys });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.lat
   const latFn = latch_a5aa3a49({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.edg
@@ -76,6 +76,7 @@ module.exports = (
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.truHol
   const truHolFn = truehold_60ac3548({ duration: samplePeriod });
 
+
   return (
     { TSet, TZon }
   ) => {
@@ -103,6 +104,8 @@ module.exports = (
     const con5 = con5Fn({});
     const pasSupTim = pasSupTimFn({ u1: lat1.y, u2: lat.y, u3: con5.y });
     const truHol = truHolFn({ u: pasSup.y });
+    latFn({ clr: truHol.y })
+
 
     return { yAftSup: pasSupTim.y };
   }

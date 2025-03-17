@@ -46,7 +46,6 @@ program
   .option("--description <description>", "App Description")
   .description("Generate installable app repository")
   .action(async (params) => {
-    console.log(params);
     await generateApp(params);
   });
 

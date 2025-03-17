@@ -11,7 +11,7 @@
 function latch() {
   let y = false;
 
-  return ({ u = false, clr = false }) => {
+  const res = ({ u = false, clr = false }) => {
     if (clr) {
       y = false;
     } else if (u) {
@@ -19,6 +19,8 @@ function latch() {
     }
     return { y };
   };
+
+  return res;
 }
 
 module.exports = latch;

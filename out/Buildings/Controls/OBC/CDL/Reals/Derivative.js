@@ -29,4 +29,4 @@ function derivative({ y_start = 0 }) {
   };
 }
 
-export default derivative;
+module.exports = derivative;

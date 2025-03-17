@@ -35,9 +35,9 @@ module.exports = (
     const conInt = conIntFn({});
     const intEqu = intEquFn({ u1: conInt.y, u2: uZonSta });
     const and2 = and2Fn({ u1: intEqu.y });
-    const const = constFn({});
-    const switch = switchFn({ u1: conCoi.y, u2: and2.y, u3: const.y });
+    const const_ = constFn({});
+    const switch_ = switchFn({ u1: conCoi.y, u2: and2.y, u3: const_.y });
 
-    return { yCooCoi: switch.y };
+    return { yCooCoi: switch_.y };
   }
 }
