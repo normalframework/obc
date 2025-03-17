@@ -11,7 +11,6 @@ export async function translateFile(input: string, output: string) {
   const saveDir = path.join(process.cwd(), output, path.dirname(input));
   fs.mkdirSync(saveDir, { recursive: true });
   const saveFilePath = path.join(saveDir, path.basename(input, ".mo") + ".js");
-  console.log(saveFilePath);
   const chatCompletion = await client.chat.completions.create({
     messages: [
       {

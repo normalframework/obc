@@ -271,15 +271,6 @@ ${fnCalls.map((s) => `    ${s}`).join("\n")}
     inputs: Array.from(inputs),
     outputs: outputEdges.map((o) => o.to.name),
   };
-
-  if (
-    id ===
-    "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.VentilationZones.ASHRAE62_1.Setpoints"
-  ) {
-    console.log({ code, definition });
-
-    // throw new Error("Controller");
-  }
   return { code, definition };
 }
 

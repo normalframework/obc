@@ -76,6 +76,7 @@ export async function generateApp({
     description: description ?? "",
     hooks: [],
   };
+
   if (config && fs.existsSync(config)) {
     const configValue = await loadConfig(config);
     appConfig = {
@@ -227,12 +228,6 @@ function generateHookCode(
   def: { inputs: string[]; outputs: string[] },
   hook: { controller: string }
 ) {
-  const inputObj = `{
-${def.inputs
-  .map((i) => `${i}: points.byLabel('${i}').first()?.latestValue?.value`)
-  .join(",\n")}
-}`;
-
   return `const NormalSdk = require("@normalframework/applications-sdk");
 const controller = require("../${HOOKS_LIB}/${hook.controller}");
 const instance = controller();

@@ -275,6 +275,82 @@ export function buildExecutionGraph(graph: Graph) {
   return executionGraph;
 }
 
+const RESERVED_KEYWORDS = [
+  "switch",
+  "case",
+  "default",
+  "break",
+  "return",
+  "const",
+  "var",
+  "let",
+  "if",
+  "else",
+  "for",
+  "while",
+  "do",
+  "function",
+  "class",
+  "extends",
+  "super",
+  "new",
+  "this",
+  "null",
+  "true",
+  "false",
+  "typeof",
+  "instanceof",
+  "void",
+  "delete",
+  "in",
+  "of",
+  "try",
+  "catch",
+  "finally",
+  "throw",
+  "async",
+  "await",
+  "import",
+  "from",
+  "export",
+  "as",
+  "default",
+  "with",
+  "yield",
+  "let",
+  "static",
+  "get",
+  "set",
+  "constructor",
+  "arguments",
+  "eval",
+  "implements",
+  "interface",
+  "package",
+  "private",
+  "protected",
+  "public",
+  "static",
+  "yield",
+  "abstract",
+  "boolean",
+  "byte",
+  "char",
+  "double",
+  "final",
+  "float",
+  "goto",
+  "int",
+  "long",
+  "native",
+  "short",
+];
+
 export function parseIdentifier(id: string) {
-  return id.split(".").pop()!;
+  const res = id.split(".").pop()!;
+
+  if (RESERVED_KEYWORDS.includes(res)) {
+    return `_${res}`;
+  }
+  return res;
 }
