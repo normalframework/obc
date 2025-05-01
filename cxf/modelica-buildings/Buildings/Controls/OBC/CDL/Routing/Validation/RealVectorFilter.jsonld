@@ -1,1 +1,83 @@
-{"@context":{"S231P":"https://data.ashrae.org/S231P#"},"@graph":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.RealVectorFilter","@type":"S231P:ElementaryBlock","S231P:containsBlock":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.RealVectorFilter.reaFil"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.RealVectorFilter.ReaInp"}],"S231P:label":"RealVectorFilter"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.RealVectorFilter.reaFil","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.RealVectorFilter","S231P:accessSpecifier":"public","S231P:description":"Block that filter the input vector","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":20,\"y\":-10},{\"x\":40,\"y\":10}]}}}","S231P:hasInstance":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.RealVectorFilter.reaFil.msk"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.RealVectorFilter.reaFil.nin"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.RealVectorFilter.reaFil.nout"}],"S231P:label":"reaFil"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.RealVectorFilter.reaFil.msk","S231P:value":"{true,false,true}"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.RealVectorFilter.reaFil.nin","S231P:value":3},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.RealVectorFilter.reaFil.nout","S231P:value":2},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.RealVectorFilter.ReaInp","@type":"http://example.org#Reals.Sources.Constant","S231P:accessSpecifier":"public","S231P:description":"Real inputs","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-40,\"y\":-10},{\"x\":-20,\"y\":10}]}}}","S231P:hasInstance":{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.RealVectorFilter.ReaInp.k"},"S231P:label":"ReaInp"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.RealVectorFilter.ReaInp.k","S231P:value":"{1,2,3}"}]}
+{
+  "@context": {
+    "S231P": "https://data.ashrae.org/S231P#"
+  },
+  "@graph": [
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.RealVectorFilter",
+      "@type": "S231P:Block",
+      "S231P:containsBlock": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.RealVectorFilter.reaFil"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.RealVectorFilter.ReaInp"
+        }
+      ],
+      "S231P:label": "RealVectorFilter"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.RealVectorFilter.reaFil",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Routing.RealVectorFilter",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Block that filter the input vector",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":20,\"y\":-10},{\"x\":40,\"y\":10}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.RealVectorFilter.reaFil.msk"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.RealVectorFilter.reaFil.nin"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.RealVectorFilter.reaFil.nout"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.RealVectorFilter.reaFil.u"
+        }
+      ],
+      "S231P:label": "reaFil"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.RealVectorFilter.reaFil.msk",
+      "S231P:value": "{true,false,true}"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.RealVectorFilter.reaFil.nin",
+      "S231P:value": 3
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.RealVectorFilter.reaFil.nout",
+      "S231P:value": 2
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.RealVectorFilter.ReaInp",
+      "@type": "http://example.org#Reals.Sources.Constant",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Real inputs",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-40,\"y\":-10},{\"x\":-20,\"y\":10}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.RealVectorFilter.ReaInp.k"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.RealVectorFilter.ReaInp.y"
+        }
+      ],
+      "S231P:isArray": true,
+      "S231P:label": "ReaInp[3]",
+      "S231P:numberDimensions": 1,
+      "S231P:sizeOfDimensions": "(3)"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.RealVectorFilter.ReaInp.k",
+      "S231P:value": "{1,2,3}"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.RealVectorFilter.ReaInp.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.RealVectorFilter.reaFil.u"
+      }
+    }
+  ]
+}

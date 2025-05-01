@@ -1,1 +1,686 @@
-{"@context":{"S231P":"https://data.ashrae.org/S231P#"},"@graph":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold","@type":"S231P:ElementaryBlock","S231P:containsBlock":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul1"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul2"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul3"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul4"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul5"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul6"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul7"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.not1"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.not2"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.not3"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.not4"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.truFalHol"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.truFalHol1"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.truFalHol2"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.truFalHol3"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.truFalHol4"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.truFalHol5"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.truFalHol6"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.truFalHol7"}],"S231P:label":"TrueFalseHold"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Pulse","S231P:accessSpecifier":"public","S231P:description":"Boolean pulse input signal","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-140,\"y\":60},{\"x\":-120,\"y\":80}]}}}","S231P:hasInstance":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul.period"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul.shift"}],"S231P:label":"booPul"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul.period","S231P:value":1500},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul.shift","S231P:value":0},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul1","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Pulse","S231P:accessSpecifier":"public","S231P:description":"Boolean pulse input signal","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-140,\"y\":20},{\"x\":-120,\"y\":40}]}}}","S231P:hasInstance":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul1.period"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul1.shift"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul1.width"}],"S231P:label":"booPul1"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul1.period","S231P:value":1000},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul1.shift","S231P:value":0},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul1.width","S231P:value":{"@value":"0.25","@type":"http://www.w3.org/2001/XMLSchema#decimal"}},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul2","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Pulse","S231P:accessSpecifier":"public","S231P:description":"Boolean pulse input signal","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-140,\"y\":-20},{\"x\":-120,\"y\":0}]}}}","S231P:hasInstance":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul2.period"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul2.shift"}],"S231P:label":"booPul2"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul2.period","S231P:value":1500},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul2.shift","S231P:value":0},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul3","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Pulse","S231P:accessSpecifier":"public","S231P:description":"Boolean pulse input signal","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-140,\"y\":-60},{\"x\":-120,\"y\":-40}]}}}","S231P:hasInstance":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul3.period"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul3.shift"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul3.width"}],"S231P:label":"booPul3"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul3.period","S231P:value":1000},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul3.shift","S231P:value":0},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul3.width","S231P:value":{"@value":"0.25","@type":"http://www.w3.org/2001/XMLSchema#decimal"}},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul4","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Pulse","S231P:accessSpecifier":"public","S231P:description":"Boolean pulse input signal","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":20,\"y\":60},{\"x\":40,\"y\":80}]}}}","S231P:hasInstance":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul4.period"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul4.shift"}],"S231P:label":"booPul4"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul4.period","S231P:value":1500},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul4.shift","S231P:value":100},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul5","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Pulse","S231P:accessSpecifier":"public","S231P:description":"Boolean pulse input signal","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":20,\"y\":20},{\"x\":40,\"y\":40}]}}}","S231P:hasInstance":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul5.period"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul5.shift"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul5.width"}],"S231P:label":"booPul5"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul5.period","S231P:value":1000},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul5.shift","S231P:value":100},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul5.width","S231P:value":{"@value":"0.25","@type":"http://www.w3.org/2001/XMLSchema#decimal"}},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul6","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Pulse","S231P:accessSpecifier":"public","S231P:description":"Boolean pulse input signal","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":20,\"y\":-20},{\"x\":40,\"y\":0}]}}}","S231P:hasInstance":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul6.period"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul6.shift"}],"S231P:label":"booPul6"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul6.period","S231P:value":1500},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul6.shift","S231P:value":100},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul7","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Pulse","S231P:accessSpecifier":"public","S231P:description":"Boolean pulse input signal","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":20,\"y\":-60},{\"x\":40,\"y\":-40}]}}}","S231P:hasInstance":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul7.period"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul7.shift"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul7.width"}],"S231P:label":"booPul7"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul7.period","S231P:value":1000},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul7.shift","S231P:value":100},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul7.width","S231P:value":{"@value":"0.25","@type":"http://www.w3.org/2001/XMLSchema#decimal"}},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.not1","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Not","S231P:accessSpecifier":"public","S231P:description":"Negation of input signal","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-90,\"y\":-20},{\"x\":-70,\"y\":0}]}}}","S231P:label":"not1"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.not2","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Not","S231P:accessSpecifier":"public","S231P:description":"Negation of input signal","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":70,\"y\":-20},{\"x\":90,\"y\":0}]}}}","S231P:label":"not2"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.not3","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Not","S231P:accessSpecifier":"public","S231P:description":"Negation of input signal","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-90,\"y\":-60},{\"x\":-70,\"y\":-40}]}}}","S231P:label":"not3"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.not4","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Not","S231P:accessSpecifier":"public","S231P:description":"Negation of input signal","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":70,\"y\":-60},{\"x\":90,\"y\":-40}]}}}","S231P:label":"not4"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.truFalHol","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.TrueFalseHold","S231P:accessSpecifier":"public","S231P:description":"The block introduces a minimal offset between the input signal rising and falling edge","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-40,\"y\":60},{\"x\":-20,\"y\":80}]}}}","S231P:hasInstance":{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.truFalHol.trueHoldDuration"},"S231P:label":"truFalHol"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.truFalHol.trueHoldDuration","S231P:value":1000},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.truFalHol1","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.TrueFalseHold","S231P:accessSpecifier":"public","S231P:description":"The block introduces a minimal offset between the input signal rising and falling edge","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-40,\"y\":20},{\"x\":-20,\"y\":40}]}}}","S231P:hasInstance":{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.truFalHol1.trueHoldDuration"},"S231P:label":"truFalHol1"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.truFalHol1.trueHoldDuration","S231P:value":1000},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.truFalHol2","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.TrueFalseHold","S231P:accessSpecifier":"public","S231P:description":"The block introduces a minimal offset between the input signal rising and falling edge","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-40,\"y\":-20},{\"x\":-20,\"y\":0}]}}}","S231P:hasInstance":{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.truFalHol2.trueHoldDuration"},"S231P:label":"truFalHol2"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.truFalHol2.trueHoldDuration","S231P:value":1000},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.truFalHol3","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.TrueFalseHold","S231P:accessSpecifier":"public","S231P:description":"The block introduces a minimal offset between the input signal rising and falling edge","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-40,\"y\":-60},{\"x\":-20,\"y\":-40}]}}}","S231P:hasInstance":{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.truFalHol3.trueHoldDuration"},"S231P:label":"truFalHol3"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.truFalHol3.trueHoldDuration","S231P:value":1000},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.truFalHol4","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.TrueFalseHold","S231P:accessSpecifier":"public","S231P:description":"The block introduces a minimal offset between the input signal rising and falling edge","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":120,\"y\":60},{\"x\":140,\"y\":80}]}}}","S231P:hasInstance":{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.truFalHol4.trueHoldDuration"},"S231P:label":"truFalHol4"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.truFalHol4.trueHoldDuration","S231P:value":1000},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.truFalHol5","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.TrueFalseHold","S231P:accessSpecifier":"public","S231P:description":"The block introduces a minimal offset between the input signal rising and falling edge","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":120,\"y\":20},{\"x\":140,\"y\":40}]}}}","S231P:hasInstance":{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.truFalHol5.trueHoldDuration"},"S231P:label":"truFalHol5"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.truFalHol5.trueHoldDuration","S231P:value":1000},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.truFalHol6","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.TrueFalseHold","S231P:accessSpecifier":"public","S231P:description":"The block introduces a minimal offset between the input signal rising and falling edge","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":120,\"y\":-20},{\"x\":140,\"y\":0}]}}}","S231P:hasInstance":{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.truFalHol6.trueHoldDuration"},"S231P:label":"truFalHol6"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.truFalHol6.trueHoldDuration","S231P:value":1000},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.truFalHol7","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.TrueFalseHold","S231P:accessSpecifier":"public","S231P:description":"The block introduces a minimal offset between the input signal rising and falling edge","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":120,\"y\":-60},{\"x\":140,\"y\":-40}]}}}","S231P:hasInstance":{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.truFalHol7.trueHoldDuration"},"S231P:label":"truFalHol7"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.truFalHol7.trueHoldDuration","S231P:value":1000}]}
+{
+  "@context": {
+    "S231P": "https://data.ashrae.org/S231P#"
+  },
+  "@graph": [
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold",
+      "@type": "S231P:Block",
+      "S231P:containsBlock": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul1"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul2"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul3"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul4"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul5"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul6"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul7"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.edg"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.not1"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.not2"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.not3"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.not4"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.truFalHol"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.truFalHol1"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.truFalHol2"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.truFalHol3"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.truFalHol4"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.truFalHol5"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.truFalHol6"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.truFalHol7"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.truFalHol8"
+        }
+      ],
+      "S231P:label": "TrueFalseHold"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Pulse",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Boolean pulse input signal",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-140,\"y\":60},{\"x\":-120,\"y\":80}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul.period"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul.shift"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul.y"
+        }
+      ],
+      "S231P:label": "booPul"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul.period",
+      "S231P:value": 1500
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul.shift",
+      "S231P:value": 0
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.truFalHol.u"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul1",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Pulse",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Boolean pulse input signal",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-140,\"y\":20},{\"x\":-120,\"y\":40}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul1.period"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul1.shift"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul1.width"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul1.y"
+        }
+      ],
+      "S231P:label": "booPul1"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul1.period",
+      "S231P:value": 1000
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul1.shift",
+      "S231P:value": 0
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul1.width",
+      "S231P:value": {
+        "@value": "0.25",
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul1.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.truFalHol1.u"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul2",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Pulse",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Boolean pulse input signal",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-140,\"y\":-20},{\"x\":-120,\"y\":0}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul2.period"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul2.shift"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul2.y"
+        }
+      ],
+      "S231P:label": "booPul2"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul2.period",
+      "S231P:value": 1500
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul2.shift",
+      "S231P:value": 0
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul2.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.not1.u"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul3",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Pulse",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Boolean pulse input signal",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-140,\"y\":-60},{\"x\":-120,\"y\":-40}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul3.period"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul3.shift"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul3.width"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul3.y"
+        }
+      ],
+      "S231P:label": "booPul3"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul3.period",
+      "S231P:value": 1000
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul3.shift",
+      "S231P:value": 0
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul3.width",
+      "S231P:value": {
+        "@value": "0.25",
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul3.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.not3.u"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul4",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Pulse",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Boolean pulse input signal",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":20,\"y\":60},{\"x\":40,\"y\":80}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul4.period"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul4.shift"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul4.y"
+        }
+      ],
+      "S231P:label": "booPul4"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul4.period",
+      "S231P:value": 1500
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul4.shift",
+      "S231P:value": 100
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul4.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.truFalHol4.u"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul5",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Pulse",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Boolean pulse input signal",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":20,\"y\":20},{\"x\":40,\"y\":40}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul5.period"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul5.shift"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul5.width"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul5.y"
+        }
+      ],
+      "S231P:label": "booPul5"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul5.period",
+      "S231P:value": 1000
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul5.shift",
+      "S231P:value": 100
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul5.width",
+      "S231P:value": {
+        "@value": "0.25",
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul5.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.truFalHol5.u"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul6",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Pulse",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Boolean pulse input signal",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":20,\"y\":-20},{\"x\":40,\"y\":0}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul6.period"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul6.shift"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul6.y"
+        }
+      ],
+      "S231P:label": "booPul6"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul6.period",
+      "S231P:value": 1500
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul6.shift",
+      "S231P:value": 100
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul6.y",
+      "S231P:isConnectedTo": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.edg.u"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.not2.u"
+        }
+      ]
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul7",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Pulse",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Boolean pulse input signal",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":20,\"y\":-60},{\"x\":40,\"y\":-40}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul7.period"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul7.shift"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul7.width"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul7.y"
+        }
+      ],
+      "S231P:label": "booPul7"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul7.period",
+      "S231P:value": 1000
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul7.shift",
+      "S231P:value": 100
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul7.width",
+      "S231P:value": {
+        "@value": "0.25",
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.booPul7.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.not4.u"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.edg",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Edge",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Generate unit impulse signal",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":70,\"y\":-90},{\"x\":90,\"y\":-70}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.edg.u"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.edg.y"
+        }
+      ],
+      "S231P:label": "edg"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.edg.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.truFalHol8.u"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.not1",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Not",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Negation of input signal",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-90,\"y\":-20},{\"x\":-70,\"y\":0}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.not1.u"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.not1.y"
+        }
+      ],
+      "S231P:label": "not1"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.not1.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.truFalHol2.u"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.not2",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Not",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Negation of input signal",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":70,\"y\":-20},{\"x\":90,\"y\":0}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.not2.u"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.not2.y"
+        }
+      ],
+      "S231P:label": "not2"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.not2.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.truFalHol6.u"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.not3",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Not",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Negation of input signal",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-90,\"y\":-60},{\"x\":-70,\"y\":-40}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.not3.u"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.not3.y"
+        }
+      ],
+      "S231P:label": "not3"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.not3.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.truFalHol3.u"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.not4",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Not",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Negation of input signal",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":70,\"y\":-60},{\"x\":90,\"y\":-40}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.not4.u"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.not4.y"
+        }
+      ],
+      "S231P:label": "not4"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.not4.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.truFalHol7.u"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.truFalHol",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Logical.TrueFalseHold",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "The block introduces a minimal offset between the input signal rising and falling edge",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-40,\"y\":60},{\"x\":-20,\"y\":80}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.truFalHol.trueHoldDuration"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.truFalHol.u"
+        }
+      ],
+      "S231P:label": "truFalHol"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.truFalHol.trueHoldDuration",
+      "S231P:value": 1000
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.truFalHol1",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Logical.TrueFalseHold",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "The block introduces a minimal offset between the input signal rising and falling edge",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-40,\"y\":20},{\"x\":-20,\"y\":40}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.truFalHol1.trueHoldDuration"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.truFalHol1.u"
+        }
+      ],
+      "S231P:label": "truFalHol1"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.truFalHol1.trueHoldDuration",
+      "S231P:value": 1000
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.truFalHol2",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Logical.TrueFalseHold",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "The block introduces a minimal offset between the input signal rising and falling edge",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-40,\"y\":-20},{\"x\":-20,\"y\":0}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.truFalHol2.trueHoldDuration"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.truFalHol2.u"
+        }
+      ],
+      "S231P:label": "truFalHol2"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.truFalHol2.trueHoldDuration",
+      "S231P:value": 1000
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.truFalHol3",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Logical.TrueFalseHold",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "The block introduces a minimal offset between the input signal rising and falling edge",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-40,\"y\":-60},{\"x\":-20,\"y\":-40}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.truFalHol3.trueHoldDuration"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.truFalHol3.u"
+        }
+      ],
+      "S231P:label": "truFalHol3"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.truFalHol3.trueHoldDuration",
+      "S231P:value": 1000
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.truFalHol4",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Logical.TrueFalseHold",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "The block introduces a minimal offset between the input signal rising and falling edge",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":120,\"y\":60},{\"x\":140,\"y\":80}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.truFalHol4.trueHoldDuration"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.truFalHol4.u"
+        }
+      ],
+      "S231P:label": "truFalHol4"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.truFalHol4.trueHoldDuration",
+      "S231P:value": 1000
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.truFalHol5",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Logical.TrueFalseHold",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "The block introduces a minimal offset between the input signal rising and falling edge",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":120,\"y\":20},{\"x\":140,\"y\":40}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.truFalHol5.trueHoldDuration"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.truFalHol5.u"
+        }
+      ],
+      "S231P:label": "truFalHol5"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.truFalHol5.trueHoldDuration",
+      "S231P:value": 1000
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.truFalHol6",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Logical.TrueFalseHold",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "The block introduces a minimal offset between the input signal rising and falling edge",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":120,\"y\":-20},{\"x\":140,\"y\":0}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.truFalHol6.trueHoldDuration"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.truFalHol6.u"
+        }
+      ],
+      "S231P:label": "truFalHol6"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.truFalHol6.trueHoldDuration",
+      "S231P:value": 1000
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.truFalHol7",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Logical.TrueFalseHold",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "The block introduces a minimal offset between the input signal rising and falling edge",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":120,\"y\":-60},{\"x\":140,\"y\":-40}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.truFalHol7.trueHoldDuration"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.truFalHol7.u"
+        }
+      ],
+      "S231P:label": "truFalHol7"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.truFalHol7.trueHoldDuration",
+      "S231P:value": 1000
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.truFalHol8",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Logical.TrueFalseHold",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Hold only false value of unit impulse signal",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":120,\"y\":-90},{\"x\":140,\"y\":-70}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.truFalHol8.falseHoldDuration"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.truFalHol8.trueHoldDuration"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.truFalHol8.u"
+        }
+      ],
+      "S231P:label": "truFalHol8"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.truFalHol8.falseHoldDuration",
+      "S231P:value": 1000
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TrueFalseHold.truFalHol8.trueHoldDuration",
+      "S231P:value": 0
+    }
+  ]
+}

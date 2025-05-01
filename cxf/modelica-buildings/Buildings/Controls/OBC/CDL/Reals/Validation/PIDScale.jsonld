@@ -1,1 +1,398 @@
-{"@context":{"S231P":"https://data.ashrae.org/S231P#"},"@graph":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale","@type":"S231P:ElementaryBlock","S231P:containsBlock":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.gai"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.gai1"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.pidNoSca"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.pidSca"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.pla1"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.pla2"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.pulse"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.resSig"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.resVal"}],"S231P:label":"PIDScale"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.gai","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.MultiplyByParameter","S231P:accessSpecifier":"public","S231P:description":"Gain to scale setpoint","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-40,\"y\":-60},{\"x\":-20,\"y\":-40}]}}}","S231P:hasInstance":{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.gai.k"},"S231P:label":"gai"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.gai.k","S231P:value":"1/1000"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.gai1","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.MultiplyByParameter","S231P:accessSpecifier":"public","S231P:description":"Gain to scale measured value","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":52,\"y\":-90},{\"x\":32,\"y\":-70}]}}}","S231P:hasInstance":{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.gai1.k"},"S231P:label":"gai1"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.gai1.k","S231P:value":"1/1000"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.pidNoSca","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.PID","S231P:accessSpecifier":"public","S231P:description":"PID controller without scaling of control input","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":0,\"y\":-60},{\"x\":20,\"y\":-40}]}}}","S231P:hasInstance":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.pidNoSca.controllerType"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.pidNoSca.k"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.pidNoSca.Td"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.pidNoSca.Ti"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.pidNoSca.yMin"}],"S231P:label":"pidNoSca"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.pidNoSca.controllerType","S231P:value":"Buildings.Controls.OBC.CDL.Types.SimpleController.PID"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.pidNoSca.k","S231P:value":2},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.pidNoSca.Td","S231P:value":2},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.pidNoSca.Ti","S231P:value":1},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.pidNoSca.yMin","S231P:value":-1},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.pidSca","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.PID","S231P:accessSpecifier":"public","S231P:description":"PID controller with scaling of control input","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":0,\"y\":40},{\"x\":20,\"y\":60}]}}}","S231P:hasInstance":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.pidSca.controllerType"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.pidSca.k"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.pidSca.r"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.pidSca.Td"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.pidSca.Ti"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.pidSca.yMin"}],"S231P:label":"pidSca"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.pidSca.controllerType","S231P:value":"Buildings.Controls.OBC.CDL.Types.SimpleController.PID"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.pidSca.k","S231P:value":2},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.pidSca.r","S231P:value":1000},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.pidSca.Td","S231P:value":2},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.pidSca.Ti","S231P:value":1},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.pidSca.yMin","S231P:value":-1},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.pla1","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.IntegratorWithReset","S231P:accessSpecifier":"public","S231P:description":"Plant model","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":40,\"y\":40},{\"x\":60,\"y\":60}]}}}","S231P:hasInstance":{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.pla1.k"},"S231P:label":"pla1"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.pla1.k","S231P:value":1000},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.pla2","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.IntegratorWithReset","S231P:accessSpecifier":"public","S231P:description":"Plant model","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":40,\"y\":-60},{\"x\":60,\"y\":-40}]}}}","S231P:hasInstance":{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.pla2.k"},"S231P:label":"pla2"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.pla2.k","S231P:value":1000},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.pulse","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Sources.Pulse","S231P:accessSpecifier":"public","S231P:description":"Setpoint","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-80,\"y\":40},{\"x\":-60,\"y\":60}]}}}","S231P:hasInstance":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.pulse.amplitude"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.pulse.period"}],"S231P:label":"pulse"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.pulse.amplitude","S231P:value":1000},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.pulse.period","S231P:value":50},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.resSig","@type":"http://example.org#Logical.Sources.Constant","S231P:accessSpecifier":"public","S231P:description":"Reset signal","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-80,\"y\":-40},{\"x\":-60,\"y\":-20}]}}}","S231P:hasInstance":{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.resSig.k"},"S231P:label":"resSig"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.resSig.k","S231P:value":false},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.resVal","@type":"http://example.org#Reals.Sources.Constant","S231P:accessSpecifier":"public","S231P:description":"Reset value","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-80,\"y\":0},{\"x\":-60,\"y\":20}]}}}","S231P:hasInstance":{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.resVal.k"},"S231P:label":"resVal"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.resVal.k","S231P:value":0}]}
+{
+  "@context": {
+    "S231P": "https://data.ashrae.org/S231P#"
+  },
+  "@graph": [
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale",
+      "@type": "S231P:Block",
+      "S231P:containsBlock": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.gai"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.gai1"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.pidNoSca"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.pidSca"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.pla1"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.pla2"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.pulse"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.resSig"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.resVal"
+        }
+      ],
+      "S231P:label": "PIDScale"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.gai",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Reals.MultiplyByParameter",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Gain to scale setpoint",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-40,\"y\":-60},{\"x\":-20,\"y\":-40}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.gai.k"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.gai.u"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.gai.y"
+        }
+      ],
+      "S231P:label": "gai"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.gai.k",
+      "S231P:value": "1/1000"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.gai.u",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.pulse.y"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.gai.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.pidNoSca.u_s"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.gai1",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Reals.MultiplyByParameter",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Gain to scale measured value",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":52,\"y\":-90},{\"x\":32,\"y\":-70}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.gai1.k"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.gai1.u"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.gai1.y"
+        }
+      ],
+      "S231P:label": "gai1"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.gai1.k",
+      "S231P:value": "1/1000"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.gai1.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.pidNoSca.u_m"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.pidNoSca",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Reals.PID",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "PID controller without scaling of control input",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":0,\"y\":-60},{\"x\":20,\"y\":-40}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.pidNoSca.controllerType"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.pidNoSca.k"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.pidNoSca.Td"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.pidNoSca.Ti"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.pidNoSca.u_m"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.pidNoSca.u_s"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.pidNoSca.y"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.pidNoSca.yMin"
+        }
+      ],
+      "S231P:label": "pidNoSca"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.pidNoSca.controllerType",
+      "S231P:value": "Buildings.Controls.OBC.CDL.Types.SimpleController.PID"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.pidNoSca.k",
+      "S231P:value": 2
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.pidNoSca.Td",
+      "S231P:value": 2
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.pidNoSca.Ti",
+      "S231P:value": 1
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.pidNoSca.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.pla2.u"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.pidNoSca.yMin",
+      "S231P:value": -1
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.pidSca",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Reals.PID",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "PID controller with scaling of control input",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":0,\"y\":40},{\"x\":20,\"y\":60}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.pidSca.controllerType"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.pidSca.k"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.pidSca.r"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.pidSca.Td"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.pidSca.Ti"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.pidSca.u_m"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.pidSca.u_s"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.pidSca.y"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.pidSca.yMin"
+        }
+      ],
+      "S231P:label": "pidSca"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.pidSca.controllerType",
+      "S231P:value": "Buildings.Controls.OBC.CDL.Types.SimpleController.PID"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.pidSca.k",
+      "S231P:value": 2
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.pidSca.r",
+      "S231P:value": 1000
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.pidSca.Td",
+      "S231P:value": 2
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.pidSca.Ti",
+      "S231P:value": 1
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.pidSca.yMin",
+      "S231P:value": -1
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.pla1",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Reals.IntegratorWithReset",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Plant model",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":40,\"y\":40},{\"x\":60,\"y\":60}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.pla1.k"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.pla1.trigger"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.pla1.u"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.pla1.y"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.pla1.y_reset_in"
+        }
+      ],
+      "S231P:label": "pla1"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.pla1.k",
+      "S231P:value": 1000
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.pla1.u",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.pidSca.y"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.pla1.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.pidSca.u_m"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.pla2",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Reals.IntegratorWithReset",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Plant model",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":40,\"y\":-60},{\"x\":60,\"y\":-40}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.pla2.k"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.pla2.trigger"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.pla2.u"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.pla2.y"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.pla2.y_reset_in"
+        }
+      ],
+      "S231P:label": "pla2"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.pla2.k",
+      "S231P:value": 1000
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.pla2.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.gai1.u"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.pla2.y_reset_in",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.resVal.y"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.pulse",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Sources.Pulse",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Setpoint",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-80,\"y\":40},{\"x\":-60,\"y\":60}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.pulse.amplitude"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.pulse.period"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.pulse.y"
+        }
+      ],
+      "S231P:label": "pulse"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.pulse.amplitude",
+      "S231P:value": 1000
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.pulse.period",
+      "S231P:value": 50
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.pulse.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.pidSca.u_s"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.resSig",
+      "@type": "http://example.org#Logical.Sources.Constant",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Reset signal",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-80,\"y\":-40},{\"x\":-60,\"y\":-20}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.resSig.k"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.resSig.y"
+        }
+      ],
+      "S231P:label": "resSig"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.resSig.k",
+      "S231P:value": false
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.resSig.y",
+      "S231P:isConnectedTo": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.pla1.trigger"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.pla2.trigger"
+        }
+      ]
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.resVal",
+      "@type": "http://example.org#Reals.Sources.Constant",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Reset value",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-80,\"y\":0},{\"x\":-60,\"y\":20}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.resVal.k"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.resVal.y"
+        }
+      ],
+      "S231P:label": "resVal"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.resVal.k",
+      "S231P:value": 0
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.resVal.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDScale.pla1.y_reset_in"
+      }
+    }
+  ]
+}

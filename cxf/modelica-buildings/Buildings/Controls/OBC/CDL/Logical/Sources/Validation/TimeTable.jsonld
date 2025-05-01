@@ -1,1 +1,102 @@
-{"@context":{"S231P":"https://data.ashrae.org/S231P#"},"@graph":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.TimeTable","@type":"S231P:ElementaryBlock","S231P:containsBlock":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.TimeTable.booTimTab"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.TimeTable.booTimTabOneRow"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.TimeTable.booTimTabTwi"}],"S231P:label":"TimeTable"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.TimeTable.booTimTab","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.TimeTable","S231P:accessSpecifier":"public","S231P:description":"Time table with boolean output","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-40,\"y\":40},{\"x\":-20,\"y\":60}]}}}","S231P:hasInstance":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.TimeTable.booTimTab.period"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.TimeTable.booTimTab.table"}],"S231P:label":"booTimTab"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.TimeTable.booTimTab.period","S231P:value":5},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.TimeTable.booTimTab.table","S231P:value":"[0,1,0;1.3,1,1;2.9,0,0;4,1,0]"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.TimeTable.booTimTabOneRow","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.TimeTable","S231P:accessSpecifier":"public","S231P:description":"Time table with boolean output for a single table row","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-40,\"y\":-60},{\"x\":-20,\"y\":-40}]}}}","S231P:hasInstance":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.TimeTable.booTimTabOneRow.period"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.TimeTable.booTimTabOneRow.table"}],"S231P:label":"booTimTabOneRow"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.TimeTable.booTimTabOneRow.period","S231P:value":1},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.TimeTable.booTimTabOneRow.table","S231P:value":"[0,1,0]"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.TimeTable.booTimTabTwi","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.TimeTable","S231P:accessSpecifier":"public","S231P:description":"Time table with boolean output, periodic repetition, and doubled time","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-40,\"y\":-10},{\"x\":-20,\"y\":10}]}}}","S231P:hasInstance":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.TimeTable.booTimTabTwi.period"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.TimeTable.booTimTabTwi.table"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.TimeTable.booTimTabTwi.timeScale"}],"S231P:label":"booTimTabTwi"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.TimeTable.booTimTabTwi.period","S231P:value":10},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.TimeTable.booTimTabTwi.table","S231P:value":"[0,1,0;1.3,1,1;2.9,0,0;4,1,0]"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.TimeTable.booTimTabTwi.timeScale","S231P:value":2}]}
+{
+  "@context": {
+    "S231P": "https://data.ashrae.org/S231P#"
+  },
+  "@graph": [
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.TimeTable",
+      "@type": "S231P:Block",
+      "S231P:containsBlock": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.TimeTable.booTimTab"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.TimeTable.booTimTabOneRow"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.TimeTable.booTimTabTwi"
+        }
+      ],
+      "S231P:label": "TimeTable"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.TimeTable.booTimTab",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.TimeTable",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Time table with boolean output",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-40,\"y\":40},{\"x\":-20,\"y\":60}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.TimeTable.booTimTab.period"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.TimeTable.booTimTab.table"
+        }
+      ],
+      "S231P:label": "booTimTab"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.TimeTable.booTimTab.period",
+      "S231P:value": 5
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.TimeTable.booTimTab.table",
+      "S231P:value": "[0,1,0;1.3,1,1;2.9,0,0;4,1,0]"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.TimeTable.booTimTabOneRow",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.TimeTable",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Time table with boolean output for a single table row",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-40,\"y\":-60},{\"x\":-20,\"y\":-40}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.TimeTable.booTimTabOneRow.period"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.TimeTable.booTimTabOneRow.table"
+        }
+      ],
+      "S231P:label": "booTimTabOneRow"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.TimeTable.booTimTabOneRow.period",
+      "S231P:value": 1
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.TimeTable.booTimTabOneRow.table",
+      "S231P:value": "[0,1,0]"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.TimeTable.booTimTabTwi",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.TimeTable",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Time table with boolean output, periodic repetition, and doubled time",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-40,\"y\":-10},{\"x\":-20,\"y\":10}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.TimeTable.booTimTabTwi.period"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.TimeTable.booTimTabTwi.table"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.TimeTable.booTimTabTwi.timeScale"
+        }
+      ],
+      "S231P:label": "booTimTabTwi"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.TimeTable.booTimTabTwi.period",
+      "S231P:value": 10
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.TimeTable.booTimTabTwi.table",
+      "S231P:value": "[0,1,0;1.3,1,1;2.9,0,0;4,1,0]"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.TimeTable.booTimTabTwi.timeScale",
+      "S231P:value": 2
+    }
+  ]
+}

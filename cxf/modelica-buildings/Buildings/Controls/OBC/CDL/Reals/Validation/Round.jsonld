@@ -1,1 +1,204 @@
-{"@context":{"S231P":"https://data.ashrae.org/S231P#"},"@graph":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.Round","@type":"S231P:ElementaryBlock","S231P:containsBlock":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.Round.gai"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.Round.gai1"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.Round.ramp1"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.Round.round1"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.Round.round2"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.Round.round3"}],"S231P:label":"Round"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.Round.gai","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.MultiplyByParameter","S231P:accessSpecifier":"public","S231P:description":"Gain","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":0,\"y\":-10},{\"x\":20,\"y\":10}]}}}","S231P:hasInstance":{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.Round.gai.k"},"S231P:label":"gai"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.Round.gai.k","S231P:value":{"@value":"0.1","@type":"http://www.w3.org/2001/XMLSchema#decimal"}},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.Round.gai1","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.MultiplyByParameter","S231P:accessSpecifier":"public","S231P:description":"Gain","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":0,\"y\":-60},{\"x\":20,\"y\":-40}]}}}","S231P:hasInstance":{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.Round.gai1.k"},"S231P:label":"gai1"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.Round.gai1.k","S231P:value":10},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.Round.ramp1","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Sources.Ramp","S231P:accessSpecifier":"public","S231P:description":"Block that generates ramp signal","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-60,\"y\":-10},{\"x\":-40,\"y\":10}]}}}","S231P:hasInstance":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.Round.ramp1.duration"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.Round.ramp1.height"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.Round.ramp1.offset"}],"S231P:label":"ramp1"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.Round.ramp1.duration","S231P:value":1},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.Round.ramp1.height","S231P:value":7},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.Round.ramp1.offset","S231P:value":{"@value":"-3.5","@type":"http://www.w3.org/2001/XMLSchema#decimal"}},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.Round.round1","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Round","S231P:accessSpecifier":"public","S231P:description":"Round real number to given digits","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":40,\"y\":40},{\"x\":60,\"y\":60}]}}}","S231P:hasInstance":{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.Round.round1.n"},"S231P:label":"round1"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.Round.round1.n","S231P:value":0},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.Round.round2","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Round","S231P:accessSpecifier":"public","S231P:description":"Round real number to given digits","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":40,\"y\":-10},{\"x\":60,\"y\":10}]}}}","S231P:hasInstance":{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.Round.round2.n"},"S231P:label":"round2"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.Round.round2.n","S231P:value":1},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.Round.round3","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Round","S231P:accessSpecifier":"public","S231P:description":"Round real number to given digits","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":40,\"y\":-60},{\"x\":60,\"y\":-40}]}}}","S231P:hasInstance":{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.Round.round3.n"},"S231P:label":"round3"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.Round.round3.n","S231P:value":-1}]}
+{
+  "@context": {
+    "S231P": "https://data.ashrae.org/S231P#"
+  },
+  "@graph": [
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Round",
+      "@type": "S231P:Block",
+      "S231P:containsBlock": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Round.gai"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Round.gai1"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Round.ramp1"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Round.round1"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Round.round2"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Round.round3"
+        }
+      ],
+      "S231P:label": "Round"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Round.gai",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Reals.MultiplyByParameter",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Gain",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":0,\"y\":-10},{\"x\":20,\"y\":10}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Round.gai.k"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Round.gai.u"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Round.gai.y"
+        }
+      ],
+      "S231P:label": "gai"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Round.gai.k",
+      "S231P:value": {
+        "@value": "0.1",
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Round.gai1",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Reals.MultiplyByParameter",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Gain",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":0,\"y\":-60},{\"x\":20,\"y\":-40}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Round.gai1.k"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Round.gai1.u"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Round.gai1.y"
+        }
+      ],
+      "S231P:label": "gai1"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Round.gai1.k",
+      "S231P:value": 10
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Round.ramp1",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Sources.Ramp",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Block that generates ramp signal",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-60,\"y\":-10},{\"x\":-40,\"y\":10}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Round.ramp1.duration"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Round.ramp1.height"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Round.ramp1.offset"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Round.ramp1.y"
+        }
+      ],
+      "S231P:label": "ramp1"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Round.ramp1.duration",
+      "S231P:value": 1
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Round.ramp1.height",
+      "S231P:value": 7
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Round.ramp1.offset",
+      "S231P:value": {
+        "@value": "-3.5",
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Round.ramp1.y",
+      "S231P:isConnectedTo": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Round.gai.u"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Round.gai1.u"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Round.round1.u"
+        }
+      ]
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Round.round1",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Round",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Round real number to given digits",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":40,\"y\":40},{\"x\":60,\"y\":60}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Round.round1.n"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Round.round1.u"
+        }
+      ],
+      "S231P:label": "round1"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Round.round1.n",
+      "S231P:value": 0
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Round.round2",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Round",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Round real number to given digits",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":40,\"y\":-10},{\"x\":60,\"y\":10}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Round.round2.n"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Round.round2.u"
+        }
+      ],
+      "S231P:label": "round2"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Round.round2.n",
+      "S231P:value": 1
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Round.round2.u",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Round.gai.y"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Round.round3",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Round",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Round real number to given digits",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":40,\"y\":-60},{\"x\":60,\"y\":-40}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Round.round3.n"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Round.round3.u"
+        }
+      ],
+      "S231P:label": "round3"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Round.round3.n",
+      "S231P:value": -1
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Round.round3.u",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Round.gai1.y"
+      }
+    }
+  ]
+}

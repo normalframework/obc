@@ -1,1 +1,352 @@
-{"@context":{"S231P":"https://data.ashrae.org/S231P#"},"@graph":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum","@type":"S231P:ElementaryBlock","S231P:containsBlock":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.add1"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.ramp1"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.ramp2"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.ramp3"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.reaToInt"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.reaToInt1"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.reaToInt2"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.round1"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.round2"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.round3"}],"S231P:label":"MultiSum"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.add1","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.MultiSum","S231P:accessSpecifier":"public","S231P:description":"Block that outputs the sum of the inputs","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":60,\"y\":-10},{\"x\":80,\"y\":10}]}}}","S231P:hasInstance":{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.add1.nin"},"S231P:label":"add1"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.add1.nin","S231P:value":3},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.ramp1","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Sources.Ramp","S231P:accessSpecifier":"public","S231P:description":"Block that generates ramp signal","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-80,\"y\":30},{\"x\":-60,\"y\":50}]}}}","S231P:hasInstance":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.ramp1.duration"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.ramp1.height"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.ramp1.offset"}],"S231P:label":"ramp1"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.ramp1.duration","S231P:value":1},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.ramp1.height","S231P:value":7},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.ramp1.offset","S231P:value":{"@value":"-3.5","@type":"http://www.w3.org/2001/XMLSchema#decimal"}},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.ramp2","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Sources.Ramp","S231P:accessSpecifier":"public","S231P:description":"Block that generates ramp signal","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-80,\"y\":-10},{\"x\":-60,\"y\":10}]}}}","S231P:hasInstance":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.ramp2.duration"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.ramp2.height"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.ramp2.offset"}],"S231P:label":"ramp2"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.ramp2.duration","S231P:value":1},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.ramp2.height","S231P:value":7},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.ramp2.offset","S231P:value":{"@value":"-0.5","@type":"http://www.w3.org/2001/XMLSchema#decimal"}},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.ramp3","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Sources.Ramp","S231P:accessSpecifier":"public","S231P:description":"Block that generates ramp signal","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-80,\"y\":-50},{\"x\":-60,\"y\":-30}]}}}","S231P:hasInstance":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.ramp3.duration"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.ramp3.height"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.ramp3.offset"}],"S231P:label":"ramp3"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.ramp3.duration","S231P:value":1},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.ramp3.height","S231P:value":7},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.ramp3.offset","S231P:value":{"@value":"-1.5","@type":"http://www.w3.org/2001/XMLSchema#decimal"}},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.reaToInt","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Conversions.RealToInteger","S231P:accessSpecifier":"public","S231P:description":"Convert real to integer","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":0,\"y\":30},{\"x\":20,\"y\":50}]}}}","S231P:label":"reaToInt"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.reaToInt1","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Conversions.RealToInteger","S231P:accessSpecifier":"public","S231P:description":"Convert real to integer","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":0,\"y\":-10},{\"x\":20,\"y\":10}]}}}","S231P:label":"reaToInt1"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.reaToInt2","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Conversions.RealToInteger","S231P:accessSpecifier":"public","S231P:description":"Convert real to integer","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":0,\"y\":-50},{\"x\":20,\"y\":-30}]}}}","S231P:label":"reaToInt2"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.round1","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Round","S231P:accessSpecifier":"public","S231P:description":"Round real number to given digits","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-40,\"y\":30},{\"x\":-20,\"y\":50}]}}}","S231P:hasInstance":{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.round1.n"},"S231P:label":"round1"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.round1.n","S231P:value":0},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.round2","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Round","S231P:accessSpecifier":"public","S231P:description":"Round real number to given digits","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-40,\"y\":-10},{\"x\":-20,\"y\":10}]}}}","S231P:hasInstance":{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.round2.n"},"S231P:label":"round2"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.round2.n","S231P:value":0},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.round3","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Round","S231P:accessSpecifier":"public","S231P:description":"Round real number to given digits","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-40,\"y\":-50},{\"x\":-20,\"y\":-30}]}}}","S231P:hasInstance":{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.round3.n"},"S231P:label":"round3"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.round3.n","S231P:value":0}]}
+{
+  "@context": {
+    "S231P": "https://data.ashrae.org/S231P#"
+  },
+  "@graph": [
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum",
+      "@type": "S231P:Block",
+      "S231P:containsBlock": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.add1"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.ramp1"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.ramp2"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.ramp3"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.reaToInt"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.reaToInt1"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.reaToInt2"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.round1"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.round2"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.round3"
+        }
+      ],
+      "S231P:label": "MultiSum"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.add1",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Integers.MultiSum",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Block that outputs the sum of the inputs",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":60,\"y\":-10},{\"x\":80,\"y\":10}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.add1.nin"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.add1.u%5B1%5D"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.add1.u%5B2%5D"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.add1.u%5B3%5D"
+        }
+      ],
+      "S231P:label": "add1"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.add1.nin",
+      "S231P:value": 3
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.ramp1",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Sources.Ramp",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Block that generates ramp signal",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-80,\"y\":30},{\"x\":-60,\"y\":50}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.ramp1.duration"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.ramp1.height"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.ramp1.offset"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.ramp1.y"
+        }
+      ],
+      "S231P:label": "ramp1"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.ramp1.duration",
+      "S231P:value": 1
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.ramp1.height",
+      "S231P:value": 7
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.ramp1.offset",
+      "S231P:value": {
+        "@value": "-3.5",
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.ramp1.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.round1.u"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.ramp2",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Sources.Ramp",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Block that generates ramp signal",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-80,\"y\":-10},{\"x\":-60,\"y\":10}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.ramp2.duration"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.ramp2.height"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.ramp2.offset"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.ramp2.y"
+        }
+      ],
+      "S231P:label": "ramp2"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.ramp2.duration",
+      "S231P:value": 1
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.ramp2.height",
+      "S231P:value": 7
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.ramp2.offset",
+      "S231P:value": {
+        "@value": "-0.5",
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.ramp2.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.round2.u"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.ramp3",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Sources.Ramp",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Block that generates ramp signal",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-80,\"y\":-50},{\"x\":-60,\"y\":-30}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.ramp3.duration"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.ramp3.height"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.ramp3.offset"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.ramp3.y"
+        }
+      ],
+      "S231P:label": "ramp3"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.ramp3.duration",
+      "S231P:value": 1
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.ramp3.height",
+      "S231P:value": 7
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.ramp3.offset",
+      "S231P:value": {
+        "@value": "-1.5",
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.ramp3.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.round3.u"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.reaToInt",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Conversions.RealToInteger",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Convert real to integer",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":0,\"y\":30},{\"x\":20,\"y\":50}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.reaToInt.u"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.reaToInt.y"
+        }
+      ],
+      "S231P:label": "reaToInt"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.reaToInt.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.add1.u%5B1%5D"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.reaToInt1",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Conversions.RealToInteger",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Convert real to integer",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":0,\"y\":-10},{\"x\":20,\"y\":10}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.reaToInt1.u"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.reaToInt1.y"
+        }
+      ],
+      "S231P:label": "reaToInt1"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.reaToInt1.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.add1.u%5B2%5D"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.reaToInt2",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Conversions.RealToInteger",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Convert real to integer",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":0,\"y\":-50},{\"x\":20,\"y\":-30}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.reaToInt2.u"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.reaToInt2.y"
+        }
+      ],
+      "S231P:label": "reaToInt2"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.reaToInt2.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.add1.u%5B3%5D"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.round1",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Round",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Round real number to given digits",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-40,\"y\":30},{\"x\":-20,\"y\":50}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.round1.n"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.round1.u"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.round1.y"
+        }
+      ],
+      "S231P:label": "round1"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.round1.n",
+      "S231P:value": 0
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.round1.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.reaToInt.u"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.round2",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Round",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Round real number to given digits",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-40,\"y\":-10},{\"x\":-20,\"y\":10}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.round2.n"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.round2.u"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.round2.y"
+        }
+      ],
+      "S231P:label": "round2"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.round2.n",
+      "S231P:value": 0
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.round2.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.reaToInt1.u"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.round3",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Round",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Round real number to given digits",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-40,\"y\":-50},{\"x\":-20,\"y\":-30}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.round3.n"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.round3.u"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.round3.y"
+        }
+      ],
+      "S231P:label": "round3"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.round3.n",
+      "S231P:value": 0
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.round3.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.MultiSum.reaToInt2.u"
+      }
+    }
+  ]
+}

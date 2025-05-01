@@ -1,1 +1,177 @@
-{"@context":{"S231P":"https://data.ashrae.org/S231P#"},"@graph":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.Timer","@type":"S231P:ElementaryBlock","S231P:containsBlock":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.Timer.booPul"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.Timer.booPul1"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.Timer.noThr"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.Timer.thrTim"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.Timer.thrTim1"}],"S231P:label":"Timer"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.Timer.booPul","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Pulse","S231P:accessSpecifier":"public","S231P:description":"Block that outputs cyclic on and off","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-40,\"y\":10},{\"x\":-20,\"y\":30}]}}}","S231P:hasInstance":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.Timer.booPul.period"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.Timer.booPul.width"}],"S231P:label":"booPul"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.Timer.booPul.period","S231P:isFinal":true,"S231P:value":2},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.Timer.booPul.width","S231P:isFinal":true,"S231P:value":{"@value":"0.7","@type":"http://www.w3.org/2001/XMLSchema#decimal"}},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.Timer.booPul1","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Pulse","S231P:accessSpecifier":"public","S231P:description":"Block that outputs cyclic on and off","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-40,\"y\":-70},{\"x\":-20,\"y\":-50}]}}}","S231P:hasInstance":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.Timer.booPul1.period"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.Timer.booPul1.shift"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.Timer.booPul1.width"}],"S231P:label":"booPul1"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.Timer.booPul1.period","S231P:isFinal":true,"S231P:value":2},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.Timer.booPul1.shift","S231P:isFinal":true,"S231P:value":-1},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.Timer.booPul1.width","S231P:isFinal":true,"S231P:value":{"@value":"0.7","@type":"http://www.w3.org/2001/XMLSchema#decimal"}},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.Timer.noThr","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Timer","S231P:accessSpecifier":"public","S231P:description":"Timer that do not compare threshold","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":20,\"y\":10},{\"x\":40,\"y\":30}]}}}","S231P:label":"noThr"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.Timer.thrTim","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Timer","S231P:accessSpecifier":"public","S231P:description":"Timer that compares threshold","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":20,\"y\":-30},{\"x\":40,\"y\":-10}]}}}","S231P:hasInstance":{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.Timer.thrTim.t"},"S231P:label":"thrTim"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.Timer.thrTim.t","S231P:isFinal":true,"S231P:value":{"@value":"0.3","@type":"http://www.w3.org/2001/XMLSchema#decimal"}},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.Timer.thrTim1","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Timer","S231P:accessSpecifier":"public","S231P:description":"Timer that compares threshold","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":20,\"y\":-70},{\"x\":40,\"y\":-50}]}}}","S231P:hasInstance":{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.Timer.thrTim1.t"},"S231P:label":"thrTim1"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.Timer.thrTim1.t","S231P:isFinal":true,"S231P:value":{"@value":"0.3","@type":"http://www.w3.org/2001/XMLSchema#decimal"}}]}
+{
+  "@context": {
+    "S231P": "https://data.ashrae.org/S231P#"
+  },
+  "@graph": [
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.Timer",
+      "@type": "S231P:Block",
+      "S231P:containsBlock": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.Timer.booPul"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.Timer.booPul1"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.Timer.noThr"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.Timer.thrTim"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.Timer.thrTim1"
+        }
+      ],
+      "S231P:label": "Timer"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.Timer.booPul",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Pulse",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Block that outputs cyclic on and off",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-40,\"y\":10},{\"x\":-20,\"y\":30}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.Timer.booPul.period"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.Timer.booPul.width"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.Timer.booPul.y"
+        }
+      ],
+      "S231P:label": "booPul"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.Timer.booPul.period",
+      "S231P:isFinal": true,
+      "S231P:value": 2
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.Timer.booPul.width",
+      "S231P:isFinal": true,
+      "S231P:value": {
+        "@value": "0.7",
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.Timer.booPul.y",
+      "S231P:isConnectedTo": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.Timer.noThr.u"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.Timer.thrTim.u"
+        }
+      ]
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.Timer.booPul1",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Pulse",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Block that outputs cyclic on and off",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-40,\"y\":-70},{\"x\":-20,\"y\":-50}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.Timer.booPul1.period"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.Timer.booPul1.shift"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.Timer.booPul1.width"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.Timer.booPul1.y"
+        }
+      ],
+      "S231P:label": "booPul1"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.Timer.booPul1.period",
+      "S231P:isFinal": true,
+      "S231P:value": 2
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.Timer.booPul1.shift",
+      "S231P:isFinal": true,
+      "S231P:value": -1
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.Timer.booPul1.width",
+      "S231P:isFinal": true,
+      "S231P:value": {
+        "@value": "0.7",
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.Timer.booPul1.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.Timer.thrTim1.u"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.Timer.noThr",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Timer",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Timer that do not compare threshold",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":20,\"y\":10},{\"x\":40,\"y\":30}]}}}",
+      "S231P:hasInstance": {
+        "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.Timer.noThr.u"
+      },
+      "S231P:label": "noThr"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.Timer.thrTim",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Timer",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Timer that compares threshold",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":20,\"y\":-30},{\"x\":40,\"y\":-10}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.Timer.thrTim.t"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.Timer.thrTim.u"
+        }
+      ],
+      "S231P:label": "thrTim"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.Timer.thrTim.t",
+      "S231P:isFinal": true,
+      "S231P:value": {
+        "@value": "0.3",
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.Timer.thrTim1",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Timer",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Timer that compares threshold",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":20,\"y\":-70},{\"x\":40,\"y\":-50}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.Timer.thrTim1.t"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.Timer.thrTim1.u"
+        }
+      ],
+      "S231P:label": "thrTim1"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.Timer.thrTim1.t",
+      "S231P:isFinal": true,
+      "S231P:value": {
+        "@value": "0.3",
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    }
+  ]
+}

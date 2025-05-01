@@ -1,1 +1,189 @@
-{"@context":{"S231P":"https://data.ashrae.org/S231P#"},"@graph":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.SampleTriggerPositiveStartTime","@type":"S231P:ElementaryBlock","S231P:containsBlock":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.SampleTriggerPositiveStartTime.ramp"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.SampleTriggerPositiveStartTime.samTri"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.SampleTriggerPositiveStartTime.samTri1"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.SampleTriggerPositiveStartTime.triggeredSampler"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.SampleTriggerPositiveStartTime.triggeredSampler1"}],"S231P:label":"SampleTriggerPositiveStartTime"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.SampleTriggerPositiveStartTime.ramp","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Sources.Ramp","S231P:accessSpecifier":"public","S231P:description":"Block that generates ramp signal","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-80,\"y\":60},{\"x\":-60,\"y\":80}]}}}","S231P:hasInstance":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.SampleTriggerPositiveStartTime.ramp.duration"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.SampleTriggerPositiveStartTime.ramp.height"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.SampleTriggerPositiveStartTime.ramp.offset"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.SampleTriggerPositiveStartTime.ramp.startTime"}],"S231P:label":"ramp"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.SampleTriggerPositiveStartTime.ramp.duration","S231P:value":5},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.SampleTriggerPositiveStartTime.ramp.height","S231P:value":20},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.SampleTriggerPositiveStartTime.ramp.offset","S231P:value":0},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.SampleTriggerPositiveStartTime.ramp.startTime","S231P:value":1},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.SampleTriggerPositiveStartTime.samTri","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.SampleTrigger","S231P:accessSpecifier":"public","S231P:description":"Block that generates sample trigger signal","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-30,\"y\":20},{\"x\":-10,\"y\":40}]}}}","S231P:hasInstance":{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.SampleTriggerPositiveStartTime.samTri.period"},"S231P:label":"samTri"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.SampleTriggerPositiveStartTime.samTri.period","S231P:value":{"@value":"0.5","@type":"http://www.w3.org/2001/XMLSchema#decimal"}},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.SampleTriggerPositiveStartTime.samTri1","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.SampleTrigger","S231P:accessSpecifier":"public","S231P:description":"Block that generates sample trigger signal","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-30,\"y\":-80},{\"x\":-10,\"y\":-60}]}}}","S231P:hasInstance":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.SampleTriggerPositiveStartTime.samTri1.period"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.SampleTriggerPositiveStartTime.samTri1.shift"}],"S231P:label":"samTri1"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.SampleTriggerPositiveStartTime.samTri1.period","S231P:value":{"@value":"0.5","@type":"http://www.w3.org/2001/XMLSchema#decimal"}},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.SampleTriggerPositiveStartTime.samTri1.shift","S231P:value":{"@value":"0.3","@type":"http://www.w3.org/2001/XMLSchema#decimal"}},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.SampleTriggerPositiveStartTime.triggeredSampler","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Discrete.TriggeredSampler","S231P:accessSpecifier":"public","S231P:description":"Triggered sampler","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":20,\"y\":60},{\"x\":40,\"y\":80}]}}}","S231P:label":"triggeredSampler"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.SampleTriggerPositiveStartTime.triggeredSampler1","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Discrete.TriggeredSampler","S231P:accessSpecifier":"public","S231P:description":"Triggered sampler","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":20,\"y\":-40},{\"x\":40,\"y\":-20}]}}}","S231P:hasInstance":{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.SampleTriggerPositiveStartTime.triggeredSampler1.y_start"},"S231P:label":"triggeredSampler1"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.SampleTriggerPositiveStartTime.triggeredSampler1.y_start","S231P:value":-2}]}
+{
+  "@context": {
+    "S231P": "https://data.ashrae.org/S231P#"
+  },
+  "@graph": [
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.SampleTriggerPositiveStartTime",
+      "@type": "S231P:Block",
+      "S231P:containsBlock": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.SampleTriggerPositiveStartTime.ramp"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.SampleTriggerPositiveStartTime.samTri"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.SampleTriggerPositiveStartTime.samTri1"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.SampleTriggerPositiveStartTime.triggeredSampler"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.SampleTriggerPositiveStartTime.triggeredSampler1"
+        }
+      ],
+      "S231P:label": "SampleTriggerPositiveStartTime"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.SampleTriggerPositiveStartTime.ramp",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Sources.Ramp",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Block that generates ramp signal",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-80,\"y\":60},{\"x\":-60,\"y\":80}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.SampleTriggerPositiveStartTime.ramp.duration"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.SampleTriggerPositiveStartTime.ramp.height"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.SampleTriggerPositiveStartTime.ramp.offset"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.SampleTriggerPositiveStartTime.ramp.startTime"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.SampleTriggerPositiveStartTime.ramp.y"
+        }
+      ],
+      "S231P:label": "ramp"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.SampleTriggerPositiveStartTime.ramp.duration",
+      "S231P:value": 5
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.SampleTriggerPositiveStartTime.ramp.height",
+      "S231P:value": 20
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.SampleTriggerPositiveStartTime.ramp.offset",
+      "S231P:value": 0
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.SampleTriggerPositiveStartTime.ramp.startTime",
+      "S231P:value": 1
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.SampleTriggerPositiveStartTime.ramp.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.SampleTriggerPositiveStartTime.triggeredSampler.u"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.SampleTriggerPositiveStartTime.samTri",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.SampleTrigger",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Block that generates sample trigger signal",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-30,\"y\":20},{\"x\":-10,\"y\":40}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.SampleTriggerPositiveStartTime.samTri.period"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.SampleTriggerPositiveStartTime.samTri.y"
+        }
+      ],
+      "S231P:label": "samTri"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.SampleTriggerPositiveStartTime.samTri.period",
+      "S231P:value": {
+        "@value": "0.5",
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.SampleTriggerPositiveStartTime.samTri.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.SampleTriggerPositiveStartTime.triggeredSampler.trigger"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.SampleTriggerPositiveStartTime.samTri1",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.SampleTrigger",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Block that generates sample trigger signal",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-30,\"y\":-80},{\"x\":-10,\"y\":-60}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.SampleTriggerPositiveStartTime.samTri1.period"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.SampleTriggerPositiveStartTime.samTri1.shift"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.SampleTriggerPositiveStartTime.samTri1.y"
+        }
+      ],
+      "S231P:label": "samTri1"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.SampleTriggerPositiveStartTime.samTri1.period",
+      "S231P:value": {
+        "@value": "0.5",
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.SampleTriggerPositiveStartTime.samTri1.shift",
+      "S231P:value": {
+        "@value": "0.3",
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.SampleTriggerPositiveStartTime.samTri1.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.SampleTriggerPositiveStartTime.triggeredSampler1.trigger"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.SampleTriggerPositiveStartTime.triggeredSampler",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.TriggeredSampler",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Triggered sampler",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":20,\"y\":60},{\"x\":40,\"y\":80}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.SampleTriggerPositiveStartTime.triggeredSampler.trigger"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.SampleTriggerPositiveStartTime.triggeredSampler.u"
+        }
+      ],
+      "S231P:label": "triggeredSampler"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.SampleTriggerPositiveStartTime.triggeredSampler1",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.TriggeredSampler",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Triggered sampler",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":20,\"y\":-40},{\"x\":40,\"y\":-20}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.SampleTriggerPositiveStartTime.triggeredSampler1.trigger"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.SampleTriggerPositiveStartTime.triggeredSampler1.u"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.SampleTriggerPositiveStartTime.triggeredSampler1.y_start"
+        }
+      ],
+      "S231P:label": "triggeredSampler1"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.SampleTriggerPositiveStartTime.triggeredSampler1.u",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.SampleTriggerPositiveStartTime.ramp.y"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.SampleTriggerPositiveStartTime.triggeredSampler1.y_start",
+      "S231P:value": -2
+    }
+  ]
+}

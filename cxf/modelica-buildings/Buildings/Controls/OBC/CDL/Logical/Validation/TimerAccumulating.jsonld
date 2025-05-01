@@ -1,1 +1,242 @@
-{"@context":{"S231P":"https://data.ashrae.org/S231P#"},"@graph":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulating","@type":"S231P:ElementaryBlock","S231P:containsBlock":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulating.booPul"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulating.con"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulating.noThr"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulating.noThrWitRes"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulating.resTim"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulating.thrTim"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulating.thrTimWitRes"}],"S231P:label":"TimerAccumulating"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulating.booPul","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Pulse","S231P:accessSpecifier":"public","S231P:description":"Block that outputs cyclic on and off","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-80,\"y\":30},{\"x\":-60,\"y\":50}]}}}","S231P:hasInstance":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulating.booPul.period"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulating.booPul.width"}],"S231P:label":"booPul"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulating.booPul.period","S231P:isFinal":true,"S231P:value":2},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulating.booPul.width","S231P:isFinal":true,"S231P:value":{"@value":"0.5","@type":"http://www.w3.org/2001/XMLSchema#decimal"}},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulating.con","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Constant","S231P:accessSpecifier":"public","S231P:description":"Constant false","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-80,\"y\":-70},{\"x\":-60,\"y\":-50}]}}}","S231P:hasInstance":{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulating.con.k"},"S231P:label":"con"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulating.con.k","S231P:isFinal":true,"S231P:value":false},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulating.noThr","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.TimerAccumulating","S231P:accessSpecifier":"public","S231P:description":"Accumulating timer that do not compare threshold","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-20,\"y\":10},{\"x\":0,\"y\":30}]}}}","S231P:label":"noThr"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulating.noThrWitRes","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.TimerAccumulating","S231P:accessSpecifier":"public","S231P:description":"Accumulating timer that could reset the output","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":40,\"y\":10},{\"x\":60,\"y\":30}]}}}","S231P:label":"noThrWitRes"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulating.resTim","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Pulse","S231P:accessSpecifier":"public","S231P:description":"Block that outputs cyclic on and off, for resetting timer","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-20,\"y\":-70},{\"x\":0,\"y\":-50}]}}}","S231P:hasInstance":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulating.resTim.period"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulating.resTim.width"}],"S231P:label":"resTim"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulating.resTim.period","S231P:isFinal":true,"S231P:value":{"@value":"3.5","@type":"http://www.w3.org/2001/XMLSchema#decimal"}},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulating.resTim.width","S231P:isFinal":true,"S231P:value":{"@value":"0.5","@type":"http://www.w3.org/2001/XMLSchema#decimal"}},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulating.thrTim","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.TimerAccumulating","S231P:accessSpecifier":"public","S231P:description":"Accumulating timer that compares threshold","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-20,\"y\":-30},{\"x\":0,\"y\":-10}]}}}","S231P:hasInstance":{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulating.thrTim.t"},"S231P:label":"thrTim"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulating.thrTim.t","S231P:isFinal":true,"S231P:value":1},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulating.thrTimWitRes","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.TimerAccumulating","S231P:accessSpecifier":"public","S231P:description":"Accumulating timer that could reset the output and the output compares with threshold","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":40,\"y\":-30},{\"x\":60,\"y\":-10}]}}}","S231P:hasInstance":{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulating.thrTimWitRes.t"},"S231P:label":"thrTimWitRes"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulating.thrTimWitRes.t","S231P:isFinal":true,"S231P:value":1}]}
+{
+  "@context": {
+    "S231P": "https://data.ashrae.org/S231P#"
+  },
+  "@graph": [
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulating",
+      "@type": "S231P:Block",
+      "S231P:containsBlock": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulating.booPul"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulating.con"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulating.noThr"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulating.noThrWitRes"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulating.resTim"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulating.thrTim"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulating.thrTimWitRes"
+        }
+      ],
+      "S231P:label": "TimerAccumulating"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulating.booPul",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Pulse",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Block that outputs cyclic on and off",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-80,\"y\":30},{\"x\":-60,\"y\":50}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulating.booPul.period"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulating.booPul.width"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulating.booPul.y"
+        }
+      ],
+      "S231P:label": "booPul"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulating.booPul.period",
+      "S231P:isFinal": true,
+      "S231P:value": 2
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulating.booPul.width",
+      "S231P:isFinal": true,
+      "S231P:value": {
+        "@value": "0.5",
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulating.booPul.y",
+      "S231P:isConnectedTo": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulating.noThr.u"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulating.noThrWitRes.u"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulating.thrTim.u"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulating.thrTimWitRes.u"
+        }
+      ]
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulating.con",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Constant",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Constant false",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-80,\"y\":-70},{\"x\":-60,\"y\":-50}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulating.con.k"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulating.con.y"
+        }
+      ],
+      "S231P:label": "con"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulating.con.k",
+      "S231P:isFinal": true,
+      "S231P:value": false
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulating.con.y",
+      "S231P:isConnectedTo": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulating.noThr.reset"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulating.thrTim.reset"
+        }
+      ]
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulating.noThr",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Logical.TimerAccumulating",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Accumulating timer that do not compare threshold",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-20,\"y\":10},{\"x\":0,\"y\":30}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulating.noThr.reset"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulating.noThr.u"
+        }
+      ],
+      "S231P:label": "noThr"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulating.noThrWitRes",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Logical.TimerAccumulating",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Accumulating timer that could reset the output",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":40,\"y\":10},{\"x\":60,\"y\":30}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulating.noThrWitRes.reset"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulating.noThrWitRes.u"
+        }
+      ],
+      "S231P:label": "noThrWitRes"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulating.resTim",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Pulse",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Block that outputs cyclic on and off, for resetting timer",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-20,\"y\":-70},{\"x\":0,\"y\":-50}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulating.resTim.period"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulating.resTim.width"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulating.resTim.y"
+        }
+      ],
+      "S231P:label": "resTim"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulating.resTim.period",
+      "S231P:isFinal": true,
+      "S231P:value": {
+        "@value": "3.5",
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulating.resTim.width",
+      "S231P:isFinal": true,
+      "S231P:value": {
+        "@value": "0.5",
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulating.resTim.y",
+      "S231P:isConnectedTo": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulating.noThrWitRes.reset"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulating.thrTimWitRes.reset"
+        }
+      ]
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulating.thrTim",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Logical.TimerAccumulating",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Accumulating timer that compares threshold",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-20,\"y\":-30},{\"x\":0,\"y\":-10}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulating.thrTim.reset"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulating.thrTim.t"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulating.thrTim.u"
+        }
+      ],
+      "S231P:label": "thrTim"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulating.thrTim.t",
+      "S231P:isFinal": true,
+      "S231P:value": 1
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulating.thrTimWitRes",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Logical.TimerAccumulating",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Accumulating timer that could reset the output and the output compares with threshold",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":40,\"y\":-30},{\"x\":60,\"y\":-10}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulating.thrTimWitRes.reset"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulating.thrTimWitRes.t"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulating.thrTimWitRes.u"
+        }
+      ],
+      "S231P:label": "thrTimWitRes"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulating.thrTimWitRes.t",
+      "S231P:isFinal": true,
+      "S231P:value": 1
+    }
+  ]
+}

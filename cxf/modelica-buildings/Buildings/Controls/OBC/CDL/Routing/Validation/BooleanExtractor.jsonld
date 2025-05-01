@@ -1,1 +1,556 @@
-{"@context":{"S231P":"https://data.ashrae.org/S231P#"},"@graph":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor","@type":"S231P:ElementaryBlock","S231P:containsBlock":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.booPul"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.booPul1"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.con"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.con1"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.conInt"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.conInt1"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.conInt2"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.extIndBoo"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.extIndBoo1"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.extIndBoo2"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.extIndBoo3"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.extIndBoo4"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.intPul"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.intPul1"}],"S231P:label":"BooleanExtractor"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.booPul","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Pulse","S231P:accessSpecifier":"public","S231P:description":"Generate pulse signal of type boolean","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-80,\"y\":20},{\"x\":-60,\"y\":40}]}}}","S231P:hasInstance":{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.booPul.period"},"S231P:label":"booPul"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.booPul.period","S231P:isFinal":true,"S231P:value":{"@value":"0.2","@type":"http://www.w3.org/2001/XMLSchema#decimal"}},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.booPul1","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Pulse","S231P:accessSpecifier":"public","S231P:description":"Generate pulse signal of type boolean","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-80,\"y\":-30},{\"x\":-60,\"y\":-10}]}}}","S231P:hasInstance":{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.booPul1.period"},"S231P:label":"booPul1"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.booPul1.period","S231P:isFinal":true,"S231P:value":{"@value":"0.3","@type":"http://www.w3.org/2001/XMLSchema#decimal"}},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.con","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Constant","S231P:accessSpecifier":"public","S231P:description":"Block that outputs false signal","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-80,\"y\":-80},{\"x\":-60,\"y\":-60}]}}}","S231P:hasInstance":{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.con.k"},"S231P:label":"con"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.con.k","S231P:isFinal":true,"S231P:value":false},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.con1","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Constant","S231P:accessSpecifier":"public","S231P:description":"Block that outputs true signal","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-80,\"y\":70},{\"x\":-60,\"y\":90}]}}}","S231P:hasInstance":{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.con1.k"},"S231P:label":"con1"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.con1.k","S231P:isFinal":true,"S231P:value":true},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.conInt","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Sources.Constant","S231P:accessSpecifier":"public","S231P:description":"Index to extract input signal","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":0,\"y\":60},{\"x\":20,\"y\":80}]}}}","S231P:hasInstance":{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.conInt.k"},"S231P:label":"conInt"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.conInt.k","S231P:isFinal":true,"S231P:value":2},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.conInt1","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Sources.Constant","S231P:accessSpecifier":"public","S231P:description":"Index to extract input signal","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":0,\"y\":20},{\"x\":20,\"y\":40}]}}}","S231P:hasInstance":{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.conInt1.k"},"S231P:label":"conInt1"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.conInt1.k","S231P:value":6},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.conInt2","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Sources.Constant","S231P:accessSpecifier":"public","S231P:description":"Index to extract input signal","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":0,\"y\":-20},{\"x\":20,\"y\":0}]}}}","S231P:hasInstance":{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.conInt2.k"},"S231P:label":"conInt2"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.conInt2.k","S231P:value":0},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.extIndBoo","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.BooleanExtractor","S231P:accessSpecifier":"public","S231P:description":"Extracts signal from an input signal vector","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":40,\"y\":80},{\"x\":60,\"y\":100}]}}}","S231P:hasInstance":{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.extIndBoo.nin"},"S231P:label":"extIndBoo"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.extIndBoo.nin","S231P:isFinal":true,"S231P:value":4},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.extIndBoo1","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.BooleanExtractor","S231P:accessSpecifier":"public","S231P:description":"Extracts signal from an input signal vector when the extract index is out of the upper range","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":40,\"y\":40},{\"x\":60,\"y\":60}]}}}","S231P:hasInstance":{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.extIndBoo1.nin"},"S231P:label":"extIndBoo1"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.extIndBoo1.nin","S231P:isFinal":true,"S231P:value":4},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.extIndBoo2","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.BooleanExtractor","S231P:accessSpecifier":"public","S231P:description":"Extracts signal from an input signal vector when the extract index is out of the lower range","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":40,\"y\":0},{\"x\":60,\"y\":20}]}}}","S231P:hasInstance":{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.extIndBoo2.nin"},"S231P:label":"extIndBoo2"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.extIndBoo2.nin","S231P:isFinal":true,"S231P:value":4},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.extIndBoo3","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.BooleanExtractor","S231P:accessSpecifier":"public","S231P:description":"Extracts signal from an input signal vector when the extract index changes from within range to out of range","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":40,\"y\":-40},{\"x\":60,\"y\":-20}]}}}","S231P:hasInstance":{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.extIndBoo3.nin"},"S231P:label":"extIndBoo3"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.extIndBoo3.nin","S231P:isFinal":true,"S231P:value":4},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.extIndBoo4","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.BooleanExtractor","S231P:accessSpecifier":"public","S231P:description":"Extracts signal from an input signal vector when the extract index changes from out of range to within range","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":40,\"y\":-80},{\"x\":60,\"y\":-60}]}}}","S231P:hasInstance":{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.extIndBoo4.nin"},"S231P:label":"extIndBoo4"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.extIndBoo4.nin","S231P:isFinal":true,"S231P:value":4},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.intPul","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Sources.Pulse","S231P:accessSpecifier":"public","S231P:description":"Generate pulse signal of type Integer","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":0,\"y\":-60},{\"x\":20,\"y\":-40}]}}}","S231P:hasInstance":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.intPul.amplitude"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.intPul.offset"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.intPul.period"}],"S231P:label":"intPul"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.intPul.amplitude","S231P:isFinal":true,"S231P:value":3},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.intPul.offset","S231P:isFinal":true,"S231P:value":-1},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.intPul.period","S231P:isFinal":true,"S231P:value":1},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.intPul1","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Sources.Pulse","S231P:accessSpecifier":"public","S231P:description":"Generate pulse signal of type Integer","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":0,\"y\":-100},{\"x\":20,\"y\":-80}]}}}","S231P:hasInstance":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.intPul1.amplitude"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.intPul1.offset"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.intPul1.period"}],"S231P:label":"intPul1"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.intPul1.amplitude","S231P:isFinal":true,"S231P:value":-3},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.intPul1.offset","S231P:isFinal":true,"S231P:value":3},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.intPul1.period","S231P:isFinal":true,"S231P:value":1}]}
+{
+  "@context": {
+    "S231P": "https://data.ashrae.org/S231P#"
+  },
+  "@graph": [
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor",
+      "@type": "S231P:Block",
+      "S231P:containsBlock": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.booPul"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.booPul1"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.con"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.con1"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.conInt"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.conInt1"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.conInt2"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.extIndBoo"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.extIndBoo1"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.extIndBoo2"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.extIndBoo3"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.extIndBoo4"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.intPul"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.intPul1"
+        }
+      ],
+      "S231P:label": "BooleanExtractor"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.booPul",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Pulse",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Generate pulse signal of type boolean",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-80,\"y\":20},{\"x\":-60,\"y\":40}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.booPul.period"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.booPul.y"
+        }
+      ],
+      "S231P:label": "booPul"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.booPul.period",
+      "S231P:isFinal": true,
+      "S231P:value": {
+        "@value": "0.2",
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.booPul.y",
+      "S231P:isConnectedTo": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.extIndBoo.u%5B2%5D"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.extIndBoo1.u%5B2%5D"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.extIndBoo2.u%5B2%5D"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.extIndBoo3.u%5B2%5D"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.extIndBoo4.u%5B2%5D"
+        }
+      ]
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.booPul1",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Pulse",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Generate pulse signal of type boolean",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-80,\"y\":-30},{\"x\":-60,\"y\":-10}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.booPul1.period"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.booPul1.y"
+        }
+      ],
+      "S231P:label": "booPul1"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.booPul1.period",
+      "S231P:isFinal": true,
+      "S231P:value": {
+        "@value": "0.3",
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.booPul1.y",
+      "S231P:isConnectedTo": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.extIndBoo.u%5B3%5D"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.extIndBoo1.u%5B3%5D"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.extIndBoo2.u%5B3%5D"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.extIndBoo3.u%5B3%5D"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.extIndBoo4.u%5B3%5D"
+        }
+      ]
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.con",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Constant",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Block that outputs false signal",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-80,\"y\":-80},{\"x\":-60,\"y\":-60}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.con.k"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.con.y"
+        }
+      ],
+      "S231P:label": "con"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.con.k",
+      "S231P:isFinal": true,
+      "S231P:value": false
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.con.y",
+      "S231P:isConnectedTo": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.extIndBoo.u%5B4%5D"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.extIndBoo1.u%5B4%5D"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.extIndBoo2.u%5B4%5D"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.extIndBoo3.u%5B4%5D"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.extIndBoo4.u%5B4%5D"
+        }
+      ]
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.con1",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Constant",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Block that outputs true signal",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-80,\"y\":70},{\"x\":-60,\"y\":90}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.con1.k"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.con1.y"
+        }
+      ],
+      "S231P:label": "con1"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.con1.k",
+      "S231P:isFinal": true,
+      "S231P:value": true
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.con1.y",
+      "S231P:isConnectedTo": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.extIndBoo.u%5B1%5D"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.extIndBoo1.u%5B1%5D"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.extIndBoo2.u%5B1%5D"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.extIndBoo3.u%5B1%5D"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.extIndBoo4.u%5B1%5D"
+        }
+      ]
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.conInt",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Sources.Constant",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Index to extract input signal",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":0,\"y\":60},{\"x\":20,\"y\":80}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.conInt.k"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.conInt.y"
+        }
+      ],
+      "S231P:label": "conInt"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.conInt.k",
+      "S231P:isFinal": true,
+      "S231P:value": 2
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.conInt.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.extIndBoo.index"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.conInt1",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Sources.Constant",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Index to extract input signal",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":0,\"y\":20},{\"x\":20,\"y\":40}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.conInt1.k"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.conInt1.y"
+        }
+      ],
+      "S231P:label": "conInt1"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.conInt1.k",
+      "S231P:value": 6
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.conInt1.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.extIndBoo1.index"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.conInt2",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Sources.Constant",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Index to extract input signal",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":0,\"y\":-20},{\"x\":20,\"y\":0}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.conInt2.k"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.conInt2.y"
+        }
+      ],
+      "S231P:label": "conInt2"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.conInt2.k",
+      "S231P:value": 0
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.conInt2.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.extIndBoo2.index"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.extIndBoo",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Routing.BooleanExtractor",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Extracts signal from an input signal vector",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":40,\"y\":80},{\"x\":60,\"y\":100}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.extIndBoo.index"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.extIndBoo.nin"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.extIndBoo.u%5B1%5D"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.extIndBoo.u%5B2%5D"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.extIndBoo.u%5B3%5D"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.extIndBoo.u%5B4%5D"
+        }
+      ],
+      "S231P:label": "extIndBoo"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.extIndBoo.nin",
+      "S231P:isFinal": true,
+      "S231P:value": 4
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.extIndBoo1",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Routing.BooleanExtractor",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Extracts signal from an input signal vector when the extract index is out of the upper range",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":40,\"y\":40},{\"x\":60,\"y\":60}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.extIndBoo1.index"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.extIndBoo1.nin"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.extIndBoo1.u%5B1%5D"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.extIndBoo1.u%5B2%5D"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.extIndBoo1.u%5B3%5D"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.extIndBoo1.u%5B4%5D"
+        }
+      ],
+      "S231P:label": "extIndBoo1"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.extIndBoo1.nin",
+      "S231P:isFinal": true,
+      "S231P:value": 4
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.extIndBoo2",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Routing.BooleanExtractor",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Extracts signal from an input signal vector when the extract index is out of the lower range",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":40,\"y\":0},{\"x\":60,\"y\":20}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.extIndBoo2.index"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.extIndBoo2.nin"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.extIndBoo2.u%5B1%5D"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.extIndBoo2.u%5B2%5D"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.extIndBoo2.u%5B3%5D"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.extIndBoo2.u%5B4%5D"
+        }
+      ],
+      "S231P:label": "extIndBoo2"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.extIndBoo2.nin",
+      "S231P:isFinal": true,
+      "S231P:value": 4
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.extIndBoo3",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Routing.BooleanExtractor",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Extracts signal from an input signal vector when the extract index changes from within range to out of range",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":40,\"y\":-40},{\"x\":60,\"y\":-20}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.extIndBoo3.index"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.extIndBoo3.nin"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.extIndBoo3.u%5B1%5D"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.extIndBoo3.u%5B2%5D"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.extIndBoo3.u%5B3%5D"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.extIndBoo3.u%5B4%5D"
+        }
+      ],
+      "S231P:label": "extIndBoo3"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.extIndBoo3.nin",
+      "S231P:isFinal": true,
+      "S231P:value": 4
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.extIndBoo4",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Routing.BooleanExtractor",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Extracts signal from an input signal vector when the extract index changes from out of range to within range",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":40,\"y\":-80},{\"x\":60,\"y\":-60}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.extIndBoo4.index"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.extIndBoo4.nin"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.extIndBoo4.u%5B1%5D"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.extIndBoo4.u%5B2%5D"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.extIndBoo4.u%5B3%5D"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.extIndBoo4.u%5B4%5D"
+        }
+      ],
+      "S231P:label": "extIndBoo4"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.extIndBoo4.nin",
+      "S231P:isFinal": true,
+      "S231P:value": 4
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.intPul",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Sources.Pulse",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Generate pulse signal of type Integer",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":0,\"y\":-60},{\"x\":20,\"y\":-40}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.intPul.amplitude"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.intPul.offset"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.intPul.period"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.intPul.y"
+        }
+      ],
+      "S231P:label": "intPul"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.intPul.amplitude",
+      "S231P:isFinal": true,
+      "S231P:value": 3
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.intPul.offset",
+      "S231P:isFinal": true,
+      "S231P:value": -1
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.intPul.period",
+      "S231P:isFinal": true,
+      "S231P:value": 1
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.intPul.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.extIndBoo3.index"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.intPul1",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Sources.Pulse",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Generate pulse signal of type Integer",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":0,\"y\":-100},{\"x\":20,\"y\":-80}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.intPul1.amplitude"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.intPul1.offset"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.intPul1.period"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.intPul1.y"
+        }
+      ],
+      "S231P:label": "intPul1"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.intPul1.amplitude",
+      "S231P:isFinal": true,
+      "S231P:value": -3
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.intPul1.offset",
+      "S231P:isFinal": true,
+      "S231P:value": 3
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.intPul1.period",
+      "S231P:isFinal": true,
+      "S231P:value": 1
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.intPul1.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractor.extIndBoo4.index"
+      }
+    }
+  ]
+}

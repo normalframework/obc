@@ -1,1 +1,355 @@
-{"@context":{"S231P":"https://data.ashrae.org/S231P#"},"@graph":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.Toggle","@type":"S231P:ElementaryBlock","S231P:containsBlock":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.Toggle.cleInp"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.Toggle.fal"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.Toggle.falCleFalIni"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.Toggle.falCleTruIni"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.Toggle.not1"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.Toggle.not2"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.Toggle.swiCleInp"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.Toggle.swiCleInp1"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.Toggle.togInp"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.Toggle.tru"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.Toggle.truCleFalIni"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.Toggle.truCleTruIni"}],"S231P:label":"Toggle"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.Toggle.cleInp","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Pulse","S231P:accessSpecifier":"public","S231P:description":"Block that outputs cyclic on and off","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":0,\"y\":70},{\"x\":20,\"y\":90}]}}}","S231P:hasInstance":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.Toggle.cleInp.period"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.Toggle.cleInp.width"}],"S231P:label":"cleInp"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.Toggle.cleInp.period","S231P:isFinal":true,"S231P:value":6},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.Toggle.cleInp.width","S231P:isFinal":true,"S231P:value":{"@value":"0.5","@type":"http://www.w3.org/2001/XMLSchema#decimal"}},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.Toggle.fal","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Constant","S231P:accessSpecifier":"public","S231P:description":"False clear input","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-120,\"y\":70},{\"x\":-100,\"y\":90}]}}}","S231P:hasInstance":{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.Toggle.fal.k"},"S231P:label":"fal"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.Toggle.fal.k","S231P:isFinal":true,"S231P:value":false},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.Toggle.falCleFalIni","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Toggle","S231P:accessSpecifier":"public","S231P:description":"Toggle block with clear input being contantly false and false initial toggle input","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-60,\"y\":30},{\"x\":-40,\"y\":50}]}}}","S231P:label":"falCleFalIni"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.Toggle.falCleTruIni","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Toggle","S231P:accessSpecifier":"public","S231P:description":"Toggle block with clear input being contantly false and true initial toggle input","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-60,\"y\":90},{\"x\":-40,\"y\":110}]}}}","S231P:label":"falCleTruIni"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.Toggle.not1","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Not","S231P:accessSpecifier":"public","S231P:description":"Logical not","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":40,\"y\":-70},{\"x\":60,\"y\":-50}]}}}","S231P:label":"not1"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.Toggle.not2","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Not","S231P:accessSpecifier":"public","S231P:description":"Logical not","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-120,\"y\":-10},{\"x\":-100,\"y\":10}]}}}","S231P:label":"not2"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.Toggle.swiCleInp","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Toggle","S231P:accessSpecifier":"public","S231P:description":"Initial false output, with clear input switch between false and true","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":100,\"y\":90},{\"x\":120,\"y\":110}]}}}","S231P:label":"swiCleInp"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.Toggle.swiCleInp1","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Toggle","S231P:accessSpecifier":"public","S231P:description":"Initial false output, with clear input switch between false and true","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":100,\"y\":-70},{\"x\":120,\"y\":-50}]}}}","S231P:label":"swiCleInp1"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.Toggle.togInp","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Pulse","S231P:accessSpecifier":"public","S231P:description":"Block that outputs cyclic on and off","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-160,\"y\":150},{\"x\":-140,\"y\":170}]}}}","S231P:hasInstance":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.Toggle.togInp.period"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.Toggle.togInp.width"}],"S231P:label":"togInp"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.Toggle.togInp.period","S231P:isFinal":true,"S231P:value":2},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.Toggle.togInp.width","S231P:isFinal":true,"S231P:value":{"@value":"0.5","@type":"http://www.w3.org/2001/XMLSchema#decimal"}},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.Toggle.tru","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Constant","S231P:accessSpecifier":"public","S231P:description":"True clear input","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-120,\"y\":-70},{\"x\":-100,\"y\":-50}]}}}","S231P:hasInstance":{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.Toggle.tru.k"},"S231P:label":"tru"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.Toggle.tru.k","S231P:isFinal":true,"S231P:value":true},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.Toggle.truCleFalIni","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Toggle","S231P:accessSpecifier":"public","S231P:description":"Toggle block with clear input being contantly true and false initial toggle input","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-60,\"y\":-110},{\"x\":-40,\"y\":-90}]}}}","S231P:label":"truCleFalIni"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.Toggle.truCleTruIni","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Toggle","S231P:accessSpecifier":"public","S231P:description":"Toggle block with clear input being contantly true and true initial toggle input","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-60,\"y\":-50},{\"x\":-40,\"y\":-30}]}}}","S231P:label":"truCleTruIni"}]}
+{
+  "@context": {
+    "S231P": "https://data.ashrae.org/S231P#"
+  },
+  "@graph": [
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.Toggle",
+      "@type": "S231P:Block",
+      "S231P:containsBlock": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.Toggle.cleInp"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.Toggle.fal"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.Toggle.falCleFalIni"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.Toggle.falCleTruIni"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.Toggle.not1"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.Toggle.not2"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.Toggle.swiCleInp"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.Toggle.swiCleInp1"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.Toggle.togInp"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.Toggle.tru"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.Toggle.truCleFalIni"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.Toggle.truCleTruIni"
+        }
+      ],
+      "S231P:label": "Toggle"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.Toggle.cleInp",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Pulse",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Block that outputs cyclic on and off",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":0,\"y\":70},{\"x\":20,\"y\":90}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.Toggle.cleInp.period"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.Toggle.cleInp.width"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.Toggle.cleInp.y"
+        }
+      ],
+      "S231P:label": "cleInp"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.Toggle.cleInp.period",
+      "S231P:isFinal": true,
+      "S231P:value": 6
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.Toggle.cleInp.width",
+      "S231P:isFinal": true,
+      "S231P:value": {
+        "@value": "0.5",
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.Toggle.cleInp.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.Toggle.swiCleInp.clr"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.Toggle.fal",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Constant",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "False clear input",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-120,\"y\":70},{\"x\":-100,\"y\":90}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.Toggle.fal.k"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.Toggle.fal.y"
+        }
+      ],
+      "S231P:label": "fal"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.Toggle.fal.k",
+      "S231P:isFinal": true,
+      "S231P:value": false
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.Toggle.fal.y",
+      "S231P:isConnectedTo": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.Toggle.falCleFalIni.clr"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.Toggle.falCleTruIni.clr"
+        }
+      ]
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.Toggle.falCleFalIni",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Toggle",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Toggle block with clear input being contantly false and false initial toggle input",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-60,\"y\":30},{\"x\":-40,\"y\":50}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.Toggle.falCleFalIni.clr"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.Toggle.falCleFalIni.u"
+        }
+      ],
+      "S231P:label": "falCleFalIni"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.Toggle.falCleTruIni",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Toggle",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Toggle block with clear input being contantly false and true initial toggle input",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-60,\"y\":90},{\"x\":-40,\"y\":110}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.Toggle.falCleTruIni.clr"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.Toggle.falCleTruIni.u"
+        }
+      ],
+      "S231P:label": "falCleTruIni"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.Toggle.not1",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Not",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Logical not",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":40,\"y\":-70},{\"x\":60,\"y\":-50}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.Toggle.not1.u"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.Toggle.not1.y"
+        }
+      ],
+      "S231P:label": "not1"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.Toggle.not1.u",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.Toggle.cleInp.y"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.Toggle.not1.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.Toggle.swiCleInp1.clr"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.Toggle.not2",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Not",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Logical not",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-120,\"y\":-10},{\"x\":-100,\"y\":10}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.Toggle.not2.u"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.Toggle.not2.y"
+        }
+      ],
+      "S231P:label": "not2"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.Toggle.not2.y",
+      "S231P:isConnectedTo": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.Toggle.falCleFalIni.u"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.Toggle.truCleFalIni.u"
+        }
+      ]
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.Toggle.swiCleInp",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Toggle",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Initial false output, with clear input switch between false and true",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":100,\"y\":90},{\"x\":120,\"y\":110}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.Toggle.swiCleInp.clr"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.Toggle.swiCleInp.u"
+        }
+      ],
+      "S231P:label": "swiCleInp"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.Toggle.swiCleInp1",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Toggle",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Initial false output, with clear input switch between false and true",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":100,\"y\":-70},{\"x\":120,\"y\":-50}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.Toggle.swiCleInp1.clr"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.Toggle.swiCleInp1.u"
+        }
+      ],
+      "S231P:label": "swiCleInp1"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.Toggle.togInp",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Pulse",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Block that outputs cyclic on and off",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-160,\"y\":150},{\"x\":-140,\"y\":170}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.Toggle.togInp.period"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.Toggle.togInp.width"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.Toggle.togInp.y"
+        }
+      ],
+      "S231P:label": "togInp"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.Toggle.togInp.period",
+      "S231P:isFinal": true,
+      "S231P:value": 2
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.Toggle.togInp.width",
+      "S231P:isFinal": true,
+      "S231P:value": {
+        "@value": "0.5",
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.Toggle.togInp.y",
+      "S231P:isConnectedTo": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.Toggle.falCleTruIni.u"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.Toggle.not2.u"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.Toggle.swiCleInp.u"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.Toggle.swiCleInp1.u"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.Toggle.truCleTruIni.u"
+        }
+      ]
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.Toggle.tru",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Constant",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "True clear input",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-120,\"y\":-70},{\"x\":-100,\"y\":-50}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.Toggle.tru.k"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.Toggle.tru.y"
+        }
+      ],
+      "S231P:label": "tru"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.Toggle.tru.k",
+      "S231P:isFinal": true,
+      "S231P:value": true
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.Toggle.tru.y",
+      "S231P:isConnectedTo": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.Toggle.truCleFalIni.clr"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.Toggle.truCleTruIni.clr"
+        }
+      ]
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.Toggle.truCleFalIni",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Toggle",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Toggle block with clear input being contantly true and false initial toggle input",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-60,\"y\":-110},{\"x\":-40,\"y\":-90}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.Toggle.truCleFalIni.clr"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.Toggle.truCleFalIni.u"
+        }
+      ],
+      "S231P:label": "truCleFalIni"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.Toggle.truCleTruIni",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Toggle",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Toggle block with clear input being contantly true and true initial toggle input",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-60,\"y\":-50},{\"x\":-40,\"y\":-30}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.Toggle.truCleTruIni.clr"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.Toggle.truCleTruIni.u"
+        }
+      ],
+      "S231P:label": "truCleTruIni"
+    }
+  ]
+}

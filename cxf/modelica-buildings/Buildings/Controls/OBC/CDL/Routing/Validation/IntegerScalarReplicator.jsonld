@@ -1,1 +1,105 @@
-{"@context":{"S231P":"https://data.ashrae.org/S231P#"},"@graph":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerScalarReplicator","@type":"S231P:ElementaryBlock","S231P:containsBlock":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerScalarReplicator.intRep"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerScalarReplicator.ram"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerScalarReplicator.reaToInt"}],"S231P:label":"IntegerScalarReplicator"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerScalarReplicator.intRep","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.IntegerScalarReplicator","S231P:accessSpecifier":"public","S231P:description":"Block that outputs the array replicating input value","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":40,\"y\":-10},{\"x\":60,\"y\":10}]}}}","S231P:hasInstance":{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerScalarReplicator.intRep.nout"},"S231P:label":"intRep"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerScalarReplicator.intRep.nout","S231P:value":3},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerScalarReplicator.ram","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Sources.Ramp","S231P:accessSpecifier":"public","S231P:description":"Block that outputs ramp signal","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-60,\"y\":-10},{\"x\":-40,\"y\":10}]}}}","S231P:hasInstance":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerScalarReplicator.ram.duration"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerScalarReplicator.ram.height"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerScalarReplicator.ram.offset"}],"S231P:label":"ram"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerScalarReplicator.ram.duration","S231P:value":1},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerScalarReplicator.ram.height","S231P:value":5},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerScalarReplicator.ram.offset","S231P:value":-2},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerScalarReplicator.reaToInt","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Conversions.RealToInteger","S231P:accessSpecifier":"public","S231P:description":"Convert Real input to Integer output","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-10,\"y\":-10},{\"x\":10,\"y\":10}]}}}","S231P:label":"reaToInt"}]}
+{
+  "@context": {
+    "S231P": "https://data.ashrae.org/S231P#"
+  },
+  "@graph": [
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerScalarReplicator",
+      "@type": "S231P:Block",
+      "S231P:containsBlock": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerScalarReplicator.intRep"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerScalarReplicator.ram"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerScalarReplicator.reaToInt"
+        }
+      ],
+      "S231P:label": "IntegerScalarReplicator"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerScalarReplicator.intRep",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Routing.IntegerScalarReplicator",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Block that outputs the array replicating input value",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":40,\"y\":-10},{\"x\":60,\"y\":10}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerScalarReplicator.intRep.nout"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerScalarReplicator.intRep.u"
+        }
+      ],
+      "S231P:label": "intRep"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerScalarReplicator.intRep.nout",
+      "S231P:value": 3
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerScalarReplicator.ram",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Sources.Ramp",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Block that outputs ramp signal",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-60,\"y\":-10},{\"x\":-40,\"y\":10}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerScalarReplicator.ram.duration"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerScalarReplicator.ram.height"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerScalarReplicator.ram.offset"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerScalarReplicator.ram.y"
+        }
+      ],
+      "S231P:label": "ram"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerScalarReplicator.ram.duration",
+      "S231P:value": 1
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerScalarReplicator.ram.height",
+      "S231P:value": 5
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerScalarReplicator.ram.offset",
+      "S231P:value": -2
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerScalarReplicator.ram.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerScalarReplicator.reaToInt.u"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerScalarReplicator.reaToInt",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Conversions.RealToInteger",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Convert Real input to Integer output",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-10,\"y\":-10},{\"x\":10,\"y\":10}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerScalarReplicator.reaToInt.u"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerScalarReplicator.reaToInt.y"
+        }
+      ],
+      "S231P:label": "reaToInt"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerScalarReplicator.reaToInt.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerScalarReplicator.intRep.u"
+      }
+    }
+  ]
+}

@@ -1,1 +1,174 @@
-{"@context":{"S231P":"https://data.ashrae.org/S231P#"},"@graph":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Utilities.Validation.SunRiseSet","@type":"S231P:ElementaryBlock","S231P:containsBlock":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Utilities.Validation.SunRiseSet.sunRiseSetAntarctic"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Utilities.Validation.SunRiseSet.sunRiseSetArctic"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Utilities.Validation.SunRiseSet.sunRiseSetSf"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Utilities.Validation.SunRiseSet.sunRiseSetSyd"}],"S231P:label":"SunRiseSet"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Utilities.Validation.SunRiseSet.sunRiseSetAntarctic","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Utilities.SunRiseSet","S231P:accessSpecifier":"public","S231P:description":"Antarctic circle case","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-10,\"y\":10},{\"x\":10,\"y\":30}]}}}","S231P:hasInstance":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Utilities.Validation.SunRiseSet.sunRiseSetAntarctic.lat"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Utilities.Validation.SunRiseSet.sunRiseSetAntarctic.lon"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Utilities.Validation.SunRiseSet.sunRiseSetAntarctic.timZon"}],"S231P:label":"sunRiseSetAntarctic"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Utilities.Validation.SunRiseSet.sunRiseSetAntarctic.lat","S231P:value":{"@value":"-1.3089969389957","@type":"http://www.w3.org/2001/XMLSchema#decimal"}},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Utilities.Validation.SunRiseSet.sunRiseSetAntarctic.lon","S231P:value":{"@value":"0.99483767363677","@type":"http://www.w3.org/2001/XMLSchema#decimal"}},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Utilities.Validation.SunRiseSet.sunRiseSetAntarctic.timZon","S231P:value":14400},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Utilities.Validation.SunRiseSet.sunRiseSetArctic","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Utilities.SunRiseSet","S231P:accessSpecifier":"public","S231P:description":"Arctic circle case","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-10,\"y\":50},{\"x\":10,\"y\":70}]}}}","S231P:hasInstance":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Utilities.Validation.SunRiseSet.sunRiseSetArctic.lat"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Utilities.Validation.SunRiseSet.sunRiseSetArctic.lon"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Utilities.Validation.SunRiseSet.sunRiseSetArctic.timZon"}],"S231P:label":"sunRiseSetArctic"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Utilities.Validation.SunRiseSet.sunRiseSetArctic.lat","S231P:value":{"@value":"1.2566370614359","@type":"http://www.w3.org/2001/XMLSchema#decimal"}},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Utilities.Validation.SunRiseSet.sunRiseSetArctic.lon","S231P:value":{"@value":"-1.2566370614359","@type":"http://www.w3.org/2001/XMLSchema#decimal"}},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Utilities.Validation.SunRiseSet.sunRiseSetArctic.timZon","S231P:value":-18000},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Utilities.Validation.SunRiseSet.sunRiseSetSf","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Utilities.SunRiseSet","S231P:accessSpecifier":"public","S231P:description":"San Francisco as an example in the northen hemisphere","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-10,\"y\":-30},{\"x\":10,\"y\":-10}]}}}","S231P:hasInstance":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Utilities.Validation.SunRiseSet.sunRiseSetSf.lat"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Utilities.Validation.SunRiseSet.sunRiseSetSf.lon"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Utilities.Validation.SunRiseSet.sunRiseSetSf.timZon"}],"S231P:label":"sunRiseSetSf"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Utilities.Validation.SunRiseSet.sunRiseSetSf.lat","S231P:value":{"@value":"0.6457718232379","@type":"http://www.w3.org/2001/XMLSchema#decimal"}},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Utilities.Validation.SunRiseSet.sunRiseSetSf.lon","S231P:value":{"@value":"-2.1293016874331","@type":"http://www.w3.org/2001/XMLSchema#decimal"}},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Utilities.Validation.SunRiseSet.sunRiseSetSf.timZon","S231P:value":-28800},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Utilities.Validation.SunRiseSet.sunRiseSetSyd","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Utilities.SunRiseSet","S231P:accessSpecifier":"public","S231P:description":"Sydney as an example in the southern hemisphere","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-10,\"y\":-70},{\"x\":10,\"y\":-50}]}}}","S231P:hasInstance":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Utilities.Validation.SunRiseSet.sunRiseSetSyd.lat"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Utilities.Validation.SunRiseSet.sunRiseSetSyd.lon"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Utilities.Validation.SunRiseSet.sunRiseSetSyd.timZon"}],"S231P:label":"sunRiseSetSyd"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Utilities.Validation.SunRiseSet.sunRiseSetSyd.lat","S231P:value":{"@value":"-0.59341194567807","@type":"http://www.w3.org/2001/XMLSchema#decimal"}},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Utilities.Validation.SunRiseSet.sunRiseSetSyd.lon","S231P:value":{"@value":"2.6354471705114","@type":"http://www.w3.org/2001/XMLSchema#decimal"}},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Utilities.Validation.SunRiseSet.sunRiseSetSyd.timZon","S231P:value":36000}]}
+{
+  "@context": {
+    "S231P": "https://data.ashrae.org/S231P#"
+  },
+  "@graph": [
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Utilities.Validation.SunRiseSet",
+      "@type": "S231P:Block",
+      "S231P:containsBlock": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Utilities.Validation.SunRiseSet.sunRiseSetAntarctic"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Utilities.Validation.SunRiseSet.sunRiseSetArctic"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Utilities.Validation.SunRiseSet.sunRiseSetSf"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Utilities.Validation.SunRiseSet.sunRiseSetSyd"
+        }
+      ],
+      "S231P:label": "SunRiseSet"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Utilities.Validation.SunRiseSet.sunRiseSetAntarctic",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Utilities.SunRiseSet",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Antarctic circle case",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-10,\"y\":10},{\"x\":10,\"y\":30}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Utilities.Validation.SunRiseSet.sunRiseSetAntarctic.lat"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Utilities.Validation.SunRiseSet.sunRiseSetAntarctic.lon"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Utilities.Validation.SunRiseSet.sunRiseSetAntarctic.timZon"
+        }
+      ],
+      "S231P:label": "sunRiseSetAntarctic"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Utilities.Validation.SunRiseSet.sunRiseSetAntarctic.lat",
+      "S231P:value": {
+        "@value": "-1.3089969389957",
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Utilities.Validation.SunRiseSet.sunRiseSetAntarctic.lon",
+      "S231P:value": {
+        "@value": "0.99483767363677",
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Utilities.Validation.SunRiseSet.sunRiseSetAntarctic.timZon",
+      "S231P:value": 14400
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Utilities.Validation.SunRiseSet.sunRiseSetArctic",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Utilities.SunRiseSet",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Arctic circle case",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-10,\"y\":50},{\"x\":10,\"y\":70}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Utilities.Validation.SunRiseSet.sunRiseSetArctic.lat"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Utilities.Validation.SunRiseSet.sunRiseSetArctic.lon"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Utilities.Validation.SunRiseSet.sunRiseSetArctic.timZon"
+        }
+      ],
+      "S231P:label": "sunRiseSetArctic"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Utilities.Validation.SunRiseSet.sunRiseSetArctic.lat",
+      "S231P:value": {
+        "@value": "1.2566370614359",
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Utilities.Validation.SunRiseSet.sunRiseSetArctic.lon",
+      "S231P:value": {
+        "@value": "-1.2566370614359",
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Utilities.Validation.SunRiseSet.sunRiseSetArctic.timZon",
+      "S231P:value": -18000
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Utilities.Validation.SunRiseSet.sunRiseSetSf",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Utilities.SunRiseSet",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "San Francisco as an example in the northen hemisphere",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-10,\"y\":-30},{\"x\":10,\"y\":-10}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Utilities.Validation.SunRiseSet.sunRiseSetSf.lat"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Utilities.Validation.SunRiseSet.sunRiseSetSf.lon"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Utilities.Validation.SunRiseSet.sunRiseSetSf.timZon"
+        }
+      ],
+      "S231P:label": "sunRiseSetSf"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Utilities.Validation.SunRiseSet.sunRiseSetSf.lat",
+      "S231P:value": {
+        "@value": "0.6457718232379",
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Utilities.Validation.SunRiseSet.sunRiseSetSf.lon",
+      "S231P:value": {
+        "@value": "-2.1293016874331",
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Utilities.Validation.SunRiseSet.sunRiseSetSf.timZon",
+      "S231P:value": -28800
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Utilities.Validation.SunRiseSet.sunRiseSetSyd",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Utilities.SunRiseSet",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Sydney as an example in the southern hemisphere",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-10,\"y\":-70},{\"x\":10,\"y\":-50}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Utilities.Validation.SunRiseSet.sunRiseSetSyd.lat"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Utilities.Validation.SunRiseSet.sunRiseSetSyd.lon"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Utilities.Validation.SunRiseSet.sunRiseSetSyd.timZon"
+        }
+      ],
+      "S231P:label": "sunRiseSetSyd"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Utilities.Validation.SunRiseSet.sunRiseSetSyd.lat",
+      "S231P:value": {
+        "@value": "-0.59341194567807",
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Utilities.Validation.SunRiseSet.sunRiseSetSyd.lon",
+      "S231P:value": {
+        "@value": "2.6354471705114",
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Utilities.Validation.SunRiseSet.sunRiseSetSyd.timZon",
+      "S231P:value": 36000
+    }
+  ]
+}

@@ -1,1 +1,70 @@
-{"@context":{"S231P":"https://data.ashrae.org/S231P#"},"@graph":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.Not","@type":"S231P:ElementaryBlock","S231P:containsBlock":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.Not.booPul"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.Not.not1"}],"S231P:label":"Not"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.Not.booPul","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Pulse","S231P:accessSpecifier":"public","S231P:description":"Block that outputs cyclic on and off","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-26,\"y\":-10},{\"x\":-6,\"y\":10}]}}}","S231P:hasInstance":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.Not.booPul.period"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.Not.booPul.width"}],"S231P:label":"booPul"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.Not.booPul.period","S231P:value":{"@value":"1.5","@type":"http://www.w3.org/2001/XMLSchema#decimal"}},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.Not.booPul.width","S231P:value":{"@value":"0.5","@type":"http://www.w3.org/2001/XMLSchema#decimal"}},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.Not.not1","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Not","S231P:accessSpecifier":"public","S231P:description":"Output true when input is false and output false when input is true","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":26,\"y\":-10},{\"x\":46,\"y\":10}]}}}","S231P:label":"not1"}]}
+{
+  "@context": {
+    "S231P": "https://data.ashrae.org/S231P#"
+  },
+  "@graph": [
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.Not",
+      "@type": "S231P:Block",
+      "S231P:containsBlock": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.Not.booPul"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.Not.not1"
+        }
+      ],
+      "S231P:label": "Not"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.Not.booPul",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Pulse",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Block that outputs cyclic on and off",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-26,\"y\":-10},{\"x\":-6,\"y\":10}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.Not.booPul.period"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.Not.booPul.width"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.Not.booPul.y"
+        }
+      ],
+      "S231P:label": "booPul"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.Not.booPul.period",
+      "S231P:value": {
+        "@value": "1.5",
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.Not.booPul.width",
+      "S231P:value": {
+        "@value": "0.5",
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.Not.booPul.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.Not.not1.u"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.Not.not1",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Not",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Output true when input is false and output false when input is true",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":26,\"y\":-10},{\"x\":46,\"y\":10}]}}}",
+      "S231P:hasInstance": {
+        "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.Not.not1.u"
+      },
+      "S231P:label": "not1"
+    }
+  ]
+}

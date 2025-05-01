@@ -1,1 +1,30 @@
-{"@context":{"S231P":"https://data.ashrae.org/S231P#"},"@graph":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Sources.Validation.CalendarTimeMonths","@type":"S231P:ElementaryBlock","S231P:containsBlock":{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Sources.Validation.CalendarTimeMonths.calTim"},"S231P:label":"CalendarTimeMonths"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Sources.Validation.CalendarTimeMonths.calTim","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Sources.CalendarTime","S231P:accessSpecifier":"public","S231P:description":"Computes date and time assuming time=0 corresponds to new year 2017","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-20,\"y\":-10},{\"x\":0,\"y\":10}]}}}","S231P:hasInstance":{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Sources.Validation.CalendarTimeMonths.calTim.zerTim"},"S231P:label":"calTim"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Sources.Validation.CalendarTimeMonths.calTim.zerTim","S231P:value":"Buildings.Controls.OBC.CDL.Types.ZeroTime.NY2017"}]}
+{
+  "@context": {
+    "S231P": "https://data.ashrae.org/S231P#"
+  },
+  "@graph": [
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Sources.Validation.CalendarTimeMonths",
+      "@type": "S231P:Block",
+      "S231P:containsBlock": {
+        "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Sources.Validation.CalendarTimeMonths.calTim"
+      },
+      "S231P:label": "CalendarTimeMonths"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Sources.Validation.CalendarTimeMonths.calTim",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Sources.CalendarTime",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Computes date and time assuming time=0 corresponds to new year 2017",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-20,\"y\":-10},{\"x\":0,\"y\":10}]}}}",
+      "S231P:hasInstance": {
+        "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Sources.Validation.CalendarTimeMonths.calTim.zerTim"
+      },
+      "S231P:label": "calTim"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Sources.Validation.CalendarTimeMonths.calTim.zerTim",
+      "S231P:value": "Buildings.Controls.OBC.CDL.Types.ZeroTime.NY2017"
+    }
+  ]
+}

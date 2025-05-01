@@ -1,1 +1,111 @@
-{"@context":{"S231P":"https://data.ashrae.org/S231P#","qudt":"http://qudt.org/schema/qudt#"},"@graph":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.TimeTable","@type":"S231P:ElementaryBlock","S231P:hasOutput":{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.TimeTable.y"},"S231P:hasParameter":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.TimeTable.period"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.TimeTable.table"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.TimeTable.timeScale"}],"S231P:label":"TimeTable"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.TimeTable.period","@type":"S231P:Parameter","qudt:hasQuantityKind":{"@id":"S231P:Time"},"qudt:hasUnit":{"@id":"S231P:s"},"S231P:accessSpecifier":"public","S231P:description":"Periodicity of table","S231P:isOfDataType":{"@id":"S231P:Real"},"S231P:label":"period"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.TimeTable.table","@type":"S231P:Parameter","S231P:accessSpecifier":"public","S231P:description":"Table matrix with time as a first column (in seconds, unless timeScale is not 1) and 0 for False or 1 for True in all other columns","S231P:isOfDataType":{"@id":"S231P:Real"},"S231P:label":"table"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.TimeTable.timeScale","@type":"S231P:Parameter","qudt:hasUnit":{"@id":"S231P:1"},"S231P:accessSpecifier":"public","S231P:description":"Time scale of first table column. Set to 3600 if time in table is in hours","S231P:isOfDataType":{"@id":"S231P:Real"},"S231P:label":"timeScale","S231P:value":1},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.TimeTable.y","@type":"S231P:BooleanOutput","S231P:accessSpecifier":"public","S231P:description":"Output of the table","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":120,\"y\":-20},{\"x\":160,\"y\":20}]},\"iconTransformation\":{\"extent\":[{\"x\":100,\"y\":-20},{\"x\":140,\"y\":20}]}}}","S231P:label":"y"}]}
+{
+  "@context": {
+    "S231P": "https://data.ashrae.org/S231P#",
+    "qudt": "http://qudt.org/schema/qudt#",
+    "q": "http://qudt.org/vocab/quantitykind#",
+    "unit": "http://qudt.org/vocab/unit#"
+  },
+  "@graph": [
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.TimeTable.intGreThr.y",
+      "S231P:isConnectedTo": {
+        "@id": "https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.TimeTable.y"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.TimeTable.intTimTab.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.TimeTable.intGreThr.u"
+      }
+    },
+    {
+      "@id": "https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.TimeTable",
+      "@type": "S231P:ElementaryBlock",
+      "S231P:hasOutput": {
+        "@id": "https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.TimeTable.y"
+      },
+      "S231P:hasParameter": [
+        {
+          "@id": "https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.TimeTable.period"
+        },
+        {
+          "@id": "https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.TimeTable.table"
+        },
+        {
+          "@id": "https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.TimeTable.timeScale"
+        }
+      ],
+      "S231P:label": "TimeTable"
+    },
+    {
+      "@id": "https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.TimeTable.intGreThr",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.TimeTable.intGreThr.u"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.TimeTable.intGreThr.y"
+        }
+      ]
+    },
+    {
+      "@id": "https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.TimeTable.intTimTab",
+      "S231P:hasInstance": {
+        "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.TimeTable.intTimTab.y"
+      }
+    },
+    {
+      "@id": "https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.TimeTable.period",
+      "@type": "S231P:Parameter",
+      "qudt:hasQuantityKind": {
+        "@id": "q:Time"
+      },
+      "qudt:hasUnit": {
+        "@id": "unit:SEC"
+      },
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Periodicity of table",
+      "S231P:isOfDataType": {
+        "@id": "S231P:Real"
+      },
+      "S231P:label": "period"
+    },
+    {
+      "@id": "https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.TimeTable.table",
+      "@type": "S231P:Parameter",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Table matrix with time as a first column (in seconds, unless timeScale is not 1) and 0 for False or 1 for True in all other columns",
+      "S231P:isArray": true,
+      "S231P:isOfDataType": {
+        "@id": "S231P:Real"
+      },
+      "S231P:label": "table[:,:]",
+      "S231P:numberDimensions": 2
+    },
+    {
+      "@id": "https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.TimeTable.timeScale",
+      "@type": "S231P:Parameter",
+      "qudt:hasUnit": {
+        "@id": "unit:UNITLESS"
+      },
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Time scale of first table column. Set to 3600 if time in table is in hours",
+      "S231P:isOfDataType": {
+        "@id": "S231P:Real"
+      },
+      "S231P:label": "timeScale",
+      "S231P:value": 1
+    },
+    {
+      "@id": "https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.TimeTable.y",
+      "@type": "S231P:BooleanOutput",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Output with tabulated values",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":120,\"y\":-20},{\"x\":160,\"y\":20}]},\"iconTransformation\":{\"extent\":[{\"x\":100,\"y\":-20},{\"x\":140,\"y\":20}]}}}",
+      "S231P:isArray": true,
+      "S231P:label": "y[nout]",
+      "S231P:numberDimensions": 1,
+      "S231P:sizeOfDimensions": "(nout)"
+    }
+  ]
+}

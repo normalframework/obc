@@ -1,1 +1,122 @@
-{"@context":{"S231P":"https://data.ashrae.org/S231P#"},"@graph":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.LessThreshold","@type":"S231P:ElementaryBlock","S231P:containsBlock":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.LessThreshold.les"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.LessThreshold.lesHys"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.LessThreshold.sin"}],"S231P:label":"LessThreshold"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.LessThreshold.les","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.LessThreshold","S231P:accessSpecifier":"public","S231P:description":"Less block, without hysteresis","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":20,\"y\":20},{\"x\":40,\"y\":40}]}}}","S231P:hasInstance":{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.LessThreshold.les.t"},"S231P:label":"les"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.LessThreshold.les.t","S231P:value":2},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.LessThreshold.lesHys","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.LessThreshold","S231P:accessSpecifier":"public","S231P:description":"Less block, with hysteresis","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":20,\"y\":-30},{\"x\":40,\"y\":-10}]}}}","S231P:hasInstance":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.LessThreshold.lesHys.h"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.LessThreshold.lesHys.t"}],"S231P:label":"lesHys"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.LessThreshold.lesHys.h","S231P:value":1},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.LessThreshold.lesHys.t","S231P:value":2},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.LessThreshold.sin","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Sources.Sin","S231P:accessSpecifier":"public","S231P:description":"Sine source","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-40,\"y\":20},{\"x\":-20,\"y\":40}]}}}","S231P:hasInstance":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.LessThreshold.sin.amplitude"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.LessThreshold.sin.freqHz"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.LessThreshold.sin.offset"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.LessThreshold.sin.startTime"}],"S231P:label":"sin"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.LessThreshold.sin.amplitude","S231P:value":8},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.LessThreshold.sin.freqHz","S231P:value":"1/10"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.LessThreshold.sin.offset","S231P:value":-2},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.LessThreshold.sin.startTime","S231P:value":1}]}
+{
+  "@context": {
+    "S231P": "https://data.ashrae.org/S231P#"
+  },
+  "@graph": [
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.LessThreshold",
+      "@type": "S231P:Block",
+      "S231P:containsBlock": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.LessThreshold.les"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.LessThreshold.lesHys"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.LessThreshold.sin"
+        }
+      ],
+      "S231P:label": "LessThreshold"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.LessThreshold.les",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Reals.LessThreshold",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Less block, without hysteresis",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":20,\"y\":20},{\"x\":40,\"y\":40}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.LessThreshold.les.t"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.LessThreshold.les.u"
+        }
+      ],
+      "S231P:label": "les"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.LessThreshold.les.t",
+      "S231P:value": 2
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.LessThreshold.lesHys",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Reals.LessThreshold",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Less block, with hysteresis",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":20,\"y\":-30},{\"x\":40,\"y\":-10}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.LessThreshold.lesHys.h"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.LessThreshold.lesHys.t"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.LessThreshold.lesHys.u"
+        }
+      ],
+      "S231P:label": "lesHys"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.LessThreshold.lesHys.h",
+      "S231P:value": 1
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.LessThreshold.lesHys.t",
+      "S231P:value": 2
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.LessThreshold.sin",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Sources.Sin",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Sine source",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-40,\"y\":20},{\"x\":-20,\"y\":40}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.LessThreshold.sin.amplitude"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.LessThreshold.sin.freqHz"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.LessThreshold.sin.offset"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.LessThreshold.sin.startTime"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.LessThreshold.sin.y"
+        }
+      ],
+      "S231P:label": "sin"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.LessThreshold.sin.amplitude",
+      "S231P:value": 8
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.LessThreshold.sin.freqHz",
+      "S231P:value": "1/10"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.LessThreshold.sin.offset",
+      "S231P:value": -2
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.LessThreshold.sin.startTime",
+      "S231P:value": 1
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.LessThreshold.sin.y",
+      "S231P:isConnectedTo": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.LessThreshold.les.u"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.LessThreshold.lesHys.u"
+        }
+      ]
+    }
+  ]
+}

@@ -1,1 +1,635 @@
-{"@context":{"S231P":"https://data.ashrae.org/S231P#"},"@graph":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset","@type":"S231P:ElementaryBlock","S231P:containsBlock":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.con"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.greEquThr"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.intWitRes1"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.intWitRes2"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.intWitRes3"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.intWitRes4"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIDInp"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIDPar"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIInp"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIPar"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.modTim"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.resVal"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.setPoi"}],"S231P:label":"PIDWithReset"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.con","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Constant","S231P:accessSpecifier":"public","S231P:description":"Constant false","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-80,\"y\":30},{\"x\":-60,\"y\":50}]}}}","S231P:hasInstance":{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.con.k"},"S231P:label":"con"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.con.k","S231P:isFinal":true,"S231P:value":false},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.greEquThr","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.GreaterThreshold","S231P:accessSpecifier":"public","S231P:description":"Outputs true after t=1","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-52,\"y\":-70},{\"x\":-32,\"y\":-50}]}}}","S231P:hasInstance":{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.greEquThr.t"},"S231P:label":"greEquThr"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.greEquThr.t","S231P:value":1},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.intWitRes1","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.IntegratorWithReset","S231P:accessSpecifier":"public","S231P:description":"Integrator whose output should be brought to the set point","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":60,\"y\":60},{\"x\":80,\"y\":80}]}}}","S231P:label":"intWitRes1"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.intWitRes2","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.IntegratorWithReset","S231P:accessSpecifier":"public","S231P:description":"Integrator whose output should be brought to the set point","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":60,\"y\":20},{\"x\":80,\"y\":40}]}}}","S231P:label":"intWitRes2"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.intWitRes3","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.IntegratorWithReset","S231P:accessSpecifier":"public","S231P:description":"Integrator whose output should be brought to the set point","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":60,\"y\":-40},{\"x\":80,\"y\":-20}]}}}","S231P:label":"intWitRes3"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.intWitRes4","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.IntegratorWithReset","S231P:accessSpecifier":"public","S231P:description":"Integrator whose output should be brought to the set point","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":60,\"y\":-80},{\"x\":80,\"y\":-60}]}}}","S231P:label":"intWitRes4"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIDInp","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.PIDWithReset","S231P:accessSpecifier":"public","S231P:description":"Controller, reset to input value","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":20,\"y\":20},{\"x\":40,\"y\":40}]}}}","S231P:hasInstance":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIDInp.controllerType"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIDInp.k"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIDInp.Td"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIDInp.Ti"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIDInp.y_reset"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIDInp.yMin"}],"S231P:label":"limPIDInp"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIDInp.controllerType","S231P:value":"Buildings.Controls.OBC.CDL.Types.SimpleController.PID"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIDInp.k","S231P:value":1},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIDInp.Td","S231P:value":1},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIDInp.Ti","S231P:value":1},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIDInp.y_reset","S231P:value":{"@value":"0.75","@type":"http://www.w3.org/2001/XMLSchema#decimal"}},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIDInp.yMin","S231P:value":-1},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIDPar","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.PIDWithReset","S231P:accessSpecifier":"public","S231P:description":"Controller, reset to parameter value","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":20,\"y\":60},{\"x\":40,\"y\":80}]}}}","S231P:hasInstance":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIDPar.controllerType"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIDPar.k"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIDPar.Td"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIDPar.Ti"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIDPar.y_reset"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIDPar.yMin"}],"S231P:label":"limPIDPar"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIDPar.controllerType","S231P:value":"Buildings.Controls.OBC.CDL.Types.SimpleController.PID"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIDPar.k","S231P:value":1},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIDPar.Td","S231P:value":1},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIDPar.Ti","S231P:value":1},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIDPar.y_reset","S231P:value":{"@value":"0.5","@type":"http://www.w3.org/2001/XMLSchema#decimal"}},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIDPar.yMin","S231P:value":-1},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIInp","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.PIDWithReset","S231P:accessSpecifier":"public","S231P:description":"Controller, reset to input value","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":20,\"y\":-80},{\"x\":40,\"y\":-60}]}}}","S231P:hasInstance":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIInp.controllerType"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIInp.k"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIInp.Td"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIInp.Ti"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIInp.y_reset"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIInp.yMin"}],"S231P:label":"limPIInp"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIInp.controllerType","S231P:value":"Buildings.Controls.OBC.CDL.Types.SimpleController.PI"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIInp.k","S231P:value":1},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIInp.Td","S231P:value":1},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIInp.Ti","S231P:value":1},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIInp.y_reset","S231P:value":{"@value":"0.75","@type":"http://www.w3.org/2001/XMLSchema#decimal"}},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIInp.yMin","S231P:value":-1},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIPar","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.PIDWithReset","S231P:accessSpecifier":"public","S231P:description":"Controller, reset to parameter value","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":20,\"y\":-40},{\"x\":40,\"y\":-20}]}}}","S231P:hasInstance":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIPar.controllerType"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIPar.k"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIPar.Td"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIPar.Ti"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIPar.y_reset"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIPar.yMin"}],"S231P:label":"limPIPar"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIPar.controllerType","S231P:value":"Buildings.Controls.OBC.CDL.Types.SimpleController.PI"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIPar.k","S231P:value":1},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIPar.Td","S231P:value":1},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIPar.Ti","S231P:value":1},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIPar.y_reset","S231P:value":{"@value":"0.5","@type":"http://www.w3.org/2001/XMLSchema#decimal"}},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIPar.yMin","S231P:value":-1},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.modTim","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Sources.CivilTime","S231P:accessSpecifier":"public","S231P:description":"Civil time","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-80,\"y\":-70},{\"x\":-60,\"y\":-50}]}}}","S231P:label":"modTim"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.resVal","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Sources.Constant","S231P:accessSpecifier":"public","S231P:description":"Reset value","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-80,\"y\":-10},{\"x\":-60,\"y\":10}]}}}","S231P:hasInstance":{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.resVal.k"},"S231P:label":"resVal"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.resVal.k","S231P:value":0},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.setPoi","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Conversions.BooleanToReal","S231P:accessSpecifier":"public","S231P:description":"Set point","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-20,\"y\":-40},{\"x\":0,\"y\":-20}]}}}","S231P:label":"setPoi"}]}
+{
+  "@context": {
+    "S231P": "https://data.ashrae.org/S231P#"
+  },
+  "@graph": [
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset",
+      "@type": "S231P:Block",
+      "S231P:containsBlock": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.con"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.greEquThr"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.intWitRes1"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.intWitRes2"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.intWitRes3"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.intWitRes4"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIDInp"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIDPar"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIInp"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIPar"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.modTim"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.resVal"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.setPoi"
+        }
+      ],
+      "S231P:label": "PIDWithReset"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.con",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Constant",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Constant false",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-80,\"y\":30},{\"x\":-60,\"y\":50}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.con.k"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.con.y"
+        }
+      ],
+      "S231P:label": "con"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.con.k",
+      "S231P:isFinal": true,
+      "S231P:value": false
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.con.y",
+      "S231P:isConnectedTo": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.intWitRes1.trigger"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.intWitRes2.trigger"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.intWitRes3.trigger"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.intWitRes4.trigger"
+        }
+      ]
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.greEquThr",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Reals.GreaterThreshold",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Outputs true after t=1",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-52,\"y\":-70},{\"x\":-32,\"y\":-50}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.greEquThr.t"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.greEquThr.u"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.greEquThr.y"
+        }
+      ],
+      "S231P:label": "greEquThr"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.greEquThr.t",
+      "S231P:value": 1
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.greEquThr.y",
+      "S231P:isConnectedTo": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIDPar.trigger"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIInp.trigger"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIPar.trigger"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.setPoi.u"
+        }
+      ]
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.intWitRes1",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Reals.IntegratorWithReset",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Integrator whose output should be brought to the set point",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":60,\"y\":60},{\"x\":80,\"y\":80}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.intWitRes1.trigger"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.intWitRes1.u"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.intWitRes1.y"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.intWitRes1.y_reset_in"
+        }
+      ],
+      "S231P:label": "intWitRes1"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.intWitRes1.u",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIDPar.y"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.intWitRes1.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIDPar.u_m"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.intWitRes2",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Reals.IntegratorWithReset",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Integrator whose output should be brought to the set point",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":60,\"y\":20},{\"x\":80,\"y\":40}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.intWitRes2.trigger"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.intWitRes2.u"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.intWitRes2.y"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.intWitRes2.y_reset_in"
+        }
+      ],
+      "S231P:label": "intWitRes2"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.intWitRes2.u",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIDInp.y"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.intWitRes2.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIDInp.u_m"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.intWitRes3",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Reals.IntegratorWithReset",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Integrator whose output should be brought to the set point",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":60,\"y\":-40},{\"x\":80,\"y\":-20}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.intWitRes3.trigger"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.intWitRes3.u"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.intWitRes3.y"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.intWitRes3.y_reset_in"
+        }
+      ],
+      "S231P:label": "intWitRes3"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.intWitRes3.u",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIPar.y"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.intWitRes3.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIPar.u_m"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.intWitRes4",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Reals.IntegratorWithReset",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Integrator whose output should be brought to the set point",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":60,\"y\":-80},{\"x\":80,\"y\":-60}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.intWitRes4.trigger"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.intWitRes4.u"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.intWitRes4.y"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.intWitRes4.y_reset_in"
+        }
+      ],
+      "S231P:label": "intWitRes4"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.intWitRes4.u",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIInp.y"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.intWitRes4.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIInp.u_m"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIDInp",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Reals.PIDWithReset",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Controller, reset to input value",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":20,\"y\":20},{\"x\":40,\"y\":40}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIDInp.controllerType"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIDInp.k"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIDInp.Td"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIDInp.Ti"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIDInp.trigger"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIDInp.u_m"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIDInp.u_s"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIDInp.y"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIDInp.y_reset"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIDInp.yMin"
+        }
+      ],
+      "S231P:label": "limPIDInp"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIDInp.controllerType",
+      "S231P:value": "Buildings.Controls.OBC.CDL.Types.SimpleController.PID"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIDInp.k",
+      "S231P:value": 1
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIDInp.Td",
+      "S231P:value": 1
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIDInp.Ti",
+      "S231P:value": 1
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIDInp.trigger",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.greEquThr.y"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIDInp.u_s",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.setPoi.y"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIDInp.y_reset",
+      "S231P:value": {
+        "@value": "0.75",
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIDInp.yMin",
+      "S231P:value": -1
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIDPar",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Reals.PIDWithReset",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Controller, reset to parameter value",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":20,\"y\":60},{\"x\":40,\"y\":80}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIDPar.controllerType"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIDPar.k"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIDPar.Td"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIDPar.Ti"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIDPar.trigger"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIDPar.u_m"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIDPar.u_s"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIDPar.y"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIDPar.y_reset"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIDPar.yMin"
+        }
+      ],
+      "S231P:label": "limPIDPar"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIDPar.controllerType",
+      "S231P:value": "Buildings.Controls.OBC.CDL.Types.SimpleController.PID"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIDPar.k",
+      "S231P:value": 1
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIDPar.Td",
+      "S231P:value": 1
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIDPar.Ti",
+      "S231P:value": 1
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIDPar.u_s",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.setPoi.y"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIDPar.y_reset",
+      "S231P:value": {
+        "@value": "0.5",
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIDPar.yMin",
+      "S231P:value": -1
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIInp",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Reals.PIDWithReset",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Controller, reset to input value",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":20,\"y\":-80},{\"x\":40,\"y\":-60}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIInp.controllerType"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIInp.k"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIInp.Td"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIInp.Ti"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIInp.trigger"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIInp.u_m"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIInp.u_s"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIInp.y"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIInp.y_reset"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIInp.yMin"
+        }
+      ],
+      "S231P:label": "limPIInp"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIInp.controllerType",
+      "S231P:value": "Buildings.Controls.OBC.CDL.Types.SimpleController.PI"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIInp.k",
+      "S231P:value": 1
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIInp.Td",
+      "S231P:value": 1
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIInp.Ti",
+      "S231P:value": 1
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIInp.u_s",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.setPoi.y"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIInp.y_reset",
+      "S231P:value": {
+        "@value": "0.75",
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIInp.yMin",
+      "S231P:value": -1
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIPar",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Reals.PIDWithReset",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Controller, reset to parameter value",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":20,\"y\":-40},{\"x\":40,\"y\":-20}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIPar.controllerType"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIPar.k"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIPar.Td"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIPar.Ti"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIPar.trigger"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIPar.u_m"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIPar.u_s"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIPar.y"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIPar.y_reset"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIPar.yMin"
+        }
+      ],
+      "S231P:label": "limPIPar"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIPar.controllerType",
+      "S231P:value": "Buildings.Controls.OBC.CDL.Types.SimpleController.PI"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIPar.k",
+      "S231P:value": 1
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIPar.Td",
+      "S231P:value": 1
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIPar.Ti",
+      "S231P:value": 1
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIPar.u_s",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.setPoi.y"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIPar.y_reset",
+      "S231P:value": {
+        "@value": "0.5",
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.limPIPar.yMin",
+      "S231P:value": -1
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.modTim",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Sources.CivilTime",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Civil time",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-80,\"y\":-70},{\"x\":-60,\"y\":-50}]}}}",
+      "S231P:hasInstance": {
+        "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.modTim.y"
+      },
+      "S231P:label": "modTim"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.modTim.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.greEquThr.u"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.resVal",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Sources.Constant",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Reset value",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-80,\"y\":-10},{\"x\":-60,\"y\":10}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.resVal.k"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.resVal.y"
+        }
+      ],
+      "S231P:label": "resVal"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.resVal.k",
+      "S231P:value": 0
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.resVal.y",
+      "S231P:isConnectedTo": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.intWitRes1.y_reset_in"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.intWitRes2.y_reset_in"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.intWitRes3.y_reset_in"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.intWitRes4.y_reset_in"
+        }
+      ]
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.setPoi",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Conversions.BooleanToReal",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Set point",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-20,\"y\":-40},{\"x\":0,\"y\":-20}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.setPoi.u"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDWithReset.setPoi.y"
+        }
+      ],
+      "S231P:label": "setPoi"
+    }
+  ]
+}

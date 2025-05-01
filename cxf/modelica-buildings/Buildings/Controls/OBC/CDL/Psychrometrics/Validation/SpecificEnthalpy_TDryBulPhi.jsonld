@@ -1,1 +1,108 @@
-{"@context":{"S231P":"https://data.ashrae.org/S231P#"},"@graph":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Psychrometrics.Validation.SpecificEnthalpy_TDryBulPhi","@type":"S231P:ElementaryBlock","S231P:containsBlock":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Psychrometrics.Validation.SpecificEnthalpy_TDryBulPhi.hBulPhi"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Psychrometrics.Validation.SpecificEnthalpy_TDryBulPhi.phi"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Psychrometrics.Validation.SpecificEnthalpy_TDryBulPhi.TDryBul"}],"S231P:label":"SpecificEnthalpy_TDryBulPhi"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Psychrometrics.Validation.SpecificEnthalpy_TDryBulPhi.hBulPhi","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Psychrometrics.SpecificEnthalpy_TDryBulPhi","S231P:accessSpecifier":"public","S231P:description":"Model for specific enthalpy computation","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-10,\"y\":-10},{\"x\":10,\"y\":10}]}}}","S231P:label":"hBulPhi"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Psychrometrics.Validation.SpecificEnthalpy_TDryBulPhi.phi","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Sources.Ramp","S231P:accessSpecifier":"public","S231P:description":"Relative humidity","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-60,\"y\":-40},{\"x\":-40,\"y\":-20}]}}}","S231P:hasInstance":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Psychrometrics.Validation.SpecificEnthalpy_TDryBulPhi.phi.duration"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Psychrometrics.Validation.SpecificEnthalpy_TDryBulPhi.phi.height"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Psychrometrics.Validation.SpecificEnthalpy_TDryBulPhi.phi.offset"}],"S231P:label":"phi"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Psychrometrics.Validation.SpecificEnthalpy_TDryBulPhi.phi.duration","S231P:value":1},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Psychrometrics.Validation.SpecificEnthalpy_TDryBulPhi.phi.height","S231P:value":1},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Psychrometrics.Validation.SpecificEnthalpy_TDryBulPhi.phi.offset","S231P:value":{"@value":"0.001","@type":"http://www.w3.org/2001/XMLSchema#decimal"}},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Psychrometrics.Validation.SpecificEnthalpy_TDryBulPhi.TDryBul","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Sources.Constant","S231P:accessSpecifier":"public","S231P:description":"Dry bulb temperature","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-64,\"y\":24},{\"x\":-44,\"y\":44}]}}}","S231P:hasInstance":{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Psychrometrics.Validation.SpecificEnthalpy_TDryBulPhi.TDryBul.k"},"S231P:label":"TDryBul"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Psychrometrics.Validation.SpecificEnthalpy_TDryBulPhi.TDryBul.k","S231P:value":"273.15 +29.4"}]}
+{
+  "@context": {
+    "S231P": "https://data.ashrae.org/S231P#"
+  },
+  "@graph": [
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Psychrometrics.Validation.SpecificEnthalpy_TDryBulPhi",
+      "@type": "S231P:Block",
+      "S231P:containsBlock": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Psychrometrics.Validation.SpecificEnthalpy_TDryBulPhi.hBulPhi"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Psychrometrics.Validation.SpecificEnthalpy_TDryBulPhi.phi"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Psychrometrics.Validation.SpecificEnthalpy_TDryBulPhi.TDryBul"
+        }
+      ],
+      "S231P:label": "SpecificEnthalpy_TDryBulPhi"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Psychrometrics.Validation.SpecificEnthalpy_TDryBulPhi.hBulPhi",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Psychrometrics.SpecificEnthalpy_TDryBulPhi",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Model for specific enthalpy computation",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-10,\"y\":-10},{\"x\":10,\"y\":10}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Psychrometrics.Validation.SpecificEnthalpy_TDryBulPhi.hBulPhi.phi"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Psychrometrics.Validation.SpecificEnthalpy_TDryBulPhi.hBulPhi.TDryBul"
+        }
+      ],
+      "S231P:label": "hBulPhi"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Psychrometrics.Validation.SpecificEnthalpy_TDryBulPhi.phi",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Sources.Ramp",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Relative humidity",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-60,\"y\":-40},{\"x\":-40,\"y\":-20}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Psychrometrics.Validation.SpecificEnthalpy_TDryBulPhi.phi.duration"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Psychrometrics.Validation.SpecificEnthalpy_TDryBulPhi.phi.height"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Psychrometrics.Validation.SpecificEnthalpy_TDryBulPhi.phi.offset"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Psychrometrics.Validation.SpecificEnthalpy_TDryBulPhi.phi.y"
+        }
+      ],
+      "S231P:label": "phi"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Psychrometrics.Validation.SpecificEnthalpy_TDryBulPhi.phi.duration",
+      "S231P:value": 1
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Psychrometrics.Validation.SpecificEnthalpy_TDryBulPhi.phi.height",
+      "S231P:value": 1
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Psychrometrics.Validation.SpecificEnthalpy_TDryBulPhi.phi.offset",
+      "S231P:value": {
+        "@value": "0.001",
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Psychrometrics.Validation.SpecificEnthalpy_TDryBulPhi.phi.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.CDL.Psychrometrics.Validation.SpecificEnthalpy_TDryBulPhi.hBulPhi.phi"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Psychrometrics.Validation.SpecificEnthalpy_TDryBulPhi.TDryBul",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Sources.Constant",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Dry bulb temperature",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-64,\"y\":24},{\"x\":-44,\"y\":44}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Psychrometrics.Validation.SpecificEnthalpy_TDryBulPhi.TDryBul.k"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Psychrometrics.Validation.SpecificEnthalpy_TDryBulPhi.TDryBul.y"
+        }
+      ],
+      "S231P:label": "TDryBul"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Psychrometrics.Validation.SpecificEnthalpy_TDryBulPhi.TDryBul.k",
+      "S231P:value": "273.15 +29.4"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Psychrometrics.Validation.SpecificEnthalpy_TDryBulPhi.TDryBul.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.CDL.Psychrometrics.Validation.SpecificEnthalpy_TDryBulPhi.hBulPhi.TDryBul"
+      }
+    }
+  ]
+}

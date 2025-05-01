@@ -1,1 +1,174 @@
-{"@context":{"S231P":"https://data.ashrae.org/S231P#"},"@graph":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDInitialState","@type":"S231P:ElementaryBlock","S231P:containsBlock":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDInitialState.limPI"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDInitialState.limPID"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDInitialState.yMea"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDInitialState.ySet"}],"S231P:label":"PIDInitialState"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDInitialState.limPI","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.PID","S231P:accessSpecifier":"public","S231P:description":"PI controller","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":20,\"y\":-40},{\"x\":40,\"y\":-20}]}}}","S231P:hasInstance":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDInitialState.limPI.controllerType"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDInitialState.limPI.k"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDInitialState.limPI.xi_start"}],"S231P:label":"limPI"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDInitialState.limPI.controllerType","S231P:value":"Buildings.Controls.OBC.CDL.Types.SimpleController.PI"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDInitialState.limPI.k","S231P:value":3},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDInitialState.limPI.xi_start","S231P:value":{"@value":"0.25","@type":"http://www.w3.org/2001/XMLSchema#decimal"}},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDInitialState.limPID","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.PID","S231P:accessSpecifier":"public","S231P:description":"PID controller","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":20,\"y\":20},{\"x\":40,\"y\":40}]}}}","S231P:hasInstance":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDInitialState.limPID.controllerType"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDInitialState.limPID.k"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDInitialState.limPID.xi_start"}],"S231P:label":"limPID"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDInitialState.limPID.controllerType","S231P:value":"Buildings.Controls.OBC.CDL.Types.SimpleController.PID"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDInitialState.limPID.k","S231P:value":3},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDInitialState.limPID.xi_start","S231P:value":{"@value":"0.25","@type":"http://www.w3.org/2001/XMLSchema#decimal"}},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDInitialState.yMea","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Sources.Constant","S231P:accessSpecifier":"public","S231P:description":"Measured value","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-40,\"y\":0},{\"x\":-20,\"y\":20}]}}}","S231P:hasInstance":{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDInitialState.yMea.k"},"S231P:label":"yMea"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDInitialState.yMea.k","S231P:value":{"@value":"0.5","@type":"http://www.w3.org/2001/XMLSchema#decimal"}},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDInitialState.ySet","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Sources.Constant","S231P:accessSpecifier":"public","S231P:description":"Set point","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-40,\"y\":30},{\"x\":-20,\"y\":50}]}}}","S231P:hasInstance":{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDInitialState.ySet.k"},"S231P:label":"ySet"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.PIDInitialState.ySet.k","S231P:value":{"@value":"0.75","@type":"http://www.w3.org/2001/XMLSchema#decimal"}}]}
+{
+  "@context": {
+    "S231P": "https://data.ashrae.org/S231P#"
+  },
+  "@graph": [
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDInitialState",
+      "@type": "S231P:Block",
+      "S231P:containsBlock": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDInitialState.limPI"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDInitialState.limPID"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDInitialState.yMea"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDInitialState.ySet"
+        }
+      ],
+      "S231P:label": "PIDInitialState"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDInitialState.limPI",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Reals.PID",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "PI controller",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":20,\"y\":-40},{\"x\":40,\"y\":-20}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDInitialState.limPI.controllerType"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDInitialState.limPI.k"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDInitialState.limPI.u_m"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDInitialState.limPI.u_s"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDInitialState.limPI.xi_start"
+        }
+      ],
+      "S231P:label": "limPI"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDInitialState.limPI.controllerType",
+      "S231P:value": "Buildings.Controls.OBC.CDL.Types.SimpleController.PI"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDInitialState.limPI.k",
+      "S231P:value": 3
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDInitialState.limPI.xi_start",
+      "S231P:value": {
+        "@value": "0.25",
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDInitialState.limPID",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Reals.PID",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "PID controller",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":20,\"y\":20},{\"x\":40,\"y\":40}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDInitialState.limPID.controllerType"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDInitialState.limPID.k"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDInitialState.limPID.u_m"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDInitialState.limPID.u_s"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDInitialState.limPID.xi_start"
+        }
+      ],
+      "S231P:label": "limPID"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDInitialState.limPID.controllerType",
+      "S231P:value": "Buildings.Controls.OBC.CDL.Types.SimpleController.PID"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDInitialState.limPID.k",
+      "S231P:value": 3
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDInitialState.limPID.xi_start",
+      "S231P:value": {
+        "@value": "0.25",
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDInitialState.yMea",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Sources.Constant",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Measured value",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-40,\"y\":0},{\"x\":-20,\"y\":20}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDInitialState.yMea.k"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDInitialState.yMea.y"
+        }
+      ],
+      "S231P:label": "yMea"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDInitialState.yMea.k",
+      "S231P:value": {
+        "@value": "0.5",
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDInitialState.yMea.y",
+      "S231P:isConnectedTo": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDInitialState.limPI.u_m"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDInitialState.limPID.u_m"
+        }
+      ]
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDInitialState.ySet",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Sources.Constant",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Set point",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-40,\"y\":30},{\"x\":-20,\"y\":50}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDInitialState.ySet.k"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDInitialState.ySet.y"
+        }
+      ],
+      "S231P:label": "ySet"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDInitialState.ySet.k",
+      "S231P:value": {
+        "@value": "0.75",
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDInitialState.ySet.y",
+      "S231P:isConnectedTo": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDInitialState.limPI.u_s"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.PIDInitialState.limPID.u_s"
+        }
+      ]
+    }
+  ]
+}

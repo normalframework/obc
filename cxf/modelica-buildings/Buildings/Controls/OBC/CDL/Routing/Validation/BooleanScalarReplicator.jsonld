@@ -1,1 +1,69 @@
-{"@context":{"S231P":"https://data.ashrae.org/S231P#"},"@graph":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanScalarReplicator","@type":"S231P:ElementaryBlock","S231P:containsBlock":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanScalarReplicator.booPul"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanScalarReplicator.booRep"}],"S231P:label":"BooleanScalarReplicator"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanScalarReplicator.booPul","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Pulse","S231P:accessSpecifier":"public","S231P:description":"Block that outputs boolean pulse","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-40,\"y\":-10},{\"x\":-20,\"y\":10}]}}}","S231P:hasInstance":{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanScalarReplicator.booPul.period"},"S231P:label":"booPul"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanScalarReplicator.booPul.period","S231P:value":{"@value":"0.2","@type":"http://www.w3.org/2001/XMLSchema#decimal"}},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanScalarReplicator.booRep","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.BooleanScalarReplicator","S231P:accessSpecifier":"public","S231P:description":"Block that outputs the array replicating input value","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":20,\"y\":-10},{\"x\":40,\"y\":10}]}}}","S231P:hasInstance":{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanScalarReplicator.booRep.nout"},"S231P:label":"booRep"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanScalarReplicator.booRep.nout","S231P:value":3}]}
+{
+  "@context": {
+    "S231P": "https://data.ashrae.org/S231P#"
+  },
+  "@graph": [
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanScalarReplicator",
+      "@type": "S231P:Block",
+      "S231P:containsBlock": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanScalarReplicator.booPul"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanScalarReplicator.booRep"
+        }
+      ],
+      "S231P:label": "BooleanScalarReplicator"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanScalarReplicator.booPul",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Pulse",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Block that outputs boolean pulse",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-40,\"y\":-10},{\"x\":-20,\"y\":10}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanScalarReplicator.booPul.period"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanScalarReplicator.booPul.y"
+        }
+      ],
+      "S231P:label": "booPul"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanScalarReplicator.booPul.period",
+      "S231P:value": {
+        "@value": "0.2",
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanScalarReplicator.booPul.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanScalarReplicator.booRep.u"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanScalarReplicator.booRep",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Routing.BooleanScalarReplicator",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Block that outputs the array replicating input value",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":20,\"y\":-10},{\"x\":40,\"y\":10}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanScalarReplicator.booRep.nout"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanScalarReplicator.booRep.u"
+        }
+      ],
+      "S231P:label": "booRep"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanScalarReplicator.booRep.nout",
+      "S231P:value": 3
+    }
+  ]
+}

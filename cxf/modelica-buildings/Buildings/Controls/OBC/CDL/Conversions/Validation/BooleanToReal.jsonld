@@ -1,1 +1,57 @@
-{"@context":{"S231P":"https://data.ashrae.org/S231P#"},"@graph":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Conversions.Validation.BooleanToReal","@type":"S231P:ElementaryBlock","S231P:containsBlock":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Conversions.Validation.BooleanToReal.booPul"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Conversions.Validation.BooleanToReal.booToRea"}],"S231P:label":"BooleanToReal"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Conversions.Validation.BooleanToReal.booPul","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Pulse","S231P:accessSpecifier":"public","S231P:description":"Generate cyclic on-and-off output","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-20,\"y\":-10},{\"x\":0,\"y\":10}]}}}","S231P:hasInstance":{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Conversions.Validation.BooleanToReal.booPul.period"},"S231P:label":"booPul"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Conversions.Validation.BooleanToReal.booPul.period","S231P:value":1},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Conversions.Validation.BooleanToReal.booToRea","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Conversions.BooleanToReal","S231P:accessSpecifier":"public","S231P:description":"Block that converts Boolean to Real signal","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":30,\"y\":-10},{\"x\":50,\"y\":10}]}}}","S231P:label":"booToRea"}]}
+{
+  "@context": {
+    "S231P": "https://data.ashrae.org/S231P#"
+  },
+  "@graph": [
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Conversions.Validation.BooleanToReal",
+      "@type": "S231P:Block",
+      "S231P:containsBlock": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Conversions.Validation.BooleanToReal.booPul"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Conversions.Validation.BooleanToReal.booToRea"
+        }
+      ],
+      "S231P:label": "BooleanToReal"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Conversions.Validation.BooleanToReal.booPul",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Pulse",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Generate cyclic on-and-off output",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-20,\"y\":-10},{\"x\":0,\"y\":10}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Conversions.Validation.BooleanToReal.booPul.period"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Conversions.Validation.BooleanToReal.booPul.y"
+        }
+      ],
+      "S231P:label": "booPul"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Conversions.Validation.BooleanToReal.booPul.period",
+      "S231P:value": 1
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Conversions.Validation.BooleanToReal.booPul.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.CDL.Conversions.Validation.BooleanToReal.booToRea.u"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Conversions.Validation.BooleanToReal.booToRea",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Conversions.BooleanToReal",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Block that converts Boolean to Real signal",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":30,\"y\":-10},{\"x\":50,\"y\":10}]}}}",
+      "S231P:hasInstance": {
+        "@id": "http://example.org#Buildings.Controls.OBC.CDL.Conversions.Validation.BooleanToReal.booToRea.u"
+      },
+      "S231P:label": "booToRea"
+    }
+  ]
+}
