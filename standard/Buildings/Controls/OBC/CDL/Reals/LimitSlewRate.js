@@ -1,41 +1,48 @@
 /**
- * LimitSlewRate block that limits the increase or decrease rate of input.
+ * LimitSlewRate block that limits the increase or decrease rate of the input signal.
+ * It approximates the derivative between input and output and clamps it between fallingSlewRate and raisingSlewRate.
  * 
  * @param {Object} params - The parameters object.
- * @param {number} params.raisingSlewRate - Speed with which to increase the output.
- * @param {number} params.fallingSlewRate - Speed with which to decrease the output.
- * @param {number} params.Td - Derivative time constant.
- * @param {boolean} params.enable - Set to false to disable rate limiter.
+ * @param {number} params.raisingSlewRate - Speed with which to increase the output (1/s).
+ * @param {number} [params.fallingSlewRate] - Speed with which to decrease the output (1/s); defaults to -raisingSlewRate.
+ * @param {number} [params.Td] - Derivative time constant (s); defaults to raisingSlewRate * 10.
+ * @param {boolean} [params.enable=true] - Set to false to disable the rate limiter.
  * 
- * @returns {Function} - A function that limits the slew rate of the input signal.
+ * @returns {Object} - The output object.
+ * @returns {number} output.y - The rate-limited signal.
  */
+const TimeManager = require("../../../../../TimeManager");
+const Initial = require("../../../../../Initial");
+function limitSlewRate({
+  raisingSlewRate,
+  fallingSlewRate = -raisingSlewRate,
+  Td = raisingSlewRate * 10,
+  enable = true
+} = {}) {
+  let y;
+  const eps = Number.EPSILON;
+  const isInitial = Initial();
 
- function limitSlewRate({ raisingSlewRate = 0, fallingSlewRate = -raisingSlewRate, Td = 0, enable = true }) {
-  if (raisingSlewRate <= 0) {
-    throw new Error("raisingSlewRate must be larger than zero.");
-  }
-  if (fallingSlewRate >= 0) {
-    throw new Error("fallingSlewRate must be less than zero.");
-  }
+  return ({ u = 0 } = {}) => {
+    const dt = Math.max(TimeManager.dt, eps);
 
-  let y = 0;
-
-  return ({ u = 0 }) => {
-    const thr = (u - y) / Td;
-    if (enable) {
-      if (thr < fallingSlewRate) {
-        y += fallingSlewRate * Td;
-      } else if (thr > raisingSlewRate) {
-        y += raisingSlewRate * Td;
-      } else {
-        y = u;
-      }
-    } else {
+    if (isInitial()) {
       y = u;
+    } else if (!enable) {
+      y = u;
+      return { y };
+    } else {
+      const thr = (u - y) / Td;
+      const limitedThr = thr < fallingSlewRate
+        ? fallingSlewRate
+        : thr > raisingSlewRate
+          ? raisingSlewRate
+          : thr;
+      y += limitedThr * dt;
     }
+
     return { y };
   };
 }
-
 
 module.exports = limitSlewRate;

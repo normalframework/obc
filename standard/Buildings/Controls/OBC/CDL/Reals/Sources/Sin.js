@@ -1,3 +1,4 @@
+const TimeManager = require("../../../../../../TimeManager");
 /**
  * Sin block that generates a sine signal.
  * 
@@ -15,7 +16,7 @@
   const pi = Math.PI;
 
   return () => {
-    const currentTime = Date.now() / 1000;
+    const currentTime = TimeManager.time;
     let y;
 
     if (currentTime < startTime) {

@@ -10,7 +10,7 @@
  * @returns {number} output.y - Connector for quotient.
  */
 
- function divide({ }) {
+ function divide({ } = {}) {
   return ({ u1 = 0, u2 = 0 }) => {
     return { y: u1 / u2 };
   }

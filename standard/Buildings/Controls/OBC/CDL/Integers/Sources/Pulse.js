@@ -1,3 +1,5 @@
+const TimeManager = require("../../../../../../TimeManager");
+
 /**
  * Pulse block that generates a pulse signal of type Integer.
  * 
@@ -12,11 +14,11 @@
  */
 
  function Pulse({ amplitude = 1, width = 0.5, period = 1, shift = 0, offset = 0 }) {
-  const t0 = Math.round((Date.now() / 1000) / period) * period + (shift % period);
+  const t0 = Math.round((TimeManager.time / period) * period) + (shift % period);
   const t1 = t0 + width * period;
 
   return () => {
-    const currentTime = Date.now() / 1000;
+    const currentTime = TimeManager.time;
     let y;
 
     if (t0 < t1) {

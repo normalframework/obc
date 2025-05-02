@@ -1,3 +1,5 @@
+const TimeManager = require("../../../../../TimeManager");
+
 /**
  * Stage block that outputs the total number of stages that should be enabled.
  * 
@@ -19,11 +21,11 @@
   let lowerThreshold = 0;
   let checkUpper = false;
   let checkLower = true;
-  let tNext = Date.now() / 1000 + holdDuration;
-  let y = pre_y_start;
+  let tNext = TimeManager.time + holdDuration;
+  let y = pre_y_start;  
 
   return ({ u = 0 }) => {
-    const currentTime = Date.now() / 1000;
+    const currentTime = TimeManager.time;
 
     checkUpper = (!checkUpper && u > upperThreshold + h) || (checkUpper && u >= upperThreshold - h);
     checkLower = (!checkLower && u > lowerThreshold + h) || (checkLower && u >= lowerThreshold - h);

@@ -1,32 +1,34 @@
+const TimeManager = require("../../../../../TimeManager");
+
+
 /**
- * Derivative block that approximates the derivative of the input.
- * 
- * @param {Object} params - The parameters object.
- * @param {number} params.y_start - Initial value of output (= state).
- * 
- * @returns {Function} - A function that calculates the derivative given the input.
+ * Derivative block:  
+ *   T·dx/dt = u – x  
+ *   y       = (k/T_nonZero)*(u – x)
+ *
+ * @param {Object} params
+ * @param {number} params.y_start  – initial output (= state)
+ * @returns {(inputs: {u:number,k:number,T:number}) => {y:number}}
  */
+function derivative({ y_start = 0 } = {}) {
+  // state x: will be set correctly at first call
+  let x;
+  return ({ u = 0, k = 0, T = 0 } = {}) => {
+    const eps = Number.EPSILON
+    const T_nonZero = Math.max(T, 100 * eps);
+    const dt = Math.max(TimeManager.dt, eps);
 
-function derivative({ y_start = 0 }) {
-  let x = 0;
-
-  return ({ k = 0, T = 0, u = 0 }) => {
-    const T_nonZero = Math.max(T, 100 * Number.EPSILON);
-    const dt = 0.001; // Small time step for numerical differentiation, can be adjusted
-
-    if (Math.abs(k) < Number.EPSILON) {
-      x = u;
-    } else {
-      x = u - (T * y_start) / k;
+    if (x == null) {
+      x = Math.abs(k) < eps
+        ? u
+        : u - (T * y_start) / k;
     }
-
-    const der_x = (u - x) / T_nonZero;
-    x += der_x * dt;
-
+    
     const y = (k / T_nonZero) * (u - x);
+    x = x + dt * ((u - x) / T_nonZero);
 
     return { y };
-  };
+  }
 }
 
-module.exports = derivative
+module.exports = derivative;

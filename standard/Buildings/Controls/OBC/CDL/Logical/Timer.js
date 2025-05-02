@@ -1,38 +1,44 @@
 /**
- * Timer block that measures the time from the instant where the Boolean input became true.
+ * Timer block measuring the time from when the Boolean input became true.
+ * It outputs the elapsed time since u turned true and a flag when the elapsed
+ * time exceeds the threshold t.
  * 
- * @param {Object} input - The input object.
- * @param {boolean} input.u - Input that switches the timer on if true, and off if false.
  * @param {Object} params - The parameters object.
- * @param {number} params.t - Threshold time for comparison (in seconds).
+ * @param {number} params.t - Threshold time for comparison (s).
  * 
  * @returns {Object} - The output object.
- * @returns {number} output.y - Elapsed time since input became true (in seconds).
- * @returns {boolean} output.passed - True if the elapsed time is greater than the threshold time.
+ * @returns {number} output.y - Elapsed time since u became true (s).
+ * @returns {boolean} output.passed - True if elapsed time ≥ t.
  */
+const Initial = require("../../../../../Initial");
+const TimeManager = require("../../../../../TimeManager");
 
-function timer({ t = 0 }) {
-  let elapsedTime = 0;
-  let lastInputState = false;
-  let startTime = 0;
+function timer({ t = 0 } = {}) {
+  const isInitial = Initial();
+  let entryTime;
+  let passed;
+  let prev_u;
 
-  return function ({ u = false }) {
-    if (u && !lastInputState) {
-      startTime = Date.now();
-      elapsedTime = 0;
-    } else if (u) {
-      elapsedTime = (Date.now() - startTime) / 1000; // Calculate elapsed time in seconds
-    } else {
-      elapsedTime = 0;
+  return ({ u = false } = {}) => {
+    const now = TimeManager.time;
+
+    if (isInitial()) {
+      entryTime = now;
+      passed = (t <= 0);
+      prev_u = u;
+    } else if (u && !prev_u) {
+      entryTime = now;
+      passed = (t <= 0);
+    } else if (u && now >= t + entryTime) {
+      passed = true;
+    } else if (!u && prev_u) {
+      passed = false;
     }
 
-    lastInputState = u;
-
-    const passed = elapsedTime > t;
-
-    return { y: elapsedTime, passed };
+    prev_u = u;
+    const y = u ? (now - entryTime) : 0.0;
+    return { y: y, passed };
   };
 }
-
 
 module.exports = timer;

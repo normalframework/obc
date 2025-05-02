@@ -1,22 +1,26 @@
 /**
  * TriggeredMax block that outputs the maximum absolute value of a continuous signal at trigger instants.
+ * At each rising edge of the trigger input, y is updated to the greater of its previous value and the absolute value of u.
  * 
- * @param {Object} input - The input object.
- * @param {number} input.u - Connector with a Real input signal.
- * @param {boolean} input.trigger - Connector for the trigger.
- * @param {Object} output - The output object.
  * @returns {Object} - The output object.
  * @returns {number} output.y - Connector with a Real output signal.
  */
+const Trigger = require('../../../../../Trigger');
 
 function triggeredMax() {
-  let previousY = 0;
+  const isRising = Trigger();
+  let y;
+  let firstCall = true;
 
-  return ({ u = 0, trigger = false }) => {
-    if (trigger) {
-      previousY = Math.max(previousY, Math.abs(u));
+  return ({ u = 0, trigger = false } = {}) => {
+    if (firstCall) {
+      y = u;
+      firstCall = false;
     }
-    return { y: previousY };
+    if (isRising(trigger)) {
+      y = Math.max(y, Math.abs(u));
+    }
+    return { y };
   };
 }
 

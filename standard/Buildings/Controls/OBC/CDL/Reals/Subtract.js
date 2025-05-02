@@ -9,7 +9,7 @@
  * @returns {number} output.y - Connector of Real output signal.
  */
 
-function subtract({ }) {
+function subtract({ } = {}) {
   return ({ u1 = 0, u2 = 0 }) => {
     return { y: u1 - u2 };
   }

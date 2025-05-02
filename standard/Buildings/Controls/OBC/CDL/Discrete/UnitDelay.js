@@ -1,33 +1,28 @@
 /**
- * UnitDelay block that outputs the input signal with a unit delay.
+ * UnitDelay block that outputs the input signal with a unit delay at discrete intervals.
  * 
  * @param {Object} params - The parameters object.
- * @param {number} params.samplePeriod - Sample period of component.
+ * @param {number} params.samplePeriod - Sample period of component (s).
  * @param {number} params.y_start - Initial value of output signal.
  * 
- * @returns {Function} - The inner function with input parameters.
- * @returns {Object} innerInput - The inner input object.
- * @returns {number} innerInput.u - Continuous input signal.
- * 
  * @returns {Object} - The output object.
- * @returns {number} output.y - Continuous output signal.
+ * @returns {number} output.y - Continuous output signal delayed by one sample period.
  */
+const TimeManager = require("../../../../../TimeManager");
+const Initial = require("../../../../../Initial");
 
-function unitDelay({ samplePeriod = 0, y_start = 0 }) {
-  let y = y_start;
-  let t0 = Math.round((Date.now() / 1000) / samplePeriod) * samplePeriod;
+function unitDelay({ samplePeriod, y_start = 0 } = {}) {
+  const isFirst = Initial();
+  let nextSample = Math.round(TimeManager.time / samplePeriod) * samplePeriod;
   let prev_u = y_start;
+  let y = y_start;
 
-  return ({ u = 0 }) => {
-    const currentTime = Math.round(Date.now() / 1000);
-    const sampleTrigger = currentTime >= t0 && (currentTime - t0) % samplePeriod < 1E-3;
-
-    if (sampleTrigger) {
+  return ({ u = 0 } = {}) => {
+    if (isFirst() || TimeManager.time >= nextSample) {
       y = prev_u;
       prev_u = u;
-      t0 += samplePeriod;
+      nextSample += samplePeriod;
     }
-
     return { y };
   };
 }

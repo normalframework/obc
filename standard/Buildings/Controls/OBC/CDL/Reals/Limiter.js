@@ -1,23 +1,23 @@
 /**
  * Limiter block that limits the range of a signal.
+ * It clamps the input u to lie within [uMin, uMax].
  * 
  * @param {Object} params - The parameters object.
- * @param {number} params.uMax - Upper limit of input signal.
- * @param {number} params.uMin - Lower limit of input signal.
+ * @param {number} params.uMin - Lower limit of the input signal.
+ * @param {number} params.uMax - Upper limit of the input signal.
  * 
- * @returns {Function} - A function that limits the input signal within the specified range.
+ * @returns {Function} - The step function.
+ * @returns {Object} output - The output object.
+ * @returns {number} output.y - The clamped input signal.
  */
-
- function limiter({ uMax = 0, uMin = 0 }) {
+function limiter({ uMin, uMax } = {}) {
   if (uMin >= uMax) {
     throw new Error("uMin must be smaller than uMax. Check parameters.");
   }
-
-  return ({ u = 0 }) => {
-    const y = Math.max(Math.min(u, uMax), uMin);
+  return ({ u = 0 } = {}) => {
+    const y = u > uMax ? uMax : (u < uMin ? uMin : u);
     return { y };
   };
 }
-
 
 module.exports = limiter;

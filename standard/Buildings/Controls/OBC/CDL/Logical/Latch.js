@@ -1,22 +1,28 @@
 /**
  * Latch block that maintains a true signal until cleared.
+ * Output y becomes true when u is true and remains true until clr becomes true.
  * 
- * @param {Object} input - The input object.
- * @param {boolean} input.u - Latch input signal.
- * @param {boolean} input.clr - Clear input signal.
- * 
+ * @param {Object} params - The parameters object.
  * @returns {Object} - The output object.
- * @returns {boolean} output.y - Output signal.
+ * @returns {boolean} output.y - Output signal; stays true until cleared.
  */
-function latch() {
-  let y = false;
+const Initial = require("../../../../../Initial");
 
-  return ({ u = false, clr = false }) => {
-    if (clr) {
-      y = false;
-    } else if (u) {
-      y = true;
+function latch() {
+  const isInitial = Initial();
+  let y;
+  let prev = { u: false, clr: false };
+
+  return ({ u = false, clr = false } = {}) => {
+    if (
+      isInitial() ||
+      u !== prev.u ||
+      clr !== prev.clr
+    ) {
+      y = u && !clr;
     }
+    prev.u = u;
+    prev.clr = clr;
     return { y };
   };
 }

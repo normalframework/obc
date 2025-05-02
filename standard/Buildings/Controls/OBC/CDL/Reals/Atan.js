@@ -9,7 +9,7 @@
  * @returns {number} output.y - Connector of Real output signal.
  */
 
- function atan({ }) {
+ function atan({ } = {}) {
   return ({ u = 0 }) => {
     return { y: Math.atan(u) };
   }

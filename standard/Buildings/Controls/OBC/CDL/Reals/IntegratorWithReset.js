@@ -1,3 +1,6 @@
+const TimeManager = require("../../../../../TimeManager");
+const Trigger     = require("../../../../../Trigger");
+
 /**
  * IntegratorWithReset block that outputs the integral of the input signal.
  * 
@@ -8,18 +11,18 @@
  * @returns {Function} - A function that calculates the integral with reset capability given the inputs.
  */
 
- function integratorWithReset({ k = 1, y_start = 0 }) {
+function integratorWithReset({ k = 1, y_start = 0 }) {
   let y = y_start;
 
-  return ({ u = 0, y_reset_in = 0, trigger = 0 }) => {
-    const dt = 0.001; // Small time step for numerical integration, can be adjusted
+  const isRising = Trigger();
+  const eps = Number.EPSILON;
 
-    if (trigger) {
+  return ({ u = 0, y_reset_in = 0, trigger = false }) => {
+    if (isRising(trigger)) {
       y = y_reset_in;
-    } else {
-      y += k * u * dt;
-    }
-
+    } 
+    const dt = Math.max(TimeManager.dt, eps);
+    y += k * u * dt;
     return { y };
   };
 }
