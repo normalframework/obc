@@ -1,1 +1,580 @@
-{"@context":{"S231P":"https://data.ashrae.org/S231P#"},"@graph":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor","@type":"S231P:ElementaryBlock","S231P:containsBlock":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.conInt"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.conInt1"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.conInt2"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.conInt3"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.conInt4"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.extIndInt"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.extIndInt1"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.extIndInt2"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.extIndInt3"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.extIndInt4"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.intPul"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.intPul1"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.intPul2"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.intPul3"}],"S231P:label":"IntegerExtractor"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.conInt","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Sources.Constant","S231P:accessSpecifier":"public","S231P:description":"Index to extract input signal","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":0,\"y\":60},{\"x\":20,\"y\":80}]}}}","S231P:hasInstance":{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.conInt.k"},"S231P:label":"conInt"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.conInt.k","S231P:isFinal":true,"S231P:value":2},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.conInt1","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Sources.Constant","S231P:accessSpecifier":"public","S231P:description":"Index to extract input signal","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":0,\"y\":20},{\"x\":20,\"y\":40}]}}}","S231P:hasInstance":{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.conInt1.k"},"S231P:label":"conInt1"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.conInt1.k","S231P:value":6},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.conInt2","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Sources.Constant","S231P:accessSpecifier":"public","S231P:description":"Block that outputs integer constant","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-80,\"y\":70},{\"x\":-60,\"y\":90}]}}}","S231P:hasInstance":{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.conInt2.k"},"S231P:label":"conInt2"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.conInt2.k","S231P:isFinal":true,"S231P:value":0},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.conInt3","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Sources.Constant","S231P:accessSpecifier":"public","S231P:description":"Block that outputs integer constant","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-80,\"y\":-90},{\"x\":-60,\"y\":-70}]}}}","S231P:hasInstance":{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.conInt3.k"},"S231P:label":"conInt3"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.conInt3.k","S231P:isFinal":true,"S231P:value":4},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.conInt4","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Sources.Constant","S231P:accessSpecifier":"public","S231P:description":"Index to extract input signal","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":0,\"y\":-20},{\"x\":20,\"y\":0}]}}}","S231P:hasInstance":{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.conInt4.k"},"S231P:label":"conInt4"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.conInt4.k","S231P:value":0},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.extIndInt","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.IntegerExtractor","S231P:accessSpecifier":"public","S231P:description":"Extracts signal from an input signal vector","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":40,\"y\":80},{\"x\":60,\"y\":100}]}}}","S231P:hasInstance":{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.extIndInt.nin"},"S231P:label":"extIndInt"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.extIndInt.nin","S231P:isFinal":true,"S231P:value":4},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.extIndInt1","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.IntegerExtractor","S231P:accessSpecifier":"public","S231P:description":"Extracts signal from an input signal vector when the extract index is out of the upper range","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":40,\"y\":40},{\"x\":60,\"y\":60}]}}}","S231P:hasInstance":{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.extIndInt1.nin"},"S231P:label":"extIndInt1"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.extIndInt1.nin","S231P:isFinal":true,"S231P:value":4},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.extIndInt2","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.IntegerExtractor","S231P:accessSpecifier":"public","S231P:description":"Extracts signal from an input signal vector when the extract index is out of the lower range","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":40,\"y\":0},{\"x\":60,\"y\":20}]}}}","S231P:hasInstance":{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.extIndInt2.nin"},"S231P:label":"extIndInt2"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.extIndInt2.nin","S231P:isFinal":true,"S231P:value":4},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.extIndInt3","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.IntegerExtractor","S231P:accessSpecifier":"public","S231P:description":"Extracts signal from an input signal vector when the extract index changes from within range to out of range","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":40,\"y\":-40},{\"x\":60,\"y\":-20}]}}}","S231P:hasInstance":{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.extIndInt3.nin"},"S231P:label":"extIndInt3"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.extIndInt3.nin","S231P:isFinal":true,"S231P:value":4},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.extIndInt4","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.IntegerExtractor","S231P:accessSpecifier":"public","S231P:description":"Extracts signal from an input signal vector when the extract index changes from out of range to within range","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":40,\"y\":-80},{\"x\":60,\"y\":-60}]}}}","S231P:hasInstance":{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.extIndInt4.nin"},"S231P:label":"extIndInt4"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.extIndInt4.nin","S231P:isFinal":true,"S231P:value":4},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.intPul","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Sources.Pulse","S231P:accessSpecifier":"public","S231P:description":"Generate pulse signal of type Integer","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-80,\"y\":20},{\"x\":-60,\"y\":40}]}}}","S231P:hasInstance":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.intPul.amplitude"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.intPul.period"}],"S231P:label":"intPul"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.intPul.amplitude","S231P:isFinal":true,"S231P:value":1},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.intPul.period","S231P:isFinal":true,"S231P:value":{"@value":"0.2","@type":"http://www.w3.org/2001/XMLSchema#decimal"}},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.intPul1","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Sources.Pulse","S231P:accessSpecifier":"public","S231P:description":"Generate pulse signal of type Integer","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-80,\"y\":-40},{\"x\":-60,\"y\":-20}]}}}","S231P:hasInstance":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.intPul1.amplitude"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.intPul1.offset"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.intPul1.period"}],"S231P:label":"intPul1"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.intPul1.amplitude","S231P:isFinal":true,"S231P:value":2},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.intPul1.offset","S231P:isFinal":true,"S231P:value":-1},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.intPul1.period","S231P:isFinal":true,"S231P:value":{"@value":"0.3","@type":"http://www.w3.org/2001/XMLSchema#decimal"}},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.intPul2","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Sources.Pulse","S231P:accessSpecifier":"public","S231P:description":"Generate pulse signal of type Integer","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":0,\"y\":-60},{\"x\":20,\"y\":-40}]}}}","S231P:hasInstance":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.intPul2.amplitude"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.intPul2.offset"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.intPul2.period"}],"S231P:label":"intPul2"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.intPul2.amplitude","S231P:isFinal":true,"S231P:value":3},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.intPul2.offset","S231P:isFinal":true,"S231P:value":-1},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.intPul2.period","S231P:isFinal":true,"S231P:value":1},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.intPul3","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Sources.Pulse","S231P:accessSpecifier":"public","S231P:description":"Generate pulse signal of type Integer","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":0,\"y\":-100},{\"x\":20,\"y\":-80}]}}}","S231P:hasInstance":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.intPul3.amplitude"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.intPul3.offset"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.intPul3.period"}],"S231P:label":"intPul3"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.intPul3.amplitude","S231P:isFinal":true,"S231P:value":-3},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.intPul3.offset","S231P:isFinal":true,"S231P:value":3},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.intPul3.period","S231P:isFinal":true,"S231P:value":1}]}
+{
+  "@context": {
+    "S231P": "https://data.ashrae.org/S231P#"
+  },
+  "@graph": [
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor",
+      "@type": "S231P:Block",
+      "S231P:containsBlock": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.conInt"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.conInt1"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.conInt2"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.conInt3"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.conInt4"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.extIndInt"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.extIndInt1"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.extIndInt2"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.extIndInt3"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.extIndInt4"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.intPul"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.intPul1"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.intPul2"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.intPul3"
+        }
+      ],
+      "S231P:label": "IntegerExtractor"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.conInt",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Sources.Constant",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Index to extract input signal",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":0,\"y\":60},{\"x\":20,\"y\":80}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.conInt.k"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.conInt.y"
+        }
+      ],
+      "S231P:label": "conInt"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.conInt.k",
+      "S231P:isFinal": true,
+      "S231P:value": 2
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.conInt.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.extIndInt.index"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.conInt1",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Sources.Constant",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Index to extract input signal",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":0,\"y\":20},{\"x\":20,\"y\":40}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.conInt1.k"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.conInt1.y"
+        }
+      ],
+      "S231P:label": "conInt1"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.conInt1.k",
+      "S231P:value": 6
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.conInt1.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.extIndInt1.index"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.conInt2",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Sources.Constant",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Block that outputs integer constant",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-80,\"y\":70},{\"x\":-60,\"y\":90}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.conInt2.k"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.conInt2.y"
+        }
+      ],
+      "S231P:label": "conInt2"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.conInt2.k",
+      "S231P:isFinal": true,
+      "S231P:value": 0
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.conInt2.y",
+      "S231P:isConnectedTo": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.extIndInt.u%5B1%5D"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.extIndInt1.u%5B1%5D"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.extIndInt2.u%5B1%5D"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.extIndInt3.u%5B1%5D"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.extIndInt4.u%5B1%5D"
+        }
+      ]
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.conInt3",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Sources.Constant",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Block that outputs integer constant",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-80,\"y\":-90},{\"x\":-60,\"y\":-70}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.conInt3.k"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.conInt3.y"
+        }
+      ],
+      "S231P:label": "conInt3"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.conInt3.k",
+      "S231P:isFinal": true,
+      "S231P:value": 4
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.conInt3.y",
+      "S231P:isConnectedTo": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.extIndInt.u%5B4%5D"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.extIndInt1.u%5B4%5D"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.extIndInt2.u%5B4%5D"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.extIndInt3.u%5B4%5D"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.extIndInt4.u%5B4%5D"
+        }
+      ]
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.conInt4",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Sources.Constant",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Index to extract input signal",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":0,\"y\":-20},{\"x\":20,\"y\":0}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.conInt4.k"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.conInt4.y"
+        }
+      ],
+      "S231P:label": "conInt4"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.conInt4.k",
+      "S231P:value": 0
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.conInt4.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.extIndInt2.index"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.extIndInt",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Routing.IntegerExtractor",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Extracts signal from an input signal vector",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":40,\"y\":80},{\"x\":60,\"y\":100}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.extIndInt.index"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.extIndInt.nin"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.extIndInt.u%5B1%5D"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.extIndInt.u%5B2%5D"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.extIndInt.u%5B3%5D"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.extIndInt.u%5B4%5D"
+        }
+      ],
+      "S231P:label": "extIndInt"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.extIndInt.nin",
+      "S231P:isFinal": true,
+      "S231P:value": 4
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.extIndInt1",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Routing.IntegerExtractor",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Extracts signal from an input signal vector when the extract index is out of the upper range",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":40,\"y\":40},{\"x\":60,\"y\":60}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.extIndInt1.index"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.extIndInt1.nin"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.extIndInt1.u%5B1%5D"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.extIndInt1.u%5B2%5D"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.extIndInt1.u%5B3%5D"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.extIndInt1.u%5B4%5D"
+        }
+      ],
+      "S231P:label": "extIndInt1"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.extIndInt1.nin",
+      "S231P:isFinal": true,
+      "S231P:value": 4
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.extIndInt2",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Routing.IntegerExtractor",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Extracts signal from an input signal vector when the extract index is out of the lower range",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":40,\"y\":0},{\"x\":60,\"y\":20}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.extIndInt2.index"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.extIndInt2.nin"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.extIndInt2.u%5B1%5D"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.extIndInt2.u%5B2%5D"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.extIndInt2.u%5B3%5D"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.extIndInt2.u%5B4%5D"
+        }
+      ],
+      "S231P:label": "extIndInt2"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.extIndInt2.nin",
+      "S231P:isFinal": true,
+      "S231P:value": 4
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.extIndInt3",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Routing.IntegerExtractor",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Extracts signal from an input signal vector when the extract index changes from within range to out of range",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":40,\"y\":-40},{\"x\":60,\"y\":-20}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.extIndInt3.index"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.extIndInt3.nin"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.extIndInt3.u%5B1%5D"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.extIndInt3.u%5B2%5D"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.extIndInt3.u%5B3%5D"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.extIndInt3.u%5B4%5D"
+        }
+      ],
+      "S231P:label": "extIndInt3"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.extIndInt3.nin",
+      "S231P:isFinal": true,
+      "S231P:value": 4
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.extIndInt4",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Routing.IntegerExtractor",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Extracts signal from an input signal vector when the extract index changes from out of range to within range",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":40,\"y\":-80},{\"x\":60,\"y\":-60}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.extIndInt4.index"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.extIndInt4.nin"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.extIndInt4.u%5B1%5D"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.extIndInt4.u%5B2%5D"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.extIndInt4.u%5B3%5D"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.extIndInt4.u%5B4%5D"
+        }
+      ],
+      "S231P:label": "extIndInt4"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.extIndInt4.nin",
+      "S231P:isFinal": true,
+      "S231P:value": 4
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.intPul",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Sources.Pulse",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Generate pulse signal of type Integer",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-80,\"y\":20},{\"x\":-60,\"y\":40}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.intPul.amplitude"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.intPul.period"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.intPul.y"
+        }
+      ],
+      "S231P:label": "intPul"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.intPul.amplitude",
+      "S231P:isFinal": true,
+      "S231P:value": 1
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.intPul.period",
+      "S231P:isFinal": true,
+      "S231P:value": {
+        "@value": "0.2",
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.intPul.y",
+      "S231P:isConnectedTo": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.extIndInt.u%5B2%5D"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.extIndInt1.u%5B2%5D"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.extIndInt2.u%5B2%5D"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.extIndInt3.u%5B2%5D"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.extIndInt4.u%5B2%5D"
+        }
+      ]
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.intPul1",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Sources.Pulse",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Generate pulse signal of type Integer",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-80,\"y\":-40},{\"x\":-60,\"y\":-20}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.intPul1.amplitude"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.intPul1.offset"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.intPul1.period"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.intPul1.y"
+        }
+      ],
+      "S231P:label": "intPul1"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.intPul1.amplitude",
+      "S231P:isFinal": true,
+      "S231P:value": 2
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.intPul1.offset",
+      "S231P:isFinal": true,
+      "S231P:value": -1
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.intPul1.period",
+      "S231P:isFinal": true,
+      "S231P:value": {
+        "@value": "0.3",
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.intPul1.y",
+      "S231P:isConnectedTo": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.extIndInt.u%5B3%5D"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.extIndInt1.u%5B3%5D"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.extIndInt2.u%5B3%5D"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.extIndInt3.u%5B3%5D"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.extIndInt4.u%5B3%5D"
+        }
+      ]
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.intPul2",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Sources.Pulse",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Generate pulse signal of type Integer",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":0,\"y\":-60},{\"x\":20,\"y\":-40}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.intPul2.amplitude"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.intPul2.offset"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.intPul2.period"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.intPul2.y"
+        }
+      ],
+      "S231P:label": "intPul2"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.intPul2.amplitude",
+      "S231P:isFinal": true,
+      "S231P:value": 3
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.intPul2.offset",
+      "S231P:isFinal": true,
+      "S231P:value": -1
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.intPul2.period",
+      "S231P:isFinal": true,
+      "S231P:value": 1
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.intPul2.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.extIndInt3.index"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.intPul3",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Sources.Pulse",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Generate pulse signal of type Integer",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":0,\"y\":-100},{\"x\":20,\"y\":-80}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.intPul3.amplitude"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.intPul3.offset"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.intPul3.period"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.intPul3.y"
+        }
+      ],
+      "S231P:label": "intPul3"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.intPul3.amplitude",
+      "S231P:isFinal": true,
+      "S231P:value": -3
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.intPul3.offset",
+      "S231P:isFinal": true,
+      "S231P:value": 3
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.intPul3.period",
+      "S231P:isFinal": true,
+      "S231P:value": 1
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.intPul3.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractor.extIndInt4.index"
+      }
+    }
+  ]
+}

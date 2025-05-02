@@ -1,1 +1,437 @@
-{"@context":{"S231P":"https://data.ashrae.org/S231P#"},"@graph":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp","@type":"S231P:ElementaryBlock","S231P:containsBlock":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.booPul1"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.booPul2"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.booPul5"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.pul"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.pul1"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.pul2"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.ramUp"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.ramUp1"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.ramUpDow"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.ramUpDow1"}],"S231P:label":"Ramp"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.booPul1","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Pulse","S231P:accessSpecifier":"public","S231P:description":"Boolean pulse","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-100,\"y\":20},{\"x\":-80,\"y\":40}]}}}","S231P:hasInstance":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.booPul1.period"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.booPul1.shift"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.booPul1.width"}],"S231P:label":"booPul1"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.booPul1.period","S231P:isFinal":true,"S231P:value":12},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.booPul1.shift","S231P:isFinal":true,"S231P:value":1},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.booPul1.width","S231P:isFinal":true,"S231P:value":{"@value":"0.9","@type":"http://www.w3.org/2001/XMLSchema#decimal"}},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.booPul2","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Pulse","S231P:accessSpecifier":"public","S231P:description":"Boolean pulse","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-100,\"y\":-100},{\"x\":-80,\"y\":-80}]}}}","S231P:hasInstance":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.booPul2.period"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.booPul2.shift"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.booPul2.width"}],"S231P:label":"booPul2"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.booPul2.period","S231P:isFinal":true,"S231P:value":12},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.booPul2.shift","S231P:isFinal":true,"S231P:value":2},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.booPul2.width","S231P:isFinal":true,"S231P:value":{"@value":"0.9","@type":"http://www.w3.org/2001/XMLSchema#decimal"}},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.booPul5","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Pulse","S231P:accessSpecifier":"public","S231P:description":"Boolean pulse","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":20,\"y\":-40},{\"x\":40,\"y\":-20}]}}}","S231P:hasInstance":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.booPul5.period"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.booPul5.shift"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.booPul5.width"}],"S231P:label":"booPul5"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.booPul5.period","S231P:isFinal":true,"S231P:value":12},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.booPul5.shift","S231P:isFinal":true,"S231P:value":1},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.booPul5.width","S231P:isFinal":true,"S231P:value":{"@value":"0.9","@type":"http://www.w3.org/2001/XMLSchema#decimal"}},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.pul","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Sources.Pulse","S231P:accessSpecifier":"public","S231P:description":"Boolean pulse","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-100,\"y\":70},{\"x\":-80,\"y\":90}]}}}","S231P:hasInstance":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.pul.period"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.pul.shift"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.pul.width"}],"S231P:label":"pul"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.pul.period","S231P:isFinal":true,"S231P:value":12},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.pul.shift","S231P:isFinal":true,"S231P:value":2},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.pul.width","S231P:isFinal":true,"S231P:value":{"@value":"0.8","@type":"http://www.w3.org/2001/XMLSchema#decimal"}},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.pul1","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Sources.Pulse","S231P:accessSpecifier":"public","S231P:description":"Boolean pulse","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-100,\"y\":-40},{\"x\":-80,\"y\":-20}]}}}","S231P:hasInstance":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.pul1.period"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.pul1.shift"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.pul1.width"}],"S231P:label":"pul1"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.pul1.period","S231P:isFinal":true,"S231P:value":12},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.pul1.shift","S231P:isFinal":true,"S231P:value":{"@value":"1.5","@type":"http://www.w3.org/2001/XMLSchema#decimal"}},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.pul1.width","S231P:isFinal":true,"S231P:value":{"@value":"0.2","@type":"http://www.w3.org/2001/XMLSchema#decimal"}},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.pul2","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Sources.Pulse","S231P:accessSpecifier":"public","S231P:description":"Boolean pulse","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":20,\"y\":20},{\"x\":40,\"y\":40}]}}}","S231P:hasInstance":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.pul2.period"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.pul2.shift"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.pul2.width"}],"S231P:label":"pul2"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.pul2.period","S231P:isFinal":true,"S231P:value":12},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.pul2.shift","S231P:isFinal":true,"S231P:value":3},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.pul2.width","S231P:isFinal":true,"S231P:value":{"@value":"0.3","@type":"http://www.w3.org/2001/XMLSchema#decimal"}},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.ramUp","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Ramp","S231P:accessSpecifier":"public","S231P:description":"Ramp the input increasing","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-40,\"y\":70},{\"x\":-20,\"y\":90}]}}}","S231P:hasInstance":{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.ramUp.raisingSlewRate"},"S231P:label":"ramUp"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.ramUp.raisingSlewRate","S231P:isFinal":true,"S231P:value":"1/20"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.ramUp1","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Ramp","S231P:accessSpecifier":"public","S231P:description":"Ramp the input increasing in different speed","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-40,\"y\":10},{\"x\":-20,\"y\":30}]}}}","S231P:hasInstance":{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.ramUp1.raisingSlewRate"},"S231P:label":"ramUp1"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.ramUp1.raisingSlewRate","S231P:isFinal":true,"S231P:value":"1/10"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.ramUpDow","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Ramp","S231P:accessSpecifier":"public","S231P:description":"Limit the increase and decrease of the input if the active is true","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-40,\"y\":-70},{\"x\":-20,\"y\":-50}]}}}","S231P:hasInstance":{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.ramUpDow.raisingSlewRate"},"S231P:label":"ramUpDow"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.ramUpDow.raisingSlewRate","S231P:isFinal":true,"S231P:value":"1/5"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.ramUpDow1","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Ramp","S231P:accessSpecifier":"public","S231P:description":"Different increase and decrease slew rate limits","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":80,\"y\":-10},{\"x\":100,\"y\":10}]}}}","S231P:hasInstance":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.ramUpDow1.fallingSlewRate"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.ramUpDow1.raisingSlewRate"}],"S231P:label":"ramUpDow1"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.ramUpDow1.fallingSlewRate","S231P:isFinal":true,"S231P:value":"-1/2"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.ramUpDow1.raisingSlewRate","S231P:isFinal":true,"S231P:value":"1/5"}]}
+{
+  "@context": {
+    "S231P": "https://data.ashrae.org/S231P#"
+  },
+  "@graph": [
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp",
+      "@type": "S231P:Block",
+      "S231P:containsBlock": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.booPul1"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.booPul2"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.booPul5"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.pul"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.pul1"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.pul2"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.ramUp"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.ramUp1"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.ramUpDow"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.ramUpDow1"
+        }
+      ],
+      "S231P:label": "Ramp"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.booPul1",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Pulse",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Boolean pulse",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-100,\"y\":20},{\"x\":-80,\"y\":40}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.booPul1.period"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.booPul1.shift"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.booPul1.width"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.booPul1.y"
+        }
+      ],
+      "S231P:label": "booPul1"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.booPul1.period",
+      "S231P:isFinal": true,
+      "S231P:value": 12
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.booPul1.shift",
+      "S231P:isFinal": true,
+      "S231P:value": 1
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.booPul1.width",
+      "S231P:isFinal": true,
+      "S231P:value": {
+        "@value": "0.9",
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.booPul1.y",
+      "S231P:isConnectedTo": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.ramUp.active"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.ramUp1.active"
+        }
+      ]
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.booPul2",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Pulse",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Boolean pulse",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-100,\"y\":-100},{\"x\":-80,\"y\":-80}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.booPul2.period"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.booPul2.shift"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.booPul2.width"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.booPul2.y"
+        }
+      ],
+      "S231P:label": "booPul2"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.booPul2.period",
+      "S231P:isFinal": true,
+      "S231P:value": 12
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.booPul2.shift",
+      "S231P:isFinal": true,
+      "S231P:value": 2
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.booPul2.width",
+      "S231P:isFinal": true,
+      "S231P:value": {
+        "@value": "0.9",
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.booPul2.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.ramUpDow.active"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.booPul5",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Pulse",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Boolean pulse",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":20,\"y\":-40},{\"x\":40,\"y\":-20}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.booPul5.period"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.booPul5.shift"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.booPul5.width"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.booPul5.y"
+        }
+      ],
+      "S231P:label": "booPul5"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.booPul5.period",
+      "S231P:isFinal": true,
+      "S231P:value": 12
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.booPul5.shift",
+      "S231P:isFinal": true,
+      "S231P:value": 1
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.booPul5.width",
+      "S231P:isFinal": true,
+      "S231P:value": {
+        "@value": "0.9",
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.booPul5.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.ramUpDow1.active"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.pul",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Sources.Pulse",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Boolean pulse",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-100,\"y\":70},{\"x\":-80,\"y\":90}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.pul.period"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.pul.shift"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.pul.width"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.pul.y"
+        }
+      ],
+      "S231P:label": "pul"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.pul.period",
+      "S231P:isFinal": true,
+      "S231P:value": 12
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.pul.shift",
+      "S231P:isFinal": true,
+      "S231P:value": 2
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.pul.width",
+      "S231P:isFinal": true,
+      "S231P:value": {
+        "@value": "0.8",
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.pul.y",
+      "S231P:isConnectedTo": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.ramUp.u"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.ramUp1.u"
+        }
+      ]
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.pul1",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Sources.Pulse",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Boolean pulse",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-100,\"y\":-40},{\"x\":-80,\"y\":-20}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.pul1.period"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.pul1.shift"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.pul1.width"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.pul1.y"
+        }
+      ],
+      "S231P:label": "pul1"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.pul1.period",
+      "S231P:isFinal": true,
+      "S231P:value": 12
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.pul1.shift",
+      "S231P:isFinal": true,
+      "S231P:value": {
+        "@value": "1.5",
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.pul1.width",
+      "S231P:isFinal": true,
+      "S231P:value": {
+        "@value": "0.2",
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.pul1.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.ramUpDow.u"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.pul2",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Sources.Pulse",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Boolean pulse",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":20,\"y\":20},{\"x\":40,\"y\":40}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.pul2.period"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.pul2.shift"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.pul2.width"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.pul2.y"
+        }
+      ],
+      "S231P:label": "pul2"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.pul2.period",
+      "S231P:isFinal": true,
+      "S231P:value": 12
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.pul2.shift",
+      "S231P:isFinal": true,
+      "S231P:value": 3
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.pul2.width",
+      "S231P:isFinal": true,
+      "S231P:value": {
+        "@value": "0.3",
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.pul2.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.ramUpDow1.u"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.ramUp",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Ramp",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Ramp the input increasing",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-40,\"y\":70},{\"x\":-20,\"y\":90}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.ramUp.active"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.ramUp.raisingSlewRate"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.ramUp.u"
+        }
+      ],
+      "S231P:label": "ramUp"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.ramUp.raisingSlewRate",
+      "S231P:isFinal": true,
+      "S231P:value": "1/20"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.ramUp1",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Ramp",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Ramp the input increasing in different speed",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-40,\"y\":10},{\"x\":-20,\"y\":30}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.ramUp1.active"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.ramUp1.raisingSlewRate"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.ramUp1.u"
+        }
+      ],
+      "S231P:label": "ramUp1"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.ramUp1.raisingSlewRate",
+      "S231P:isFinal": true,
+      "S231P:value": "1/10"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.ramUpDow",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Ramp",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Limit the increase and decrease of the input if the active is true",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-40,\"y\":-70},{\"x\":-20,\"y\":-50}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.ramUpDow.active"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.ramUpDow.raisingSlewRate"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.ramUpDow.u"
+        }
+      ],
+      "S231P:label": "ramUpDow"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.ramUpDow.raisingSlewRate",
+      "S231P:isFinal": true,
+      "S231P:value": "1/5"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.ramUpDow1",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Ramp",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Different increase and decrease slew rate limits",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":80,\"y\":-10},{\"x\":100,\"y\":10}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.ramUpDow1.active"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.ramUpDow1.fallingSlewRate"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.ramUpDow1.raisingSlewRate"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.ramUpDow1.u"
+        }
+      ],
+      "S231P:label": "ramUpDow1"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.ramUpDow1.fallingSlewRate",
+      "S231P:isFinal": true,
+      "S231P:value": "-1/2"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Ramp.ramUpDow1.raisingSlewRate",
+      "S231P:isFinal": true,
+      "S231P:value": "1/5"
+    }
+  ]
+}

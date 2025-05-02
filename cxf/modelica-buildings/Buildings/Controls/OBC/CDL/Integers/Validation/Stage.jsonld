@@ -1,1 +1,250 @@
-{"@context":{"S231P":"https://data.ashrae.org/S231P#"},"@graph":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.Stage","@type":"S231P:ElementaryBlock","S231P:containsBlock":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.Stage.lesHolTim"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.Stage.ramp1"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.Stage.sin"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.Stage.sta"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.Stage.sta1"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.Stage.zerHolTim"}],"S231P:label":"Stage"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.Stage.lesHolTim","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Stage","S231P:accessSpecifier":"public","S231P:description":"Total number of enabled stages, with a hold duration of 1 second","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":20,\"y\":-70},{\"x\":40,\"y\":-50}]}}}","S231P:hasInstance":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.Stage.lesHolTim.holdDuration"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.Stage.lesHolTim.n"}],"S231P:label":"lesHolTim"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.Stage.lesHolTim.holdDuration","S231P:isFinal":true,"S231P:value":1},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.Stage.lesHolTim.n","S231P:isFinal":true,"S231P:value":4},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.Stage.ramp1","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Sources.Ramp","S231P:accessSpecifier":"public","S231P:description":"Block that generates ramp signal","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-40,\"y\":50},{\"x\":-20,\"y\":70}]}}}","S231P:hasInstance":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.Stage.ramp1.duration"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.Stage.ramp1.height"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.Stage.ramp1.startTime"}],"S231P:label":"ramp1"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.Stage.ramp1.duration","S231P:isFinal":true,"S231P:value":10},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.Stage.ramp1.height","S231P:isFinal":true,"S231P:value":1},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.Stage.ramp1.startTime","S231P:isFinal":true,"S231P:value":1},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.Stage.sin","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Sources.Sin","S231P:accessSpecifier":"public","S231P:description":"Block that generates sine signal","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-40,\"y\":-30},{\"x\":-20,\"y\":-10}]}}}","S231P:hasInstance":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.Stage.sin.amplitude"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.Stage.sin.freqHz"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.Stage.sin.offset"}],"S231P:label":"sin"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.Stage.sin.amplitude","S231P:isFinal":true,"S231P:value":{"@value":"0.5","@type":"http://www.w3.org/2001/XMLSchema#decimal"}},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.Stage.sin.freqHz","S231P:isFinal":true,"S231P:value":"1/5"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.Stage.sin.offset","S231P:isFinal":true,"S231P:value":{"@value":"0.5","@type":"http://www.w3.org/2001/XMLSchema#decimal"}},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.Stage.sta","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Stage","S231P:accessSpecifier":"public","S231P:description":"Total number of enabled stages, with a hold duration of 5 seconds","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":20,\"y\":50},{\"x\":40,\"y\":70}]}}}","S231P:hasInstance":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.Stage.sta.holdDuration"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.Stage.sta.n"}],"S231P:label":"sta"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.Stage.sta.holdDuration","S231P:isFinal":true,"S231P:value":5},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.Stage.sta.n","S231P:isFinal":true,"S231P:value":4},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.Stage.sta1","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Stage","S231P:accessSpecifier":"public","S231P:description":"Total number of enabled stages, with a hold duration of 2 seconds","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":20,\"y\":-30},{\"x\":40,\"y\":-10}]}}}","S231P:hasInstance":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.Stage.sta1.holdDuration"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.Stage.sta1.n"}],"S231P:label":"sta1"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.Stage.sta1.holdDuration","S231P:isFinal":true,"S231P:value":2},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.Stage.sta1.n","S231P:isFinal":true,"S231P:value":4},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.Stage.zerHolTim","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Stage","S231P:accessSpecifier":"public","S231P:description":"Total number of enabled stages, without any hold duration","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":20,\"y\":10},{\"x\":40,\"y\":30}]}}}","S231P:hasInstance":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.Stage.zerHolTim.holdDuration"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.Stage.zerHolTim.n"}],"S231P:label":"zerHolTim"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.Stage.zerHolTim.holdDuration","S231P:isFinal":true,"S231P:value":0},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.Stage.zerHolTim.n","S231P:isFinal":true,"S231P:value":4}]}
+{
+  "@context": {
+    "S231P": "https://data.ashrae.org/S231P#"
+  },
+  "@graph": [
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.Stage",
+      "@type": "S231P:Block",
+      "S231P:containsBlock": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.Stage.lesHolTim"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.Stage.ramp1"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.Stage.sin"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.Stage.sta"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.Stage.sta1"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.Stage.zerHolTim"
+        }
+      ],
+      "S231P:label": "Stage"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.Stage.lesHolTim",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Stage",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Total number of enabled stages, with a hold duration of 1 second",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":20,\"y\":-70},{\"x\":40,\"y\":-50}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.Stage.lesHolTim.holdDuration"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.Stage.lesHolTim.n"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.Stage.lesHolTim.u"
+        }
+      ],
+      "S231P:label": "lesHolTim"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.Stage.lesHolTim.holdDuration",
+      "S231P:isFinal": true,
+      "S231P:value": 1
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.Stage.lesHolTim.n",
+      "S231P:isFinal": true,
+      "S231P:value": 4
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.Stage.ramp1",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Sources.Ramp",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Block that generates ramp signal",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-40,\"y\":50},{\"x\":-20,\"y\":70}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.Stage.ramp1.duration"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.Stage.ramp1.height"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.Stage.ramp1.startTime"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.Stage.ramp1.y"
+        }
+      ],
+      "S231P:label": "ramp1"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.Stage.ramp1.duration",
+      "S231P:isFinal": true,
+      "S231P:value": 10
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.Stage.ramp1.height",
+      "S231P:isFinal": true,
+      "S231P:value": 1
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.Stage.ramp1.startTime",
+      "S231P:isFinal": true,
+      "S231P:value": 1
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.Stage.ramp1.y",
+      "S231P:isConnectedTo": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.Stage.sta.u"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.Stage.zerHolTim.u"
+        }
+      ]
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.Stage.sin",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Sources.Sin",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Block that generates sine signal",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-40,\"y\":-30},{\"x\":-20,\"y\":-10}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.Stage.sin.amplitude"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.Stage.sin.freqHz"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.Stage.sin.offset"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.Stage.sin.y"
+        }
+      ],
+      "S231P:label": "sin"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.Stage.sin.amplitude",
+      "S231P:isFinal": true,
+      "S231P:value": {
+        "@value": "0.5",
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.Stage.sin.freqHz",
+      "S231P:isFinal": true,
+      "S231P:value": "1/5"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.Stage.sin.offset",
+      "S231P:isFinal": true,
+      "S231P:value": {
+        "@value": "0.5",
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.Stage.sin.y",
+      "S231P:isConnectedTo": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.Stage.lesHolTim.u"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.Stage.sta1.u"
+        }
+      ]
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.Stage.sta",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Stage",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Total number of enabled stages, with a hold duration of 5 seconds",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":20,\"y\":50},{\"x\":40,\"y\":70}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.Stage.sta.holdDuration"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.Stage.sta.n"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.Stage.sta.u"
+        }
+      ],
+      "S231P:label": "sta"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.Stage.sta.holdDuration",
+      "S231P:isFinal": true,
+      "S231P:value": 5
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.Stage.sta.n",
+      "S231P:isFinal": true,
+      "S231P:value": 4
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.Stage.sta1",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Stage",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Total number of enabled stages, with a hold duration of 2 seconds",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":20,\"y\":-30},{\"x\":40,\"y\":-10}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.Stage.sta1.holdDuration"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.Stage.sta1.n"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.Stage.sta1.u"
+        }
+      ],
+      "S231P:label": "sta1"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.Stage.sta1.holdDuration",
+      "S231P:isFinal": true,
+      "S231P:value": 2
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.Stage.sta1.n",
+      "S231P:isFinal": true,
+      "S231P:value": 4
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.Stage.zerHolTim",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Stage",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Total number of enabled stages, without any hold duration",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":20,\"y\":10},{\"x\":40,\"y\":30}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.Stage.zerHolTim.holdDuration"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.Stage.zerHolTim.n"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.Stage.zerHolTim.u"
+        }
+      ],
+      "S231P:label": "zerHolTim"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.Stage.zerHolTim.holdDuration",
+      "S231P:isFinal": true,
+      "S231P:value": 0
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.Stage.zerHolTim.n",
+      "S231P:isFinal": true,
+      "S231P:value": 4
+    }
+  ]
+}

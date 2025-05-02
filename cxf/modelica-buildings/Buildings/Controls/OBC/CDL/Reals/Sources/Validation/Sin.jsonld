@@ -1,1 +1,60 @@
-{"@context":{"S231P":"https://data.ashrae.org/S231P#"},"@graph":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Sources.Validation.Sin","@type":"S231P:ElementaryBlock","S231P:containsBlock":{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Sources.Validation.Sin.sin"},"S231P:label":"Sin"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Sources.Validation.Sin.sin","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Sources.Sin","S231P:accessSpecifier":"public","S231P:description":"Sine source block","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-12,\"y\":-10},{\"x\":8,\"y\":10}]}}}","S231P:hasInstance":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Sources.Validation.Sin.sin.amplitude"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Sources.Validation.Sin.sin.freqHz"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Sources.Validation.Sin.sin.offset"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Sources.Validation.Sin.sin.phase"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Sources.Validation.Sin.sin.startTime"}],"S231P:label":"sin"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Sources.Validation.Sin.sin.amplitude","S231P:value":5},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Sources.Validation.Sin.sin.freqHz","S231P:value":"1/60"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Sources.Validation.Sin.sin.offset","S231P:value":10},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Sources.Validation.Sin.sin.phase","S231P:value":0},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Sources.Validation.Sin.sin.startTime","S231P:value":10}]}
+{
+  "@context": {
+    "S231P": "https://data.ashrae.org/S231P#"
+  },
+  "@graph": [
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Sources.Validation.Sin",
+      "@type": "S231P:Block",
+      "S231P:containsBlock": {
+        "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Sources.Validation.Sin.sin"
+      },
+      "S231P:label": "Sin"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Sources.Validation.Sin.sin",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Sources.Sin",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Sine source block",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-12,\"y\":-10},{\"x\":8,\"y\":10}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Sources.Validation.Sin.sin.amplitude"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Sources.Validation.Sin.sin.freqHz"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Sources.Validation.Sin.sin.offset"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Sources.Validation.Sin.sin.phase"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Sources.Validation.Sin.sin.startTime"
+        }
+      ],
+      "S231P:label": "sin"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Sources.Validation.Sin.sin.amplitude",
+      "S231P:value": 5
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Sources.Validation.Sin.sin.freqHz",
+      "S231P:value": "1/60"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Sources.Validation.Sin.sin.offset",
+      "S231P:value": 10
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Sources.Validation.Sin.sin.phase",
+      "S231P:value": 0
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Sources.Validation.Sin.sin.startTime",
+      "S231P:value": 10
+    }
+  ]
+}

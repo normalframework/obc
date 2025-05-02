@@ -1,1 +1,155 @@
-{"@context":{"S231P":"https://data.ashrae.org/S231P#"},"@graph":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.Multiply","@type":"S231P:ElementaryBlock","S231P:containsBlock":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.Multiply.product"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.Multiply.reaToInt1"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.Multiply.reaToInt2"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.Multiply.timTabLin"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.Multiply.timTabLin1"}],"S231P:label":"Multiply"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.Multiply.product","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Multiply","S231P:accessSpecifier":"public","S231P:description":"Block that outputs the product of the two inputs","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":60,\"y\":-10},{\"x\":80,\"y\":10}]}}}","S231P:label":"product"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.Multiply.reaToInt1","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Conversions.RealToInteger","S231P:accessSpecifier":"public","S231P:description":"Convert real to integer","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-20,\"y\":10},{\"x\":0,\"y\":30}]}}}","S231P:label":"reaToInt1"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.Multiply.reaToInt2","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Conversions.RealToInteger","S231P:accessSpecifier":"public","S231P:description":"Convert real to integer","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-20,\"y\":-30},{\"x\":0,\"y\":-10}]}}}","S231P:label":"reaToInt2"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.Multiply.timTabLin","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Sources.TimeTable","S231P:accessSpecifier":"public","S231P:description":"Time table with smoothness method of constant segments","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-80,\"y\":10},{\"x\":-60,\"y\":30}]}}}","S231P:hasInstance":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.Multiply.timTabLin.smoothness"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.Multiply.timTabLin.table"}],"S231P:label":"timTabLin"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.Multiply.timTabLin.smoothness","S231P:value":"Buildings.Controls.OBC.CDL.Types.Smoothness.ConstantSegments"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.Multiply.timTabLin.table","S231P:value":"[0,-1;0.3,0.5;0.5,0;0.7,1;1,0]"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.Multiply.timTabLin1","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Sources.TimeTable","S231P:accessSpecifier":"public","S231P:description":"Time table with smoothness method of constant segments","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-80,\"y\":-30},{\"x\":-60,\"y\":-10}]}}}","S231P:hasInstance":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.Multiply.timTabLin1.smoothness"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.Multiply.timTabLin1.table"}],"S231P:label":"timTabLin1"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.Multiply.timTabLin1.smoothness","S231P:value":"Buildings.Controls.OBC.CDL.Types.Smoothness.ConstantSegments"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.Multiply.timTabLin1.table","S231P:value":"[0,0;0.35,1;0.55,0;0.7,1;1,0]"}]}
+{
+  "@context": {
+    "S231P": "https://data.ashrae.org/S231P#"
+  },
+  "@graph": [
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.Multiply",
+      "@type": "S231P:Block",
+      "S231P:containsBlock": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.Multiply.product"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.Multiply.reaToInt1"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.Multiply.reaToInt2"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.Multiply.timTabLin"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.Multiply.timTabLin1"
+        }
+      ],
+      "S231P:label": "Multiply"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.Multiply.product",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Multiply",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Block that outputs the product of the two inputs",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":60,\"y\":-10},{\"x\":80,\"y\":10}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.Multiply.product.u1"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.Multiply.product.u2"
+        }
+      ],
+      "S231P:label": "product"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.Multiply.reaToInt1",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Conversions.RealToInteger",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Convert real to integer",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-20,\"y\":10},{\"x\":0,\"y\":30}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.Multiply.reaToInt1.u"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.Multiply.reaToInt1.y"
+        }
+      ],
+      "S231P:label": "reaToInt1"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.Multiply.reaToInt1.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.Multiply.product.u1"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.Multiply.reaToInt2",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Conversions.RealToInteger",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Convert real to integer",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-20,\"y\":-30},{\"x\":0,\"y\":-10}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.Multiply.reaToInt2.u"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.Multiply.reaToInt2.y"
+        }
+      ],
+      "S231P:label": "reaToInt2"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.Multiply.reaToInt2.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.Multiply.product.u2"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.Multiply.timTabLin",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Sources.TimeTable",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Time table with smoothness method of constant segments",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-80,\"y\":10},{\"x\":-60,\"y\":30}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.Multiply.timTabLin.smoothness"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.Multiply.timTabLin.table"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.Multiply.timTabLin.y%5B1%5D"
+        }
+      ],
+      "S231P:label": "timTabLin"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.Multiply.timTabLin.smoothness",
+      "S231P:value": "Buildings.Controls.OBC.CDL.Types.Smoothness.ConstantSegments"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.Multiply.timTabLin.table",
+      "S231P:value": "[0,-1;0.3,0.5;0.5,0;0.7,1;1,0]"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.Multiply.timTabLin.y%5B1%5D",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.Multiply.reaToInt1.u"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.Multiply.timTabLin1",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Sources.TimeTable",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Time table with smoothness method of constant segments",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-80,\"y\":-30},{\"x\":-60,\"y\":-10}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.Multiply.timTabLin1.smoothness"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.Multiply.timTabLin1.table"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.Multiply.timTabLin1.y%5B1%5D"
+        }
+      ],
+      "S231P:label": "timTabLin1"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.Multiply.timTabLin1.smoothness",
+      "S231P:value": "Buildings.Controls.OBC.CDL.Types.Smoothness.ConstantSegments"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.Multiply.timTabLin1.table",
+      "S231P:value": "[0,0;0.35,1;0.55,0;0.7,1;1,0]"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.Multiply.timTabLin1.y%5B1%5D",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.Multiply.reaToInt2.u"
+      }
+    }
+  ]
+}

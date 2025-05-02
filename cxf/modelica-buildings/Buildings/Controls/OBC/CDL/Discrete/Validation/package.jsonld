@@ -1,1 +1,8 @@
-{"@context":{"S231P":"https://data.ashrae.org/S231P#"},"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Discrete.package","@type":"S231P:ElementaryBlock","S231P:label":"Validation"}
+{
+  "@context": {
+    "S231P": "https://data.ashrae.org/S231P#"
+  },
+  "@id": "https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Discrete.package",
+  "@type": "S231P:ElementaryBlock",
+  "S231P:label": "Validation"
+}

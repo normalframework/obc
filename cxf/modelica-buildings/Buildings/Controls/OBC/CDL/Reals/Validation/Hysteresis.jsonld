@@ -1,1 +1,304 @@
-{"@context":{"S231P":"https://data.ashrae.org/S231P#"},"@graph":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.Hysteresis","@type":"S231P:ElementaryBlock","S231P:containsBlock":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.Hysteresis.hysteresis"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.Hysteresis.hysteresis1"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.Hysteresis.hysteresis2"}],"S231P:label":"Hysteresis"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.Hysteresis.hysteresis","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Hysteresis","S231P:accessSpecifier":"public","S231P:description":"Transform Real to Boolean signal with Hysteresis","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":50,\"y\":30},{\"x\":70,\"y\":50}]}}}","S231P:hasInstance":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.Hysteresis.hysteresis.uHigh"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.Hysteresis.hysteresis.uLow"}],"S231P:label":"hysteresis"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.Hysteresis.hysteresis.uHigh","S231P:isFinal":true,"S231P:value":1},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.Hysteresis.hysteresis.uLow","S231P:isFinal":true,"S231P:value":0},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.Hysteresis.hysteresis1","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Hysteresis","S231P:accessSpecifier":"public","S231P:description":"Transform Real to Boolean signal with Hysteresis","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":20,\"y\":-10},{\"x\":40,\"y\":10}]}}}","S231P:hasInstance":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.Hysteresis.hysteresis1.pre_y_start"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.Hysteresis.hysteresis1.uHigh"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.Hysteresis.hysteresis1.uLow"}],"S231P:label":"hysteresis1"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.Hysteresis.hysteresis1.pre_y_start","S231P:isFinal":true,"S231P:value":true},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.Hysteresis.hysteresis1.uHigh","S231P:isFinal":true,"S231P:value":1},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.Hysteresis.hysteresis1.uLow","S231P:isFinal":true,"S231P:value":0},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.Hysteresis.hysteresis2","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Hysteresis","S231P:accessSpecifier":"public","S231P:description":"Transform Real to Boolean signal with Hysteresis","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":20,\"y\":-50},{\"x\":40,\"y\":-30}]}}}","S231P:hasInstance":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.Hysteresis.hysteresis2.uHigh"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.Hysteresis.hysteresis2.uLow"}],"S231P:label":"hysteresis2"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.Hysteresis.hysteresis2.uHigh","S231P:isFinal":true,"S231P:value":"1 -0.01"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.Hysteresis.hysteresis2.uLow","S231P:isFinal":true,"S231P:value":"0 +0.01"}]}
+{
+  "@context": {
+    "S231P": "https://data.ashrae.org/S231P#"
+  },
+  "@graph": [
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Hysteresis",
+      "@type": "S231P:Block",
+      "S231P:containsBlock": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Hysteresis.gain1"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Hysteresis.hysteresis"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Hysteresis.hysteresis1"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Hysteresis.hysteresis2"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Hysteresis.ramp1"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Hysteresis.sin"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Hysteresis.sin1"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Hysteresis.sin2"
+        }
+      ],
+      "S231P:label": "Hysteresis"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Hysteresis.gain1",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Reals.MultiplyByParameter",
+      "S231P:accessSpecifier": "protected",
+      "S231P:description": "Block that outputs the product of a gain value with the input signal",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":10,\"y\":30},{\"x\":30,\"y\":50}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Hysteresis.gain1.k"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Hysteresis.gain1.u"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Hysteresis.gain1.y"
+        }
+      ],
+      "S231P:label": "gain1"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Hysteresis.gain1.k",
+      "S231P:isFinal": true,
+      "S231P:value": {
+        "@value": "2.5",
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Hysteresis.gain1.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Hysteresis.hysteresis.u"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Hysteresis.hysteresis",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Hysteresis",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Transform Real to Boolean signal with Hysteresis",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":50,\"y\":30},{\"x\":70,\"y\":50}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Hysteresis.hysteresis.u"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Hysteresis.hysteresis.uHigh"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Hysteresis.hysteresis.uLow"
+        }
+      ],
+      "S231P:label": "hysteresis"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Hysteresis.hysteresis.uHigh",
+      "S231P:isFinal": true,
+      "S231P:value": 1
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Hysteresis.hysteresis.uLow",
+      "S231P:isFinal": true,
+      "S231P:value": 0
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Hysteresis.hysteresis1",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Hysteresis",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Transform Real to Boolean signal with Hysteresis",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":20,\"y\":-10},{\"x\":40,\"y\":10}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Hysteresis.hysteresis1.pre_y_start"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Hysteresis.hysteresis1.u"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Hysteresis.hysteresis1.uHigh"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Hysteresis.hysteresis1.uLow"
+        }
+      ],
+      "S231P:label": "hysteresis1"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Hysteresis.hysteresis1.pre_y_start",
+      "S231P:isFinal": true,
+      "S231P:value": true
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Hysteresis.hysteresis1.uHigh",
+      "S231P:isFinal": true,
+      "S231P:value": 1
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Hysteresis.hysteresis1.uLow",
+      "S231P:isFinal": true,
+      "S231P:value": 0
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Hysteresis.hysteresis2",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Hysteresis",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Transform Real to Boolean signal with Hysteresis",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":20,\"y\":-50},{\"x\":40,\"y\":-30}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Hysteresis.hysteresis2.u"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Hysteresis.hysteresis2.uHigh"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Hysteresis.hysteresis2.uLow"
+        }
+      ],
+      "S231P:label": "hysteresis2"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Hysteresis.hysteresis2.u",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Hysteresis.sin2.y"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Hysteresis.hysteresis2.uHigh",
+      "S231P:isFinal": true,
+      "S231P:value": "1 -0.01"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Hysteresis.hysteresis2.uLow",
+      "S231P:isFinal": true,
+      "S231P:value": "0 +0.01"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Hysteresis.ramp1",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Sources.Ramp",
+      "S231P:accessSpecifier": "protected",
+      "S231P:description": "Block that generates ramp signal",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-74,\"y\":30},{\"x\":-54,\"y\":50}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Hysteresis.ramp1.duration"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Hysteresis.ramp1.height"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Hysteresis.ramp1.offset"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Hysteresis.ramp1.y"
+        }
+      ],
+      "S231P:label": "ramp1"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Hysteresis.ramp1.duration",
+      "S231P:isFinal": true,
+      "S231P:value": 1
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Hysteresis.ramp1.height",
+      "S231P:isFinal": true,
+      "S231P:value": {
+        "@value": "6.2831852",
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Hysteresis.ramp1.offset",
+      "S231P:isFinal": true,
+      "S231P:value": 0
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Hysteresis.ramp1.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Hysteresis.sin1.u"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Hysteresis.sin",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Sources.Sin",
+      "S231P:accessSpecifier": "protected",
+      "S231P:description": "Sine signal",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-40,\"y\":-10},{\"x\":-20,\"y\":10}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Hysteresis.sin.amplitude"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Hysteresis.sin.freqHz"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Hysteresis.sin.y"
+        }
+      ],
+      "S231P:label": "sin"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Hysteresis.sin.amplitude",
+      "S231P:isFinal": true,
+      "S231P:value": 1
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Hysteresis.sin.freqHz",
+      "S231P:isFinal": true,
+      "S231P:value": 10
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Hysteresis.sin.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Hysteresis.hysteresis1.u"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Hysteresis.sin1",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Sin",
+      "S231P:accessSpecifier": "protected",
+      "S231P:description": "Block that outputs the sine of the input",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-30,\"y\":30},{\"x\":-10,\"y\":50}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Hysteresis.sin1.u"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Hysteresis.sin1.y"
+        }
+      ],
+      "S231P:label": "sin1"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Hysteresis.sin1.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Hysteresis.gain1.u"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Hysteresis.sin2",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Sources.Sin",
+      "S231P:accessSpecifier": "protected",
+      "S231P:description": "Sine signal",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-40,\"y\":-50},{\"x\":-20,\"y\":-30}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Hysteresis.sin2.amplitude"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Hysteresis.sin2.freqHz"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Hysteresis.sin2.y"
+        }
+      ],
+      "S231P:label": "sin2"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Hysteresis.sin2.amplitude",
+      "S231P:isFinal": true,
+      "S231P:value": 1
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.Hysteresis.sin2.freqHz",
+      "S231P:isFinal": true,
+      "S231P:value": 5
+    }
+  ]
+}

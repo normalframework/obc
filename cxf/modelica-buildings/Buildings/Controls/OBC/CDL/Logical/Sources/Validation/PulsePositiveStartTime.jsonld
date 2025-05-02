@@ -1,1 +1,592 @@
-{"@context":{"S231P":"https://data.ashrae.org/S231P#"},"@graph":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime","@type":"S231P:ElementaryBlock","S231P:containsBlock":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_a1"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_a2"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_a3"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_a4"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_a5"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_b1"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_b2"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_b3"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_b4"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_b5"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_c1"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_c2"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_c3"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_c4"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_c5"}],"S231P:label":"PulsePositiveStartTime"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_a1","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Pulse","S231P:accessSpecifier":"public","S231P:description":"Boolean pulse signal","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-90,\"y\":40},{\"x\":-70,\"y\":60}]}}}","S231P:hasInstance":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_a1.period"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_a1.width"}],"S231P:label":"booPul_a1"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_a1.period","S231P:value":2},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_a1.width","S231P:value":{"@value":"0.2","@type":"http://www.w3.org/2001/XMLSchema#decimal"}},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_a2","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Pulse","S231P:accessSpecifier":"public","S231P:description":"Boolean pulse signal","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-50,\"y\":40},{\"x\":-30,\"y\":60}]}}}","S231P:hasInstance":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_a2.period"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_a2.shift"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_a2.width"}],"S231P:label":"booPul_a2"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_a2.period","S231P:value":2},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_a2.shift","S231P:value":2},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_a2.width","S231P:value":{"@value":"0.2","@type":"http://www.w3.org/2001/XMLSchema#decimal"}},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_a3","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Pulse","S231P:accessSpecifier":"public","S231P:description":"Boolean pulse signal","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-10,\"y\":40},{\"x\":10,\"y\":60}]}}}","S231P:hasInstance":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_a3.period"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_a3.shift"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_a3.width"}],"S231P:label":"booPul_a3"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_a3.period","S231P:value":2},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_a3.shift","S231P:value":4},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_a3.width","S231P:value":{"@value":"0.2","@type":"http://www.w3.org/2001/XMLSchema#decimal"}},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_a4","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Pulse","S231P:accessSpecifier":"public","S231P:description":"Boolean pulse signal","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":30,\"y\":40},{\"x\":50,\"y\":60}]}}}","S231P:hasInstance":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_a4.period"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_a4.shift"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_a4.width"}],"S231P:label":"booPul_a4"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_a4.period","S231P:value":2},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_a4.shift","S231P:value":-2},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_a4.width","S231P:value":{"@value":"0.2","@type":"http://www.w3.org/2001/XMLSchema#decimal"}},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_a5","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Pulse","S231P:accessSpecifier":"public","S231P:description":"Boolean pulse signal","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":70,\"y\":40},{\"x\":90,\"y\":60}]}}}","S231P:hasInstance":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_a5.period"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_a5.shift"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_a5.width"}],"S231P:label":"booPul_a5"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_a5.period","S231P:value":2},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_a5.shift","S231P:value":-4},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_a5.width","S231P:value":{"@value":"0.2","@type":"http://www.w3.org/2001/XMLSchema#decimal"}},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_b1","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Pulse","S231P:accessSpecifier":"public","S231P:description":"Boolean pulse signal","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-90,\"y\":0},{\"x\":-70,\"y\":20}]}}}","S231P:hasInstance":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_b1.period"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_b1.shift"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_b1.width"}],"S231P:label":"booPul_b1"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_b1.period","S231P:value":2},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_b1.shift","S231P:value":{"@value":"0.1","@type":"http://www.w3.org/2001/XMLSchema#decimal"}},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_b1.width","S231P:value":{"@value":"0.2","@type":"http://www.w3.org/2001/XMLSchema#decimal"}},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_b2","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Pulse","S231P:accessSpecifier":"public","S231P:description":"Boolean pulse signal","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-50,\"y\":0},{\"x\":-30,\"y\":20}]}}}","S231P:hasInstance":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_b2.period"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_b2.shift"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_b2.width"}],"S231P:label":"booPul_b2"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_b2.period","S231P:value":2},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_b2.shift","S231P:value":{"@value":"2.1","@type":"http://www.w3.org/2001/XMLSchema#decimal"}},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_b2.width","S231P:value":{"@value":"0.2","@type":"http://www.w3.org/2001/XMLSchema#decimal"}},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_b3","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Pulse","S231P:accessSpecifier":"public","S231P:description":"Boolean pulse signal","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-10,\"y\":0},{\"x\":10,\"y\":20}]}}}","S231P:hasInstance":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_b3.period"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_b3.shift"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_b3.width"}],"S231P:label":"booPul_b3"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_b3.period","S231P:value":2},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_b3.shift","S231P:value":{"@value":"4.1","@type":"http://www.w3.org/2001/XMLSchema#decimal"}},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_b3.width","S231P:value":{"@value":"0.2","@type":"http://www.w3.org/2001/XMLSchema#decimal"}},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_b4","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Pulse","S231P:accessSpecifier":"public","S231P:description":"Boolean pulse signal","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":30,\"y\":0},{\"x\":50,\"y\":20}]}}}","S231P:hasInstance":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_b4.period"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_b4.shift"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_b4.width"}],"S231P:label":"booPul_b4"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_b4.period","S231P:value":2},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_b4.shift","S231P:value":{"@value":"-1.9","@type":"http://www.w3.org/2001/XMLSchema#decimal"}},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_b4.width","S231P:value":{"@value":"0.2","@type":"http://www.w3.org/2001/XMLSchema#decimal"}},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_b5","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Pulse","S231P:accessSpecifier":"public","S231P:description":"Boolean pulse signal","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":70,\"y\":0},{\"x\":90,\"y\":20}]}}}","S231P:hasInstance":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_b5.period"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_b5.shift"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_b5.width"}],"S231P:label":"booPul_b5"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_b5.period","S231P:value":2},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_b5.shift","S231P:value":{"@value":"-3.9","@type":"http://www.w3.org/2001/XMLSchema#decimal"}},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_b5.width","S231P:value":{"@value":"0.2","@type":"http://www.w3.org/2001/XMLSchema#decimal"}},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_c1","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Pulse","S231P:accessSpecifier":"public","S231P:description":"Boolean pulse signal","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-90,\"y\":-40},{\"x\":-70,\"y\":-20}]}}}","S231P:hasInstance":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_c1.period"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_c1.shift"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_c1.width"}],"S231P:label":"booPul_c1"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_c1.period","S231P:value":2},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_c1.shift","S231P:value":{"@value":"0.6","@type":"http://www.w3.org/2001/XMLSchema#decimal"}},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_c1.width","S231P:value":{"@value":"0.2","@type":"http://www.w3.org/2001/XMLSchema#decimal"}},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_c2","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Pulse","S231P:accessSpecifier":"public","S231P:description":"Boolean pulse signal","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-50,\"y\":-40},{\"x\":-30,\"y\":-20}]}}}","S231P:hasInstance":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_c2.period"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_c2.shift"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_c2.width"}],"S231P:label":"booPul_c2"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_c2.period","S231P:value":2},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_c2.shift","S231P:value":{"@value":"2.6","@type":"http://www.w3.org/2001/XMLSchema#decimal"}},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_c2.width","S231P:value":{"@value":"0.2","@type":"http://www.w3.org/2001/XMLSchema#decimal"}},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_c3","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Pulse","S231P:accessSpecifier":"public","S231P:description":"Boolean pulse signal","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-10,\"y\":-40},{\"x\":10,\"y\":-20}]}}}","S231P:hasInstance":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_c3.period"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_c3.shift"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_c3.width"}],"S231P:label":"booPul_c3"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_c3.period","S231P:value":2},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_c3.shift","S231P:value":{"@value":"4.6","@type":"http://www.w3.org/2001/XMLSchema#decimal"}},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_c3.width","S231P:value":{"@value":"0.2","@type":"http://www.w3.org/2001/XMLSchema#decimal"}},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_c4","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Pulse","S231P:accessSpecifier":"public","S231P:description":"Boolean pulse signal","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":30,\"y\":-40},{\"x\":50,\"y\":-20}]}}}","S231P:hasInstance":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_c4.period"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_c4.shift"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_c4.width"}],"S231P:label":"booPul_c4"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_c4.period","S231P:value":2},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_c4.shift","S231P:value":{"@value":"-1.4","@type":"http://www.w3.org/2001/XMLSchema#decimal"}},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_c4.width","S231P:value":{"@value":"0.2","@type":"http://www.w3.org/2001/XMLSchema#decimal"}},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_c5","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Pulse","S231P:accessSpecifier":"public","S231P:description":"Boolean pulse signal","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":70,\"y\":-40},{\"x\":90,\"y\":-20}]}}}","S231P:hasInstance":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_c5.period"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_c5.shift"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_c5.width"}],"S231P:label":"booPul_c5"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_c5.period","S231P:value":2},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_c5.shift","S231P:value":{"@value":"-3.4","@type":"http://www.w3.org/2001/XMLSchema#decimal"}},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_c5.width","S231P:value":{"@value":"0.2","@type":"http://www.w3.org/2001/XMLSchema#decimal"}}]}
+{
+  "@context": {
+    "S231P": "https://data.ashrae.org/S231P#"
+  },
+  "@graph": [
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime",
+      "@type": "S231P:Block",
+      "S231P:containsBlock": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_a1"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_a2"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_a3"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_a4"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_a5"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_b1"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_b2"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_b3"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_b4"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_b5"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_c1"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_c2"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_c3"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_c4"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_c5"
+        }
+      ],
+      "S231P:label": "PulsePositiveStartTime"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_a1",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Pulse",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Boolean pulse signal",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-90,\"y\":40},{\"x\":-70,\"y\":60}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_a1.period"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_a1.width"
+        }
+      ],
+      "S231P:label": "booPul_a1"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_a1.period",
+      "S231P:value": 2
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_a1.width",
+      "S231P:value": {
+        "@value": "0.2",
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_a2",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Pulse",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Boolean pulse signal",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-50,\"y\":40},{\"x\":-30,\"y\":60}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_a2.period"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_a2.shift"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_a2.width"
+        }
+      ],
+      "S231P:label": "booPul_a2"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_a2.period",
+      "S231P:value": 2
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_a2.shift",
+      "S231P:value": 2
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_a2.width",
+      "S231P:value": {
+        "@value": "0.2",
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_a3",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Pulse",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Boolean pulse signal",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-10,\"y\":40},{\"x\":10,\"y\":60}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_a3.period"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_a3.shift"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_a3.width"
+        }
+      ],
+      "S231P:label": "booPul_a3"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_a3.period",
+      "S231P:value": 2
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_a3.shift",
+      "S231P:value": 4
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_a3.width",
+      "S231P:value": {
+        "@value": "0.2",
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_a4",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Pulse",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Boolean pulse signal",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":30,\"y\":40},{\"x\":50,\"y\":60}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_a4.period"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_a4.shift"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_a4.width"
+        }
+      ],
+      "S231P:label": "booPul_a4"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_a4.period",
+      "S231P:value": 2
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_a4.shift",
+      "S231P:value": -2
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_a4.width",
+      "S231P:value": {
+        "@value": "0.2",
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_a5",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Pulse",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Boolean pulse signal",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":70,\"y\":40},{\"x\":90,\"y\":60}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_a5.period"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_a5.shift"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_a5.width"
+        }
+      ],
+      "S231P:label": "booPul_a5"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_a5.period",
+      "S231P:value": 2
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_a5.shift",
+      "S231P:value": -4
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_a5.width",
+      "S231P:value": {
+        "@value": "0.2",
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_b1",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Pulse",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Boolean pulse signal",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-90,\"y\":0},{\"x\":-70,\"y\":20}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_b1.period"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_b1.shift"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_b1.width"
+        }
+      ],
+      "S231P:label": "booPul_b1"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_b1.period",
+      "S231P:value": 2
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_b1.shift",
+      "S231P:value": {
+        "@value": "0.1",
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_b1.width",
+      "S231P:value": {
+        "@value": "0.2",
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_b2",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Pulse",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Boolean pulse signal",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-50,\"y\":0},{\"x\":-30,\"y\":20}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_b2.period"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_b2.shift"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_b2.width"
+        }
+      ],
+      "S231P:label": "booPul_b2"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_b2.period",
+      "S231P:value": 2
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_b2.shift",
+      "S231P:value": {
+        "@value": "2.1",
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_b2.width",
+      "S231P:value": {
+        "@value": "0.2",
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_b3",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Pulse",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Boolean pulse signal",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-10,\"y\":0},{\"x\":10,\"y\":20}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_b3.period"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_b3.shift"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_b3.width"
+        }
+      ],
+      "S231P:label": "booPul_b3"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_b3.period",
+      "S231P:value": 2
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_b3.shift",
+      "S231P:value": {
+        "@value": "4.1",
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_b3.width",
+      "S231P:value": {
+        "@value": "0.2",
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_b4",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Pulse",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Boolean pulse signal",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":30,\"y\":0},{\"x\":50,\"y\":20}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_b4.period"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_b4.shift"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_b4.width"
+        }
+      ],
+      "S231P:label": "booPul_b4"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_b4.period",
+      "S231P:value": 2
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_b4.shift",
+      "S231P:value": {
+        "@value": "-1.9",
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_b4.width",
+      "S231P:value": {
+        "@value": "0.2",
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_b5",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Pulse",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Boolean pulse signal",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":70,\"y\":0},{\"x\":90,\"y\":20}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_b5.period"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_b5.shift"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_b5.width"
+        }
+      ],
+      "S231P:label": "booPul_b5"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_b5.period",
+      "S231P:value": 2
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_b5.shift",
+      "S231P:value": {
+        "@value": "-3.9",
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_b5.width",
+      "S231P:value": {
+        "@value": "0.2",
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_c1",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Pulse",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Boolean pulse signal",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-90,\"y\":-40},{\"x\":-70,\"y\":-20}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_c1.period"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_c1.shift"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_c1.width"
+        }
+      ],
+      "S231P:label": "booPul_c1"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_c1.period",
+      "S231P:value": 2
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_c1.shift",
+      "S231P:value": {
+        "@value": "0.6",
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_c1.width",
+      "S231P:value": {
+        "@value": "0.2",
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_c2",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Pulse",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Boolean pulse signal",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-50,\"y\":-40},{\"x\":-30,\"y\":-20}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_c2.period"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_c2.shift"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_c2.width"
+        }
+      ],
+      "S231P:label": "booPul_c2"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_c2.period",
+      "S231P:value": 2
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_c2.shift",
+      "S231P:value": {
+        "@value": "2.6",
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_c2.width",
+      "S231P:value": {
+        "@value": "0.2",
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_c3",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Pulse",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Boolean pulse signal",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-10,\"y\":-40},{\"x\":10,\"y\":-20}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_c3.period"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_c3.shift"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_c3.width"
+        }
+      ],
+      "S231P:label": "booPul_c3"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_c3.period",
+      "S231P:value": 2
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_c3.shift",
+      "S231P:value": {
+        "@value": "4.6",
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_c3.width",
+      "S231P:value": {
+        "@value": "0.2",
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_c4",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Pulse",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Boolean pulse signal",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":30,\"y\":-40},{\"x\":50,\"y\":-20}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_c4.period"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_c4.shift"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_c4.width"
+        }
+      ],
+      "S231P:label": "booPul_c4"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_c4.period",
+      "S231P:value": 2
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_c4.shift",
+      "S231P:value": {
+        "@value": "-1.4",
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_c4.width",
+      "S231P:value": {
+        "@value": "0.2",
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_c5",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Pulse",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Boolean pulse signal",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":70,\"y\":-40},{\"x\":90,\"y\":-20}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_c5.period"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_c5.shift"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_c5.width"
+        }
+      ],
+      "S231P:label": "booPul_c5"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_c5.period",
+      "S231P:value": 2
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_c5.shift",
+      "S231P:value": {
+        "@value": "-3.4",
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.PulsePositiveStartTime.booPul_c5.width",
+      "S231P:value": {
+        "@value": "0.2",
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    }
+  ]
+}

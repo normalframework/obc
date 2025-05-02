@@ -1,1 +1,208 @@
-{"@context":{"S231P":"https://data.ashrae.org/S231P#"},"@graph":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Psychrometrics.Validation.WetBulb_TDryBulPhi","@type":"S231P:ElementaryBlock","S231P:containsBlock":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Psychrometrics.Validation.WetBulb_TDryBulPhi.phi"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Psychrometrics.Validation.WetBulb_TDryBulPhi.phi2"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Psychrometrics.Validation.WetBulb_TDryBulPhi.TDryBul"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Psychrometrics.Validation.WetBulb_TDryBulPhi.TDryBul1"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Psychrometrics.Validation.WetBulb_TDryBulPhi.wetBulPhi"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Psychrometrics.Validation.WetBulb_TDryBulPhi.wetBulPhi1"}],"S231P:label":"WetBulb_TDryBulPhi"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Psychrometrics.Validation.WetBulb_TDryBulPhi.phi","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Sources.Ramp","S231P:accessSpecifier":"public","S231P:description":"Relative humidity","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-40,\"y\":10},{\"x\":-20,\"y\":30}]}}}","S231P:hasInstance":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Psychrometrics.Validation.WetBulb_TDryBulPhi.phi.duration"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Psychrometrics.Validation.WetBulb_TDryBulPhi.phi.height"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Psychrometrics.Validation.WetBulb_TDryBulPhi.phi.offset"}],"S231P:label":"phi"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Psychrometrics.Validation.WetBulb_TDryBulPhi.phi.duration","S231P:value":1},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Psychrometrics.Validation.WetBulb_TDryBulPhi.phi.height","S231P:value":{"@value":"0.95","@type":"http://www.w3.org/2001/XMLSchema#decimal"}},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Psychrometrics.Validation.WetBulb_TDryBulPhi.phi.offset","S231P:value":{"@value":"0.05","@type":"http://www.w3.org/2001/XMLSchema#decimal"}},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Psychrometrics.Validation.WetBulb_TDryBulPhi.phi2","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Sources.Constant","S231P:accessSpecifier":"public","S231P:description":"Relative humidity","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-40,\"y\":-80},{\"x\":-20,\"y\":-60}]}}}","S231P:hasInstance":{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Psychrometrics.Validation.WetBulb_TDryBulPhi.phi2.k"},"S231P:label":"phi2"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Psychrometrics.Validation.WetBulb_TDryBulPhi.phi2.k","S231P:value":{"@value":"0.6","@type":"http://www.w3.org/2001/XMLSchema#decimal"}},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Psychrometrics.Validation.WetBulb_TDryBulPhi.TDryBul","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Sources.Constant","S231P:accessSpecifier":"public","S231P:description":"Dry bulb temperature","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-40,\"y\":60},{\"x\":-20,\"y\":80}]}}}","S231P:hasInstance":{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Psychrometrics.Validation.WetBulb_TDryBulPhi.TDryBul.k"},"S231P:label":"TDryBul"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Psychrometrics.Validation.WetBulb_TDryBulPhi.TDryBul.k","S231P:value":"273.15 +29.4"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Psychrometrics.Validation.WetBulb_TDryBulPhi.TDryBul1","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Sources.Ramp","S231P:accessSpecifier":"public","S231P:description":"Dry bulb temperature","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-40,\"y\":-30},{\"x\":-20,\"y\":-10}]}}}","S231P:hasInstance":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Psychrometrics.Validation.WetBulb_TDryBulPhi.TDryBul1.duration"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Psychrometrics.Validation.WetBulb_TDryBulPhi.TDryBul1.height"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Psychrometrics.Validation.WetBulb_TDryBulPhi.TDryBul1.offset"}],"S231P:label":"TDryBul1"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Psychrometrics.Validation.WetBulb_TDryBulPhi.TDryBul1.duration","S231P:value":1},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Psychrometrics.Validation.WetBulb_TDryBulPhi.TDryBul1.height","S231P:value":40},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Psychrometrics.Validation.WetBulb_TDryBulPhi.TDryBul1.offset","S231P:value":{"@value":"273.15","@type":"http://www.w3.org/2001/XMLSchema#decimal"}},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Psychrometrics.Validation.WetBulb_TDryBulPhi.wetBulPhi","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Psychrometrics.WetBulb_TDryBulPhi","S231P:accessSpecifier":"public","S231P:description":"Model for wet bulb temperature","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":20,\"y\":30},{\"x\":40,\"y\":50}]}}}","S231P:label":"wetBulPhi"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Psychrometrics.Validation.WetBulb_TDryBulPhi.wetBulPhi1","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Psychrometrics.WetBulb_TDryBulPhi","S231P:accessSpecifier":"public","S231P:description":"Model for wet bulb temperature","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":20,\"y\":-50},{\"x\":40,\"y\":-30}]}}}","S231P:label":"wetBulPhi1"}]}
+{
+  "@context": {
+    "S231P": "https://data.ashrae.org/S231P#"
+  },
+  "@graph": [
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Psychrometrics.Validation.WetBulb_TDryBulPhi",
+      "@type": "S231P:Block",
+      "S231P:containsBlock": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Psychrometrics.Validation.WetBulb_TDryBulPhi.phi"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Psychrometrics.Validation.WetBulb_TDryBulPhi.phi2"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Psychrometrics.Validation.WetBulb_TDryBulPhi.TDryBul"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Psychrometrics.Validation.WetBulb_TDryBulPhi.TDryBul1"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Psychrometrics.Validation.WetBulb_TDryBulPhi.wetBulPhi"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Psychrometrics.Validation.WetBulb_TDryBulPhi.wetBulPhi1"
+        }
+      ],
+      "S231P:label": "WetBulb_TDryBulPhi"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Psychrometrics.Validation.WetBulb_TDryBulPhi.phi",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Sources.Ramp",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Relative humidity",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-40,\"y\":10},{\"x\":-20,\"y\":30}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Psychrometrics.Validation.WetBulb_TDryBulPhi.phi.duration"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Psychrometrics.Validation.WetBulb_TDryBulPhi.phi.height"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Psychrometrics.Validation.WetBulb_TDryBulPhi.phi.offset"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Psychrometrics.Validation.WetBulb_TDryBulPhi.phi.y"
+        }
+      ],
+      "S231P:label": "phi"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Psychrometrics.Validation.WetBulb_TDryBulPhi.phi.duration",
+      "S231P:value": 1
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Psychrometrics.Validation.WetBulb_TDryBulPhi.phi.height",
+      "S231P:value": {
+        "@value": "0.95",
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Psychrometrics.Validation.WetBulb_TDryBulPhi.phi.offset",
+      "S231P:value": {
+        "@value": "0.05",
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Psychrometrics.Validation.WetBulb_TDryBulPhi.phi.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.CDL.Psychrometrics.Validation.WetBulb_TDryBulPhi.wetBulPhi.phi"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Psychrometrics.Validation.WetBulb_TDryBulPhi.phi2",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Sources.Constant",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Relative humidity",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-40,\"y\":-80},{\"x\":-20,\"y\":-60}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Psychrometrics.Validation.WetBulb_TDryBulPhi.phi2.k"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Psychrometrics.Validation.WetBulb_TDryBulPhi.phi2.y"
+        }
+      ],
+      "S231P:label": "phi2"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Psychrometrics.Validation.WetBulb_TDryBulPhi.phi2.k",
+      "S231P:value": {
+        "@value": "0.6",
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Psychrometrics.Validation.WetBulb_TDryBulPhi.phi2.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.CDL.Psychrometrics.Validation.WetBulb_TDryBulPhi.wetBulPhi1.phi"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Psychrometrics.Validation.WetBulb_TDryBulPhi.TDryBul",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Sources.Constant",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Dry bulb temperature",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-40,\"y\":60},{\"x\":-20,\"y\":80}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Psychrometrics.Validation.WetBulb_TDryBulPhi.TDryBul.k"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Psychrometrics.Validation.WetBulb_TDryBulPhi.TDryBul.y"
+        }
+      ],
+      "S231P:label": "TDryBul"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Psychrometrics.Validation.WetBulb_TDryBulPhi.TDryBul.k",
+      "S231P:value": "273.15 +29.4"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Psychrometrics.Validation.WetBulb_TDryBulPhi.TDryBul.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.CDL.Psychrometrics.Validation.WetBulb_TDryBulPhi.wetBulPhi.TDryBul"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Psychrometrics.Validation.WetBulb_TDryBulPhi.TDryBul1",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Sources.Ramp",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Dry bulb temperature",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-40,\"y\":-30},{\"x\":-20,\"y\":-10}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Psychrometrics.Validation.WetBulb_TDryBulPhi.TDryBul1.duration"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Psychrometrics.Validation.WetBulb_TDryBulPhi.TDryBul1.height"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Psychrometrics.Validation.WetBulb_TDryBulPhi.TDryBul1.offset"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Psychrometrics.Validation.WetBulb_TDryBulPhi.TDryBul1.y"
+        }
+      ],
+      "S231P:label": "TDryBul1"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Psychrometrics.Validation.WetBulb_TDryBulPhi.TDryBul1.duration",
+      "S231P:value": 1
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Psychrometrics.Validation.WetBulb_TDryBulPhi.TDryBul1.height",
+      "S231P:value": 40
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Psychrometrics.Validation.WetBulb_TDryBulPhi.TDryBul1.offset",
+      "S231P:value": {
+        "@value": "273.15",
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Psychrometrics.Validation.WetBulb_TDryBulPhi.TDryBul1.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.CDL.Psychrometrics.Validation.WetBulb_TDryBulPhi.wetBulPhi1.TDryBul"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Psychrometrics.Validation.WetBulb_TDryBulPhi.wetBulPhi",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Psychrometrics.WetBulb_TDryBulPhi",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Model for wet bulb temperature",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":20,\"y\":30},{\"x\":40,\"y\":50}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Psychrometrics.Validation.WetBulb_TDryBulPhi.wetBulPhi.phi"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Psychrometrics.Validation.WetBulb_TDryBulPhi.wetBulPhi.TDryBul"
+        }
+      ],
+      "S231P:label": "wetBulPhi"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Psychrometrics.Validation.WetBulb_TDryBulPhi.wetBulPhi1",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Psychrometrics.WetBulb_TDryBulPhi",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Model for wet bulb temperature",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":20,\"y\":-50},{\"x\":40,\"y\":-30}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Psychrometrics.Validation.WetBulb_TDryBulPhi.wetBulPhi1.phi"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Psychrometrics.Validation.WetBulb_TDryBulPhi.wetBulPhi1.TDryBul"
+        }
+      ],
+      "S231P:label": "wetBulPhi1"
+    }
+  ]
+}

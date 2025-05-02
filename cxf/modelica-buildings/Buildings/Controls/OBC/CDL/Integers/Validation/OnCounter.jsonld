@@ -1,1 +1,114 @@
-{"@context":{"S231P":"https://data.ashrae.org/S231P#"},"@graph":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.OnCounter","@type":"S231P:ElementaryBlock","S231P:containsBlock":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.OnCounter.booPul"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.OnCounter.onCounter"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.OnCounter.reset"}],"S231P:label":"OnCounter"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.OnCounter.booPul","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Pulse","S231P:accessSpecifier":"public","S231P:description":"Block that outputs cyclic on and off","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-26,\"y\":-10},{\"x\":-6,\"y\":10}]}}}","S231P:hasInstance":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.OnCounter.booPul.period"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.OnCounter.booPul.width"}],"S231P:label":"booPul"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.OnCounter.booPul.period","S231P:value":{"@value":"0.1","@type":"http://www.w3.org/2001/XMLSchema#decimal"}},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.OnCounter.booPul.width","S231P:value":{"@value":"0.5","@type":"http://www.w3.org/2001/XMLSchema#decimal"}},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.OnCounter.onCounter","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.OnCounter","S231P:accessSpecifier":"public","S231P:description":"Block that outputs increment if the input switches to true","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":16,\"y\":-10},{\"x\":36,\"y\":10}]}}}","S231P:label":"onCounter"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.OnCounter.reset","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Pulse","S231P:accessSpecifier":"public","S231P:description":"Block that outputs cyclic on and off","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-26,\"y\":-50},{\"x\":-6,\"y\":-30}]}}}","S231P:hasInstance":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.OnCounter.reset.period"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.OnCounter.reset.width"}],"S231P:label":"reset"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.OnCounter.reset.period","S231P:value":1},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.OnCounter.reset.width","S231P:value":{"@value":"0.5","@type":"http://www.w3.org/2001/XMLSchema#decimal"}}]}
+{
+  "@context": {
+    "S231P": "https://data.ashrae.org/S231P#"
+  },
+  "@graph": [
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.OnCounter",
+      "@type": "S231P:Block",
+      "S231P:containsBlock": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.OnCounter.booPul"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.OnCounter.onCounter"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.OnCounter.reset"
+        }
+      ],
+      "S231P:label": "OnCounter"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.OnCounter.booPul",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Pulse",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Block that outputs cyclic on and off",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-26,\"y\":-10},{\"x\":-6,\"y\":10}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.OnCounter.booPul.period"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.OnCounter.booPul.width"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.OnCounter.booPul.y"
+        }
+      ],
+      "S231P:label": "booPul"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.OnCounter.booPul.period",
+      "S231P:value": {
+        "@value": "0.1",
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.OnCounter.booPul.width",
+      "S231P:value": {
+        "@value": "0.5",
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.OnCounter.booPul.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.OnCounter.onCounter.trigger"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.OnCounter.onCounter",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Integers.OnCounter",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Block that outputs increment if the input switches to true",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":16,\"y\":-10},{\"x\":36,\"y\":10}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.OnCounter.onCounter.reset"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.OnCounter.onCounter.trigger"
+        }
+      ],
+      "S231P:label": "onCounter"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.OnCounter.reset",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Pulse",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Block that outputs cyclic on and off",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-26,\"y\":-50},{\"x\":-6,\"y\":-30}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.OnCounter.reset.period"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.OnCounter.reset.width"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.OnCounter.reset.y"
+        }
+      ],
+      "S231P:label": "reset"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.OnCounter.reset.period",
+      "S231P:value": 1
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.OnCounter.reset.width",
+      "S231P:value": {
+        "@value": "0.5",
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.OnCounter.reset.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.OnCounter.onCounter.reset"
+      }
+    }
+  ]
+}

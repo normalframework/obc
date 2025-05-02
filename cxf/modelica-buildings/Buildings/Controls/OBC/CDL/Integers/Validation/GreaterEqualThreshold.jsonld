@@ -1,1 +1,140 @@
-{"@context":{"S231P":"https://data.ashrae.org/S231P#"},"@graph":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.GreaterEqualThreshold","@type":"S231P:ElementaryBlock","S231P:containsBlock":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.GreaterEqualThreshold.intGreEquThr"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.GreaterEqualThreshold.ramp1"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.GreaterEqualThreshold.reaToInt"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.GreaterEqualThreshold.round1"}],"S231P:label":"GreaterEqualThreshold"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.GreaterEqualThreshold.intGreEquThr","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.GreaterEqualThreshold","S231P:accessSpecifier":"public","S231P:description":"Block output true if input is greater or equal to threshold value","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":40,\"y\":-10},{\"x\":60,\"y\":10}]}}}","S231P:hasInstance":{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.GreaterEqualThreshold.intGreEquThr.t"},"S231P:label":"intGreEquThr"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.GreaterEqualThreshold.intGreEquThr.t","S231P:value":2},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.GreaterEqualThreshold.ramp1","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Sources.Ramp","S231P:accessSpecifier":"public","S231P:description":"Block that generates ramp signal","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-80,\"y\":-10},{\"x\":-60,\"y\":10}]}}}","S231P:hasInstance":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.GreaterEqualThreshold.ramp1.duration"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.GreaterEqualThreshold.ramp1.height"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.GreaterEqualThreshold.ramp1.offset"}],"S231P:label":"ramp1"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.GreaterEqualThreshold.ramp1.duration","S231P:value":1},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.GreaterEqualThreshold.ramp1.height","S231P:value":10},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.GreaterEqualThreshold.ramp1.offset","S231P:value":{"@value":"-3.5","@type":"http://www.w3.org/2001/XMLSchema#decimal"}},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.GreaterEqualThreshold.reaToInt","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Conversions.RealToInteger","S231P:accessSpecifier":"public","S231P:description":"Convert real to integer","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":0,\"y\":-10},{\"x\":20,\"y\":10}]}}}","S231P:label":"reaToInt"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.GreaterEqualThreshold.round1","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Round","S231P:accessSpecifier":"public","S231P:description":"Round real number to given digits","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-40,\"y\":-10},{\"x\":-20,\"y\":10}]}}}","S231P:hasInstance":{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.GreaterEqualThreshold.round1.n"},"S231P:label":"round1"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Validation.GreaterEqualThreshold.round1.n","S231P:value":0}]}
+{
+  "@context": {
+    "S231P": "https://data.ashrae.org/S231P#"
+  },
+  "@graph": [
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.GreaterEqualThreshold",
+      "@type": "S231P:Block",
+      "S231P:containsBlock": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.GreaterEqualThreshold.intGreEquThr"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.GreaterEqualThreshold.ramp1"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.GreaterEqualThreshold.reaToInt"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.GreaterEqualThreshold.round1"
+        }
+      ],
+      "S231P:label": "GreaterEqualThreshold"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.GreaterEqualThreshold.intGreEquThr",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Integers.GreaterEqualThreshold",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Block output true if input is greater or equal to threshold value",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":40,\"y\":-10},{\"x\":60,\"y\":10}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.GreaterEqualThreshold.intGreEquThr.t"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.GreaterEqualThreshold.intGreEquThr.u"
+        }
+      ],
+      "S231P:label": "intGreEquThr"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.GreaterEqualThreshold.intGreEquThr.t",
+      "S231P:value": 2
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.GreaterEqualThreshold.ramp1",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Sources.Ramp",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Block that generates ramp signal",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-80,\"y\":-10},{\"x\":-60,\"y\":10}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.GreaterEqualThreshold.ramp1.duration"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.GreaterEqualThreshold.ramp1.height"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.GreaterEqualThreshold.ramp1.offset"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.GreaterEqualThreshold.ramp1.y"
+        }
+      ],
+      "S231P:label": "ramp1"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.GreaterEqualThreshold.ramp1.duration",
+      "S231P:value": 1
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.GreaterEqualThreshold.ramp1.height",
+      "S231P:value": 10
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.GreaterEqualThreshold.ramp1.offset",
+      "S231P:value": {
+        "@value": "-3.5",
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.GreaterEqualThreshold.ramp1.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.GreaterEqualThreshold.round1.u"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.GreaterEqualThreshold.reaToInt",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Conversions.RealToInteger",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Convert real to integer",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":0,\"y\":-10},{\"x\":20,\"y\":10}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.GreaterEqualThreshold.reaToInt.u"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.GreaterEqualThreshold.reaToInt.y"
+        }
+      ],
+      "S231P:label": "reaToInt"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.GreaterEqualThreshold.reaToInt.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.GreaterEqualThreshold.intGreEquThr.u"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.GreaterEqualThreshold.round1",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Round",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Round real number to given digits",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-40,\"y\":-10},{\"x\":-20,\"y\":10}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.GreaterEqualThreshold.round1.n"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.GreaterEqualThreshold.round1.u"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.GreaterEqualThreshold.round1.y"
+        }
+      ],
+      "S231P:label": "round1"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.GreaterEqualThreshold.round1.n",
+      "S231P:value": 0
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.GreaterEqualThreshold.round1.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.GreaterEqualThreshold.reaToInt.u"
+      }
+    }
+  ]
+}

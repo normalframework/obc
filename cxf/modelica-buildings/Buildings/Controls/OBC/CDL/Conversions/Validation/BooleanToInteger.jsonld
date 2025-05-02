@@ -1,1 +1,57 @@
-{"@context":{"S231P":"https://data.ashrae.org/S231P#"},"@graph":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Conversions.Validation.BooleanToInteger","@type":"S231P:ElementaryBlock","S231P:containsBlock":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Conversions.Validation.BooleanToInteger.booPul"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Conversions.Validation.BooleanToInteger.booToInt"}],"S231P:label":"BooleanToInteger"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Conversions.Validation.BooleanToInteger.booPul","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Pulse","S231P:accessSpecifier":"public","S231P:description":"Generate cyclic on-and-off output","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-20,\"y\":-10},{\"x\":0,\"y\":10}]}}}","S231P:hasInstance":{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Conversions.Validation.BooleanToInteger.booPul.period"},"S231P:label":"booPul"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Conversions.Validation.BooleanToInteger.booPul.period","S231P:value":1},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Conversions.Validation.BooleanToInteger.booToInt","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Conversions.BooleanToInteger","S231P:accessSpecifier":"public","S231P:description":"Block that converts Boolean to Integer signal","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":30,\"y\":-10},{\"x\":50,\"y\":10}]}}}","S231P:label":"booToInt"}]}
+{
+  "@context": {
+    "S231P": "https://data.ashrae.org/S231P#"
+  },
+  "@graph": [
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Conversions.Validation.BooleanToInteger",
+      "@type": "S231P:Block",
+      "S231P:containsBlock": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Conversions.Validation.BooleanToInteger.booPul"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Conversions.Validation.BooleanToInteger.booToInt"
+        }
+      ],
+      "S231P:label": "BooleanToInteger"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Conversions.Validation.BooleanToInteger.booPul",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Pulse",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Generate cyclic on-and-off output",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-20,\"y\":-10},{\"x\":0,\"y\":10}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Conversions.Validation.BooleanToInteger.booPul.period"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Conversions.Validation.BooleanToInteger.booPul.y"
+        }
+      ],
+      "S231P:label": "booPul"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Conversions.Validation.BooleanToInteger.booPul.period",
+      "S231P:value": 1
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Conversions.Validation.BooleanToInteger.booPul.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.CDL.Conversions.Validation.BooleanToInteger.booToInt.u"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Conversions.Validation.BooleanToInteger.booToInt",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Conversions.BooleanToInteger",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Block that converts Boolean to Integer signal",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":30,\"y\":-10},{\"x\":50,\"y\":10}]}}}",
+      "S231P:hasInstance": {
+        "@id": "http://example.org#Buildings.Controls.OBC.CDL.Conversions.Validation.BooleanToInteger.booToInt.u"
+      },
+      "S231P:label": "booToInt"
+    }
+  ]
+}

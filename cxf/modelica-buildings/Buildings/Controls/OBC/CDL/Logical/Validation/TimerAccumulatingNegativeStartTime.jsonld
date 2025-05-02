@@ -1,1 +1,256 @@
-{"@context":{"S231P":"https://data.ashrae.org/S231P#"},"@graph":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulatingNegativeStartTime","@type":"S231P:ElementaryBlock","S231P:containsBlock":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulatingNegativeStartTime.booPul"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulatingNegativeStartTime.con"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulatingNegativeStartTime.noThr"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulatingNegativeStartTime.noThrWitRes"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulatingNegativeStartTime.resTim"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulatingNegativeStartTime.thrTim"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulatingNegativeStartTime.thrTimWitRes"}],"S231P:label":"TimerAccumulatingNegativeStartTime"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulatingNegativeStartTime.booPul","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Pulse","S231P:accessSpecifier":"public","S231P:description":"Block that outputs cyclic on and off","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-80,\"y\":30},{\"x\":-60,\"y\":50}]}}}","S231P:hasInstance":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulatingNegativeStartTime.booPul.period"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulatingNegativeStartTime.booPul.shift"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulatingNegativeStartTime.booPul.width"}],"S231P:label":"booPul"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulatingNegativeStartTime.booPul.period","S231P:isFinal":true,"S231P:value":4},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulatingNegativeStartTime.booPul.shift","S231P:value":-11},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulatingNegativeStartTime.booPul.width","S231P:isFinal":true,"S231P:value":{"@value":"0.5","@type":"http://www.w3.org/2001/XMLSchema#decimal"}},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulatingNegativeStartTime.con","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Constant","S231P:accessSpecifier":"public","S231P:description":"Constant false","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-80,\"y\":-70},{\"x\":-60,\"y\":-50}]}}}","S231P:hasInstance":{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulatingNegativeStartTime.con.k"},"S231P:label":"con"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulatingNegativeStartTime.con.k","S231P:isFinal":true,"S231P:value":false},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulatingNegativeStartTime.noThr","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.TimerAccumulating","S231P:accessSpecifier":"public","S231P:description":"Accumulating timer that do not compare threshold","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-20,\"y\":10},{\"x\":0,\"y\":30}]}}}","S231P:label":"noThr"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulatingNegativeStartTime.noThrWitRes","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.TimerAccumulating","S231P:accessSpecifier":"public","S231P:description":"Accumulating timer that could reset the output","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":40,\"y\":10},{\"x\":60,\"y\":30}]}}}","S231P:label":"noThrWitRes"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulatingNegativeStartTime.resTim","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Pulse","S231P:accessSpecifier":"public","S231P:description":"Block that outputs cyclic on and off, for resetting timer","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-20,\"y\":-70},{\"x\":0,\"y\":-50}]}}}","S231P:hasInstance":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulatingNegativeStartTime.resTim.period"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulatingNegativeStartTime.resTim.shift"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulatingNegativeStartTime.resTim.width"}],"S231P:label":"resTim"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulatingNegativeStartTime.resTim.period","S231P:isFinal":true,"S231P:value":{"@value":"3.5","@type":"http://www.w3.org/2001/XMLSchema#decimal"}},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulatingNegativeStartTime.resTim.shift","S231P:value":-5},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulatingNegativeStartTime.resTim.width","S231P:isFinal":true,"S231P:value":{"@value":"0.5","@type":"http://www.w3.org/2001/XMLSchema#decimal"}},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulatingNegativeStartTime.thrTim","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.TimerAccumulating","S231P:accessSpecifier":"public","S231P:description":"Accumulating timer that compares threshold","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-20,\"y\":-30},{\"x\":0,\"y\":-10}]}}}","S231P:hasInstance":{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulatingNegativeStartTime.thrTim.t"},"S231P:label":"thrTim"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulatingNegativeStartTime.thrTim.t","S231P:isFinal":true,"S231P:value":1},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulatingNegativeStartTime.thrTimWitRes","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.TimerAccumulating","S231P:accessSpecifier":"public","S231P:description":"Accumulating timer that could reset the output and the output compares with threshold","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":40,\"y\":-30},{\"x\":60,\"y\":-10}]}}}","S231P:hasInstance":{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulatingNegativeStartTime.thrTimWitRes.t"},"S231P:label":"thrTimWitRes"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulatingNegativeStartTime.thrTimWitRes.t","S231P:isFinal":true,"S231P:value":1}]}
+{
+  "@context": {
+    "S231P": "https://data.ashrae.org/S231P#"
+  },
+  "@graph": [
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulatingNegativeStartTime",
+      "@type": "S231P:Block",
+      "S231P:containsBlock": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulatingNegativeStartTime.booPul"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulatingNegativeStartTime.con"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulatingNegativeStartTime.noThr"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulatingNegativeStartTime.noThrWitRes"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulatingNegativeStartTime.resTim"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulatingNegativeStartTime.thrTim"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulatingNegativeStartTime.thrTimWitRes"
+        }
+      ],
+      "S231P:label": "TimerAccumulatingNegativeStartTime"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulatingNegativeStartTime.booPul",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Pulse",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Block that outputs cyclic on and off",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-80,\"y\":30},{\"x\":-60,\"y\":50}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulatingNegativeStartTime.booPul.period"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulatingNegativeStartTime.booPul.shift"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulatingNegativeStartTime.booPul.width"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulatingNegativeStartTime.booPul.y"
+        }
+      ],
+      "S231P:label": "booPul"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulatingNegativeStartTime.booPul.period",
+      "S231P:isFinal": true,
+      "S231P:value": 4
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulatingNegativeStartTime.booPul.shift",
+      "S231P:value": -11
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulatingNegativeStartTime.booPul.width",
+      "S231P:isFinal": true,
+      "S231P:value": {
+        "@value": "0.5",
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulatingNegativeStartTime.booPul.y",
+      "S231P:isConnectedTo": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulatingNegativeStartTime.noThr.u"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulatingNegativeStartTime.noThrWitRes.u"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulatingNegativeStartTime.thrTim.u"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulatingNegativeStartTime.thrTimWitRes.u"
+        }
+      ]
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulatingNegativeStartTime.con",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Constant",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Constant false",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-80,\"y\":-70},{\"x\":-60,\"y\":-50}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulatingNegativeStartTime.con.k"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulatingNegativeStartTime.con.y"
+        }
+      ],
+      "S231P:label": "con"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulatingNegativeStartTime.con.k",
+      "S231P:isFinal": true,
+      "S231P:value": false
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulatingNegativeStartTime.con.y",
+      "S231P:isConnectedTo": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulatingNegativeStartTime.noThr.reset"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulatingNegativeStartTime.thrTim.reset"
+        }
+      ]
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulatingNegativeStartTime.noThr",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Logical.TimerAccumulating",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Accumulating timer that do not compare threshold",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-20,\"y\":10},{\"x\":0,\"y\":30}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulatingNegativeStartTime.noThr.reset"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulatingNegativeStartTime.noThr.u"
+        }
+      ],
+      "S231P:label": "noThr"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulatingNegativeStartTime.noThrWitRes",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Logical.TimerAccumulating",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Accumulating timer that could reset the output",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":40,\"y\":10},{\"x\":60,\"y\":30}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulatingNegativeStartTime.noThrWitRes.reset"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulatingNegativeStartTime.noThrWitRes.u"
+        }
+      ],
+      "S231P:label": "noThrWitRes"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulatingNegativeStartTime.resTim",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Pulse",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Block that outputs cyclic on and off, for resetting timer",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-20,\"y\":-70},{\"x\":0,\"y\":-50}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulatingNegativeStartTime.resTim.period"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulatingNegativeStartTime.resTim.shift"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulatingNegativeStartTime.resTim.width"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulatingNegativeStartTime.resTim.y"
+        }
+      ],
+      "S231P:label": "resTim"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulatingNegativeStartTime.resTim.period",
+      "S231P:isFinal": true,
+      "S231P:value": {
+        "@value": "3.5",
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulatingNegativeStartTime.resTim.shift",
+      "S231P:value": -5
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulatingNegativeStartTime.resTim.width",
+      "S231P:isFinal": true,
+      "S231P:value": {
+        "@value": "0.5",
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulatingNegativeStartTime.resTim.y",
+      "S231P:isConnectedTo": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulatingNegativeStartTime.noThrWitRes.reset"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulatingNegativeStartTime.thrTimWitRes.reset"
+        }
+      ]
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulatingNegativeStartTime.thrTim",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Logical.TimerAccumulating",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Accumulating timer that compares threshold",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-20,\"y\":-30},{\"x\":0,\"y\":-10}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulatingNegativeStartTime.thrTim.reset"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulatingNegativeStartTime.thrTim.t"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulatingNegativeStartTime.thrTim.u"
+        }
+      ],
+      "S231P:label": "thrTim"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulatingNegativeStartTime.thrTim.t",
+      "S231P:isFinal": true,
+      "S231P:value": 1
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulatingNegativeStartTime.thrTimWitRes",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Logical.TimerAccumulating",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Accumulating timer that could reset the output and the output compares with threshold",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":40,\"y\":-30},{\"x\":60,\"y\":-10}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulatingNegativeStartTime.thrTimWitRes.reset"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulatingNegativeStartTime.thrTimWitRes.t"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulatingNegativeStartTime.thrTimWitRes.u"
+        }
+      ],
+      "S231P:label": "thrTimWitRes"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.TimerAccumulatingNegativeStartTime.thrTimWitRes.t",
+      "S231P:isFinal": true,
+      "S231P:value": 1
+    }
+  ]
+}

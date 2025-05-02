@@ -1,1 +1,182 @@
-{"@context":{"S231P":"https://data.ashrae.org/S231P#"},"@graph":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredSampler","@type":"S231P:ElementaryBlock","S231P:containsBlock":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredSampler.booPul"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredSampler.ramp1"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredSampler.sin1"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredSampler.triSam"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredSampler.triSam1"}],"S231P:label":"TriggeredSampler"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredSampler.booPul","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Pulse","S231P:accessSpecifier":"public","S231P:description":"Block that outputs cyclic on and off","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-10,\"y\":-50},{\"x\":10,\"y\":-30}]}}}","S231P:hasInstance":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredSampler.booPul.period"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredSampler.booPul.width"}],"S231P:label":"booPul"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredSampler.booPul.period","S231P:value":{"@value":"0.2","@type":"http://www.w3.org/2001/XMLSchema#decimal"}},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredSampler.booPul.width","S231P:value":{"@value":"0.5","@type":"http://www.w3.org/2001/XMLSchema#decimal"}},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredSampler.ramp1","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Sources.Ramp","S231P:accessSpecifier":"public","S231P:description":"Block that generates ramp signal","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-60,\"y\":-10},{\"x\":-40,\"y\":10}]}}}","S231P:hasInstance":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredSampler.ramp1.duration"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredSampler.ramp1.height"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredSampler.ramp1.offset"}],"S231P:label":"ramp1"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredSampler.ramp1.duration","S231P:value":1},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredSampler.ramp1.height","S231P:value":{"@value":"6.2831852","@type":"http://www.w3.org/2001/XMLSchema#decimal"}},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredSampler.ramp1.offset","S231P:value":0},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredSampler.sin1","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Sin","S231P:accessSpecifier":"public","S231P:description":"Block that outputs the sine of the input","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-20,\"y\":-10},{\"x\":0,\"y\":10}]}}}","S231P:label":"sin1"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredSampler.triSam","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Discrete.TriggeredSampler","S231P:accessSpecifier":"public","S231P:description":"Triggered sampler wity y_start = 0","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":40,\"y\":-10},{\"x\":60,\"y\":10}]}}}","S231P:label":"triSam"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredSampler.triSam1","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Discrete.TriggeredSampler","S231P:accessSpecifier":"public","S231P:description":"Triggered sampler with y_start = 1","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":60,\"y\":40},{\"x\":80,\"y\":60}]}}}","S231P:hasInstance":{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredSampler.triSam1.y_start"},"S231P:label":"triSam1"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredSampler.triSam1.y_start","S231P:value":1}]}
+{
+  "@context": {
+    "S231P": "https://data.ashrae.org/S231P#"
+  },
+  "@graph": [
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredSampler",
+      "@type": "S231P:Block",
+      "S231P:containsBlock": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredSampler.booPul"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredSampler.ramp1"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredSampler.sin1"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredSampler.triSam"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredSampler.triSam1"
+        }
+      ],
+      "S231P:label": "TriggeredSampler"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredSampler.booPul",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Pulse",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Block that outputs cyclic on and off",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-10,\"y\":-50},{\"x\":10,\"y\":-30}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredSampler.booPul.period"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredSampler.booPul.width"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredSampler.booPul.y"
+        }
+      ],
+      "S231P:label": "booPul"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredSampler.booPul.period",
+      "S231P:value": {
+        "@value": "0.2",
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredSampler.booPul.width",
+      "S231P:value": {
+        "@value": "0.5",
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredSampler.booPul.y",
+      "S231P:isConnectedTo": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredSampler.triSam.trigger"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredSampler.triSam1.trigger"
+        }
+      ]
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredSampler.ramp1",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Sources.Ramp",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Block that generates ramp signal",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-60,\"y\":-10},{\"x\":-40,\"y\":10}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredSampler.ramp1.duration"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredSampler.ramp1.height"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredSampler.ramp1.offset"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredSampler.ramp1.y"
+        }
+      ],
+      "S231P:label": "ramp1"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredSampler.ramp1.duration",
+      "S231P:value": 1
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredSampler.ramp1.height",
+      "S231P:value": {
+        "@value": "6.2831852",
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredSampler.ramp1.offset",
+      "S231P:value": 0
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredSampler.ramp1.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredSampler.sin1.u"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredSampler.sin1",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Sin",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Block that outputs the sine of the input",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-20,\"y\":-10},{\"x\":0,\"y\":10}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredSampler.sin1.u"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredSampler.sin1.y"
+        }
+      ],
+      "S231P:label": "sin1"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredSampler.sin1.y",
+      "S231P:isConnectedTo": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredSampler.triSam.u"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredSampler.triSam1.u"
+        }
+      ]
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredSampler.triSam",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.TriggeredSampler",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Triggered sampler wity y_start = 0",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":40,\"y\":-10},{\"x\":60,\"y\":10}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredSampler.triSam.trigger"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredSampler.triSam.u"
+        }
+      ],
+      "S231P:label": "triSam"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredSampler.triSam1",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.TriggeredSampler",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Triggered sampler with y_start = 1",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":60,\"y\":40},{\"x\":80,\"y\":60}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredSampler.triSam1.trigger"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredSampler.triSam1.u"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredSampler.triSam1.y_start"
+        }
+      ],
+      "S231P:label": "triSam1"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredSampler.triSam1.y_start",
+      "S231P:value": 1
+    }
+  ]
+}

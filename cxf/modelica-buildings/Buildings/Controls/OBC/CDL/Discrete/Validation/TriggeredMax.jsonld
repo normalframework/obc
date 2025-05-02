@@ -1,1 +1,146 @@
-{"@context":{"S231P":"https://data.ashrae.org/S231P#"},"@graph":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMax","@type":"S231P:ElementaryBlock","S231P:containsBlock":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMax.booPul"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMax.ramp1"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMax.sin1"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMax.triggeredMax"}],"S231P:label":"TriggeredMax"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMax.booPul","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Pulse","S231P:accessSpecifier":"public","S231P:description":"Block that outputs cyclic on and off","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-10,\"y\":-50},{\"x\":10,\"y\":-30}]}}}","S231P:hasInstance":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMax.booPul.period"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMax.booPul.width"}],"S231P:label":"booPul"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMax.booPul.period","S231P:value":{"@value":"0.2","@type":"http://www.w3.org/2001/XMLSchema#decimal"}},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMax.booPul.width","S231P:value":{"@value":"0.5","@type":"http://www.w3.org/2001/XMLSchema#decimal"}},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMax.ramp1","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Sources.Ramp","S231P:accessSpecifier":"public","S231P:description":"Block that generates ramp signal","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-60,\"y\":-10},{\"x\":-40,\"y\":10}]}}}","S231P:hasInstance":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMax.ramp1.duration"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMax.ramp1.height"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMax.ramp1.offset"}],"S231P:label":"ramp1"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMax.ramp1.duration","S231P:value":1},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMax.ramp1.height","S231P:value":{"@value":"6.2831852","@type":"http://www.w3.org/2001/XMLSchema#decimal"}},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMax.ramp1.offset","S231P:value":0},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMax.sin1","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Sin","S231P:accessSpecifier":"public","S231P:description":"Block that outputs the sine of the input","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-10,\"y\":-10},{\"x\":10,\"y\":10}]}}}","S231P:label":"sin1"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMax.triggeredMax","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Discrete.TriggeredMax","S231P:accessSpecifier":"public","S231P:description":"Output the maximum, absolute value of a continuous signal at trigger instants","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":30,\"y\":-10},{\"x\":50,\"y\":10}]}}}","S231P:label":"triggeredMax"}]}
+{
+  "@context": {
+    "S231P": "https://data.ashrae.org/S231P#"
+  },
+  "@graph": [
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMax",
+      "@type": "S231P:Block",
+      "S231P:containsBlock": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMax.booPul"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMax.ramp1"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMax.sin1"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMax.triggeredMax"
+        }
+      ],
+      "S231P:label": "TriggeredMax"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMax.booPul",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Pulse",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Block that outputs cyclic on and off",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-10,\"y\":-50},{\"x\":10,\"y\":-30}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMax.booPul.period"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMax.booPul.width"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMax.booPul.y"
+        }
+      ],
+      "S231P:label": "booPul"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMax.booPul.period",
+      "S231P:value": {
+        "@value": "0.2",
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMax.booPul.width",
+      "S231P:value": {
+        "@value": "0.5",
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMax.booPul.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMax.triggeredMax.trigger"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMax.ramp1",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Sources.Ramp",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Block that generates ramp signal",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-60,\"y\":-10},{\"x\":-40,\"y\":10}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMax.ramp1.duration"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMax.ramp1.height"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMax.ramp1.offset"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMax.ramp1.y"
+        }
+      ],
+      "S231P:label": "ramp1"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMax.ramp1.duration",
+      "S231P:value": 1
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMax.ramp1.height",
+      "S231P:value": {
+        "@value": "6.2831852",
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMax.ramp1.offset",
+      "S231P:value": 0
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMax.ramp1.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMax.sin1.u"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMax.sin1",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Sin",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Block that outputs the sine of the input",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-10,\"y\":-10},{\"x\":10,\"y\":10}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMax.sin1.u"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMax.sin1.y"
+        }
+      ],
+      "S231P:label": "sin1"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMax.sin1.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMax.triggeredMax.u"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMax.triggeredMax",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.TriggeredMax",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Output the maximum, absolute value of a continuous signal at trigger instants",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":30,\"y\":-10},{\"x\":50,\"y\":10}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMax.triggeredMax.trigger"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMax.triggeredMax.u"
+        }
+      ],
+      "S231P:label": "triggeredMax"
+    }
+  ]
+}

@@ -1,1 +1,242 @@
-{"@context":{"S231P":"https://data.ashrae.org/S231P#"},"@graph":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMovingMean","@type":"S231P:ElementaryBlock","S231P:containsBlock":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMovingMean.booPul"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMovingMean.booPul1"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMovingMean.sin"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMovingMean.triMovMea"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMovingMean.triMovMea1"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMovingMean.triMovMea2"}],"S231P:label":"TriggeredMovingMean"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMovingMean.booPul","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Pulse","S231P:accessSpecifier":"public","S231P:description":"Block that outputs trigger signals","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-60,\"y\":-20},{\"x\":-40,\"y\":0}]}}}","S231P:hasInstance":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMovingMean.booPul.period"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMovingMean.booPul.shift"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMovingMean.booPul.width"}],"S231P:label":"booPul"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMovingMean.booPul.period","S231P:value":1},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMovingMean.booPul.shift","S231P:value":{"@value":"-0.5","@type":"http://www.w3.org/2001/XMLSchema#decimal"}},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMovingMean.booPul.width","S231P:value":{"@value":"0.5","@type":"http://www.w3.org/2001/XMLSchema#decimal"}},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMovingMean.booPul1","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Pulse","S231P:accessSpecifier":"public","S231P:description":"Block that outputs trigger signals","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-60,\"y\":-80},{\"x\":-40,\"y\":-60}]}}}","S231P:hasInstance":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMovingMean.booPul1.period"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMovingMean.booPul1.width"}],"S231P:label":"booPul1"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMovingMean.booPul1.period","S231P:value":1},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMovingMean.booPul1.width","S231P:value":{"@value":"0.5","@type":"http://www.w3.org/2001/XMLSchema#decimal"}},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMovingMean.sin","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Sources.Sin","S231P:accessSpecifier":"public","S231P:description":"Example input signal","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-60,\"y\":40},{\"x\":-40,\"y\":60}]}}}","S231P:hasInstance":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMovingMean.sin.freqHz"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMovingMean.sin.phase"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMovingMean.sin.startTime"}],"S231P:label":"sin"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMovingMean.sin.freqHz","S231P:value":"1/8"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMovingMean.sin.phase","S231P:value":{"@value":"0.5235987755983","@type":"http://www.w3.org/2001/XMLSchema#decimal"}},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMovingMean.sin.startTime","S231P:value":{"@value":"-0.5","@type":"http://www.w3.org/2001/XMLSchema#decimal"}},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMovingMean.triMovMea","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Discrete.TriggeredMovingMean","S231P:accessSpecifier":"public","S231P:description":"Triggered moving mean with 3 samples to average","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":0,\"y\":0},{\"x\":20,\"y\":20}]}}}","S231P:hasInstance":{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMovingMean.triMovMea.n"},"S231P:label":"triMovMea"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMovingMean.triMovMea.n","S231P:value":3},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMovingMean.triMovMea1","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Discrete.TriggeredMovingMean","S231P:accessSpecifier":"public","S231P:description":"Triggered moving mean with 1 sample to average","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":0,\"y\":60},{\"x\":20,\"y\":80}]}}}","S231P:hasInstance":{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMovingMean.triMovMea1.n"},"S231P:label":"triMovMea1"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMovingMean.triMovMea1.n","S231P:value":1},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMovingMean.triMovMea2","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Discrete.TriggeredMovingMean","S231P:accessSpecifier":"public","S231P:description":"Triggered moving mean with 3 samples to average with a different trigger period","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":0,\"y\":-60},{\"x\":20,\"y\":-40}]}}}","S231P:hasInstance":{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMovingMean.triMovMea2.n"},"S231P:label":"triMovMea2"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMovingMean.triMovMea2.n","S231P:value":3}]}
+{
+  "@context": {
+    "S231P": "https://data.ashrae.org/S231P#"
+  },
+  "@graph": [
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMovingMean",
+      "@type": "S231P:Block",
+      "S231P:containsBlock": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMovingMean.booPul"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMovingMean.booPul1"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMovingMean.sin"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMovingMean.triMovMea"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMovingMean.triMovMea1"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMovingMean.triMovMea2"
+        }
+      ],
+      "S231P:label": "TriggeredMovingMean"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMovingMean.booPul",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Pulse",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Block that outputs trigger signals",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-60,\"y\":-20},{\"x\":-40,\"y\":0}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMovingMean.booPul.period"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMovingMean.booPul.shift"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMovingMean.booPul.width"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMovingMean.booPul.y"
+        }
+      ],
+      "S231P:label": "booPul"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMovingMean.booPul.period",
+      "S231P:value": 1
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMovingMean.booPul.shift",
+      "S231P:value": {
+        "@value": "-0.5",
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMovingMean.booPul.width",
+      "S231P:value": {
+        "@value": "0.5",
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMovingMean.booPul.y",
+      "S231P:isConnectedTo": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMovingMean.triMovMea.trigger"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMovingMean.triMovMea1.trigger"
+        }
+      ]
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMovingMean.booPul1",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Pulse",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Block that outputs trigger signals",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-60,\"y\":-80},{\"x\":-40,\"y\":-60}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMovingMean.booPul1.period"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMovingMean.booPul1.width"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMovingMean.booPul1.y"
+        }
+      ],
+      "S231P:label": "booPul1"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMovingMean.booPul1.period",
+      "S231P:value": 1
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMovingMean.booPul1.width",
+      "S231P:value": {
+        "@value": "0.5",
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMovingMean.booPul1.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMovingMean.triMovMea2.trigger"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMovingMean.sin",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Sources.Sin",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Example input signal",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-60,\"y\":40},{\"x\":-40,\"y\":60}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMovingMean.sin.freqHz"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMovingMean.sin.phase"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMovingMean.sin.startTime"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMovingMean.sin.y"
+        }
+      ],
+      "S231P:label": "sin"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMovingMean.sin.freqHz",
+      "S231P:value": "1/8"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMovingMean.sin.phase",
+      "S231P:value": {
+        "@value": "0.5235987755983",
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMovingMean.sin.startTime",
+      "S231P:value": {
+        "@value": "-0.5",
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMovingMean.sin.y",
+      "S231P:isConnectedTo": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMovingMean.triMovMea.u"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMovingMean.triMovMea1.u"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMovingMean.triMovMea2.u"
+        }
+      ]
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMovingMean.triMovMea",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.TriggeredMovingMean",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Triggered moving mean with 3 samples to average",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":0,\"y\":0},{\"x\":20,\"y\":20}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMovingMean.triMovMea.n"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMovingMean.triMovMea.trigger"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMovingMean.triMovMea.u"
+        }
+      ],
+      "S231P:label": "triMovMea"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMovingMean.triMovMea.n",
+      "S231P:value": 3
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMovingMean.triMovMea1",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.TriggeredMovingMean",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Triggered moving mean with 1 sample to average",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":0,\"y\":60},{\"x\":20,\"y\":80}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMovingMean.triMovMea1.n"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMovingMean.triMovMea1.trigger"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMovingMean.triMovMea1.u"
+        }
+      ],
+      "S231P:label": "triMovMea1"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMovingMean.triMovMea1.n",
+      "S231P:value": 1
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMovingMean.triMovMea2",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.TriggeredMovingMean",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Triggered moving mean with 3 samples to average with a different trigger period",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":0,\"y\":-60},{\"x\":20,\"y\":-40}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMovingMean.triMovMea2.n"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMovingMean.triMovMea2.trigger"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMovingMean.triMovMea2.u"
+        }
+      ],
+      "S231P:label": "triMovMea2"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.Validation.TriggeredMovingMean.triMovMea2.n",
+      "S231P:value": 3
+    }
+  ]
+}

@@ -1,1 +1,163 @@
-{"@context":{"S231P":"https://data.ashrae.org/S231P#"},"@graph":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Sources.Validation.TimeTableNegativeStartTime","@type":"S231P:ElementaryBlock","S231P:containsBlock":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Sources.Validation.TimeTableNegativeStartTime.timTabCon"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Sources.Validation.TimeTableNegativeStartTime.timTabLin"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Sources.Validation.TimeTableNegativeStartTime.timTabLinCon"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Sources.Validation.TimeTableNegativeStartTime.timTabLinDer"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Sources.Validation.TimeTableNegativeStartTime.timTabLinHol"}],"S231P:label":"TimeTableNegativeStartTime"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Sources.Validation.TimeTableNegativeStartTime.timTabCon","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Sources.TimeTable","S231P:accessSpecifier":"public","S231P:description":"Time table with smoothness method of constant segments","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-80,\"y\":-30},{\"x\":-60,\"y\":-10}]}}}","S231P:hasInstance":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Sources.Validation.TimeTableNegativeStartTime.timTabCon.smoothness"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Sources.Validation.TimeTableNegativeStartTime.timTabCon.table"}],"S231P:label":"timTabCon"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Sources.Validation.TimeTableNegativeStartTime.timTabCon.smoothness","S231P:value":"Buildings.Controls.OBC.CDL.Types.Smoothness.ConstantSegments"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Sources.Validation.TimeTableNegativeStartTime.timTabCon.table","S231P:value":"[0,0;6*3600,1;18*3600,0.5;24*3600,0]"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Sources.Validation.TimeTableNegativeStartTime.timTabLin","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Sources.TimeTable","S231P:accessSpecifier":"public","S231P:description":"Time table with smoothness method of linear segments","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-80,\"y\":10},{\"x\":-60,\"y\":30}]}}}","S231P:hasInstance":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Sources.Validation.TimeTableNegativeStartTime.timTabLin.smoothness"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Sources.Validation.TimeTableNegativeStartTime.timTabLin.table"}],"S231P:label":"timTabLin"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Sources.Validation.TimeTableNegativeStartTime.timTabLin.smoothness","S231P:value":"Buildings.Controls.OBC.CDL.Types.Smoothness.LinearSegments"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Sources.Validation.TimeTableNegativeStartTime.timTabLin.table","S231P:value":"[0,0;6*3600,1;18*3600,0.5;24*3600,0]"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Sources.Validation.TimeTableNegativeStartTime.timTabLinCon","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Sources.TimeTable","S231P:accessSpecifier":"public","S231P:description":"Time table with smoothness method of linear segments","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-10,\"y\":-30},{\"x\":10,\"y\":-10}]}}}","S231P:hasInstance":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Sources.Validation.TimeTableNegativeStartTime.timTabLinCon.smoothness"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Sources.Validation.TimeTableNegativeStartTime.timTabLinCon.table"}],"S231P:label":"timTabLinCon"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Sources.Validation.TimeTableNegativeStartTime.timTabLinCon.smoothness","S231P:value":"Buildings.Controls.OBC.CDL.Types.Smoothness.LinearSegments"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Sources.Validation.TimeTableNegativeStartTime.timTabLinCon.table","S231P:value":"[0,0;6*3600,0;6*3600,1;18*3600,0.5;24*3600,0]"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Sources.Validation.TimeTableNegativeStartTime.timTabLinDer","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Sources.TimeTable","S231P:accessSpecifier":"public","S231P:description":"Time table with smoothness method of linear segments, extrapolate with der","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":50,\"y\":10},{\"x\":70,\"y\":30}]}}}","S231P:hasInstance":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Sources.Validation.TimeTableNegativeStartTime.timTabLinDer.extrapolation"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Sources.Validation.TimeTableNegativeStartTime.timTabLinDer.smoothness"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Sources.Validation.TimeTableNegativeStartTime.timTabLinDer.table"}],"S231P:label":"timTabLinDer"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Sources.Validation.TimeTableNegativeStartTime.timTabLinDer.extrapolation","S231P:value":"Buildings.Controls.OBC.CDL.Types.Extrapolation.LastTwoPoints"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Sources.Validation.TimeTableNegativeStartTime.timTabLinDer.smoothness","S231P:value":"Buildings.Controls.OBC.CDL.Types.Smoothness.LinearSegments"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Sources.Validation.TimeTableNegativeStartTime.timTabLinDer.table","S231P:value":"[0,0;6*3600,1;18*3600,0.5;24*3600,0]"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Sources.Validation.TimeTableNegativeStartTime.timTabLinHol","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Sources.TimeTable","S231P:accessSpecifier":"public","S231P:description":"Time table with smoothness method of linear segments, hold first and last value","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-10,\"y\":10},{\"x\":10,\"y\":30}]}}}","S231P:hasInstance":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Sources.Validation.TimeTableNegativeStartTime.timTabLinHol.extrapolation"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Sources.Validation.TimeTableNegativeStartTime.timTabLinHol.smoothness"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Sources.Validation.TimeTableNegativeStartTime.timTabLinHol.table"}],"S231P:label":"timTabLinHol"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Sources.Validation.TimeTableNegativeStartTime.timTabLinHol.extrapolation","S231P:value":"Buildings.Controls.OBC.CDL.Types.Extrapolation.HoldLastPoint"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Sources.Validation.TimeTableNegativeStartTime.timTabLinHol.smoothness","S231P:value":"Buildings.Controls.OBC.CDL.Types.Smoothness.LinearSegments"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Sources.Validation.TimeTableNegativeStartTime.timTabLinHol.table","S231P:value":"[0,0;6*3600,1;18*3600,0.5;24*3600,0]"}]}
+{
+  "@context": {
+    "S231P": "https://data.ashrae.org/S231P#"
+  },
+  "@graph": [
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Sources.Validation.TimeTableNegativeStartTime",
+      "@type": "S231P:Block",
+      "S231P:containsBlock": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Sources.Validation.TimeTableNegativeStartTime.timTabCon"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Sources.Validation.TimeTableNegativeStartTime.timTabLin"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Sources.Validation.TimeTableNegativeStartTime.timTabLinCon"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Sources.Validation.TimeTableNegativeStartTime.timTabLinDer"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Sources.Validation.TimeTableNegativeStartTime.timTabLinHol"
+        }
+      ],
+      "S231P:label": "TimeTableNegativeStartTime"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Sources.Validation.TimeTableNegativeStartTime.timTabCon",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Sources.TimeTable",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Time table with smoothness method of constant segments",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-80,\"y\":-30},{\"x\":-60,\"y\":-10}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Sources.Validation.TimeTableNegativeStartTime.timTabCon.smoothness"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Sources.Validation.TimeTableNegativeStartTime.timTabCon.table"
+        }
+      ],
+      "S231P:label": "timTabCon"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Sources.Validation.TimeTableNegativeStartTime.timTabCon.smoothness",
+      "S231P:value": "Buildings.Controls.OBC.CDL.Types.Smoothness.ConstantSegments"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Sources.Validation.TimeTableNegativeStartTime.timTabCon.table",
+      "S231P:value": "[0,0;6*3600,1;18*3600,0.5;24*3600,0]"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Sources.Validation.TimeTableNegativeStartTime.timTabLin",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Sources.TimeTable",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Time table with smoothness method of linear segments",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-80,\"y\":10},{\"x\":-60,\"y\":30}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Sources.Validation.TimeTableNegativeStartTime.timTabLin.smoothness"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Sources.Validation.TimeTableNegativeStartTime.timTabLin.table"
+        }
+      ],
+      "S231P:label": "timTabLin"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Sources.Validation.TimeTableNegativeStartTime.timTabLin.smoothness",
+      "S231P:value": "Buildings.Controls.OBC.CDL.Types.Smoothness.LinearSegments"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Sources.Validation.TimeTableNegativeStartTime.timTabLin.table",
+      "S231P:value": "[0,0;6*3600,1;18*3600,0.5;24*3600,0]"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Sources.Validation.TimeTableNegativeStartTime.timTabLinCon",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Sources.TimeTable",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Time table with smoothness method of linear segments",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-10,\"y\":-30},{\"x\":10,\"y\":-10}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Sources.Validation.TimeTableNegativeStartTime.timTabLinCon.smoothness"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Sources.Validation.TimeTableNegativeStartTime.timTabLinCon.table"
+        }
+      ],
+      "S231P:label": "timTabLinCon"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Sources.Validation.TimeTableNegativeStartTime.timTabLinCon.smoothness",
+      "S231P:value": "Buildings.Controls.OBC.CDL.Types.Smoothness.LinearSegments"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Sources.Validation.TimeTableNegativeStartTime.timTabLinCon.table",
+      "S231P:value": "[0,0;6*3600,0;6*3600,1;18*3600,0.5;24*3600,0]"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Sources.Validation.TimeTableNegativeStartTime.timTabLinDer",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Sources.TimeTable",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Time table with smoothness method of linear segments, extrapolate with der",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":50,\"y\":10},{\"x\":70,\"y\":30}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Sources.Validation.TimeTableNegativeStartTime.timTabLinDer.extrapolation"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Sources.Validation.TimeTableNegativeStartTime.timTabLinDer.smoothness"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Sources.Validation.TimeTableNegativeStartTime.timTabLinDer.table"
+        }
+      ],
+      "S231P:label": "timTabLinDer"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Sources.Validation.TimeTableNegativeStartTime.timTabLinDer.extrapolation",
+      "S231P:value": "Buildings.Controls.OBC.CDL.Types.Extrapolation.LastTwoPoints"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Sources.Validation.TimeTableNegativeStartTime.timTabLinDer.smoothness",
+      "S231P:value": "Buildings.Controls.OBC.CDL.Types.Smoothness.LinearSegments"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Sources.Validation.TimeTableNegativeStartTime.timTabLinDer.table",
+      "S231P:value": "[0,0;6*3600,1;18*3600,0.5;24*3600,0]"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Sources.Validation.TimeTableNegativeStartTime.timTabLinHol",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Sources.TimeTable",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Time table with smoothness method of linear segments, hold first and last value",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-10,\"y\":10},{\"x\":10,\"y\":30}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Sources.Validation.TimeTableNegativeStartTime.timTabLinHol.extrapolation"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Sources.Validation.TimeTableNegativeStartTime.timTabLinHol.smoothness"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Sources.Validation.TimeTableNegativeStartTime.timTabLinHol.table"
+        }
+      ],
+      "S231P:label": "timTabLinHol"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Sources.Validation.TimeTableNegativeStartTime.timTabLinHol.extrapolation",
+      "S231P:value": "Buildings.Controls.OBC.CDL.Types.Extrapolation.HoldLastPoint"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Sources.Validation.TimeTableNegativeStartTime.timTabLinHol.smoothness",
+      "S231P:value": "Buildings.Controls.OBC.CDL.Types.Smoothness.LinearSegments"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Sources.Validation.TimeTableNegativeStartTime.timTabLinHol.table",
+      "S231P:value": "[0,0;6*3600,1;18*3600,0.5;24*3600,0]"
+    }
+  ]
+}

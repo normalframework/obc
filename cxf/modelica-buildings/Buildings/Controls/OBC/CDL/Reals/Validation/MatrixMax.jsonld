@@ -1,1 +1,207 @@
-{"@context":{"S231P":"https://data.ashrae.org/S231P#"},"@graph":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.MatrixMax","@type":"S231P:ElementaryBlock","S231P:containsBlock":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.MatrixMax.con"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.MatrixMax.con1"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.MatrixMax.con2"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.MatrixMax.matMax"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.MatrixMax.matMax1"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.MatrixMax.matMax2"}],"S231P:label":"MatrixMax"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.MatrixMax.con","@type":"http://example.org#Reals.Sources.Constant","S231P:accessSpecifier":"public","S231P:description":"Block that generates ramp signal","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-40,\"y\":50},{\"x\":-20,\"y\":70}]}}}","S231P:hasInstance":{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.MatrixMax.con.k"},"S231P:label":"con"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.MatrixMax.con.k","S231P:value":"{{1,2,3},{6,4,2},{3,9,6}}"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.MatrixMax.con1","@type":"http://example.org#Reals.Sources.Constant","S231P:accessSpecifier":"public","S231P:description":"Block that generates ramp signal","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-40,\"y\":-10},{\"x\":-20,\"y\":10}]}}}","S231P:hasInstance":{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.MatrixMax.con1.k"},"S231P:label":"con1"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.MatrixMax.con1.k","S231P:value":"{{1,4,3},{2,2,6}}"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.MatrixMax.con2","@type":"http://example.org#Reals.Sources.Constant","S231P:accessSpecifier":"public","S231P:description":"Block that generates ramp signal","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-40,\"y\":-70},{\"x\":-20,\"y\":-50}]}}}","S231P:hasInstance":{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.MatrixMax.con2.k"},"S231P:label":"con2"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.MatrixMax.con2.k","S231P:value":"{{1,2,3},{6,4,2}}"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.MatrixMax.matMax","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.MatrixMax","S231P:accessSpecifier":"public","S231P:description":"Matrix maximum","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":0,\"y\":50},{\"x\":20,\"y\":70}]}}}","S231P:hasInstance":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.MatrixMax.matMax.nCol"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.MatrixMax.matMax.nRow"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.MatrixMax.matMax.rowMax"}],"S231P:label":"matMax"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.MatrixMax.matMax.nCol","S231P:value":3},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.MatrixMax.matMax.nRow","S231P:value":3},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.MatrixMax.matMax.rowMax","S231P:value":false},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.MatrixMax.matMax1","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.MatrixMax","S231P:accessSpecifier":"public","S231P:description":"Matrix maximum","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":0,\"y\":-10},{\"x\":20,\"y\":10}]}}}","S231P:hasInstance":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.MatrixMax.matMax1.nCol"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.MatrixMax.matMax1.nRow"}],"S231P:label":"matMax1"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.MatrixMax.matMax1.nCol","S231P:value":3},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.MatrixMax.matMax1.nRow","S231P:value":2},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.MatrixMax.matMax2","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.MatrixMax","S231P:accessSpecifier":"public","S231P:description":"Matrix maximum","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":0,\"y\":-70},{\"x\":20,\"y\":-50}]}}}","S231P:hasInstance":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.MatrixMax.matMax2.nCol"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.MatrixMax.matMax2.nRow"}],"S231P:label":"matMax2"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.MatrixMax.matMax2.nCol","S231P:value":3},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Validation.MatrixMax.matMax2.nRow","S231P:value":2}]}
+{
+  "@context": {
+    "S231P": "https://data.ashrae.org/S231P#"
+  },
+  "@graph": [
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.MatrixMax",
+      "@type": "S231P:Block",
+      "S231P:containsBlock": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.MatrixMax.con"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.MatrixMax.con1"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.MatrixMax.con2"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.MatrixMax.matMax"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.MatrixMax.matMax1"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.MatrixMax.matMax2"
+        }
+      ],
+      "S231P:label": "MatrixMax"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.MatrixMax.con",
+      "@type": "http://example.org#Reals.Sources.Constant",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Block that generates ramp signal",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-40,\"y\":50},{\"x\":-20,\"y\":70}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.MatrixMax.con.k"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.MatrixMax.con.y"
+        }
+      ],
+      "S231P:isArray": true,
+      "S231P:label": "con[3,3]",
+      "S231P:numberDimensions": 2,
+      "S231P:sizeOfDimensions": "(3,3)"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.MatrixMax.con.k",
+      "S231P:value": "{{1,2,3},{6,4,2},{3,9,6}}"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.MatrixMax.con.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.MatrixMax.matMax.u"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.MatrixMax.con1",
+      "@type": "http://example.org#Reals.Sources.Constant",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Block that generates ramp signal",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-40,\"y\":-10},{\"x\":-20,\"y\":10}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.MatrixMax.con1.k"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.MatrixMax.con1.y"
+        }
+      ],
+      "S231P:isArray": true,
+      "S231P:label": "con1[2,3]",
+      "S231P:numberDimensions": 2,
+      "S231P:sizeOfDimensions": "(2,3)"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.MatrixMax.con1.k",
+      "S231P:value": "{{1,4,3},{2,2,6}}"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.MatrixMax.con1.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.MatrixMax.matMax1.u"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.MatrixMax.con2",
+      "@type": "http://example.org#Reals.Sources.Constant",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Block that generates ramp signal",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-40,\"y\":-70},{\"x\":-20,\"y\":-50}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.MatrixMax.con2.k"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.MatrixMax.con2.y"
+        }
+      ],
+      "S231P:isArray": true,
+      "S231P:label": "con2[2,3]",
+      "S231P:numberDimensions": 2,
+      "S231P:sizeOfDimensions": "(2,3)"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.MatrixMax.con2.k",
+      "S231P:value": "{{1,2,3},{6,4,2}}"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.MatrixMax.con2.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.MatrixMax.matMax2.u"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.MatrixMax.matMax",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Reals.MatrixMax",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Matrix maximum",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":0,\"y\":50},{\"x\":20,\"y\":70}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.MatrixMax.matMax.nCol"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.MatrixMax.matMax.nRow"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.MatrixMax.matMax.rowMax"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.MatrixMax.matMax.u"
+        }
+      ],
+      "S231P:label": "matMax"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.MatrixMax.matMax.nCol",
+      "S231P:value": 3
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.MatrixMax.matMax.nRow",
+      "S231P:value": 3
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.MatrixMax.matMax.rowMax",
+      "S231P:value": false
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.MatrixMax.matMax1",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Reals.MatrixMax",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Matrix maximum",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":0,\"y\":-10},{\"x\":20,\"y\":10}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.MatrixMax.matMax1.nCol"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.MatrixMax.matMax1.nRow"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.MatrixMax.matMax1.u"
+        }
+      ],
+      "S231P:label": "matMax1"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.MatrixMax.matMax1.nCol",
+      "S231P:value": 3
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.MatrixMax.matMax1.nRow",
+      "S231P:value": 2
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.MatrixMax.matMax2",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Reals.MatrixMax",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Matrix maximum",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":0,\"y\":-70},{\"x\":20,\"y\":-50}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.MatrixMax.matMax2.nCol"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.MatrixMax.matMax2.nRow"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.MatrixMax.matMax2.u"
+        }
+      ],
+      "S231P:label": "matMax2"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.MatrixMax.matMax2.nCol",
+      "S231P:value": 3
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.MatrixMax.matMax2.nRow",
+      "S231P:value": 2
+    }
+  ]
+}

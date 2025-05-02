@@ -1,1 +1,113 @@
-{"@context":{"S231P":"https://data.ashrae.org/S231P#"},"@graph":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.VariablePulseMinHold","@type":"S231P:ElementaryBlock","S231P:containsBlock":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.VariablePulseMinHold.conChaWid"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.VariablePulseMinHold.conPul1"}],"S231P:label":"VariablePulseMinHold"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.VariablePulseMinHold.conChaWid","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.VariablePulse","S231P:accessSpecifier":"public","S231P:description":"Variable pulse with constantly changing pulse width ","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":10,\"y\":-10},{\"x\":30,\"y\":10}]}}}","S231P:hasInstance":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.VariablePulseMinHold.conChaWid.minTruFalHol"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.VariablePulseMinHold.conChaWid.period"}],"S231P:label":"conChaWid"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.VariablePulseMinHold.conChaWid.minTruFalHol","S231P:value":1},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.VariablePulseMinHold.conChaWid.period","S231P:value":3},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.VariablePulseMinHold.conPul1","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Sources.Pulse","S231P:accessSpecifier":"public","S231P:description":"Continuous pulse signal","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-30,\"y\":-10},{\"x\":-10,\"y\":10}]}}}","S231P:hasInstance":[{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.VariablePulseMinHold.conPul1.amplitude"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.VariablePulseMinHold.conPul1.offset"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.VariablePulseMinHold.conPul1.period"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.VariablePulseMinHold.conPul1.shift"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.VariablePulseMinHold.conPul1.width"}],"S231P:label":"conPul1"},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.VariablePulseMinHold.conPul1.amplitude","S231P:value":{"@value":"0.4","@type":"http://www.w3.org/2001/XMLSchema#decimal"}},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.VariablePulseMinHold.conPul1.offset","S231P:value":{"@value":"0.5","@type":"http://www.w3.org/2001/XMLSchema#decimal"}},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.VariablePulseMinHold.conPul1.period","S231P:value":4},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.VariablePulseMinHold.conPul1.shift","S231P:value":{"@value":"1.6","@type":"http://www.w3.org/2001/XMLSchema#decimal"}},{"@id":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Validation.VariablePulseMinHold.conPul1.width","S231P:value":{"@value":"0.4","@type":"http://www.w3.org/2001/XMLSchema#decimal"}}]}
+{
+  "@context": {
+    "S231P": "https://data.ashrae.org/S231P#"
+  },
+  "@graph": [
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.VariablePulseMinHold",
+      "@type": "S231P:Block",
+      "S231P:containsBlock": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.VariablePulseMinHold.conChaWid"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.VariablePulseMinHold.conPul1"
+        }
+      ],
+      "S231P:label": "VariablePulseMinHold"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.VariablePulseMinHold.conChaWid",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Logical.VariablePulse",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Variable pulse with constantly changing pulse width ",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":10,\"y\":-10},{\"x\":30,\"y\":10}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.VariablePulseMinHold.conChaWid.minTruFalHol"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.VariablePulseMinHold.conChaWid.period"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.VariablePulseMinHold.conChaWid.u"
+        }
+      ],
+      "S231P:label": "conChaWid"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.VariablePulseMinHold.conChaWid.minTruFalHol",
+      "S231P:value": 1
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.VariablePulseMinHold.conChaWid.period",
+      "S231P:value": 3
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.VariablePulseMinHold.conPul1",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Sources.Pulse",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Continuous pulse signal",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-30,\"y\":-10},{\"x\":-10,\"y\":10}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.VariablePulseMinHold.conPul1.amplitude"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.VariablePulseMinHold.conPul1.offset"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.VariablePulseMinHold.conPul1.period"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.VariablePulseMinHold.conPul1.shift"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.VariablePulseMinHold.conPul1.width"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.VariablePulseMinHold.conPul1.y"
+        }
+      ],
+      "S231P:label": "conPul1"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.VariablePulseMinHold.conPul1.amplitude",
+      "S231P:value": {
+        "@value": "0.4",
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.VariablePulseMinHold.conPul1.offset",
+      "S231P:value": {
+        "@value": "0.5",
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.VariablePulseMinHold.conPul1.period",
+      "S231P:value": 4
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.VariablePulseMinHold.conPul1.shift",
+      "S231P:value": {
+        "@value": "1.6",
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.VariablePulseMinHold.conPul1.width",
+      "S231P:value": {
+        "@value": "0.4",
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.VariablePulseMinHold.conPul1.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Validation.VariablePulseMinHold.conChaWid.u"
+      }
+    }
+  ]
+}
