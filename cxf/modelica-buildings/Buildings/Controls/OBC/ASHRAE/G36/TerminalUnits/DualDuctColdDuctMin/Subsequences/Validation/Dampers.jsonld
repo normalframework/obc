@@ -1,1 +1,584 @@
-{"@context":{"S231P":"https://data.ashrae.org/S231P#"},"@graph":[{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers","@type":"S231P:Block","S231P:containsBlock":[{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.cooAhu"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.dam1"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.heaAhu"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.TCooSup"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.THeaSup"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.TZon"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.uCoo"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.uHea"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.VActCooMax_flow"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.VActHeaMax_flow"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.VActMin_flow"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.VColDuc"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.VHotDuc"}],"S231P:label":"Dampers"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.cooAhu","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Pulse","S231P:accessSpecifier":"public","S231P:description":"Cold air handling unit status","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-60,\"y\":40},{\"x\":-40,\"y\":60}]}}}","S231P:hasInstance":[{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.cooAhu.period"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.cooAhu.width"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.cooAhu.y"}],"S231P:label":"cooAhu"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.cooAhu.period","S231P:isFinal":true,"S231P:value":7200},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.cooAhu.width","S231P:isFinal":true,"S231P:value":{"@value":"0.75","@type":"http://www.w3.org/2001/XMLSchema#decimal"}},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.cooAhu.y","S231P:isConnectedTo":{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.dam1.u1CooAHU"}},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.dam1","@type":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Dampers","S231P:accessSpecifier":"public","S231P:description":"Output signal for controlling damper position","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":80,\"y\":-90},{\"x\":100,\"y\":-50}]}}}","S231P:hasInstance":[{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.dam1.kDam"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.dam1.TColSup"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.dam1.THotSup"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.dam1.TZon"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.dam1.u1CooAHU"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.dam1.u1HeaAHU"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.dam1.uCoo"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.dam1.uHea"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.dam1.VActCooMax_flow"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.dam1.VActHeaMax_flow"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.dam1.VActMin_flow"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.dam1.VColDucDis_flow"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.dam1.VCooMax_flow"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.dam1.VHeaMax_flow"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.dam1.VHotDucDis_flow"}],"S231P:label":"dam1"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.dam1.kDam","S231P:isFinal":true,"S231P:value":1},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.dam1.VCooMax_flow","S231P:isFinal":true,"S231P:value":{"@value":"0.08","@type":"http://www.w3.org/2001/XMLSchema#decimal"}},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.dam1.VHeaMax_flow","S231P:isFinal":true,"S231P:value":{"@value":"0.06","@type":"http://www.w3.org/2001/XMLSchema#decimal"}},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.heaAhu","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Pulse","S231P:accessSpecifier":"public","S231P:description":"Hot air handling unit status","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-60,\"y\":-80},{\"x\":-40,\"y\":-60}]}}}","S231P:hasInstance":[{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.heaAhu.period"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.heaAhu.shift"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.heaAhu.width"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.heaAhu.y"}],"S231P:label":"heaAhu"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.heaAhu.period","S231P:isFinal":true,"S231P:value":7200},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.heaAhu.shift","S231P:isFinal":true,"S231P:value":5000},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.heaAhu.width","S231P:isFinal":true,"S231P:value":{"@value":"0.75","@type":"http://www.w3.org/2001/XMLSchema#decimal"}},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.heaAhu.y","S231P:isConnectedTo":{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.dam1.u1HeaAHU"}},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.TCooSup","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Sources.Constant","S231P:accessSpecifier":"public","S231P:description":"AHU supply air temperature","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-100,\"y\":60},{\"x\":-80,\"y\":80}]}}}","S231P:hasInstance":[{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.TCooSup.k"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.TCooSup.y"}],"S231P:label":"TCooSup"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.TCooSup.k","S231P:isFinal":true,"S231P:value":"273.15 +13"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.TCooSup.y","S231P:isConnectedTo":{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.dam1.TColSup"}},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.THeaSup","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Sources.Constant","S231P:accessSpecifier":"public","S231P:description":"AHU supply air temperature","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-100,\"y\":-20},{\"x\":-80,\"y\":0}]}}}","S231P:hasInstance":[{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.THeaSup.k"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.THeaSup.y"}],"S231P:label":"THeaSup"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.THeaSup.k","S231P:isFinal":true,"S231P:value":"273.15 +25"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.THeaSup.y","S231P:isConnectedTo":{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.dam1.THotSup"}},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.TZon","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Sources.Constant","S231P:accessSpecifier":"public","S231P:description":"Zone temperature","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-60,\"y\":0},{\"x\":-40,\"y\":20}]}}}","S231P:hasInstance":[{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.TZon.k"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.TZon.y"}],"S231P:label":"TZon"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.TZon.k","S231P:isFinal":true,"S231P:value":"273.15 +22"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.TZon.y","S231P:isConnectedTo":{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.dam1.TZon"}},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.uCoo","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Sources.Ramp","S231P:accessSpecifier":"public","S231P:description":"Cooling control signal","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-100,\"y\":100},{\"x\":-80,\"y\":120}]}}}","S231P:hasInstance":[{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.uCoo.duration"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.uCoo.height"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.uCoo.offset"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.uCoo.startTime"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.uCoo.y"}],"S231P:label":"uCoo"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.uCoo.duration","S231P:isFinal":true,"S231P:value":3600},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.uCoo.height","S231P:isFinal":true,"S231P:value":-1},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.uCoo.offset","S231P:isFinal":true,"S231P:value":1},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.uCoo.startTime","S231P:isFinal":true,"S231P:value":900},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.uCoo.y","S231P:isConnectedTo":{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.dam1.uCoo"}},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.uHea","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Sources.Ramp","S231P:accessSpecifier":"public","S231P:description":"Heating control signal","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-60,\"y\":-40},{\"x\":-40,\"y\":-20}]}}}","S231P:hasInstance":[{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.uHea.duration"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.uHea.height"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.uHea.offset"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.uHea.startTime"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.uHea.y"}],"S231P:label":"uHea"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.uHea.duration","S231P:isFinal":true,"S231P:value":3600},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.uHea.height","S231P:isFinal":true,"S231P:value":1},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.uHea.offset","S231P:isFinal":true,"S231P:value":0},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.uHea.startTime","S231P:isFinal":true,"S231P:value":5500},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.uHea.y","S231P:isConnectedTo":{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.dam1.uHea"}},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.VActCooMax_flow","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Sources.Constant","S231P:accessSpecifier":"public","S231P:description":"Active cooling maximum airflow setpoint","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-60,\"y\":80},{\"x\":-40,\"y\":100}]}}}","S231P:hasInstance":[{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.VActCooMax_flow.k"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.VActCooMax_flow.y"}],"S231P:label":"VActCooMax_flow"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.VActCooMax_flow.k","S231P:isFinal":true,"S231P:value":{"@value":"0.075","@type":"http://www.w3.org/2001/XMLSchema#decimal"}},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.VActCooMax_flow.y","S231P:isConnectedTo":{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.dam1.VActCooMax_flow"}},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.VActHeaMax_flow","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Sources.Constant","S231P:accessSpecifier":"public","S231P:description":"Active heating maximum airflow setpoint","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-100,\"y\":-60},{\"x\":-80,\"y\":-40}]}}}","S231P:hasInstance":[{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.VActHeaMax_flow.k"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.VActHeaMax_flow.y"}],"S231P:label":"VActHeaMax_flow"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.VActHeaMax_flow.k","S231P:isFinal":true,"S231P:value":{"@value":"0.07","@type":"http://www.w3.org/2001/XMLSchema#decimal"}},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.VActHeaMax_flow.y","S231P:isConnectedTo":{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.dam1.VActHeaMax_flow"}},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.VActMin_flow","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Sources.Constant","S231P:accessSpecifier":"public","S231P:description":"Active minimum airflow setpoint","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-100,\"y\":20},{\"x\":-80,\"y\":40}]}}}","S231P:hasInstance":[{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.VActMin_flow.k"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.VActMin_flow.y"}],"S231P:label":"VActMin_flow"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.VActMin_flow.k","S231P:isFinal":true,"S231P:value":{"@value":"0.01","@type":"http://www.w3.org/2001/XMLSchema#decimal"}},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.VActMin_flow.y","S231P:isConnectedTo":{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.dam1.VActMin_flow"}},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.VColDuc","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Sources.Sin","S231P:accessSpecifier":"public","S231P:description":"Cold-duct airflow rate","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-100,\"y\":-110},{\"x\":-80,\"y\":-90}]}}}","S231P:hasInstance":[{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.VColDuc.amplitude"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.VColDuc.freqHz"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.VColDuc.offset"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.VColDuc.y"}],"S231P:label":"VColDuc"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.VColDuc.amplitude","S231P:isFinal":true,"S231P:value":{"@value":"0.002","@type":"http://www.w3.org/2001/XMLSchema#decimal"}},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.VColDuc.freqHz","S231P:isFinal":true,"S231P:value":"1/3600"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.VColDuc.offset","S231P:isFinal":true,"S231P:value":{"@value":"0.015","@type":"http://www.w3.org/2001/XMLSchema#decimal"}},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.VColDuc.y","S231P:isConnectedTo":{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.dam1.VColDucDis_flow"}},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.VHotDuc","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Sources.Sin","S231P:accessSpecifier":"public","S231P:description":"Hot-duct airflow rate","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-60,\"y\":-130},{\"x\":-40,\"y\":-110}]}}}","S231P:hasInstance":[{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.VHotDuc.amplitude"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.VHotDuc.freqHz"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.VHotDuc.offset"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.VHotDuc.y"}],"S231P:label":"VHotDuc"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.VHotDuc.amplitude","S231P:isFinal":true,"S231P:value":{"@value":"0.002","@type":"http://www.w3.org/2001/XMLSchema#decimal"}},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.VHotDuc.freqHz","S231P:isFinal":true,"S231P:value":"1/3600"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.VHotDuc.offset","S231P:isFinal":true,"S231P:value":{"@value":"0.015","@type":"http://www.w3.org/2001/XMLSchema#decimal"}},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.VHotDuc.y","S231P:isConnectedTo":{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.dam1.VHotDucDis_flow"}}]}
+{
+  "@context": {
+    "S231P": "https://data.ashrae.org/S231P#"
+  },
+  "@graph": [
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers",
+      "@type": "S231P:Block",
+      "S231P:containsBlock": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.cooAhu"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.dam1"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.heaAhu"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.TCooSup"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.THeaSup"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.TZon"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.uCoo"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.uHea"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.VActCooMax_flow"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.VActHeaMax_flow"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.VActMin_flow"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.VColDuc"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.VHotDuc"
+        }
+      ],
+      "S231P:label": "Dampers"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.cooAhu",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Pulse",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Cold air handling unit status",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-60,\"y\":40},{\"x\":-40,\"y\":60}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.cooAhu.period"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.cooAhu.width"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.cooAhu.y"
+        }
+      ],
+      "S231P:label": "cooAhu"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.cooAhu.period",
+      "S231P:isFinal": true,
+      "S231P:value": 7200
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.cooAhu.width",
+      "S231P:isFinal": true,
+      "S231P:value": {
+        "@value": "0.75",
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.cooAhu.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.dam1.u1CooAHU"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.dam1",
+      "@type": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Dampers",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Output signal for controlling damper position",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":80,\"y\":-90},{\"x\":100,\"y\":-50}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.dam1.kDam"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.dam1.TColSup"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.dam1.THotSup"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.dam1.TZon"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.dam1.u1CooAHU"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.dam1.u1HeaAHU"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.dam1.uCoo"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.dam1.uHea"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.dam1.VActCooMax_flow"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.dam1.VActHeaMax_flow"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.dam1.VActMin_flow"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.dam1.VColDucDis_flow"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.dam1.VCooMax_flow"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.dam1.VHeaMax_flow"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.dam1.VHotDucDis_flow"
+        }
+      ],
+      "S231P:label": "dam1"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.dam1.kDam",
+      "S231P:isFinal": true,
+      "S231P:value": 1
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.dam1.VCooMax_flow",
+      "S231P:isFinal": true,
+      "S231P:value": {
+        "@value": "0.08",
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.dam1.VHeaMax_flow",
+      "S231P:isFinal": true,
+      "S231P:value": {
+        "@value": "0.06",
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.heaAhu",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Pulse",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Hot air handling unit status",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-60,\"y\":-80},{\"x\":-40,\"y\":-60}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.heaAhu.period"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.heaAhu.shift"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.heaAhu.width"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.heaAhu.y"
+        }
+      ],
+      "S231P:label": "heaAhu"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.heaAhu.period",
+      "S231P:isFinal": true,
+      "S231P:value": 7200
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.heaAhu.shift",
+      "S231P:isFinal": true,
+      "S231P:value": 5000
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.heaAhu.width",
+      "S231P:isFinal": true,
+      "S231P:value": {
+        "@value": "0.75",
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.heaAhu.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.dam1.u1HeaAHU"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.TCooSup",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Sources.Constant",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "AHU supply air temperature",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-100,\"y\":60},{\"x\":-80,\"y\":80}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.TCooSup.k"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.TCooSup.y"
+        }
+      ],
+      "S231P:label": "TCooSup"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.TCooSup.k",
+      "S231P:isFinal": true,
+      "S231P:value": "273.15 +13"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.TCooSup.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.dam1.TColSup"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.THeaSup",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Sources.Constant",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "AHU supply air temperature",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-100,\"y\":-20},{\"x\":-80,\"y\":0}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.THeaSup.k"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.THeaSup.y"
+        }
+      ],
+      "S231P:label": "THeaSup"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.THeaSup.k",
+      "S231P:isFinal": true,
+      "S231P:value": "273.15 +25"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.THeaSup.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.dam1.THotSup"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.TZon",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Sources.Constant",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Zone temperature",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-60,\"y\":0},{\"x\":-40,\"y\":20}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.TZon.k"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.TZon.y"
+        }
+      ],
+      "S231P:label": "TZon"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.TZon.k",
+      "S231P:isFinal": true,
+      "S231P:value": "273.15 +22"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.TZon.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.dam1.TZon"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.uCoo",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Sources.Ramp",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Cooling control signal",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-100,\"y\":100},{\"x\":-80,\"y\":120}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.uCoo.duration"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.uCoo.height"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.uCoo.offset"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.uCoo.startTime"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.uCoo.y"
+        }
+      ],
+      "S231P:label": "uCoo"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.uCoo.duration",
+      "S231P:isFinal": true,
+      "S231P:value": 3600
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.uCoo.height",
+      "S231P:isFinal": true,
+      "S231P:value": -1
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.uCoo.offset",
+      "S231P:isFinal": true,
+      "S231P:value": 1
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.uCoo.startTime",
+      "S231P:isFinal": true,
+      "S231P:value": 900
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.uCoo.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.dam1.uCoo"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.uHea",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Sources.Ramp",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Heating control signal",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-60,\"y\":-40},{\"x\":-40,\"y\":-20}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.uHea.duration"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.uHea.height"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.uHea.offset"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.uHea.startTime"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.uHea.y"
+        }
+      ],
+      "S231P:label": "uHea"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.uHea.duration",
+      "S231P:isFinal": true,
+      "S231P:value": 3600
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.uHea.height",
+      "S231P:isFinal": true,
+      "S231P:value": 1
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.uHea.offset",
+      "S231P:isFinal": true,
+      "S231P:value": 0
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.uHea.startTime",
+      "S231P:isFinal": true,
+      "S231P:value": 5500
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.uHea.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.dam1.uHea"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.VActCooMax_flow",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Sources.Constant",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Active cooling maximum airflow setpoint",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-60,\"y\":80},{\"x\":-40,\"y\":100}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.VActCooMax_flow.k"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.VActCooMax_flow.y"
+        }
+      ],
+      "S231P:label": "VActCooMax_flow"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.VActCooMax_flow.k",
+      "S231P:isFinal": true,
+      "S231P:value": {
+        "@value": "0.075",
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.VActCooMax_flow.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.dam1.VActCooMax_flow"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.VActHeaMax_flow",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Sources.Constant",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Active heating maximum airflow setpoint",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-100,\"y\":-60},{\"x\":-80,\"y\":-40}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.VActHeaMax_flow.k"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.VActHeaMax_flow.y"
+        }
+      ],
+      "S231P:label": "VActHeaMax_flow"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.VActHeaMax_flow.k",
+      "S231P:isFinal": true,
+      "S231P:value": {
+        "@value": "0.07",
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.VActHeaMax_flow.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.dam1.VActHeaMax_flow"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.VActMin_flow",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Sources.Constant",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Active minimum airflow setpoint",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-100,\"y\":20},{\"x\":-80,\"y\":40}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.VActMin_flow.k"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.VActMin_flow.y"
+        }
+      ],
+      "S231P:label": "VActMin_flow"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.VActMin_flow.k",
+      "S231P:isFinal": true,
+      "S231P:value": {
+        "@value": "0.01",
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.VActMin_flow.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.dam1.VActMin_flow"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.VColDuc",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Sources.Sin",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Cold-duct airflow rate",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-100,\"y\":-110},{\"x\":-80,\"y\":-90}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.VColDuc.amplitude"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.VColDuc.freqHz"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.VColDuc.offset"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.VColDuc.y"
+        }
+      ],
+      "S231P:label": "VColDuc"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.VColDuc.amplitude",
+      "S231P:isFinal": true,
+      "S231P:value": {
+        "@value": "0.002",
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.VColDuc.freqHz",
+      "S231P:isFinal": true,
+      "S231P:value": "1/3600"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.VColDuc.offset",
+      "S231P:isFinal": true,
+      "S231P:value": {
+        "@value": "0.015",
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.VColDuc.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.dam1.VColDucDis_flow"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.VHotDuc",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Sources.Sin",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Hot-duct airflow rate",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-60,\"y\":-130},{\"x\":-40,\"y\":-110}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.VHotDuc.amplitude"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.VHotDuc.freqHz"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.VHotDuc.offset"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.VHotDuc.y"
+        }
+      ],
+      "S231P:label": "VHotDuc"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.VHotDuc.amplitude",
+      "S231P:isFinal": true,
+      "S231P:value": {
+        "@value": "0.002",
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.VHotDuc.freqHz",
+      "S231P:isFinal": true,
+      "S231P:value": "1/3600"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.VHotDuc.offset",
+      "S231P:isFinal": true,
+      "S231P:value": {
+        "@value": "0.015",
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.VHotDuc.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.Dampers.dam1.VHotDucDis_flow"
+      }
+    }
+  ]
+}

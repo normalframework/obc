@@ -1,1 +1,35 @@
-{"@context":{"S231P":"https://data.ashrae.org/S231P#"},"@graph":[{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Types.HeatingCoil","@type":"S231P:EnumerationType","S231P:description":"Enumeration to configure the heating coil","S231P:label":"HeatingCoil"},{"@id":"http://example.org#HeatingCoil.Electric","@type":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Types.HeatingCoil","S231P:description":"Modulating electric heating coil","S231P:label":"Electric"},{"@id":"http://example.org#HeatingCoil.None","@type":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Types.HeatingCoil","S231P:description":"No coil","S231P:label":"None"},{"@id":"http://example.org#HeatingCoil.WaterBased","@type":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Types.HeatingCoil","S231P:description":"Hot water coil","S231P:label":"WaterBased"}]}
+{
+  "@context": {
+    "S231P": "https://data.ashrae.org/S231P#"
+  },
+  "@graph": [
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Types.HeatingCoil",
+      "@type": "S231P:EnumerationType",
+      "S231P:description": "Enumeration to configure the heating coil",
+      "S231P:label": "HeatingCoil",
+      "S231P:value": "HeatingCoil"
+    },
+    {
+      "@id": "http://example.org#HeatingCoil.Electric",
+      "@type": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Types.HeatingCoil",
+      "S231P:description": "Modulating electric heating coil",
+      "S231P:label": "Electric",
+      "S231P:value": "Electric"
+    },
+    {
+      "@id": "http://example.org#HeatingCoil.None",
+      "@type": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Types.HeatingCoil",
+      "S231P:description": "No coil",
+      "S231P:label": "None",
+      "S231P:value": "None"
+    },
+    {
+      "@id": "http://example.org#HeatingCoil.WaterBased",
+      "@type": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Types.HeatingCoil",
+      "S231P:description": "Hot water coil",
+      "S231P:label": "WaterBased",
+      "S231P:value": "WaterBased"
+    }
+  ]
+}

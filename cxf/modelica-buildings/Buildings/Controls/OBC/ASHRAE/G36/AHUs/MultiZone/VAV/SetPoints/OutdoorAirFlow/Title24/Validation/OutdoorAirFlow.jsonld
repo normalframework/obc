@@ -1,1 +1,381 @@
-{"@context":{"S231P":"https://data.ashrae.org/S231P#"},"@graph":[{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow","@type":"S231P:Block","S231P:containsBlock":[{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.ahu"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.co2Loo"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.opeMod"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.outAirFlo"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.zonAbsMinFlo"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.zonDesMinFlo"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.zonToAhu"}],"S231P:hasParameter":[{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.have_CO2Sen"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.nGro"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.nZon"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.zonGroMat"}],"S231P:label":"OutdoorAirFlow"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.ahu","@type":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.AHU","S231P:accessSpecifier":"public","S231P:description":"AHU level minimum outdoor airflow setpoint","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":60,\"y\":-10},{\"x\":80,\"y\":10}]}}}","S231P:hasInstance":[{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.ahu.have_CO2Sen"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.ahu.minOADes"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.ahu.uCO2Loo_max"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.ahu.VAbsOutAir_flow"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.ahu.VAirOut_flow"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.ahu.VDesOutAir_flow"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.ahu.VSumZonAbsMin_flow"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.ahu.VSumZonDesMin_flow"}],"S231P:label":"ahu"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.ahu.have_CO2Sen","S231P:isFinal":true,"S231P:value":"have_CO2Sen"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.ahu.minOADes","S231P:isFinal":true,"S231P:value":"Buildings.Controls.OBC.ASHRAE.G36.Types.OutdoorAirSection.DedicatedDampersAirflow"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.ahu.VAbsOutAir_flow","S231P:isFinal":true,"S231P:value":{"@value":"0.5","@type":"http://www.w3.org/2001/XMLSchema#decimal"}},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.ahu.VDesOutAir_flow","S231P:isFinal":true,"S231P:value":1},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.co2Loo","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Sources.Constant","S231P:accessSpecifier":"protected","S231P:description":"Zone CO2 loop signal","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-80,\"y\":-70},{\"x\":-60,\"y\":-50}]}}}","S231P:hasInstance":[{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.co2Loo.k"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.co2Loo.y"}],"S231P:label":"co2Loo"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.co2Loo.k","S231P:isFinal":true,"S231P:value":"{0.3,0.25,0.4,0.5}"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.co2Loo.y","S231P:isConnectedTo":{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.zonToAhu.uCO2"}},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.have_CO2Sen","@type":"S231P:Parameter","S231P:accessSpecifier":"protected","S231P:description":"True: there are zones have CO2 sensor","S231P:isOfDataType":{"@id":"S231P:Boolean"},"S231P:label":"have_CO2Sen","S231P:value":true},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.nGro","@type":"S231P:Parameter","S231P:accessSpecifier":"protected","S231P:description":"Total number of groups","S231P:isOfDataType":{"@id":"S231P:Integer"},"S231P:label":"nGro","S231P:value":2},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.nZon","@type":"S231P:Parameter","S231P:accessSpecifier":"protected","S231P:description":"Total number of zones","S231P:isOfDataType":{"@id":"S231P:Integer"},"S231P:label":"nZon","S231P:value":4},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.opeMod","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Integers.Sources.Constant","S231P:accessSpecifier":"protected","S231P:description":"AHU operation mode is Occupied","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-80,\"y\":50},{\"x\":-60,\"y\":70}]}}}","S231P:hasInstance":[{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.opeMod.k"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.opeMod.y"}],"S231P:label":"opeMod"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.opeMod.k","S231P:isFinal":true,"S231P:value":"{Buildings.Controls.OBC.ASHRAE.G36.Types.OperationModes.occupied,Buildings.Controls.OBC.ASHRAE.G36.Types.OperationModes.unoccupied}"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.opeMod.y","S231P:isConnectedTo":{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.zonToAhu.uOpeMod"}},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.outAirFlo","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Sources.Constant","S231P:accessSpecifier":"protected","S231P:description":"Adjusted area component flow","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":20,\"y\":-60},{\"x\":40,\"y\":-40}]}}}","S231P:hasInstance":[{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.outAirFlo.k"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.outAirFlo.y"}],"S231P:label":"outAirFlo"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.outAirFlo.k","S231P:isFinal":true,"S231P:value":1},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.outAirFlo.y","S231P:isConnectedTo":{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.ahu.VAirOut_flow"}},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.zonAbsMinFlo","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Sources.Constant","S231P:accessSpecifier":"protected","S231P:description":"Zone absolute minimum flow","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-80,\"y\":10},{\"x\":-60,\"y\":30}]}}}","S231P:hasInstance":[{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.zonAbsMinFlo.k"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.zonAbsMinFlo.y"}],"S231P:label":"zonAbsMinFlo"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.zonAbsMinFlo.k","S231P:isFinal":true,"S231P:value":"{0.1,0.12,0.2,0.15}"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.zonAbsMinFlo.y","S231P:isConnectedTo":{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.zonToAhu.VZonAbsMin_flow"}},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.zonDesMinFlo","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Sources.Constant","S231P:accessSpecifier":"protected","S231P:description":"Adjusted area component flow","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-80,\"y\":-30},{\"x\":-60,\"y\":-10}]}}}","S231P:hasInstance":[{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.zonDesMinFlo.k"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.zonDesMinFlo.y"}],"S231P:label":"zonDesMinFlo"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.zonDesMinFlo.k","S231P:isFinal":true,"S231P:value":"{0.15,0.2,0.25,0.3}"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.zonDesMinFlo.y","S231P:isConnectedTo":{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.zonToAhu.VZonDesMin_flow"}},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.zonGroMat","@type":"S231P:Parameter","S231P:accessSpecifier":"protected","S231P:description":"Zone matrix with zone group as row index and zone as column index. It flags which zone is grouped in which zone group","S231P:isOfDataType":{"@id":"S231P:Integer"},"S231P:label":"zonGroMat","S231P:value":"{{1,1,0,0},{0,0,1,1}}"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.zonToAhu","@type":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.SumZone","S231P:accessSpecifier":"public","S231P:description":"From zone level to AHU level","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":20,\"y\":-10},{\"x\":40,\"y\":10}]}}}","S231P:hasInstance":[{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.zonToAhu.have_CO2Sen"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.zonToAhu.nGro"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.zonToAhu.nZon"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.zonToAhu.uCO2"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.zonToAhu.uOpeMod"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.zonToAhu.VSumZonAbsMin_flow"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.zonToAhu.VSumZonDesMin_flow"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.zonToAhu.VZonAbsMin_flow"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.zonToAhu.VZonDesMin_flow"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.zonToAhu.yMaxCO2"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.zonToAhu.zonGroMat"}],"S231P:label":"zonToAhu"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.zonToAhu.have_CO2Sen","S231P:isFinal":true,"S231P:value":"have_CO2Sen"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.zonToAhu.nGro","S231P:isFinal":true,"S231P:value":"nGro"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.zonToAhu.nZon","S231P:isFinal":true,"S231P:value":"nZon"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.zonToAhu.VSumZonAbsMin_flow","S231P:isConnectedTo":{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.ahu.VSumZonAbsMin_flow"}},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.zonToAhu.VSumZonDesMin_flow","S231P:isConnectedTo":{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.ahu.VSumZonDesMin_flow"}},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.zonToAhu.yMaxCO2","S231P:isConnectedTo":{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.ahu.uCO2Loo_max"}},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.zonToAhu.zonGroMat","S231P:isFinal":true,"S231P:value":"zonGroMat"}]}
+{
+  "@context": {
+    "S231P": "https://data.ashrae.org/S231P#"
+  },
+  "@graph": [
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow",
+      "@type": "S231P:Block",
+      "S231P:containsBlock": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.ahu"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.co2Loo"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.opeMod"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.outAirFlo"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.zonAbsMinFlo"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.zonDesMinFlo"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.zonToAhu"
+        }
+      ],
+      "S231P:hasParameter": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.have_CO2Sen"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.nGro"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.nZon"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.zonGroMat"
+        }
+      ],
+      "S231P:label": "OutdoorAirFlow"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.ahu",
+      "@type": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.AHU",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "AHU level minimum outdoor airflow setpoint",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":60,\"y\":-10},{\"x\":80,\"y\":10}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.ahu.have_CO2Sen"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.ahu.minOADes"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.ahu.uCO2Loo_max"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.ahu.VAbsOutAir_flow"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.ahu.VAirOut_flow"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.ahu.VDesOutAir_flow"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.ahu.VSumZonAbsMin_flow"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.ahu.VSumZonDesMin_flow"
+        }
+      ],
+      "S231P:label": "ahu"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.ahu.have_CO2Sen",
+      "S231P:isFinal": true,
+      "S231P:value": "have_CO2Sen"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.ahu.minOADes",
+      "S231P:isFinal": true,
+      "S231P:value": "Buildings.Controls.OBC.ASHRAE.G36.Types.OutdoorAirSection.DedicatedDampersAirflow"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.ahu.VAbsOutAir_flow",
+      "S231P:isFinal": true,
+      "S231P:value": {
+        "@value": "0.5",
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.ahu.VDesOutAir_flow",
+      "S231P:isFinal": true,
+      "S231P:value": 1
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.co2Loo",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Sources.Constant",
+      "S231P:accessSpecifier": "protected",
+      "S231P:description": "Zone CO2 loop signal",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-80,\"y\":-70},{\"x\":-60,\"y\":-50}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.co2Loo.k"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.co2Loo.y"
+        }
+      ],
+      "S231P:isArray": true,
+      "S231P:label": "co2Loo[nZon]",
+      "S231P:numberDimensions": 1,
+      "S231P:sizeOfDimensions": "(nZon)"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.co2Loo.k",
+      "S231P:isFinal": true,
+      "S231P:value": "{0.3,0.25,0.4,0.5}"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.co2Loo.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.zonToAhu.uCO2"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.have_CO2Sen",
+      "@type": "S231P:Parameter",
+      "S231P:accessSpecifier": "protected",
+      "S231P:description": "True: there are zones have CO2 sensor",
+      "S231P:isOfDataType": {
+        "@id": "S231P:Boolean"
+      },
+      "S231P:label": "have_CO2Sen",
+      "S231P:value": true
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.nGro",
+      "@type": "S231P:Parameter",
+      "S231P:accessSpecifier": "protected",
+      "S231P:description": "Total number of groups",
+      "S231P:isOfDataType": {
+        "@id": "S231P:Integer"
+      },
+      "S231P:label": "nGro",
+      "S231P:value": 2
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.nZon",
+      "@type": "S231P:Parameter",
+      "S231P:accessSpecifier": "protected",
+      "S231P:description": "Total number of zones",
+      "S231P:isOfDataType": {
+        "@id": "S231P:Integer"
+      },
+      "S231P:label": "nZon",
+      "S231P:value": 4
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.opeMod",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Sources.Constant",
+      "S231P:accessSpecifier": "protected",
+      "S231P:description": "AHU operation mode is Occupied",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-80,\"y\":50},{\"x\":-60,\"y\":70}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.opeMod.k"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.opeMod.y"
+        }
+      ],
+      "S231P:isArray": true,
+      "S231P:label": "opeMod[nGro]",
+      "S231P:numberDimensions": 1,
+      "S231P:sizeOfDimensions": "(nGro)"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.opeMod.k",
+      "S231P:isFinal": true,
+      "S231P:value": "{Buildings.Controls.OBC.ASHRAE.G36.Types.OperationModes.occupied,Buildings.Controls.OBC.ASHRAE.G36.Types.OperationModes.unoccupied}"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.opeMod.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.zonToAhu.uOpeMod"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.outAirFlo",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Sources.Constant",
+      "S231P:accessSpecifier": "protected",
+      "S231P:description": "Adjusted area component flow",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":20,\"y\":-60},{\"x\":40,\"y\":-40}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.outAirFlo.k"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.outAirFlo.y"
+        }
+      ],
+      "S231P:label": "outAirFlo"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.outAirFlo.k",
+      "S231P:isFinal": true,
+      "S231P:value": 1
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.outAirFlo.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.ahu.VAirOut_flow"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.zonAbsMinFlo",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Sources.Constant",
+      "S231P:accessSpecifier": "protected",
+      "S231P:description": "Zone absolute minimum flow",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-80,\"y\":10},{\"x\":-60,\"y\":30}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.zonAbsMinFlo.k"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.zonAbsMinFlo.y"
+        }
+      ],
+      "S231P:isArray": true,
+      "S231P:label": "zonAbsMinFlo[nZon]",
+      "S231P:numberDimensions": 1,
+      "S231P:sizeOfDimensions": "(nZon)"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.zonAbsMinFlo.k",
+      "S231P:isFinal": true,
+      "S231P:value": "{0.1,0.12,0.2,0.15}"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.zonAbsMinFlo.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.zonToAhu.VZonAbsMin_flow"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.zonDesMinFlo",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Sources.Constant",
+      "S231P:accessSpecifier": "protected",
+      "S231P:description": "Adjusted area component flow",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-80,\"y\":-30},{\"x\":-60,\"y\":-10}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.zonDesMinFlo.k"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.zonDesMinFlo.y"
+        }
+      ],
+      "S231P:isArray": true,
+      "S231P:label": "zonDesMinFlo[nZon]",
+      "S231P:numberDimensions": 1,
+      "S231P:sizeOfDimensions": "(nZon)"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.zonDesMinFlo.k",
+      "S231P:isFinal": true,
+      "S231P:value": "{0.15,0.2,0.25,0.3}"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.zonDesMinFlo.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.zonToAhu.VZonDesMin_flow"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.zonGroMat",
+      "@type": "S231P:Parameter",
+      "S231P:accessSpecifier": "protected",
+      "S231P:description": "Zone matrix with zone group as row index and zone as column index. It flags which zone is grouped in which zone group",
+      "S231P:isArray": true,
+      "S231P:isOfDataType": {
+        "@id": "S231P:Integer"
+      },
+      "S231P:label": "zonGroMat[nGro,nZon]",
+      "S231P:numberDimensions": 2,
+      "S231P:sizeOfDimensions": "(nGro,nZon)",
+      "S231P:value": "{{1,1,0,0},{0,0,1,1}}"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.zonToAhu",
+      "@type": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.SumZone",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "From zone level to AHU level",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":20,\"y\":-10},{\"x\":40,\"y\":10}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.zonToAhu.have_CO2Sen"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.zonToAhu.nGro"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.zonToAhu.nZon"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.zonToAhu.uCO2"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.zonToAhu.uOpeMod"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.zonToAhu.VSumZonAbsMin_flow"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.zonToAhu.VSumZonDesMin_flow"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.zonToAhu.VZonAbsMin_flow"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.zonToAhu.VZonDesMin_flow"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.zonToAhu.yMaxCO2"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.zonToAhu.zonGroMat"
+        }
+      ],
+      "S231P:label": "zonToAhu"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.zonToAhu.have_CO2Sen",
+      "S231P:isFinal": true,
+      "S231P:value": "have_CO2Sen"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.zonToAhu.nGro",
+      "S231P:isFinal": true,
+      "S231P:value": "nGro"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.zonToAhu.nZon",
+      "S231P:isFinal": true,
+      "S231P:value": "nZon"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.zonToAhu.VSumZonAbsMin_flow",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.ahu.VSumZonAbsMin_flow"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.zonToAhu.VSumZonDesMin_flow",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.ahu.VSumZonDesMin_flow"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.zonToAhu.yMaxCO2",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.ahu.uCO2Loo_max"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.Title24.Validation.OutdoorAirFlow.zonToAhu.zonGroMat",
+      "S231P:isFinal": true,
+      "S231P:value": "zonGroMat"
+    }
+  ]
+}

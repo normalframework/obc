@@ -1,1 +1,35 @@
-{"@context":{"S231P":"https://data.ashrae.org/S231P#"},"@graph":[{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Types.OutdoorAirSection","@type":"S231P:EnumerationType","S231P:description":"Enumeration to configure the outdoor air section","S231P:label":"OutdoorAirSection"},{"@id":"http://example.org#OutdoorAirSection.DedicatedDampersAirflow","@type":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Types.OutdoorAirSection","S231P:description":"Separate dampers for ventilation and economizer, with airflow measurement station","S231P:label":"DedicatedDampersAirflow"},{"@id":"http://example.org#OutdoorAirSection.DedicatedDampersPressure","@type":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Types.OutdoorAirSection","S231P:description":"Separate dampers for ventilation and economizer, with differential pressure sensor","S231P:label":"DedicatedDampersPressure"},{"@id":"http://example.org#OutdoorAirSection.SingleDamper","@type":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Types.OutdoorAirSection","S231P:description":"Single damper for ventilation and economizer, with airflow measurement station","S231P:label":"SingleDamper"}]}
+{
+  "@context": {
+    "S231P": "https://data.ashrae.org/S231P#"
+  },
+  "@graph": [
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Types.OutdoorAirSection",
+      "@type": "S231P:EnumerationType",
+      "S231P:description": "Enumeration to configure the outdoor air section",
+      "S231P:label": "OutdoorAirSection",
+      "S231P:value": "OutdoorAirSection"
+    },
+    {
+      "@id": "http://example.org#OutdoorAirSection.DedicatedDampersAirflow",
+      "@type": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Types.OutdoorAirSection",
+      "S231P:description": "Separate dampers for ventilation and economizer, with airflow measurement station",
+      "S231P:label": "DedicatedDampersAirflow",
+      "S231P:value": "DedicatedDampersAirflow"
+    },
+    {
+      "@id": "http://example.org#OutdoorAirSection.DedicatedDampersPressure",
+      "@type": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Types.OutdoorAirSection",
+      "S231P:description": "Separate dampers for ventilation and economizer, with differential pressure sensor",
+      "S231P:label": "DedicatedDampersPressure",
+      "S231P:value": "DedicatedDampersPressure"
+    },
+    {
+      "@id": "http://example.org#OutdoorAirSection.SingleDamper",
+      "@type": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Types.OutdoorAirSection",
+      "S231P:description": "Single damper for ventilation and economizer, with airflow measurement station",
+      "S231P:label": "SingleDamper",
+      "S231P:value": "SingleDamper"
+    }
+  ]
+}

@@ -1,1 +1,911 @@
-{"@context":{"S231P":"https://data.ashrae.org/S231P#","qudt":"http://qudt.org/schema/qudt#","unit":"http://qudt.org/vocab/unit#"},"@graph":[{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression","@type":"S231P:Block","S231P:containsBlock":[{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.abs1"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.abs2"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.con1"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.con5"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.conZer"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.edg"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.gai"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.greThr"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.lat"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.lat1"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.maxSupTim"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.pasSup"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.pasSupTim"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.samSet"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.sub1"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.supTim"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.swi"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.temDif"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.tim"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.triSam"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.triSam1"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.truDel"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.truHol"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.uniDel"}],"S231P:hasInput":[{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.TSet"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.TZon"}],"S231P:hasOutput":{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.yAftSup"},"S231P:hasParameter":[{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.chaRat"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.dTHys"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.maxTim"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.samplePeriod"}],"S231P:label":"TimeSuppression"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.abs1","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Abs","S231P:accessSpecifier":"protected","S231P:description":"Absolute change of the setpoint temperature","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":100,\"y\":100},{\"x\":120,\"y\":120}]}}}","S231P:hasInstance":[{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.abs1.u"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.abs1.y"}],"S231P:label":"abs1"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.abs1.y","S231P:isConnectedTo":{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.greThr.u"}},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.abs2","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Abs","S231P:accessSpecifier":"protected","S231P:description":"Absolute temperature difference","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-20,\"y\":20},{\"x\":0,\"y\":40}]}}}","S231P:hasInstance":[{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.abs2.u"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.abs2.y"}],"S231P:label":"abs2"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.abs2.y","S231P:isConnectedTo":{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.gai.u"}},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.chaRat","@type":"S231P:Parameter","qudt:hasUnit":{"@id":"https://data.ashrae.org/S231P#s/K"},"S231P:accessSpecifier":"public","S231P:description":"Gain factor to calculate suppression time based on the change of the setpoint, seconds per Kelvin. For cooling or heating request, it should be 540 seconds, for temperature alarms, it should be 1080 seconds","S231P:graphics":"{\"name\":\"__cdl\",\"modification\":{\"class_modification\":[{\"element_modification_or_replaceable\":{\"element_modification\":{\"name\":\"ValueInReference\",\"modification\":{\"equal\":true,\"expression\":{\"simple_expression\":\"true\"}}}}}]}}","S231P:isOfDataType":{"@id":"S231P:Real"},"S231P:label":"chaRat","S231P:value":540},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.con1","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Constant","S231P:accessSpecifier":"protected","S231P:description":"Constant true","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-140,\"y\":100},{\"x\":-120,\"y\":120}]}}}","S231P:hasInstance":[{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.con1.k"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.con1.y"}],"S231P:label":"con1"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.con1.k","S231P:isFinal":true,"S231P:value":true},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.con1.y","S231P:isConnectedTo":{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.truDel.u"}},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.con5","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Sources.Constant","S231P:accessSpecifier":"protected","S231P:description":"Constant true","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":80,\"y\":-130},{\"x\":100,\"y\":-110}]}}}","S231P:hasInstance":[{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.con5.k"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.con5.y"}],"S231P:label":"con5"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.con5.k","S231P:isFinal":true,"S231P:value":true},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.con5.y","S231P:isConnectedTo":{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.pasSupTim.u3"}},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.conZer","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Sources.Constant","S231P:accessSpecifier":"protected","S231P:description":"Constant zero","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-20,\"y\":70},{\"x\":0,\"y\":90}]}}}","S231P:hasInstance":[{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.conZer.k"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.conZer.y"}],"S231P:label":"conZer"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.conZer.k","S231P:isFinal":true,"S231P:value":0},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.conZer.y","S231P:isConnectedTo":{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.swi.u3"}},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.dTHys","@type":"S231P:Parameter","qudt:hasQuantityKind":{"@id":"S231P:TemperatureDifference"},"qudt:hasUnit":{"@id":"S231P:K"},"S231P:accessSpecifier":"public","S231P:description":"Near zero temperature difference, below which the difference will be seen as zero","S231P:graphics":["{\"name\":\"Dialog\",\"modification\":{\"class_modification\":[{\"element_modification_or_replaceable\":{\"element_modification\":{\"name\":\"tab\",\"modification\":{\"equal\":true,\"expression\":{\"simple_expression\":\"\\\"Advanced\\\"\"}}}}}]}}","{\"name\":\"__cdl\",\"modification\":{\"class_modification\":[{\"element_modification_or_replaceable\":{\"element_modification\":{\"name\":\"ValueInReference\",\"modification\":{\"equal\":true,\"expression\":{\"simple_expression\":\"false\"}}}}}]}}"],"S231P:isOfDataType":{"@id":"S231P:Real"},"S231P:label":"dTHys","S231P:value":{"@value":"0.25","@type":"http://www.w3.org/2001/XMLSchema#decimal"}},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.edg","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Edge","S231P:accessSpecifier":"protected","S231P:description":"Instants when input becomes true","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-40,\"y\":-130},{\"x\":-20,\"y\":-110}]}}}","S231P:hasInstance":[{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.edg.u"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.edg.y"}],"S231P:label":"edg"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.edg.y","S231P:isConnectedTo":[{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.lat1.clr"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.triSam.trigger"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.triSam1.trigger"}]},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.gai","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.MultiplyByParameter","S231P:accessSpecifier":"protected","S231P:description":"Setpoint change rate","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":20,\"y\":20},{\"x\":40,\"y\":40}]}}}","S231P:hasInstance":[{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.gai.k"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.gai.u"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.gai.y"}],"S231P:label":"gai"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.gai.k","S231P:isFinal":true,"S231P:value":"chaRat"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.gai.y","S231P:isConnectedTo":{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.supTim.u1"}},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.greThr","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.GreaterThreshold","S231P:accessSpecifier":"protected","S231P:description":"Check if there is setpoint change","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-120,\"y\":-160},{\"x\":-100,\"y\":-140}]}}}","S231P:hasInstance":[{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.greThr.h"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.greThr.t"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.greThr.u"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.greThr.y"}],"S231P:label":"greThr"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.greThr.h","S231P:isFinal":true,"S231P:value":"0.5*dTHys"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.greThr.t","S231P:isFinal":true,"S231P:value":"dTHys"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.greThr.y","S231P:isConnectedTo":{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.lat.u"}},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.lat","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Latch","S231P:accessSpecifier":"protected","S231P:description":"Output true when there is setpoint change and maintain the true output until the suppresiong time has passed","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-80,\"y\":-160},{\"x\":-60,\"y\":-140}]}}}","S231P:hasInstance":[{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.lat.clr"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.lat.u"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.lat.y"}],"S231P:label":"lat"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.lat.y","S231P:isConnectedTo":[{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.edg.u"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.pasSupTim.u2"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.tim.u"}]},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.lat1","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Latch","S231P:accessSpecifier":"protected","S231P:description":"Output true when the suppression time has passed","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":80,\"y\":-90},{\"x\":100,\"y\":-70}]}}}","S231P:hasInstance":[{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.lat1.clr"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.lat1.u"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.lat1.y"}],"S231P:label":"lat1"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.lat1.y","S231P:isConnectedTo":{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.pasSupTim.u1"}},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.maxSupTim","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Sources.Constant","S231P:accessSpecifier":"protected","S231P:description":"Maximum suppression time ","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":20,\"y\":-20},{\"x\":40,\"y\":0}]}}}","S231P:hasInstance":[{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.maxSupTim.k"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.maxSupTim.y"}],"S231P:label":"maxSupTim"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.maxSupTim.k","S231P:isFinal":true,"S231P:value":"maxTim"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.maxSupTim.y","S231P:isConnectedTo":{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.supTim.u2"}},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.maxTim","@type":"S231P:Parameter","qudt:hasQuantityKind":{"@id":"S231P:Time"},"qudt:hasUnit":{"@id":"S231P:s"},"S231P:accessSpecifier":"public","S231P:description":"Maximum suppression time. For cooling or heating request, it should be 1800 seconds, for temperature alarms, it should be 7200 seconds","S231P:graphics":"{\"name\":\"__cdl\",\"modification\":{\"class_modification\":[{\"element_modification_or_replaceable\":{\"element_modification\":{\"name\":\"ValueInReference\",\"modification\":{\"equal\":true,\"expression\":{\"simple_expression\":\"true\"}}}}}]}}","S231P:isOfDataType":{"@id":"S231P:Real"},"S231P:label":"maxTim","S231P:value":1800},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.pasSup","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Greater","S231P:accessSpecifier":"protected","S231P:description":"Check if the change has been suppressed by sufficient time","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":20,\"y\":-160},{\"x\":40,\"y\":-140}]}}}","S231P:hasInstance":[{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.pasSup.u1"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.pasSup.u2"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.pasSup.y"}],"S231P:label":"pasSup"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.pasSup.y","S231P:isConnectedTo":[{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.lat1.u"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.truHol.u"}]},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.pasSupTim","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Switch","S231P:accessSpecifier":"protected","S231P:description":"Check if suppression time has passed","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":140,\"y\":-110},{\"x\":160,\"y\":-90}]}}}","S231P:hasInstance":[{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.pasSupTim.u1"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.pasSupTim.u2"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.pasSupTim.u3"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.pasSupTim.y"}],"S231P:label":"pasSupTim"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.pasSupTim.y","S231P:isConnectedTo":{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.yAftSup"}},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.samplePeriod","@type":"S231P:Parameter","qudt:hasQuantityKind":{"@id":"S231P:Time"},"qudt:hasUnit":{"@id":"S231P:s"},"S231P:accessSpecifier":"public","S231P:description":"Sample period of component, set to the same value as the trim and respond that process static pressure reset","S231P:graphics":["{\"name\":\"Dialog\",\"modification\":{\"class_modification\":[{\"element_modification_or_replaceable\":{\"element_modification\":{\"name\":\"tab\",\"modification\":{\"equal\":true,\"expression\":{\"simple_expression\":\"\\\"Advanced\\\"\"}}}}}]}}","{\"name\":\"__cdl\",\"modification\":{\"class_modification\":[{\"element_modification_or_replaceable\":{\"element_modification\":{\"name\":\"ValueInReference\",\"modification\":{\"equal\":true,\"expression\":{\"simple_expression\":\"false\"}}}}}]}}"],"S231P:isOfDataType":{"@id":"S231P:Real"},"S231P:label":"samplePeriod","S231P:value":120},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.samSet","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Discrete.Sampler","S231P:accessSpecifier":"protected","S231P:description":"Sample current setpoint","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-140,\"y\":160},{\"x\":-120,\"y\":180}]}}}","S231P:hasInstance":[{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.samSet.samplePeriod"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.samSet.u"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.samSet.y"}],"S231P:label":"samSet"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.samSet.samplePeriod","S231P:isFinal":true,"S231P:value":"samplePeriod"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.samSet.y","S231P:isConnectedTo":[{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.sub1.u1"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.uniDel.u"}]},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.sub1","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Subtract","S231P:accessSpecifier":"protected","S231P:description":"Calculate difference of previous and current setpoints","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-20,\"y\":130},{\"x\":0,\"y\":150}]}}}","S231P:hasInstance":[{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.sub1.u1"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.sub1.u2"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.sub1.y"}],"S231P:label":"sub1"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.sub1.y","S231P:isConnectedTo":{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.swi.u1"}},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.supTim","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Min","S231P:accessSpecifier":"public","S231P:description":"Calculated suppression time due to the setpoint change","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":80,\"y\":0},{\"x\":100,\"y\":20}]}}}","S231P:hasInstance":[{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.supTim.u1"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.supTim.u2"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.supTim.y"}],"S231P:label":"supTim"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.supTim.y","S231P:isConnectedTo":{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.pasSup.u2"}},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.swi","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Switch","S231P:accessSpecifier":"protected","S231P:description":"Use setpoint different value when sample period time has passed","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":40,\"y\":100},{\"x\":60,\"y\":120}]}}}","S231P:hasInstance":[{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.swi.u1"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.swi.u2"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.swi.u3"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.swi.y"}],"S231P:label":"swi"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.swi.y","S231P:isConnectedTo":{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.abs1.u"}},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.temDif","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Reals.Subtract","S231P:accessSpecifier":"protected","S231P:description":"Difference between setpoint and zone temperature","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-60,\"y\":20},{\"x\":-40,\"y\":40}]}}}","S231P:hasInstance":[{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.temDif.u1"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.temDif.u2"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.temDif.y"}],"S231P:label":"temDif"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.temDif.y","S231P:isConnectedTo":{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.abs2.u"}},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.tim","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.Timer","S231P:accessSpecifier":"protected","S231P:description":"Time when the setpoint is being changed","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-40,\"y\":-160},{\"x\":-20,\"y\":-140}]}}}","S231P:hasInstance":[{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.tim.u"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.tim.y"}],"S231P:label":"tim"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.tim.y","S231P:isConnectedTo":{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.pasSup.u1"}},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.triSam","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Discrete.TriggeredSampler","S231P:accessSpecifier":"protected","S231P:description":"New setpoint temperature","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-120,\"y\":20},{\"x\":-100,\"y\":40}]}}}","S231P:hasInstance":[{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.triSam.trigger"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.triSam.u"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.triSam.y"}],"S231P:label":"triSam"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.triSam.y","S231P:isConnectedTo":{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.temDif.u1"}},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.triSam1","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Discrete.TriggeredSampler","S231P:accessSpecifier":"protected","S231P:description":"Zone temperature at the moment when there is setpoint change","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-120,\"y\":-30},{\"x\":-100,\"y\":-10}]}}}","S231P:hasInstance":[{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.triSam1.trigger"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.triSam1.u"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.triSam1.y"}],"S231P:label":"triSam1"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.triSam1.y","S231P:isConnectedTo":{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.temDif.u2"}},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.truDel","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.TrueDelay","S231P:accessSpecifier":"protected","S231P:description":"Ignore the first sampling period","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-80,\"y\":100},{\"x\":-60,\"y\":120}]}}}","S231P:hasInstance":[{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.truDel.delayOnInit"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.truDel.delayTime"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.truDel.u"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.truDel.y"}],"S231P:label":"truDel"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.truDel.delayOnInit","S231P:isFinal":true,"S231P:value":true},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.truDel.delayTime","S231P:isFinal":true,"S231P:value":"samplePeriod"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.truDel.y","S231P:isConnectedTo":{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.swi.u2"}},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.truHol","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Logical.TrueHold","S231P:accessSpecifier":"protected","S231P:description":"Hold true signal for sample period of time","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":80,\"y\":-160},{\"x\":100,\"y\":-140}]}}}","S231P:hasInstance":[{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.truHol.duration"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.truHol.u"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.truHol.y"}],"S231P:label":"truHol"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.truHol.duration","S231P:isFinal":true,"S231P:value":"samplePeriod"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.truHol.y","S231P:isConnectedTo":{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.lat.clr"}},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.TSet","@type":"S231P:RealInput","qudt:hasDisplayUnit":{"@id":"unit:DEG_C"},"qudt:hasQuantityKind":{"@id":"S231P:ThermodynamicTemperature"},"qudt:hasUnit":{"@id":"S231P:K"},"S231P:accessSpecifier":"public","S231P:description":"Setpoint temperature","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-220,\"y\":150},{\"x\":-180,\"y\":190}]},\"iconTransformation\":{\"extent\":[{\"x\":-140,\"y\":20},{\"x\":-100,\"y\":60}]}}}","S231P:isConnectedTo":[{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.samSet.u"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.triSam.u"}],"S231P:label":"TSet"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.TZon","@type":"S231P:RealInput","qudt:hasDisplayUnit":{"@id":"unit:DEG_C"},"qudt:hasQuantityKind":{"@id":"S231P:ThermodynamicTemperature"},"qudt:hasUnit":{"@id":"S231P:K"},"S231P:accessSpecifier":"public","S231P:description":"Zone temperature","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-220,\"y\":-40},{\"x\":-180,\"y\":0}]},\"iconTransformation\":{\"extent\":[{\"x\":-140,\"y\":-60},{\"x\":-100,\"y\":-20}]}}}","S231P:isConnectedTo":{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.triSam1.u"},"S231P:label":"TZon"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.uniDel","@type":"https://data.ashrae.org/S231P#Buildings.Controls.OBC.CDL.Discrete.UnitDelay","S231P:accessSpecifier":"protected","S231P:description":"Delay value to record input value","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-80,\"y\":160},{\"x\":-60,\"y\":180}]}}}","S231P:hasInstance":[{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.uniDel.samplePeriod"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.uniDel.u"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.uniDel.y"}],"S231P:label":"uniDel"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.uniDel.samplePeriod","S231P:isFinal":true,"S231P:value":"samplePeriod"},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.uniDel.y","S231P:isConnectedTo":{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.sub1.u2"}},{"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.yAftSup","@type":"S231P:BooleanOutput","S231P:accessSpecifier":"public","S231P:description":"True when there is no setpoint change, or suppression time has passed after setpoint change","S231P:graphics":"{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":180,\"y\":-120},{\"x\":220,\"y\":-80}]},\"iconTransformation\":{\"extent\":[{\"x\":100,\"y\":-20},{\"x\":140,\"y\":20}]}}}","S231P:label":"yAftSup"}]}
+{
+  "@context": {
+    "S231P": "https://data.ashrae.org/S231P#",
+    "qudt": "http://qudt.org/schema/qudt#",
+    "q": "http://qudt.org/vocab/quantitykind#",
+    "unit": "http://qudt.org/vocab/unit#"
+  },
+  "@graph": [
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression",
+      "@type": "S231P:Block",
+      "S231P:containsBlock": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.abs1"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.abs2"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.con1"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.con5"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.conZer"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.edg"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.gai"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.greThr"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.lat"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.lat1"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.maxSupTim"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.pasSup"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.pasSupTim"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.pre1"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.samSet"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.sub1"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.supTim"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.swi"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.temDif"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.tim"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.triSam"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.triSam1"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.truDel"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.uniDel"
+        }
+      ],
+      "S231P:hasInput": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.TSet"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.TZon"
+        }
+      ],
+      "S231P:hasOutput": {
+        "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.yAftSup"
+      },
+      "S231P:hasParameter": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.chaRat"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.dTHys"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.maxTim"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.samplePeriod"
+        }
+      ],
+      "S231P:label": "TimeSuppression"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.abs1",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Abs",
+      "S231P:accessSpecifier": "protected",
+      "S231P:description": "Absolute change of the setpoint temperature",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":100,\"y\":100},{\"x\":120,\"y\":120}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.abs1.u"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.abs1.y"
+        }
+      ],
+      "S231P:label": "abs1"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.abs1.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.greThr.u"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.abs2",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Abs",
+      "S231P:accessSpecifier": "protected",
+      "S231P:description": "Absolute temperature difference",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-20,\"y\":20},{\"x\":0,\"y\":40}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.abs2.u"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.abs2.y"
+        }
+      ],
+      "S231P:label": "abs2"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.abs2.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.gai.u"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.chaRat",
+      "@type": "S231P:Parameter",
+      "qudt:hasUnit": {
+        "@id": "https://data.ashrae.org/S231P#s/K"
+      },
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Gain factor to calculate suppression time based on the change of the setpoint, seconds per Kelvin. For cooling or heating request, it should be 540 seconds, for temperature alarms, it should be 1080 seconds",
+      "S231P:graphics": "{\"name\":\"__cdl\",\"modification\":{\"class_modification\":[{\"element_modification_or_replaceable\":{\"element_modification\":{\"name\":\"ValueInReference\",\"modification\":{\"equal\":true,\"expression\":{\"simple_expression\":\"true\"}}}}}]}}",
+      "S231P:isOfDataType": {
+        "@id": "S231P:Real"
+      },
+      "S231P:label": "chaRat",
+      "S231P:value": 540
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.con1",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Constant",
+      "S231P:accessSpecifier": "protected",
+      "S231P:description": "Constant true",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-140,\"y\":100},{\"x\":-120,\"y\":120}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.con1.k"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.con1.y"
+        }
+      ],
+      "S231P:label": "con1"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.con1.k",
+      "S231P:isFinal": true,
+      "S231P:value": true
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.con1.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.truDel.u"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.con5",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Constant",
+      "S231P:accessSpecifier": "protected",
+      "S231P:description": "Constant true",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":80,\"y\":-130},{\"x\":100,\"y\":-110}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.con5.k"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.con5.y"
+        }
+      ],
+      "S231P:label": "con5"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.con5.k",
+      "S231P:isFinal": true,
+      "S231P:value": true
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.con5.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.pasSupTim.u3"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.conZer",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Sources.Constant",
+      "S231P:accessSpecifier": "protected",
+      "S231P:description": "Constant zero",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-20,\"y\":70},{\"x\":0,\"y\":90}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.conZer.k"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.conZer.y"
+        }
+      ],
+      "S231P:label": "conZer"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.conZer.k",
+      "S231P:isFinal": true,
+      "S231P:value": 0
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.conZer.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.swi.u3"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.dTHys",
+      "@type": "S231P:Parameter",
+      "qudt:hasQuantityKind": {
+        "@id": "q:TemperatureDifference"
+      },
+      "qudt:hasUnit": {
+        "@id": "unit:K"
+      },
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Near zero temperature difference, below which the difference will be seen as zero",
+      "S231P:graphics": [
+        "{\"name\":\"Dialog\",\"modification\":{\"class_modification\":[{\"element_modification_or_replaceable\":{\"element_modification\":{\"name\":\"tab\",\"modification\":{\"equal\":true,\"expression\":{\"simple_expression\":\"\\\"Advanced\\\"\"}}}}}]}}",
+        "{\"name\":\"__cdl\",\"modification\":{\"class_modification\":[{\"element_modification_or_replaceable\":{\"element_modification\":{\"name\":\"ValueInReference\",\"modification\":{\"equal\":true,\"expression\":{\"simple_expression\":\"false\"}}}}}]}}"
+      ],
+      "S231P:isOfDataType": {
+        "@id": "S231P:Real"
+      },
+      "S231P:label": "dTHys",
+      "S231P:value": {
+        "@value": "0.25",
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.edg",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Edge",
+      "S231P:accessSpecifier": "protected",
+      "S231P:description": "Instants when input becomes true",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-40,\"y\":-130},{\"x\":-20,\"y\":-110}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.edg.u"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.edg.y"
+        }
+      ],
+      "S231P:label": "edg"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.edg.y",
+      "S231P:isConnectedTo": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.lat1.clr"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.triSam.trigger"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.triSam1.trigger"
+        }
+      ]
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.gai",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Reals.MultiplyByParameter",
+      "S231P:accessSpecifier": "protected",
+      "S231P:description": "Setpoint change rate",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":20,\"y\":20},{\"x\":40,\"y\":40}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.gai.k"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.gai.u"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.gai.y"
+        }
+      ],
+      "S231P:label": "gai"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.gai.k",
+      "S231P:isFinal": true,
+      "S231P:value": "chaRat"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.gai.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.supTim.u1"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.greThr",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Reals.GreaterThreshold",
+      "S231P:accessSpecifier": "protected",
+      "S231P:description": "Check if there is setpoint change",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-120,\"y\":-160},{\"x\":-100,\"y\":-140}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.greThr.h"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.greThr.t"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.greThr.u"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.greThr.y"
+        }
+      ],
+      "S231P:label": "greThr"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.greThr.h",
+      "S231P:isFinal": true,
+      "S231P:value": "0.5*dTHys"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.greThr.t",
+      "S231P:isFinal": true,
+      "S231P:value": "dTHys"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.greThr.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.lat.u"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.lat",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Latch",
+      "S231P:accessSpecifier": "protected",
+      "S231P:description": "Output true when there is setpoint change and maintain the true output until the suppresiong time has passed",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-80,\"y\":-160},{\"x\":-60,\"y\":-140}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.lat.clr"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.lat.u"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.lat.y"
+        }
+      ],
+      "S231P:label": "lat"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.lat.y",
+      "S231P:isConnectedTo": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.edg.u"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.pasSupTim.u2"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.tim.u"
+        }
+      ]
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.lat1",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Latch",
+      "S231P:accessSpecifier": "protected",
+      "S231P:description": "Output true when the suppression time has passed",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":80,\"y\":-90},{\"x\":100,\"y\":-70}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.lat1.clr"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.lat1.u"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.lat1.y"
+        }
+      ],
+      "S231P:label": "lat1"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.lat1.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.pasSupTim.u1"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.maxSupTim",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Sources.Constant",
+      "S231P:accessSpecifier": "protected",
+      "S231P:description": "Maximum suppression time ",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":20,\"y\":-20},{\"x\":40,\"y\":0}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.maxSupTim.k"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.maxSupTim.y"
+        }
+      ],
+      "S231P:label": "maxSupTim"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.maxSupTim.k",
+      "S231P:isFinal": true,
+      "S231P:value": "maxTim"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.maxSupTim.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.supTim.u2"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.maxTim",
+      "@type": "S231P:Parameter",
+      "qudt:hasQuantityKind": {
+        "@id": "q:Time"
+      },
+      "qudt:hasUnit": {
+        "@id": "unit:SEC"
+      },
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Maximum suppression time. For cooling or heating request, it should be 1800 seconds, for temperature alarms, it should be 7200 seconds",
+      "S231P:graphics": "{\"name\":\"__cdl\",\"modification\":{\"class_modification\":[{\"element_modification_or_replaceable\":{\"element_modification\":{\"name\":\"ValueInReference\",\"modification\":{\"equal\":true,\"expression\":{\"simple_expression\":\"true\"}}}}}]}}",
+      "S231P:isOfDataType": {
+        "@id": "S231P:Real"
+      },
+      "S231P:label": "maxTim",
+      "S231P:value": 1800
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.pasSup",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Greater",
+      "S231P:accessSpecifier": "protected",
+      "S231P:description": "Check if the change has been suppressed by sufficient time",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":20,\"y\":-160},{\"x\":40,\"y\":-140}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.pasSup.u1"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.pasSup.u2"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.pasSup.y"
+        }
+      ],
+      "S231P:label": "pasSup"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.pasSup.y",
+      "S231P:isConnectedTo": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.lat1.u"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.pre1.u"
+        }
+      ]
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.pasSupTim",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Switch",
+      "S231P:accessSpecifier": "protected",
+      "S231P:description": "Check if suppression time has passed",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":140,\"y\":-110},{\"x\":160,\"y\":-90}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.pasSupTim.u1"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.pasSupTim.u2"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.pasSupTim.u3"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.pasSupTim.y"
+        }
+      ],
+      "S231P:label": "pasSupTim"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.pasSupTim.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.yAftSup"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.pre1",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Pre",
+      "S231P:accessSpecifier": "protected",
+      "S231P:description": "Use left-limit of signal to break algebraic loop",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":80,\"y\":-160},{\"x\":100,\"y\":-140}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.pre1.u"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.pre1.y"
+        }
+      ],
+      "S231P:label": "pre1"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.pre1.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.lat.clr"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.samplePeriod",
+      "@type": "S231P:Parameter",
+      "qudt:hasQuantityKind": {
+        "@id": "q:Time"
+      },
+      "qudt:hasUnit": {
+        "@id": "unit:SEC"
+      },
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Sample period of component, set to the same value as the trim and respond that process static pressure reset",
+      "S231P:graphics": [
+        "{\"name\":\"Dialog\",\"modification\":{\"class_modification\":[{\"element_modification_or_replaceable\":{\"element_modification\":{\"name\":\"tab\",\"modification\":{\"equal\":true,\"expression\":{\"simple_expression\":\"\\\"Advanced\\\"\"}}}}}]}}",
+        "{\"name\":\"__cdl\",\"modification\":{\"class_modification\":[{\"element_modification_or_replaceable\":{\"element_modification\":{\"name\":\"ValueInReference\",\"modification\":{\"equal\":true,\"expression\":{\"simple_expression\":\"false\"}}}}}]}}"
+      ],
+      "S231P:isOfDataType": {
+        "@id": "S231P:Real"
+      },
+      "S231P:label": "samplePeriod",
+      "S231P:value": 120
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.samSet",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.Sampler",
+      "S231P:accessSpecifier": "protected",
+      "S231P:description": "Sample current setpoint",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-140,\"y\":160},{\"x\":-120,\"y\":180}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.samSet.samplePeriod"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.samSet.u"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.samSet.y"
+        }
+      ],
+      "S231P:label": "samSet"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.samSet.samplePeriod",
+      "S231P:isFinal": true,
+      "S231P:value": "samplePeriod"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.samSet.y",
+      "S231P:isConnectedTo": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.sub1.u1"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.uniDel.u"
+        }
+      ]
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.sub1",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Subtract",
+      "S231P:accessSpecifier": "protected",
+      "S231P:description": "Calculate difference of previous and current setpoints",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-20,\"y\":130},{\"x\":0,\"y\":150}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.sub1.u1"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.sub1.u2"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.sub1.y"
+        }
+      ],
+      "S231P:label": "sub1"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.sub1.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.swi.u1"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.supTim",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Min",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Calculated suppression time due to the setpoint change",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":80,\"y\":0},{\"x\":100,\"y\":20}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.supTim.u1"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.supTim.u2"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.supTim.y"
+        }
+      ],
+      "S231P:label": "supTim"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.supTim.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.pasSup.u2"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.swi",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Switch",
+      "S231P:accessSpecifier": "protected",
+      "S231P:description": "Use setpoint different value when sample period time has passed",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":40,\"y\":100},{\"x\":60,\"y\":120}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.swi.u1"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.swi.u2"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.swi.u3"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.swi.y"
+        }
+      ],
+      "S231P:label": "swi"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.swi.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.abs1.u"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.temDif",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Subtract",
+      "S231P:accessSpecifier": "protected",
+      "S231P:description": "Difference between setpoint and zone temperature",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-60,\"y\":20},{\"x\":-40,\"y\":40}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.temDif.u1"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.temDif.u2"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.temDif.y"
+        }
+      ],
+      "S231P:label": "temDif"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.temDif.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.abs2.u"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.tim",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Logical.Timer",
+      "S231P:accessSpecifier": "protected",
+      "S231P:description": "Time when the setpoint is being changed",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-40,\"y\":-160},{\"x\":-20,\"y\":-140}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.tim.u"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.tim.y"
+        }
+      ],
+      "S231P:label": "tim"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.tim.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.pasSup.u1"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.triSam",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.TriggeredSampler",
+      "S231P:accessSpecifier": "protected",
+      "S231P:description": "New setpoint temperature",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-120,\"y\":20},{\"x\":-100,\"y\":40}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.triSam.trigger"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.triSam.u"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.triSam.y"
+        }
+      ],
+      "S231P:label": "triSam"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.triSam.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.temDif.u1"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.triSam1",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.TriggeredSampler",
+      "S231P:accessSpecifier": "protected",
+      "S231P:description": "Zone temperature at the moment when there is setpoint change",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-120,\"y\":-30},{\"x\":-100,\"y\":-10}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.triSam1.trigger"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.triSam1.u"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.triSam1.y"
+        }
+      ],
+      "S231P:label": "triSam1"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.triSam1.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.temDif.u2"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.truDel",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Logical.TrueDelay",
+      "S231P:accessSpecifier": "protected",
+      "S231P:description": "Ignore the first sampling period",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-80,\"y\":100},{\"x\":-60,\"y\":120}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.truDel.delayOnInit"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.truDel.delayTime"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.truDel.u"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.truDel.y"
+        }
+      ],
+      "S231P:label": "truDel"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.truDel.delayOnInit",
+      "S231P:isFinal": true,
+      "S231P:value": true
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.truDel.delayTime",
+      "S231P:isFinal": true,
+      "S231P:value": "samplePeriod"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.truDel.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.swi.u2"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.TSet",
+      "@type": "S231P:RealInput",
+      "qudt:hasQuantityKind": {
+        "@id": "q:ThermodynamicTemperature"
+      },
+      "qudt:hasUnit": {
+        "@id": "unit:K"
+      },
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Setpoint temperature",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-220,\"y\":150},{\"x\":-180,\"y\":190}]},\"iconTransformation\":{\"extent\":[{\"x\":-140,\"y\":20},{\"x\":-100,\"y\":60}]}}}",
+      "S231P:hasDisplayUnit": {
+        "@id": "unit:DEG_C"
+      },
+      "S231P:isConnectedTo": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.samSet.u"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.triSam.u"
+        }
+      ],
+      "S231P:label": "TSet"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.TZon",
+      "@type": "S231P:RealInput",
+      "qudt:hasQuantityKind": {
+        "@id": "q:ThermodynamicTemperature"
+      },
+      "qudt:hasUnit": {
+        "@id": "unit:K"
+      },
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Zone temperature",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-220,\"y\":-40},{\"x\":-180,\"y\":0}]},\"iconTransformation\":{\"extent\":[{\"x\":-140,\"y\":-60},{\"x\":-100,\"y\":-20}]}}}",
+      "S231P:hasDisplayUnit": {
+        "@id": "unit:DEG_C"
+      },
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.triSam1.u"
+      },
+      "S231P:label": "TZon"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.uniDel",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Discrete.UnitDelay",
+      "S231P:accessSpecifier": "protected",
+      "S231P:description": "Delay value to record input value",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-80,\"y\":160},{\"x\":-60,\"y\":180}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.uniDel.samplePeriod"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.uniDel.u"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.uniDel.y"
+        }
+      ],
+      "S231P:label": "uniDel"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.uniDel.samplePeriod",
+      "S231P:isFinal": true,
+      "S231P:value": "samplePeriod"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.uniDel.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.sub1.u2"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.yAftSup",
+      "@type": "S231P:BooleanOutput",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "True when there is no setpoint change, or suppression time has passed after setpoint change",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":180,\"y\":-120},{\"x\":220,\"y\":-80}]},\"iconTransformation\":{\"extent\":[{\"x\":100,\"y\":-20},{\"x\":140,\"y\":20}]}}}",
+      "S231P:label": "yAftSup"
+    }
+  ]
+}

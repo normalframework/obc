@@ -1,1 +1,8 @@
-{"@context":{"S231P":"https://data.ashrae.org/S231P#"},"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.package","@type":"S231P:Block","S231P:label":"ParallelFanVVF"}
+{
+  "@context": {
+    "S231P": "https://data.ashrae.org/S231P#"
+  },
+  "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.package",
+  "@type": "S231P:Block",
+  "S231P:label": "ParallelFanVVF"
+}
