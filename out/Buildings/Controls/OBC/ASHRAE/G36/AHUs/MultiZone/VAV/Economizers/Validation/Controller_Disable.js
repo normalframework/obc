@@ -30,13 +30,13 @@ module.exports = (
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.Economizers.Validation.Controller_Disable.VOutMinSet_flow
   const VOutMinSet_flowFn = constant_baefa089({ k: minVOutSet_flow });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.Economizers.Validation.Controller_Disable.eco
-  const ecoFn = controller_83ee0be5({ ashCliZon: 1, buiPreCon: 1, ecoHigLimCon: 0, eneStd: 0, minOAConTyp: Math.PI, minOADes: 2 });
+  const ecoFn = controller_83ee0be5({ ashCliZon: 1, buiPreCon: 1, ecoHigLimCon: 0, eneStd: 0, minOAConTyp: 1, minOADes: 2 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.Economizers.Validation.Controller_Disable.hOutBelowCutoff
   const hOutBelowCutoffFn = constant_baefa089({ k: hOutCutoff -40000 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.Economizers.Validation.Controller_Disable.freProSta2
   const freProSta2Fn = constant_8c5ba27d({ k: 2 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.Economizers.Validation.Controller_Disable.eco1
-  const eco1Fn = controller_83ee0be5({ ashCliZon: 1, buiPreCon: 1, ecoHigLimCon: 3, eneStd: 0, minOAConTyp: Math.PI, minOADes: 2 });
+  const eco1Fn = controller_83ee0be5({ ashCliZon: 1, buiPreCon: 1, ecoHigLimCon: 3, eneStd: 0, minOAConTyp: 1, minOADes: 2 });
 
   return (
     {  }
@@ -53,6 +53,6 @@ module.exports = (
     const freProSta2 = freProSta2Fn({});
     const eco1 = eco1Fn({ hAirOut: hOutBelowCutoff.y, TOut: TOutBelowCutoff.y, u1SupFan: fanSta.y, uFreProSta: freProSta2.y, uOpeMod: opeMod.y, uTSup: uTSup.y, VOut_flow_normalized: VOut_flow.y, VOutMinSet_flow_normalized: VOutMinSet_flow.y });
 
-    return {};
+    return { TOutBelowCutoff: TOutBelowCutoff, fanSta: fanSta, freProSta: freProSta, opeMod: opeMod, uTSup: uTSup, VOut_flow: VOut_flow, VOutMinSet_flow: VOutMinSet_flow, eco: eco, hOutBelowCutoff: hOutBelowCutoff, freProSta2: freProSta2, eco1: eco1 };
   }
 }

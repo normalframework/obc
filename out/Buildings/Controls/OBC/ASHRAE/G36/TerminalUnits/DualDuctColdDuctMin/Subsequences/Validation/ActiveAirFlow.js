@@ -1,22 +1,22 @@
 
 // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.ActiveAirFlow
 const activeairflow_536f9d31 = require("../ActiveAirFlow");
-const realtointeger_b3838f5e = require("../../../../../../CDL/Conversions/RealToInteger");
-const round_13f7599f = require("../../../../../../CDL/Reals/Round");
-const ramp_3c414377 = require("../../../../../../CDL/Reals/Sources/Ramp");
-const sin_9696c4d3 = require("../../../../../../CDL/Reals/Sources/Sin");
+const realtointeger_2917999f = require("../../../../../../CDL/Conversions/RealToInteger");
+const round_9947f9a0 = require("../../../../../../CDL/Reals/Round");
+const ramp_40ddd056 = require("../../../../../../CDL/Reals/Sources/Ramp");
+const sin_f9d5a014 = require("../../../../../../CDL/Reals/Sources/Sin");
 
 module.exports = (
   
 ) => {
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.ActiveAirFlow.opeMod
-  const opeModFn = ramp_3c414377({ duration: 3600, height: 5, offset: 1 });
+  const opeModFn = ramp_40ddd056({ duration: 3600, height: 5, offset: 1 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.ActiveAirFlow.round2
-  const round2Fn = round_13f7599f({});
+  const round2Fn = round_9947f9a0({ n: 0 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.ActiveAirFlow.reaToInt2
-  const reaToInt2Fn = realtointeger_b3838f5e({});
+  const reaToInt2Fn = realtointeger_2917999f({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.ActiveAirFlow.minFlo
-  const minFloFn = sin_9696c4d3({ amplitude: 0.3, freqHz: "1/3600", offset: 0.2 });
+  const minFloFn = sin_f9d5a014({ amplitude: 0.3, freqHz: 1/3600, offset: 0.2 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctColdDuctMin.Subsequences.Validation.ActiveAirFlow.actAirSet
   const actAirSetFn = activeairflow_536f9d31({ floHys: 0.01, VCooMax_flow: 0.5, VHeaMax_flow: 0.4 });
 
@@ -29,6 +29,6 @@ module.exports = (
     const minFlo = minFloFn({});
     const actAirSet = actAirSetFn({ uOpeMod: reaToInt2.y, VOccMin_flow: minFlo.y });
 
-    return {};
+    return { opeMod: opeMod, round2: round2, reaToInt2: reaToInt2, minFlo: minFlo, actAirSet: actAirSet };
   }
 }

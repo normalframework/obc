@@ -14,6 +14,8 @@
  */
 function firstOrderHold({ samplePeriod } = {}) {
   const TimeManager = require("../../../../../TimeManager");
+  const Initial = require("../../../../../Initial");
+  const isInitial = Initial();
   // Calculate initial sample instant
   const t0 = Math.round(TimeManager.time / samplePeriod) * samplePeriod;
   let nextSample = t0;
@@ -21,30 +23,28 @@ function firstOrderHold({ samplePeriod } = {}) {
   let uSample = 0;
   let prev_uSample = 0;
   let c = 0;
-  let firstTriggerFired = false;
 
   return ({ u = 0 } = {}) => {
     const now = TimeManager.time;
-    let sampleTrigger = false;
-    let firstTrigger = false;
 
-    if (now >= nextSample) {
-      sampleTrigger = true;
-      firstTrigger = !firstTriggerFired;
-      firstTriggerFired = true;
+    if (isInitial()) {
+      tSample = now;
+      uSample = u;
+      prev_uSample = u;
       nextSample += samplePeriod;
-
-      // Update samples and compute slope
+      c = (uSample - prev_uSample) / samplePeriod;
+    } else if (now >= nextSample) {
+      nextSample += samplePeriod;
       tSample = now;
       prev_uSample = uSample;
       uSample = u;
-      c = firstTrigger ? 0 : (uSample - prev_uSample) / samplePeriod;
+      c = (uSample - prev_uSample) / samplePeriod;
     }
 
     // Reconstruct output via first-order hold
     const y = prev_uSample + c * (now - tSample);
 
-    return { sampleTrigger, firstTrigger, y };
+    return { y };
   };
 }
 

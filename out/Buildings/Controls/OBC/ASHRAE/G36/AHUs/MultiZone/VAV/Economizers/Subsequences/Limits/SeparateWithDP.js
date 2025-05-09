@@ -19,15 +19,15 @@ const switch_6d141143 = require("../../../../../../../../CDL/Reals/Switch");
 module.exports = (
   {
 		dpAbsMinOutDam = 5,
-		dpCon = Math.PI,
+		dpCon = 1,
 		dpDesMinOutDam = 20,
 		have_CO2Sen,
 		kDp = 1,
 		minSpe,
 		outDamPhy_max = 1,
-		outDamPhy_min,
+		outDamPhy_min = 0,
 		retDamPhy_max = 1,
-		retDamPhy_min,
+		retDamPhy_min = 0,
 		TdDp = 0.1,
 		TiDp = 0.5,
 		venStd,

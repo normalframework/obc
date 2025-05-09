@@ -30,7 +30,7 @@ module.exports = (
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ZoneGroups.OperationMode.occModInd
   const occModIndFn = constant_baefa089({ k: 1 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ZoneGroups.OperationMode.unoPerInd
-  const unoPerIndFn = constant_baefa089({});
+  const unoPerIndFn = constant_baefa089({ k: 0 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ZoneGroups.OperationMode.swi
   const swiFn = switch_6d141143({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ZoneGroups.OperationMode.occMod
@@ -40,13 +40,13 @@ module.exports = (
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ZoneGroups.OperationMode.sub3
   const sub3Fn = subtract_029d2d63({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ZoneGroups.OperationMode.hys2
-  const hys2Fn = hysteresis_72a6bcc6({ pre_y_start: true, uLow: -60 });
+  const hys2Fn = hysteresis_72a6bcc6({ pre_y_start: true, uHigh: 0, uLow: -60 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ZoneGroups.OperationMode.corCooDowTim
   const corCooDowTimFn = switch_6d141143({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ZoneGroups.OperationMode.sub5
   const sub5Fn = subtract_029d2d63({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ZoneGroups.OperationMode.hys4
-  const hys4Fn = hysteresis_72a6bcc6({ uLow: -60 });
+  const hys4Fn = hysteresis_72a6bcc6({ pre_y_start: false, uHigh: 0, uLow: -60 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ZoneGroups.OperationMode.and2
   const and2Fn = and_6d642f1c({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ZoneGroups.OperationMode.edg1
@@ -64,13 +64,17 @@ module.exports = (
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ZoneGroups.OperationMode.sub4
   const sub4Fn = subtract_029d2d63({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ZoneGroups.OperationMode.hys3
-  const hys3Fn = hysteresis_72a6bcc6({ pre_y_start: true, uLow: -60 });
+  const hys3Fn = hysteresis_72a6bcc6({ pre_y_start: true, uHigh: 0, uLow: -60 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ZoneGroups.OperationMode.corWarUpTim
   const corWarUpTimFn = switch_6d141143({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ZoneGroups.OperationMode.sub6
   const sub6Fn = subtract_029d2d63({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ZoneGroups.OperationMode.hys5
-  const hys5Fn = hysteresis_72a6bcc6({ uLow: -60 });
+  const hys5Fn = hysteresis_72a6bcc6({ pre_y_start: false, uHigh: 0, uLow: -60 });
+  // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ZoneGroups.OperationMode.and5
+  const and5Fn = and_6d642f1c({});
+  // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ZoneGroups.OperationMode.edg
+  const edgFn = edge_3f236118({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ZoneGroups.OperationMode.truFalHol1
   const truFalHol1Fn = truefalsehold_5efae599({ trueHoldDuration: preWarCooTim });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ZoneGroups.OperationMode.and1
@@ -116,13 +120,13 @@ module.exports = (
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ZoneGroups.OperationMode.sub1
   const sub1Fn = subtract_029d2d63({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ZoneGroups.OperationMode.hys10
-  const hys10Fn = hysteresis_72a6bcc6({ uHigh: 0.1, uLow: -0.1 });
+  const hys10Fn = hysteresis_72a6bcc6({ pre_y_start: false, uHigh: 0.1, uLow: -0.1 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ZoneGroups.OperationMode.actFreProTem
   const actFreProTemFn = constant_baefa089({ k: TZonFreProOn });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ZoneGroups.OperationMode.sub2
   const sub2Fn = subtract_029d2d63({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ZoneGroups.OperationMode.hys9
-  const hys9Fn = hysteresis_72a6bcc6({ uHigh: 0.1, uLow: -0.1 });
+  const hys9Fn = hysteresis_72a6bcc6({ pre_y_start: false, uHigh: 0.1, uLow: -0.1 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ZoneGroups.OperationMode.lat1
   const lat1Fn = latch_a5aa3a49({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ZoneGroups.OperationMode.booToRea4
@@ -173,10 +177,6 @@ module.exports = (
   const not5Fn = not_6d646018({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ZoneGroups.OperationMode.assMes
   const assMesFn = assert_078ec840({ message: "Level 3 alarm: freeze protection setback" });
-  // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ZoneGroups.OperationMode.and5
-  const and5Fn = and_6d642f1c({});
-  // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ZoneGroups.OperationMode.edg
-  const edgFn = edge_3f236118({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ZoneGroups.OperationMode.intGreThr1
   const intGreThr1Fn = greaterthreshold_360fc6d4({ t: 1 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ZoneGroups.OperationMode.notOcc
@@ -189,7 +189,7 @@ module.exports = (
   const winOpeFn = assert_078ec840({ message: "Level 4 alarm: window open during modes other than occupied mode" });
 
   return (
-    { totColZon, totHotZon, u1HigOccCoo, u1OccHeaHig, maxCooDowTim, maxWarUpTim, u1EndSetBac, u1EndSetUp, uOpeWin, u1SetBac, u1SetUp, u1Occ, TZonMin, tNexOcc }
+    { uOpeWin, totColZon, totHotZon, u1HigOccCoo, u1OccHeaHig, maxCooDowTim, maxWarUpTim, u1EndSetBac, u1EndSetUp, u1SetBac, u1SetUp, u1Occ, TZonMin, tNexOcc }
   ) => {
     const occModInd = occModIndFn({});
     const unoPerInd = unoPerIndFn({});
@@ -213,7 +213,9 @@ module.exports = (
     const corWarUpTim = corWarUpTimFn({ u1: maxWarUpTim, u2: hys3.y, u3: maxWarCooTime.y });
     const sub6 = sub6Fn({ u1: corWarUpTim.y, u2: tNexOcc });
     const hys5 = hys5Fn({ u: sub6.y });
-    const truFalHol1 = truFalHol1Fn({});
+    const and5 = and5Fn({ u1: hys5.y, u2: u1OccHeaHig });
+    const edg = edgFn({ u: and5.y });
+    const truFalHol1 = truFalHol1Fn({ u: edg.y });
     const and1 = and1Fn({ u1: hys5.y, u2: truFalHol1.y });
     const booToRea1 = booToRea1Fn({ u: and1.y });
     const swi2 = swi2Fn({ u1: unoPerInd.y, u2: u1Occ, u3: booToRea1.y });
@@ -224,7 +226,7 @@ module.exports = (
     const or8 = or8Fn({ u1: or9.y, u2: u1Occ });
     const endSetBac = endSetBacFn({ u: u1EndSetBac });
     const intGreThr = intGreThrFn({ u: totColZon });
-    const addInt6 = addInt6Fn({ u2: totColZon });
+    const addInt6 = addInt6Fn({ u1: uOpeWin, u2: totColZon });
     const totZon = totZonFn({});
     const allCol = allColFn({ u1: addInt6.y, u2: totZon.y });
     const or1 = or1Fn({ u1: intGreThr.y, u2: allCol.y });
@@ -246,7 +248,7 @@ module.exports = (
     const addInt2 = addInt2Fn({ u1: setBacMod.y, u2: freProSetBacMod.y });
     const endSetUp = endSetUpFn({ u: u1EndSetUp });
     const intGreThr2 = intGreThr2Fn({ u: totHotZon });
-    const addInt7 = addInt7Fn({ u2: totHotZon });
+    const addInt7 = addInt7Fn({ u1: uOpeWin, u2: totHotZon });
     const allHot = allHotFn({ u1: addInt7.y, u2: totZon.y });
     const or4 = or4Fn({ u1: intGreThr2.y, u2: allHot.y });
     const or7 = or7Fn({ u1: or4.y, u2: u1SetUp });
@@ -264,8 +266,6 @@ module.exports = (
     const addInt5 = addInt5Fn({ u1: addInt1.y, u2: addInt4.y });
     const not5 = not5Fn({ u: lat1.y });
     const assMes = assMesFn({ u: not5.y });
-    const and5 = and5Fn({ u1: hys5.y, u2: u1OccHeaHig });
-    const edg = edgFn({ u: and5.y, y: truFalHol1.u });
     const intGreThr1 = intGreThr1Fn({ u: uOpeWin });
     const notOcc = notOccFn({ u: addInt5.y });
     const and3 = and3Fn({ u1: intGreThr1.y, u2: notOcc.y });

@@ -23,7 +23,7 @@ module.exports = (
 		numIgnReq = 2,
 		resAmo = -0.2,
 		samplePeriod = 120,
-		TDeaBan = "273.15 +26",
+		TDeaBan = 273.15 +26,
 		TOut_max = 294.15,
 		TOut_min = 289.15,
 		triAmo = 0.1,
@@ -55,7 +55,7 @@ module.exports = (
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.SupplyTemperature.intLesThr2
   const intLesThr2Fn = lessthreshold_95ab886f({ t: 3 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.SupplyTemperature.intGreThr2
-  const intGreThr2Fn = greaterthreshold_360fc6d4({});
+  const intGreThr2Fn = greaterthreshold_360fc6d4({ t: 0 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.SupplyTemperature.and2
   const and2Fn = and_6d642f1c({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.SupplyTemperature.TDea
@@ -70,7 +70,7 @@ module.exports = (
   const swi3Fn = switch_6d141143({});
 
   return (
-    { uOpeMod, TOut, u1SupFan }
+    { uOpeMod, TOut, uZonTemResReq, u1SupFan }
   ) => {
     const supTemWarUpSetBac = supTemWarUpSetBacFn({});
     const intLesThr1 = intLesThr1Fn({ u: uOpeMod });
@@ -79,7 +79,7 @@ module.exports = (
     const minSupTem = minSupTemFn({});
     const cooDowMod = cooDowModFn({});
     const intEqu = intEquFn({ u1: uOpeMod, u2: cooDowMod.y });
-    const maxSupTemRes = maxSupTemResFn({ uDevSta: u1SupFan });
+    const maxSupTemRes = maxSupTemResFn({ numOfReq: uZonTemResReq, uDevSta: u1SupFan });
     const minOutTem = minOutTemFn({});
     const maxOutTem = maxOutTemFn({});
     const lin = linFn({ f1: maxSupTemRes.y, f2: minSupTem.y, u: TOut, x1: minOutTem.y, x2: maxOutTem.y });

@@ -1,18 +1,18 @@
 
 // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.VentilationZones.Title24.Setpoints
-const booleantoreal_df99be1a = require("../../../../CDL/Conversions/BooleanToReal");
-const equal_2ac2bdd1 = require("../../../../CDL/Integers/Equal");
-const constant_8c5ba27d = require("../../../../CDL/Integers/Sources/Constant");
-const not_6d646018 = require("../../../../CDL/Logical/Not");
-const constant_48cc1015 = require("../../../../CDL/Logical/Sources/Constant");
-const addparameter_26b0d2d7 = require("../../../../CDL/Reals/AddParameter");
-const line_196841c3 = require("../../../../CDL/Reals/Line");
-const max_a5fb1db5 = require("../../../../CDL/Reals/Max");
-const multiply_a462b873 = require("../../../../CDL/Reals/Multiply");
-const multiplybyparameter_13a4f29f = require("../../../../CDL/Reals/MultiplyByParameter");
-const constant_baefa089 = require("../../../../CDL/Reals/Sources/Constant");
-const subtract_029d2d63 = require("../../../../CDL/Reals/Subtract");
-const switch_6d141143 = require("../../../../CDL/Reals/Switch");
+const booleantoreal_552dc85b = require("../../../../CDL/Conversions/BooleanToReal");
+const equal_2c2e9230 = require("../../../../CDL/Integers/Equal");
+const constant_01efacbe = require("../../../../CDL/Integers/Sources/Constant");
+const not_f2b50019 = require("../../../../CDL/Logical/Not");
+const constant_655d39b4 = require("../../../../CDL/Logical/Sources/Constant");
+const addparameter_2b4d5fb6 = require("../../../../CDL/Reals/AddParameter");
+const line_15731da2 = require("../../../../CDL/Reals/Line");
+const max_5345c9f6 = require("../../../../CDL/Reals/Max");
+const multiply_a5ce8cd2 = require("../../../../CDL/Reals/Multiply");
+const multiplybyparameter_8938fce0 = require("../../../../CDL/Reals/MultiplyByParameter");
+const constant_d2aca5e8 = require("../../../../CDL/Reals/Sources/Constant");
+const subtract_040901c2 = require("../../../../CDL/Reals/Subtract");
+const switch_91d77162 = require("../../../../CDL/Reals/Switch");
 
 module.exports = (
   {
@@ -29,84 +29,84 @@ module.exports = (
     } = {}
 ) => {
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.VentilationZones.Title24.Setpoints.zer1
-  const zer1Fn = constant_baefa089({});
+  const zer1Fn = constant_d2aca5e8({ k: 0 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.VentilationZones.Title24.Setpoints.con
-  const conFn = constant_48cc1015({});
+  const conFn = constant_655d39b4({ k: false });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.VentilationZones.Title24.Setpoints.zonAreOAMin
-  const zonAreOAMinFn = constant_baefa089({ k: VAreMin_flow });
+  const zonAreOAMinFn = constant_d2aca5e8({ k: VAreMin_flow });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.VentilationZones.Title24.Setpoints.gai
-  const gaiFn = multiplybyparameter_13a4f29f({ k: 0.25 });
+  const gaiFn = multiplybyparameter_8938fce0({ k: 0.25 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.VentilationZones.Title24.Setpoints.con1
-  const con1Fn = constant_48cc1015({ k: true });
+  const con1Fn = constant_655d39b4({ k: true });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.VentilationZones.Title24.Setpoints.notOcc
-  const notOccFn = not_6d646018({});
+  const notOccFn = not_f2b50019({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.VentilationZones.Title24.Setpoints.havCO2Sen
-  const havCO2SenFn = constant_48cc1015({ k: have_CO2Sen });
+  const havCO2SenFn = constant_655d39b4({ k: have_CO2Sen });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.VentilationZones.Title24.Setpoints.zonOccOAMin
-  const zonOccOAMinFn = constant_baefa089({ k: VOccMin_flow });
+  const zonOccOAMinFn = constant_d2aca5e8({ k: VOccMin_flow });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.VentilationZones.Title24.Setpoints.max1
-  const max1Fn = max_a5fb1db5({});
+  const max1Fn = max_5345c9f6({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.VentilationZones.Title24.Setpoints.zonDesMin1
-  const zonDesMin1Fn = switch_6d141143({});
+  const zonDesMin1Fn = switch_91d77162({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.VentilationZones.Title24.Setpoints.zonDesMin
-  const zonDesMinFn = switch_6d141143({});
+  const zonDesMinFn = switch_91d77162({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.VentilationZones.Title24.Setpoints.zonAbsMin2
-  const zonAbsMin2Fn = switch_6d141143({});
+  const zonAbsMin2Fn = switch_91d77162({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.VentilationZones.Title24.Setpoints.zonAbsMin1
-  const zonAbsMin1Fn = switch_6d141143({});
+  const zonAbsMin1Fn = switch_91d77162({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.VentilationZones.Title24.Setpoints.zonAbsMin
-  const zonAbsMinFn = switch_6d141143({});
+  const zonAbsMinFn = switch_91d77162({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.VentilationZones.Title24.Setpoints.occMod
-  const occModFn = constant_8c5ba27d({ k: 1 });
+  const occModFn = constant_01efacbe({ k: 1 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.VentilationZones.Title24.Setpoints.inOccMod
-  const inOccModFn = equal_2ac2bdd1({});
+  const inOccModFn = equal_2c2e9230({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.VentilationZones.Title24.Setpoints.booToRea
-  const booToReaFn = booleantoreal_df99be1a({});
+  const booToReaFn = booleantoreal_552dc85b({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.VentilationZones.Title24.Setpoints.zer
-  const zerFn = constant_baefa089({});
+  const zerFn = constant_d2aca5e8({ k: 0 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.VentilationZones.Title24.Setpoints.one
-  const oneFn = constant_baefa089({ k: 1 });
+  const oneFn = constant_d2aca5e8({ k: 1 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.VentilationZones.Title24.Setpoints.addPar
-  const addParFn = addparameter_26b0d2d7({ p: -200 });
+  const addParFn = addparameter_2b4d5fb6({ p: -200 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.VentilationZones.Title24.Setpoints.lin
-  const linFn = line_196841c3({});
+  const linFn = line_15731da2({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.VentilationZones.Title24.Setpoints.co2Con
-  const co2ConFn = multiply_a462b873({});
+  const co2ConFn = multiply_a5ce8cd2({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.VentilationZones.Title24.Setpoints.zonOccMin4
-  const zonOccMin4Fn = line_196841c3({});
+  const zonOccMin4Fn = line_15731da2({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.VentilationZones.Title24.Setpoints.zonMinFlo
-  const zonMinFloFn = constant_baefa089({ k: VMin_flow });
+  const zonMinFloFn = constant_d2aca5e8({ k: VMin_flow });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.VentilationZones.Title24.Setpoints.gai1
-  const gai1Fn = multiplybyparameter_13a4f29f({ k: 1 });
+  const gai1Fn = multiplybyparameter_8938fce0({ k: 1 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.VentilationZones.Title24.Setpoints.zonOccMin1
-  const zonOccMin1Fn = switch_6d141143({});
+  const zonOccMin1Fn = switch_91d77162({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.VentilationZones.Title24.Setpoints.zonOccMin
-  const zonOccMinFn = switch_6d141143({});
+  const zonOccMinFn = switch_91d77162({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.VentilationZones.Title24.Setpoints.one2
-  const one2Fn = constant_baefa089({ k: 1 });
+  const one2Fn = constant_d2aca5e8({ k: 1 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.VentilationZones.Title24.Setpoints.winOpe
-  const winOpeFn = not_6d646018({});
+  const winOpeFn = not_f2b50019({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.VentilationZones.Title24.Setpoints.zer3
-  const zer3Fn = constant_baefa089({});
+  const zer3Fn = constant_d2aca5e8({ k: 0 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.VentilationZones.Title24.Setpoints.zonCooMaxFlo
-  const zonCooMaxFloFn = constant_baefa089({ k: VCooMax_flow });
+  const zonCooMaxFloFn = constant_d2aca5e8({ k: VCooMax_flow });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.VentilationZones.Title24.Setpoints.hal
-  const halFn = constant_baefa089({ k: 0.5 });
+  const halFn = constant_d2aca5e8({ k: 0.5 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.VentilationZones.Title24.Setpoints.zonOccMin2
-  const zonOccMin2Fn = line_196841c3({});
+  const zonOccMin2Fn = line_15731da2({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.VentilationZones.Title24.Setpoints.cooSta
-  const cooStaFn = constant_8c5ba27d({ k: 3 });
+  const cooStaFn = constant_01efacbe({ k: 3 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.VentilationZones.Title24.Setpoints.inCooSta
-  const inCooStaFn = equal_2ac2bdd1({});
+  const inCooStaFn = equal_2c2e9230({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.VentilationZones.Title24.Setpoints.difCooMax
-  const difCooMaxFn = subtract_029d2d63({});
+  const difCooMaxFn = subtract_040901c2({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.VentilationZones.Title24.Setpoints.maxFloCO2
-  const maxFloCO2Fn = switch_6d141143({});
+  const maxFloCO2Fn = switch_91d77162({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.VentilationZones.Title24.Setpoints.zonOccMin3
-  const zonOccMin3Fn = line_196841c3({});
+  const zonOccMin3Fn = line_15731da2({});
 
   return (
-    { ppmCO2Set, VParFan_flow, uZonSta, uOpeMod, u1Win }
+    { ppmCO2Set, VParFan_flow, uZonSta, uOpeMod, ppmCO2, u1Win }
   ) => {
     const zer1 = zer1Fn({});
     const con = conFn({});
@@ -128,7 +128,7 @@ module.exports = (
     const zer = zerFn({});
     const one = oneFn({});
     const addPar = addParFn({ u: ppmCO2Set });
-    const lin = linFn({ f1: zer.y, f2: one.y, x2: ppmCO2Set, x1: addPar.y });
+    const lin = linFn({ f1: zer.y, f2: one.y, u: ppmCO2, x1: addPar.y, x2: ppmCO2Set });
     const co2Con = co2ConFn({ u1: booToRea.y, u2: lin.y });
     const zonOccMin4 = zonOccMin4Fn({ f1: zonAbsMin.y, f2: zonDesMin.y, u: co2Con.y, x1: zer.y, x2: one.y });
     const zonMinFlo = zonMinFloFn({});

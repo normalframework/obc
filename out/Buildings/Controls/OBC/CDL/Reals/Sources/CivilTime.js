@@ -1,3 +1,4 @@
+const TimeManager = require("../../../../../../TimeManager");
 /**
  * CivilTime block that outputs the current civil time.
  * 
@@ -6,7 +7,7 @@
 
  function civilTime() {
   return () => {
-    const y = Date.now() / 1000;
+    const y = TimeManager.time;
     return { y };
   };
 }

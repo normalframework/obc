@@ -7,7 +7,7 @@ const switch_6d141143 = require("../../../../../../CDL/Reals/Switch");
 
 module.exports = (
   {
-		controllerType = Math.PI,
+		controllerType = 1,
 		have_cooCoi = true,
 		have_heaCoi = true,
 		kTSup = 0.05,
@@ -18,9 +18,9 @@ module.exports = (
     } = {}
 ) => {
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.SupplySignals.conTSup
-  const conTSupFn = pidwithreset_1df6d9ad({ controllerType: controllerType, k: kTSup, Td: TdTSup, Ti: TiTSup, yMax: 1, yMin: -1 });
+  const conTSupFn = pidwithreset_1df6d9ad({ controllerType: controllerType, k: kTSup, reverseActing: false, Td: TdTSup, Ti: TiTSup, y_reset: 0, yMax: 1, yMin: -1 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.SupplySignals.zer
-  const zerFn = constant_baefa089({});
+  const zerFn = constant_baefa089({ k: 0 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.SupplySignals.swi
   const swiFn = switch_6d141143({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.SupplySignals.one
@@ -28,18 +28,18 @@ module.exports = (
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.SupplySignals.uCooMinCon
   const uCooMinConFn = constant_baefa089({ k: uCoo_min });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.SupplySignals.conSigCoo
-  const conSigCooFn = line_196841c3({ limitBelow: true });
+  const conSigCooFn = line_196841c3({ limitAbove: false, limitBelow: true });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.SupplySignals.negOne
   const negOneFn = constant_baefa089({ k: -1 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.SupplySignals.uHeaMaxCon
   const uHeaMaxConFn = constant_baefa089({ k: uHea_max });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.SupplySignals.conSigHea
-  const conSigHeaFn = line_196841c3({ limitAbove: true });
+  const conSigHeaFn = line_196841c3({ limitAbove: true, limitBelow: false });
 
   return (
-    { TAirSupSet, u1SupFan }
+    { u1SupFan, TAirSup, TAirSupSet }
   ) => {
-    const conTSup = conTSupFn({ u_s: TAirSupSet });
+    const conTSup = conTSupFn({ trigger: u1SupFan, u_m: TAirSup, u_s: TAirSupSet });
     const zer = zerFn({});
     const swi = swiFn({ u1: conTSup.y, u2: u1SupFan, u3: zer.y });
     const one = oneFn({});

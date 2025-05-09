@@ -8,14 +8,17 @@
  * @returns {function} - A function that processes trigger and reset inputs.
  * @returns {number} output.y - Integer output signal.
  */
+const Trigger = require('../../../../../Trigger');
 
- function onCounter({ y_start = 0 }) {
+function onCounter({ y_start = 0 }) {
   let y = y_start;
+  const isRising = Trigger();
+  const isReset = Trigger();
 
   return ({ trigger = false, reset = false }) => {
-    if (reset) {
+    if (isReset(reset)) {
       y = y_start;
-    } else if (trigger) {
+    } else if (isRising(trigger)) {
       y += 1;
     }
     return { y };

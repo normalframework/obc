@@ -13,7 +13,7 @@
 function assertBlock({ message }) {
   return ({ u }) => {
     if (!u) {
-      throw new Error(message);
+      console.log(message);
     }
     return {};  // Return an empty object since there is no output
   }

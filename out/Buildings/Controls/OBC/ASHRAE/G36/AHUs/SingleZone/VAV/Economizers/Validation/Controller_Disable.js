@@ -61,6 +61,6 @@ module.exports = (
     const freProSta2 = freProSta2Fn({});
     const economizer1 = economizer1Fn({ hOut: hOutBelowCutoff.y, TAirSup: TSup.y, TOut: TOutBelowCutoff.y, TSupHeaEcoSet: TSupSetSig.y, u1SupFan: fanSta.y, uFreProSta: freProSta2.y, uOpeMod: opeMod.y, uSupFan_actual: SupFanSpeSig.y, uZonSta: zonSta.y, VOutMinSet_flow: VOutMinSetSig.y });
 
-    return {};
+    return { hOutBelowCutoff: hOutBelowCutoff, TSup: TSup, TOutBelowCutoff: TOutBelowCutoff, TSupSetSig: TSupSetSig, fanSta: fanSta, freProSta: freProSta, opeMod: opeMod, SupFanSpeSig: SupFanSpeSig, zonSta: zonSta, VOutMinSetSig: VOutMinSetSig, economizer: economizer, freProSta2: freProSta2, economizer1: economizer1 };
   }
 }

@@ -24,7 +24,7 @@ module.exports = (
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.SingleZone.VAV.SetPoints.PlantRequests.lat1
   const lat1Fn = latch_a5aa3a49({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.SingleZone.VAV.SetPoints.PlantRequests.zer
-  const zerFn = constant_8c5ba27d({});
+  const zerFn = constant_8c5ba27d({ k: 0 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.SingleZone.VAV.SetPoints.PlantRequests.intSwi3
   const intSwi3Fn = switch_45c83437({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.SingleZone.VAV.SetPoints.PlantRequests.thr
@@ -81,7 +81,7 @@ module.exports = (
   const hotWatRes3Fn = switch_45c83437({});
 
   return (
-    { TSupCoo, uCooCoi_actual, uHeaCoi_actual, TAirSup }
+    { TAirSup, TSupCoo, uCooCoi_actual, uHeaCoi_actual, TSupHeaEco }
   ) => {
     const one = oneFn({});
     const lesThr1 = lesThr1Fn({ u: uCooCoi_actual });
@@ -90,7 +90,7 @@ module.exports = (
     const zer = zerFn({});
     const intSwi3 = intSwi3Fn({ u1: one.y, u2: lat1.y, u3: zer.y });
     const thr = thrFn({});
-    const cooSupTemDif = cooSupTemDifFn({ u2: TSupCoo });
+    const cooSupTemDif = cooSupTemDifFn({ u1: TAirSup, u2: TSupCoo });
     const greThr = greThrFn({ u: cooSupTemDif.y });
     const truDel = truDelFn({ u: greThr.y });
     const two = twoFn({});
@@ -105,7 +105,7 @@ module.exports = (
     const greThr5 = greThr5Fn({ u: uHeaCoi_actual });
     const lat3 = lat3Fn({ clr: lesThr3.y, u: greThr5.y });
     const intSwi1 = intSwi1Fn({ u1: one.y, u2: lat3.y, u3: zer.y });
-    const heaSupTemDif = heaSupTemDifFn({ u2: TAirSup });
+    const heaSupTemDif = heaSupTemDifFn({ u1: TSupHeaEco, u2: TAirSup });
     const greThr3 = greThr3Fn({ u: heaSupTemDif.y });
     const truDel2 = truDel2Fn({ u: greThr3.y });
     const greThr4 = greThr4Fn({ u: heaSupTemDif.y });

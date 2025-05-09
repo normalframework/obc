@@ -18,14 +18,14 @@ const switch_6d141143 = require("../../../../../../../../CDL/Reals/Switch");
 module.exports = (
   {
 		kMinOA = 1,
-		minOAConTyp = Math.PI,
+		minOAConTyp = 1,
 		minOutDamPhy_max = 1,
-		minOutDamPhy_min,
+		minOutDamPhy_min = 0,
 		minSpe,
 		outDamPhy_max = 1,
-		outDamPhy_min,
+		outDamPhy_min = 0,
 		retDamPhy_max = 1,
-		retDamPhy_min,
+		retDamPhy_min = 0,
 		TdMinOA = 0.1,
 		TiMinOA = 0.5,
     } = {}
@@ -43,7 +43,7 @@ module.exports = (
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.Economizers.Subsequences.Limits.SeparateWithAFMS.conMinOA
   const conMinOAFn = pidwithreset_1df6d9ad({ controllerType: minOAConTyp, k: kMinOA, Td: TdMinOA, Ti: TiMinOA, yMax: minOutDamPhy_max, yMin: minOutDamPhy_min });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.Economizers.Subsequences.Limits.SeparateWithAFMS.zer
-  const zerFn = constant_baefa089({});
+  const zerFn = constant_baefa089({ k: 0 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.Economizers.Subsequences.Limits.SeparateWithAFMS.con
   const conFn = constant_baefa089({ k: 0.5 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.Economizers.Subsequences.Limits.SeparateWithAFMS.minOutDamPos
@@ -94,14 +94,14 @@ module.exports = (
   const retDamPosMinSwiFn = switch_6d141143({});
 
   return (
-    { VOutMinSet_flow_normalized, u1SupFan, uOutDam, uOpeMod, uSupFan }
+    { VOut_flow_normalized, VOutMinSet_flow_normalized, u1SupFan, uOutDam, uOpeMod, uSupFan }
   ) => {
     const conInt1 = conInt1Fn({});
     const intEqu = intEquFn({ u1: uOpeMod, u2: conInt1.y });
     const enaMinCon = enaMinConFn({ u1: u1SupFan, u2: intEqu.y });
     const minOutDamPhyPosMinSig = minOutDamPhyPosMinSigFn({});
     const minOutDamPhyPosMaxSig = minOutDamPhyPosMaxSigFn({});
-    const conMinOA = conMinOAFn({ trigger: enaMinCon.y, u_s: VOutMinSet_flow_normalized });
+    const conMinOA = conMinOAFn({ trigger: enaMinCon.y, u_m: VOut_flow_normalized, u_s: VOutMinSet_flow_normalized });
     const zer = zerFn({});
     const con = conFn({});
     const minOutDamPos = minOutDamPosFn({ f1: minOutDamPhyPosMinSig.y, f2: minOutDamPhyPosMaxSig.y, u: conMinOA.y, x1: zer.y, x2: con.y });

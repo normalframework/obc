@@ -17,7 +17,7 @@ module.exports = (
     } = {}
 ) => {
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.SingleZone.VAV.Economizers.Subsequences.Validation.Limits_Disable.fanStatus1
-  const fanStatus1Fn = constant_48cc1015({});
+  const fanStatus1Fn = constant_48cc1015({ k: false });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.SingleZone.VAV.Economizers.Subsequences.Validation.Limits_Disable.freProSta1
   const freProSta1Fn = constant_8c5ba27d({ k: 1 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.SingleZone.VAV.Economizers.Subsequences.Validation.Limits_Disable.operationMode1
@@ -63,6 +63,6 @@ module.exports = (
     const operationMode3 = operationMode3Fn({});
     const damLim3 = damLim3Fn({ u1SupFan: fanStatus3.y, uFreProSta: freProSta3.y, uOpeMod: operationMode3.y, uSupFan_actual: SupFanSpeSig.y, VOutMinSet_flow: VOutMinSetSig.y });
 
-    return {};
+    return { fanStatus1: fanStatus1, freProSta1: freProSta1, operationMode1: operationMode1, SupFanSpeSig: SupFanSpeSig, VOutMinSetSig: VOutMinSetSig, damLim1: damLim1, fanStatus2: fanStatus2, freProSta2: freProSta2, operationMode2: operationMode2, damLim2: damLim2, fanStatus3: fanStatus3, freProSta3: freProSta3, operationMode3: operationMode3, damLim3: damLim3 };
   }
 }

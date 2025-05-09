@@ -1,11 +1,11 @@
 
 // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctMixConInletSensor.Subsequences.Overrides
-const booleantoreal_df99be1a = require("../../../../../CDL/Conversions/BooleanToReal");
-const equal_2ac2bdd1 = require("../../../../../CDL/Integers/Equal");
-const constant_8c5ba27d = require("../../../../../CDL/Integers/Sources/Constant");
-const or_e27f1bfe = require("../../../../../CDL/Logical/Or");
-const add_a5faf0f2 = require("../../../../../CDL/Reals/Add");
-const switch_6d141143 = require("../../../../../CDL/Reals/Switch");
+const booleantoreal_552dc85b = require("../../../../../CDL/Conversions/BooleanToReal");
+const equal_2c2e9230 = require("../../../../../CDL/Integers/Equal");
+const constant_01efacbe = require("../../../../../CDL/Integers/Sources/Constant");
+const or_de89f7dd = require("../../../../../CDL/Logical/Or");
+const add_53459d33 = require("../../../../../CDL/Reals/Add");
+const switch_91d77162 = require("../../../../../CDL/Reals/Switch");
 
 module.exports = (
   {
@@ -15,79 +15,79 @@ module.exports = (
     } = {}
 ) => {
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctMixConInletSensor.Subsequences.Overrides.conInt
-  const conIntFn = constant_8c5ba27d({ k: 1 });
+  const conIntFn = constant_01efacbe({ k: 1 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctMixConInletSensor.Subsequences.Overrides.forZerFlo
-  const forZerFloFn = equal_2ac2bdd1({});
+  const forZerFloFn = equal_2c2e9230({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctMixConInletSensor.Subsequences.Overrides.zerFlo
-  const zerFloFn = booleantoreal_df99be1a({});
+  const zerFloFn = booleantoreal_552dc85b({ realTrue: 0 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctMixConInletSensor.Subsequences.Overrides.conInt1
-  const conInt1Fn = constant_8c5ba27d({ k: 2 });
+  const conInt1Fn = constant_01efacbe({ k: 2 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctMixConInletSensor.Subsequences.Overrides.forCooMax
-  const forCooMaxFn = equal_2ac2bdd1({});
+  const forCooMaxFn = equal_2c2e9230({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctMixConInletSensor.Subsequences.Overrides.cooMax
-  const cooMaxFn = booleantoreal_df99be1a({ realTrue: VCooMax_flow });
+  const cooMaxFn = booleantoreal_552dc85b({ realTrue: VCooMax_flow });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctMixConInletSensor.Subsequences.Overrides.conInt2
-  const conInt2Fn = constant_8c5ba27d({ k: 3 });
+  const conInt2Fn = constant_01efacbe({ k: 3 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctMixConInletSensor.Subsequences.Overrides.forMinFlo
-  const forMinFloFn = equal_2ac2bdd1({});
+  const forMinFloFn = equal_2c2e9230({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctMixConInletSensor.Subsequences.Overrides.minFlo
-  const minFloFn = booleantoreal_df99be1a({ realTrue: VMin_flow });
+  const minFloFn = booleantoreal_552dc85b({ realTrue: VMin_flow });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctMixConInletSensor.Subsequences.Overrides.conInt5
-  const conInt5Fn = constant_8c5ba27d({ k: 4 });
+  const conInt5Fn = constant_01efacbe({ k: 4 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctMixConInletSensor.Subsequences.Overrides.forMinFlo1
-  const forMinFlo1Fn = equal_2ac2bdd1({});
+  const forMinFlo1Fn = equal_2c2e9230({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctMixConInletSensor.Subsequences.Overrides.heaMax
-  const heaMaxFn = booleantoreal_df99be1a({ realTrue: VHeaMax_flow });
+  const heaMaxFn = booleantoreal_552dc85b({ realTrue: VHeaMax_flow });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctMixConInletSensor.Subsequences.Overrides.add4
-  const add4Fn = add_a5faf0f2({});
+  const add4Fn = add_53459d33({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctMixConInletSensor.Subsequences.Overrides.add2
-  const add2Fn = add_a5faf0f2({});
+  const add2Fn = add_53459d33({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctMixConInletSensor.Subsequences.Overrides.add1
-  const add1Fn = add_a5faf0f2({});
+  const add1Fn = add_53459d33({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctMixConInletSensor.Subsequences.Overrides.or3
-  const or3Fn = or_e27f1bfe({});
+  const or3Fn = or_de89f7dd({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctMixConInletSensor.Subsequences.Overrides.or5
-  const or5Fn = or_e27f1bfe({});
+  const or5Fn = or_de89f7dd({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctMixConInletSensor.Subsequences.Overrides.or1
-  const or1Fn = or_e27f1bfe({});
+  const or1Fn = or_de89f7dd({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctMixConInletSensor.Subsequences.Overrides.swi
-  const swiFn = switch_6d141143({});
+  const swiFn = switch_91d77162({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctMixConInletSensor.Subsequences.Overrides.conInt3
-  const conInt3Fn = constant_8c5ba27d({ k: 1 });
+  const conInt3Fn = constant_01efacbe({ k: 1 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctMixConInletSensor.Subsequences.Overrides.intEqu3
-  const intEqu3Fn = equal_2ac2bdd1({});
+  const intEqu3Fn = equal_2c2e9230({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctMixConInletSensor.Subsequences.Overrides.cloDam
-  const cloDamFn = booleantoreal_df99be1a({});
+  const cloDamFn = booleantoreal_552dc85b({ realTrue: 0 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctMixConInletSensor.Subsequences.Overrides.conInt4
-  const conInt4Fn = constant_8c5ba27d({ k: 2 });
+  const conInt4Fn = constant_01efacbe({ k: 2 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctMixConInletSensor.Subsequences.Overrides.intEqu4
-  const intEqu4Fn = equal_2ac2bdd1({});
+  const intEqu4Fn = equal_2c2e9230({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctMixConInletSensor.Subsequences.Overrides.opeDam
-  const opeDamFn = booleantoreal_df99be1a({ realTrue: 1 });
+  const opeDamFn = booleantoreal_552dc85b({ realTrue: 1 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctMixConInletSensor.Subsequences.Overrides.add3
-  const add3Fn = add_a5faf0f2({});
+  const add3Fn = add_53459d33({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctMixConInletSensor.Subsequences.Overrides.or2
-  const or2Fn = or_e27f1bfe({});
+  const or2Fn = or_de89f7dd({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctMixConInletSensor.Subsequences.Overrides.swi1
-  const swi1Fn = switch_6d141143({});
+  const swi1Fn = switch_91d77162({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctMixConInletSensor.Subsequences.Overrides.conInt6
-  const conInt6Fn = constant_8c5ba27d({ k: 1 });
+  const conInt6Fn = constant_01efacbe({ k: 1 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctMixConInletSensor.Subsequences.Overrides.intEqu1
-  const intEqu1Fn = equal_2ac2bdd1({});
+  const intEqu1Fn = equal_2c2e9230({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctMixConInletSensor.Subsequences.Overrides.cloDam1
-  const cloDam1Fn = booleantoreal_df99be1a({});
+  const cloDam1Fn = booleantoreal_552dc85b({ realTrue: 0 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctMixConInletSensor.Subsequences.Overrides.conInt7
-  const conInt7Fn = constant_8c5ba27d({ k: 2 });
+  const conInt7Fn = constant_01efacbe({ k: 2 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctMixConInletSensor.Subsequences.Overrides.intEqu2
-  const intEqu2Fn = equal_2ac2bdd1({});
+  const intEqu2Fn = equal_2c2e9230({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctMixConInletSensor.Subsequences.Overrides.opeDam1
-  const opeDam1Fn = booleantoreal_df99be1a({ realTrue: 1 });
+  const opeDam1Fn = booleantoreal_552dc85b({ realTrue: 1 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctMixConInletSensor.Subsequences.Overrides.add5
-  const add5Fn = add_a5faf0f2({});
+  const add5Fn = add_53459d33({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctMixConInletSensor.Subsequences.Overrides.or4
-  const or4Fn = or_e27f1bfe({});
+  const or4Fn = or_de89f7dd({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctMixConInletSensor.Subsequences.Overrides.swi2
-  const swi2Fn = switch_6d141143({});
+  const swi2Fn = switch_91d77162({});
 
   return (
     { oveFloSet, oveHeaDamPos, oveCooDamPos, VActSet_flow, uCooDam, uHeaDam }

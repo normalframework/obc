@@ -13,13 +13,13 @@ module.exports = (
   
 ) => {
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ThermalZones.Validation.Alarms.CO2
-  const CO2Fn = sin_9696c4d3({ amplitude: 500, freqHz: "1/7200", offset: 600 });
+  const CO2Fn = sin_9696c4d3({ amplitude: 500, freqHz: 1/7200, offset: 600 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ThermalZones.Validation.Alarms.TZonCooSetOcc
   const TZonCooSetOccFn = constant_baefa089({ k: 295.15 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ThermalZones.Validation.Alarms.TZonHeaSetOcc
   const TZonHeaSetOccFn = constant_baefa089({ k: 293.15 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ThermalZones.Validation.Alarms.zonTem
-  const zonTemFn = sin_9696c4d3({ amplitude: 8, freqHz: "1/7200", offset: "273.15 +15" });
+  const zonTemFn = sin_9696c4d3({ amplitude: 8, freqHz: 1/7200, offset: 273.15 +15 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ThermalZones.Validation.Alarms.occSta
   const occStaFn = pulse_27dcacc8({ period: 7200, width: 0.05 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ThermalZones.Validation.Alarms.ram
@@ -47,6 +47,6 @@ module.exports = (
     const booToInt = booToIntFn({ u: not1.y });
     const zonAla = zonAlaFn({ ppmCO2: CO2.y, TCooSet: TZonCooSetOcc.y, THeaSet: TZonHeaSetOcc.y, TZon: zonTem.y, u1ResSet: occSta.y, uOpeMod: booToInt.y });
 
-    return {};
+    return { CO2: CO2, TZonCooSetOcc: TZonCooSetOcc, TZonHeaSetOcc: TZonHeaSetOcc, zonTem: zonTem, occSta: occSta, ram: ram, greThr: greThr, not1: not1, booToInt: booToInt, zonAla: zonAla };
   }
 }

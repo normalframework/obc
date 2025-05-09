@@ -2,6 +2,14 @@ const IntegratorReset = require('./IntegratorWithReset');
 const DerivativeBlock = require('./Derivative');
 const Limiter = require('./Limiter');
 
+
+const ControllerType = {
+  P: 0,
+  PI: 1,
+  PD: 2,
+  PID: 3,
+}
+
 /**
  * PID block implementing P, PI, PD, and PID control with optional anti-windup and output limits.
  *
@@ -22,7 +30,7 @@ const Limiter = require('./Limiter');
  */
 
 function pidWithReset({
-  controllerType = "Buildings.Controls.OBC.CDL.Types.SimpleController.PI",
+  controllerType = ControllerType.PI,
   k = 1,
   Ti = 0.5,
   Td = 0.1,
@@ -37,11 +45,11 @@ function pidWithReset({
   y_reset = xi_start
 } = {}) {
 
-  const with_I = controllerType === "Buildings.Controls.OBC.CDL.Types.SimpleController.PI" ||
-    controllerType === "Buildings.Controls.OBC.CDL.Types.SimpleController.PID";
+  const with_I = controllerType === ControllerType.PI ||
+    controllerType === ControllerType.PID;
 
-  const with_D = controllerType === "Buildings.Controls.OBC.CDL.Types.SimpleController.PD" ||
-    controllerType === "Buildings.Controls.OBC.CDL.Types.SimpleController.PID";
+  const with_D = controllerType === ControllerType.PD ||
+    controllerType === ControllerType.PID;
 
   const rev = reverseActing ? 1 : -1;
   const dBlock = DerivativeBlock({ y_start: yd_start })

@@ -24,7 +24,7 @@ module.exports = (
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.AirEconomizerHighLimits.booToRea
   const booToReaFn = booleantoreal_df99be1a({ realTrue: 66000 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.AirEconomizerHighLimits.con
-  const conFn = constant_baefa089({ k: "273.15 +24" });
+  const conFn = constant_baefa089({ k: 273.15 +24 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.AirEconomizerHighLimits.ash1B
   const ash1BFn = constant_48cc1015({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.AirEconomizerHighLimits.ash2B
@@ -72,7 +72,7 @@ module.exports = (
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.AirEconomizerHighLimits.and2
   const and2Fn = and_6d642f1c({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.AirEconomizerHighLimits.con1
-  const con1Fn = constant_baefa089({ k: "273.15 +21" });
+  const con1Fn = constant_baefa089({ k: 273.15 +21 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.AirEconomizerHighLimits.ash5A
   const ash5AFn = constant_48cc1015({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.AirEconomizerHighLimits.ash6A
@@ -82,9 +82,9 @@ module.exports = (
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.AirEconomizerHighLimits.and1
   const and1Fn = and_6d642f1c({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.AirEconomizerHighLimits.con2
-  const con2Fn = constant_baefa089({ k: "273.15 +18" });
+  const con2Fn = constant_baefa089({ k: 273.15 +18 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.AirEconomizerHighLimits.con11
-  const con11Fn = constant_baefa089({});
+  const con11Fn = constant_baefa089({ k: 0 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.AirEconomizerHighLimits.or10
   const or10Fn = or_e27f1bfe({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.AirEconomizerHighLimits.or27
@@ -114,7 +114,7 @@ module.exports = (
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.AirEconomizerHighLimits.and3
   const and3Fn = and_6d642f1c({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.AirEconomizerHighLimits.con3
-  const con3Fn = constant_baefa089({ k: "273.15 +24" });
+  const con3Fn = constant_baefa089({ k: 273.15 +24 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.AirEconomizerHighLimits.min1
   const min1Fn = min_a5fb1ea3({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.AirEconomizerHighLimits.fixDryBulDifDryBul
@@ -122,7 +122,7 @@ module.exports = (
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.AirEconomizerHighLimits.and12
   const and12Fn = and_6d642f1c({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.AirEconomizerHighLimits.con12
-  const con12Fn = constant_baefa089({ k: "273.15 +21" });
+  const con12Fn = constant_baefa089({ k: 273.15 +21 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.AirEconomizerHighLimits.min2
   const min2Fn = min_a5fb1ea3({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.AirEconomizerHighLimits.and13
@@ -188,11 +188,11 @@ module.exports = (
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.AirEconomizerHighLimits.con4
   const con4Fn = constant_baefa089({ k: 66000 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.AirEconomizerHighLimits.con10
-  const con10Fn = constant_baefa089({});
+  const con10Fn = constant_baefa089({ k: 0 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.AirEconomizerHighLimits.swi4
   const swi4Fn = switch_6d141143({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.AirEconomizerHighLimits.con5
-  const con5Fn = constant_baefa089({ k: "273.15 +24" });
+  const con5Fn = constant_baefa089({ k: 273.15 +24 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.AirEconomizerHighLimits.titZon1
   const titZon1Fn = constant_48cc1015({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.AirEconomizerHighLimits.titZon3
@@ -230,7 +230,7 @@ module.exports = (
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.AirEconomizerHighLimits.and5
   const and5Fn = and_6d642f1c({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.AirEconomizerHighLimits.con6
-  const con6Fn = constant_baefa089({ k: "273.15 +23" });
+  const con6Fn = constant_baefa089({ k: 273.15 +23 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.AirEconomizerHighLimits.titZon10
   const titZon10Fn = constant_48cc1015({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.AirEconomizerHighLimits.titZon4
@@ -244,7 +244,7 @@ module.exports = (
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.AirEconomizerHighLimits.and6
   const and6Fn = and_6d642f1c({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.AirEconomizerHighLimits.con7
-  const con7Fn = constant_baefa089({ k: "273.15 +22" });
+  const con7Fn = constant_baefa089({ k: 273.15 +22 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.AirEconomizerHighLimits.titZon9
   const titZon9Fn = constant_48cc1015({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.AirEconomizerHighLimits.titZon8
@@ -258,7 +258,7 @@ module.exports = (
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.AirEconomizerHighLimits.and7
   const and7Fn = and_6d642f1c({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.AirEconomizerHighLimits.con8
-  const con8Fn = constant_baefa089({ k: "273.15 +21" });
+  const con8Fn = constant_baefa089({ k: 273.15 +21 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.AirEconomizerHighLimits.and8
   const and8Fn = and_6d642f1c({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.AirEconomizerHighLimits.addPar
@@ -286,7 +286,7 @@ module.exports = (
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.AirEconomizerHighLimits.min6
   const min6Fn = min_a5fb1ea3({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.AirEconomizerHighLimits.con9
-  const con9Fn = constant_baefa089({ k: "273.15 +24" });
+  const con9Fn = constant_baefa089({ k: 273.15 +24 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.AirEconomizerHighLimits.swi18
   const swi18Fn = switch_6d141143({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.AirEconomizerHighLimits.swi17

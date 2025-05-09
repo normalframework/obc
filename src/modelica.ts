@@ -78,7 +78,7 @@ const Public = createToken({ name: "Public", pattern: /public\s/ });
 const Pure = createToken({ name: "Pure", pattern: /pure\s/ });
 const Record = createToken({ name: "Record", pattern: /record\s/ });
 const Redeclare = createToken({ name: "Redeclare", pattern: /redeclare/ });
-const RePlacable = createToken({ name: "RePlacable", pattern: /replaceable/ });
+const Replecable = createToken({ name: "Replecable", pattern: /replaceable/ });
 const Return = createToken({ name: "Return", pattern: /return/ });
 const Stream = createToken({ name: "Stream", pattern: /stream/ });
 const Then = createToken({ name: "Then", pattern: /then/ });
@@ -142,6 +142,11 @@ const Minus = createToken({
 const Plus = createToken({
   name: "Plus",
   pattern: /\+/,
+  categories: ArithmeticOperator,
+});
+const Sparse = createToken({
+  name: "Sparse",
+  pattern: /\.\*/,
   categories: ArithmeticOperator,
 });
 const Multiply = createToken({
@@ -227,7 +232,7 @@ const keywords = [
   Protected,
   Connect,
   Equation,
-  RePlacable,
+  Replecable,
   Redeclare,
   Partial,
   Each,
@@ -256,6 +261,7 @@ const keywords = [
   Inner,
   Discrete,
   Record,
+  Outer,
   ...datatypes,
 ];
 const symbols = [
@@ -272,6 +278,7 @@ const symbols = [
   LSquare,
   Minus,
   Plus,
+  Sparse,
   Multiply,
   Divide,
   Less,
@@ -373,6 +380,7 @@ export type TopLevelExpression = CstElement & {
   children: {
     unaryExpression: [UnaryExpression] | [UnaryExpression, UnaryExpression];
     Multiply?: [IToken];
+    Sparse?: [IToken];
     Divide?: [IToken];
     Power?: [IToken];
     Less?: [IToken];
@@ -513,42 +521,27 @@ class ModelicaParser extends CstParser {
     this.CONSUME(Semicolon);
   });
 
-  rePlacablePackage = this.RULE("rePlacablePackage", () => {
-    this.CONSUME(RePlacable);
-    this.CONSUME(Package);
-    this.CONSUME(Identifier);
-    this.CONSUME(Equals);
-    this.CONSUME1(Identifier);
-    this.OPTION(() => {
-      this.blockModifiers();
-    });
-    this.OPTION2(() => {
-      this.SUBRULE(this.constrainedBy);
-    });
-
-    this.SUBRULE(this.elementDescription);
-    this.CONSUME(Semicolon);
-  });
-
   package = this.RULE("package", () => {
     this.OPTION(() => this.CONSUME(Final));
-    this.OPTION1(() => this.CONSUME(RePlacable));
+    this.OPTION1(() => this.CONSUME(Inner));
+    this.OPTION2(() => this.CONSUME(Outer));
+    this.OPTION3(() => this.CONSUME(Replecable));
     this.CONSUME(Package);
     this.SUBRULE(this.parametrizedBlock);
-    this.OPTION2(() => this.SUBRULE(this.assignment));
-    this.OPTION3(() => this.SUBRULE(this.elementDescription));
-    this.OPTION4(() => this.SUBRULE(this.extends));
-    this.OPTION5(() => this.SUBRULE(this.constrainedBy));
-    this.OPTION6(() => {
+    this.OPTION4(() => this.SUBRULE(this.assignment));
+    this.OPTION5(() => this.SUBRULE(this.elementDescription));
+    this.OPTION6(() => this.SUBRULE(this.extends));
+    this.OPTION7(() => this.SUBRULE(this.constrainedBy));
+    this.OPTION8(() => {
       this.CONSUME(StringLiteral); // Capture optional description string
     });
-    this.OPTION7(() => this.CONSUME(Semicolon));
+    this.OPTION9(() => this.CONSUME(Semicolon));
   });
 
   model = this.RULE("model", () => {
     this.OPTION(() => this.CONSUME(Partial));
     this.OPTION1(() => this.CONSUME(Redeclare));
-    this.OPTION2(() => this.CONSUME(RePlacable));
+    this.OPTION2(() => this.CONSUME(Replecable));
 
     this.CONSUME(Model);
     this.OPTION3(() => this.CONSUME(Extends));
@@ -705,7 +698,7 @@ class ModelicaParser extends CstParser {
       this.OR([
         { ALT: () => this.CONSUME(Impure) },
         { ALT: () => this.CONSUME(Pure) },
-        { ALT: () => this.CONSUME(RePlacable) },
+        { ALT: () => this.CONSUME(Replecable) },
         { ALT: () => this.CONSUME(Encapsulated) },
       ]);
     });
@@ -788,7 +781,7 @@ class ModelicaParser extends CstParser {
             { ALT: () => this.CONSUME(Each) },
             { ALT: () => this.CONSUME(Final) },
             { ALT: () => this.CONSUME(Redeclare) },
-            { ALT: () => this.CONSUME(RePlacable) },
+            { ALT: () => this.CONSUME(Replecable) },
             { ALT: () => this.CONSUME(Package) },
             { ALT: () => this.CONSUME(Model) },
             { ALT: () => this.CONSUME(Parameter) },
@@ -815,8 +808,9 @@ class ModelicaParser extends CstParser {
   });
 
   parameterModifier = this.RULE("parameterModifier", () => {
-    this.OPTION(() => this.CONSUME(RePlacable));
+    this.OPTION(() => this.CONSUME(Replecable));
     this.OPTION1(() => this.CONSUME(Inner));
+    this.OPTION2(() => this.CONSUME(Outer));
     this.MANY(() => {
       this.OR([
         { ALT: () => this.CONSUME(Each) },
@@ -834,10 +828,11 @@ class ModelicaParser extends CstParser {
     this.SUBRULE(this.variableType);
     this.SUBRULE(this.parametrizedBlock);
     this.OPTION1(() => this.SUBRULE(this.assignment));
-    this.OPTION4(() => this.SUBRULE(this.constrained));
+    this.OPTION2(() => this.SUBRULE(this.ifDeclaration));
+    this.OPTION3(() => this.SUBRULE(this.constrained));
     this.SUBRULE(this.elementDescription);
     this.CONSUME(Semicolon);
-    this.OPTION5(() => this.SUBRULE(this.extends));
+    this.OPTION4(() => this.SUBRULE(this.extends));
   });
 
   blockInput = this.RULE("blockInput", () => {
@@ -884,8 +879,9 @@ class ModelicaParser extends CstParser {
     this.MANY(() => {
       this.OR([
         { ALT: () => this.CONSUME(Inner) },
+        { ALT: () => this.CONSUME(Outer) },
         { ALT: () => this.CONSUME(Discrete) },
-        { ALT: () => this.CONSUME(RePlacable) },
+        { ALT: () => this.CONSUME(Replecable) },
       ]);
     });
   });
@@ -914,6 +910,7 @@ class ModelicaParser extends CstParser {
       { ALT: () => this.SUBRULE(this.variableType) },
       { ALT: () => this.CONSUME(NumberLiteral) },
       { ALT: () => this.SUBRULE(this.unpack) },
+      { ALT: () => this.SUBRULE(this.set) },
     ]);
 
     this.OPTION(() => this.SUBRULE(this.functionCall));
@@ -942,6 +939,7 @@ class ModelicaParser extends CstParser {
         { ALT: () => this.CONSUME(Plus) },
         { ALT: () => this.CONSUME(Divide) },
         { ALT: () => this.CONSUME(Multiply) },
+        { ALT: () => this.CONSUME(Sparse) },
       ]);
       this.SUBRULE2(this.declarationBody);
     });
@@ -1020,6 +1018,7 @@ class ModelicaParser extends CstParser {
     this.MANY(() => {
       this.OR([
         { ALT: () => this.CONSUME(Multiply) },
+        { ALT: () => this.CONSUME(Sparse) },
         { ALT: () => this.CONSUME(Divide) },
         { ALT: () => this.CONSUME(Power) },
         { ALT: () => this.CONSUME(Less) },

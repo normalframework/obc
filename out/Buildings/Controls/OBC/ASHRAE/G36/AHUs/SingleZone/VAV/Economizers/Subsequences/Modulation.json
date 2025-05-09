@@ -1,8 +1,11 @@
 {
   "inputs": [
     "u1SupFan",
+    "uOutDam_max",
     "uOutDam_min",
+    "uRetDam_min",
     "uRetDam_max",
+    "TSup",
     "TSupHeaEcoSet"
   ],
   "outputs": [

@@ -12,7 +12,7 @@
  * @returns {boolean} output.y - Connector of Boolean output signal.
  */
 
-function edge({ pre_u_start = false }) {
+function edge({ pre_u_start = false } = {}) {
   let previous_u = pre_u_start;
 
   return ({ u = false }) => {

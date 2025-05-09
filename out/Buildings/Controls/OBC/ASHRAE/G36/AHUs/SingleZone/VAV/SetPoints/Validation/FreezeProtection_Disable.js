@@ -20,7 +20,7 @@ module.exports = (
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.SingleZone.VAV.SetPoints.Validation.FreezeProtection_Disable.retDamPos
   const retDamPosFn = ramp_3c414377({ duration: 3600, height: 0.2, offset: 0.7 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.SingleZone.VAV.SetPoints.Validation.FreezeProtection_Disable.frePro
-  const freProFn = freezeprotection_9800594d({});
+  const freProFn = freezeprotection_9800594d({ have_frePro: false });
 
   return (
     {  }
@@ -33,6 +33,6 @@ module.exports = (
     const retDamPos = retDamPosFn({});
     const frePro = freProFn({ u1SupFan: greThr.y, uCooCoi: cooCoiPos.y, uHeaCoi: heaCoiPos.y, uOutDam: outDamPos.y, uRetDam: retDamPos.y, uSupFan: supFanSpe.y });
 
-    return {};
+    return { supFanSpe: supFanSpe, greThr: greThr, cooCoiPos: cooCoiPos, heaCoiPos: heaCoiPos, outDamPos: outDamPos, retDamPos: retDamPos, frePro: frePro };
   }
 }

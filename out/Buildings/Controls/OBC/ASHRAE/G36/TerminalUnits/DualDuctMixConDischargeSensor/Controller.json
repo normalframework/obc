@@ -1,15 +1,40 @@
 {
   "inputs": [
     "uOpeMod",
+    "u1CooAHU",
+    "u1HeaAHU",
     "VDis_flow",
+    "TCooSet",
+    "THeaSet",
     "TZon",
-    "oveHeaDamPos"
+    "TColSup",
+    "THotSup",
+    "ppmCO2",
+    "ppmCO2Set",
+    "u1Occ",
+    "u1Win",
+    "oveCooDamPos",
+    "oveFloSet",
+    "oveHeaDamPos",
+    "TDis"
   ],
   "outputs": [
+    "VAdjAreBreZon_flow",
+    "VAdjPopBreZon_flow",
     "VMinOA_flow",
-    "yHeaDam",
+    "VSet_flow",
+    "VZonAbsMin_flow",
+    "VZonDesMin_flow",
     "yCO2",
-    "yZonHeaTemResReq",
-    "yLowFloAla"
+    "yColDucPreResReq",
+    "yCooDam",
+    "yFloSenAla",
+    "yHeaDam",
+    "yHeaFanReq",
+    "yHotDucPreResReq",
+    "yLeaDamAla",
+    "yLowFloAla",
+    "yZonCooTemResReq",
+    "yZonHeaTemResReq"
   ]
 }

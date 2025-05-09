@@ -17,7 +17,7 @@ module.exports = (
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.Economizers.Subsequences.Validation.Enable_TOut_hOut.hOutCut
   const hOutCutFn = constant_baefa089({ k: hOutCutoff });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.Economizers.Subsequences.Validation.Enable_TOut_hOut.TOut
-  const TOutFn = sin_9696c4d3({ amplitude: 4, freqHz: "1/3600", offset: TOutCutoff -2, startTime: 10 });
+  const TOutFn = sin_9696c4d3({ amplitude: 4, freqHz: 1/3600, offset: TOutCutoff -2, startTime: 10 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.Economizers.Subsequences.Validation.Enable_TOut_hOut.TOutCut
   const TOutCutFn = constant_baefa089({ k: TOutCutoff });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.Economizers.Subsequences.Validation.Enable_TOut_hOut.supFanSta
@@ -31,13 +31,13 @@ module.exports = (
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.Economizers.Subsequences.Validation.Enable_TOut_hOut.retDamPosMax
   const retDamPosMaxFn = constant_baefa089({ k: 0.8 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.Economizers.Subsequences.Validation.Enable_TOut_hOut.retDamPosMin
-  const retDamPosMinFn = constant_baefa089({});
+  const retDamPosMinFn = constant_baefa089({ k: 0 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.Economizers.Subsequences.Validation.Enable_TOut_hOut.retDamPhyPosMax
   const retDamPhyPosMaxFn = constant_baefa089({ k: 1 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.Economizers.Subsequences.Validation.Enable_TOut_hOut.enaDis
   const enaDisFn = enable_f47cde56({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.Economizers.Subsequences.Validation.Enable_TOut_hOut.hOut
-  const hOutFn = sin_9696c4d3({ amplitude: 4000, freqHz: "1/3600", offset: hOutCutoff -2200, startTime: 10 });
+  const hOutFn = sin_9696c4d3({ amplitude: 4000, freqHz: 1/3600, offset: hOutCutoff -2200, startTime: 10 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.Economizers.Subsequences.Validation.Enable_TOut_hOut.hOutCut1
   const hOutCut1Fn = constant_baefa089({ k: hOutCutoff });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.Economizers.Subsequences.Validation.Enable_TOut_hOut.TOutBelowCutoff
@@ -47,7 +47,7 @@ module.exports = (
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.Economizers.Subsequences.Validation.Enable_TOut_hOut.enaDis1
   const enaDis1Fn = enable_f47cde56({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.Economizers.Subsequences.Validation.Enable_TOut_hOut.enaDis2
-  const enaDis2Fn = enable_f47cde56({});
+  const enaDis2Fn = enable_f47cde56({ use_enthalpy: false });
 
   return (
     {  }
@@ -71,6 +71,6 @@ module.exports = (
     const enaDis1 = enaDis1Fn({ hOut: hOut.y, hOutCut: hOutCut1.y, TOut: TOutBelowCutoff.y, TOutCut: TOutCut1.y, u1SupFan: supFanSta.y, uFreProSta: freProSta.y, uOutDam_max: outDamPosMax.y, uOutDam_min: outDamPosMin.y, uRetDam_max: retDamPosMax.y, uRetDam_min: retDamPosMin.y, uRetDamPhy_max: retDamPhyPosMax.y });
     const enaDis2 = enaDis2Fn({ TOut: TOut.y, TOutCut: TOutCut.y, u1SupFan: supFanSta.y, uFreProSta: freProSta.y, uOutDam_max: outDamPosMax.y, uOutDam_min: outDamPosMin.y, uRetDam_max: retDamPosMax.y, uRetDam_min: retDamPosMin.y, uRetDamPhy_max: retDamPhyPosMax.y });
 
-    return {};
+    return { hOutBelowCutoff: hOutBelowCutoff, hOutCut: hOutCut, TOut: TOut, TOutCut: TOutCut, supFanSta: supFanSta, freProSta: freProSta, outDamPosMax: outDamPosMax, outDamPosMin: outDamPosMin, retDamPosMax: retDamPosMax, retDamPosMin: retDamPosMin, retDamPhyPosMax: retDamPhyPosMax, enaDis: enaDis, hOut: hOut, hOutCut1: hOutCut1, TOutBelowCutoff: TOutBelowCutoff, TOutCut1: TOutCut1, enaDis1: enaDis1, enaDis2: enaDis2 };
   }
 }

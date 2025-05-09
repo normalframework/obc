@@ -14,7 +14,7 @@ module.exports = (
     } = {}
 ) => {
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.Economizers.Subsequences.Limits.Validation.Common_LoopDisable.fanSta
-  const fanStaFn = constant_48cc1015({});
+  const fanStaFn = constant_48cc1015({ k: false });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.Economizers.Subsequences.Limits.Validation.Common_LoopDisable.opeMod
   const opeModFn = constant_8c5ba27d({ k: 1 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.Economizers.Subsequences.Limits.Validation.Common_LoopDisable.VOut_flow
@@ -48,6 +48,6 @@ module.exports = (
     const VOutMinSet1_flow = VOutMinSet1_flowFn({});
     const damLim1 = damLim1Fn({ u1SupFan: fanStatus1.y, uOpeMod: opeMod1.y, VOut_flow_normalized: VOut1_flow.y, VOutMinSet_flow_normalized: VOutMinSet1_flow.y });
 
-    return {};
+    return { fanSta: fanSta, opeMod: opeMod, VOut_flow: VOut_flow, VOutMinSet_flow: VOutMinSet_flow, damLim: damLim, fanStatus1: fanStatus1, opeMod1: opeMod1, VOut1_flow: VOut1_flow, VOutMinSet1_flow: VOutMinSet1_flow, damLim1: damLim1 };
   }
 }

@@ -1,28 +1,37 @@
 /**
- * Less block that outputs true if input u1 is less than input u2
+ * Less block that outputs true if input u1 is less than input u2, with optional hysteresis.
+ * When h ≥ 1e-10, y switches true when u1 < u2 and switches false when u1 ≥ u2 + h.
  * 
  * @param {Object} params - The parameters object.
- * @param {number} params.h - Hysteresis.
- * @param {boolean} params.pre_y_start - Value of pre(y) at initial time.
+ * @param {number} params.h - Hysteresis amount (min 0).
+ * @param {boolean} params.pre_y_start - Initial output value when using hysteresis.
  * 
- * @returns {Function} - A function that calculates the less comparison given the inputs.
+ * @returns {Function} - The step function.
+ * @returns {boolean} output.y - True when u1 < u2 (with hysteresis if enabled).
  */
+function less({ h = 0, pre_y_start = false } = {}) {
+  const haveHysteresis = h >= 1e-10;
 
-function less({ h = 0, pre_y_start = false }) {
-  let previous_y = pre_y_start;
+  function lessNoHysteresis() {
+    return ({ u1 = 0, u2 = 0 } = {}) => ({ y: u1 < u2 });
+  }
 
-  if (h >= 1E-10) {
-    return ({ u1 = 0, u2 = 0 }) => {
-      const y = (!previous_y && u1 < u2) || (previous_y && u1 < u2 + h);
-      previous_y = y;
+  function lessWithHysteresis({ h, pre_y_start }) {
+    let prevY = pre_y_start;
+    return ({ u1 = 0, u2 = 0 } = {}) => {
+      const rising  = !prevY && u1 < u2;
+      const falling =  prevY && u1 >= u2 + h;
+      const y = rising || (!falling && prevY);
+      prevY = y;
       return { y };
     };
-  } else {
-    return ({ u1 = 0, u2 = 0 }) => {
-      return { y: u1 < u2 };
-    };
   }
-}
 
+  const step = haveHysteresis
+    ? lessWithHysteresis({ h, pre_y_start })
+    : lessNoHysteresis();
+
+  return step;
+}
 
 module.exports = less;

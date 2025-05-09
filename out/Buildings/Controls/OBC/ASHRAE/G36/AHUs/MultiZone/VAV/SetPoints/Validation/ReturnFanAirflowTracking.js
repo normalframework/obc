@@ -27,6 +27,6 @@ module.exports = (
     const retFanAirTra = retFanAirTraFn({ u1SupFan: yFan.y, VAirRet_flow: retFlo.y, VAirSup_flow: supFlo.y });
     const retFanAirTra1 = retFanAirTra1Fn({ u1SupFan: yFan.y, VAirRet_flow: retFlo.y, VAirSup_flow: supFlo.y });
 
-    return {};
+    return { yFan: yFan, retFlo: retFlo, supFlo: supFlo, retFanAirTra: retFanAirTra, retFanAirTra1: retFanAirTra1 };
   }
 }

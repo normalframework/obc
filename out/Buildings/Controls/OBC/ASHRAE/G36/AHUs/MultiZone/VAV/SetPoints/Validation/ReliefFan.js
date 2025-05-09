@@ -15,7 +15,7 @@ module.exports = (
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.Validation.ReliefFan.relFanCon
   const relFanConFn = relieffan_e48bf764({ k: 0.5 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.Validation.ReliefFan.dpBui
-  const dpBuiFn = ramp_3c414377({ duration: 1800, height: 40 });
+  const dpBuiFn = ramp_3c414377({ duration: 1800, height: 40, offset: 0 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.Validation.ReliefFan.supFan1
   const supFan1Fn = constant_48cc1015({ k: true });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.Validation.ReliefFan.relFanCon1
@@ -37,6 +37,6 @@ module.exports = (
     const dpBui1 = dpBui1Fn({});
     const relFanCon2 = relFanCon2Fn({ dpBui: dpBui1.y, u1SupFan: supFan1.y });
 
-    return {};
+    return { dpBui2: dpBui2, supFan: supFan, relFanCon: relFanCon, dpBui: dpBui, supFan1: supFan1, relFanCon1: relFanCon1, dpBui1: dpBui1, relFanCon2: relFanCon2 };
   }
 }

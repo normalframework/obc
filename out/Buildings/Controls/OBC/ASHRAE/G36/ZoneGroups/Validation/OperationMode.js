@@ -1,7 +1,6 @@
 
 // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ZoneGroups.Validation.OperationMode
 const operationmode_d69803fc = require("../OperationMode");
-const occupancyschedule_6b502767 = require("../../../../../SetPoints/OccupancySchedule");
 const booleantointeger_d87efb42 = require("../../../../CDL/Conversions/BooleanToInteger");
 const constant_8c5ba27d = require("../../../../CDL/Integers/Sources/Constant");
 const addparameter_26b0d2d7 = require("../../../../CDL/Reals/AddParameter");
@@ -20,8 +19,6 @@ module.exports = (
   const cooDowTimFn = constant_baefa089({ k: 1800 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ZoneGroups.Validation.OperationMode.warUpTim
   const warUpTimFn = constant_baefa089({ k: 1800 });
-  // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ZoneGroups.Validation.OperationMode.occSch
-  const occSchFn = occupancyschedule_6b502767({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ZoneGroups.Validation.OperationMode.TZonHeaSetUno
   const TZonHeaSetUnoFn = constant_baefa089({ k: 285.15 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ZoneGroups.Validation.OperationMode.ramp1
@@ -59,7 +56,7 @@ module.exports = (
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ZoneGroups.Validation.OperationMode.lowThaHeaSet
   const lowThaHeaSetFn = greater_b1da53cb({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ZoneGroups.Validation.OperationMode.cloWin
-  const cloWinFn = constant_8c5ba27d({});
+  const cloWinFn = constant_8c5ba27d({ k: 0 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ZoneGroups.Validation.OperationMode.opeModSel
   const opeModSelFn = operationmode_d69803fc({ nZon: 1 });
 
@@ -68,7 +65,6 @@ module.exports = (
   ) => {
     const cooDowTim = cooDowTimFn({});
     const warUpTim = warUpTimFn({});
-    const occSch = occSchFn({});
     const TZonHeaSetUno = TZonHeaSetUnoFn({});
     const ramp1 = ramp1Fn({});
     const sin1 = sin1Fn({ u: ramp1.y });
@@ -88,8 +84,8 @@ module.exports = (
     const TZonHeaSetOcc = TZonHeaSetOccFn({});
     const lowThaHeaSet = lowThaHeaSetFn({ u1: TZonHeaSetOcc.y, u2: zonTem.y });
     const cloWin = cloWinFn({});
-    const opeModSel = opeModSelFn({ maxCooDowTim: cooDowTim.y, maxWarUpTim: warUpTim.y, u1Occ: occSch.occupied, totColZon: booToInt.y, totHotZon: booToInt1.y, TZonMin: zonTem.y, u1EndSetBac: hys3.y, u1EndSetUp: hys1.y, u1HigOccCoo: higThaCooSet.y, u1OccHeaHig: lowThaHeaSet.y, u1SetBac: greEqu2.y, u1SetUp: greEqu3.y, uOpeWin: cloWin.y });
+    const opeModSel = opeModSelFn({ maxCooDowTim: cooDowTim.y, maxWarUpTim: warUpTim.y, totColZon: booToInt.y, totHotZon: booToInt1.y, TZonMin: zonTem.y, u1EndSetBac: hys3.y, u1EndSetUp: hys1.y, u1HigOccCoo: higThaCooSet.y, u1OccHeaHig: lowThaHeaSet.y, u1SetBac: greEqu2.y, u1SetUp: greEqu3.y, uOpeWin: cloWin.y });
 
-    return {};
+    return { cooDowTim: cooDowTim, warUpTim: warUpTim, TZonHeaSetUno: TZonHeaSetUno, ramp1: ramp1, sin1: sin1, gai: gai, zonTem: zonTem, greEqu2: greEqu2, booToInt: booToInt, TZonCooSetUno: TZonCooSetUno, greEqu3: greEqu3, booToInt1: booToInt1, dif2: dif2, hys3: hys3, dif1: dif1, hys1: hys1, TZonCooSetOcc: TZonCooSetOcc, higThaCooSet: higThaCooSet, TZonHeaSetOcc: TZonHeaSetOcc, lowThaHeaSet: lowThaHeaSet, cloWin: cloWin, opeModSel: opeModSel };
   }
 }

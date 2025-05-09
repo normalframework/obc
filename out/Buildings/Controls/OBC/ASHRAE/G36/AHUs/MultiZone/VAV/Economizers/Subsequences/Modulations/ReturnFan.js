@@ -13,7 +13,7 @@ module.exports = (
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.Economizers.Subsequences.Modulations.ReturnFan.one
   const oneFn = constant_baefa089({ k: 1 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.Economizers.Subsequences.Modulations.ReturnFan.zer
-  const zerFn = constant_baefa089({});
+  const zerFn = constant_baefa089({ k: 0 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.Economizers.Subsequences.Modulations.ReturnFan.damMinLimSig
   const damMinLimSigFn = constant_baefa089({ k: uMin });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.Economizers.Subsequences.Modulations.ReturnFan.damMaxLimSig
@@ -24,14 +24,14 @@ module.exports = (
   const retDamPosFn = line_196841c3({ limitAbove: true, limitBelow: true });
 
   return (
-    { uTSup }
+    { uTSup, uRetDam_max, uRetDam_min }
   ) => {
     const one = oneFn({});
     const zer = zerFn({});
     const damMinLimSig = damMinLimSigFn({});
     const damMaxLimSig = damMaxLimSigFn({});
     const relDamPos = relDamPosFn({ f1: zer.y, f2: one.y, u: uTSup, x1: damMinLimSig.y, x2: damMaxLimSig.y });
-    const retDamPos = retDamPosFn({ u: uTSup, x1: damMinLimSig.y, x2: damMaxLimSig.y });
+    const retDamPos = retDamPosFn({ f1: uRetDam_max, f2: uRetDam_min, u: uTSup, x1: damMinLimSig.y, x2: damMaxLimSig.y });
 
     return { yOutDam: one.y, yRelDam: relDamPos.y, yRetDam: retDamPos.y };
   }

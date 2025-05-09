@@ -16,7 +16,7 @@ module.exports = (
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.Economizers.Subsequences.Modulations.Validation.ReturnFan.ecoMod
   const ecoModFn = returnfan_2c0de3b9({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.Economizers.Subsequences.Modulations.Validation.ReturnFan.ecoMod1
-  const ecoMod1Fn = returnfan_2c0de3b9({});
+  const ecoMod1Fn = returnfan_2c0de3b9({ have_dirCon: false });
 
   return (
     {  }
@@ -27,6 +27,6 @@ module.exports = (
     const ecoMod = ecoModFn({ uRetDam_max: maxRetDam.y, uRetDam_min: minRetDam.y, uTSup: temLoo.y });
     const ecoMod1 = ecoMod1Fn({ uRetDam_max: maxRetDam.y, uRetDam_min: minRetDam.y, uTSup: temLoo.y });
 
-    return {};
+    return { maxRetDam: maxRetDam, minRetDam: minRetDam, temLoo: temLoo, ecoMod: ecoMod, ecoMod1: ecoMod1 };
   }
 }

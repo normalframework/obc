@@ -34,7 +34,7 @@ module.exports = (
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.VentilationZones.Title24.Validation.Setpoints.reaToInt
   const reaToIntFn = realtointeger_b3838f5e({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.VentilationZones.Title24.Validation.Setpoints.parFanFlo
-  const parFanFloFn = sin_9696c4d3({ amplitude: 0.01, freqHz: "1/7200", offset: 0.008 });
+  const parFanFloFn = sin_9696c4d3({ amplitude: 0.01, freqHz: 1/7200, offset: 0.008 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.VentilationZones.Title24.Validation.Setpoints.co2SenZonParFan
   const co2SenZonParFanFn = setpoints_aa6b5c6d({ have_CO2Sen: true, have_parFanPowUni: true, VAreMin_flow: 0.012, VMin_flow: 0.018, VOccMin_flow: 0.015 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.VentilationZones.Title24.Validation.Setpoints.noSenZon
@@ -72,6 +72,6 @@ module.exports = (
     const not2 = not2Fn({ u: winSta.y });
     const winSenZon = winSenZonFn({ u1Win: not2.y });
 
-    return {};
+    return { co2Con: co2Con, CO2Set: CO2Set, ram: ram, greThr: greThr, not1: not1, booToInt: booToInt, co2SenSZVAV: co2SenSZVAV, co2SenZon: co2SenZon, ram1: ram1, reaToInt: reaToInt, parFanFlo: parFanFlo, co2SenZonParFan: co2SenZonParFan, noSenZon: noSenZon, occSta: occSta, occSenZon: occSenZon, winSta: winSta, not2: not2, winSenZon: winSenZon };
   }
 }

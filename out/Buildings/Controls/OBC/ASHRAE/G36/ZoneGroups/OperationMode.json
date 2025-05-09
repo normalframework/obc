@@ -1,5 +1,6 @@
 {
   "inputs": [
+    "uOpeWin",
     "totColZon",
     "totHotZon",
     "u1HigOccCoo",
@@ -8,7 +9,6 @@
     "maxWarUpTim",
     "u1EndSetBac",
     "u1EndSetUp",
-    "uOpeWin",
     "u1SetBac",
     "u1SetUp",
     "u1Occ",

@@ -54,18 +54,18 @@ module.exports = (
   const winStaFn = constant_48cc1015({ k: true });
 
   return (
-    { TZon, u1Win, TUnoHeaSet }
+    { tNexOcc, TZon, u1Occ, cooSetAdj, heaSetAdj, setAdj, TOccCooSet, TOccHeaSet, TUnoCooSet, TUnoHeaSet, u1Win, uCooDemLimLev, uHeaDemLimLev, cooDowTim, warUpTim }
   ) => {
     const occSta = occStaFn({});
-    const zonSta = zonStaFn({ TUnoHeaSet: TUnoHeaSet });
+    const zonSta = zonStaFn({ cooDowTim: cooDowTim, TOccCooSet: TOccCooSet, TOccHeaSet: TOccHeaSet, TUnoCooSet: TUnoCooSet, TUnoHeaSet: TUnoHeaSet, TZon: TZon, u1Win: u1Win, warUpTim: warUpTim });
     const colZon = colZonFn({ u: zonSta.yUnoHeaHig });
     const hotZon = hotZonFn({ u: zonSta.yHigUnoCoo });
     const winOpe = winOpeFn({ u: u1Win });
     const booToInt = booToIntFn({ u: winOpe.y });
-    const opeModSel = opeModSelFn({ u1SetUp: zonSta.yHigUnoCoo, totColZon: colZon.y, totHotZon: hotZon.y, TZonMin: TZon, uOpeWin: booToInt.y });
-    const TZonSet = TZonSetFn({ u1Win: u1Win, u1Occ: occSta.y, uOpeMod: opeModSel.yOpeMod });
+    const opeModSel = opeModSelFn({ maxCooDowTim: zonSta.yCooTim, maxWarUpTim: zonSta.yWarTim, tNexOcc: tNexOcc, totColZon: colZon.y, totHotZon: hotZon.y, TZonMin: TZon, u1EndSetBac: zonSta.yEndSetBac, u1EndSetUp: zonSta.yEndSetUp, u1HigOccCoo: zonSta.yHigOccCoo, u1Occ: u1Occ, u1OccHeaHig: zonSta.yOccHeaHig, u1SetBac: zonSta.yUnoHeaHig, u1SetUp: zonSta.yHigUnoCoo, uOpeWin: booToInt.y });
+    const TZonSet = TZonSetFn({ cooSetAdj: cooSetAdj, heaSetAdj: heaSetAdj, setAdj: setAdj, TOccCooSet: TOccCooSet, TOccHeaSet: TOccHeaSet, TUnoCooSet: TUnoCooSet, TUnoHeaSet: TUnoHeaSet, u1Occ: occSta.y, u1Win: u1Win, uCooDemLimLev: uCooDemLimLev, uHeaDemLimLev: uHeaDemLimLev, uOpeMod: opeModSel.yOpeMod });
     const winSta = winStaFn({});
 
-    return { THeaSet: TZonSet.THeaSet, yOpeMod: opeModSel.yOpeMod };
+    return { TCooSet: TZonSet.TCooSet, THeaSet: TZonSet.THeaSet, yOpeMod: opeModSel.yOpeMod };
   }
 }

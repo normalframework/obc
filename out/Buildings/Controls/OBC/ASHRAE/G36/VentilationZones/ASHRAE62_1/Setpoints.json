@@ -1,10 +1,12 @@
 {
   "inputs": [
     "ppmCO2Set",
+    "TZon",
     "TDis",
     "VParFan_flow",
     "uZonSta",
     "uOpeMod",
+    "ppmCO2",
     "u1Occ",
     "u1Win"
   ],

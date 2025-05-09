@@ -18,7 +18,7 @@ module.exports = (
 		outDamMinFloMaxSpe = 0.3,
 		outDamMinFloMinSpe = 0.4,
 		outDamPhy_max = 1,
-		outDamPhy_min,
+		outDamPhy_min = 0,
 		supFanSpe_max = 1,
 		supFanSpe_min = 0.1,
 		VOutDes_flow,
@@ -27,8 +27,14 @@ module.exports = (
 ) => {
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.SingleZone.VAV.Economizers.Subsequences.Limits.outDamPhyPosMinSig
   const outDamPhyPosMinSigFn = constant_baefa089({ k: outDamPhy_min });
+  // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.SingleZone.VAV.Economizers.Subsequences.Limits.conInt
+  const conIntFn = constant_8c5ba27d({ k: 1 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.SingleZone.VAV.Economizers.Subsequences.Limits.intLesEqu
   const intLesEquFn = lessequal_4ee8ad38({});
+  // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.SingleZone.VAV.Economizers.Subsequences.Limits.conInt1
+  const conInt1Fn = constant_8c5ba27d({ k: 1 });
+  // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.SingleZone.VAV.Economizers.Subsequences.Limits.intEqu1
+  const intEqu1Fn = equal_2ac2bdd1({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.SingleZone.VAV.Economizers.Subsequences.Limits.and1
   const and1Fn = and_6d642f1c({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.SingleZone.VAV.Economizers.Subsequences.Limits.and2
@@ -66,22 +72,19 @@ module.exports = (
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.SingleZone.VAV.Economizers.Subsequences.Limits.noZerMin
   const noZerMinFn = greaterthreshold_64a3c4e0({ h: 0.5*floHys, t: floHys });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.SingleZone.VAV.Economizers.Subsequences.Limits.zer
-  const zerFn = constant_baefa089({});
+  const zerFn = constant_baefa089({ k: 0 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.SingleZone.VAV.Economizers.Subsequences.Limits.enaDis2
   const enaDis2Fn = switch_6d141143({});
-  // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.SingleZone.VAV.Economizers.Subsequences.Limits.conInt
-  const conIntFn = constant_8c5ba27d({ k: 1 });
-  // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.SingleZone.VAV.Economizers.Subsequences.Limits.conInt1
-  const conInt1Fn = constant_8c5ba27d({ k: 1 });
-  // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.SingleZone.VAV.Economizers.Subsequences.Limits.intEqu1
-  const intEqu1Fn = equal_2ac2bdd1({});
 
   return (
     { u1SupFan, uOpeMod, uFreProSta, VOutMinSet_flow, uSupFan_actual }
   ) => {
     const outDamPhyPosMinSig = outDamPhyPosMinSigFn({});
-    const intLesEqu = intLesEquFn({ u1: uFreProSta });
-    const and1 = and1Fn({ u1: intLesEqu.y });
+    const conInt = conIntFn({});
+    const intLesEqu = intLesEquFn({ u1: uFreProSta, u2: conInt.y });
+    const conInt1 = conInt1Fn({});
+    const intEqu1 = intEqu1Fn({ u1: uOpeMod, u2: conInt1.y });
+    const and1 = and1Fn({ u1: intLesEqu.y, u2: intEqu1.y });
     const and2 = and2Fn({ u1: u1SupFan, u2: and1.y });
     const not1 = not1Fn({ u: and2.y });
     const outDamPhyPosMaxSig = outDamPhyPosMaxSigFn({});
@@ -101,9 +104,6 @@ module.exports = (
     const noZerMin = noZerMinFn({ u: VOutMinSet_flow });
     const zer = zerFn({});
     const enaDis2 = enaDis2Fn({ u1: enaDis.y, u2: noZerMin.y, u3: zer.y });
-    const conInt = conIntFn({ y: intLesEqu.u2 });
-    const conInt1 = conInt1Fn({});
-    const intEqu1 = intEqu1Fn({ u1: uOpeMod, u2: conInt1.y, y: and1.u2 });
 
     return { yOutDam_max: enaDis1.y, yOutDam_min: enaDis2.y };
   }

@@ -1,5 +1,8 @@
 {
   "inputs": [
+    "u1SupFan",
+    "TAirSup",
+    "TSupCooSet",
     "uZonSta"
   ],
   "outputs": [

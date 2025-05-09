@@ -1,3 +1,4 @@
+const TimeManager = require("../../../../../../TimeManager");
 /**
  * Ramp block that generates a ramp signal.
  * 
@@ -15,14 +16,16 @@
     throw new Error("duration must be greater than Constants.small");
   }
 
+  const start = TimeManager.time + startTime;
+
   return () => {
-    const currentTime = Date.now() / 1000;
+    const currentTime = TimeManager.time;
     let y;
 
-    if (currentTime < startTime) {
+    if (currentTime < start) {
       y = offset;
-    } else if (currentTime < (startTime + duration)) {
-      y = offset + (currentTime - startTime) * height / duration;
+    } else if (currentTime < (start + duration)) {
+      y = offset + (currentTime - start) * height / duration;
     } else {
       y = offset + height;
     }

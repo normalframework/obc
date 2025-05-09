@@ -1,30 +1,30 @@
 
 // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.ParallelFanVVF.Subsequences.DamperValves
-const booleantoreal_df99be1a = require("../../../../../CDL/Conversions/BooleanToReal");
-const equal_2ac2bdd1 = require("../../../../../CDL/Integers/Equal");
-const constant_8c5ba27d = require("../../../../../CDL/Integers/Sources/Constant");
-const and_6d642f1c = require("../../../../../CDL/Logical/And");
-const latch_a5aa3a49 = require("../../../../../CDL/Logical/Latch");
-const not_6d646018 = require("../../../../../CDL/Logical/Not");
-const or_e27f1bfe = require("../../../../../CDL/Logical/Or");
-const add_a5faf0f2 = require("../../../../../CDL/Reals/Add");
-const addparameter_26b0d2d7 = require("../../../../../CDL/Reals/AddParameter");
-const divide_52bbd688 = require("../../../../../CDL/Reals/Divide");
-const greater_b1da53cb = require("../../../../../CDL/Reals/Greater");
-const greaterthreshold_64a3c4e0 = require("../../../../../CDL/Reals/GreaterThreshold");
-const line_196841c3 = require("../../../../../CDL/Reals/Line");
-const max_a5fb1db5 = require("../../../../../CDL/Reals/Max");
-const multiply_a462b873 = require("../../../../../CDL/Reals/Multiply");
-const multiplybyparameter_13a4f29f = require("../../../../../CDL/Reals/MultiplyByParameter");
-const pidwithreset_1df6d9ad = require("../../../../../CDL/Reals/PIDWithReset");
-const constant_baefa089 = require("../../../../../CDL/Reals/Sources/Constant");
-const subtract_029d2d63 = require("../../../../../CDL/Reals/Subtract");
-const switch_6d141143 = require("../../../../../CDL/Reals/Switch");
+const booleantoreal_552dc85b = require("../../../../../CDL/Conversions/BooleanToReal");
+const equal_2c2e9230 = require("../../../../../CDL/Integers/Equal");
+const constant_01efacbe = require("../../../../../CDL/Integers/Sources/Constant");
+const and_f2b4cf1d = require("../../../../../CDL/Logical/And");
+const latch_1952de0a = require("../../../../../CDL/Logical/Latch");
+const not_f2b50019 = require("../../../../../CDL/Logical/Not");
+const or_de89f7dd = require("../../../../../CDL/Logical/Or");
+const add_53459d33 = require("../../../../../CDL/Reals/Add");
+const addparameter_2b4d5fb6 = require("../../../../../CDL/Reals/AddParameter");
+const divide_777f36a7 = require("../../../../../CDL/Reals/Divide");
+const greater_2582f78c = require("../../../../../CDL/Reals/Greater");
+const greaterthreshold_7c60ca3f = require("../../../../../CDL/Reals/GreaterThreshold");
+const line_15731da2 = require("../../../../../CDL/Reals/Line");
+const max_5345c9f6 = require("../../../../../CDL/Reals/Max");
+const multiply_a5ce8cd2 = require("../../../../../CDL/Reals/Multiply");
+const multiplybyparameter_8938fce0 = require("../../../../../CDL/Reals/MultiplyByParameter");
+const pidwithreset_2293668c = require("../../../../../CDL/Reals/PIDWithReset");
+const constant_d2aca5e8 = require("../../../../../CDL/Reals/Sources/Constant");
+const subtract_040901c2 = require("../../../../../CDL/Reals/Subtract");
+const switch_91d77162 = require("../../../../../CDL/Reals/Switch");
 
 module.exports = (
   {
-		controllerTypeDam = Math.PI,
-		controllerTypeVal = Math.PI,
+		controllerTypeDam = 1,
+		controllerTypeVal = 1,
 		dTDisZonSetMax = 11,
 		dTHys = 0.25,
 		floHys = 0.01,
@@ -43,150 +43,150 @@ module.exports = (
     } = {}
 ) => {
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.ParallelFanVVF.Subsequences.DamperValves.addPar
-  const addParFn = addparameter_26b0d2d7({ p: dTDisZonSetMax });
+  const addParFn = addparameter_2b4d5fb6({ p: dTDisZonSetMax });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.ParallelFanVVF.Subsequences.DamperValves.conZer3
-  const conZer3Fn = constant_baefa089({});
+  const conZer3Fn = constant_d2aca5e8({ k: 0 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.ParallelFanVVF.Subsequences.DamperValves.conHal
-  const conHalFn = constant_baefa089({ k: 0.5 });
+  const conHalFn = constant_d2aca5e8({ k: 0.5 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.ParallelFanVVF.Subsequences.DamperValves.conTDisHeaSet
-  const conTDisHeaSetFn = line_196841c3({});
+  const conTDisHeaSetFn = line_15731da2({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.ParallelFanVVF.Subsequences.DamperValves.uno
-  const unoFn = constant_8c5ba27d({ k: 7 });
+  const unoFn = constant_01efacbe({ k: 7 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.ParallelFanVVF.Subsequences.DamperValves.isUno
-  const isUnoFn = equal_2ac2bdd1({});
+  const isUnoFn = equal_2c2e9230({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.ParallelFanVVF.Subsequences.DamperValves.gre1
-  const gre1Fn = greater_b1da53cb({ h: floHys });
+  const gre1Fn = greater_2582f78c({ h: floHys });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.ParallelFanVVF.Subsequences.DamperValves.minFan
-  const minFanFn = constant_baefa089({ k: minRat });
+  const minFanFn = constant_d2aca5e8({ k: minRat });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.ParallelFanVVF.Subsequences.DamperValves.gai1
-  const gai1Fn = multiplybyparameter_13a4f29f({ k: 0.5 });
+  const gai1Fn = multiplybyparameter_8938fce0({ k: 0.5 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.ParallelFanVVF.Subsequences.DamperValves.sub
-  const subFn = subtract_029d2d63({});
+  const subFn = subtract_040901c2({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.ParallelFanVVF.Subsequences.DamperValves.gre
-  const greFn = greater_b1da53cb({ h: floHys });
+  const greFn = greater_2582f78c({ h: floHys });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.ParallelFanVVF.Subsequences.DamperValves.lat
-  const latFn = latch_a5aa3a49({});
+  const latFn = latch_1952de0a({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.ParallelFanVVF.Subsequences.DamperValves.booToRea
-  const booToReaFn = booleantoreal_df99be1a({});
+  const booToReaFn = booleantoreal_552dc85b({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.ParallelFanVVF.Subsequences.DamperValves.conInt
-  const conIntFn = constant_8c5ba27d({ k: 1 });
+  const conIntFn = constant_01efacbe({ k: 1 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.ParallelFanVVF.Subsequences.DamperValves.forZerFlo
-  const forZerFloFn = equal_2ac2bdd1({});
+  const forZerFloFn = equal_2c2e9230({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.ParallelFanVVF.Subsequences.DamperValves.zerFlo
-  const zerFloFn = booleantoreal_df99be1a({});
+  const zerFloFn = booleantoreal_552dc85b({ realTrue: 0 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.ParallelFanVVF.Subsequences.DamperValves.conInt1
-  const conInt1Fn = constant_8c5ba27d({ k: 2 });
+  const conInt1Fn = constant_01efacbe({ k: 2 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.ParallelFanVVF.Subsequences.DamperValves.forCooMax
-  const forCooMaxFn = equal_2ac2bdd1({});
+  const forCooMaxFn = equal_2c2e9230({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.ParallelFanVVF.Subsequences.DamperValves.cooMax
-  const cooMaxFn = booleantoreal_df99be1a({ realTrue: VCooMax_flow });
+  const cooMaxFn = booleantoreal_552dc85b({ realTrue: VCooMax_flow });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.ParallelFanVVF.Subsequences.DamperValves.conInt2
-  const conInt2Fn = constant_8c5ba27d({ k: 3 });
+  const conInt2Fn = constant_01efacbe({ k: 3 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.ParallelFanVVF.Subsequences.DamperValves.forMinFlo
-  const forMinFloFn = equal_2ac2bdd1({});
+  const forMinFloFn = equal_2c2e9230({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.ParallelFanVVF.Subsequences.DamperValves.minFlo
-  const minFloFn = booleantoreal_df99be1a({ realTrue: VMin_flow });
+  const minFloFn = booleantoreal_552dc85b({ realTrue: VMin_flow });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.ParallelFanVVF.Subsequences.DamperValves.add2
-  const add2Fn = add_a5faf0f2({});
+  const add2Fn = add_53459d33({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.ParallelFanVVF.Subsequences.DamperValves.add1
-  const add1Fn = add_a5faf0f2({});
+  const add1Fn = add_53459d33({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.ParallelFanVVF.Subsequences.DamperValves.or3
-  const or3Fn = or_e27f1bfe({});
+  const or3Fn = or_de89f7dd({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.ParallelFanVVF.Subsequences.DamperValves.or2
-  const or2Fn = or_e27f1bfe({});
+  const or2Fn = or_de89f7dd({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.ParallelFanVVF.Subsequences.DamperValves.greThr1
-  const greThr1Fn = greaterthreshold_64a3c4e0({ h: 0.5*looHys, t: looHys });
+  const greThr1Fn = greaterthreshold_7c60ca3f({ h: 0.5*looHys, t: looHys });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.ParallelFanVVF.Subsequences.DamperValves.sub2
-  const sub2Fn = subtract_029d2d63({});
+  const sub2Fn = subtract_040901c2({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.ParallelFanVVF.Subsequences.DamperValves.greThr
-  const greThrFn = greaterthreshold_64a3c4e0({ h: 0.5*dTHys, t: dTHys });
+  const greThrFn = greaterthreshold_7c60ca3f({ h: 0.5*dTHys, t: dTHys });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.ParallelFanVVF.Subsequences.DamperValves.and4
-  const and4Fn = and_6d642f1c({});
+  const and4Fn = and_f2b4cf1d({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.ParallelFanVVF.Subsequences.DamperValves.conZer
-  const conZerFn = constant_baefa089({});
+  const conZerFn = constant_d2aca5e8({ k: 0 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.ParallelFanVVF.Subsequences.DamperValves.conOne
-  const conOneFn = constant_baefa089({ k: 1 });
+  const conOneFn = constant_d2aca5e8({ k: 1 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.ParallelFanVVF.Subsequences.DamperValves.lin
-  const linFn = line_196841c3({});
+  const linFn = line_15731da2({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.ParallelFanVVF.Subsequences.DamperValves.swi5
-  const swi5Fn = switch_6d141143({});
+  const swi5Fn = switch_91d77162({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.ParallelFanVVF.Subsequences.DamperValves.swi
-  const swiFn = switch_6d141143({});
+  const swiFn = switch_91d77162({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.ParallelFanVVF.Subsequences.DamperValves.swi8
-  const swi8Fn = switch_6d141143({});
+  const swi8Fn = switch_91d77162({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.ParallelFanVVF.Subsequences.DamperValves.sub1
-  const sub1Fn = subtract_029d2d63({});
+  const sub1Fn = subtract_040901c2({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.ParallelFanVVF.Subsequences.DamperValves.max1
-  const max1Fn = max_a5fb1db5({});
+  const max1Fn = max_5345c9f6({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.ParallelFanVVF.Subsequences.DamperValves.mul
-  const mulFn = multiply_a462b873({});
+  const mulFn = multiply_a5ce8cd2({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.ParallelFanVVF.Subsequences.DamperValves.occ
-  const occFn = constant_8c5ba27d({ k: 1 });
+  const occFn = constant_01efacbe({ k: 1 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.ParallelFanVVF.Subsequences.DamperValves.isOcc
-  const isOccFn = equal_2ac2bdd1({});
+  const isOccFn = equal_2c2e9230({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.ParallelFanVVF.Subsequences.DamperValves.and1
-  const and1Fn = and_6d642f1c({});
+  const and1Fn = and_f2b4cf1d({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.ParallelFanVVF.Subsequences.DamperValves.gre2
-  const gre2Fn = greater_b1da53cb({ h: floHys });
+  const gre2Fn = greater_2582f78c({ h: floHys });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.ParallelFanVVF.Subsequences.DamperValves.booToRea1
-  const booToRea1Fn = booleantoreal_df99be1a({});
+  const booToRea1Fn = booleantoreal_552dc85b({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.ParallelFanVVF.Subsequences.DamperValves.mul1
-  const mul1Fn = multiply_a462b873({});
+  const mul1Fn = multiply_a5ce8cd2({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.ParallelFanVVF.Subsequences.DamperValves.greThr2
-  const greThr2Fn = greaterthreshold_64a3c4e0({ h: 0.5*looHys, t: looHys });
+  const greThr2Fn = greaterthreshold_7c60ca3f({ h: 0.5*looHys, t: looHys });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.ParallelFanVVF.Subsequences.DamperValves.cooHea
-  const cooHeaFn = or_e27f1bfe({});
+  const cooHeaFn = or_de89f7dd({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.ParallelFanVVF.Subsequences.DamperValves.not1
-  const not1Fn = not_6d646018({});
+  const not1Fn = not_f2b50019({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.ParallelFanVVF.Subsequences.DamperValves.booToRea2
-  const booToRea2Fn = booleantoreal_df99be1a({});
+  const booToRea2Fn = booleantoreal_552dc85b({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.ParallelFanVVF.Subsequences.DamperValves.max2
-  const max2Fn = max_a5fb1db5({});
+  const max2Fn = max_5345c9f6({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.ParallelFanVVF.Subsequences.DamperValves.maxFan
-  const maxFanFn = constant_baefa089({ k: maxRat });
+  const maxFanFn = constant_d2aca5e8({ k: maxRat });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.ParallelFanVVF.Subsequences.DamperValves.conHal1
-  const conHal1Fn = constant_baefa089({ k: 0.5 });
+  const conHal1Fn = constant_d2aca5e8({ k: 0.5 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.ParallelFanVVF.Subsequences.DamperValves.conHal2
-  const conHal2Fn = constant_baefa089({ k: 1 });
+  const conHal2Fn = constant_d2aca5e8({ k: 1 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.ParallelFanVVF.Subsequences.DamperValves.heaFanRat
-  const heaFanRatFn = line_196841c3({});
+  const heaFanRatFn = line_15731da2({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.ParallelFanVVF.Subsequences.DamperValves.mul2
-  const mul2Fn = multiply_a462b873({});
+  const mul2Fn = multiply_a5ce8cd2({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.ParallelFanVVF.Subsequences.DamperValves.swi6
-  const swi6Fn = switch_6d141143({});
+  const swi6Fn = switch_91d77162({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.ParallelFanVVF.Subsequences.DamperValves.swi4
-  const swi4Fn = switch_6d141143({});
+  const swi4Fn = switch_91d77162({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.ParallelFanVVF.Subsequences.DamperValves.swi7
-  const swi7Fn = switch_6d141143({});
+  const swi7Fn = switch_91d77162({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.ParallelFanVVF.Subsequences.DamperValves.greThr3
-  const greThr3Fn = greaterthreshold_64a3c4e0({ h: floHys/2, t: floHys });
+  const greThr3Fn = greaterthreshold_7c60ca3f({ h: floHys/2, t: floHys });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.ParallelFanVVF.Subsequences.DamperValves.nomFlow
-  const nomFlowFn = constant_baefa089({ k: VCooMax_flow });
+  const nomFlowFn = constant_d2aca5e8({ k: VCooMax_flow });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.ParallelFanVVF.Subsequences.DamperValves.VDis_flowNor
-  const VDis_flowNorFn = divide_52bbd688({});
+  const VDis_flowNorFn = divide_777f36a7({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.ParallelFanVVF.Subsequences.DamperValves.VDisSet_flowNor
-  const VDisSet_flowNorFn = divide_52bbd688({});
+  const VDisSet_flowNorFn = divide_777f36a7({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.ParallelFanVVF.Subsequences.DamperValves.conDam
-  const conDamFn = pidwithreset_1df6d9ad({ controllerType: controllerTypeDam, k: kDam, Td: TdDam, Ti: TiDam, y_reset: iniDam, yMax: 1 });
+  const conDamFn = pidwithreset_2293668c({ controllerType: controllerTypeDam, k: kDam, Td: TdDam, Ti: TiDam, y_reset: iniDam, yMax: 1, yMin: 0 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.ParallelFanVVF.Subsequences.DamperValves.swi3
-  const swi3Fn = switch_6d141143({});
+  const swi3Fn = switch_91d77162({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.ParallelFanVVF.Subsequences.DamperValves.conVal
-  const conValFn = pidwithreset_1df6d9ad({ controllerType: controllerTypeVal, k: kVal, Td: TdVal, Ti: TiVal, yMax: 1 });
+  const conValFn = pidwithreset_2293668c({ controllerType: controllerTypeVal, k: kVal, Td: TdVal, Ti: TiVal, yMax: 1, yMin: 0 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.ParallelFanVVF.Subsequences.DamperValves.swi1
-  const swi1Fn = switch_6d141143({});
+  const swi1Fn = switch_91d77162({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.ParallelFanVVF.Subsequences.DamperValves.swi2
-  const swi2Fn = switch_6d141143({});
+  const swi2Fn = switch_91d77162({});
 
   return (
-    { THeaSet, u1Fan, uHea, oveFloSet, VPri_flow, VOAMin_flow, uCoo, uOpeMod, TZon, VActMin_flow }
+    { THeaSet, u1Fan, TSupSet, uHea, TDis, oveFloSet, VPri_flow, VOAMin_flow, uCoo, uOpeMod, VActMin_flow, VActCooMax_flow, TSup, TZon }
   ) => {
     const addPar = addParFn({ u: THeaSet });
     const conZer3 = conZer3Fn({});
     const conHal = conHalFn({});
-    const conTDisHeaSet = conTDisHeaSetFn({ u: uHea, f2: addPar.y, x1: conZer3.y, x2: conHal.y });
+    const conTDisHeaSet = conTDisHeaSetFn({ f1: TSupSet, f2: addPar.y, u: uHea, x1: conZer3.y, x2: conHal.y });
     const uno = unoFn({});
     const isUno = isUnoFn({ u1: uno.y, u2: uOpeMod });
-    const gre1 = gre1Fn({ u2: VOAMin_flow });
+    const gre1 = gre1Fn({ u1: VPri_flow, u2: VOAMin_flow });
     const minFan = minFanFn({});
     const gai1 = gai1Fn({ u: minFan.y });
     const sub = subFn({ u1: VOAMin_flow, u2: gai1.y });
@@ -207,12 +207,12 @@ module.exports = (
     const or3 = or3Fn({ u1: forZerFlo.y, u2: forCooMax.y });
     const or2 = or2Fn({ u1: forMinFlo.y, u2: or3.y });
     const greThr1 = greThr1Fn({ u: uCoo });
-    const sub2 = sub2Fn({ u2: TZon });
+    const sub2 = sub2Fn({ u1: TSup, u2: TZon });
     const greThr = greThrFn({ u: sub2.y });
     const and4 = and4Fn({ u1: greThr1.y, u2: greThr.y });
     const conZer = conZerFn({});
     const conOne = conOneFn({});
-    const lin = linFn({ u: uCoo, x1: conZer.y, x2: conOne.y });
+    const lin = linFn({ f1: VActMin_flow, f2: VActCooMax_flow, u: uCoo, x1: conZer.y, x2: conOne.y });
     const swi5 = swi5Fn({ u1: VActMin_flow, u2: and4.y, u3: lin.y });
     const swi = swiFn({ u1: swi5.y, u2: greThr1.y, u3: VActMin_flow });
     const swi8 = swi8Fn({ u1: add1.y, u2: or2.y, u3: swi.y });
@@ -244,7 +244,7 @@ module.exports = (
     const VDisSet_flowNor = VDisSet_flowNorFn({ u1: swi8.y, u2: nomFlow.y });
     const conDam = conDamFn({ trigger: u1Fan, u_m: VDis_flowNor.y, u_s: VDisSet_flowNor.y });
     const swi3 = swi3Fn({ u1: conZer3.y, u2: isUno.y, u3: conDam.y });
-    const conVal = conValFn({ trigger: greThr2.y });
+    const conVal = conValFn({ trigger: greThr2.y, u_m: TDis, u_s: conTDisHeaSet.y });
     const swi1 = swi1Fn({ u1: conVal.y, u2: greThr2.y, u3: conZer3.y });
     const swi2 = swi2Fn({ u1: conZer3.y, u2: isUno.y, u3: swi1.y });
 

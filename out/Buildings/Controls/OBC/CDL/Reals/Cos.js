@@ -9,7 +9,7 @@
  * @returns {number} output.y - Connector of Real output signal for cosine of input.
  */
 
- function cos({ }) {
+ function cos({ } = {}) {
   return ({ u = 0}) => {
     return { y: Math.cos(u) };
   }

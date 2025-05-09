@@ -7,6 +7,7 @@ import {
   translateFile as translateFileGpt,
 } from "./gpt";
 import { translateDirectory, translateFile } from "./translator";
+import { runExpriment } from "./expriment";
 
 process.setMaxListeners(0);
 
@@ -58,23 +59,35 @@ program
   .option("-o, --output <output>", "Output file")
   .option("-v, --visualize", "Visualize the execution graph")
   .option("--rebuild-modelica", "Rebuild modelica files")
+  .option("--validation", "Generate validation files")
   .option("-g, --graph <graph>", "Visualize graph file path")
   .description("Translate modelica files")
-  .action(async ({ input, output, visualize, graph, rebuildModelica }) => {
-    output = output ?? process.cwd();
-    await translate(input, output, {
-      dir: (input, output) =>
-        translateDirectory(input, output, {
-          visualize: graph ?? visualize,
-          rebuildModelica,
-        }),
-      file: (input, output) =>
-        translateFile(input, output, {
-          visualize: graph ?? visualize,
-          rebuildModelica,
-        }),
-    });
-  });
+  .action(
+    async ({
+      input,
+      output,
+      visualize,
+      graph,
+      rebuildModelica,
+      validation,
+    }) => {
+      output = output ?? process.cwd();
+      await translate(input, output, {
+        dir: (input, output) =>
+          translateDirectory(input, output, {
+            visualize: graph ?? visualize,
+            rebuildModelica,
+            validation,
+          }),
+        file: (input, output) =>
+          translateFile(input, output, {
+            visualize: graph ?? visualize,
+            rebuildModelica,
+            validation,
+          }),
+      });
+    }
+  );
 
 program
   .command("gpt")
@@ -97,4 +110,14 @@ program
     });
   });
 
+program
+  .command("expriment")
+  .requiredOption("-i, --input <input>", "Input file")
+  .requiredOption("-d, --duration <duration>", "Duration")
+  .option("-o, --output <output>", "Output file")
+  .option("-s, --start <start>", "Start time")
+  .description("Run expriment")
+  .action(async ({ input, output, duration, start }) => {
+    await runExpriment({ input, output, duration, start });
+  });
 program.parse(process.argv);

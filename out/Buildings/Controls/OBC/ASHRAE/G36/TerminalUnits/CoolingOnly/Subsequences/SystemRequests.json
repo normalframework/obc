@@ -4,6 +4,8 @@
     "uCoo",
     "uDam",
     "VDis_flow",
+    "VSet_flow",
+    "TZon",
     "TCooSet"
   ],
   "outputs": [

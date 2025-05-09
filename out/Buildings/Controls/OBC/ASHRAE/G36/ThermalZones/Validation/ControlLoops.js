@@ -12,7 +12,7 @@ module.exports = (
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ThermalZones.Validation.ControlLoops.TZonHeaSetOcc
   const TZonHeaSetOccFn = constant_baefa089({ k: 293.15 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ThermalZones.Validation.ControlLoops.zonTem
-  const zonTemFn = sin_9696c4d3({ amplitude: 8, freqHz: "1/7200", offset: "273.15 +18" });
+  const zonTemFn = sin_9696c4d3({ amplitude: 8, freqHz: 1/7200, offset: 273.15 +18 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ThermalZones.Validation.ControlLoops.conLoo
   const conLooFn = controlloops_b2cc0610({});
 
@@ -24,6 +24,6 @@ module.exports = (
     const zonTem = zonTemFn({});
     const conLoo = conLooFn({ TCooSet: TZonCooSetOcc.y, THeaSet: TZonHeaSetOcc.y, TZon: zonTem.y });
 
-    return {};
+    return { TZonCooSetOcc: TZonCooSetOcc, TZonHeaSetOcc: TZonHeaSetOcc, zonTem: zonTem, conLoo: conLoo };
   }
 }

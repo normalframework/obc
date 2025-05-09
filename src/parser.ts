@@ -8,9 +8,26 @@ import {
   Node,
 } from "./types";
 import clc from "cli-color";
-
+import path from "path";
+import { visualizeGraph } from "./visualize";
+import fs from "fs";
 export const EXECUTION_START_NODE = "START";
 export const EXECUTION_END_NODE = "END";
+
+function parseNodesLinks(
+  nodes: Node[],
+  links: Link | Link[] | undefined,
+  processor: (id: string, node: Node) => void
+) {
+  parseLinks(links, (id) => {
+    const node = nodes.find((item) => item["@id"] === id);
+    if (!node) {
+      console.error(clc.red("[ERROR]"), "Node not found", id);
+      return;
+    }
+    processor(id, node);
+  });
+}
 
 function parseLinks(
   links: Link | Link[] | undefined,
@@ -28,12 +45,55 @@ function parseLinks(
   }
 }
 
-const KNOWN_VALUES = {
-  "Buildings.Controls.OBC.CDL.Types.SimpleController.PI": "Math.PI",
-};
+function parseLinkIds(links: Link | Link[] | undefined): string[] {
+  if (!links) {
+    return [];
+  }
+  return (
+    Array.isArray(links) ? links.map((link) => link["@id"]) : [links["@id"]]
+  ).map(parseIdentifier);
+}
+
+const KNOWN_VALUES = {};
+
+function findMatchingFile(baseDir: string, importPath: string) {
+  const targetSuffix = path.normalize(importPath);
+  const matches: string[] = [];
+
+  function search(dir) {
+    const entries = fs.readdirSync(dir, { withFileTypes: true });
+    for (const entry of entries) {
+      const fullPath = path.join(dir, entry.name);
+      if (entry.isDirectory()) {
+        search(fullPath);
+      } else if (entry.isFile()) {
+        const normalizedPath = path.normalize(fullPath);
+        if (normalizedPath.endsWith(targetSuffix)) {
+          matches.push(normalizedPath);
+        }
+      }
+    }
+  }
+
+  search(baseDir);
+  return matches[0] ?? null;
+}
+
+function resolveImport(currentFilePath: string, importPath: string) {
+  let dir = path.dirname(currentFilePath);
+
+  while (dir !== process.cwd()) {
+    if (fs.existsSync(path.join(dir, importPath))) {
+      return path.join(dir, importPath);
+    }
+    dir = path.dirname(dir);
+  }
+
+  return null;
+}
 
 function parseInlineValue(value: string | number | undefined) {
-  if (!value) {
+  if (value == null) {
     return value;
   }
   const knownValue = KNOWN_VALUES[value];
@@ -43,53 +103,164 @@ function parseInlineValue(value: string | number | undefined) {
   return value;
 }
 
-export function parseJsonToGraph(nodes: Node[]): Graph {
+function parseNode(graph: Graph, node: Node) {
+  let value = node["S231P:value"] ?? "";
+  if (typeof value === "object") {
+    value = value["@value"];
+  }
+  graph.setNode(node["@id"], {
+    id: node["@id"],
+    value: parseInlineValue(value),
+    type: node["@type"] ?? "",
+  });
+}
+
+export function parseJsonToGraph(filePath: string, nodes: Node[]): Graph {
   const graph = new Graph({ directed: true, compound: true });
+  const blockTypes = ["S231P:Block", "S231P:ElementaryBlock"];
+  const mainNode = nodes.find((item) =>
+    blockTypes.includes(item["@type"] ?? "")
+  );
+
+  const connectionTypes = new Map<string, "input" | "output" | "parameter">();
+
+  if (!mainNode) {
+    throw new Error("No main node found");
+  }
+
+  const id = mainNode["@id"];
+
+  graph.setNode(id, {
+    id: id,
+    type: mainNode["@type"],
+  });
+
+  parseNodesLinks(nodes, mainNode["S231P:containsBlock"], (linkId, node) => {
+    const type = node["@type"];
+    if (!type) {
+      return;
+    }
+    const nodeFile = makeFilePath(type) + ".jsonld";
+    const nodeFilePath = resolveImport(filePath, nodeFile);
+    if (!nodeFilePath) {
+      console.error(clc.red("[ERROR]"), "Node file is invalid", nodeFile);
+      return;
+    }
+    const nodeData = readGraphFile(nodeFilePath);
+
+    if (!nodeData) {
+      console.error(clc.red("[ERROR]"), "Node file is invalid", nodeFile);
+      return;
+    }
+    const nodeBlock = nodeData.find((item) =>
+      blockTypes.includes(item["@type"] ?? "")
+    );
+    if (!nodeBlock) {
+      console.error(
+        clc.red("[ERROR]"),
+        `Node block not found. ${filePath} - ${nodeFile} - ${linkId}`
+      );
+      return;
+    }
+
+    parseNode(graph, node);
+
+    const inputs = parseLinkIds(nodeBlock["S231P:hasInput"]);
+    const outputs = parseLinkIds(nodeBlock["S231P:hasOutput"]);
+    const parameters = parseLinkIds(nodeBlock["S231P:hasParameter"]);
+
+    parseLinks(node["S231P:hasInstance"], (instanceId) => {
+      const instanceNode = nodes.find((item) => item["@id"] === instanceId);
+      if (instanceNode) {
+        parseNode(graph, instanceNode);
+      } else {
+        graph.setNode(instanceId, {
+          id: instanceId,
+        });
+      }
+      const identifier = parseIdentifier(instanceId);
+      if (inputs.includes(identifier)) {
+        connectionTypes.set(instanceId, "input");
+        graph.setEdge(instanceId, linkId, {
+          label: "input",
+        });
+      } else if (outputs.includes(identifier)) {
+        connectionTypes.set(instanceId, "output");
+        graph.setEdge(linkId, instanceId, {
+          label: "output",
+        });
+      } else if (parameters.includes(identifier)) {
+        connectionTypes.set(instanceId, "parameter");
+        graph.setEdge(instanceId, linkId, {
+          label: "parameter",
+        });
+      } else {
+        console.log(
+          clc.yellow("[WARNING]"),
+          `Unknown link. ${filePath} -> ${nodeFilePath} -> ${instanceId}`
+        );
+      }
+    });
+    graph.setParent(linkId, id);
+  });
+
+  parseNodesLinks(nodes, mainNode["S231P:hasInput"], (linkId, node) => {
+    parseNode(graph, node);
+    graph.setEdge(linkId, id, {
+      label: "input",
+    });
+    connectionTypes.set(linkId, "output"); // Input of block we treat as output variable for connections
+  });
+
+  parseNodesLinks(nodes, mainNode["S231P:hasOutput"], (linkId, node) => {
+    parseNode(graph, node);
+    graph.setEdge(id, linkId, {
+      label: "output",
+    });
+    connectionTypes.set(linkId, "input"); // Output of block we treat as input variable for connections
+  });
+
+  parseNodesLinks(nodes, mainNode["S231P:hasParameter"], (linkId, node) => {
+    parseNode(graph, node);
+    graph.setEdge(linkId, id, {
+      label: "parameter",
+    });
+    connectionTypes.set(linkId, "output"); // Output of block we treat as input variable for connections
+  });
+
   nodes.forEach((item) => {
     const id = item["@id"];
-    let value = item["S231P:value"] ?? "";
-    if (typeof value === "object") {
-      value = value["@value"];
+    if (!id) {
+      return;
     }
-    graph.setNode(id, {
-      id: item["@id"],
-      value: parseInlineValue(value),
-      type: item["@type"],
-    });
-
-    parseLinks(item["S231P:containsBlock"], (linkId) => {
-      graph.setParent(linkId, id);
-    });
-
-    parseLinks(item["S231P:hasInput"], (linkId) => {
-      graph.setEdge(linkId, id, "input");
-    });
-
-    parseLinks(item["S231P:hasOutput"], (linkId) => {
-      graph.setEdge(id, linkId, "output");
-    });
-
-    parseLinks(item["S231P:hasParameter"], (linkId) => {
-      graph.setEdge(linkId, id, "parameter");
-    });
-
     parseLinks(item["S231P:isConnectedTo"], (linkId) => {
-      graph.setEdge(id, linkId, "connection");
-    });
-
-    parseLinks(item["S231P:hasInstance"], (linkId) => {
-      const val = nodes.find((item) => item["@id"] === linkId);
-      if (!val) {
-        graph.setEdge(linkId, id, "input");
-        return;
-      }
-      // handle parameter
-      if (val["S231P:value"] != null) {
-        graph.setEdge(linkId, id, "parameter");
-      }
-      // handle output
-      if (val["S231P:isConnectedTo"]) {
-        graph.setEdge(id, linkId, "output");
+      switch (connectionTypes.get(linkId)) {
+        case "input":
+          graph.setEdge(id, linkId, {
+            label: "connection",
+          });
+          break;
+        case "output":
+          graph.setEdge(linkId, id, {
+            label: "connection",
+          });
+          break;
+        case "parameter":
+          graph.setEdge(linkId, id, {
+            label: "connection",
+          });
+          break;
+        default:
+          // fallback logic for old files
+          if (id.endsWith(".y")) {
+            graph.setEdge(id, linkId, {
+              label: "connection",
+            });
+          } else {
+            graph.setEdge(linkId, id, {
+              label: "connection",
+            });
+          }
       }
     });
   });
@@ -131,7 +302,7 @@ function buildParameterExpression(
   value: string | undefined | number,
   tokens: string[]
 ) {
-  if (!value) {
+  if (value == null) {
     return undefined;
   }
 
@@ -175,7 +346,7 @@ function buildParameters(
 }
 
 export function buildExecutionGraph(graph: Graph) {
-  const executionGraph = new Graph({ directed: true });
+  const executionGraph = new Graph({ directed: true, multigraph: true });
   const mainElement = lookupBlockElementId(graph);
   const blocks = graph.children(mainElement);
   const { inputs, outputs, parameters } = dependencies(graph, mainElement);
@@ -214,7 +385,8 @@ export function buildExecutionGraph(graph: Graph) {
               parameter: id,
               id: block,
             }
-          )
+          ),
+          connectionId
         );
       } else if (outputs.includes(connectionNode)) {
         console.log(
@@ -239,7 +411,8 @@ export function buildExecutionGraph(graph: Graph) {
               parameter: id,
               id: block,
             }
-          )
+          ),
+          connectionId
         );
         return;
       }
@@ -346,6 +519,14 @@ const RESERVED_KEYWORDS = [
   "short",
 ];
 
+export function normalizeBlockId(blockId: string) {
+  return blockId.split("#").pop()!;
+}
+
+export function makeFilePath(blockId: string) {
+  return path.normalize(path.join(...normalizeBlockId(blockId).split(".")));
+}
+
 export function parseIdentifier(id: string) {
   const res = id.split(".").pop()!;
 
@@ -353,4 +534,13 @@ export function parseIdentifier(id: string) {
     return `_${res}`;
   }
   return res;
+}
+
+export function readGraphFile(filePath: string) {
+  const json = JSON.parse(fs.readFileSync(filePath, "utf-8"));
+  if (!json["@graph"]) {
+    console.error(clc.red("[ERROR]"), "Invalid json jsonld", filePath);
+    return;
+  }
+  return json["@graph"];
 }

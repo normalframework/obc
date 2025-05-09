@@ -12,6 +12,7 @@
     "uHeaCoi",
     "TAirSup",
     "TAirMix",
+    "uOutDamPosMin",
     "u1FreSta"
   ],
   "outputs": [

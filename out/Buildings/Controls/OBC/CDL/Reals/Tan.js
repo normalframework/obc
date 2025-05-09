@@ -7,7 +7,7 @@
  * @returns {number} output.y - Connector of Real output signal.
  */
 
-function tan({ }) {
+function tan({ } = {}) {
   return ({ u = 0 }) => {
     return { y: Math.tan(u) };
   }

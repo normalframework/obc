@@ -1,10 +1,10 @@
 {
   "inputs": [
+    "VColDucDis_flow",
     "VHotDucDis_flow",
     "uCooDam",
     "uHeaDam",
     "VActSet_flow",
-    "VColDucDis_flow",
     "uOpeMod",
     "u1CooFan",
     "u1HeaFan"

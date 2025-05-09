@@ -8,7 +8,7 @@ module.exports = (
   
 ) => {
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.Validation.ReliefDamper.dpBui
-  const dpBuiFn = ramp_3c414377({ duration: 1800, height: 40 });
+  const dpBuiFn = ramp_3c414377({ duration: 1800, height: 40, offset: 0 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.Validation.ReliefDamper.yFan
   const yFanFn = pulse_27dcacc8({ period: 4000 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.Validation.ReliefDamper.relDam
@@ -24,6 +24,6 @@ module.exports = (
     const relDam = relDamFn({ dpBui: dpBui.y, u1SupFan: yFan.y });
     const relDam1 = relDam1Fn({ dpBui: dpBui.y, u1SupFan: yFan.y });
 
-    return {};
+    return { dpBui: dpBui, yFan: yFan, relDam: relDam, relDam1: relDam1 };
   }
 }

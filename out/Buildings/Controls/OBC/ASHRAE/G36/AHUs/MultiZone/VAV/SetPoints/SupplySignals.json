@@ -1,7 +1,8 @@
 {
   "inputs": [
-    "TAirSupSet",
-    "u1SupFan"
+    "u1SupFan",
+    "TAirSup",
+    "TAirSupSet"
   ],
   "outputs": [
     "uTSup",

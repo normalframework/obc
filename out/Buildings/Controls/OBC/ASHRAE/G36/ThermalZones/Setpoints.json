@@ -5,6 +5,8 @@
     "uCooDemLimLev",
     "uHeaDemLimLev",
     "TUnoCooSet",
+    "TOccCooSet",
+    "TOccHeaSet",
     "u1Win"
   ],
   "outputs": [

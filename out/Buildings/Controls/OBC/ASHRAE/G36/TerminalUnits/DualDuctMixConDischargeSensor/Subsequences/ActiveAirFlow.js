@@ -1,10 +1,10 @@
 
 // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctMixConDischargeSensor.Subsequences.ActiveAirFlow
-const booleantoreal_df99be1a = require("../../../../../CDL/Conversions/BooleanToReal");
-const equal_2ac2bdd1 = require("../../../../../CDL/Integers/Equal");
-const constant_8c5ba27d = require("../../../../../CDL/Integers/Sources/Constant");
-const or_e27f1bfe = require("../../../../../CDL/Logical/Or");
-const multiply_a462b873 = require("../../../../../CDL/Reals/Multiply");
+const booleantoreal_552dc85b = require("../../../../../CDL/Conversions/BooleanToReal");
+const equal_2c2e9230 = require("../../../../../CDL/Integers/Equal");
+const constant_01efacbe = require("../../../../../CDL/Integers/Sources/Constant");
+const or_de89f7dd = require("../../../../../CDL/Logical/Or");
+const multiply_a5ce8cd2 = require("../../../../../CDL/Reals/Multiply");
 
 module.exports = (
   {
@@ -13,41 +13,41 @@ module.exports = (
     } = {}
 ) => {
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctMixConDischargeSensor.Subsequences.ActiveAirFlow.occMod
-  const occModFn = constant_8c5ba27d({ k: 1 });
+  const occModFn = constant_01efacbe({ k: 1 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctMixConDischargeSensor.Subsequences.ActiveAirFlow.ifOcc
-  const ifOccFn = equal_2ac2bdd1({});
+  const ifOccFn = equal_2c2e9230({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctMixConDischargeSensor.Subsequences.ActiveAirFlow.cooDowMod
-  const cooDowModFn = constant_8c5ba27d({ k: 2 });
+  const cooDowModFn = constant_01efacbe({ k: 2 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctMixConDischargeSensor.Subsequences.ActiveAirFlow.ifCooDow
-  const ifCooDowFn = equal_2ac2bdd1({});
+  const ifCooDowFn = equal_2c2e9230({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctMixConDischargeSensor.Subsequences.ActiveAirFlow.or3
-  const or3Fn = or_e27f1bfe({});
+  const or3Fn = or_de89f7dd({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctMixConDischargeSensor.Subsequences.ActiveAirFlow.setUpMod
-  const setUpModFn = constant_8c5ba27d({ k: 3 });
+  const setUpModFn = constant_01efacbe({ k: 3 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctMixConDischargeSensor.Subsequences.ActiveAirFlow.ifSetUp
-  const ifSetUpFn = equal_2ac2bdd1({});
+  const ifSetUpFn = equal_2c2e9230({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctMixConDischargeSensor.Subsequences.ActiveAirFlow.or2
-  const or2Fn = or_e27f1bfe({});
+  const or2Fn = or_de89f7dd({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctMixConDischargeSensor.Subsequences.ActiveAirFlow.actCooMax
-  const actCooMaxFn = booleantoreal_df99be1a({ realTrue: VCooMax_flow });
+  const actCooMaxFn = booleantoreal_552dc85b({ realTrue: VCooMax_flow });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctMixConDischargeSensor.Subsequences.ActiveAirFlow.warUpMod
-  const warUpModFn = constant_8c5ba27d({ k: 4 });
+  const warUpModFn = constant_01efacbe({ k: 4 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctMixConDischargeSensor.Subsequences.ActiveAirFlow.ifWarUp
-  const ifWarUpFn = equal_2ac2bdd1({});
+  const ifWarUpFn = equal_2c2e9230({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctMixConDischargeSensor.Subsequences.ActiveAirFlow.or1
-  const or1Fn = or_e27f1bfe({});
+  const or1Fn = or_de89f7dd({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctMixConDischargeSensor.Subsequences.ActiveAirFlow.setBacMod
-  const setBacModFn = constant_8c5ba27d({ k: 5 });
+  const setBacModFn = constant_01efacbe({ k: 5 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctMixConDischargeSensor.Subsequences.ActiveAirFlow.ifSetBac
-  const ifSetBacFn = equal_2ac2bdd1({});
+  const ifSetBacFn = equal_2c2e9230({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctMixConDischargeSensor.Subsequences.ActiveAirFlow.or4
-  const or4Fn = or_e27f1bfe({});
+  const or4Fn = or_de89f7dd({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctMixConDischargeSensor.Subsequences.ActiveAirFlow.heaMaxFlo
-  const heaMaxFloFn = booleantoreal_df99be1a({ realTrue: VHeaMax_flow });
+  const heaMaxFloFn = booleantoreal_552dc85b({ realTrue: VHeaMax_flow });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctMixConDischargeSensor.Subsequences.ActiveAirFlow.occModInd
-  const occModIndFn = booleantoreal_df99be1a({ realTrue: 1 });
+  const occModIndFn = booleantoreal_552dc85b({ realTrue: 1 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctMixConDischargeSensor.Subsequences.ActiveAirFlow.pro
-  const proFn = multiply_a462b873({});
+  const proFn = multiply_a5ce8cd2({});
 
   return (
     { uOpeMod, VOccMin_flow }

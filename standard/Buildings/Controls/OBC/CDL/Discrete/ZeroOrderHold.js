@@ -10,35 +10,29 @@
  * @returns {boolean} output.firstTrigger - True only at the very first sample instant.
  * @returns {number}  output.y - Held (sampled) value of the input signal.
  */
-const TimeManager = require("../../../../../TimeManager");
-const Initial = require("../../../../../Initial");
-
 function zeroOrderHold({ samplePeriod } = {}) {
+  const TimeManager = require("../../../../../TimeManager");
+  const Initial = require("../../../../../Initial");
   const isInitial = Initial();
-  // Determine first sample instant
   const t0 = Math.round(TimeManager.time / samplePeriod) * samplePeriod;
   let nextSample = t0;
-  let ySample = 0;
-  let prev_ySample = 0;
-  let firstTriggerFired = false;
+  let y = 0;
 
   return ({ u = 0 } = {}) => {
+    let prevY = y;
     const now = TimeManager.time;
-    let sampleTrigger = false;
-    let firstTrigger = false;
 
-    if (isInitial() || now >= nextSample) {
-      sampleTrigger = true;
-      firstTrigger = !firstTriggerFired;
-      firstTriggerFired = true;
+    if (isInitial()) {
+      y = u;
+      prevY = u;
       nextSample += samplePeriod;
-
-      prev_ySample = ySample;
-      ySample = u;
+    } else if (now >= nextSample) {
+      nextSample += samplePeriod;
+      y = u;
     }
+    return { y: prevY }
 
-    const y = prev_ySample;
-    return { sampleTrigger, firstTrigger, y };
+
   };
 }
 

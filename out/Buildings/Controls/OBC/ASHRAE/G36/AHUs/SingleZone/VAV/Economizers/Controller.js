@@ -8,7 +8,7 @@ const aireconomizerhighlimits_21bdaae6 = require("../../../../Generic/AirEconomi
 module.exports = (
   {
 		ashCliZon = 0,
-		controllerTypeMod = Math.PI,
+		controllerTypeMod = 1,
 		delEntHys = 1000,
 		delTOutHys = 1,
 		ecoHigLimCon,
@@ -21,9 +21,9 @@ module.exports = (
 		outDamMinFloMaxSpe = 0.3,
 		outDamMinFloMinSpe = 0.4,
 		outDamPhy_max = 1,
-		outDamPhy_min,
+		outDamPhy_min = 0,
 		retDamPhy_max = 1,
-		retDamPhy_min,
+		retDamPhy_min = 0,
 		supFanSpe_max = 0.9,
 		supFanSpe_min = 0.1,
 		TdMod = 0.1,
@@ -45,13 +45,13 @@ module.exports = (
   const modFn = modulation_be86df50({ controllerType: controllerTypeMod, have_heaCoi: have_heaCoi, k: kMod, Td: TdMod, Ti: TiMod, uMax: uMax, uMin: uMin });
 
   return (
-    { VOutMinSet_flow, TAirRet, uZonSta, u1SupFan }
+    { u1SupFan, uFreProSta, uOpeMod, uSupFan_actual, VOutMinSet_flow, hAirRet, TAirRet, hOut, TOut, uZonSta, TAirSup, TSupHeaEcoSet }
   ) => {
-    const ecoHigLim = ecoHigLimFn({ TRet: TAirRet });
-    const damLim = damLimFn({ VOutMinSet_flow: VOutMinSet_flow });
-    const enaDis = enaDisFn({ TCut: ecoHigLim.TCut, uZonSta: uZonSta, uOutDam_min: damLim.yOutDam_min });
-    const mod = modFn({ u1SupFan: u1SupFan, uRetDam_min: enaDis.yRetDam_min, uOutDam_min: damLim.yOutDam_min });
+    const ecoHigLim = ecoHigLimFn({ hRet: hAirRet, TRet: TAirRet });
+    const damLim = damLimFn({ u1SupFan: u1SupFan, uFreProSta: uFreProSta, uOpeMod: uOpeMod, uSupFan_actual: uSupFan_actual, VOutMinSet_flow: VOutMinSet_flow });
+    const enaDis = enaDisFn({ hCut: ecoHigLim.hCut, hOut: hOut, TCut: ecoHigLim.TCut, TOut: TOut, u1SupFan: u1SupFan, uFreProSta: uFreProSta, uOutDam_max: damLim.yOutDam_max, uOutDam_min: damLim.yOutDam_min, uZonSta: uZonSta });
+    const mod = modFn({ TSup: TAirSup, TSupHeaEcoSet: TSupHeaEcoSet, u1SupFan: u1SupFan, uOutDam_max: enaDis.yOutDam_max, uOutDam_min: damLim.yOutDam_min, uRetDam_max: enaDis.yRetDam_max, uRetDam_min: enaDis.yRetDam_min });
 
-    return { yRetDam: mod.yRetDam, yOutDam_min: damLim.yOutDam_min };
+    return { yHeaCoi: mod.yHeaCoi, yOutDam: mod.yOutDam, yOutDam_min: damLim.yOutDam_min, yRetDam: mod.yRetDam };
   }
 }

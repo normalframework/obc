@@ -29,6 +29,6 @@ module.exports = (
     const mul = mulFn({ u1: supFanSpe.y, u2: booToRea.y });
     const retFan = retFanFn({ u1SupFan: fanStatus.y, uSupFan_actual: mul.y });
 
-    return {};
+    return { fanStatus: fanStatus, supFanSpe: supFanSpe, booToRea: booToRea, mul: mul, retFan: retFan };
   }
 }

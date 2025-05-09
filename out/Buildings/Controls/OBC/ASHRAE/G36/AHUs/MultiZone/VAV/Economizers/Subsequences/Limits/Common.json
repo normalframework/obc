@@ -1,6 +1,7 @@
 {
   "inputs": [
     "u1SupFan",
+    "VOut_flow_normalized",
     "VOutMinSet_flow_normalized",
     "uOpeMod"
   ],

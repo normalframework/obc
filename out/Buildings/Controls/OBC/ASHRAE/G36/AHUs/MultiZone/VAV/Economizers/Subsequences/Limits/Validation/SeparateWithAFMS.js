@@ -14,13 +14,13 @@ module.exports = (
     } = {}
 ) => {
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.Economizers.Subsequences.Limits.Validation.SeparateWithAFMS.fanSta
-  const fanStaFn = constant_48cc1015({});
+  const fanStaFn = constant_48cc1015({ k: false });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.Economizers.Subsequences.Limits.Validation.SeparateWithAFMS.opeMod
   const opeModFn = constant_8c5ba27d({ k: 1 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.Economizers.Subsequences.Limits.Validation.SeparateWithAFMS.outDamPos
   const outDamPosFn = ramp_3c414377({ duration: 1800, height: 0.5, offset: 0.1 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.Economizers.Subsequences.Limits.Validation.SeparateWithAFMS.supFanSpe
-  const supFanSpeFn = constant_baefa089({});
+  const supFanSpeFn = constant_baefa089({ k: 0 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.Economizers.Subsequences.Limits.Validation.SeparateWithAFMS.VOut_flow1
   const VOut_flow1Fn = ramp_3c414377({ duration: 1800, height: incVOutSet_flow, offset: minVOutSet_flow });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.Economizers.Subsequences.Limits.Validation.SeparateWithAFMS.VOutMinSet_flow1
@@ -81,6 +81,6 @@ module.exports = (
     const VOutMinSet_flow = VOutMinSet_flowFn({});
     const minCon = minConFn({ u1SupFan: fanStatus.y, uOpeMod: operationMode.y, uOutDam: outDamPos2.y, uSupFan: supFanSpe2.y, VOut_flow_normalized: VOut_flow.y, VOutMinSet_flow_normalized: VOutMinSet_flow.y });
 
-    return {};
+    return { fanSta: fanSta, opeMod: opeMod, outDamPos: outDamPos, supFanSpe: supFanSpe, VOut_flow1: VOut_flow1, VOutMinSet_flow1: VOutMinSet_flow1, disMinCon: disMinCon, fanSta1: fanSta1, opeMod1: opeMod1, outDamPos1: outDamPos1, supFanSpe1: supFanSpe1, VOut_flow2: VOut_flow2, VOutMinSet_flow2: VOutMinSet_flow2, disMinCon1: disMinCon1, fanStatus: fanStatus, operationMode: operationMode, outDamPos2: outDamPos2, supFanSpe2: supFanSpe2, VOut_flow: VOut_flow, VOutMinSet_flow: VOutMinSet_flow, minCon: minCon };
   }
 }

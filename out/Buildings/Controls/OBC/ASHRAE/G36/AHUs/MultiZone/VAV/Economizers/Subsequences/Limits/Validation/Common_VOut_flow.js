@@ -33,6 +33,6 @@ module.exports = (
     const VOutMinSet_flow = VOutMinSet_flowFn({});
     const damLim = damLimFn({ u1SupFan: fanStatus.y, uOpeMod: operationMode.y, VOut_flow_normalized: VOut_flow.y, VOutMinSet_flow_normalized: VOutMinSet_flow.y });
 
-    return {};
+    return { fanStatus: fanStatus, operationMode: operationMode, VOut_flow: VOut_flow, VOutMinSet_flow: VOutMinSet_flow, damLim: damLim };
   }
 }

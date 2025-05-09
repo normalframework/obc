@@ -13,7 +13,7 @@ const setpoints_aa6b5c6d = require("../../VentilationZones/Title24/Setpoints");
 module.exports = (
   {
 		chaRat = 540,
-		damCon = Math.PI,
+		damCon = 1,
 		damPosHys = 0.005,
 		dTHys = 0.25,
 		durTimFlo = 60,
@@ -60,7 +60,7 @@ module.exports = (
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.CoolingOnly.Controller.zonSta
   const zonStaFn = zonestates_6a0c176c({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.CoolingOnly.Controller.minFlo
-  const minFloFn = setpoints_aa6b5c6d({ have_CO2Sen: have_CO2Sen, have_occSen: have_occSen, have_typTerUni: true, have_winSen: have_winSen, VAreMin_flow: VAreMin_flow, VCooMax_flow: VCooMax_flow, VMin_flow: VMin_flow, VOccMin_flow: VOccMin_flow });
+  const minFloFn = setpoints_aa6b5c6d({ have_CO2Sen: have_CO2Sen, have_occSen: have_occSen, have_parFanPowUni: false, have_typTerUni: true, have_winSen: have_winSen, VAreMin_flow: VAreMin_flow, VCooMax_flow: VCooMax_flow, VMin_flow: VMin_flow, VOccMin_flow: VOccMin_flow });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.CoolingOnly.Controller.actAirSet
   const actAirSetFn = activeairflow_3199f2fa({ VCooMax_flow: VCooMax_flow });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.CoolingOnly.Controller.dam
@@ -73,18 +73,18 @@ module.exports = (
   const sysReqFn = systemrequests_3d1d8ccb({ damPosHys: damPosHys, dTHys: dTHys, durTimFlo: durTimFlo, durTimTem: durTimTem, floHys: floHys, looHys: looHys, samplePeriod: samplePeriod, thrTemDif: thrTemDif, twoTemDif: twoTemDif });
 
   return (
-    { uOpeMod, VDis_flow, TZon }
+    { uOpeMod, u1Fan, VDis_flow, TCooSet, THeaSet, TZon, oveDamPos, oveFloSet, TSup, ppmCO2, ppmCO2Set, u1Occ, u1Win, TDis }
   ) => {
-    const setPoi = setPoiFn({ uOpeMod: uOpeMod });
-    const conLoo = conLooFn({ TZon: TZon });
-    const zonSta = zonStaFn({ uHea: conLoo.yHea });
-    const minFlo = minFloFn({ uOpeMod: uOpeMod });
+    const setPoi = setPoiFn({ ppmCO2: ppmCO2, ppmCO2Set: ppmCO2Set, TDis: TDis, TZon: TZon, u1Occ: u1Occ, u1Win: u1Win, uOpeMod: uOpeMod });
+    const conLoo = conLooFn({ TCooSet: TCooSet, THeaSet: THeaSet, TZon: TZon });
+    const zonSta = zonStaFn({ uCoo: conLoo.yCoo, uHea: conLoo.yHea });
+    const minFlo = minFloFn({ ppmCO2: ppmCO2, ppmCO2Set: ppmCO2Set, u1Occ: u1Occ, u1Win: u1Win, uOpeMod: uOpeMod });
     const actAirSet = actAirSetFn({ uOpeMod: uOpeMod, VOccMin_flow: minFlo.VOccZonMin_flow });
-    const dam = damFn({ VDis_flow: VDis_flow, uCoo: conLoo.yCoo, uZonSta: zonSta.yZonSta, VActMin_flow: actAirSet.VActMin_flow });
-    const ala = alaFn({ VDis_flow: VDis_flow, VActSet_flow: dam.VSet_flow });
-    const timSup = timSupFn({ TZon: TZon });
-    const sysReq = sysReqFn({ VDis_flow: VDis_flow, uAftSup: timSup.yAftSup, uCoo: conLoo.yCoo, VSet_flow: dam.VSet_flow });
+    const dam = damFn({ oveDamPos: oveDamPos, oveFloSet: oveFloSet, TSup: TSup, TZon: TZon, u1Fan: u1Fan, uCoo: conLoo.yCoo, uZonSta: zonSta.yZonSta, VActCooMax_flow: actAirSet.VActCooMax_flow, VActMin_flow: actAirSet.VActMin_flow, VDis_flow: VDis_flow });
+    const ala = alaFn({ u1Fan: u1Fan, uDam: dam.yDam, uOpeMod: uOpeMod, VActSet_flow: dam.VSet_flow, VDis_flow: VDis_flow });
+    const timSup = timSupFn({ TSet: TCooSet, TZon: TZon });
+    const sysReq = sysReqFn({ TCooSet: TCooSet, TZon: TZon, uAftSup: timSup.yAftSup, uCoo: conLoo.yCoo, uDam: dam.yDam, VDis_flow: VDis_flow, VSet_flow: dam.VSet_flow });
 
-    return { VMinOA_flow: setPoi.VMinOA_flow, yDam: dam.yDam, yCO2: minFlo.yCO2, yLowFloAla: ala.yLowFloAla, yZonTemResReq: sysReq.yZonTemResReq };
+    return { VAdjAreBreZon_flow: setPoi.VAdjAreBreZon_flow, VAdjPopBreZon_flow: setPoi.VAdjPopBreZon_flow, VMinOA_flow: setPoi.VMinOA_flow, VSet_flow: dam.VSet_flow, VZonAbsMin_flow: minFlo.VZonAbsMin_flow, VZonDesMin_flow: minFlo.VZonDesMin_flow, yCO2: minFlo.yCO2, yDam: dam.yDam, yFloSenAla: ala.yFloSenAla, yLeaDamAla: ala.yLeaDamAla, yLowFloAla: ala.yLowFloAla, yZonPreResReq: sysReq.yZonPreResReq, yZonTemResReq: sysReq.yZonTemResReq };
   }
 }

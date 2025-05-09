@@ -1,8 +1,8 @@
 {
   "inputs": [
+    "TZon",
     "TCooSet",
-    "THeaSet",
-    "TZon"
+    "THeaSet"
   ],
   "outputs": [
     "yCoo",

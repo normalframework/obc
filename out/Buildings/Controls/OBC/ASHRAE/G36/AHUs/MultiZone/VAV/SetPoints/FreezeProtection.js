@@ -28,7 +28,7 @@ module.exports = (
 		freSta = 0,
 		have_frePro = true,
 		heaCoi = 1,
-		heaCoiCon = Math.PI,
+		heaCoiCon = 1,
 		k = 1,
 		minHotWatReq = 2,
 		minOADes = 0,
@@ -36,7 +36,7 @@ module.exports = (
 		Thys = 0.25,
 		Ti = 0.5,
 		yMax = 1,
-		yMin,
+		yMin = 0,
     } = {}
 ) => {
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.FreezeProtection.norFal
@@ -44,27 +44,27 @@ module.exports = (
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.FreezeProtection.falEdg
   const falEdgFn = fallingedge_fb103129({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.FreezeProtection.lesThr1
-  const lesThr1Fn = lessthreshold_f64b25e3({ h: Thys, t: "273.15 +3.3" });
+  const lesThr1Fn = lessthreshold_f64b25e3({ h: Thys, t: 273.15 +3.3 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.FreezeProtection.tim3
   const tim3Fn = timer_a61e7f4a({ t: 900 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.FreezeProtection.lesThr2
-  const lesThr2Fn = lessthreshold_f64b25e3({ h: Thys, t: "273.15 +1" });
+  const lesThr2Fn = lessthreshold_f64b25e3({ h: Thys, t: 273.15 +1 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.FreezeProtection.tim4
   const tim4Fn = timer_a61e7f4a({ t: 300 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.FreezeProtection.or7
   const or7Fn = or_e27f1bfe({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.FreezeProtection.con2
-  const con2Fn = constant_48cc1015({});
+  const con2Fn = constant_48cc1015({ k: false });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.FreezeProtection.or8
   const or8Fn = or_e27f1bfe({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.FreezeProtection.lat1
   const lat1Fn = latch_a5aa3a49({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.FreezeProtection.con5
-  const con5Fn = constant_48cc1015({});
+  const con5Fn = constant_48cc1015({ k: false });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.FreezeProtection.tim2
   const tim2Fn = timer_a61e7f4a({ t: 300 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.FreezeProtection.holSta2
-  const holSta2Fn = truefalsehold_5efae599({ trueHoldDuration: 3600 });
+  const holSta2Fn = truefalsehold_5efae599({ falseHoldDuration: 0, trueHoldDuration: 3600 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.FreezeProtection.tim5
   const tim5Fn = timer_a61e7f4a({ t: 3600 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.FreezeProtection.endStaTwo
@@ -92,7 +92,7 @@ module.exports = (
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.FreezeProtection.conInt1
   const conInt1Fn = constant_8c5ba27d({ k: 3 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.FreezeProtection.conInt5
-  const conInt5Fn = constant_8c5ba27d({});
+  const conInt5Fn = constant_8c5ba27d({ k: 0 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.FreezeProtection.intSwi1
   const intSwi1Fn = switch_45c83437({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.FreezeProtection.intSwi3
@@ -102,11 +102,11 @@ module.exports = (
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.FreezeProtection.cooCoiVal
   const cooCoiValFn = switch_6d141143({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.FreezeProtection.conInt9
-  const conInt9Fn = constant_8c5ba27d({});
+  const conInt9Fn = constant_8c5ba27d({ k: 0 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.FreezeProtection.gai
   const gaiFn = multiplybyparameter_13a4f29f({ k: 1 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.FreezeProtection.conInt10
-  const conInt10Fn = constant_8c5ba27d({});
+  const conInt10Fn = constant_8c5ba27d({ k: 0 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.FreezeProtection.gai10
   const gai10Fn = multiplybyparameter_13a4f29f({ k: 1 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.FreezeProtection.gai5
@@ -144,21 +144,21 @@ module.exports = (
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.FreezeProtection.max1
   const max1Fn = max_a5fb1db5({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.FreezeProtection.con4
-  const con4Fn = constant_baefa089({ k: "273.15 +27" });
+  const con4Fn = constant_baefa089({ k: 273.15 +27 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.FreezeProtection.heaCoiMod
   const heaCoiModFn = pid_a5fb25dc({ controllerType: heaCoiCon, k: k, Td: Td, Ti: Ti, yMax: yMax, yMin: yMin });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.FreezeProtection.supTemSet
-  const supTemSetFn = constant_baefa089({ k: "273.15 +6" });
+  const supTemSetFn = constant_baefa089({ k: 273.15 +6 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.FreezeProtection.heaCoiCon1
   const heaCoiCon1Fn = pid_a5fb25dc({ controllerType: heaCoiCon, k: k, Td: Td, Ti: Ti, yMax: yMax, yMin: yMin });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.FreezeProtection.greThr
-  const greThrFn = greaterthreshold_64a3c4e0({ h: Thys, t: "273.15 +7" });
+  const greThrFn = greaterthreshold_64a3c4e0({ h: Thys, t: 273.15 +7 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.FreezeProtection.tim1
   const tim1Fn = timer_a61e7f4a({ t: 300 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.FreezeProtection.endStaOne
   const endStaOneFn = edge_3f236118({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.FreezeProtection.lesThr
-  const lesThrFn = lessthreshold_f64b25e3({ h: Thys, t: "273.15 +4.4" });
+  const lesThrFn = lessthreshold_f64b25e3({ h: Thys, t: 273.15 +4.4 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.FreezeProtection.tim
   const timFn = timer_a61e7f4a({ t: 300 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.FreezeProtection.or2
@@ -174,7 +174,7 @@ module.exports = (
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.FreezeProtection.conInt
   const conIntFn = constant_8c5ba27d({ k: minHotWatReq });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.FreezeProtection.conInt2
-  const conInt2Fn = constant_8c5ba27d({});
+  const conInt2Fn = constant_8c5ba27d({ k: 0 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.FreezeProtection.hotWatPlaReq
   const hotWatPlaReqFn = switch_45c83437({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.FreezeProtection.hotWatPlaReq3
@@ -184,7 +184,7 @@ module.exports = (
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.FreezeProtection.conInt7
   const conInt7Fn = constant_8c5ba27d({ k: 1 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.FreezeProtection.conInt8
-  const conInt8Fn = constant_8c5ba27d({});
+  const conInt8Fn = constant_8c5ba27d({ k: 0 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.FreezeProtection.intSwi5
   const intSwi5Fn = switch_45c83437({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.FreezeProtection.intSwi4
@@ -192,9 +192,9 @@ module.exports = (
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.FreezeProtection.intSwi2
   const intSwi2Fn = switch_45c83437({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.FreezeProtection.con3
-  const con3Fn = constant_baefa089({});
+  const con3Fn = constant_baefa089({ k: 0 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.FreezeProtection.con
-  const conFn = constant_baefa089({});
+  const conFn = constant_baefa089({ k: 0 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.FreezeProtection.minOutDam2
   const minOutDam2Fn = switch_6d141143({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.FreezeProtection.minOutDam
@@ -229,7 +229,7 @@ module.exports = (
   const supFanFn = switch_6d141143({});
 
   return (
-    { u1RetFan, u1SupFan, u1RelFan, uCooCoi, uHeaCoi, uMinOutDam, uSupFan, uRetFan, uRelFan, uRetDam, uOutDam, TAirSup, TAirMix, u1MinOutDam, u1FreSta }
+    { u1RetFan, u1SupFan, u1RelFan, uCooCoi, uHeaCoi, uMinOutDam, uSupFan, uRetFan, uRelFan, uRetDam, uOutDam, TAirSup, TAirMix, u1MinOutDam, uOutDamPosMin, u1FreSta }
   ) => {
     const norFal = norFalFn({ u: u1FreSta });
     const falEdg = falEdgFn({ u: norFal.y });
@@ -282,7 +282,7 @@ module.exports = (
     const gai7 = gai7Fn({ u: uSupFan });
     const gai8 = gai8Fn({ u: uRetDam });
     const gai9 = gai9Fn({ u: uOutDam });
-    const max1 = max1Fn({ u2: TAirMix });
+    const max1 = max1Fn({ u1: TAirSup, u2: TAirMix });
     const con4 = con4Fn({});
     const heaCoiMod = heaCoiModFn({ u_m: max1.y, u_s: con4.y });
     const supTemSet = supTemSetFn({});
@@ -315,7 +315,7 @@ module.exports = (
     const or4 = or4Fn({ u2: u1RetFan });
     const or5 = or5Fn({ u2: u1MinOutDam });
     const or6 = or6Fn({ u2: u1SupFan });
-    const minVen = minVenFn({ u3: uOutDam, u2: lat.y });
+    const minVen = minVenFn({ u1: uOutDamPosMin, u2: lat.y, u3: uOutDam });
     const outDam2 = outDam2Fn({ u1: con.y, u2: lat2.y, u3: minVen.y });
     const outDam = outDamFn({ u1: con3.y, u2: lat1.y, u3: outDam2.y });
     const relFan = relFanFn({ u1: con3.y, u2: lat1.y, u3: uRelFan });

@@ -19,22 +19,26 @@ export function successors(graph: Graph, node: string): string[] {
 export function dependencies(graph: Graph, node: string) {
   const p = predecessors(graph, node);
   const s = successors(graph, node);
-  const inputs = p.filter((n) => graph.edge(n, node) === "input");
-  const parameters = p.filter((n) => graph.edge(n, node) === "parameter");
-  const outputs = s.filter((n) => graph.edge(node, n) === "output");
+  const inputs = p.filter((n) => graph.edge(n, node)?.label === "input");
+  const parameters = p.filter(
+    (n) => graph.edge(n, node)?.label === "parameter"
+  );
+  const outputs = s.filter((n) => graph.edge(node, n)?.label === "output");
   return { inputs, outputs, parameters };
 }
 
 export function connections(graph: Graph, input: string) {
   const p = predecessors(graph, input);
-  const connections = p.filter((n) => graph.edge(n, input) === "connection");
+  const connections = p.filter(
+    (n) => graph.edge(n, input)?.label === "connection"
+  );
   if (!connections.length) {
     return null;
   }
   const connectionOutput = connections[0];
   const cp = predecessors(graph, connectionOutput);
   const outputs = cp.filter(
-    (n) => graph.edge(n, connectionOutput) === "output"
+    (n) => graph.edge(n, connectionOutput)?.label === "output"
   );
   return {
     block: outputs[0],

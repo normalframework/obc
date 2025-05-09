@@ -8,7 +8,7 @@ module.exports = (
   
 ) => {
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.Validation.ReturnFanDirectPressure.dpBui
-  const dpBuiFn = ramp_3c414377({ duration: 1800, height: 40 });
+  const dpBuiFn = ramp_3c414377({ duration: 1800, height: 40, offset: 0 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.Validation.ReturnFanDirectPressure.yFan
   const yFanFn = pulse_27dcacc8({ period: 4000 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.Validation.ReturnFanDirectPressure.retFanPre
@@ -27,6 +27,6 @@ module.exports = (
     const retFanPre1 = retFanPre1Fn({ dpBui: dpBui.y, u1SupFan: yFan.y });
     const retFanPre2 = retFanPre2Fn({ dpBui: dpBui.y, u1SupFan: yFan.y });
 
-    return {};
+    return { dpBui: dpBui, yFan: yFan, retFanPre: retFanPre, retFanPre1: retFanPre1, retFanPre2: retFanPre2 };
   }
 }

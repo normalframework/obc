@@ -13,7 +13,7 @@ const switch_6d141143 = require("../../../../../../CDL/Reals/Switch");
 
 module.exports = (
   {
-		controllerType = Math.PI,
+		controllerType = 1,
 		delTim = 600,
 		have_perZonRehBox,
 		iniSet = 120,
@@ -49,7 +49,7 @@ module.exports = (
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.SupplyFan.or4
   const or4Fn = or_e27f1bfe({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.SupplyFan.con
-  const conFn = constant_48cc1015({});
+  const conFn = constant_48cc1015({ k: false });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.SupplyFan.or1
   const or1Fn = or_e27f1bfe({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.SupplyFan.gaiNor
@@ -65,7 +65,7 @@ module.exports = (
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.SupplyFan.conSpe
   const conSpeFn = pidwithreset_1df6d9ad({ controllerType: controllerType, k: k, Td: Td, Ti: Ti, y_reset: iniSpe, yMax: maxSpe, yMin: minSpe });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.SupplyFan.zerSpe
-  const zerSpeFn = constant_baefa089({});
+  const zerSpeFn = constant_baefa089({ k: 0 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.SupplyFan.swi
   const swiFn = switch_6d141143({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.SupplyFan.conInt3
@@ -97,7 +97,7 @@ module.exports = (
     const staPreSetRes = staPreSetResFn({ numOfReq: uZonPreResReq, uDevSta: or1.y });
     const firOrdHol = firOrdHolFn({ u: staPreSetRes.y });
     const norPSet = norPSetFn({ u1: firOrdHol.y, u2: gaiNor.y });
-    const conSpe = conSpeFn({ u_m: norPMea.y, u_s: norPSet.y });
+    const conSpe = conSpeFn({ trigger: or1.y, u_m: norPMea.y, u_s: norPSet.y });
     const zerSpe = zerSpeFn({});
     const swi = swiFn({ u1: conSpe.y, u2: or1.y, u3: zerSpe.y });
     const conInt3 = conInt3Fn({});

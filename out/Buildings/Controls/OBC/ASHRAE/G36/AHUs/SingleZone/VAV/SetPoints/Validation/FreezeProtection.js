@@ -11,9 +11,9 @@ module.exports = (
   
 ) => {
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.SingleZone.VAV.SetPoints.Validation.FreezeProtection.mixTem
-  const mixTemFn = ramp_3c414377({ duration: 3600, height: -5, offset: "273.15 +8" });
+  const mixTemFn = ramp_3c414377({ duration: 3600, height: -5, offset: 273.15 +8 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.SingleZone.VAV.SetPoints.Validation.FreezeProtection.supTem
-  const supTemFn = ramp_3c414377({ duration: 3600, height: -4, offset: "273.15 +6" });
+  const supTemFn = ramp_3c414377({ duration: 3600, height: -4, offset: 273.15 +6 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.SingleZone.VAV.SetPoints.Validation.FreezeProtection.freRes
   const freResFn = pulse_27dcacc8({ period: 3600, width: 0.95 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.SingleZone.VAV.SetPoints.Validation.FreezeProtection.not1
@@ -51,6 +51,6 @@ module.exports = (
     const retDamPos = retDamPosFn({});
     const frePro = freProFn({ TAirMix: mixTem.y, TAirSup: supTem.y, u1SofSwiRes: not1.y, u1SupFan: greThr.y, uCooCoi: cooCoiPos.y, uHeaCoi: heaCoiPos.y, uOutDam: outDamPos.y, uOutDamPosMin: outDamPosMin.y, uRetDam: retDamPos.y, uSupFan: supFanSpe.y });
 
-    return {};
+    return { mixTem: mixTem, supTem: supTem, freRes: freRes, not1: not1, supFanSpe: supFanSpe, greThr: greThr, cooCoiPos: cooCoiPos, heaCoiPos: heaCoiPos, outDamPos: outDamPos, outDamPosMin: outDamPosMin, retDamPos: retDamPos, frePro: frePro };
   }
 }

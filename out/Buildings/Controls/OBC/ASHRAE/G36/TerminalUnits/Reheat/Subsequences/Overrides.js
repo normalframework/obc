@@ -1,38 +1,38 @@
 
 // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.Reheat.Subsequences.Overrides
-const booleantoreal_df99be1a = require("../../../../../CDL/Conversions/BooleanToReal");
-const equal_2ac2bdd1 = require("../../../../../CDL/Integers/Equal");
-const constant_8c5ba27d = require("../../../../../CDL/Integers/Sources/Constant");
-const or_e27f1bfe = require("../../../../../CDL/Logical/Or");
-const add_a5faf0f2 = require("../../../../../CDL/Reals/Add");
-const multiply_a462b873 = require("../../../../../CDL/Reals/Multiply");
-const switch_6d141143 = require("../../../../../CDL/Reals/Switch");
+const booleantoreal_552dc85b = require("../../../../../CDL/Conversions/BooleanToReal");
+const equal_2c2e9230 = require("../../../../../CDL/Integers/Equal");
+const constant_01efacbe = require("../../../../../CDL/Integers/Sources/Constant");
+const or_de89f7dd = require("../../../../../CDL/Logical/Or");
+const add_53459d33 = require("../../../../../CDL/Reals/Add");
+const multiply_a5ce8cd2 = require("../../../../../CDL/Reals/Multiply");
+const switch_91d77162 = require("../../../../../CDL/Reals/Switch");
 
 module.exports = (
   
 ) => {
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.Reheat.Subsequences.Overrides.conInt3
-  const conInt3Fn = constant_8c5ba27d({ k: 1 });
+  const conInt3Fn = constant_01efacbe({ k: 1 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.Reheat.Subsequences.Overrides.intEqu3
-  const intEqu3Fn = equal_2ac2bdd1({});
+  const intEqu3Fn = equal_2c2e9230({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.Reheat.Subsequences.Overrides.cloDam
-  const cloDamFn = booleantoreal_df99be1a({});
+  const cloDamFn = booleantoreal_552dc85b({ realTrue: 0 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.Reheat.Subsequences.Overrides.conInt4
-  const conInt4Fn = constant_8c5ba27d({ k: 2 });
+  const conInt4Fn = constant_01efacbe({ k: 2 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.Reheat.Subsequences.Overrides.intEqu4
-  const intEqu4Fn = equal_2ac2bdd1({});
+  const intEqu4Fn = equal_2c2e9230({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.Reheat.Subsequences.Overrides.opeDam
-  const opeDamFn = booleantoreal_df99be1a({ realTrue: 1 });
+  const opeDamFn = booleantoreal_552dc85b({ realTrue: 1 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.Reheat.Subsequences.Overrides.add3
-  const add3Fn = add_a5faf0f2({});
+  const add3Fn = add_53459d33({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.Reheat.Subsequences.Overrides.or2
-  const or2Fn = or_e27f1bfe({});
+  const or2Fn = or_de89f7dd({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.Reheat.Subsequences.Overrides.swi1
-  const swi1Fn = switch_6d141143({});
+  const swi1Fn = switch_91d77162({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.Reheat.Subsequences.Overrides.booToRea
-  const booToReaFn = booleantoreal_df99be1a({ realFalse: 1 });
+  const booToReaFn = booleantoreal_552dc85b({ realFalse: 1, realTrue: 0 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.Reheat.Subsequences.Overrides.pro
-  const proFn = multiply_a462b873({});
+  const proFn = multiply_a5ce8cd2({});
 
   return (
     { uHeaOff, oveDamPos, uVal, uDam }

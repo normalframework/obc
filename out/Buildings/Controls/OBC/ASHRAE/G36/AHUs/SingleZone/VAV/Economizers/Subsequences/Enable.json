@@ -3,8 +3,11 @@
     "u1SupFan",
     "uFreProSta",
     "uZonSta",
+    "uOutDam_min",
     "uOutDam_max",
+    "TOut",
     "TCut",
+    "hOut",
     "hCut"
   ],
   "outputs": [

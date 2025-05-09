@@ -2,14 +2,18 @@
   "inputs": [
     "THeaSet",
     "u1Fan",
+    "TSupSet",
     "uHea",
+    "TDis",
     "oveFloSet",
     "VPri_flow",
     "VOAMin_flow",
     "uCoo",
     "uOpeMod",
-    "TZon",
-    "VActMin_flow"
+    "VActMin_flow",
+    "VActCooMax_flow",
+    "TSup",
+    "TZon"
   ],
   "outputs": [
     "THeaDisSet",

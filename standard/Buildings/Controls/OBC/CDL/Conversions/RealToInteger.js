@@ -9,7 +9,7 @@
  */
 
 function realToInteger() {
-  return ({ u }) => {
+  return ({ u = 0 }) => {
     const y = u > 0 ? Math.floor(u + 0.5) : Math.ceil(u - 0.5);
     return { y };
   };

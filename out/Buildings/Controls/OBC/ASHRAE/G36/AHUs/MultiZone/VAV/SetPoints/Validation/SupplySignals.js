@@ -10,9 +10,9 @@ module.exports = (
   
 ) => {
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.Validation.SupplySignals.TSup
-  const TSupFn = pulse_4bd410d4({ amplitude: 14, offset: "10 +273.15", period: 7200 });
+  const TSupFn = pulse_4bd410d4({ amplitude: 14, offset: 10 +273.15, period: 7200 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.Validation.SupplySignals.TSupSet
-  const TSupSetFn = ramp_3c414377({ duration: 7200, height: 3, offset: "15 +273.15" });
+  const TSupSetFn = ramp_3c414377({ duration: 7200, height: 3, offset: 15 +273.15 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.Validation.SupplySignals.supFanSta
   const supFanStaFn = pulse_27dcacc8({ period: 7200 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.Validation.SupplySignals.supSig
@@ -32,6 +32,6 @@ module.exports = (
     const fanOn = fanOnFn({});
     const supSig1 = supSig1Fn({ TAirSup: TSup.y, TAirSupSet: TSupSet.y, u1SupFan: fanOn.y });
 
-    return {};
+    return { TSup: TSup, TSupSet: TSupSet, supFanSta: supFanSta, supSig: supSig, fanOn: fanOn, supSig1: supSig1 };
   }
 }

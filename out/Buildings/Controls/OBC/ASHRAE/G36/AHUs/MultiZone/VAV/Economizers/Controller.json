@@ -1,16 +1,28 @@
 {
   "inputs": [
+    "u1SupFan",
+    "uOpeMod",
+    "VOut_flow_normalized",
     "VOutMinSet_flow_normalized",
+    "hAirRet",
     "TAirRet",
+    "hAirOut",
+    "TOut",
     "uFreProSta",
     "uTSup",
-    "VOut_flow_normalized"
+    "uSupFan",
+    "dpMinOutDam",
+    "effAbsOutAir_normalized",
+    "effDesOutAir_normalized",
+    "uCO2Loo_max"
   ],
   "outputs": [
     "y1MinOutDam",
-    "yOutDam_min",
+    "yEnaMinOut",
     "yMinOutDam",
-    "yRetDam",
-    "yRelDam"
+    "yOutDam",
+    "yOutDam_min",
+    "yRelDam",
+    "yRetDam"
   ]
 }

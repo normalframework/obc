@@ -30,7 +30,7 @@ module.exports = (
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.ReliefFan.conOne
   const conOneFn = constant_baefa089({ k: 1 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.ReliefFan.conP
-  const conPFn = pid_a5fb25dc({ controllerType: 0, k: k });
+  const conPFn = pid_a5fb25dc({ controllerType: 0, k: k, reverseActing: false });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.ReliefFan.lesThr
   const lesThrFn = lessthreshold_f64b25e3({ h: hys, t: 0.005 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.ReliefFan.tim

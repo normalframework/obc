@@ -24,6 +24,6 @@ module.exports = (
     const outDamMin = outDamMinFn({});
     const relDam = relDamFn({ u1SupFan: fanStatus.y, uOutDam: outDam.y, uOutDam_min: outDamMin.y });
 
-    return {};
+    return { fanStatus: fanStatus, outDam: outDam, outDamMin: outDamMin, relDam: relDam };
   }
 }

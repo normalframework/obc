@@ -1,6 +1,8 @@
 {
   "inputs": [
-    "u1SupFan"
+    "u1MinOutAirDam",
+    "u1SupFan",
+    "dpBui"
   ],
   "outputs": [
     "dpDisSet",

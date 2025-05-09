@@ -16,6 +16,8 @@ module.exports = (
 		VOutSet_flow = (VOutDes_flow +VOutMin_flow)/2,
     } = {}
 ) => {
+  // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.SingleZone.VAV.Economizers.Subsequences.Validation.Limits_FanSpe_VOut_flow.fanStatus
+  const fanStatusFn = constant_48cc1015({ k: true });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.SingleZone.VAV.Economizers.Subsequences.Validation.Limits_FanSpe_VOut_flow.freProSta
   const freProStaFn = constant_8c5ba27d({ k: 0 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.SingleZone.VAV.Economizers.Subsequences.Validation.Limits_FanSpe_VOut_flow.operationMode
@@ -26,8 +28,6 @@ module.exports = (
   const VOutMinSetSigFn = constant_baefa089({ k: VOutSet_flow });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.SingleZone.VAV.Economizers.Subsequences.Validation.Limits_FanSpe_VOut_flow.damLim
   const damLimFn = limits_f8128fec({ supFanSpe_max: supFanSpe_max, supFanSpe_min: supFanSpe_min, VOutDes_flow: VOutDes_flow, VOutMin_flow: VOutMin_flow });
-  // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.SingleZone.VAV.Economizers.Subsequences.Validation.Limits_FanSpe_VOut_flow.fanStatus
-  const fanStatusFn = constant_48cc1015({ k: true });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.SingleZone.VAV.Economizers.Subsequences.Validation.Limits_FanSpe_VOut_flow.SupFanSpeSig1
   const SupFanSpeSig1Fn = constant_baefa089({ k: fanSpe });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.SingleZone.VAV.Economizers.Subsequences.Validation.Limits_FanSpe_VOut_flow.VOutMinSetSig1
@@ -38,16 +38,16 @@ module.exports = (
   return (
     {  }
   ) => {
+    const fanStatus = fanStatusFn({});
     const freProSta = freProStaFn({});
     const operationMode = operationModeFn({});
     const SupFanSpeSig = SupFanSpeSigFn({});
     const VOutMinSetSig = VOutMinSetSigFn({});
-    const damLim = damLimFn({ uFreProSta: freProSta.y, uOpeMod: operationMode.y, uSupFan_actual: SupFanSpeSig.y, VOutMinSet_flow: VOutMinSetSig.y });
-    const fanStatus = fanStatusFn({});
+    const damLim = damLimFn({ u1SupFan: fanStatus.y, uFreProSta: freProSta.y, uOpeMod: operationMode.y, uSupFan_actual: SupFanSpeSig.y, VOutMinSet_flow: VOutMinSetSig.y });
     const SupFanSpeSig1 = SupFanSpeSig1Fn({});
     const VOutMinSetSig1 = VOutMinSetSig1Fn({});
     const damLim1 = damLim1Fn({ u1SupFan: fanStatus.y, uFreProSta: freProSta.y, uOpeMod: operationMode.y, uSupFan_actual: SupFanSpeSig1.y, VOutMinSet_flow: VOutMinSetSig1.y });
 
-    return {};
+    return { fanStatus: fanStatus, freProSta: freProSta, operationMode: operationMode, SupFanSpeSig: SupFanSpeSig, VOutMinSetSig: VOutMinSetSig, damLim: damLim, SupFanSpeSig1: SupFanSpeSig1, VOutMinSetSig1: VOutMinSetSig1, damLim1: damLim1 };
   }
 }

@@ -55,6 +55,6 @@ module.exports = (
     const zonSta1 = zonSta1Fn({});
     const enaDis1 = enaDis1Fn({ hCut: hOutCut.y, hOut: hOutBelowCutoff.y, TCut: TOutCut.y, TOut: TOutBelowCutoff.y, u1SupFan: supFanSta.y, uFreProSta: freProSta1.y, uOutDam_max: outDamPosMax.y, uOutDam_min: outDamPosMin.y, uZonSta: zonSta1.y });
 
-    return {};
+    return { hOutCut: hOutCut, hOutBelowCutoff: hOutBelowCutoff, TOutCut: TOutCut, TOutBelowCutoff: TOutBelowCutoff, supFanSta: supFanSta, freProSta: freProSta, outDamPosMax: outDamPosMax, outDamPosMin: outDamPosMin, zonSta: zonSta, enaDis: enaDis, freProSta1: freProSta1, zonSta1: zonSta1, enaDis1: enaDis1 };
   }
 }

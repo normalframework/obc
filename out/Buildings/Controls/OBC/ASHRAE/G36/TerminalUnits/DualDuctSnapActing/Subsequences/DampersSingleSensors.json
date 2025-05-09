@@ -5,6 +5,8 @@
     "uCoo",
     "uHea",
     "VActMin_flow",
+    "VActCooMax_flow",
+    "VActHeaMax_flow",
     "VDis_flow"
   ],
   "outputs": [

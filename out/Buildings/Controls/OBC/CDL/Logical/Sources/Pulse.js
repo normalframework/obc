@@ -1,3 +1,5 @@
+const TimeManager = require("../../../../../../TimeManager");
+
 /**
  * Pulse block that generates a pulse signal of type Boolean.
  * 
@@ -9,22 +11,20 @@
  * @returns {Function} - A function that generates a pulse signal.
  */
 
-function pulse({ width = 0.5, period = 0, shift = 0 }) {
-  const t0 = Math.round((Date.now() / 1000) / period) * period + (shift % period);
-  const t1 = t0 + width * period;
+function pulse({ width = 0.5, period = 1, shift = 0 } = {}) {
+  if (period <= 0) {
+    throw new Error("`period` must be > 0");
+  }
+  // clamp width to [0,1]
+  const w = Math.max(0, Math.min(1, width));
 
   return () => {
-    const currentTime = Date.now() / 1000;
-    let y;
-
-    if (t0 < t1) {
-      y = currentTime >= t0 && currentTime < t1;
-    } else {
-      y = !(currentTime >= t1 && currentTime < t0);
-    }
-
+    const t = TimeManager.time;                    // current time
+    // compute phase in [0, period)
+    const phase = ((t - shift) % period + period) % period;
+    // output high when phase is less than width*period
+    const y = phase < (w * period);
     return { y };
   };
 }
-
 module.exports = pulse;

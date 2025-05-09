@@ -10,7 +10,7 @@ module.exports = (
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.Economizers.Subsequences.Modulations.Validation.Reliefs.maxOutDam
   const maxOutDamFn = constant_baefa089({ k: 1 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.Economizers.Subsequences.Modulations.Validation.Reliefs.minOutDam
-  const minOutDamFn = constant_baefa089({});
+  const minOutDamFn = constant_baefa089({ k: 0 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.Economizers.Subsequences.Modulations.Validation.Reliefs.maxRetDam
   const maxRetDamFn = constant_baefa089({ k: 0.9 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.Economizers.Subsequences.Modulations.Validation.Reliefs.minRetDam
@@ -30,6 +30,6 @@ module.exports = (
     const temLoo = temLooFn({});
     const mod1 = mod1Fn({ uOutDam_max: maxOutDam.y, uOutDam_min: minOutDam.y, uRetDam_max: maxRetDam.y, uRetDam_min: minRetDam.y, uTSup: temLoo.y });
 
-    return {};
+    return { maxOutDam: maxOutDam, minOutDam: minOutDam, maxRetDam: maxRetDam, minRetDam: minRetDam, temLoo: temLoo, mod1: mod1 };
   }
 }

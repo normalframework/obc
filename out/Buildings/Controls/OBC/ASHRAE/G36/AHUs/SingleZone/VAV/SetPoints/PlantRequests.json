@@ -1,9 +1,10 @@
 {
   "inputs": [
+    "TAirSup",
     "TSupCoo",
     "uCooCoi_actual",
     "uHeaCoi_actual",
-    "TAirSup"
+    "TSupHeaEco"
   ],
   "outputs": [
     "yChiPlaReq",

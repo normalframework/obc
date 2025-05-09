@@ -62,6 +62,6 @@ module.exports = (
     const ecoHigLim8 = ecoHigLim8Fn({});
     const ecoHigLim9 = ecoHigLim9Fn({});
 
-    return {};
+    return { ecoHigLim: ecoHigLim, ecoHigLim1: ecoHigLim1, retAirTem: retAirTem, ecoHigLim10: ecoHigLim10, ecoHigLim11: ecoHigLim11, ecoHigLim12: ecoHigLim12, ecoHigLim13: ecoHigLim13, ecoHigLim14: ecoHigLim14, ecoHigLim2: ecoHigLim2, ecoHigLim3: ecoHigLim3, ecoHigLim4: ecoHigLim4, ecoHigLim5: ecoHigLim5, retAirEnt: retAirEnt, ecoHigLim6: ecoHigLim6, ecoHigLim7: ecoHigLim7, ecoHigLim8: ecoHigLim8, ecoHigLim9: ecoHigLim9 };
   }
 }

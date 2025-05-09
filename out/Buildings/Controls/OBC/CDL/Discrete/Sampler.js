@@ -1,31 +1,32 @@
 /**
- * Sampler block that samples a continuous signal at specified intervals.
+ * Sampler block that ideal-samples a continuous signal at a fixed period.
+ * It outputs the input value at each sample instant and holds it between samples.
  * 
  * @param {Object} params - The parameters object.
- * @param {number} params.samplePeriod - Sample period of the component.
+ * @param {number} params.samplePeriod - Sample period of the component (s).
  * 
- * @returns {Function} - A function that samples the input signal at specified intervals.
+ * @returns {Object} - The output object.
+ * @returns {boolean} output.sampleTrigger - True at each sample instant.
+ * @returns {boolean} output.firstTrigger - True only at the very first sample instant.
+ * @returns {number}  output.y            - Sampled value of the input.
  */
-
-function sampler({ samplePeriod = 0 }) {
-  let t0 = Math.round((Date.now() / 1000) / samplePeriod) * samplePeriod;
+function sampler({ samplePeriod } = {}) {
+  const TimeManager = require("../../../../../TimeManager");
+  const Initial = require("../../../../../Initial");
+  const isInitial = Initial();
+  const t0 = Math.round(TimeManager.time / samplePeriod) * samplePeriod;
+  let nextSample = t0;
   let y = 0;
-  let triggered = false;
 
-  return ({ u }) => {
-    const currentTime = Math.round(Date.now() / 1000);
-    const sampleTrigger = currentTime >= t0 && (currentTime - t0) % samplePeriod < 1E-3;
+  return ({ u = 0 } = {}) => {
+    const now = TimeManager.time;
 
-
-    if (sampleTrigger) {
-      if (!triggered) {
-        triggered = true;
-        y = u;
-      } else {
-        y = 0;
-        triggered = false;
-      }
-      t0 += samplePeriod;
+    if (isInitial()) {
+      y = u;
+      nextSample += samplePeriod;
+    } else if (now >= nextSample) {
+      nextSample += samplePeriod;
+      y = u;
     }
 
     return { y };

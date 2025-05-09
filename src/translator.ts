@@ -1,22 +1,26 @@
 import graphlib from "@dagrejs/graphlib";
 import clc from "cli-color";
 import fs from "fs";
+import * as MathJS from "mathjs";
 import path, { dirname } from "path";
-import { inEdges, outEdges, predecessors, successors } from "./graph";
+import { fileURLToPath } from "url";
+import { ParsedExpression, processCst } from "./cst";
+import { inEdges, outEdges, successors } from "./graph";
+import { parseModelica } from "./modelica";
 import {
   buildExecutionGraph,
   EXECUTION_END_NODE,
   EXECUTION_START_NODE,
   lookupBlockElementId,
+  makeFilePath,
+  normalizeBlockId,
   parseIdentifier,
   parseJsonToGraph,
+  readGraphFile,
 } from "./parser";
 import { ExecutionEdge, ExecutionNode, ExecutionParameter } from "./types";
 import { stringHash, walkDirectoryRecursive } from "./utils";
 import { visualizeGraph } from "./visualize";
-import { parseModelica } from "./modelica";
-import { fileURLToPath } from "url";
-import { ParsedExpression, processCst } from "./cst";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -28,12 +32,11 @@ const importsMap = new Map<string, string[]>();
 const modelicaConstants = new Map<string, string | number | boolean>();
 let modelicaLoaded = false;
 
-function normalizeBlockId(blockId: string) {
-  return blockId.split("#").pop()!;
-}
-function makeFilePath(blockId: string) {
-  return path.join(...normalizeBlockId(blockId).split("."));
-}
+export type TranslationOptions = {
+  visualize: boolean | string;
+  rebuildModelica?: boolean;
+  validation?: boolean;
+};
 
 function makeUniqName(type: string) {
   const baseName = type.split(".").pop()!.toLowerCase();
@@ -157,8 +160,9 @@ function sortParams(params: ExecutionParameter[]) {
   return sorted.map((name) => graph.node(name));
 }
 
+// function to convert modelica constants to js constants
 function jsValue(value: string | undefined) {
-  if (!value) {
+  if (value == null) {
     return;
   }
 
@@ -167,10 +171,21 @@ function jsValue(value: string | undefined) {
     return modelicaConstants.get(valueKey)?.toString();
   }
 
-  return value;
+  // check if valud is valid math expression
+  try {
+    const returnValue = MathJS.evaluate(value);
+    MathJS.evaluate(returnValue);
+    return returnValue;
+  } catch (e) {
+    return value;
+  }
 }
 
-export function translateGraph(id: string, graph: graphlib.Graph) {
+export function translateGraph(
+  id: string,
+  graph: graphlib.Graph,
+  validation = false
+) {
   console.log(clc.blueBright("[TRANSLATING]"), clc.bold(parseIdentifier(id)));
   const imports = new Set<string>();
   const importNames = new Map<string, string>();
@@ -201,14 +216,15 @@ export function translateGraph(id: string, graph: graphlib.Graph) {
   });
 
   const topological = graphlib.alg.topsort(graph);
+  const callResults: string[] = [];
   topological.forEach((node) => {
     processed.add(node);
     if (node === EXECUTION_START_NODE || node === EXECUTION_END_NODE) {
       return;
     }
     const nodeValue = graph.node(node) as ExecutionNode;
-    const params = nodeValue.parameters ?? [];
 
+    const params = nodeValue.parameters ?? [];
     const paramsObject = generateJsObject(
       params.filter((p) => !!p.value).map((p) => [p.name, jsValue(p.value)])
     );
@@ -234,14 +250,21 @@ export function translateGraph(id: string, graph: graphlib.Graph) {
     fnCalls.push(
       `const ${nodeValue.name} = ${nodeValue.name}Fn(${inputsObject});`
     );
+    callResults.push(nodeValue.name);
   });
 
   const inputEdges = outEdges<ExecutionEdge>(graph, EXECUTION_START_NODE);
   const inputs = new Set<string>(inputEdges.map((o) => o.from.name));
   const outputEdges = inEdges<ExecutionEdge>(graph, EXECUTION_END_NODE);
-  const outputObject = generateJsObject(
-    outputEdges.map((o) => [o.to.name, o.from.name])
-  );
+  let outputObject = "{}";
+  if (validation) {
+    outputObject = generateJsObject(callResults.map((c) => [c, c]));
+  } else {
+    outputObject = generateJsObject(
+      outputEdges.map((o) => [o.to.name, o.from.name])
+    );
+  }
+
   const inputsObject = generateJsObjectParameter(Array.from(inputs));
 
   const params = sortParams(start.parameters ?? []);
@@ -277,28 +300,27 @@ ${fnCalls.map((s) => `    ${s}`).join("\n")}
 export function translateFile(
   input: string,
   output: string,
-  {
-    visualize,
-    rebuildModelica,
-  }: { visualize: boolean | string; rebuildModelica?: boolean }
+  { visualize, rebuildModelica, validation }: TranslationOptions
 ) {
   if (!input.endsWith(".jsonld")) {
-    console.error(clc.yellow("[WARNING]"), "Skipping non jsonld file", input);
+    // console.log(clc.yellow("[WARNING]"), "Skipping non jsonld file", input);
     return;
   }
 
   loadModelicaFiles(rebuildModelica);
-  const json = JSON.parse(
-    fs.readFileSync(path.join(process.cwd(), input), "utf-8")
-  );
-  if (!json["@graph"]) {
-    console.error(clc.red("[ERROR]"), "Invalid json jsonld", input);
+  const filePath = path.join(process.cwd(), input);
+  const json = readGraphFile(filePath);
+  if (!json) {
     return;
   }
-  const fullGraph = parseJsonToGraph(json["@graph"]);
+  const fullGraph = parseJsonToGraph(filePath, json);
   const blockId = lookupBlockElementId(fullGraph);
   const executionGraph = buildExecutionGraph(fullGraph);
-  const { code, definition } = translateGraph(blockId, executionGraph);
+  const { code, definition } = translateGraph(
+    blockId,
+    executionGraph,
+    validation || input.includes("/Validation/")
+  );
 
   const outputName = makeFilePath(blockId);
 
@@ -327,11 +349,14 @@ export function translateFile(
   );
   fs.writeFileSync(outFile, code);
   fs.writeFileSync(defFile, JSON.stringify(definition, null, 2));
+
   if (visualize) {
+    const folder = path.dirname(outFile);
+    const fileName = path.basename(outFile).replace(".js", ".svg");
     if (typeof visualize === "string") {
       visualizeGraph(executionGraph, visualize);
     } else {
-      visualizeGraph(executionGraph, path.join(output, outputName + ".svg"));
+      visualizeGraph(executionGraph, path.join(folder, fileName));
     }
   }
 }
@@ -354,32 +379,37 @@ function expressionJsValue(expression: ParsedExpression | undefined) {
 }
 
 function parseModelicaFiles(filePath: string) {
-  const content = fs.readFileSync(filePath, "utf-8");
-  const cst = parseModelica(content);
-  const fileModel = processCst(cst);
-  if (
-    (fileModel.namespace && fileModel.constants.length) ||
-    fileModel.enumerations.length
-  ) {
-    const parts = [fileModel.namespace, fileModel.package].filter((p) => p);
-    fileModel.constants
-      .filter((c) => c.value)
-      .forEach((constant) => {
-        modelicaConstants.set(
-          [...parts, constant.name].join("."),
-          expressionJsValue(constant.value)
-        );
+  try {
+    const content = fs.readFileSync(filePath, "utf-8");
+    const cst = parseModelica(content);
+    const fileModel = processCst(cst);
+    if (
+      (fileModel.namespace && fileModel.constants.length) ||
+      fileModel.enumerations.length
+    ) {
+      const parts = [fileModel.namespace, fileModel.package].filter((p) => p);
+      fileModel.constants
+        .filter((c) => c.value)
+        .forEach((constant) => {
+          modelicaConstants.set(
+            [...parts, constant.name].join("."),
+            expressionJsValue(constant.value)
+          );
+        });
+      fileModel.enumerations.forEach((enumeration) => {
+        Object.entries(enumeration.value).forEach(([key, value]) => {
+          modelicaConstants.set(
+            [...parts, enumeration.name, key].join("."),
+            value
+          );
+        });
       });
-    fileModel.enumerations.forEach((enumeration) => {
-      Object.entries(enumeration.value).forEach(([key, value]) => {
-        modelicaConstants.set(
-          [...parts, enumeration.name, key].join("."),
-          value
-        );
-      });
-    });
+    }
+    console.log(clc.greenBright("[PARSED]"), filePath);
+  } catch (e) {
+    console.error(clc.red("[ERROR]"), "Error parsing file", filePath, e);
+    throw e;
   }
-  console.log(clc.greenBright("[PARSED]"), filePath);
 }
 
 function loadModelicaFiles(force?: boolean) {
@@ -411,16 +441,20 @@ function loadModelicaFiles(force?: boolean) {
 export function translateDirectory(
   input: string,
   output: string,
-  options: { visualize: boolean | string; rebuildModelica?: boolean }
+  options: TranslationOptions
 ) {
   fs.mkdirSync(path.dirname(output), { recursive: true });
   loadModelicaFiles(options.rebuildModelica);
   const standard = path.join(__dirname, "..", "standard");
 
+  const standardFiles: string[] = [];
+
   for (const filePath of walkDirectoryRecursive(standard)) {
     const copyPath = path.join(output, path.relative(standard, filePath));
     fs.mkdirSync(path.dirname(copyPath), { recursive: true });
     fs.copyFileSync(filePath, copyPath);
+    standardFiles.push(copyPath);
+
     const importPath = path.relative(output, copyPath).replace(".js", "");
     filesRegistry.set(importPath.replace(/\//g, "."), importPath);
   }
@@ -432,7 +466,19 @@ export function translateDirectory(
     ) {
       continue;
     }
-    translateFile(filePath, output, options);
+    try {
+      // do not translate CDL files
+      if (
+        filePath.includes("Buildings/Controls/OBC/CDL") &&
+        !filePath.includes("/Validation/")
+      ) {
+        continue;
+      }
+
+      translateFile(filePath, output, options);
+    } catch (e) {
+      console.error(clc.red("[ERROR]"), "Error translating file", filePath, e);
+    }
   }
 
   const availableFiles = [...filesRegistry.values()];
@@ -440,6 +486,12 @@ export function translateDirectory(
   for (const file of importedFiles) {
     if (!availableFiles.includes(file)) {
       const types = importsMap.get(file) ?? [];
+      const isValidation = types.every((t) =>
+        normalizeBlockId(t).includes(".Validation.")
+      );
+      if (isValidation) {
+        continue;
+      }
       console.error(
         clc.red("[ERROR]"),
         "Missing import for type",

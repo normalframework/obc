@@ -9,7 +9,7 @@
  * @returns {number} output.y - Connector of Real output signal.
  */
 
- function sin({ }) {
+ function sin({ } = {}) {
   return ({ u = 0 }) => {
     return { y: Math.sin(u) };
   }

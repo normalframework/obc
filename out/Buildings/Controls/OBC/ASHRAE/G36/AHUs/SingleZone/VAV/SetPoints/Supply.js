@@ -43,7 +43,7 @@ module.exports = (
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.SingleZone.VAV.SetPoints.Supply.maxSupTem
   const maxSupTemFn = constant_baefa089({ k: TSup_max });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.SingleZone.VAV.SetPoints.Supply.zer
-  const zerFn = constant_baefa089({});
+  const zerFn = constant_baefa089({ k: 0 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.SingleZone.VAV.SetPoints.Supply.temOnePoi
   const temOnePoiFn = constant_baefa089({ k: temPoiOne });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.SingleZone.VAV.SetPoints.Supply.heaSupTem
@@ -69,7 +69,7 @@ module.exports = (
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.SingleZone.VAV.SetPoints.Supply.supTemSet
   const supTemSetFn = switch_6d141143({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.SingleZone.VAV.SetPoints.Supply.fanOff
-  const fanOffFn = constant_baefa089({});
+  const fanOffFn = constant_baefa089({ k: 0 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.SingleZone.VAV.SetPoints.Supply.unoMod
   const unoModFn = constant_8c5ba27d({ k: 7 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.SingleZone.VAV.SetPoints.Supply.isUnoMod
@@ -119,14 +119,14 @@ module.exports = (
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.SingleZone.VAV.SetPoints.Supply.fanSpe
   const fanSpeFn = switch_6d141143({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.SingleZone.VAV.SetPoints.Supply.ramLim
-  const ramLimFn = limitslewrate_d2b51837({ raisingSlewRate: "1/600", Td: 60 });
+  const ramLimFn = limitslewrate_d2b51837({ raisingSlewRate: 1/600, Td: 60 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.SingleZone.VAV.SetPoints.Supply.not1
   const not1Fn = not_6d646018({});
 
   return (
-    { TZon, THeaSet, uCoo, uHea, uOpeMod, TOut }
+    { TZon, TCooSet, THeaSet, uCoo, uHea, uOpeMod, TOut }
   ) => {
-    const aveZonSet = aveZonSetFn({ u2: THeaSet });
+    const aveZonSet = aveZonSetFn({ u1: TCooSet, u2: THeaSet });
     const lim = limFn({ u: aveZonSet.y });
     const maxSupTem = maxSupTemFn({});
     const zer = zerFn({});

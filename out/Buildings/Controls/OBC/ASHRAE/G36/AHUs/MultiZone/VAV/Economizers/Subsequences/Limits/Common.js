@@ -11,17 +11,17 @@ const switch_6d141143 = require("../../../../../../../../CDL/Reals/Switch");
 
 module.exports = (
   {
-		controllerType = Math.PI,
+		controllerType = 1,
 		k = 0.05,
 		outDamPhy_max = 1,
-		outDamPhy_min,
+		outDamPhy_min = 0,
 		retDamPhy_max = 1,
-		retDamPhy_min,
+		retDamPhy_min = 0,
 		Td = 0.1,
 		Ti = 120,
 		uRetDam_min = 0.5,
 		yMax = 1,
-		yMin,
+		yMin = 0,
     } = {}
 ) => {
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.Economizers.Subsequences.Limits.Common.conInt1
@@ -58,7 +58,7 @@ module.exports = (
   const minRetDamFn = line_196841c3({ limitAbove: true, limitBelow: true });
 
   return (
-    { u1SupFan, VOutMinSet_flow_normalized, uOpeMod }
+    { u1SupFan, VOut_flow_normalized, VOutMinSet_flow_normalized, uOpeMod }
   ) => {
     const conInt1 = conInt1Fn({});
     const intEqu = intEquFn({ u1: uOpeMod, u2: conInt1.y });
@@ -67,7 +67,7 @@ module.exports = (
     const not1 = not1Fn({ u: and3.y });
     const outDamPhyPosMaxSig = outDamPhyPosMaxSigFn({});
     const outDamPosMaxSwitch = outDamPosMaxSwitchFn({ u1: outDamPhyPosMinSig.y, u2: not1.y, u3: outDamPhyPosMaxSig.y });
-    const damLimCon = damLimConFn({ u_s: VOutMinSet_flow_normalized });
+    const damLimCon = damLimConFn({ trigger: u1SupFan, u_m: VOut_flow_normalized, u_s: VOutMinSet_flow_normalized });
     const minSigLim = minSigLimFn({});
     const sigFraForOutDam = sigFraForOutDamFn({});
     const minOutDam = minOutDamFn({ f1: outDamPhyPosMinSig.y, f2: outDamPosMaxSwitch.y, u: damLimCon.y, x1: minSigLim.y, x2: sigFraForOutDam.y });

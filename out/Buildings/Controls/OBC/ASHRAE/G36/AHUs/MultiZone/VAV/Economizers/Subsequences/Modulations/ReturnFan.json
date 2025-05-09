@@ -1,6 +1,8 @@
 {
   "inputs": [
-    "uTSup"
+    "uTSup",
+    "uRetDam_max",
+    "uRetDam_min"
   ],
   "outputs": [
     "yOutDam",

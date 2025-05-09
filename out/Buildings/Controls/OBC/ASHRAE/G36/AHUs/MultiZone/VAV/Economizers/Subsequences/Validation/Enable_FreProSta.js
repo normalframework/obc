@@ -33,7 +33,7 @@ module.exports = (
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.Economizers.Subsequences.Validation.Enable_FreProSta.retDamPosMax
   const retDamPosMaxFn = constant_baefa089({ k: 0.8 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.Economizers.Subsequences.Validation.Enable_FreProSta.retDamPosMin
-  const retDamPosMinFn = constant_baefa089({});
+  const retDamPosMinFn = constant_baefa089({ k: 0 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.Economizers.Subsequences.Validation.Enable_FreProSta.retDamPhyPosMax
   const retDamPhyPosMaxFn = constant_baefa089({ k: 1 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.Economizers.Subsequences.Validation.Enable_FreProSta.enaDis
@@ -56,6 +56,6 @@ module.exports = (
     const retDamPhyPosMax = retDamPhyPosMaxFn({});
     const enaDis = enaDisFn({ hOut: hOutBelowCutoff.y, hOutCut: hOutCut.y, TOut: TOutBelowCutoff.y, TOutCut: TOutCut.y, u1SupFan: supFanSta.y, uFreProSta: freProSta1.y, uOutDam_max: outDamPosMax.y, uOutDam_min: outDamPosMin.y, uRetDam_max: retDamPosMax.y, uRetDam_min: retDamPosMin.y, uRetDamPhy_max: retDamPhyPosMax.y });
 
-    return {};
+    return { hOutBelowCutoff: hOutBelowCutoff, hOutCut: hOutCut, TOutBelowCutoff: TOutBelowCutoff, TOutCut: TOutCut, supFanSta: supFanSta, booPul1: booPul1, freProSta1: freProSta1, outDamPosMax: outDamPosMax, outDamPosMin: outDamPosMin, retDamPosMax: retDamPosMax, retDamPosMin: retDamPosMin, retDamPhyPosMax: retDamPhyPosMax, enaDis: enaDis };
   }
 }

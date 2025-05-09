@@ -1,3 +1,4 @@
+const TimeManager = require("../../../../../../TimeManager");
 /**
  * Pulse block that generates a pulse signal of type Real.
  * 
@@ -20,7 +21,7 @@
   }
 
   return () => {
-    const currentTime = (Date.now() / 1000 + shift) % period;
+    const currentTime = (TimeManager.time + shift) % period;
     const pulseValue = currentTime < width * period ? amplitude : 0;
     const y = pulseValue + offset;
 

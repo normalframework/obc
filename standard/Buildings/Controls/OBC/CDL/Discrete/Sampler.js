@@ -12,33 +12,24 @@
  */
 function sampler({ samplePeriod } = {}) {
   const TimeManager = require("../../../../../TimeManager");
+  const Initial = require("../../../../../Initial");
+  const isInitial = Initial();
   const t0 = Math.round(TimeManager.time / samplePeriod) * samplePeriod;
   let nextSample = t0;
-  let firstTriggerFired = false;
   let y = 0;
-  let firstCall = true;
 
   return ({ u = 0 } = {}) => {
     const now = TimeManager.time;
-    let sampleTrigger = false;
-    let firstTrigger = false;
 
-    if (firstCall) {
+    if (isInitial()) {
       y = u;
-      sampleTrigger = true;
-      firstTrigger = true;
-      firstCall = false;
-      firstTriggerFired = true;
       nextSample += samplePeriod;
     } else if (now >= nextSample) {
-      sampleTrigger = true;
-      firstTrigger = !firstTriggerFired;
-      firstTriggerFired = true;
       nextSample += samplePeriod;
       y = u;
     }
 
-    return { sampleTrigger, firstTrigger, y };
+    return { y };
   };
 }
 

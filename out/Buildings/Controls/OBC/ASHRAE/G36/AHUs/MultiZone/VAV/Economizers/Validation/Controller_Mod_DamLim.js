@@ -52,6 +52,6 @@ module.exports = (
     const dpDam2 = dpDam2Fn({});
     const eco1 = eco1Fn({ dpMinOutDam: dpDam2.y, TOut: TOutBelowCutoff.y, u1SupFan: fanSta.y, uFreProSta: freProSta.y, uOpeMod: opeMod.y, uSupFan: supFanSpe.y, uTSup: uTSup.y, VOutMinSet_flow_normalized: VOutMinSet_flow.y });
 
-    return {};
+    return { TOutBelowCutoff: TOutBelowCutoff, fanSta: fanSta, freProSta: freProSta, opeMod: opeMod, supFanSpe: supFanSpe, uTSup: uTSup, VOut_flow: VOut_flow, VOutMinSet_flow: VOutMinSet_flow, eco: eco, dpDam2: dpDam2, eco1: eco1 };
   }
 }

@@ -1,9 +1,9 @@
 {
   "inputs": [
+    "TAirSup",
     "TAirSupSet",
     "uCooCoiSet",
-    "uHeaCoiSet",
-    "TAirSup"
+    "uHeaCoiSet"
   ],
   "outputs": [
     "yChiPlaReq",

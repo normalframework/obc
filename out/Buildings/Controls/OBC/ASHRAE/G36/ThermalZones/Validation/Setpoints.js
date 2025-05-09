@@ -15,17 +15,17 @@ module.exports = (
   
 ) => {
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ThermalZones.Validation.Setpoints.zerAdj
-  const zerAdjFn = constant_baefa089({});
+  const zerAdjFn = constant_baefa089({ k: 0 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ThermalZones.Validation.Setpoints.winSta
   const winStaFn = pulse_27dcacc8({ period: 14400, shift: 1200 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ThermalZones.Validation.Setpoints.not2
   const not2Fn = not_6d646018({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ThermalZones.Validation.Setpoints.cooSetAdj
-  const cooSetAdjFn = sin_9696c4d3({ freqHz: "1/28800" });
+  const cooSetAdjFn = sin_9696c4d3({ freqHz: 1/28800 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ThermalZones.Validation.Setpoints.swi2
   const swi2Fn = switch_6d141143({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ThermalZones.Validation.Setpoints.heaSetAdj
-  const heaSetAdjFn = sin_9696c4d3({ amplitude: 0.5, freqHz: "1/28800" });
+  const heaSetAdjFn = sin_9696c4d3({ amplitude: 0.5, freqHz: 1/28800 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ThermalZones.Validation.Setpoints.swi1
   const swi1Fn = switch_6d141143({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ThermalZones.Validation.Setpoints.TZonCooSetOcc
@@ -39,9 +39,9 @@ module.exports = (
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ThermalZones.Validation.Setpoints.occSta
   const occStaFn = pulse_27dcacc8({ period: 14400, width: 0.95 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ThermalZones.Validation.Setpoints.cooDemLimLev
-  const cooDemLimLevFn = constant_8c5ba27d({});
+  const cooDemLimLevFn = constant_8c5ba27d({ k: 0 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ThermalZones.Validation.Setpoints.heaDemLimLev
-  const heaDemLimLevFn = constant_8c5ba27d({});
+  const heaDemLimLevFn = constant_8c5ba27d({ k: 0 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ThermalZones.Validation.Setpoints.ram
   const ramFn = ramp_3c414377({ duration: 28800 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ThermalZones.Validation.Setpoints.greThr
@@ -76,6 +76,6 @@ module.exports = (
     const booToInt = booToIntFn({ u: not1.y });
     const TZonSet = TZonSetFn({ cooSetAdj: swi2.y, heaSetAdj: swi1.y, TOccCooSet: TZonCooSetOcc.y, TOccHeaSet: TZonHeaSetOcc.y, TUnoCooSet: TZonCooSetUno.y, TUnoHeaSet: TZonHeaSetUno.y, u1Occ: occSta.y, u1Win: not2.y, uCooDemLimLev: cooDemLimLev.y, uHeaDemLimLev: heaDemLimLev.y, uOpeMod: booToInt.y });
 
-    return {};
+    return { zerAdj: zerAdj, winSta: winSta, not2: not2, cooSetAdj: cooSetAdj, swi2: swi2, heaSetAdj: heaSetAdj, swi1: swi1, TZonCooSetOcc: TZonCooSetOcc, TZonHeaSetOcc: TZonHeaSetOcc, TZonCooSetUno: TZonCooSetUno, TZonHeaSetUno: TZonHeaSetUno, occSta: occSta, cooDemLimLev: cooDemLimLev, heaDemLimLev: heaDemLimLev, ram: ram, greThr: greThr, not1: not1, booToInt: booToInt, TZonSet: TZonSet };
   }
 }

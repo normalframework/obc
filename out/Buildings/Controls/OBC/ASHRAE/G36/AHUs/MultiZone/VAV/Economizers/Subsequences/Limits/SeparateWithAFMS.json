@@ -1,5 +1,6 @@
 {
   "inputs": [
+    "VOut_flow_normalized",
     "VOutMinSet_flow_normalized",
     "u1SupFan",
     "uOutDam",

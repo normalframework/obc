@@ -23,6 +23,7 @@
     "commander": "^12.1.0",
     "graphlib-dot": "^0.6.4",
     "inquirer": "^12.3.0",
+    "mathjs": "^14.4.0",
     "openai": "^4.53.2",
     "simple-git": "^3.27.0",
     "viz.js": "^2.1.2",

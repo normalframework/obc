@@ -46,7 +46,7 @@ module.exports = (
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ThermalZones.Setpoints.cooSetWinOpe
   const cooSetWinOpeFn = constant_baefa089({ k: TWinOpeCooSet });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ThermalZones.Setpoints.conFal
-  const conFalFn = constant_48cc1015({});
+  const conFalFn = constant_48cc1015({ k: false });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ThermalZones.Setpoints.conInt2
   const conInt2Fn = constant_8c5ba27d({ k: 1 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ThermalZones.Setpoints.intEqu2
@@ -78,11 +78,11 @@ module.exports = (
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ThermalZones.Setpoints.swi
   const swiFn = switch_6d141143({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ThermalZones.Setpoints.con3
-  const con3Fn = constant_baefa089({});
+  const con3Fn = constant_baefa089({ k: 0 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ThermalZones.Setpoints.cooSetAdjCon
   const cooSetAdjConFn = constant_48cc1015({ k: have_locAdj });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ThermalZones.Setpoints.con
-  const conFn = constant_baefa089({});
+  const conFn = constant_baefa089({ k: 0 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ThermalZones.Setpoints.swi4
   const swi4Fn = switch_6d141143({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ThermalZones.Setpoints.add2
@@ -184,17 +184,33 @@ module.exports = (
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ThermalZones.Setpoints.swi1
   const swi1Fn = switch_6d141143({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ThermalZones.Setpoints.con4
-  const con4Fn = constant_baefa089({});
+  const con4Fn = constant_baefa089({ k: 0 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ThermalZones.Setpoints.heaSetAdjCon
   const heaSetAdjConFn = constant_48cc1015({ k: have_locAdj });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ThermalZones.Setpoints.con1
-  const con1Fn = constant_baefa089({});
+  const con1Fn = constant_baefa089({ k: 0 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ThermalZones.Setpoints.swi6
   const swi6Fn = switch_6d141143({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ThermalZones.Setpoints.add1
   const add1Fn = add_a5faf0f2({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ThermalZones.Setpoints.swi3
   const swi3Fn = switch_6d141143({});
+  // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ThermalZones.Setpoints.conInt6
+  const conInt6Fn = constant_8c5ba27d({ k: 1 });
+  // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ThermalZones.Setpoints.intEqu6
+  const intEqu6Fn = equal_2ac2bdd1({});
+  // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ThermalZones.Setpoints.conInt7
+  const conInt7Fn = constant_8c5ba27d({ k: 2 });
+  // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ThermalZones.Setpoints.intEqu7
+  const intEqu7Fn = equal_2ac2bdd1({});
+  // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ThermalZones.Setpoints.or4
+  const or4Fn = or_e27f1bfe({});
+  // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ThermalZones.Setpoints.conInt8
+  const conInt8Fn = constant_8c5ba27d({ k: 3 });
+  // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ThermalZones.Setpoints.intEqu8
+  const intEqu8Fn = equal_2ac2bdd1({});
+  // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ThermalZones.Setpoints.or8
+  const or8Fn = or_e27f1bfe({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ThermalZones.Setpoints.not2
   const not2Fn = not_6d646018({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ThermalZones.Setpoints.booToRea7
@@ -205,10 +221,6 @@ module.exports = (
   const pro7Fn = multiply_a462b873({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ThermalZones.Setpoints.addPar6
   const addPar6Fn = addparameter_26b0d2d7({ p: -decTSetDem_1 });
-  // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ThermalZones.Setpoints.conInt6
-  const conInt6Fn = constant_8c5ba27d({ k: 1 });
-  // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ThermalZones.Setpoints.intEqu6
-  const intEqu6Fn = equal_2ac2bdd1({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ThermalZones.Setpoints.booToRea3
   const booToRea3Fn = booleantoreal_df99be1a({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ThermalZones.Setpoints.pro3
@@ -217,20 +229,12 @@ module.exports = (
   const add6Fn = add_a5faf0f2({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ThermalZones.Setpoints.addPar5
   const addPar5Fn = addparameter_26b0d2d7({ p: -decTSetDem_2 });
-  // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ThermalZones.Setpoints.conInt7
-  const conInt7Fn = constant_8c5ba27d({ k: 2 });
-  // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ThermalZones.Setpoints.intEqu7
-  const intEqu7Fn = equal_2ac2bdd1({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ThermalZones.Setpoints.booToRea4
   const booToRea4Fn = booleantoreal_df99be1a({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ThermalZones.Setpoints.pro4
   const pro4Fn = multiply_a462b873({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ThermalZones.Setpoints.addPar4
   const addPar4Fn = addparameter_26b0d2d7({ p: -decTSetDem_3 });
-  // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ThermalZones.Setpoints.conInt8
-  const conInt8Fn = constant_8c5ba27d({ k: 3 });
-  // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ThermalZones.Setpoints.intEqu8
-  const intEqu8Fn = equal_2ac2bdd1({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ThermalZones.Setpoints.booToRea5
   const booToRea5Fn = booleantoreal_df99be1a({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ThermalZones.Setpoints.pro5
@@ -277,15 +281,11 @@ module.exports = (
   const swi16Fn = switch_6d141143({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ThermalZones.Setpoints.reaToInt
   const reaToIntFn = realtointeger_b3838f5e({});
-  // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ThermalZones.Setpoints.or4
-  const or4Fn = or_e27f1bfe({});
-  // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ThermalZones.Setpoints.or8
-  const or8Fn = or_e27f1bfe({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ThermalZones.Setpoints.winOpe
   const winOpeFn = not_6d646018({});
 
   return (
-    { TUnoHeaSet, uOpeMod, uCooDemLimLev, uHeaDemLimLev, TUnoCooSet, u1Win }
+    { TUnoHeaSet, uOpeMod, uCooDemLimLev, uHeaDemLimLev, TUnoCooSet, TOccCooSet, TOccHeaSet, u1Win }
   ) => {
     const cooSetWinOpe = cooSetWinOpeFn({});
     const conFal = conFalFn({});
@@ -303,7 +303,7 @@ module.exports = (
     const intEqu1 = intEqu1Fn({ u1: uOpeMod, u2: conInt1.y });
     const or6 = or6Fn({ u1: intEqu.y, u2: intEqu1.y });
     const or9 = or9Fn({ u1: or6.y, u2: intEqu2.y });
-    const swi = swiFn({ u3: TUnoCooSet, u2: or9.y });
+    const swi = swiFn({ u1: TOccCooSet, u2: or9.y, u3: TUnoCooSet });
     const con3 = con3Fn({});
     const cooSetAdjCon = cooSetAdjConFn({});
     const con = conFn({});
@@ -356,31 +356,33 @@ module.exports = (
     const swi9 = swi9Fn({ u1: swi17.y, u2: les.y, u3: TUnoCooSet });
     const addPar = addParFn({ u: swi9.y });
     const heaSetWinOpe = heaSetWinOpeFn({});
-    const swi1 = swi1Fn({ u3: TUnoHeaSet, u2: or9.y });
+    const swi1 = swi1Fn({ u1: TOccHeaSet, u2: or9.y, u3: TUnoHeaSet });
     const con4 = con4Fn({});
     const heaSetAdjCon = heaSetAdjConFn({});
     const con1 = con1Fn({});
     const swi6 = swi6Fn({ u1: con4.y, u2: heaSetAdjCon.y, u3: con1.y });
     const add1 = add1Fn({ u1: swi1.y, u2: swi6.y });
     const swi3 = swi3Fn({ u1: add1.y, u2: intEqu2.y, u3: swi1.y });
-    const not2 = not2Fn({});
+    const conInt6 = conInt6Fn({});
+    const intEqu6 = intEqu6Fn({ u1: uHeaDemLimLev, u2: conInt6.y });
+    const conInt7 = conInt7Fn({});
+    const intEqu7 = intEqu7Fn({ u1: uHeaDemLimLev, u2: conInt7.y });
+    const or4 = or4Fn({ u1: intEqu6.y, u2: intEqu7.y });
+    const conInt8 = conInt8Fn({});
+    const intEqu8 = intEqu8Fn({ u1: uHeaDemLimLev, u2: conInt8.y });
+    const or8 = or8Fn({ u1: or4.y, u2: intEqu8.y });
+    const not2 = not2Fn({ u: or8.y });
     const booToRea7 = booToRea7Fn({ u: not2.y });
     const heaSetFre = heaSetFreFn({ trigger: edg.y, u: swi3.y });
     const pro7 = pro7Fn({ u1: booToRea7.y, u2: heaSetFre.y });
     const addPar6 = addPar6Fn({ u: heaSetFre.y });
-    const conInt6 = conInt6Fn({});
-    const intEqu6 = intEqu6Fn({ u1: uHeaDemLimLev, u2: conInt6.y });
     const booToRea3 = booToRea3Fn({ u: intEqu6.y });
     const pro3 = pro3Fn({ u1: addPar6.y, u2: booToRea3.y });
     const add6 = add6Fn({ u1: pro7.y, u2: pro3.y });
     const addPar5 = addPar5Fn({ u: heaSetFre.y });
-    const conInt7 = conInt7Fn({});
-    const intEqu7 = intEqu7Fn({ u1: uHeaDemLimLev, u2: conInt7.y });
     const booToRea4 = booToRea4Fn({ u: intEqu7.y });
     const pro4 = pro4Fn({ u1: addPar5.y, u2: booToRea4.y });
     const addPar4 = addPar4Fn({ u: heaSetFre.y });
-    const conInt8 = conInt8Fn({});
-    const intEqu8 = intEqu8Fn({ u1: uHeaDemLimLev, u2: conInt8.y });
     const booToRea5 = booToRea5Fn({ u: intEqu8.y });
     const pro5 = pro5Fn({ u1: addPar4.y, u2: booToRea5.y });
     const add7 = add7Fn({ u1: pro4.y, u2: pro5.y });
@@ -404,8 +406,6 @@ module.exports = (
     const alaZer = alaZerFn({});
     const swi16 = swi16Fn({ u1: alaFou.y, u2: and11.y, u3: alaZer.y });
     const reaToInt = reaToIntFn({ u: swi16.y });
-    const or4 = or4Fn({ u1: intEqu6.y, u2: intEqu7.y });
-    const or8 = or8Fn({ u1: or4.y, u2: intEqu8.y, y: not2.u });
     const winOpe = winOpeFn({ u: u1Win });
 
     return { TCooSet: swi9.y, THeaSet: swi7.y, yAla: reaToInt.y };

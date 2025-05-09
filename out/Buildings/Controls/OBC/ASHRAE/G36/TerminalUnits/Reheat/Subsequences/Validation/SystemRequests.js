@@ -1,40 +1,40 @@
 
 // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.Reheat.Subsequences.Validation.SystemRequests
 const systemrequests_1cfab3ff = require("../SystemRequests");
-const unitdelay_bcd3bd80 = require("../../../../../../CDL/Discrete/UnitDelay");
-const not_6d646018 = require("../../../../../../CDL/Logical/Not");
-const pulse_27dcacc8 = require("../../../../../../CDL/Logical/Sources/Pulse");
-const constant_baefa089 = require("../../../../../../CDL/Reals/Sources/Constant");
-const ramp_3c414377 = require("../../../../../../CDL/Reals/Sources/Ramp");
-const sin_9696c4d3 = require("../../../../../../CDL/Reals/Sources/Sin");
+const unitdelay_c1704a5f = require("../../../../../../CDL/Discrete/UnitDelay");
+const not_f2b50019 = require("../../../../../../CDL/Logical/Not");
+const pulse_cdc9ff89 = require("../../../../../../CDL/Logical/Sources/Pulse");
+const constant_d2aca5e8 = require("../../../../../../CDL/Reals/Sources/Constant");
+const ramp_40ddd056 = require("../../../../../../CDL/Reals/Sources/Ramp");
+const sin_f9d5a014 = require("../../../../../../CDL/Reals/Sources/Sin");
 
 module.exports = (
   
 ) => {
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.Reheat.Subsequences.Validation.SystemRequests.sine
-  const sineFn = sin_9696c4d3({ freqHz: "1/7200", offset: 296.15 });
+  const sineFn = sin_f9d5a014({ freqHz: 1/7200, offset: 296.15 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.Reheat.Subsequences.Validation.SystemRequests.TCooSet
-  const TCooSetFn = unitdelay_bcd3bd80({ samplePeriod: 1800 });
+  const TCooSetFn = unitdelay_c1704a5f({ samplePeriod: 1800 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.Reheat.Subsequences.Validation.SystemRequests.TDis
-  const TDisFn = ramp_3c414377({ duration: 3600, height: -5, offset: "273.15 +20" });
+  const TDisFn = ramp_40ddd056({ duration: 3600, height: -5, offset: 273.15 +20 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.Reheat.Subsequences.Validation.SystemRequests.TDisSet
-  const TDisSetFn = constant_baefa089({ k: "273.15 +30" });
+  const TDisSetFn = constant_d2aca5e8({ k: 273.15 +30 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.Reheat.Subsequences.Validation.SystemRequests.TZon
-  const TZonFn = sin_9696c4d3({ amplitude: 2, freqHz: "1/7200", offset: 299.15 });
+  const TZonFn = sin_f9d5a014({ amplitude: 2, freqHz: 1/7200, offset: 299.15 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.Reheat.Subsequences.Validation.SystemRequests.booPul
-  const booPulFn = pulse_27dcacc8({ period: 7200, width: 0.1 });
+  const booPulFn = pulse_cdc9ff89({ period: 7200, width: 0.1 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.Reheat.Subsequences.Validation.SystemRequests.not1
-  const not1Fn = not_6d646018({});
+  const not1Fn = not_f2b50019({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.Reheat.Subsequences.Validation.SystemRequests.uCoo
-  const uCooFn = ramp_3c414377({ duration: 2000, height: -1, offset: 1, startTime: 1000 });
+  const uCooFn = ramp_40ddd056({ duration: 2000, height: -1, offset: 1, startTime: 1000 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.Reheat.Subsequences.Validation.SystemRequests.damPos
-  const damPosFn = ramp_3c414377({ duration: 3000, height: -0.7, offset: 0.7 });
+  const damPosFn = ramp_40ddd056({ duration: 3000, height: -0.7, offset: 0.7 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.Reheat.Subsequences.Validation.SystemRequests.valPos
-  const valPosFn = ramp_3c414377({ duration: 2000, height: -0.7, offset: 0.7, startTime: 3600 });
+  const valPosFn = ramp_40ddd056({ duration: 2000, height: -0.7, offset: 0.7, startTime: 3600 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.Reheat.Subsequences.Validation.SystemRequests.disAir
-  const disAirFn = ramp_3c414377({ duration: 7200, height: 0.3, offset: 0.1 });
+  const disAirFn = ramp_40ddd056({ duration: 7200, height: 0.3, offset: 0.1 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.Reheat.Subsequences.Validation.SystemRequests.disAirSet
-  const disAirSetFn = ramp_3c414377({ duration: 7200, height: 0.9, offset: 0.1 });
+  const disAirSetFn = ramp_40ddd056({ duration: 7200, height: 0.9, offset: 0.1 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.Reheat.Subsequences.Validation.SystemRequests.sysReq
   const sysReqFn = systemrequests_1cfab3ff({ damPosHys: 0.01, floHys: 0.01, looHys: 0.01, valPosHys: 0.01 });
 
@@ -55,6 +55,6 @@ module.exports = (
     const disAirSet = disAirSetFn({});
     const sysReq = sysReqFn({ TCooSet: TCooSet.y, TDis: TDis.y, TDisSet: TDisSet.y, TZon: TZon.y, uAftSup: not1.y, uCoo: uCoo.y, uDam: damPos.y, uVal: valPos.y, VDis_flow: disAir.y, VSet_flow: disAirSet.y });
 
-    return {};
+    return { sine: sine, TCooSet: TCooSet, TDis: TDis, TDisSet: TDisSet, TZon: TZon, booPul: booPul, not1: not1, uCoo: uCoo, damPos: damPos, valPos: valPos, disAir: disAir, disAirSet: disAirSet, sysReq: sysReq };
   }
 }

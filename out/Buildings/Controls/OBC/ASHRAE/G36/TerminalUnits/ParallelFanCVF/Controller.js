@@ -15,8 +15,8 @@ module.exports = (
   {
 		chaRat = 540,
 		comChaTim = 15,
-		controllerTypeDam = Math.PI,
-		controllerTypeVal = Math.PI,
+		controllerTypeDam = 1,
+		controllerTypeVal = 1,
 		damPosHys = 0.005,
 		dTDisZonSetMax = 11,
 		dTHys = 0.25,
@@ -73,7 +73,7 @@ module.exports = (
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.ParallelFanCVF.Controller.zonSta
   const zonStaFn = zonestates_6a0c176c({ uHigh: 2*looHys, uLow: looHys });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.ParallelFanCVF.Controller.setPoi
-  const setPoiFn = setpoints_3c8e6a49({ dTHys: dTHys, have_CO2Sen: have_CO2Sen, have_occSen: have_occSen, have_parFanPowUni: true, have_winSen: have_winSen, permit_occStandby: permit_occStandby, VAreBreZon_flow: VAreBreZon_flow, VCooMax_flow: VCooMax_flow, VMin_flow: VMin_flow, VPopBreZon_flow: VPopBreZon_flow, zonDisEff_cool: zonDisEff_cool, zonDisEff_heat: zonDisEff_heat });
+  const setPoiFn = setpoints_3c8e6a49({ dTHys: dTHys, have_CO2Sen: have_CO2Sen, have_occSen: have_occSen, have_parFanPowUni: true, have_typTerUni: false, have_winSen: have_winSen, permit_occStandby: permit_occStandby, VAreBreZon_flow: VAreBreZon_flow, VCooMax_flow: VCooMax_flow, VMin_flow: VMin_flow, VPopBreZon_flow: VPopBreZon_flow, zonDisEff_cool: zonDisEff_cool, zonDisEff_heat: zonDisEff_heat });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.ParallelFanCVF.Controller.minFlo
   const minFloFn = setpoints_aa6b5c6d({ have_CO2Sen: have_CO2Sen, have_occSen: have_occSen, have_parFanPowUni: true, have_winSen: have_winSen, VAreMin_flow: VAreMin_flow, VCooMax_flow: VCooMax_flow, VMin_flow: VMin_flow, VOccMin_flow: VOccMin_flow });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.ParallelFanCVF.Controller.actAirSet
@@ -90,19 +90,19 @@ module.exports = (
   const sysReqFn = systemrequests_c3ff6783({ damPosHys: damPosHys, dTHys: dTHys, durTimDisAir: durTimDisAir, durTimFlo: durTimFlo, durTimTem: durTimTem, floHys: floHys, heaCoi: heaCoi, looHys: looHys, samplePeriod: samplePeriod, thrTDis_1: thrTDis_1, thrTDis_2: thrTDis_2, thrTemDif: thrTemDif, twoTemDif: twoTemDif, valPosHys: valPosHys });
 
   return (
-    { uOpeMod, VPri_flow, TZon, VParFan_flow, uHeaOff }
+    { uOpeMod, TDis, TSup, u1Fan, u1HotPla, u1TerFan, VPri_flow, TCooSet, THeaSet, TZon, oveFloSet, TSupSet, ppmCO2, ppmCO2Set, u1Occ, u1Win, VParFan_flow, oveDamPos, oveFan, uHeaOff }
   ) => {
-    const conLoo = conLooFn({ TZon: TZon });
-    const zonSta = zonStaFn({ uHea: conLoo.yHea });
-    const setPoi = setPoiFn({ uOpeMod: uOpeMod, uZonSta: zonSta.yZonSta });
-    const minFlo = minFloFn({ VParFan_flow: VParFan_flow, uZonSta: zonSta.yZonSta });
+    const conLoo = conLooFn({ TCooSet: TCooSet, THeaSet: THeaSet, TZon: TZon });
+    const zonSta = zonStaFn({ uCoo: conLoo.yCoo, uHea: conLoo.yHea });
+    const setPoi = setPoiFn({ ppmCO2: ppmCO2, ppmCO2Set: ppmCO2Set, TDis: TDis, TZon: TZon, u1Occ: u1Occ, u1Win: u1Win, uOpeMod: uOpeMod, uZonSta: zonSta.yZonSta, VParFan_flow: VParFan_flow });
+    const minFlo = minFloFn({ ppmCO2: ppmCO2, ppmCO2Set: ppmCO2Set, u1Occ: u1Occ, u1Win: u1Win, uOpeMod: uOpeMod, uZonSta: zonSta.yZonSta, VParFan_flow: VParFan_flow });
     const actAirSet = actAirSetFn({ uOpeMod: uOpeMod, VOccMin_flow: minFlo.VOccZonMin_flow });
-    const damVal = damValFn({ VPri_flow: VPri_flow, uHea: conLoo.yHea, VActMin_flow: actAirSet.VActMin_flow, VOAMin_flow: minFlo.VZonAbsMin_flow });
-    const setOve = setOveFn({ uHeaOff: uHeaOff, uVal: damVal.yVal });
-    const ala = alaFn({ VPri_flow: VPri_flow, VActSet_flow: damVal.VPri_flow_Set, uVal: setOve.yVal });
-    const timSup = timSupFn({ TZon: TZon });
-    const sysReq = sysReqFn({ VPri_flow: VPri_flow, VSet_flow: damVal.VPri_flow_Set, uAftSup: timSup.yAftSup, uCoo: conLoo.yCoo, uVal: setOve.yVal });
+    const damVal = damValFn({ oveFloSet: oveFloSet, TDis: TDis, THeaSet: THeaSet, TSup: TSup, TSupSet: TSupSet, TZon: TZon, u1Fan: u1Fan, uCoo: conLoo.yCoo, uHea: conLoo.yHea, uOpeMod: uOpeMod, VActCooMax_flow: actAirSet.VActCooMax_flow, VActMin_flow: actAirSet.VActMin_flow, VOAMin_flow: minFlo.VZonAbsMin_flow, VPri_flow: VPri_flow });
+    const setOve = setOveFn({ oveDamPos: oveDamPos, oveFan: oveFan, u1Fan: damVal.y1Fan, uDam: damVal.yDam, uHeaOff: uHeaOff, uVal: damVal.yVal });
+    const ala = alaFn({ TDis: TDis, TDisSet: damVal.THeaDisSet, TSup: TSup, u1Fan: u1Fan, u1FanCom: damVal.y1Fan, u1HotPla: u1HotPla, u1TerFan: u1TerFan, uDam: setOve.yDam, uOpeMod: uOpeMod, uVal: setOve.yVal, VActSet_flow: damVal.VPri_flow_Set, VPri_flow: VPri_flow });
+    const timSup = timSupFn({ TSet: TCooSet, TZon: TZon });
+    const sysReq = sysReqFn({ TCooSet: TCooSet, TDis: TDis, TDisSet: damVal.THeaDisSet, TZon: TZon, uAftSup: timSup.yAftSup, uCoo: conLoo.yCoo, uDam: setOve.yDam, uVal: setOve.yVal, VPri_flow: VPri_flow, VSet_flow: damVal.VPri_flow_Set });
 
-    return { VMinOA_flow: setPoi.VMinOA_flow, VSet_flow: damVal.VPri_flow_Set, yCO2: minFlo.yCO2, yVal: setOve.yVal, yLowTemAla: ala.yLowTemAla, yZonTemResReq: sysReq.yZonTemResReq };
+    return { VAdjAreBreZon_flow: setPoi.VAdjAreBreZon_flow, VAdjPopBreZon_flow: setPoi.VAdjPopBreZon_flow, VMinOA_flow: setPoi.VMinOA_flow, VSet_flow: damVal.VPri_flow_Set, VZonAbsMin_flow: minFlo.VZonAbsMin_flow, VZonDesMin_flow: minFlo.VZonDesMin_flow, y1Fan: setOve.y1Fan, yCO2: minFlo.yCO2, yDam: setOve.yDam, yFanStaAla: ala.yFanStaAla, yFloSenAla: ala.yFloSenAla, yHeaValResReq: sysReq.yHeaValResReq, yHotWatPlaReq: sysReq.yHotWatPlaReq, yLeaDamAla: ala.yLeaDamAla, yLeaValAla: ala.yLeaValAla, yLowFloAla: ala.yLowFloAla, yLowTemAla: ala.yLowTemAla, yVal: setOve.yVal, yZonPreResReq: sysReq.yZonPreResReq, yZonTemResReq: sysReq.yZonTemResReq };
   }
 }

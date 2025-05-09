@@ -23,17 +23,17 @@ module.exports = (
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ZoneGroups.Validation.ZoneStatus.THeaSetUno
   const THeaSetUnoFn = constant_baefa089({ k: 285.15 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ZoneGroups.Validation.ZoneStatus.ramp2
-  const ramp2Fn = ramp_3c414377({ duration: "24*3600", height: 6.2831852 });
+  const ramp2Fn = ramp_3c414377({ duration: 24*3600, height: 6.2831852, offset: 0 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ZoneGroups.Validation.ZoneStatus.sin2
   const sin2Fn = sin_a5fb3529({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ZoneGroups.Validation.ZoneStatus.gai
   const gaiFn = multiplybyparameter_13a4f29f({ k: 12.5 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ZoneGroups.Validation.ZoneStatus.zonTem
-  const zonTemFn = addparameter_26b0d2d7({ p: "273.15 +22.5" });
+  const zonTemFn = addparameter_26b0d2d7({ p: 273.15 +22.5 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ZoneGroups.Validation.ZoneStatus.warUpTim
   const warUpTimFn = constant_baefa089({ k: 1800 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ZoneGroups.Validation.ZoneStatus.noWinZonSta
-  const noWinZonStaFn = zonestatus_d9df93ac({});
+  const noWinZonStaFn = zonestatus_d9df93ac({ have_winSen: false });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ZoneGroups.Validation.ZoneStatus.uWinSta
   const uWinStaFn = pulse_27dcacc8({ period: 43200, shift: 1800, width: 0.3 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.ZoneGroups.Validation.ZoneStatus.not2
@@ -59,6 +59,6 @@ module.exports = (
     const not2 = not2Fn({ u: uWinSta.y });
     const witWinZonSta = witWinZonStaFn({ cooDowTim: cooDowTim.y, TOccCooSet: TCooSetOcc.y, TOccHeaSet: THeaSetOcc.y, TUnoCooSet: TCooSetUno.y, TUnoHeaSet: THeaSetUno.y, TZon: zonTem.y, u1Win: not2.y, warUpTim: warUpTim.y });
 
-    return {};
+    return { cooDowTim: cooDowTim, TCooSetOcc: TCooSetOcc, THeaSetOcc: THeaSetOcc, TCooSetUno: TCooSetUno, THeaSetUno: THeaSetUno, ramp2: ramp2, sin2: sin2, gai: gai, zonTem: zonTem, warUpTim: warUpTim, noWinZonSta: noWinZonSta, uWinSta: uWinSta, not2: not2, witWinZonSta: witWinZonSta };
   }
 }

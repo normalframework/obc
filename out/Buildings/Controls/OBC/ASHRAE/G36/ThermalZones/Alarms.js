@@ -140,7 +140,7 @@ module.exports = (
   const lowTemAla5Fn = assert_078ec840({ message: "Warning: the zone CO2 concentration exceeds setpoint plus 10%." });
 
   return (
-    { ppmCO2, TCooSet, uOpeMod, TZon, u1ResSet }
+    { ppmCO2, TZon, TCooSet, uOpeMod, THeaSet, u1ResSet }
   ) => {
     const unoMod = unoModFn({});
     const intEqu1 = intEqu1Fn({ u1: unoMod.y, u2: uOpeMod });
@@ -157,7 +157,7 @@ module.exports = (
     const booToInt5 = booToInt5Fn({ u: tenMinDur4.y });
     const co2Ala = co2AlaFn({ u1: booToInt4.y, u2: booToInt5.y });
     const levTwo = levTwoFn({});
-    const higTem = higTemFn({ u2: TCooSet });
+    const higTem = higTemFn({ u1: TZon, u2: TCooSet });
     const thrDegHig = thrDegHigFn({ u: higTem.y });
     const cooDowMod = cooDowModFn({});
     const intEqu3 = intEqu3Fn({ u1: cooDowMod.y, u2: uOpeMod });
@@ -173,7 +173,7 @@ module.exports = (
     const tenMinDur2 = tenMinDur2Fn({ u: and2.y });
     const booToInt = booToIntFn({ u: tenMinDur2.y });
     const higTemAla = higTemAlaFn({ u1: levTwo.y, u2: tenMinDur3.y, u3: booToInt.y });
-    const lowTem = lowTemFn({ u2: TZon });
+    const lowTem = lowTemFn({ u1: THeaSet, u2: TZon });
     const thrDegLow = thrDegLowFn({ u: lowTem.y });
     const and4 = and4Fn({ u1: thrDegLow.y, u2: notSupTemAla.y });
     const tenMinDur1 = tenMinDur1Fn({ u: and4.y });

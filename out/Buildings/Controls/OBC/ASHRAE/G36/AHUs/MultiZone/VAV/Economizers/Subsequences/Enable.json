@@ -2,11 +2,14 @@
   "inputs": [
     "u1SupFan",
     "uFreProSta",
-    "uRetDam_max",
     "uRetDamPhy_max",
+    "uRetDam_max",
+    "uOutDam_min",
     "uOutDam_max",
     "uRetDam_min",
+    "TOut",
     "TOutCut",
+    "hOut",
     "hOutCut"
   ],
   "outputs": [

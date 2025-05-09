@@ -6,23 +6,17 @@
  * @returns {Object} - The output object.
  * @returns {boolean} output.y - Output signal; stays true until cleared.
  */
-const Initial = require("../../../../../Initial");
 
 function latch() {
-  const isInitial = Initial();
   let y;
-  let prev = { u: false, clr: false };
 
   return ({ u = false, clr = false } = {}) => {
-    if (
-      isInitial() ||
-      u !== prev.u ||
-      clr !== prev.clr
-    ) {
-      y = u && !clr;
+    if (clr) {
+      y = false;
+    } else {
+      y = y || u;
     }
-    prev.u = u;
-    prev.clr = clr;
+
     return { y };
   };
 }

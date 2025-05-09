@@ -18,9 +18,9 @@ module.exports = (
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.VentilationZones.ASHRAE62_1.Validation.Setpoints.CO2Set
   const CO2SetFn = constant_baefa089({ k: 894 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.VentilationZones.ASHRAE62_1.Validation.Setpoints.disTem
-  const disTemFn = sin_9696c4d3({ amplitude: -5, freqHz: "1/7200", offset: "273.15 +20" });
+  const disTemFn = sin_9696c4d3({ amplitude: -5, freqHz: 1/7200, offset: 273.15 +20 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.VentilationZones.ASHRAE62_1.Validation.Setpoints.zonTem
-  const zonTemFn = sin_9696c4d3({ amplitude: 8, freqHz: "1/7200", offset: "273.15 +15" });
+  const zonTemFn = sin_9696c4d3({ amplitude: 8, freqHz: 1/7200, offset: 273.15 +15 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.VentilationZones.ASHRAE62_1.Validation.Setpoints.ram
   const ramFn = ramp_3c414377({ duration: 7200 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.VentilationZones.ASHRAE62_1.Validation.Setpoints.greThr
@@ -38,7 +38,7 @@ module.exports = (
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.VentilationZones.ASHRAE62_1.Validation.Setpoints.reaToInt
   const reaToIntFn = realtointeger_b3838f5e({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.VentilationZones.ASHRAE62_1.Validation.Setpoints.parFanFlo
-  const parFanFloFn = sin_9696c4d3({ amplitude: 0.01, freqHz: "1/7200", offset: 0.008 });
+  const parFanFloFn = sin_9696c4d3({ amplitude: 0.01, freqHz: 1/7200, offset: 0.008 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.VentilationZones.ASHRAE62_1.Validation.Setpoints.co2SenZonParFan
   const co2SenZonParFanFn = setpoints_3c8e6a49({ have_CO2Sen: true, have_parFanPowUni: true, VAreBreZon_flow: 0.009, VMin_flow: 0.018, VPopBreZon_flow: 0.005 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.VentilationZones.ASHRAE62_1.Validation.Setpoints.noSenZon
@@ -78,6 +78,6 @@ module.exports = (
     const not2 = not2Fn({ u: winSta.y });
     const winSenZon = winSenZonFn({ TDis: disTem.y, TZon: zonTem.y, u1Win: not2.y, uOpeMod: booToInt.y });
 
-    return {};
+    return { co2Con: co2Con, CO2Set: CO2Set, disTem: disTem, zonTem: zonTem, ram: ram, greThr: greThr, not1: not1, booToInt: booToInt, co2SenSZVAV: co2SenSZVAV, co2SenZon: co2SenZon, ram1: ram1, reaToInt: reaToInt, parFanFlo: parFanFlo, co2SenZonParFan: co2SenZonParFan, noSenZon: noSenZon, occSta: occSta, occSenZon: occSenZon, winSta: winSta, not2: not2, winSenZon: winSenZon };
   }
 }
