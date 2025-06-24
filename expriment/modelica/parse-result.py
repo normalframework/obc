@@ -2,7 +2,7 @@ import json
 import re
 import csv
 import sys
-from typing import Dict, Any
+from typing import Dict, Any, List
 import pathlib
 
 def parse_simulation_file(filepath: str) -> Dict[str, Any]:
@@ -31,6 +31,7 @@ def parse_simulation_file(filepath: str) -> Dict[str, Any]:
             json_str = "\n".join(json_lines)
             result[key] = json.loads(json_str)
         else:
+            # Handle time series data
             match = re.match(r"([^=]+)=\[(.*)", line)
             if match:
                 key, rest = match.groups()
@@ -65,5 +66,27 @@ def parse_simulation_file(filepath: str) -> Dict[str, Any]:
 
     return result
 
-# Example usage
-data = parse_simulation_file(sys.argv[1])
+def main():
+    if len(sys.argv) != 2:
+        print("Usage: python parse-result.py <filepath>")
+        sys.exit(1)
+    
+    filepath = sys.argv[1]
+    data = parse_simulation_file(filepath)
+    
+    # Print some basic information about the parsed data
+    print(f"Parsed {len(data)} variables")
+    if 'time' in data:
+        print(f"Time range: {data['time'][0]} to {data['time'][-1]}")
+        print(f"Number of time points: {len(data['time'])}")
+    
+    # Print variable names and their lengths
+    print("\nVariables:")
+    for key, value in data.items():
+        if isinstance(value, list):
+            print(f"{key}: {len(value)} points")
+        else:
+            print(f"{key}: {value}")
+
+if __name__ == "__main__":
+    main()
