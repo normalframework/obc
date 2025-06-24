@@ -1,0 +1,860 @@
+{
+  "@context": {
+    "S231P": "https://data.ashrae.org/S231P#",
+    "qudt": "http://qudt.org/schema/qudt#",
+    "unit": "http://qudt.org/vocab/unit#",
+    "q": "http://qudt.org/vocab/quantitykind#"
+  },
+  "@graph": [
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone",
+      "@type": "S231P:Block",
+      "S231P:containsBlock": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.booToRea"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.div1"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.groFlo"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.groFlo1"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.groFlo2"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.groFlo3"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.intEqu1"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.max2"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.min1"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.mul"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.mul1"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.mul2"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.mul3"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.mulMax"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.mulSum"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.mulSum1"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.mulSum2"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.neaZer"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.occMod"
+        }
+      ],
+      "S231P:hasInput": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.uOpeMod"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.VAdjAreBreZon_flow"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.VAdjPopBreZon_flow"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.VMinOA_flow"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.VZonPri_flow"
+        }
+      ],
+      "S231P:hasOutput": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.uOutAirFra_max"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.VSumAdjAreBreZon_flow"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.VSumAdjPopBreZon_flow"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.VSumZonPri_flow"
+        }
+      ],
+      "S231P:hasParameter": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.nGro"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.nZon"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.zonGroMat"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.zonGroMatTra"
+        }
+      ],
+      "S231P:label": "SumZone"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.booToRea",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Conversions.BooleanToReal",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Convert boolean to real",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-40,\"y\":170},{\"x\":-20,\"y\":190}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.booToRea.u"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.booToRea.y"
+        }
+      ],
+      "S231P:isArray": true,
+      "S231P:label": "booToRea[nGro]",
+      "S231P:numberDimensions": 1,
+      "S231P:sizeOfDimensions": "(nGro)"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.booToRea.y",
+      "S231P:isConnectedTo": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.groFlo3.u"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.mul.u1"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.mul1.u1"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.mul2.u1"
+        }
+      ]
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.div1",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Divide",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Zone outdoor air fraction",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-40,\"y\":-110},{\"x\":-20,\"y\":-90}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.div1.u1"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.div1.u2"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.div1.y"
+        }
+      ],
+      "S231P:isArray": true,
+      "S231P:label": "div1[nZon]",
+      "S231P:numberDimensions": 1,
+      "S231P:sizeOfDimensions": "(nZon)"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.div1.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.mul3.u2"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.groFlo",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Reals.MatrixGain",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Vector of total zone flow of each group",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-140,\"y\":90},{\"x\":-120,\"y\":110}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.groFlo.K"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.groFlo.u"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.groFlo.y"
+        }
+      ],
+      "S231P:label": "groFlo"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.groFlo.K",
+      "S231P:isFinal": true,
+      "S231P:value": "zonGroMat"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.groFlo.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.mul.u2"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.groFlo1",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Reals.MatrixGain",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Vector of total zone flow of each group",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-140,\"y\":30},{\"x\":-120,\"y\":50}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.groFlo1.K"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.groFlo1.u"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.groFlo1.y"
+        }
+      ],
+      "S231P:label": "groFlo1"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.groFlo1.K",
+      "S231P:isFinal": true,
+      "S231P:value": "zonGroMat"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.groFlo1.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.mul1.u2"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.groFlo2",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Reals.MatrixGain",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Vector of total zone flow of each group",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-140,\"y\":-30},{\"x\":-120,\"y\":-10}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.groFlo2.K"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.groFlo2.u"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.groFlo2.y"
+        }
+      ],
+      "S231P:label": "groFlo2"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.groFlo2.K",
+      "S231P:isFinal": true,
+      "S231P:value": "zonGroMat"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.groFlo2.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.mul2.u2"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.groFlo3",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Reals.MatrixGain",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Vector of zones in occupied mode",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":20,\"y\":-60},{\"x\":40,\"y\":-40}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.groFlo3.K"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.groFlo3.u"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.groFlo3.y"
+        }
+      ],
+      "S231P:label": "groFlo3"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.groFlo3.K",
+      "S231P:isFinal": true,
+      "S231P:value": "zonGroMatTra"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.groFlo3.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.mul3.u1"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.intEqu1",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Equal",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Check if operation mode is occupied",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-100,\"y\":170},{\"x\":-80,\"y\":190}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.intEqu1.u1"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.intEqu1.u2"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.intEqu1.y"
+        }
+      ],
+      "S231P:isArray": true,
+      "S231P:label": "intEqu1[nGro]",
+      "S231P:numberDimensions": 1,
+      "S231P:sizeOfDimensions": "(nGro)"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.intEqu1.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.booToRea.u"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.max2",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Max",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Avoid devide by zero",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-100,\"y\":-150},{\"x\":-80,\"y\":-130}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.max2.u1"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.max2.u2"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.max2.y"
+        }
+      ],
+      "S231P:isArray": true,
+      "S231P:label": "max2[nZon]",
+      "S231P:numberDimensions": 1,
+      "S231P:sizeOfDimensions": "(nZon)"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.max2.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.div1.u2"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.min1",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Min",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Use smaller value",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-120,\"y\":-104},{\"x\":-100,\"y\":-84}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.min1.u1"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.min1.u2"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.min1.y"
+        }
+      ],
+      "S231P:isArray": true,
+      "S231P:label": "min1[nZon]",
+      "S231P:numberDimensions": 1,
+      "S231P:sizeOfDimensions": "(nZon)"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.min1.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.div1.u1"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.mul",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Multiply",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Find the total flow of zone group",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":20,\"y\":110},{\"x\":40,\"y\":130}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.mul.u1"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.mul.u2"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.mul.y"
+        }
+      ],
+      "S231P:isArray": true,
+      "S231P:label": "mul[nGro]",
+      "S231P:numberDimensions": 1,
+      "S231P:sizeOfDimensions": "(nGro)"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.mul.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.mulSum.u"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.mul1",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Multiply",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Find the total flow of zone group",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":20,\"y\":50},{\"x\":40,\"y\":70}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.mul1.u1"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.mul1.u2"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.mul1.y"
+        }
+      ],
+      "S231P:isArray": true,
+      "S231P:label": "mul1[nGro]",
+      "S231P:numberDimensions": 1,
+      "S231P:sizeOfDimensions": "(nGro)"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.mul1.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.mulSum1.u"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.mul2",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Multiply",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Find the total flow of zone group",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":20,\"y\":-10},{\"x\":40,\"y\":10}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.mul2.u1"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.mul2.u2"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.mul2.y"
+        }
+      ],
+      "S231P:isArray": true,
+      "S231P:label": "mul2[nGro]",
+      "S231P:numberDimensions": 1,
+      "S231P:sizeOfDimensions": "(nGro)"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.mul2.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.mulSum2.u"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.mul3",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Multiply",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Vector of zone outdoor air fraction",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":80,\"y\":-80},{\"x\":100,\"y\":-60}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.mul3.u1"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.mul3.u2"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.mul3.y"
+        }
+      ],
+      "S231P:isArray": true,
+      "S231P:label": "mul3[nZon]",
+      "S231P:numberDimensions": 1,
+      "S231P:sizeOfDimensions": "(nZon)"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.mul3.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.mulMax.u"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.mulMax",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Reals.MultiMax",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Maximum zone outdoor air fraction",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":140,\"y\":-80},{\"x\":160,\"y\":-60}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.mulMax.nin"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.mulMax.u"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.mulMax.y"
+        }
+      ],
+      "S231P:label": "mulMax"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.mulMax.nin",
+      "S231P:isFinal": true,
+      "S231P:value": "nZon"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.mulMax.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.uOutAirFra_max"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.mulSum",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Reals.MultiSum",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Sum of the adjusted population component breathing zone flow rate",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":80,\"y\":110},{\"x\":100,\"y\":130}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.mulSum.nin"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.mulSum.u"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.mulSum.y"
+        }
+      ],
+      "S231P:label": "mulSum"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.mulSum.nin",
+      "S231P:isFinal": true,
+      "S231P:value": "nGro"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.mulSum.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.VSumAdjPopBreZon_flow"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.mulSum1",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Reals.MultiSum",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Sum of the adjusted area component breathing zone flow rate",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":80,\"y\":50},{\"x\":100,\"y\":70}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.mulSum1.nin"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.mulSum1.u"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.mulSum1.y"
+        }
+      ],
+      "S231P:label": "mulSum1"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.mulSum1.nin",
+      "S231P:isFinal": true,
+      "S231P:value": "nGro"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.mulSum1.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.VSumAdjAreBreZon_flow"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.mulSum2",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Reals.MultiSum",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Sum of the zone primary airflow rates for all zones in all zone groups that are in occupied mode",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":80,\"y\":-10},{\"x\":100,\"y\":10}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.mulSum2.nin"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.mulSum2.u"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.mulSum2.y"
+        }
+      ],
+      "S231P:label": "mulSum2"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.mulSum2.nin",
+      "S231P:isFinal": true,
+      "S231P:value": "nGro"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.mulSum2.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.VSumZonPri_flow"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.neaZer",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Reals.Sources.Constant",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Near zero value",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-160,\"y\":-180},{\"x\":-140,\"y\":-160}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.neaZer.k"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.neaZer.y"
+        }
+      ],
+      "S231P:isArray": true,
+      "S231P:label": "neaZer[nZon]",
+      "S231P:numberDimensions": 1,
+      "S231P:sizeOfDimensions": "(nZon)"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.neaZer.k",
+      "S231P:isFinal": true,
+      "S231P:value": "fill(0.0001,nZon)"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.neaZer.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.max2.u2"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.nGro",
+      "@type": "S231P:Parameter",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Total number of groups",
+      "S231P:isOfDataType": {
+        "@id": "S231P:Integer"
+      },
+      "S231P:label": "nGro"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.nZon",
+      "@type": "S231P:Parameter",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Total number of serving zones",
+      "S231P:isOfDataType": {
+        "@id": "S231P:Integer"
+      },
+      "S231P:label": "nZon"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.occMod",
+      "@type": "http://example.org#Buildings.Controls.OBC.CDL.Integers.Sources.Constant",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Occupied mode index",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-180,\"y\":130},{\"x\":-160,\"y\":150}]}}}",
+      "S231P:hasInstance": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.occMod.k"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.occMod.y"
+        }
+      ],
+      "S231P:isArray": true,
+      "S231P:label": "occMod[nGro]",
+      "S231P:numberDimensions": 1,
+      "S231P:sizeOfDimensions": "(nGro)"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.occMod.k",
+      "S231P:isFinal": true,
+      "S231P:value": "fill(Buildings.Controls.OBC.ASHRAE.G36.Types.OperationModes.occupied,nGro)"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.occMod.y",
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.intEqu1.u2"
+      }
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.uOpeMod",
+      "@type": "S231P:IntegerInput",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Groups operation mode",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-260,\"y\":160},{\"x\":-220,\"y\":200}]},\"iconTransformation\":{\"extent\":[{\"x\":-140,\"y\":70},{\"x\":-100,\"y\":110}]}}}",
+      "S231P:isArray": true,
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.intEqu1.u1"
+      },
+      "S231P:label": "uOpeMod[nGro]",
+      "S231P:numberDimensions": 1,
+      "S231P:sizeOfDimensions": "(nGro)"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.uOutAirFra_max",
+      "@type": "S231P:RealOutput",
+      "qudt:hasUnit": {
+        "@id": "unit:UNITLESS"
+      },
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Maximum zone outdoor air fraction",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":220,\"y\":-90},{\"x\":260,\"y\":-50}]},\"iconTransformation\":{\"extent\":[{\"x\":100,\"y\":-100},{\"x\":140,\"y\":-60}]}}}",
+      "S231P:label": "uOutAirFra_max",
+      "S231P:min": 0
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.VAdjAreBreZon_flow",
+      "@type": "S231P:RealInput",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Adjusted area component breathing zone flow rate",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-260,\"y\":20},{\"x\":-220,\"y\":60}]},\"iconTransformation\":{\"extent\":[{\"x\":-140,\"y\":-20},{\"x\":-100,\"y\":20}]}}}",
+      "S231P:isArray": true,
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.groFlo1.u"
+      },
+      "S231P:label": "VAdjAreBreZon_flow[nZon]",
+      "S231P:numberDimensions": 1,
+      "S231P:sizeOfDimensions": "(nZon)"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.VAdjPopBreZon_flow",
+      "@type": "S231P:RealInput",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Adjusted population component breathing zone flow rate",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-260,\"y\":80},{\"x\":-220,\"y\":120}]},\"iconTransformation\":{\"extent\":[{\"x\":-140,\"y\":20},{\"x\":-100,\"y\":60}]}}}",
+      "S231P:isArray": true,
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.groFlo.u"
+      },
+      "S231P:label": "VAdjPopBreZon_flow[nZon]",
+      "S231P:numberDimensions": 1,
+      "S231P:sizeOfDimensions": "(nZon)"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.VMinOA_flow",
+      "@type": "S231P:RealInput",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Minimum outdoor airflow setpoint",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-260,\"y\":-120},{\"x\":-220,\"y\":-80}]},\"iconTransformation\":{\"extent\":[{\"x\":-140,\"y\":-100},{\"x\":-100,\"y\":-60}]}}}",
+      "S231P:isArray": true,
+      "S231P:isConnectedTo": {
+        "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.min1.u2"
+      },
+      "S231P:label": "VMinOA_flow[nZon]",
+      "S231P:numberDimensions": 1,
+      "S231P:sizeOfDimensions": "(nZon)"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.VSumAdjAreBreZon_flow",
+      "@type": "S231P:RealOutput",
+      "qudt:hasQuantityKind": {
+        "@id": "q:VolumeFlowRate"
+      },
+      "qudt:hasUnit": {
+        "@id": "unit:M3-PER-SEC"
+      },
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Sum of the adjusted area component breathing zone flow rate",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":220,\"y\":40},{\"x\":260,\"y\":80}]},\"iconTransformation\":{\"extent\":[{\"x\":100,\"y\":20},{\"x\":140,\"y\":60}]}}}",
+      "S231P:label": "VSumAdjAreBreZon_flow",
+      "S231P:min": 0
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.VSumAdjPopBreZon_flow",
+      "@type": "S231P:RealOutput",
+      "qudt:hasQuantityKind": {
+        "@id": "q:VolumeFlowRate"
+      },
+      "qudt:hasUnit": {
+        "@id": "unit:M3-PER-SEC"
+      },
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Sum of the adjusted population component breathing zone flow rate",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":220,\"y\":100},{\"x\":260,\"y\":140}]},\"iconTransformation\":{\"extent\":[{\"x\":100,\"y\":60},{\"x\":140,\"y\":100}]}}}",
+      "S231P:label": "VSumAdjPopBreZon_flow",
+      "S231P:min": 0
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.VSumZonPri_flow",
+      "@type": "S231P:RealOutput",
+      "qudt:hasQuantityKind": {
+        "@id": "q:VolumeFlowRate"
+      },
+      "qudt:hasUnit": {
+        "@id": "unit:M3-PER-SEC"
+      },
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Sum of the zone primary airflow rates for all zones in all zone groups that are in occupied mode",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":220,\"y\":-20},{\"x\":260,\"y\":20}]},\"iconTransformation\":{\"extent\":[{\"x\":100,\"y\":-60},{\"x\":140,\"y\":-20}]}}}",
+      "S231P:label": "VSumZonPri_flow",
+      "S231P:min": 0
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.VZonPri_flow",
+      "@type": "S231P:RealInput",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Measured zone primary airflow rates",
+      "S231P:graphics": "{\"Placement\":{\"transformation\":{\"extent\":[{\"x\":-260,\"y\":-40},{\"x\":-220,\"y\":0}]},\"iconTransformation\":{\"extent\":[{\"x\":-140,\"y\":-60},{\"x\":-100,\"y\":-20}]}}}",
+      "S231P:isArray": true,
+      "S231P:isConnectedTo": [
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.groFlo2.u"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.max2.u1"
+        },
+        {
+          "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.min1.u1"
+        }
+      ],
+      "S231P:label": "VZonPri_flow[nZon]",
+      "S231P:numberDimensions": 1,
+      "S231P:sizeOfDimensions": "(nZon)"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.zonGroMat",
+      "@type": "S231P:Parameter",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Zone matrix with zone group as row index and zone as column index. It uses index 1 to flag which zone is in which group",
+      "S231P:isArray": true,
+      "S231P:isOfDataType": {
+        "@id": "S231P:Integer"
+      },
+      "S231P:label": "zonGroMat[nGro,nZon]",
+      "S231P:numberDimensions": 2,
+      "S231P:sizeOfDimensions": "(nGro,nZon)"
+    },
+    {
+      "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.SumZone.zonGroMatTra",
+      "@type": "S231P:Parameter",
+      "S231P:accessSpecifier": "public",
+      "S231P:description": "Transpose of the zone matrix",
+      "S231P:isArray": true,
+      "S231P:isOfDataType": {
+        "@id": "S231P:Integer"
+      },
+      "S231P:label": "zonGroMatTra[nZon,nGro]",
+      "S231P:numberDimensions": 2,
+      "S231P:sizeOfDimensions": "(nZon,nGro)"
+    }
+  ]
+}
