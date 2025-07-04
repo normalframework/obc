@@ -9,6 +9,3 @@ hooks:
       VHeaMin_flow: 0.15
       VCooMax_flow: 1.5
       VOccMin_flow: 0.15
-  - name: cooling-only-controller
-    interval: 1
-    controller: Buildings/Controls/OBC/ASHRAE/G36/TerminalUnits/CoolingOnly/Controller.js

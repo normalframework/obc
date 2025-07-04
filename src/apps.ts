@@ -277,9 +277,26 @@ function normalize(value) {
  * @returns {NormalSdk.InvokeResult}
  */
 module.exports = async ({points}) => {
+  const read = async (label) => {
+    const point = points.byLabel(label).first();
+    if (!point) {
+      return 0;
+    }
+    const [value] = await point.read();
+    return normalize(value?.value?.real);
+  };
+
+  const write = async (label, value) => {
+    const point = points.byLabel(label).first();
+    if (!point) {
+      return;
+    }
+    await point.write(value);
+  };
+
   const params = {
     ${def.inputs
-      .map((i) => `${i}: normalize(points.byLabel('${i}').first()?.latestValue?.value)`)
+      .map((i) => `${i}: await read('${i}')`)
       .join(",\n\t\t")}
   };
   const ${generateJsObjectParameter(def.outputs)} = instance(params);
@@ -287,7 +304,7 @@ module.exports = async ({points}) => {
   await Promise.all([
     ${def.outputs
       .map(
-        (o) => `points.byLabel('${o}').first()?.write(normalize(${o}))`
+        (o) => `await write('${o}', normalize(${o}))`
       )
       .join(",\n\t\t")}
   ]);
