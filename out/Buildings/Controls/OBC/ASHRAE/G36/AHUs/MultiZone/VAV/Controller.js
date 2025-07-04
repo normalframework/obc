@@ -27,12 +27,12 @@ module.exports = (
 		disDel = 15,
 		dpAbsMinOutDam = 5,
 		dpBuiSet = 12,
-		dpConTyp = Math.PI,
+		dpConTyp = 1,
 		dpDesMinOutDam = 20,
 		ecoHigLimCon = 0,
 		eneStd,
-		fanSpeCon = Math.PI,
-		freProHeaCoiCon = Math.PI,
+		fanSpeCon = 1,
+		freProHeaCoiCon = 1,
 		freSta = 1,
 		have_ahuRelFan = true,
 		have_CO2Sen,
@@ -53,12 +53,12 @@ module.exports = (
 		kVal = 0.05,
 		maxResSupTem = -0.6,
 		minHotWatReq = 2,
-		minOAConTyp = Math.PI,
+		minOAConTyp = 1,
 		minOADes = 0,
 		minOutDamPhy_max = 1,
-		minOutDamPhy_min,
+		minOutDamPhy_min = 0,
 		outDamPhy_max = 1,
-		outDamPhy_min,
+		outDamPhy_min = 0,
 		p_rel_RetFan_max = 40,
 		p_rel_RetFan_min = 2.4,
 		pDelTim = 600,
@@ -75,8 +75,8 @@ module.exports = (
 		resAmoSupTem = -0.2,
 		retDamFulOpeTim = 180,
 		retDamPhy_max = 1,
-		retDamPhy_min,
-		retFanCon = Math.PI,
+		retDamPhy_min = 0,
+		retFanCon = 1,
 		retFanSpe_max = 1,
 		retFanSpe_min = 0.1,
 		samPerSupTem = 120,
@@ -106,14 +106,14 @@ module.exports = (
 		uHeaCoi_max = -0.25,
 		uHeaMax = -0.25,
 		uRetDam_min = 0.5,
-		VAbsOutAir_flow,
-		valCon = Math.PI,
-		VDesOutAir_flow,
-		VDesTotOutAir_flow,
+		VAbsOutAir_flow = 0,
+		valCon = 1,
+		VDesOutAir_flow = 0,
+		VDesTotOutAir_flow = 0,
 		venStd,
-		VUncDesOutAir_flow,
+		VUncDesOutAir_flow = 0,
 		yMaxFrePro = 1,
-		yMinFrePro,
+		yMinFrePro = 0,
     } = {}
 ) => {
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.Controller.tit24OutAirSet
@@ -146,23 +146,23 @@ module.exports = (
   const relDamFn = reliefdamper_38a1a99c({ dpBuiSet: dpBuiSet, k: kRelDam });
 
   return (
-    { VSumZonPri_flow, uAhuOpeMod, TAirSup, u1SupFan, VSumZonDesMin_flow }
+    { uOutAirFra_max, VAirOut_flow, VSumAdjAreBreZon_flow, VSumAdjPopBreZon_flow, VSumZonPri_flow, dpDuc, uAhuOpeMod, uZonPreResReq, TOut, u1SupFan, uZonTemResReq, dpMinOutDam, hAirOut, hAirRet, TAirRet, uCO2Loo_max, TAirMix, TAirSup, u1FreSta, u1SofSwiRes, dpBui, VAirRet_flow, VAirSup_flow, VSumZonAbsMin_flow, VSumZonDesMin_flow }
   ) => {
-    const tit24OutAirSet = tit24OutAirSetFn({ VSumZonDesMin_flow: VSumZonDesMin_flow });
-    const conSupFan = conSupFanFn({ uOpeMod: uAhuOpeMod });
-    const conTSupSet = conTSupSetFn({ uOpeMod: uAhuOpeMod });
-    const supSig = supSigFn({ TAirSupSet: conTSupSet.TAirSupSet, u1SupFan: u1SupFan });
-    const ashOutAirSet = ashOutAirSetFn({ VSumZonPri_flow: VSumZonPri_flow });
-    const ecoCon = ecoConFn({ effDesOutAir_normalized: tit24OutAirSet.effDesOutAir_normalized, uOpeMod: uAhuOpeMod, uSupFan: conSupFan.ySupFan, uTSup: supSig.uTSup, VOutMinSet_flow_normalized: ashOutAirSet.effOutAir_normalized });
-    const retFanDpCon = retFanDpConFn({ u1SupFan: u1SupFan, u1MinOutAirDam: ecoCon.yEnaMinOut });
-    const relFanCon = relFanConFn({ u1SupFan: u1SupFan });
-    const retFanAirTra = retFanAirTraFn({ u1SupFan: u1SupFan });
-    const frePro = freProFn({ TAirSup: TAirSup, uRetDam: ecoCon.yRetDam, uRelFan: relFanCon.yRelFan, uRetFan: retFanAirTra.yRetFan, uSupFan: conSupFan.ySupFan, uHeaCoi: supSig.yHeaCoi });
-    const plaReq = plaReqFn({ TAirSup: TAirSup, TAirSupSet: conTSupSet.TAirSupSet, uHeaCoiSet: frePro.yHeaCoi });
+    const tit24OutAirSet = tit24OutAirSetFn({ uCO2Loo_max: uCO2Loo_max, VAirOut_flow: VAirOut_flow, VSumZonAbsMin_flow: VSumZonAbsMin_flow, VSumZonDesMin_flow: VSumZonDesMin_flow });
+    const conSupFan = conSupFanFn({ dpDuc: dpDuc, uOpeMod: uAhuOpeMod, uZonPreResReq: uZonPreResReq });
+    const conTSupSet = conTSupSetFn({ TOut: TOut, u1SupFan: u1SupFan, uOpeMod: uAhuOpeMod, uZonTemResReq: uZonTemResReq });
+    const supSig = supSigFn({ TAirSup: TAirSup, TAirSupSet: conTSupSet.TAirSupSet, u1SupFan: u1SupFan });
+    const ashOutAirSet = ashOutAirSetFn({ uOutAirFra_max: uOutAirFra_max, VAirOut_flow: VAirOut_flow, VSumAdjAreBreZon_flow: VSumAdjAreBreZon_flow, VSumAdjPopBreZon_flow: VSumAdjPopBreZon_flow, VSumZonPri_flow: VSumZonPri_flow });
+    const ecoCon = ecoConFn({ dpMinOutDam: dpMinOutDam, effAbsOutAir_normalized: tit24OutAirSet.effAbsOutAir_normalized, effDesOutAir_normalized: tit24OutAirSet.effDesOutAir_normalized, hAirOut: hAirOut, hAirRet: hAirRet, TAirRet: TAirRet, TOut: TOut, u1SupFan: u1SupFan, uCO2Loo_max: uCO2Loo_max, uOpeMod: uAhuOpeMod, uSupFan: conSupFan.ySupFan, uTSup: supSig.uTSup, VOut_flow_normalized: ashOutAirSet.outAir_normalized, VOutMinSet_flow_normalized: ashOutAirSet.effOutAir_normalized });
+    const retFanDpCon = retFanDpConFn({ dpBui: dpBui, u1MinOutAirDam: ecoCon.yEnaMinOut, u1SupFan: u1SupFan });
+    const relFanCon = relFanConFn({ dpBui: dpBui, u1SupFan: u1SupFan });
+    const retFanAirTra = retFanAirTraFn({ u1SupFan: u1SupFan, VAirRet_flow: VAirRet_flow, VAirSup_flow: VAirSup_flow });
+    const frePro = freProFn({ TAirMix: TAirMix, TAirSup: TAirSup, u1FreSta: u1FreSta, u1MinOutDam: ecoCon.y1MinOutDam, u1RelFan: relFanCon.y1RelFan, u1RetFan: retFanAirTra.y1RetFan, u1SofSwiRes: u1SofSwiRes, u1SupFan: conSupFan.y1SupFan, uCooCoi: supSig.yCooCoi, uHeaCoi: supSig.yHeaCoi, uMinOutDam: ecoCon.yMinOutDam, uOutDam: ecoCon.yOutDam, uOutDamPosMin: ecoCon.yOutDam_min, uRelFan: relFanCon.yRelFan, uRetDam: ecoCon.yRetDam, uRetFan: retFanAirTra.yRetFan, uSupFan: conSupFan.ySupFan });
+    const plaReq = plaReqFn({ TAirSup: TAirSup, TAirSupSet: conTSupSet.TAirSupSet, uCooCoiSet: frePro.yCooCoi, uHeaCoiSet: frePro.yHeaCoi });
     const freProMod = freProModFn({ u: frePro.yFreProSta });
     const intSwi = intSwiFn({ u1: frePro.yHotWatPlaReq, u2: freProMod.y, u3: plaReq.yHotWatPlaReq });
-    const relDam = relDamFn({ u1SupFan: u1SupFan });
+    const relDam = relDamFn({ dpBui: dpBui, u1SupFan: u1SupFan });
 
-    return { dpDisSet: retFanDpCon.dpDisSet, TAirSupSet: conTSupSet.TAirSupSet, VEffAirOut_flow_min: ashOutAirSet.VEffAirOut_flow_min, ySupFan: frePro.ySupFan, yHotWatResReq: plaReq.yHotWatResReq, yDpBui: relFanCon.yDpBui, yHotWatPlaReq: intSwi.y, yRelDam: ecoCon.yRelDam };
+    return { dpDisSet: retFanDpCon.dpDisSet, TAirSupSet: conTSupSet.TAirSupSet, VEffAirOut_flow_min: ashOutAirSet.VEffAirOut_flow_min, y1EneCHWPum: frePro.y1EneCHWPum, y1MinOutDam: frePro.y1MinOutDam, y1RelDam: frePro.y1RelDam, y1RelFan: frePro.y1RelFan, y1RetFan: frePro.y1RetFan, y1SupFan: frePro.y1SupFan, yAla: frePro.yAla, yChiPlaReq: plaReq.yChiPlaReq, yChiWatResReq: plaReq.yChiWatResReq, yCooCoi: frePro.yCooCoi, yDpBui: relFanCon.yDpBui, yHeaCoi: frePro.yHeaCoi, yHotWatPlaReq: intSwi.y, yHotWatResReq: plaReq.yHotWatResReq, yMinOutDam: frePro.yMinOutDam, yOutDam: frePro.yOutDam, yRelDam: ecoCon.yRelDam, yRelFan: frePro.yRelFan, yRetDam: frePro.yRetDam, yRetFan: frePro.yRetFan, ySupFan: frePro.ySupFan };
   }
 }

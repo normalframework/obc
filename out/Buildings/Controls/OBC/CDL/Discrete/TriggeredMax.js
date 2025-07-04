@@ -13,6 +13,7 @@ function triggeredMax() {
   let firstCall = true;
 
   return ({ u = 0, trigger = false } = {}) => {
+    u = u ?? 0;
     if (firstCall) {
       y = u;
       firstCall = false;

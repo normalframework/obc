@@ -12,7 +12,7 @@
 
  function greaterEqualThreshold({ t = 0 }) {
   return ({ u = 0 }) => {
-    return { y: u >= t };
+    return { y: (u ?? 0) >= (t ?? 0) };
   }
 }
 

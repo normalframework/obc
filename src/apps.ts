@@ -1,3 +1,7 @@
+import {
+  Application,
+  HookSchema,
+} from "@buf/normalframework_nf.bufbuild_es/normalgw/automation/v1/program_pb";
 import fs from "fs";
 import inquirer from "inquirer";
 import path from "path";
@@ -9,10 +13,7 @@ import {
   generateJsObjectParameter,
   translateDirectory,
 } from "./translator";
-import {
-  Application,
-  Hook,
-} from "@buf/normalframework_nf.bufbuild_es/normalgw/automation/v1/program_pb";
+import { create, toJsonString } from "@bufbuild/protobuf";
 
 const REPO =
   "https://github.com/normalframework/applications-template-empty.git";
@@ -20,20 +21,20 @@ const HOOKS_LIB = "lib";
 const HOOKS_FOLDER = "hooks";
 const HOOK_DEFS_FOLDER = "hooks-update";
 
+const hookSchema = z.object({
+  name: z.string(),
+  controller: z.string(),
+  interval: z.number(),
+  parameters: z.record(z.string(), z.any()).optional(),
+});
+
 const configSchema = z.object({
   name: z.string().min(1),
   description: z.string().optional(),
-  hooks: z
-    .array(
-      z.object({
-        name: z.string(),
-        controller: z.string(),
-        schedule: z.string().optional(),
-      })
-    )
-    .optional(),
+  hooks: z.array(hookSchema).optional(),
 });
 
+type HookDef = z.infer<typeof hookSchema>;
 type Config = z.infer<typeof configSchema>;
 
 async function loadConfig(filePath: string) {
@@ -56,6 +57,25 @@ async function loadConfig(filePath: string) {
   }
 
   return result.data;
+}
+
+function copyDir(src: string, dest: string): void {
+  if (!fs.existsSync(dest)) {
+    fs.mkdirSync(dest, { recursive: true });
+  }
+
+  const entries = fs.readdirSync(src, { withFileTypes: true });
+
+  for (const entry of entries) {
+    const srcPath = path.join(src, entry.name);
+    const destPath = path.join(dest, entry.name);
+
+    if (entry.isDirectory()) {
+      copyDir(srcPath, destPath);
+    } else {
+      fs.copyFileSync(srcPath, destPath);
+    }
+  }
 }
 
 export async function generateApp({
@@ -147,25 +167,27 @@ export async function generateApp({
     process.exit(1);
   }
 
-  if (res.override) {
-    fs.rmSync(outputFolder, { recursive: true });
-  }
+  const isNew = res.override == null;
+
   if (res.override === false) {
     console.error("Output folder already exists");
     process.exit(1);
   }
 
-  await cloneApp(outputFolder);
+  if (isNew) {
+    await cloneApp(outputFolder);
+  }
 
-  await translateDirectory(inputFolder, path.join(outputFolder, HOOKS_LIB), {
-    visualize: false,
-  });
+  copyDir(inputFolder, path.join(outputFolder, HOOKS_LIB));
 
   createAppDef(appConfig, outputFolder);
   await createHooks(appConfig, outputFolder);
-  console.error(path.join(outputFolder, ".git"));
-  fs.rmdirSync(path.join(outputFolder, ".git"), { recursive: true });
-  await createNewGitRepo(outputFolder);
+  if (isNew) {
+    fs.rmdirSync(path.join(outputFolder, ".git"), { recursive: true });
+    await createNewGitRepo(outputFolder);
+  } else {
+    await updateGitRepo(outputFolder);
+  }
 }
 
 async function cloneApp(out: string) {
@@ -205,20 +227,18 @@ async function createHooks(config: Config, out: string) {
     const controllerDef = JSON.parse(
       fs.readFileSync(controllerDefFile, "utf-8")
     );
-    const hookDef: Partial<Hook> = {
+
+    const hookDef = create(HookSchema, {
       name: hook.name,
       entryPoint: `${HOOKS_FOLDER}/${hook.name}.js`,
-      schedule: hook.schedule
-        ? ({
-            rrule: hook.schedule,
-          } as any)
-        : undefined,
-      requiredClasses: [...controllerDef.inputs, ...controllerDef.outputs],
-    };
+      schedule: {
+        rrule: `RRULE:FREQ=SECONDLY;INTERVAL=${hook.interval}`,
+      },
+    });
     const hookCode = generateHookCode(controllerDef, hook);
     fs.writeFileSync(
       path.join(hookDefsPath, `${hook.name}.json`),
-      JSON.stringify(hookDef, null, 2)
+      toJsonString(HookSchema, hookDef)
     );
     fs.writeFileSync(path.join(basePath, `${hook.name}.js`), hookCode);
   }
@@ -226,32 +246,53 @@ async function createHooks(config: Config, out: string) {
 
 function generateHookCode(
   def: { inputs: string[]; outputs: string[] },
-  hook: { controller: string }
+  hook: HookDef
 ) {
+  const parameters = hook.parameters ?? {};
   return `const NormalSdk = require("@normalframework/applications-sdk");
 const controller = require("../${HOOKS_LIB}/${hook.controller}");
-const instance = controller();
+const TimeManager = require("../${HOOKS_LIB}/TimeManager");
+const instance = controller(${generateJsObject(Object.entries(parameters))});
+
+const EPSILON = 1e-6;
+
+/**
+ * Normalize value to 0 if it is close to 0
+ * @param {number} value
+ * @returns {number}
+ */
+function normalize(value) {
+  if (!value || isNaN(value)) {
+    return 0;
+  }
+  if (value < EPSILON) {
+    return 0;
+  }
+  return value;
+}
 
 /**
  * Invoke hook function
  * @param {NormalSdk.InvokeParams} params
  * @returns {NormalSdk.InvokeResult}
  */
-
 module.exports = async ({points}) => {
-  const ${generateJsObjectParameter(def.outputs)} = instance(
-    {
-      ${def.inputs
-        .map((i) => `${i}: points.byLabel('${i}').first()?.latestValue?.value`)
-        .join(",\n\t\t\t")}
-    }
-  );
+  const params = {
+    ${def.inputs
+      .map((i) => `${i}: normalize(points.byLabel('${i}').first()?.latestValue?.value)`)
+      .join(",\n\t\t")}
+  };
+  const ${generateJsObjectParameter(def.outputs)} = instance(params);
 
   await Promise.all([
     ${def.outputs
-      .map((o) => `points.byLabel('${o}').first()?.write({value: ${o}})`)
+      .map(
+        (o) => `points.byLabel('${o}').first()?.write(normalize(${o}))`
+      )
       .join(",\n\t\t")}
   ]);
+
+  TimeManager.advance(${hook.interval});
 };`;
 }
 
@@ -260,4 +301,10 @@ export async function createNewGitRepo(folder: string) {
   await git.init();
   await git.add(".");
   await git.commit("Initial commit");
+}
+
+export async function updateGitRepo(folder: string) {
+  const git = simpleGit(folder);
+  await git.add(".");
+  await git.commit("Update app at " + new Date().toISOString());
 }

@@ -11,7 +11,7 @@
 
  function sin({ } = {}) {
   return ({ u = 0 }) => {
-    return { y: Math.sin(u) };
+    return { y: Math.sin(u ?? 0) };
   }
 }
 

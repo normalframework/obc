@@ -14,15 +14,15 @@ const switch_91d77162 = require("../../../../../CDL/Reals/Switch");
 
 module.exports = (
   {
-		damCon = 1,
-		dTHys = 0.25,
-		iniDam = 0.01,
-		kDam = 0.5,
-		TdDam = 0.1,
-		TiDam = 300,
-		VCooMax_flow,
-		VMin_flow,
-    } = {}
+    damCon = 1,
+    dTHys = 0.25,
+    iniDam = 0.01,
+    kDam = 0.5,
+    TdDam = 0.1,
+    TiDam = 300,
+    VCooMax_flow,
+    VMin_flow,
+  } = {}
 ) => {
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.CoolingOnly.Subsequences.Dampers.conInt1
   const conInt1Fn = constant_01efacbe({ k: 1 });
@@ -133,6 +133,7 @@ module.exports = (
     const VDisSet_flowNor = VDisSet_flowNorFn({ u1: swi1.y, u2: nomFlow.y });
     const conPID = conPIDFn({ trigger: u1Fan, u_m: VDis_flowNor.y, u_s: VDisSet_flowNor.y });
     const swi2 = swi2Fn({ u1: add3.y, u2: or2.y, u3: conPID.y });
+    console.log({ u1: swi1.y, u2: nomFlow.y })
 
     return { VSet_flow: swi1.y, yDam: swi2.y };
   }

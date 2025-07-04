@@ -11,7 +11,7 @@
 const Trigger = require('../../../../../Trigger');
 
 function onCounter({ y_start = 0 }) {
-  let y = y_start;
+  let y = y_start ?? 0;
   const isRising = Trigger();
   const isReset = Trigger();
 

@@ -1,0 +1,15 @@
+{
+  "inputs": [
+    "VAdjPopBreZon_flow",
+    "VAdjAreBreZon_flow",
+    "VZonPri_flow",
+    "uOpeMod",
+    "VMinOA_flow"
+  ],
+  "outputs": [
+    "uOutAirFra_max",
+    "VSumAdjAreBreZon_flow",
+    "VSumAdjPopBreZon_flow",
+    "VSumZonPri_flow"
+  ]
+}

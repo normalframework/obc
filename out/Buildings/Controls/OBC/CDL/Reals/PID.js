@@ -59,6 +59,9 @@ function pid({
 
   return function step({ u_s = 0, u_m = 0 } = {}) {
 
+    u_s = u_s ?? 0;
+    u_m = u_m ?? 0;
+
     const uS_revAct = u_s * (rev / r);
     const uM_revAct = u_m * (rev / r);
 

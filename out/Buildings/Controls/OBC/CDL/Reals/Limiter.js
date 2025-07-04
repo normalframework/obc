@@ -11,10 +11,13 @@
  * @returns {number} output.y - The clamped input signal.
  */
 function limiter({ uMin, uMax } = {}) {
+  uMin = uMin ?? 0;
+  uMax = uMax ?? 0;
   if (uMin >= uMax) {
     throw new Error("uMin must be smaller than uMax. Check parameters.");
   }
   return ({ u = 0 } = {}) => {
+    u = u ?? 0;
     const y = u > uMax ? uMax : (u < uMin ? uMin : u);
     return { y };
   };

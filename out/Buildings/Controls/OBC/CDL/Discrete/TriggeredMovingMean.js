@@ -21,6 +21,7 @@ function triggeredMovingMean({ n } = {}) {
   let y = 0;
 
   return ({ u = 0, trigger = false } = {}) => {
+    u = u ?? 0;
     if (isInitial() || isRising(trigger)) {
       const index = iSample % n;
       ySample[index] = u;

@@ -14,12 +14,15 @@ function lessThreshold({ t = 0, h = 0, pre_y_start = false } = {}) {
   const haveHysteresis = h >= 1e-10;
 
   function lessNoHysteresis({ u = 0 } = {}) {
-    return { y: u < t };
+    return { y: (u ?? 0) < (t ?? 0) };
   }
 
   function lessWithHysteresis() {
     let prevY = pre_y_start;
     return ({ u = 0 } = {}) => {
+      u = u ?? 0;
+      h = h ?? 0;
+      t = t ?? 0;
       const rising  = !prevY && u < t;
       const falling =  prevY && u >= t + h;
       const y = rising || (!falling && prevY);

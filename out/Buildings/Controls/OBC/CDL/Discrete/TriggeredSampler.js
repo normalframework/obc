@@ -15,6 +15,7 @@ function triggeredSampler({ y_start = 0 } = {}) {
   let y = y_start;
 
   return ({ u = 0, trigger = false } = {}) => {
+    u = u ?? 0;
     if (isRising(trigger)) {
       y = u;
     }

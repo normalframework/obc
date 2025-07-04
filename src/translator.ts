@@ -206,13 +206,19 @@ export function translateGraph(
 
   // Remove loops
   const loops = findLoops(graph);
+  const edges = graph.edges();
   loops.forEach((e) => {
     console.log(
       clc.yellow("[WARNING]"),
       clc.bold("Loop detected"),
       `${normalizeBlockId(e.v)} -> ${normalizeBlockId(e.w)}`
     );
-    graph.removeEdge(e);
+    const edgesToRemove = edges.filter(
+      (edge) => edge.v === e.v && edge.w === e.w
+    );
+    edgesToRemove.forEach((edge) => {
+      graph.removeEdge(edge);
+    });
   });
 
   const topological = graphlib.alg.topsort(graph);

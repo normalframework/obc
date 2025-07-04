@@ -17,7 +17,7 @@
     }
 
     const y = Array(nout).fill(0).map((_, i) =>
-      K[i].reduce((acc, k, j) => acc + k * u[j], 0)
+      K[i].reduce((acc, k, j) => acc + k * (u[j] ?? 0), 0)
     );
 
     return { y };

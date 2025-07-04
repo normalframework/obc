@@ -18,6 +18,7 @@ function unitDelay({ samplePeriod, y_start = 0 } = {}) {
   let y = y_start;
 
   return ({ u = 0 } = {}) => {
+    u = u ?? 0;
     if (isFirst() || TimeManager.time >= nextSample) {
       y = prev_u;
       prev_u = u;

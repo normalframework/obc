@@ -1,8 +1,1 @@
-{
-  "@context": {
-    "S231P": "https://data.ashrae.org/S231P#"
-  },
-  "@id": "http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctSnapActing.Subsequences.package",
-  "@type": "S231P:Block",
-  "S231P:label": "Validation"
-}
+{"@context":{"S231P":"https://data.ashrae.org/S231P#"},"@id":"http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctSnapActing.Subsequences.package","@type":"S231P:Block","S231P:documentation":"info=<html>\n<p>\nThis package contains validation models for the classes in\n<a href=\\modelica://Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctSnapActing.Subsequences\\>\nBuildings.Controls.OBC.ASHRAE.G36.TerminalUnits.DualDuctSnapActing.Subsequences</a>.\n</p>\n<p>\nNote that most validation models contain simple input data\nwhich may not be realistic, but for which the correct\noutput can be obtained through an analytic solution.\nThe examples plot various outputs, which have been verified against these\nsolutions. These model outputs are stored as reference data and\nused for continuous validation whenever models in the library change.\n</p>\n</html>","S231P:icon":"graphics={Rectangle(extent={{-100,-100},{100,100}},radius=25,lineColor={200,200,200},fillColor={248,248,248},fillPattern=FillPattern.HorizontalCylinder),Rectangle(extent={{-100,-100},{100,100}},radius=25,lineColor={128,128,128}),Polygon(points={{-58,46},{42,-14},{-58,-74},{-58,46}},origin={8,14},lineColor={78,138,73},fillColor={78,138,73},pattern=LinePattern.None,fillPattern=FillPattern.Solid)}","S231P:label":"Validation"}

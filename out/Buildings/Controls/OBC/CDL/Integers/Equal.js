@@ -11,7 +11,7 @@
 
  function equal() {
   return ({ u1, u2 }) => {
-    return { y: u1 === u2 };
+    return { y: u1 == u2 };
   }
 }
 

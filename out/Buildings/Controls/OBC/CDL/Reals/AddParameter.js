@@ -12,7 +12,7 @@
 
 function addParameter({ p = 0 }) {
   return ({ u = 0 }) => {
-    return { y: u + p };
+    return { y: (u ?? 0) + (p ?? 0) };
   }
 }
 

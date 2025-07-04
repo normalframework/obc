@@ -10,7 +10,7 @@
 
  function absBlock() {
   return ({ u = 0 }) => {
-    return { y: Math.abs(u) };
+    return { y: Math.abs(u ?? 0) };
   }
 }
 

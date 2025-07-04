@@ -18,15 +18,15 @@ module.exports = (
   
 ) => {
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.Validation.Controller_UnspecifiedClimate.dpBui
-  const dpBuiFn = ramp_3c414377({ duration: 1800, height: 40 });
+  const dpBuiFn = ramp_3c414377({ duration: 1800, height: 40, offset: 0 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.Validation.Controller_UnspecifiedClimate.ducStaPre
-  const ducStaPreFn = sin_9696c4d3({ amplitude: 150, freqHz: "1/3600", offset: 200 });
+  const ducStaPreFn = sin_9696c4d3({ amplitude: 150, freqHz: 1/3600, offset: 200 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.Validation.Controller_UnspecifiedClimate.TMixMea
-  const TMixMeaFn = ramp_3c414377({ duration: 1, height: 4, offset: "273.15 +2" });
+  const TMixMeaFn = ramp_3c414377({ duration: 1, height: 4, offset: 273.15 +2, startTime: 0 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.Validation.Controller_UnspecifiedClimate.TSup
-  const TSupFn = ramp_3c414377({ duration: 3600, height: 4, offset: "273.15 +14" });
+  const TSupFn = ramp_3c414377({ duration: 3600, height: 4, offset: 273.15 +14 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.Validation.Controller_UnspecifiedClimate.TOut
-  const TOutFn = sin_9696c4d3({ amplitude: 5, freqHz: "1/3600", offset: "18 +273.15" });
+  const TOutFn = sin_9696c4d3({ amplitude: 5, freqHz: 1/3600, offset: 18 +273.15 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.Validation.Controller_UnspecifiedClimate.freRes
   const freResFn = pulse_27dcacc8({ period: 3600, width: 0.95 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.Validation.Controller_UnspecifiedClimate.not1
@@ -36,19 +36,19 @@ module.exports = (
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.Validation.Controller_UnspecifiedClimate.uOutAirFra_max
   const uOutAirFra_maxFn = pulse_4bd410d4({ amplitude: 0.005, offset: 0.015, period: 3600, width: 0.25 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.Validation.Controller_UnspecifiedClimate.sine2
-  const sine2Fn = sin_9696c4d3({ amplitude: 2, freqHz: "1/9600", offset: 3 });
+  const sine2Fn = sin_9696c4d3({ amplitude: 2, freqHz: 1/9600, offset: 3 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.Validation.Controller_UnspecifiedClimate.abs3
   const abs3Fn = abs_a5faf0c3({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.Validation.Controller_UnspecifiedClimate.round4
-  const round4Fn = round_13f7599f({});
+  const round4Fn = round_13f7599f({ n: 0 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.Validation.Controller_UnspecifiedClimate.ducPreResReq
   const ducPreResReqFn = realtointeger_b3838f5e({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.Validation.Controller_UnspecifiedClimate.sine3
-  const sine3Fn = sin_9696c4d3({ amplitude: 6, freqHz: "1/9600" });
+  const sine3Fn = sin_9696c4d3({ amplitude: 6, freqHz: 1/9600 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.Validation.Controller_UnspecifiedClimate.abs2
   const abs2Fn = abs_a5faf0c3({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.Validation.Controller_UnspecifiedClimate.round3
-  const round3Fn = round_13f7599f({});
+  const round3Fn = round_13f7599f({ n: 0 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.Validation.Controller_UnspecifiedClimate.maxSupResReq
   const maxSupResReqFn = realtointeger_b3838f5e({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.Validation.Controller_UnspecifiedClimate.VOut_flow
@@ -97,6 +97,6 @@ module.exports = (
     const conAHU = conAHUFn({ dpBui: dpBui.y, dpDuc: ducStaPre.y, TAirMix: TMixMea.y, TAirSup: TSup.y, TOut: TOut.y, u1SofSwiRes: not1.y, uAhuOpeMod: opeMod.y, uOutAirFra_max: uOutAirFra_max.y, uZonPreResReq: ducPreResReq.y, uZonTemResReq: maxSupResReq.y, VAirOut_flow: VOut_flow.y, VSumAdjAreBreZon_flow: sumDesAreBreZon.y, VSumAdjPopBreZon_flow: sumDesPopBreZon.y, VSumZonPri_flow: add2.y });
     const truFalHol = truFalHolFn({ u: conAHU.y1SupFan });
 
-    return {};
+    return { dpBui: dpBui, ducStaPre: ducStaPre, TMixMea: TMixMea, TSup: TSup, TOut: TOut, freRes: freRes, not1: not1, opeMod: opeMod, uOutAirFra_max: uOutAirFra_max, sine2: sine2, abs3: abs3, round4: round4, ducPreResReq: ducPreResReq, sine3: sine3, abs2: abs2, round3: round3, maxSupResReq: maxSupResReq, VOut_flow: VOut_flow, sumDesAreBreZon: sumDesAreBreZon, sumDesPopBreZon: sumDesPopBreZon, vavBoxFlo2: vavBoxFlo2, vavBoxFlo1: vavBoxFlo1, add2: add2, conAHU: conAHU, truFalHol: truFalHol };
   }
 }

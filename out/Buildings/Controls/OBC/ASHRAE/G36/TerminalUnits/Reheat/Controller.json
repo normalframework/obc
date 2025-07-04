@@ -1,0 +1,41 @@
+{
+  "inputs": [
+    "uOpeMod",
+    "TDis",
+    "TSup",
+    "u1Fan",
+    "u1HotPla",
+    "VDis_flow",
+    "TCooSet",
+    "THeaSet",
+    "TZon",
+    "oveFloSet",
+    "TSupSet",
+    "ppmCO2",
+    "ppmCO2Set",
+    "u1Occ",
+    "u1Win",
+    "oveDamPos",
+    "uHeaOff"
+  ],
+  "outputs": [
+    "VAdjAreBreZon_flow",
+    "VAdjPopBreZon_flow",
+    "VMinOA_flow",
+    "VSet_flow",
+    "VZonAbsMin_flow",
+    "VZonDesMin_flow",
+    "yCO2",
+    "yDam",
+    "yFloSenAla",
+    "yHeaValResReq",
+    "yHotWatPlaReq",
+    "yLeaDamAla",
+    "yLeaValAla",
+    "yLowFloAla",
+    "yLowTemAla",
+    "yVal",
+    "yZonPreResReq",
+    "yZonTemResReq"
+  ]
+}

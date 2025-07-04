@@ -12,7 +12,7 @@
 
  function multiplyByParameter({ k = 0 }) {
   return ({ u = 0 }) => {
-    return { y: k * u };
+    return { y: (k ?? 0) * (u ?? 0) };
   }
 }
 

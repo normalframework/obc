@@ -24,6 +24,7 @@ function ramp({
   const eps = Number.EPSILON;
 
   return ({ u = 0, active = false } = {}) => {
+    u = u ?? 0;
     const dt = Math.max(TimeManager.dt, eps);
 
     if (firstCall) {

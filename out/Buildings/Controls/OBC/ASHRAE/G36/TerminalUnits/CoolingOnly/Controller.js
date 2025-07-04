@@ -79,12 +79,12 @@ module.exports = (
     const conLoo = conLooFn({ TCooSet: TCooSet, THeaSet: THeaSet, TZon: TZon });
     const zonSta = zonStaFn({ uCoo: conLoo.yCoo, uHea: conLoo.yHea });
     const minFlo = minFloFn({ ppmCO2: ppmCO2, ppmCO2Set: ppmCO2Set, u1Occ: u1Occ, u1Win: u1Win, uOpeMod: uOpeMod });
+
     const actAirSet = actAirSetFn({ uOpeMod: uOpeMod, VOccMin_flow: minFlo.VOccZonMin_flow });
     const dam = damFn({ oveDamPos: oveDamPos, oveFloSet: oveFloSet, TSup: TSup, TZon: TZon, u1Fan: u1Fan, uCoo: conLoo.yCoo, uZonSta: zonSta.yZonSta, VActCooMax_flow: actAirSet.VActCooMax_flow, VActMin_flow: actAirSet.VActMin_flow, VDis_flow: VDis_flow });
     const ala = alaFn({ u1Fan: u1Fan, uDam: dam.yDam, uOpeMod: uOpeMod, VActSet_flow: dam.VSet_flow, VDis_flow: VDis_flow });
     const timSup = timSupFn({ TSet: TCooSet, TZon: TZon });
     const sysReq = sysReqFn({ TCooSet: TCooSet, TZon: TZon, uAftSup: timSup.yAftSup, uCoo: conLoo.yCoo, uDam: dam.yDam, VDis_flow: VDis_flow, VSet_flow: dam.VSet_flow });
-
     return { VAdjAreBreZon_flow: setPoi.VAdjAreBreZon_flow, VAdjPopBreZon_flow: setPoi.VAdjPopBreZon_flow, VMinOA_flow: setPoi.VMinOA_flow, VSet_flow: dam.VSet_flow, VZonAbsMin_flow: minFlo.VZonAbsMin_flow, VZonDesMin_flow: minFlo.VZonDesMin_flow, yCO2: minFlo.yCO2, yDam: dam.yDam, yFloSenAla: ala.yFloSenAla, yLeaDamAla: ala.yLeaDamAla, yLowFloAla: ala.yLowFloAla, yZonPreResReq: sysReq.yZonPreResReq, yZonTemResReq: sysReq.yZonTemResReq };
   }
 }

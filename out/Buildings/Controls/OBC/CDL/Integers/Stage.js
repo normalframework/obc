@@ -22,9 +22,10 @@ const TimeManager = require("../../../../../TimeManager");
   let checkUpper = false;
   let checkLower = true;
   let tNext = TimeManager.time + holdDuration;
-  let y = pre_y_start;  
+  let y = pre_y_start ?? 0;  
 
   return ({ u = 0 }) => {
+    u = u ?? 0;
     const currentTime = TimeManager.time;
 
     checkUpper = (!checkUpper && u > upperThreshold + h) || (checkUpper && u >= upperThreshold - h);

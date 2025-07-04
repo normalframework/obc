@@ -12,7 +12,7 @@
 
  function average() {
   return ({ u1 = 0, u2 = 0 }) => {
-    return { y: 0.5 * (u1 + u2) };
+    return { y: 0.5 * ((u1 ?? 0) + (u2 ?? 0)) };
   }
 }
 

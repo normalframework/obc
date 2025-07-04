@@ -13,12 +13,15 @@ function greaterThreshold({ h = 0, t = 0, pre_y_start = false } = {}) {
   const haveHysteresis = h >= 1e-10;
 
   function greaterNoHysteresis() {
-    return ({ u = 0 } = {}) => ({ y: u > t });
+    return ({ u = 0 } = {}) => ({ y: (u ?? 0) > (t ?? 0) });
   }
 
   function greaterWithHysteresis({ h, pre_y_start }) {
     let prevY = pre_y_start;
     return ({ u = 0 } = {}) => {
+      u = u ?? 0;
+      h = h ?? 0;
+      t = t ?? 0;
       const rising  = !prevY && u > t;
       const falling =  prevY && u <= t - h;
       const y = rising || (!falling && prevY);

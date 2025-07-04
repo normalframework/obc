@@ -1,6 +1,14 @@
 name: OBC
 description: OBC Modelica App
 hooks:
-  - name: vav-controller
-    schedule: RRULE:FREQ=MINUTELY;INTERVAL=5
-    controller: Buildings/Controls/OBC/ASHRAE/G36/AHUs/SingleZone/VAV/Controller.js
+  - name: reheat-controller
+    interval: 1
+    controller: Buildings/Controls/OBC/ASHRAE/G36/TerminalUnits/Reheat/Controller.js
+    parameters:
+      VHeaMax_flow: 0.3
+      VHeaMin_flow: 0.15
+      VCooMax_flow: 1.5
+      VOccMin_flow: 0.15
+  - name: cooling-only-controller
+    interval: 1
+    controller: Buildings/Controls/OBC/ASHRAE/G36/TerminalUnits/CoolingOnly/Controller.js

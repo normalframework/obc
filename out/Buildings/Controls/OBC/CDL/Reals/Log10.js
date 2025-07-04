@@ -10,7 +10,7 @@
 
  function log10() {
   return ({ u = 0 }) => {
-    return { y: Math.log10(u) };
+    return { y: Math.log10(u ?? 0) };
   }
 }
 

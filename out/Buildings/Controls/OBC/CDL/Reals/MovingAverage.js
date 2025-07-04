@@ -12,12 +12,14 @@ const TimeManager = require("../../../../../TimeManager");
 const Delay       = require("../../../../../Delay");
 
 function movingAverage({ delta } = {}) {
+  delta = delta ?? 0;
   const delayBlock = Delay({ delayTime: delta });
   let mu = 0;
   const tStart = TimeManager.time;
   let mode = false;
 
   return ({ u = 0 } = {}) => {
+    u = u ?? 0;
     const t = TimeManager.time;
     const dt = Math.max(TimeManager.dt, Number.EPSILON);
 

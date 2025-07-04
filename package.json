@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "@buf/normalframework_nf.bufbuild_es": "2.2.3-20241217160536-75775899c011.1",
+    "@bufbuild/protobuf": "^2.5.2",
     "@dagrejs/graphlib": "^2.2.3",
     "chevrotain": "^11.0.3",
     "cli-color": "^2.0.4",

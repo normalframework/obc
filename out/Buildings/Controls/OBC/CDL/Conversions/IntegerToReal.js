@@ -10,6 +10,7 @@
 
 function integerToReal() {
   return ({ u }) => {
+    u = u ?? 0;
     return { y: u };
   }
 }

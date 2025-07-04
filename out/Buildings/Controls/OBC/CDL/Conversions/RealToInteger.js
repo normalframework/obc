@@ -10,6 +10,7 @@
 
 function realToInteger() {
   return ({ u = 0 }) => {
+    u = u ?? 0;
     const y = u > 0 ? Math.floor(u + 0.5) : Math.ceil(u - 0.5);
     return { y };
   };

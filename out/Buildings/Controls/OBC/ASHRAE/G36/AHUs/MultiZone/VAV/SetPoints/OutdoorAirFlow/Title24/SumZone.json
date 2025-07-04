@@ -1,0 +1,13 @@
+{
+  "inputs": [
+    "VZonAbsMin_flow",
+    "VZonDesMin_flow",
+    "uOpeMod",
+    "uCO2"
+  ],
+  "outputs": [
+    "VSumZonAbsMin_flow",
+    "VSumZonDesMin_flow",
+    "yMaxCO2"
+  ]
+}
