@@ -1,7 +1,7 @@
 import { Command } from "commander";
 import { existsSync, statSync } from "fs";
 import path from "path";
-import { generateApp } from "./apps";
+import { generateApp, generateRegistry } from "./apps";
 import {
   translateDirectory as translateDirectoryGpt,
   translateFile as translateFileGpt,
@@ -49,6 +49,17 @@ program
   .action(async (params) => {
     await generateApp(params);
   });
+
+  program
+  .command("registry")
+  .option("-i, --input <input>", "Modelica  directory to translate")
+  .option("-o, --output <output>", "Output registry folder")
+  .option("--name <name>", "Registry name")
+  .description("Generate hooks registry repository")
+  .action(async (params) => {
+    await generateRegistry(params);
+  });
+
 
 program
   .command("translate")

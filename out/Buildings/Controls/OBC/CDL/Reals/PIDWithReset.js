@@ -89,9 +89,6 @@ function pidWithReset({
 
     // 5. sum P+I+D
     
-    if (log) {
-      console.log(pTerm, I, dTerm)
-    }
     const sumPID = pTerm + I + dTerm;
     // 6. limit output
     const output = limBlock({ u: sumPID }).y;

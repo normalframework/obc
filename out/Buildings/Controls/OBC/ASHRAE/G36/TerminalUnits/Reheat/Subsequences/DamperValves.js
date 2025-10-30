@@ -225,7 +225,6 @@ module.exports = (
     const swi2 = swi2Fn({ u1: lin3.y, u2: gre.y, u3: VActHeaMin_flow });
     const swi1 = swi1Fn({ u1: VActMin_flow, u2: and2.y, u3: swi2.y });
     const swi = swiFn({ u1: swi5.y, u2: truFalHol1.y, u3: swi1.y });
-    console.log(lin3, { f1: VActHeaMin_flow, f2: VActHeaMax_flow, u: uHea, x1: conHal1.y, x2: conOne2.y });
     const swi6 = swi6Fn({ u1: add1.y, u2: or1.y, u3: swi.y });
     const conZer2 = conZer2Fn({});
     const unOcc = unOccFn({});

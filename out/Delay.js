@@ -1,3 +1,5 @@
+const TimeManager = require("./TimeManager");
+
 /**
  * Delay block that delays a rising edge of the Boolean input but not a falling edge.
  * 

@@ -2,18 +2,19 @@ import {
   Application,
   HookSchema,
 } from "@buf/normalframework_nf.bufbuild_es/normalgw/automation/v1/program_pb";
+import { create, toJsonString } from "@bufbuild/protobuf";
 import fs from "fs";
 import inquirer from "inquirer";
-import path from "path";
+import path, { dirname } from "path";
 import { simpleGit } from "simple-git";
+import { fileURLToPath } from "url";
 import * as yaml from "yaml";
 import { z } from "zod";
-import {
-  generateJsObject,
-  generateJsObjectParameter,
-  translateDirectory,
-} from "./translator";
-import { create, toJsonString } from "@bufbuild/protobuf";
+import { generateJsObject, generateJsObjectParameter } from "./translator";
+import { walkDirectoryRecursive } from "./utils";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 const REPO =
   "https://github.com/normalframework/applications-template-empty.git";
@@ -28,14 +29,14 @@ const hookSchema = z.object({
   parameters: z.record(z.string(), z.any()).optional(),
 });
 
-const configSchema = z.object({
+const appConfigSchema = z.object({
   name: z.string().min(1),
   description: z.string().optional(),
   hooks: z.array(hookSchema).optional(),
 });
 
 type HookDef = z.infer<typeof hookSchema>;
-type Config = z.infer<typeof configSchema>;
+type AppConfig = z.infer<typeof appConfigSchema>;
 
 async function loadConfig(filePath: string) {
   const content = fs.readFileSync(filePath, "utf-8");
@@ -50,7 +51,7 @@ async function loadConfig(filePath: string) {
   }
 
   // Validate with Zod schema
-  const result = configSchema.safeParse(parsedData);
+  const result = appConfigSchema.safeParse(parsedData);
   if (!result.success) {
     console.error("Validation errors:", result.error.format());
     throw new Error("Invalid configuration file");
@@ -78,6 +79,236 @@ function copyDir(src: string, dest: string): void {
   }
 }
 
+function isControllerFile(filePath: string) {
+  const ext = path.extname(filePath);
+  const name = path.basename(filePath);
+  return (
+    ext === ".js" &&
+    name.startsWith("Controller") &&
+    !filePath.includes("Validation")
+  );
+}
+
+const REGISTRY_FOLDER = "registry";
+
+export async function generateRegistry({
+  input,
+  output,
+  name,
+}: {
+  input?: string;
+  output?: string;
+  name?: string;
+}) {
+  const res = await inquirer.prompt([
+    {
+      type: "input",
+      name: "input",
+      required: true,
+      message: "Modelica directory to translate",
+      when: !input,
+    },
+    {
+      type: "input",
+      name: "output",
+      required: true,
+      message: "Output app folder",
+      default: output,
+      when: !output,
+    },
+    {
+      type: "confirm",
+      name: "override",
+      message: "Override existing registry folder",
+      when: (answers) => {
+        const folder = answers.output ?? output;
+        return fs.existsSync(folder);
+      },
+    },
+    {
+      type: "input",
+      name: "output",
+      message: "Output app folder",
+      required: true,
+      default: output,
+      when: !output,
+    },
+    {
+      type: "input",
+      name: "name",
+      message: "Registry name",
+      required: true,
+      when: !name,
+    },
+  ]);
+
+  const inputFolder = res.input ?? input;
+  const outputFolder = res.output ?? output;
+  if (!fs.existsSync(inputFolder)) {
+    console.error(`Input folder ${inputFolder} does not exist`);
+    process.exit(1);
+  }
+
+  const isNew = res.override == null;
+
+  if (res.override === false) {
+    console.error("Output folder already exists");
+    process.exit(1);
+  }
+  
+  copyDir(inputFolder, path.join(outputFolder, REGISTRY_FOLDER, HOOKS_LIB));
+  const registryHooks = generateControllerHooks(outputFolder);
+  const registryDef = {
+    $schema: "https://portal.normal-online.net/schema/RegistryDefinition.json",
+    name: name,
+    hooks: registryHooks,
+  };
+  fs.writeFileSync(
+    path.join(outputFolder, "registry.json"),
+    JSON.stringify(registryDef, null, 2)
+  );
+
+  const pkg = {
+    name: "modelica-registry",
+    version: "1.0.0",
+    description: "",
+    main: "index.js",
+    scripts: {
+      test: 'echo "Error: no test specified" && exit 1',
+    },
+    keywords: [],
+    author: "",
+    license: "ISC",
+    packageManager: "pnpm@10.14.0",
+  };
+
+  fs.writeFileSync(
+    path.join(outputFolder, "package.json"),
+    JSON.stringify(pkg, null, 2)
+  );
+
+  if (isNew) {
+    await createNewGitRepo(outputFolder);
+  } else {
+    await updateGitRepo(outputFolder);
+  }
+  console.log("Registry generated successfully");
+}
+
+function createRegistryHook(
+  controllerFile: string,
+  hook: HookDef,
+  out: string
+) {
+  const hookPath = path.join(out, REGISTRY_FOLDER, hook.name);
+  fs.mkdirSync(hookPath, { recursive: true });
+
+  const controllerDefFile = controllerFile.replace(".js", ".json");
+  if (!fs.existsSync(controllerDefFile)) {
+    console.error(
+      `Hook controller definition file ${controllerDefFile} does not exist`
+    );
+    process.exit(1);
+  }
+  const controllerDef: { inputs: string[]; outputs: string[] } = JSON.parse(
+    fs.readFileSync(controllerDefFile, "utf-8")
+  );
+
+  const hookDef = {
+    $schema: "https://portal.normal-online.net/schema/HookDefinition.json",
+    name: hook.name,
+    schedule: {
+      rrule: `RRULE:FREQ=SECONDLY;INTERVAL=${hook.interval}`,
+    },
+    inputs: controllerDef.inputs.map((i: string) => ({
+      name: i,
+      type: "HOOK_INPUT_TYPE_GROUPED",
+    })),
+    outputs: controllerDef.outputs.map((i: string) => ({
+      label: i,
+      type: "VARIABLE_TYPE_GROUPED"
+    })),
+  };
+
+  const hookCode = generateHookCode(controllerDef, hook);
+  fs.writeFileSync(
+    path.join(hookPath, `hook.json`),
+    JSON.stringify(hookDef, null, 2)
+  );
+  fs.writeFileSync(path.join(hookPath, `hook.js`), hookCode);
+
+  return {
+    name: hook.name,
+    definition: path.join(REGISTRY_FOLDER, hook.name, `hook.json`),
+    files: [
+      {
+        path: path.join(REGISTRY_FOLDER, hook.name, `hook.js`),
+        type: "registry:entry",
+      },
+    ],
+  };
+}
+
+function generateControllerHooks(outFolder: string) {
+  const hooks: {
+    name: string;
+    definition: string;
+    files: { path: string; type: string }[];
+  }[] = [];
+  const paths = new Set<string>();
+  const libPaths = new Set<string>();
+  for (const filePath of walkDirectoryRecursive(
+    path.join(outFolder, REGISTRY_FOLDER, HOOKS_LIB)
+  )) {
+    if (isControllerFile(filePath)) {
+      paths.add(filePath);
+    }
+    if (filePath.endsWith(".js")) {
+      libPaths.add(path.relative(outFolder, filePath));
+    }
+  }
+
+  const libFiles = Array.from(libPaths).map((p) => ({
+    path: p,
+    type: "registry:lib",
+  }));
+  const commonPrefix = longestCommonPrefix(Array.from(paths));
+  for (const filePath of paths) {
+    const relativePath = filePath.replace(commonPrefix, "");
+    const parts = relativePath.split("/");
+    const hookName = parts.slice(0, -1).join(".");
+    const hook = createRegistryHook(
+      filePath,
+      {
+        name: hookName,
+        controller: path.relative(
+          path.join(outFolder, REGISTRY_FOLDER, HOOKS_LIB),
+          filePath
+        ),
+        interval: 1,
+      },
+      outFolder
+    );
+    hook.files = [...hook.files, ...libFiles];
+    hooks.push(hook);
+    console.log(`Generated hook ${hookName}`);
+  }
+
+  return hooks;
+}
+
+function longestCommonPrefix(strings: string[]) {
+  if (!strings || strings.length === 0) return "";
+
+  return strings.reduce((prefix, str) => {
+    let i = 0;
+    while (i < prefix.length && i < str.length && prefix[i] === str[i]) {
+      i++;
+    }
+    return prefix.slice(0, i);
+  });
+}
+
 export async function generateApp({
   input,
   output,
@@ -91,7 +322,7 @@ export async function generateApp({
   description?: string;
   config?: string;
 }) {
-  let appConfig: Config = {
+  let appConfig: AppConfig = {
     name: name ?? "",
     description: description ?? "",
     hooks: [],
@@ -194,7 +425,7 @@ async function cloneApp(out: string) {
   await simpleGit().clone(REPO, out);
 }
 
-function createAppDef(config: Config, out: string) {
+function createAppDef(config: AppConfig, out: string) {
   const appDef: Partial<Application> = {
     name: config.name,
     description: config.description,
@@ -202,7 +433,7 @@ function createAppDef(config: Config, out: string) {
   fs.writeFileSync(path.join(out, "app.json"), JSON.stringify(appDef, null, 2));
 }
 
-async function createHooks(config: Config, out: string) {
+async function createHooks(config: AppConfig, out: string) {
   if (!config.hooks?.length) {
     return;
   }
@@ -295,17 +526,13 @@ module.exports = async ({points}) => {
   };
 
   const params = {
-    ${def.inputs
-      .map((i) => `${i}: await read('${i}')`)
-      .join(",\n\t\t")}
+    ${def.inputs.map((i) => `${i}: await read('${i}')`).join(",\n\t\t")}
   };
   const ${generateJsObjectParameter(def.outputs)} = instance(params);
 
   await Promise.all([
     ${def.outputs
-      .map(
-        (o) => `await write('${o}', normalize(${o}))`
-      )
+      .map((o) => `await write('${o}', normalize(${o}))`)
       .join(",\n\t\t")}
   ]);
 

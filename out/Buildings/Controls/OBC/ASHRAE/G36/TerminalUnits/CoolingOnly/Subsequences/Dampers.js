@@ -133,7 +133,6 @@ module.exports = (
     const VDisSet_flowNor = VDisSet_flowNorFn({ u1: swi1.y, u2: nomFlow.y });
     const conPID = conPIDFn({ trigger: u1Fan, u_m: VDis_flowNor.y, u_s: VDisSet_flowNor.y });
     const swi2 = swi2Fn({ u1: add3.y, u2: or2.y, u3: conPID.y });
-    console.log({ u1: swi1.y, u2: nomFlow.y })
 
     return { VSet_flow: swi1.y, yDam: swi2.y };
   }

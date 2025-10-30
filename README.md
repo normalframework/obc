@@ -271,7 +271,7 @@ module.exports = async ({ points }) => {
     Math.round(params.TCooSet) === 297 &&
     Math.round(params.THeaSet) === 293
   ) {
-    params.uOpeMod = 7; // occupied
+    params.uOpeMod = 1; // occupied
   } else if (
     Math.round(params.TCooSet) === 303 &&
     Math.round(params.THeaSet) === 293
