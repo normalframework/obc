@@ -161,9 +161,13 @@ function sortParams(params: ExecutionParameter[]) {
 }
 
 // function to convert modelica constants to js constants
-function jsValue(value: string | undefined) {
+function jsValue(value: string | any[] | undefined) {
   if (value == null) {
     return;
+  }
+
+  if (Array.isArray(value)) {
+    return `[${value.map((v) => jsValue(v)).join(",")}]`;
   }
 
   const valueKey = value.replace(/"/g, "");

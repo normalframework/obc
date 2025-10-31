@@ -9,7 +9,7 @@ module.exports = (
     } = {}
 ) => {
   // http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.MultiMax.con
-  const conFn = constant_d2aca5e8({ k: "{1,2,3,4,5}" });
+  const conFn = constant_d2aca5e8({ k: [1,2,3,4,5] });
   // http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.MultiMax.maxVal
   const maxValFn = multimax_a5ce0819({ nin: sizOfVec });
 

@@ -6,11 +6,11 @@ module.exports = (
   
 ) => {
   // http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.TimeTableNegativeStartTime.booTimTab
-  const booTimTabFn = timetable_61011cf1({ period: 5, table: [0,1,0;1.3,1,1;2.9,0,0;4,1,0] });
+  const booTimTabFn = timetable_61011cf1({ period: 5, table: [[0,1,0],[1.3,1,1],[2.9,0,0],[4,1,0]] });
   // http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.TimeTableNegativeStartTime.booTimTabOneRow
   const booTimTabOneRowFn = timetable_61011cf1({ period: 1, table: [0,1,0] });
   // http://example.org#Buildings.Controls.OBC.CDL.Logical.Sources.Validation.TimeTableNegativeStartTime.booTimTabTwi
-  const booTimTabTwiFn = timetable_61011cf1({ period: 10, table: [0,1,0;1.3,1,1;2.9,0,0;4,1,0], timeScale: 2 });
+  const booTimTabTwiFn = timetable_61011cf1({ period: 10, table: [[0,1,0],[1.3,1,1],[2.9,0,0],[4,1,0]], timeScale: 2 });
 
   return (
     {  }

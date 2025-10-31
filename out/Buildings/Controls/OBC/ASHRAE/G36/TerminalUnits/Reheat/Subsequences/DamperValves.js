@@ -22,23 +22,23 @@ const switch_91d77162 = require("../../../../../CDL/Reals/Switch");
 
 module.exports = (
   {
-    controllerTypeDam = 1,
-    controllerTypeVal = 1,
-    dTDisZonSetMax = 11,
-    dTHys = 0.25,
-    iniDam = 0.01,
-    kDam = 0.5,
-    kVal = 0.5,
-    looHys = 0.01,
-    TdDam = 0.1,
-    TDisMin = 283.15,
-    TdVal = 0.1,
-    TiDam = 300,
-    TiVal = 300,
-    VCooMax_flow,
-    VHeaMax_flow,
-    VMin_flow,
-  } = {}
+		controllerTypeDam = 1,
+		controllerTypeVal = 1,
+		dTDisZonSetMax = 11,
+		dTHys = 0.25,
+		iniDam = 0.01,
+		kDam = 0.5,
+		kVal = 0.5,
+		looHys = 0.01,
+		TdDam = 0.1,
+		TDisMin = 283.15,
+		TdVal = 0.1,
+		TiDam = 300,
+		TiVal = 300,
+		VCooMax_flow,
+		VHeaMax_flow,
+		VMin_flow,
+    } = {}
 ) => {
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.Reheat.Subsequences.DamperValves.addPar
   const addParFn = addparameter_2b4d5fb6({ p: dTDisZonSetMax });
@@ -49,7 +49,7 @@ module.exports = (
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.Reheat.Subsequences.DamperValves.conTDisHeaSet
   const conTDisHeaSetFn = line_15731da2({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.Reheat.Subsequences.DamperValves.greThr2
-  const greThr2Fn = greaterthreshold_7c60ca3f({ h: 0.8 * looHys, t: looHys });
+  const greThr2Fn = greaterthreshold_7c60ca3f({ h: 0.8*looHys, t: looHys });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.Reheat.Subsequences.DamperValves.truFalHol
   const truFalHolFn = truefalsehold_04e8385a({ falseHoldDuration: 0, trueHoldDuration: 600 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.Reheat.Subsequences.DamperValves.lowDisAirTem
@@ -95,13 +95,13 @@ module.exports = (
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.Reheat.Subsequences.DamperValves.or1
   const or1Fn = or_de89f7dd({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.Reheat.Subsequences.DamperValves.greThr1
-  const greThr1Fn = greaterthreshold_7c60ca3f({ h: 0.5 * looHys, t: looHys });
+  const greThr1Fn = greaterthreshold_7c60ca3f({ h: 0.5*looHys, t: looHys });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.Reheat.Subsequences.DamperValves.truFalHol1
   const truFalHol1Fn = truefalsehold_04e8385a({ falseHoldDuration: 0, trueHoldDuration: 600 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.Reheat.Subsequences.DamperValves.sub2
   const sub2Fn = subtract_040901c2({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.Reheat.Subsequences.DamperValves.greThr
-  const greThrFn = greaterthreshold_7c60ca3f({ h: 0.5 * dTHys, t: dTHys });
+  const greThrFn = greaterthreshold_7c60ca3f({ h: 0.5*dTHys, t: dTHys });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.Reheat.Subsequences.DamperValves.and4
   const and4Fn = and_f2b4cf1d({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.Reheat.Subsequences.DamperValves.conZer
@@ -180,7 +180,6 @@ module.exports = (
     const conZer3 = conZer3Fn({});
     const conHal = conHalFn({});
     const conTDisHeaSet = conTDisHeaSetFn({ f1: TSupSet, f2: addPar.y, u: uHea, x1: conZer3.y, x2: conHal.y });
-
     const greThr2 = greThr2Fn({ u: uHea });
     const truFalHol = truFalHolFn({ u: greThr2.y });
     const lowDisAirTem = lowDisAirTemFn({});
@@ -204,7 +203,6 @@ module.exports = (
     const or3 = or3Fn({ u1: forZerFlo.y, u2: forCooMax.y });
     const or4 = or4Fn({ u1: or3.y, u2: forMinFlo.y });
     const or1 = or1Fn({ u1: or4.y, u2: forMinFlo1.y });
-
     const greThr1 = greThr1Fn({ u: uCoo });
     const truFalHol1 = truFalHol1Fn({ u: greThr1.y });
     const sub2 = sub2Fn({ u1: TSup, u2: TZon });
@@ -233,10 +231,7 @@ module.exports = (
     const heaMax1 = heaMax1Fn({});
     const max2 = max2Fn({ u1: cooMax1.y, u2: heaMax1.y });
     const VDis_flowNor = VDis_flowNorFn({ u1: VDis_flow, u2: max2.y });
-
     const VDisSet_flowNor = VDisSet_flowNorFn({ u1: swi6.y, u2: max2.y });
-
-
     const conDam = conDamFn({ trigger: u1Fan, u_m: VDis_flowNor.y, u_s: VDisSet_flowNor.y });
     const damPosUno = damPosUnoFn({ u1: conZer2.y, u2: isUno.y, u3: conDam.y });
     const lowMin = lowMinFn({ u: TDis });

@@ -35,7 +35,7 @@ export type Link = {
 export type ExecutionParameter = {
   id: string;
   name: string;
-  value?: string;
+  value?: string | any[];
 };
 
 export type ExecutionNode = {

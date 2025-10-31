@@ -8,9 +8,9 @@ module.exports = (
   
 ) => {
   // http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.RealExtractSignal.extSig
-  const extSigFn = realextractsignal_6e8b8bce({ extract: "{1,2,5}", nin: 5, nout: 3 });
+  const extSigFn = realextractsignal_6e8b8bce({ extract: [1,2,5], nin: 5, nout: 3 });
   // http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.RealExtractSignal.extSig1
-  const extSig1Fn = realextractsignal_6e8b8bce({ extract: "{1,2,5,3,4,2}", nin: 5, nout: 6 });
+  const extSig1Fn = realextractsignal_6e8b8bce({ extract: [1,2,5,3,4,2], nin: 5, nout: 6 });
   // http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.RealExtractSignal.pul
   const pulFn = pulse_dac91fd5({ amplitude: 0.5, period: 0.2 });
   // http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.RealExtractSignal.pul1

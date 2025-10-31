@@ -16,9 +16,9 @@ module.exports = (
   // http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractSignal.con1
   const con1Fn = constant_655d39b4({ k: true });
   // http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractSignal.extBooSig
-  const extBooSigFn = booleanextractsignal_51097a1e({ extract: "{3,2,4}", nin: 4, nout: 3 });
+  const extBooSigFn = booleanextractsignal_51097a1e({ extract: [3,2,4], nin: 4, nout: 3 });
   // http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanExtractSignal.extBooSig1
-  const extBooSig1Fn = booleanextractsignal_51097a1e({ extract: "{3,2,4,1,1}", nin: 4, nout: 5 });
+  const extBooSig1Fn = booleanextractsignal_51097a1e({ extract: [3,2,4,1,1], nin: 4, nout: 5 });
 
   return (
     {  }

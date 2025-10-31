@@ -8,9 +8,9 @@ module.exports = (
   
 ) => {
   // http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.MatrixGain.matGai
-  const matGaiFn = matrixgain_aca2820e({ K: [1,0;1,1;1,2] });
+  const matGaiFn = matrixgain_aca2820e({ K: [[1,0],[1,1],[1,2]] });
   // http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.MatrixGain.matGai1
-  const matGai1Fn = matrixgain_aca2820e({ K: [1,2;3,4] });
+  const matGai1Fn = matrixgain_aca2820e({ K: [[1,2],[3,4]] });
   // http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.MatrixGain.ramp
   const rampFn = ramp_40ddd056({ duration: 1, height: 2, offset: 0 });
   // http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.MatrixGain.ramp1

@@ -7,15 +7,15 @@ module.exports = (
   
 ) => {
   // http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.MatrixMax.con
-  const conFn = constant_b0edecc8({ k: "{{1,2,3},{6,4,2},{3,9,6}}" });
+  const conFn = constant_b0edecc8({ k: ["{1",2,"3}","{6",4,"2}","{3",9,"6}"] });
   // http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.MatrixMax.matMax
   const matMaxFn = matrixmax_9a36e0f5({ nCol: 3, nRow: 3, rowMax: false });
   // http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.MatrixMax.con1
-  const con1Fn = constant_b0edecc8({ k: "{{1,4,3},{2,2,6}}" });
+  const con1Fn = constant_b0edecc8({ k: ["{1",4,"3}","{2",2,"6}"] });
   // http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.MatrixMax.matMax1
   const matMax1Fn = matrixmax_9a36e0f5({ nCol: 3, nRow: 2 });
   // http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.MatrixMax.con2
-  const con2Fn = constant_b0edecc8({ k: "{{1,2,3},{6,4,2}}" });
+  const con2Fn = constant_b0edecc8({ k: ["{1",2,"3}","{6",4,"2}"] });
   // http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.MatrixMax.matMax2
   const matMax2Fn = matrixmax_9a36e0f5({ nCol: 3, nRow: 2 });
 

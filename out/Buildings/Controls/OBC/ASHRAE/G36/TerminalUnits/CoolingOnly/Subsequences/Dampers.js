@@ -14,15 +14,15 @@ const switch_91d77162 = require("../../../../../CDL/Reals/Switch");
 
 module.exports = (
   {
-    damCon = 1,
-    dTHys = 0.25,
-    iniDam = 0.01,
-    kDam = 0.5,
-    TdDam = 0.1,
-    TiDam = 300,
-    VCooMax_flow,
-    VMin_flow,
-  } = {}
+		damCon = 1,
+		dTHys = 0.25,
+		iniDam = 0.01,
+		kDam = 0.5,
+		TdDam = 0.1,
+		TiDam = 300,
+		VCooMax_flow,
+		VMin_flow,
+    } = {}
 ) => {
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.TerminalUnits.CoolingOnly.Subsequences.Dampers.conInt1
   const conInt1Fn = constant_01efacbe({ k: 1 });

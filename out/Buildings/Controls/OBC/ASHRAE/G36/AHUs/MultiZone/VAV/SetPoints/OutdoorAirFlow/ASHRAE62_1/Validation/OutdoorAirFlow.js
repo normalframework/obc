@@ -9,20 +9,20 @@ module.exports = (
   {
 		nGro = 2,
 		nZon = 4,
-		zonGroMat = "{{1,1,0,0},{0,0,1,1}}",
-		zonGroMatTra = "{{1,0},{1,0},{0,1},{0,1}}",
+		zonGroMat = ["{1",1,0,"0}","{0",0,1,"1}"],
+		zonGroMatTra = ["{1","0}","{1","0}","{0","1}","{0","1}"],
     } = {}
 ) => {
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.Validation.OutdoorAirFlow.opeMod
-  const opeModFn = constant_01efacbe({ k: "{Buildings.Controls.OBC.ASHRAE.G36.Types.OperationModes.occupied,Buildings.Controls.OBC.ASHRAE.G36.Types.OperationModes.unoccupied}" });
+  const opeModFn = constant_01efacbe({ k: [1,7] });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.Validation.OutdoorAirFlow.adjAreFlo
-  const adjAreFloFn = constant_d2aca5e8({ k: "{0.08,0.1,0.15,0.1}" });
+  const adjAreFloFn = constant_d2aca5e8({ k: [0.08,0.1,0.15,0.1] });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.Validation.OutdoorAirFlow.adjPopFlo
-  const adjPopFloFn = constant_d2aca5e8({ k: "{0.1,0.12,0.2,0.15}" });
+  const adjPopFloFn = constant_d2aca5e8({ k: [0.1,0.12,0.2,0.15] });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.Validation.OutdoorAirFlow.minOAFlo
-  const minOAFloFn = constant_d2aca5e8({ k: "{0.2,0.21,0.35,0.25}" });
+  const minOAFloFn = constant_d2aca5e8({ k: [0.2,0.21,0.35,0.25] });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.Validation.OutdoorAirFlow.priFlo
-  const priFloFn = constant_d2aca5e8({ k: "{0.3,0.25,0.4,0.5}" });
+  const priFloFn = constant_d2aca5e8({ k: [0.3,0.25,0.4,0.5] });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.Validation.OutdoorAirFlow.zonToAhu
   const zonToAhuFn = sumzone_5db280ab({ nGro: nGro, nZon: nZon, zonGroMat: zonGroMat, zonGroMatTra: zonGroMatTra });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.AHUs.MultiZone.VAV.SetPoints.OutdoorAirFlow.ASHRAE62_1.Validation.OutdoorAirFlow.outAirFlo

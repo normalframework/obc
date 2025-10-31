@@ -7,9 +7,9 @@ module.exports = (
   
 ) => {
   // http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.RealVectorFilter.ReaInp
-  const ReaInpFn = constant_b0edecc8({ k: "{1,2,3}" });
+  const ReaInpFn = constant_b0edecc8({ k: [1,2,3] });
   // http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.RealVectorFilter.reaFil
-  const reaFilFn = realvectorfilter_b20624b6({ msk: "{true,false,true}", nin: 3, nout: 2 });
+  const reaFilFn = realvectorfilter_b20624b6({ msk: [true,false,true], nin: 3, nout: 2 });
 
   return (
     {  }

@@ -7,13 +7,13 @@ module.exports = (
   
 ) => {
   // http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.MultiSum.mulSum_1
-  const mulSum_1Fn = multisum_a5ce2100({ k: "{1}", nin: 1 });
+  const mulSum_1Fn = multisum_a5ce2100({ k: 1, nin: 1 });
   // http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.MultiSum.mulSum_2
-  const mulSum_2Fn = multisum_a5ce2100({ k: "{1,0.5}", nin: 2 });
+  const mulSum_2Fn = multisum_a5ce2100({ k: [1,0.5], nin: 2 });
   // http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.MultiSum.mulSum_3
   const mulSum_3Fn = multisum_a5ce2100({ nin: 3 });
   // http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.MultiSum.mulSum_5
-  const mulSum_5Fn = multisum_a5ce2100({ k: "{1,0.5,0.1,1,2}", nin: 5 });
+  const mulSum_5Fn = multisum_a5ce2100({ k: [1,0.5,0.1,1,2], nin: 5 });
   // http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.MultiSum.ramp1
   const ramp1Fn = ramp_40ddd056({ duration: 1, height: 4, offset: -2 });
   // http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.MultiSum.ramp2

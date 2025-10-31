@@ -22,7 +22,7 @@ module.exports = (
   // http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.Change.increaseSampler
   const increaseSamplerFn = triggeredsampler_3247bbb1({});
   // http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.Change.timTabLin
-  const timTabLinFn = timetable_9d9f373d({ smoothness: 1, table: [0,-1;0.3,0.5;0.5,0;0.7,1;1,0] });
+  const timTabLinFn = timetable_9d9f373d({ smoothness: 1, table: [[0,-1],[0.3,0.5],[0.5,0],[0.7,1],[1,0]] });
 
   return (
     {  }

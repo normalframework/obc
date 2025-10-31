@@ -9,7 +9,7 @@ module.exports = (
     } = {}
 ) => {
   // http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.MultiMin.con
-  const conFn = constant_d2aca5e8({ k: "{1,2,3,4,5}" });
+  const conFn = constant_d2aca5e8({ k: [1,2,3,4,5] });
   // http://example.org#Buildings.Controls.OBC.CDL.Reals.Validation.MultiMin.minVal
   const minValFn = multimin_a5ce0907({ nin: sizOfVec });
 

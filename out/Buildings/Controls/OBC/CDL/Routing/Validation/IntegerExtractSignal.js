@@ -12,9 +12,9 @@ module.exports = (
   // http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractSignal.conInt3
   const conInt3Fn = constant_01efacbe({ k: 4 });
   // http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractSignal.extIntSig
-  const extIntSigFn = integerextractsignal_2d08d8c8({ extract: "{3,2,4}", nin: 4, nout: 3 });
+  const extIntSigFn = integerextractsignal_2d08d8c8({ extract: [3,2,4], nin: 4, nout: 3 });
   // http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractSignal.extIntSig1
-  const extIntSig1Fn = integerextractsignal_2d08d8c8({ extract: "{3,2,4,2,3}", nin: 4, nout: 5 });
+  const extIntSig1Fn = integerextractsignal_2d08d8c8({ extract: [3,2,4,2,3], nin: 4, nout: 5 });
   // http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractSignal.intPul
   const intPulFn = pulse_02f178bf({ amplitude: 1, period: 0.2 });
   // http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.IntegerExtractSignal.intPul1

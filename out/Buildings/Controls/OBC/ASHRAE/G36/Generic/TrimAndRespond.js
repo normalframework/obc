@@ -66,14 +66,14 @@ module.exports = (
   const swi3Fn = switch_6d141143({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TrimAndRespond.add2
   const add2Fn = add_a5faf0f2({});
+  // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TrimAndRespond.tim
+  const timFn = truedelay_b49d8a1a({ delayOnInit: true, delayTime: delTim +samplePeriod });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TrimAndRespond.greThr
   const greThrFn = greaterthreshold_64a3c4e0({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TrimAndRespond.and2
   const and2Fn = and_6d642f1c({});
-  // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TrimAndRespond.tim
-  const timFn = truedelay_b49d8a1a({ delayOnInit: true, delayTime: delTim +samplePeriod });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TrimAndRespond.zerTri
-  const zerTriFn = constant_baefa089({});
+  const zerTriFn = constant_baefa089({ k: 0 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TrimAndRespond.swi1
   const swi1Fn = switch_6d141143({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TrimAndRespond.netRes
@@ -127,9 +127,9 @@ module.exports = (
     const gai = gaiFn({ u: minInp.y });
     const swi3 = swi3Fn({ u1: minInp.y, u2: greThr1.y, u3: gai.y });
     const add2 = add2Fn({ u1: triAmoCon.y, u2: swi3.y });
-    const greThr = greThrFn({ u: difReqIgnReq.y });
-    const and2 = and2Fn({ u2: greThr.y });
     const tim = timFn({ u: uDevSta });
+    const greThr = greThrFn({ u: difReqIgnReq.y });
+    const and2 = and2Fn({ u1: tim.y, u2: greThr.y });
     const zerTri = zerTriFn({});
     const swi1 = swi1Fn({ u1: triAmoCon.y, u2: tim.y, u3: zerTri.y });
     const netRes = netResFn({ u1: add2.y, u2: and2.y, u3: swi1.y });
@@ -147,6 +147,7 @@ module.exports = (
     const pro2 = pro2Fn({ u1: resAmoCon.y, u2: maxResCon.y });
     const greThr2 = greThr2Fn({ u: pro2.y });
     const assMes2 = assMes2Fn({ u: greThr2.y });
+
     return { y: swi.y };
   }
 }

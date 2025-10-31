@@ -7,9 +7,9 @@ module.exports = (
   
 ) => {
   // http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanVectorFilter.booInp
-  const booInpFn = constant_b8684894({ k: "{true,true,false}" });
+  const booInpFn = constant_b8684894({ k: [true,true,false] });
   // http://example.org#Buildings.Controls.OBC.CDL.Routing.Validation.BooleanVectorFilter.booFil
-  const booFilFn = booleanvectorfilter_0be92c66({ msk: "{true,false,true}", nin: 3, nout: 2 });
+  const booFilFn = booleanvectorfilter_0be92c66({ msk: [true,false,true], nin: 3, nout: 2 });
 
   return (
     {  }

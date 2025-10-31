@@ -57,6 +57,7 @@ module.exports = (
     const isDea = isDeaFn({ u1: isHea.y, u2: isCoo.y });
     const booToIntDea = booToIntDeaFn({ u: isDea.y });
     const addInt1 = addInt1Fn({ u1: addInt.y, u2: booToIntDea.y });
+
     return { yZonSta: addInt1.y };
   }
 }

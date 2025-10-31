@@ -1,4 +1,7 @@
 import { Graph } from "@dagrejs/graphlib";
+import clc from "cli-color";
+import fs from "fs";
+import path from "path";
 import { connections, dependencies } from "./graph";
 import {
   ExecutionEdge,
@@ -7,10 +10,6 @@ import {
   Link,
   Node,
 } from "./types";
-import clc from "cli-color";
-import path from "path";
-import { visualizeGraph } from "./visualize";
-import fs from "fs";
 export const EXECUTION_START_NODE = "START";
 export const EXECUTION_END_NODE = "END";
 
@@ -297,9 +296,70 @@ export function lookupBlockElementId(graph: Graph) {
   }
   return res;
 }
+function tryParseArray(input: string): [boolean, any[]] {
+  try {
+    if (typeof input !== "string") return [false, []];
+    const s = input.trim();
+    if (!s) return [false, []];
+
+    const coerce = (v) => {
+      const t = v.trim();
+      if (!t) return t; // empty stays empty
+      const n = Number(t);
+      return Number.isNaN(n) ? t : n;
+    };
+
+    // --- Set: { ... } => 1D
+    if (s.startsWith("{") && s.endsWith("}")) {
+      const inner = s.slice(1, -1).trim();
+      if (!inner) return [true, []];
+      const items = inner.split(",").map(coerce);
+      return [true, items];
+    }
+
+    // --- Vector/Matrix: [ ... ]
+    if (s.startsWith("[") && s.endsWith("]")) {
+      const inner = s.slice(1, -1).trim();
+      if (!inner) return [true, []];
+
+      // Split rows by ';' (matrix rows). Filter empty rows to allow trailing ';'.
+      const rows = inner
+        .split(";")
+        .map((r) => r.trim())
+        .filter((r) => r.length > 0);
+
+      // If only one row (no ';' present), it's a vector.
+      if (rows.length <= 1) {
+        const row = rows[0] ?? inner;
+        const items = row
+          .split(",")
+          .map(coerce)
+          .filter((x) => !(typeof x === "string" && x.trim() === ""));
+        return [true, items];
+      }
+
+      // Otherwise, matrix: each row is comma-separated values.
+      const matrix = rows.map((r) => {
+        const cols = r
+          .split(",")
+          .map(coerce)
+          .filter((x) => !(typeof x === "string" && x.trim?.() === ""));
+        if (cols.length === 0) throw new Error("Empty matrix row");
+        return cols;
+      });
+
+      return [true, matrix];
+    }
+
+    // Unknown wrapper
+    return [false, []];
+  } catch {
+    return [false, []];
+  }
+}
 
 function buildParameterExpression(
-  value: string | undefined | number,
+  value: string | undefined | number | any[],
   tokens: string[]
 ) {
   if (value == null) {
@@ -316,6 +376,16 @@ function buildParameterExpression(
   if (Object.values(KNOWN_VALUES).includes(value)) {
     return value;
   }
+
+  if (Array.isArray(value)) {
+    return value.map((v) => buildParameterExpression(v, tokens))
+  }
+
+  const [isArray, array] = tryParseArray(value);
+  if (isArray) {
+    return buildParameterExpression(array, tokens);
+  }
+
   const expressionTokens = value
     .replace(/\s+/g, "")
     .split(/([()+\-*/])/)

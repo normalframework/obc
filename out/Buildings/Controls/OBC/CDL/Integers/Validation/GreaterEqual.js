@@ -14,9 +14,9 @@ module.exports = (
   // http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.GreaterEqual.intGreEqu
   const intGreEquFn = greaterequal_8dfb38de({});
   // http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.GreaterEqual.timTabLin
-  const timTabLinFn = timetable_9d9f373d({ smoothness: 1, table: [0,-1;0.3,0.5;0.5,0;0.7,1;1,0] });
+  const timTabLinFn = timetable_9d9f373d({ smoothness: 1, table: [[0,-1],[0.3,0.5],[0.5,0],[0.7,1],[1,0]] });
   // http://example.org#Buildings.Controls.OBC.CDL.Integers.Validation.GreaterEqual.timTabLin1
-  const timTabLin1Fn = timetable_9d9f373d({ smoothness: 1, table: [0,0;0.35,1;0.55,0;0.7,1;1,0] });
+  const timTabLin1Fn = timetable_9d9f373d({ smoothness: 1, table: [[0,0],[0.35,1],[0.55,0],[0.7,1],[1,0]] });
 
   return (
     {  }

@@ -1,81 +1,80 @@
 
 // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression
-const sampler_875b0f69 = require("../../../CDL/Discrete/Sampler");
-const triggeredsampler_bcb3b170 = require("../../../CDL/Discrete/TriggeredSampler");
-const unitdelay_bcd3bd80 = require("../../../CDL/Discrete/UnitDelay");
-const edge_3f236118 = require("../../../CDL/Logical/Edge");
-const latch_a5aa3a49 = require("../../../CDL/Logical/Latch");
-const constant_48cc1015 = require("../../../CDL/Logical/Sources/Constant");
-const switch_1cc03fcf = require("../../../CDL/Logical/Switch");
-const timer_a61e7f4a = require("../../../CDL/Logical/Timer");
-const truedelay_b49d8a1a = require("../../../CDL/Logical/TrueDelay");
-const truehold_60ac3548 = require("../../../CDL/Logical/TrueHold");
-const abs_a5faf0c3 = require("../../../CDL/Reals/Abs");
-const greater_b1da53cb = require("../../../CDL/Reals/Greater");
-const greaterthreshold_64a3c4e0 = require("../../../CDL/Reals/GreaterThreshold");
-const min_a5fb1ea3 = require("../../../CDL/Reals/Min");
-const multiplybyparameter_13a4f29f = require("../../../CDL/Reals/MultiplyByParameter");
-const constant_baefa089 = require("../../../CDL/Reals/Sources/Constant");
-const subtract_029d2d63 = require("../../../CDL/Reals/Subtract");
-const switch_6d141143 = require("../../../CDL/Reals/Switch");
+const sampler_dd234808 = require("../../../CDL/Discrete/Sampler");
+const triggeredsampler_3247bbb1 = require("../../../CDL/Discrete/TriggeredSampler");
+const unitdelay_c1704a5f = require("../../../CDL/Discrete/UnitDelay");
+const edge_63e6c137 = require("../../../CDL/Logical/Edge");
+const latch_1952de0a = require("../../../CDL/Logical/Latch");
+const pre_f2b507e9 = require("../../../CDL/Logical/Pre");
+const constant_655d39b4 = require("../../../CDL/Logical/Sources/Constant");
+const switch_1e2c142e = require("../../../CDL/Logical/Switch");
+const timer_19c7230b = require("../../../CDL/Logical/Timer");
+const truedelay_17dc655b = require("../../../CDL/Logical/TrueDelay");
+const abs_53459d04 = require("../../../CDL/Reals/Abs");
+const greater_2582f78c = require("../../../CDL/Reals/Greater");
+const greaterthreshold_7c60ca3f = require("../../../CDL/Reals/GreaterThreshold");
+const min_5345cae4 = require("../../../CDL/Reals/Min");
+const multiplybyparameter_8938fce0 = require("../../../CDL/Reals/MultiplyByParameter");
+const constant_d2aca5e8 = require("../../../CDL/Reals/Sources/Constant");
+const subtract_040901c2 = require("../../../CDL/Reals/Subtract");
+const switch_91d77162 = require("../../../CDL/Reals/Switch");
 
 module.exports = (
   {
-    chaRat = 540,
-    dTHys = 0.25,
-    maxTim = 1800,
-    samplePeriod = 120,
-  } = {}
+		chaRat = 540,
+		dTHys = 0.25,
+		maxTim = 1800,
+		samplePeriod = 120,
+    } = {}
 ) => {
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.samSet
-  const samSetFn = sampler_875b0f69({ samplePeriod: samplePeriod });
+  const samSetFn = sampler_dd234808({ samplePeriod: samplePeriod });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.uniDel
-  const uniDelFn = unitdelay_bcd3bd80({ samplePeriod: samplePeriod });
+  const uniDelFn = unitdelay_c1704a5f({ samplePeriod: samplePeriod });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.sub1
-  const sub1Fn = subtract_029d2d63({});
+  const sub1Fn = subtract_040901c2({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.con1
-  const con1Fn = constant_48cc1015({ k: true });
+  const con1Fn = constant_655d39b4({ k: true });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.truDel
-  const truDelFn = truedelay_b49d8a1a({ delayOnInit: true, delayTime: samplePeriod });
+  const truDelFn = truedelay_17dc655b({ delayOnInit: true, delayTime: samplePeriod });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.conZer
-  const conZerFn = constant_baefa089({});
+  const conZerFn = constant_d2aca5e8({ k: 0 });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.swi
-  const swiFn = switch_6d141143({});
+  const swiFn = switch_91d77162({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.abs1
-  const abs1Fn = abs_a5faf0c3({});
+  const abs1Fn = abs_53459d04({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.greThr
-  const greThrFn = greaterthreshold_64a3c4e0({ h: 0.5 * dTHys, t: dTHys });
+  const greThrFn = greaterthreshold_7c60ca3f({ h: 0.5*dTHys, t: dTHys });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.lat
-  const latFn = latch_a5aa3a49({});
+  const latFn = latch_1952de0a({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.edg
-  const edgFn = edge_3f236118({});
+  const edgFn = edge_63e6c137({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.tim
-  const timFn = timer_a61e7f4a({});
+  const timFn = timer_19c7230b({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.triSam
-  const triSamFn = triggeredsampler_bcb3b170({});
+  const triSamFn = triggeredsampler_3247bbb1({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.triSam1
-  const triSam1Fn = triggeredsampler_bcb3b170({});
+  const triSam1Fn = triggeredsampler_3247bbb1({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.temDif
-  const temDifFn = subtract_029d2d63({});
+  const temDifFn = subtract_040901c2({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.abs2
-  const abs2Fn = abs_a5faf0c3({});
+  const abs2Fn = abs_53459d04({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.gai
-  const gaiFn = multiplybyparameter_13a4f29f({ k: chaRat });
+  const gaiFn = multiplybyparameter_8938fce0({ k: chaRat });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.maxSupTim
-  const maxSupTimFn = constant_baefa089({ k: maxTim });
+  const maxSupTimFn = constant_d2aca5e8({ k: maxTim });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.supTim
-  const supTimFn = min_a5fb1ea3({});
+  const supTimFn = min_5345cae4({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.pasSup
-  const pasSupFn = greater_b1da53cb({});
+  const pasSupFn = greater_2582f78c({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.lat1
-  const lat1Fn = latch_a5aa3a49({});
+  const lat1Fn = latch_1952de0a({});
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.con5
-  const con5Fn = constant_48cc1015({ k: true });
+  const con5Fn = constant_655d39b4({ k: true });
   // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.pasSupTim
-  const pasSupTimFn = switch_1cc03fcf({});
-  // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.truHol
-  const truHolFn = truehold_60ac3548({ duration: samplePeriod });
-
+  const pasSupTimFn = switch_1e2c142e({});
+  // http://example.org#Buildings.Controls.OBC.ASHRAE.G36.Generic.TimeSuppression.pre1
+  const pre1Fn = pre_f2b507e9({});
 
   return (
     { TSet, TZon }
@@ -103,9 +102,7 @@ module.exports = (
     const lat1 = lat1Fn({ clr: edg.y, u: pasSup.y });
     const con5 = con5Fn({});
     const pasSupTim = pasSupTimFn({ u1: lat1.y, u2: lat.y, u3: con5.y });
-    const truHol = truHolFn({ u: pasSup.y });
-    latFn({ clr: truHol.y })
-
+    const pre1 = pre1Fn({ u: pasSup.y });
 
     return { yAftSup: pasSupTim.y };
   }
