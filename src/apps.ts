@@ -13,6 +13,9 @@ import { z } from "zod";
 import { generateJsObject, generateJsObjectParameter } from "./translator";
 import { walkDirectoryRecursive } from "./utils";
 
+
+const CONTTROLLER_PREFIX = "Controller";
+
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
@@ -84,7 +87,7 @@ function isControllerFile(filePath: string) {
   const name = path.basename(filePath);
   return (
     ext === ".js" &&
-    name.startsWith("Controller") &&
+    name.startsWith(CONTTROLLER_PREFIX) &&
     !filePath.includes("Validation")
   );
 }
