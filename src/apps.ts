@@ -97,7 +97,7 @@ const REGISTRY_FOLDER = "registry";
 export async function generateRegistry({
   input,
   output,
-  name,
+  name = "Modelica Registry",
 }: {
   input?: string;
   output?: string;
