@@ -510,7 +510,7 @@ function normalize(value) {
  * @param {NormalSdk.InvokeParams} params
  * @returns {NormalSdk.InvokeResult}
  */
-module.exports = async ({points}) => {
+module.exports = async ({points, groupVariables}) => {
   const read = async (label) => {
     const point = points.byLabel(label).first();
     if (!point) {
@@ -521,7 +521,7 @@ module.exports = async ({points}) => {
   };
 
   const write = async (label, value) => {
-    const point = points.byLabel(label).first();
+    const point = groupVariables.byLabel(label).first();
     if (!point) {
       return;
     }

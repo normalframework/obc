@@ -493,6 +493,7 @@ export function translateDirectory(
 
   const availableFiles = [...filesRegistry.values()];
 
+
   for (const file of importedFiles) {
     if (!availableFiles.includes(file)) {
       const types = importsMap.get(file) ?? [];
