@@ -11,9 +11,13 @@ const TimeManager = require("../../../../../TimeManager");
  * @returns {(inputs: {u:number,k:number,T:number}) => {y:number}}
  */
 function derivative({ y_start = 0 } = {}) {
+  y_start = y_start ?? 0;
   // state x: will be set correctly at first call
   let x;
   return ({ u = 0, k = 0, T = 0 } = {}) => {
+    u = u ?? 0;
+    k = k ?? 0;
+    T = T ?? 0;
     const eps = Number.EPSILON
     const T_nonZero = Math.max(T, 100 * eps);
     const dt = Math.max(TimeManager.dt, eps);

@@ -12,7 +12,8 @@
 
  function multiMax({ nin }) {
   return ({ u = [] }) => {
-    return { y: Math.max(...u) };
+    u = u ?? [];
+    return { y: Math.max(...u.map(u => u ?? 0)) };
   }
 }
 

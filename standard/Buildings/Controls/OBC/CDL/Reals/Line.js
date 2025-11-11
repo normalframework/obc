@@ -11,11 +11,17 @@
  */
 function line({ limitBelow = true, limitAbove = true } = {}) {
   return ({ x1 = 0, f1 = 0, x2 = 0, f2 = 0, u = 0 } = {}) => {
+    x1 = x1 ?? 0;
+    f1 = f1 ?? 0;
+    x2 = x2 ?? 0;
+    f2 = f2 ?? 0;
+    u = u ?? 0;
     if ((limitBelow || limitAbove) && x2 <= x1) {
       throw new Error("Line: x2 must be greater than x1");
     }
     const b = (f2 - f1) / (x2 - x1);
     const a = f2 - b * x2;
+
     let xLim = u;
     if (limitBelow && limitAbove) {
       xLim = Math.min(x2, Math.max(x1, u));

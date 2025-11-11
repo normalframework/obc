@@ -10,6 +10,7 @@
 
  function sort({ nin = 0, ascending = true } = {}) {
   return ({ u = [] }) => {
+    u = u ?? [];
     if (u.length !== nin) {
       throw new Error(`Input vector length ${u.length} does not match the specified number of inputs ${nin}`);
     }

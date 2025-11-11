@@ -15,7 +15,7 @@
 function multiSum({ nin = 0, k = [] }) {
   return ({ u = [] }) => {
     if (u.length > 0) {
-      return { y: k.reduce((sum, gain, index) => sum + gain * u[index], 0) };
+      return { y: k.reduce((sum, gain, index) => sum + gain * (u[index] ?? 0), 0) };
     } else {
       return { y: 0 };
     }

@@ -11,7 +11,7 @@
 
  function atan({ } = {}) {
   return ({ u = 0 }) => {
-    return { y: Math.atan(u) };
+    return { y: Math.atan(u ?? 0) };
   }
 }
 

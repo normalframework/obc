@@ -12,14 +12,17 @@ const Trigger     = require("../../../../../Trigger");
  */
 
 function integratorWithReset({ k = 1, y_start = 0 }) {
-  let y = y_start;
+  let y = y_start ?? 0;
 
   const isRising = Trigger();
   const eps = Number.EPSILON;
 
   return ({ u = 0, y_reset_in = 0, trigger = false }) => {
+    u = u ?? 0;
+    y_reset_in = y_reset_in ?? 0;
+    trigger = trigger ?? false;
     if (isRising(trigger)) {
-      y = y_reset_in;
+      y = y_reset_in ?? 0;
     } 
     const dt = Math.max(TimeManager.dt, eps);
     y += k * u * dt;

@@ -19,6 +19,7 @@ function zeroOrderHold({ samplePeriod } = {}) {
   let y = 0;
 
   return ({ u = 0 } = {}) => {
+    u = u ?? 0;
     let prevY = y;
     const now = TimeManager.time;
 

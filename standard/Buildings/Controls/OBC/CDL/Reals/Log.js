@@ -11,7 +11,7 @@
 
  function log() {
   return ({ u = 0 }) => {
-    return { y: Math.log(u) };
+    return { y: Math.log(u ?? 0) };
   }
 }
 

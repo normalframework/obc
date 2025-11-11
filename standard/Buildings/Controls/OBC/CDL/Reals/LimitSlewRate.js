@@ -24,6 +24,7 @@ function limitSlewRate({
   const isInitial = Initial();
 
   return ({ u = 0 } = {}) => {
+    u = u ?? 0;
     const dt = Math.max(TimeManager.dt, eps);
 
     if (isInitial()) {

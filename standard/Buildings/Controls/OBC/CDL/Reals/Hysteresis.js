@@ -16,6 +16,10 @@ function hysteresis({ uLow, uHigh, pre_y_start = false } = {}) {
   }
   let prevY = pre_y_start;
   return ({ u = 0 } = {}) => {
+    u = u ?? 0;
+    uHigh = uHigh ?? 0;
+    uLow = uLow ?? 0;
+    pre_y_start = pre_y_start ?? false;
     const y = (!prevY && u > uHigh) || (prevY && u >= uLow);
     prevY = y;
     return { y };

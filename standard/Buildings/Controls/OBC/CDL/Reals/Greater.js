@@ -14,12 +14,15 @@ function greater({ h = 0, pre_y_start = false } = {}) {
   const haveHysteresis = h >= 1e-10;
 
   function greaterNoHysteresis() {
-    return ({ u1 = 0, u2 = 0 } = {}) => ({ y: u1 > u2 });
+    return ({ u1 = 0, u2 = 0 } = {}) => ({ y: (u1 ?? 0) > (u2 ?? 0) });
   }
 
   function greaterWithHysteresis({ h, pre_y_start }) {
     let prevY = pre_y_start;
     return ({ u1 = 0, u2 = 0 } = {}) => {
+      u1 = u1 ?? 0;
+      u2 = u2 ?? 0;
+      h = h ?? 0;
       const y = (!prevY && u1 > u2) || (prevY && u1 > u2 - h);
       prevY = y;
       return { y };

@@ -11,7 +11,7 @@
 
  function cos({ } = {}) {
   return ({ u = 0}) => {
-    return { y: Math.cos(u) };
+    return { y: Math.cos(u ?? 0) };
   }
 }
 

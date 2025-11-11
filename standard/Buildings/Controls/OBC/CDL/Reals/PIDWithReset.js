@@ -59,7 +59,9 @@ function pidWithReset({
   let lastPID = 0;
   let lastLimitedPID = 0;
 
-  return function step({ u_s = 0, u_m = 0, trigger = false } = {}) {
+  return function step({ u_s = 0, u_m = 0, trigger = false, log } = {}) {
+    u_s = u_s ?? 0;
+    u_m = u_m ?? 0;
 
     const uS_revAct = u_s * (rev / r);
     const uM_revAct = u_m * (rev / r);
@@ -82,12 +84,12 @@ function pidWithReset({
       const awErr = lastPID - lastLimitedPID;
       const awGain = 1 / (k * Ni);
       const awCorr = awGain * awErr;
-      I = iBlock({ u: err - awCorr, y_reset_in: y_reset, trigger }).y;
+      I = iBlock({ u: err - awCorr, y_reset_in: y_reset, trigger }).y;     
     }
 
     // 5. sum P+I+D
+    
     const sumPID = pTerm + I + dTerm;
-
     // 6. limit output
     const output = limBlock({ u: sumPID }).y;
 

@@ -25,6 +25,7 @@ function firstOrderHold({ samplePeriod } = {}) {
   let c = 0;
 
   return ({ u = 0 } = {}) => {
+    u = u ?? 0;
     const now = TimeManager.time;
 
     if (isInitial()) {

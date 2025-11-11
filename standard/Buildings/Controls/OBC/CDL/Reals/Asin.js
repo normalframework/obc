@@ -11,7 +11,7 @@
 
  function asinBlock() {
   return ({ u = 0 }) => {
-    return { y: Math.asin(u) };
+    return { y: Math.asin(u ?? 0) };
   }
 }
 

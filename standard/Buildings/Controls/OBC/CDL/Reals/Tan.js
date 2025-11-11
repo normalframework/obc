@@ -9,7 +9,7 @@
 
 function tan({ } = {}) {
   return ({ u = 0 }) => {
-    return { y: Math.tan(u) };
+    return { y: Math.tan(u ?? 0) };
   }
 }
 

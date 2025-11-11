@@ -239,7 +239,7 @@ module.exports = (
     const isOcc = isOccFn({ u1: occMod.y, u2: uOpeMod });
     const and1 = and1Fn({ u1: lowMin.y, u2: isOcc.y });
     const or2 = or2Fn({ u1: and1.y, u2: truFalHol.y });
-    const conVal = conValFn({ trigger: or2.y, u_m: TDis, u_s: swi3.y, log: true });
+    const conVal = conValFn({ trigger: or2.y, u_m: TDis, u_s: swi3.y });
     const swi4 = swi4Fn({ u1: conVal.y, u2: or2.y, u3: conZer2.y });
     const watValPosUno = watValPosUnoFn({ u1: conZer2.y, u2: isUno.y, u3: swi4.y });
 

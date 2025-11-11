@@ -8,9 +8,10 @@
  */
 
  function round({ n = 0 }) {
-  const fac = 10 ** n;
+  const fac = 10 ** (n ?? 0);
 
   return ({ u = 0 }) => {
+    u = u ?? 0;
     const y = u > 0
       ? Math.floor(u * fac + 0.5) / fac
       : Math.ceil(u * fac - 0.5) / fac;

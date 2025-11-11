@@ -11,7 +11,7 @@
 
 function sqrt({ } = {}) {
   return ({ u = 0 }) => {
-    return { y: Math.sqrt(u) };
+    return { y: Math.sqrt(u ?? 0) };
   }
 }
 
