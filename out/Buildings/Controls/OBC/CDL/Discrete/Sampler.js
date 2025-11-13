@@ -14,13 +14,11 @@ function sampler({ samplePeriod } = {}) {
   const TimeManager = require("../../../../../TimeManager");
   const Initial = require("../../../../../Initial");
   const isInitial = Initial();
-  let nextSample = null;
+  const t0 = Math.round(TimeManager.time / samplePeriod) * samplePeriod;
+  let nextSample = t0;
   let y = 0;
 
   return ({ u = 0 } = {}) => {
-    if (!nextSample) {
-      nextSample = Math.round(TimeManager.time / samplePeriod) * samplePeriod;
-    }
     u = u ?? 0;
     const now = TimeManager.time;
 
